@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --no-cache-dir groq requests ddgs duckduckgo_search
+          pip install --no-cache-dir groq requests duckduckgo_search
 
       - name: Run Research Agent
         env:
@@ -57,7 +57,7 @@ jobs:
           # 2. Generate HTML via Groq
           client = Groq(api_key=os.getenv("GROQ_API_KEY"))
           stream = client.chat.completions.create(
-              model="llama-3.3-70b-versatile",
+              model="openai/gpt-oss-20b",
               messages=[
                   {"role": "system", "content": "You are an expert web researcher. Generate a clean, modern, beautifully styled standalone HTML file with embedded CSS inside ```html ... ``` code blocks."},
                   {"role": "user", "content": f"Research Topic: {prompt}\n\nSearch Results:\n{results_text}"}
@@ -84,7 +84,7 @@ jobs:
           subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
           subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
           subprocess.run(["git", "add", "index.html"])
-          subprocess.run(["git", "commit", -m, f"🌐 Report for: {prompt[:30]}"])
+          subprocess.run(["git", "commit", "-m", f"🌐 Report for: {prompt[:30]}"])
           subprocess.run(["git", "push"])
           print("✅ Done and pushed!")
           '
