@@ -1,12 +1,14 @@
-name: Telegram-Driven Agent Dispatcher
+name: Research HTML Agent
 
 on:
   workflow_dispatch:
     inputs:
       task_prompt:
-        description: 'The task for the agent to execute'
+        description: 'Research topic or task for the agent'
         required: true
-        default: 'Analyze the repository and suggest improvements.'
+        default: 'Latest developments in AI agents'
+  schedule:
+    - cron: '0 * * * *' # Checks hourly (or can be triggered manually/via Telegram)
 
 permissions:
   contents: write
@@ -23,9 +25,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --no-cache-dir groq requests
+          pip install --no-cache-dir groq requests duckduckgo_search
 
-      - name: Run Agent with Custom Task
+      - name: Run Research Agent
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
