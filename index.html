@@ -2,134 +2,104 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Developments in AI Agents (2026)</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Hello – Search Results</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  :root {
-    --primary: #2d4fff;
-    --bg: #f5f7fa;
-    --card-bg: #ffffff;
-    --text: #111111;
-    --muted: #555555;
-  }
+  /* Reset & base styles */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
   body {
-    margin:0;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+                 "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background: #f9f9f9;
+    color: #1a1a1a;
     line-height: 1.6;
+    padding: 2rem;
   }
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-  }
-  header p {
-    margin-top: .5rem;
-    font-weight: 400;
-    opacity: 0.9;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .intro {
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-  }
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
+  h1 { margin-bottom: 1.5rem; font-size: 2.5rem; text-align: center; }
+  .grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
   .card {
-    background: var(--card-bg);
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,.05);
-    padding: 1.5rem;
-    transition: transform .15s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    flex: 1 1 300px;
+    max-width: 350px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100%;
   }
-  .card:hover {
-    transform: translateY(-4px);
-  }
-  .card h3 {
-    font-size: 1.25rem;
-    margin: 0 0 .5rem;
-  }
-  .card p {
-    flex-grow: 1;
-    margin: 0 0 1rem;
-    color: var(--muted);
-  }
-  .card a {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .card a:hover {
-    text-decoration: underline;
-  }
-  footer {
-    text-align: center;
+  .card a { text-decoration: none; color: inherit; }
+  .card-header {
+    background: #0053b3;
+    color: #fff;
     padding: 1rem;
-    font-size: .9rem;
-    color: var(--muted);
+    font-size: 1.1rem;
   }
+  .card-body {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+  .card-body p { margin-bottom: 0.75rem; }
+  .card-footer {
+    background: #f0f0f0;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    text-align: right;
+  }
+  .card-footer a { color: #0053b3; text-decoration: underline; }
   @media (prefers-color-scheme: dark) {
     body { background: #1a1a1a; color: #e0e0e0; }
-    header { background: #1b2d5a; }
-    .card { background: #2b2b2b; color: #e0e0e0; }
-    .card p { color: #b0b0b0; }
-    footer { color: #b0b0b0; }
+    .card { background: #2c2c2c; }
+    .card-header { background: #003f7f; }
+    .card-footer { background: #333; color: #bbb; }
+    .card-footer a { color: #66b0ff; }
   }
 </style>
 </head>
 <body>
-<header>
-  <h1>Latest Developments in AI Agents (2026)</h1>
-  <p>Curated insights on agentic AI from leading sources</p>
-</header>
-
-<div class="container">
-  <section class="intro">
-    <p>From cutting‑edge models and production deployments to infrastructure shifts and security considerations, the AI agent landscape continues to evolve at a rapid pace. Below you’ll find concise summaries and direct links to the most recent and insightful coverage.</p>
-  </section>
-
-  <section class="grid">
-    <article class="card">
-      <h3><a href="https://www.forbes.com/topics/agentic-ai/" target="_blank">Latest Agentic AI News Today | Trends, Predictions, & Analysis</a></h3>
-      <p>Explore the forefront of Agentic AI news with Forbes' comprehensive coverage tailored to keep you ahead of emerging trends.</p>
-    </article>
-
-    <article class="card">
-      <h3><a href="https://www.netguru.com/blog/latest-ai-developments-2026" target="_blank">Latest AI developments 2026: Models, agentic AI, infrastructure</a></h3>
-      <p>Latest AI developments 2026: frontier model releases, agentic AI in production, infrastructure shifts, and security risks.</p>
-    </article>
-
-    <article class="card">
-      <h3><a href="https://github.com/omarsar/ai-agents-latest-developments" target="_blank">GitHub - omarsar/ai-agents-latest-developments</a></h3>
-      <p>This repository contains a curated list of the most recent and significant developments in AI agents, compiled on April.</p>
-    </article>
-
-    <article class="card">
-      <h3><a href="https://harvardsciencereview.org/2026/08/11/introduction-to-recent-ai-developments/" target="_blank">Latest Developments in Artificial Intelligence</a></h3>
-      <p>August 11, 2026: The latest AI advancements show a quick pace of progress, touching areas like healthcare and energy.</p>
-    </article>
-  </section>
-</div>
-
-<footer>
-  © 2026 AI Insight Dashboard
-</footer>
+  <h1>Hello – Search Results</h1>
+  <div class="grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-header">HELLO! Magazine</div>
+      <div class="card-body">
+        <p>Daily royal, celebrity, fashion, beauty & lifestyle news.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.hellomagazine.com/" target="_blank">Visit Site →</a>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-header">Adele – Hello (Official Music Video)</div>
+      <div class="card-body">
+        <p>Listen to “Hello” by Adele. Official video released 22 Oct 2015.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.youtube.com/watch?v=YQHsXMglC9A" target="_blank">Watch on YouTube →</a>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-header">HELLO! US Edition</div>
+      <div class="card-body">
+        <p>Latest celebrity & royal news from the US and worldwide.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.hellomagazine.com/us/" target="_blank">Visit US Site →</a>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-header">Adele – Hello Official Video (2023)</div>
+      <div class="card-body">
+        <p>Music video by Adele performing “Hello”, released Feb 20 2023.</p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.youtube.com/watch?v=bim9MeckD-s" target="_blank">Watch on YouTube →</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
