@@ -1,4 +1,33 @@
-- name: Run Research Agent
+name: Telegram Instant Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      task_prompt:
+        description: 'Research Task'
+        required: true
+        default: 'General Research'
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install --no-cache-dir groq requests duckduckgo_search
+
+      - name: Run Research Agent
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
