@@ -1,3 +1,5 @@
-# Automated Repo Analysis Report
+# Task Execution Report
 
-This report was generated autonomously by the LLM agent and approved via Telegram.
+**Requested Task:** Analyze the repository and suggest improvements.
+
+This report was generated autonomously by the LLM agent based on your custom prompt.
