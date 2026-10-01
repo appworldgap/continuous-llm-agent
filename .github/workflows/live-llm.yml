@@ -1,20 +1,15 @@
-name: Research HTML Agent
+name: Telegram Autonomous Poller
 
 on:
-  workflow_dispatch:
-    inputs:
-      task_prompt:
-        description: 'Research topic or task for the agent'
-        required: true
-        default: 'Latest developments in AI agents'
   schedule:
-    - cron: '0 * * * *' # Checks hourly (or can be triggered manually/via Telegram)
+    - cron: '*/10 * * * *' # Checks Telegram every 10 minutes
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  run-llm:
+  poll-and-run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,11 +22,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install --no-cache-dir groq requests duckduckgo_search
 
-      - name: Run Research Agent
+      - name: Run Telegram Poller Agent
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CUSTOM_TASK: ${{ github.event.inputs.task_prompt }}
-        run: python scripts/agent.py
+        run: python scripts/telegram_poller.py
