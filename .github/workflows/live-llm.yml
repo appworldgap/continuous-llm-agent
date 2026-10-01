@@ -1,20 +1,20 @@
-name: Telegram Autonomous Poller
+name: Telegram Instant Agent
 
 on:
-  schedule:
-    - cron: '*/10 * * * *' # Checks Telegram every 10 minutes
   workflow_dispatch:
     inputs:
       task_prompt:
         description: 'Research Task'
-        required: false
+        required: true
         default: 'General Research'
+  schedule:
+    - cron: '*/10 * * * *'
 
 permissions:
   contents: write
 
 jobs:
-  poll-and-run:
+  run-agent:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,9 +27,62 @@ jobs:
           python -m pip install --upgrade pip
           pip install --no-cache-dir groq requests duckduckgo_search
 
-      - name: Run Telegram Poller Agent
+      - name: Run Research Agent
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python scripts/telegram_poller.py
+          # This grabs what you typed on Telegram, with a fallback for the 10-min timer
+          TASK_PROMPT: ${{ github.event.inputs.task_prompt || 'Latest breakthroughs in technology' }}
+        run: |
+          python -c '
+          import os, sys, subprocess, requests
+          from groq import Groq
+          from duckduckgo_search import DDGS
+
+          prompt = os.getenv("TASK_PROMPT")
+          print(f"🚀 Running research agent for: {prompt}")
+
+          # 1. Search Web
+          results_text = ""
+          try:
+              with DDGS() as ddgs:
+                  for r in ddgs.text(prompt, max_results=4):
+                      results_text += f"Title: {r.get(\"title\")}\nSnippet: {r.get(\"body\")}\nURL: {r.get(\"href\")}\n\n"
+          except Exception as e:
+              results_text = "Search failed."
+
+          # 2. Generate HTML via Groq
+          client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+          stream = client.chat.completions.create(
+              model="openai/gpt-oss-20b",
+              messages=[
+                  {"role": "system", "content": "You are an expert web researcher. Generate a clean, modern, beautifully styled standalone HTML file with embedded CSS inside ```html ... ``` code blocks."},
+                  {"role": "user", "content": f"Research Topic: {prompt}\n\nSearch Results:\n{results_text}"}
+              ],
+              stream=True,
+          )
+
+          full_response = ""
+          for chunk in stream:
+              content = chunk.choices[0].delta.content or ""
+              sys.stdout.write(content)
+              sys.stdout.flush()
+              full_response += content
+
+          try:
+              html_code = full_response.split("```html")[1].split("```")[0].strip()
+          except Exception:
+              html_code = f"<html><body><h1>{prompt}</h1><p>{full_response}</p></body></html>"
+
+          # 3. Save & Push
+          with open("index.html", "w", encoding="utf-8") as f:
+              f.write(html_code)
+
+          subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
+          subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
+          subprocess.run(["git", "add", "index.html"])
+          subprocess.run(["git", "commit", "-m", f"🌐 Report for: {prompt[:30]}"])
+          subprocess.run(["git", "push"])
+          print("✅ Done and pushed!")
+          '
