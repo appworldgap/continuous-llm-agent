@@ -32,11 +32,10 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # This grabs what you typed on Telegram, with a fallback for the 10-min timer
           TASK_PROMPT: ${{ github.event.inputs.task_prompt || 'Latest breakthroughs in technology' }}
         run: |
           python -c '
-          import os, sys, subprocess, requests
+          import os, sys, subprocess
           from groq import Groq
           from duckduckgo_search import DDGS
 
@@ -55,7 +54,7 @@ jobs:
           # 2. Generate HTML via Groq
           client = Groq(api_key=os.getenv("GROQ_API_KEY"))
           stream = client.chat.completions.create(
-              model="openai/gpt-oss-20b",
+              model="llama-3.3-70b-versatile",
               messages=[
                   {"role": "system", "content": "You are an expert web researcher. Generate a clean, modern, beautifully styled standalone HTML file with embedded CSS inside ```html ... ``` code blocks."},
                   {"role": "user", "content": f"Research Topic: {prompt}\n\nSearch Results:\n{results_text}"}
