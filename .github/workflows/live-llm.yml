@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '*/10 * * * *' # Checks Telegram every 10 minutes
   workflow_dispatch:
+    inputs:
+      task_prompt:
+        description: 'Research Task'
+        required: false
+        default: 'General Research'
 
 permissions:
   contents: write
