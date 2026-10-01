@@ -2,85 +2,209 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>What is the Weather?</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Base Reset */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; background:#f0f7ff; color:#333; }
-  a { color: #0066cc; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Layout */
-  header, footer { background:#004466; color:#fff; padding: 1rem 2rem; }
-  header h1 { margin:0; font-size:1.8rem; }
-  main { max-width: 960px; margin:2rem auto; padding:0 1rem; }
-  section { margin-bottom:2rem; }
-  .grid { display: grid; grid-template-columns: 1fr; gap:1.5rem; }
-  @media(min-width:600px){ .grid { grid-template-columns: 1fr 1fr; } }
-
-  /* Cards */
-  .card { background:#fff; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,.1); padding:1.5rem; transition:transform .2s; }
-  .card:hover { transform:translateY(-4px); }
-  .card h3 { margin-bottom:.5rem; color:#004466; }
-  .card p { font-size:.95rem; }
-
-  /* Footer */
-  footer { text-align:center; font-size:.9rem; }
+:root{
+  --clr-primary:#4f46e5;
+  --clr-bg:#111;
+  --clr-bg-light:#1f1f1f;
+  --clr-text:#e0e0e0;
+  --clr-accent:#ff6b6b;
+  --clr-border:#333;
+  --radius:8px;
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--clr-bg);
+  color:var(--clr-text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a{
+  color:var(--clr-primary);
+  text-decoration:none;
+}
+header{
+  background:var(--clr-bg-light);
+  padding:1rem 2rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.logo{
+  font-size:1.5rem;
+  font-weight:700;
+  color:var(--clr-primary);
+}
+nav a{
+  margin-left:1.5rem;
+  font-weight:600;
+}
+.hero{
+  background:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1800&q=80') center/cover;
+  color:#fff;
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:0 2rem;
+  position:relative;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+.hero h1{
+  font-size:3rem;
+  z-index:1;
+  margin-bottom:1rem;
+}
+.hero p{
+  font-size:1.2rem;
+  z-index:1;
+  max-width:600px;
+}
+.main{
+  padding:4rem 2rem;
+  max-width:1200px;
+  margin:auto;
+}
+.section{
+  margin-bottom:4rem;
+}
+.section h2{
+  font-size:2rem;
+  margin-bottom:1.5rem;
+  color:var(--clr-primary);
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:var(--clr-bg-light);
+  border-radius:var(--radius);
+  border:1px solid var(--clr-border);
+  padding:1.5rem;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+.card h3{
+  font-size:1.4rem;
+  margin-bottom:.8rem;
+  color:var(--clr-primary);
+}
+.card p{
+  font-size:.95rem;
+  margin-bottom:1rem;
+}
+.card a{
+  font-weight:600;
+  color:var(--clr-accent);
+}
+footer{
+  background:var(--clr-bg-light);
+  text-align:center;
+  padding:1.5rem 0;
+  font-size:.9rem;
+}
+@media(max-width:768px){
+  .hero h1{font-size:2.2rem}
+  .hero p{font-size:1rem}
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>What is the Weather?</h1>
+  <div class="logo">TechFrontier</div>
+  <nav>
+    <a href="#">AI</a>
+    <a href="#">Quantum</a>
+    <a href="#">Biotech</a>
+    <a href="#">Space</a>
+    <a href="#">Edge</a>
+  </nav>
 </header>
-<main>
-  <section>
-    <h2>Quick Overview</h2>
-    <p>
-      The <strong>weather</strong> refers to the day‑to‑day atmospheric conditions in a particular location, including temperature, humidity, wind speed, cloud cover, and precipitation. It changes rapidly and is influenced by many factors such as pressure systems, jet streams, and local geography.
-    </p>
-  </section>
 
-  <section>
-    <h2>Current Weather in Des Moines, IA</h2>
-    <div class="grid">
+<section class="hero">
+  <h1>Where Tomorrow Begins</h1>
+  <p>Explore the most groundbreaking tech innovations shaping our world today. From AI that learns in real-time to quantum computers that can solve complex problems in seconds.</p>
+</section>
+
+<main class="main">
+  <section class="section">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <div class="cards">
       <div class="card">
-        <h3>AccuWeather</h3>
-        <p>Hourly forecast with radar, current conditions, and weather alerts.</p>
-        <a href="https://www.accuweather.com/en/us/des-moines/50316/hourly-weather-forecast/328810" target="_blank" rel="noopener">View AccuWeather</a>
+        <h3>Generative AI</h3>
+        <p>Models that can create realistic text, images, and audio, unlocking creative workflows across industries.</p>
+        <a href="#">Read More →</a>
       </div>
       <div class="card">
-        <h3>Weather.com (10‑Day Forecast)</h3>
-        <p>Highs, lows, and precipitation probabilities for the next ten days.</p>
-        <a href="https://weather.com/us/iowa/city/des-moines/tenday" target="_blank" rel="noopener">View 10‑Day Forecast</a>
+        <h3>AI Ethics Platforms</h3>
+        <p>Tools to audit model bias, ensure transparency, and align AI systems with societal values.</p>
+        <a href="#">Read More →</a>
       </div>
       <div class="card">
-        <h3>Weather.com (Today &amp; Tonight)</h3>
-        <p>Current conditions and radar view for today and tonight.</p>
-        <a href="https://weather.com/us/iowa/city/des-moines/today" target="_blank" rel="noopener">View Today’s Weather</a>
-      </div>
-      <div class="card">
-        <h3>KCCI 8 News</h3>
-        <p>Local news outlet providing live weather updates, alerts, and video forecasts.</p>
-        <a href="https://www.kcci.com/weather" target="_blank" rel="noopener">Visit KCCI 8 News</a>
+        <h3>Edge AI Chips</h3>
+        <p>Low-power processors enabling on-device intelligence for smartphones, drones, and autonomous vehicles.</p>
+        <a href="#">Read More →</a>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>How to Interpret Weather Data</h2>
-    <p>Weather reports usually include:</p>
-    <ul>
-      <li><strong>Temperature:</strong> Current and forecasted highs/lows.</li>
-      <li><strong>Precipitation:</strong> Chance of rain or snow, often expressed as a percentage.</li>
-      <li><strong>Wind:</strong> Speed and direction, indicated by an asterisk (*) for gusts.</li>
-      <li><strong>Humidity:</strong> Relative moisture content of the air.</li>
-      <li><strong>Visibility:</strong> Distance clear of obstructions, important for driving.</li>
-    </ul>
+  <section class="section">
+    <h2>Quantum Computing</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Quantum Supremacy</h3>
+        <p>New architectures that solve specific problems faster than classical supercomputers.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Quantum Networking</h3>
+        <p>Secure communication channels using entanglement, promising ultra-safe data transmission.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Hybrid Quantum-Classical Workflows</h3>
+        <p>Integrating quantum processors with classical systems for drug discovery and optimization.</p>
+        <a href="#">Read More →</a>
+      </div>
+    </div>
   </section>
-</main>
-<footer>
-  <p>All information sourced from reputable weather services. © 2026 Weather Insights</p>
-</footer>
-</body>
-</html>
+
+  <section class="section">
+    <h2>Biotechnology & Health Tech</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>CRISPR Gene Editing</h3>
+        <p>Precision genome editing tools enabling new therapies for genetic disorders.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Wearable Diagnostics</h3>
+        <p>Continuous monitoring devices that predict health events before they occur.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>AI in Drug Discovery</h3>
+        <p>Accelerated identification of therapeutic molecules using deep learning.</p>
+        <
