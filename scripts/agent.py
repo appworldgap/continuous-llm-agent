@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import subprocess
 import requests
 from groq import Groq
 
@@ -42,6 +43,29 @@ def wait_for_user_decision(timeout_minutes=10):
     print("⏰ Timed out waiting for human input.")
     return False
 
+def commit_and_push_report():
+    print("✍️ Creating and committing new report file...")
+    
+    # 1. Create a sample report file
+    report_content = "# Automated Repo Analysis Report\n\nThis report was generated autonomously by the LLM agent and approved via Telegram.\n"
+    with open("repo-analysis.md", "w") as f:
+        f.write(report_content)
+        
+    # 2. Configure git credentials for the GitHub Action runner
+    subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
+    subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
+    
+    # 3. Add, commit, and push the file back to the repository
+    subprocess.run(["git", "add", "repo-analysis.md"])
+    subprocess.run(["git", "commit", "-m", "🤖 Add autonomous agent report file"])
+    
+    # Push back using the default GitHub Actions token permissions
+    result = subprocess.run(["git", "push"])
+    if result.returncode == 0:
+        print("Successfully committed and pushed new file to repository!")
+    else:
+        print("Failed to push changes to repository.")
+
 def run_agent():
     task_prompt = "Analyze the repository structure, look for any potential improvements, and decide if a new markdown report should be created. If it requires creating a major new file, output the token string: REQUIRES_DECISION"
     
@@ -61,15 +85,15 @@ def run_agent():
 
     print("\n=== LIVE MODEL THINKING END ===")
 
-    # Check if the model triggered a human decision checkpoint
     if "REQUIRES_DECISION" in full_response:
         send_notification("The agent wants to create a new report file in your repo. Do you approve?")
-        approved = wait_for_user_decision(timeout_minutes=5)
+        approved = wait_for_user_decision(timeout_minutes=10)
         if not approved:
             print("Action aborted by user.")
             sys.exit(1)
         else:
             print("Proceeding with task execution...")
+            commit_and_push_report()
 
 if __name__ == "__main__":
     run_agent()
