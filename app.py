@@ -1,3 +1,15 @@
+import os
+from flask import Flask, request
+import requests
+
+app = Flask(__name__)
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+REPO_OWNER = "appworldgap"
+REPO_NAME = "continuous-llm-agent"
+WORKFLOW_FILE = "live-llm.yml"
+
 @app.route(f"/{TELEGRAM_BOT_TOKEN}", methods=["POST"])
 def telegram_webhook():
     print(f"🔥 RAW REQUEST RECEIVED: {request.data}")
@@ -47,3 +59,10 @@ def telegram_webhook():
         print(f"⚠️ Error handling webhook exception: {e}")
         
     return "OK", 200
+
+@app.route("/")
+def index():
+    return "Telegram-to-GitHub Webhook is alive and running 24/7!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
