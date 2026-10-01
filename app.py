@@ -2,12 +2,12 @@ import os
 from flask import Flask, request
 import requests
 from groq import Groq
-from duckduckgo_search import DDGS
 
 app = Flask(__name__)
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 @app.route(f"/{TELEGRAM_BOT_TOKEN}", methods=["POST"])
 def telegram_webhook():
@@ -32,23 +32,37 @@ def telegram_webhook():
         # 1. Send a quick "Searching..." notice
         requests.post(
             f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
-            json={"chat_id": chat_id, "text": f"🔍 Searching live web for: *{text}*...", "parse_mode": "Markdown"}
+            json={"chat_id": chat_id, "text": f"🔍 Searching live web via Tavily: *{text}*...", "parse_mode": "Markdown"}
         )
         
-        # 2. Perform Web Search via DuckDuckGo
+        # 2. Perform Web Search via Tavily API
         results_text = ""
         try:
-            with DDGS() as ddgs:
-                results = list(ddgs.text(text, max_results=5))
-                print(f"🌐 DDGS raw results found: {len(results)}")
-                for r in results:
+            tavily_resp = requests.post(
+                "https://api.tavily.com/search",
+                json={
+                    "api_key": TAVILY_API_KEY,
+                    "query": text,
+                    "max_results": 5,
+                    "search_depth": "advanced"
+                },
+                timeout=10
+            )
+            if tavily_resp.status_code == 200:
+                tavily_data = tavily_resp.json()
+                sources = tavily_data.get("results", [])
+                print(f"🌐 Tavily raw results found: {len(sources)}")
+                for r in sources:
                     title = r.get("title", "")
-                    body = r.get("body", "")
-                    href = r.get("href", "")
-                    results_text += f"Title: {title}\nSnippet: {body}\nURL: {href}\n\n"
+                    content = r.get("content", "")
+                    url = r.get("url", "")
+                    results_text += f"Title: {title}\nSnippet: {content}\nURL: {url}\n\n"
+            else:
+                print(f"⚠️ Tavily error status: {tavily_resp.status_code} - {tavily_resp.text}")
+                results_text = "Web search returned an error."
         except Exception as e:
             print(f"⚠️ Search error exception: {e}")
-            results_text = "Web search failed or returned no data."
+            results_text = "Web search failed."
 
         print(f"📄 Assembled Search Context:\n{results_text[:300]}...")
 
@@ -59,7 +73,7 @@ def telegram_webhook():
             messages=[
                 {
                     "role": "system", 
-                    "content": "You are a live web-search assistant. You MUST answer the user's query using the provided Search Results. Include markdown links [Source Title](URL) referencing the search snippets provided. Do not ignore the search results."
+                    "content": "You are a live web-search assistant. You MUST answer the user's query using the provided Search Results. Include markdown links [Source Title](URL) referencing the search snippets provided. Be concise, informative, and accurate."
                 },
                 {
                     "role": "user", 
@@ -89,7 +103,7 @@ def telegram_webhook():
 
 @app.route("/")
 def index():
-    return "Telegram Live Search Chatbot is active!"
+    return "Telegram Tavily Search Chatbot is active!"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
