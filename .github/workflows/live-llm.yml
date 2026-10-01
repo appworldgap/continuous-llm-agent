@@ -35,7 +35,7 @@ jobs:
           TASK_PROMPT: ${{ github.event.inputs.task_prompt || 'Latest breakthroughs in technology' }}
         run: |
           python -c '
-          import os, sys, subprocess
+          import os, sys, subprocess, requests
           from groq import Groq
           from duckduckgo_search import DDGS
 
@@ -87,4 +87,14 @@ jobs:
           subprocess.run(["git", "commit", "-m", f"🌐 Report for: {prompt[:30]}"])
           subprocess.run(["git", "push"])
           print("✅ Done and pushed!")
+
+          # 4. Send Notification back to Telegram
+          bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
+          chat_id = os.getenv("TELEGRAM_CHAT_ID")
+          if bot_token and chat_id:
+              msg = f"✨ Research complete for *{prompt}*! Your website has been updated."
+              requests.post(
+                  f"https://api.telegram.org/bot{bot_token}/sendMessage",
+                  json={"chat_id": chat_id, "text": msg, "parse_mode": "Markdown"}
+              )
           '
