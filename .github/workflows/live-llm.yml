@@ -1,9 +1,12 @@
-name: Live Monitored LLM Loop
+name: Telegram-Driven Agent Dispatcher
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 * * * *' # Runs every hour
+    inputs:
+      task_prompt:
+        description: 'The task for the agent to execute'
+        required: true
+        default: 'Analyze the repository and suggest improvements.'
 
 permissions:
   contents: write
@@ -22,10 +25,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install --no-cache-dir groq requests
 
-      - name: Run Streamed Agent
+      - name: Run Agent with Custom Task
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CUSTOM_TASK: ${{ github.event.inputs.task_prompt }}
         run: python scripts/agent.py
