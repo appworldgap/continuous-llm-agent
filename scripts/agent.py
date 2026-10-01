@@ -47,7 +47,7 @@ def run_agent():
     
     print("=== LIVE MODEL THINKING START ===")
     stream = client.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": task_prompt}],
         stream=True,
     )
