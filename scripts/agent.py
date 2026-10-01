@@ -8,6 +8,8 @@ from groq import Groq
 API_KEY = os.getenv("GROQ_API_KEY")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+# Grab the dynamic task passed from the workflow input (or fallback to default)
+CUSTOM_TASK = os.getenv("CUSTOM_TASK", "Analyze repository structure.")
 
 client = Groq(api_key=API_KEY)
 
@@ -46,20 +48,16 @@ def wait_for_user_decision(timeout_minutes=10):
 def commit_and_push_report():
     print("✍️ Creating and committing new report file...")
     
-    # 1. Create a sample report file
-    report_content = "# Automated Repo Analysis Report\n\nThis report was generated autonomously by the LLM agent and approved via Telegram.\n"
+    report_content = f"# Task Execution Report\n\n**Requested Task:** {CUSTOM_TASK}\n\nThis report was generated autonomously by the LLM agent based on your custom prompt.\n"
     with open("repo-analysis.md", "w") as f:
         f.write(report_content)
         
-    # 2. Configure git credentials for the GitHub Action runner
     subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"])
     subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
     
-    # 3. Add, commit, and push the file back to the repository
     subprocess.run(["git", "add", "repo-analysis.md"])
-    subprocess.run(["git", "commit", "-m", "🤖 Add autonomous agent report file"])
+    subprocess.run(["git", "commit", "-m", f"🤖 Agent execution: {CUSTOM_TASK[:30]}..."])
     
-    # Push back using the default GitHub Actions token permissions
     result = subprocess.run(["git", "push"])
     if result.returncode == 0:
         print("Successfully committed and pushed new file to repository!")
@@ -67,9 +65,11 @@ def commit_and_push_report():
         print("Failed to push changes to repository.")
 
 def run_agent():
-    task_prompt = "Analyze the repository structure, look for any potential improvements, and decide if a new markdown report should be created. If it requires creating a major new file, output the token string: REQUIRES_DECISION"
+    task_prompt = f"Fulfill this engineering task for the repository: '{CUSTOM_TASK}'. Analyze what needs to be done, and if it requires creating or modifying a report/file, output the token string: REQUIRES_DECISION"
     
+    print(f"=== RUNNING TASK: {CUSTOM_TASK} ===")
     print("=== LIVE MODEL THINKING START ===")
+    
     stream = client.chat.completions.create(
         model="openai/gpt-oss-20b",
         messages=[{"role": "user", "content": task_prompt}],
@@ -86,7 +86,7 @@ def run_agent():
     print("\n=== LIVE MODEL THINKING END ===")
 
     if "REQUIRES_DECISION" in full_response:
-        send_notification("The agent wants to create a new report file in your repo. Do you approve?")
+        send_notification(f"The agent wants to execute the task: '{CUSTOM_TASK}' and update your repo. Do you approve?")
         approved = wait_for_user_decision(timeout_minutes=10)
         if not approved:
             print("Action aborted by user.")
