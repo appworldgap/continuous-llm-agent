@@ -2,209 +2,113 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-:root{
-  --clr-primary:#4f46e5;
-  --clr-bg:#111;
-  --clr-bg-light:#1f1f1f;
-  --clr-text:#e0e0e0;
-  --clr-accent:#ff6b6b;
-  --clr-border:#333;
-  --radius:8px;
-}
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-body{
-  font-family:'Inter',sans-serif;
-  background:var(--clr-bg);
-  color:var(--clr-text);
-  line-height:1.6;
-  overflow-x:hidden;
-}
-a{
-  color:var(--clr-primary);
-  text-decoration:none;
-}
-header{
-  background:var(--clr-bg-light);
-  padding:1rem 2rem;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-.logo{
-  font-size:1.5rem;
-  font-weight:700;
-  color:var(--clr-primary);
-}
-nav a{
-  margin-left:1.5rem;
-  font-weight:600;
-}
-.hero{
-  background:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1800&q=80') center/cover;
-  color:#fff;
-  height:80vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
-  padding:0 2rem;
-  position:relative;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.5);
-}
-.hero h1{
-  font-size:3rem;
-  z-index:1;
-  margin-bottom:1rem;
-}
-.hero p{
-  font-size:1.2rem;
-  z-index:1;
-  max-width:600px;
-}
-.main{
-  padding:4rem 2rem;
-  max-width:1200px;
-  margin:auto;
-}
-.section{
-  margin-bottom:4rem;
-}
-.section h2{
-  font-size:2rem;
-  margin-bottom:1.5rem;
-  color:var(--clr-primary);
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1.5rem;
-}
-.card{
-  background:var(--clr-bg-light);
-  border-radius:var(--radius);
-  border:1px solid var(--clr-border);
-  padding:1.5rem;
-  transition:transform .3s ease, box-shadow .3s ease;
-}
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 4px 15px rgba(0,0,0,0.3);
-}
-.card h3{
-  font-size:1.4rem;
-  margin-bottom:.8rem;
-  color:var(--clr-primary);
-}
-.card p{
-  font-size:.95rem;
-  margin-bottom:1rem;
-}
-.card a{
-  font-weight:600;
-  color:var(--clr-accent);
-}
-footer{
-  background:var(--clr-bg-light);
-  text-align:center;
-  padding:1.5rem 0;
-  font-size:.9rem;
-}
-@media(max-width:768px){
-  .hero h1{font-size:2.2rem}
-  .hero p{font-size:1rem}
-}
+  /* Reset & Base Styles */
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; background:#f4f4f9; color:#333; }
+  a { text-decoration:none; color:inherit; }
+  h1, h2, h3 { margin:0; }
+  img { max-width:100%; display:block; border-radius:8px; }
+
+  /* Layout */
+  header { background:#1e3d59; color:#fff; padding:2rem 1rem; text-align:center; }
+  header h1 { font-size:2.5rem; }
+  main { padding:2rem 1rem; max-width:1200px; margin:0 auto; }
+  .grid { display:grid; gap:2rem; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); }
+  .card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.1); display:flex; flex-direction:column; transition:transform 0.2s ease; }
+  .card:hover { transform:translateY(-5px); }
+  .card img { aspect-ratio:16/9; object-fit:cover; }
+  .card-content { padding:1rem; flex-grow:1; display:flex; flex-direction:column; }
+  .card-title { font-size:1.25rem; margin-bottom:.5rem; color:#1e3d59; }
+  .card-text { flex-grow:1; font-size:0.95rem; margin-bottom:1rem; color:#555; }
+  .card-link { font-weight:bold; color:#1e3d59; margin-top:auto; }
+
+  /* Responsive */
+  @media (max-width:480px) {
+    header h1 { font-size:1.75rem; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">TechFrontier</div>
-  <nav>
-    <a href="#">AI</a>
-    <a href="#">Quantum</a>
-    <a href="#">Biotech</a>
-    <a href="#">Space</a>
-    <a href="#">Edge</a>
-  </nav>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
 </header>
+<main>
+  <section class="grid">
+    <!-- 1. Quantum-Integrated AI -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1589927986089-358123e6e4e0?auto=format&fit=crop&w=800&q=80" alt="Quantum chip">
+      <div class="card-content">
+        <h2 class="card-title">Quantum‑Integrated AI</h2>
+        <p class="card-text">
+          By 2026, several startups have successfully integrated quantum processors with classical AI models, achieving 10× speed‑ups on protein‑folding simulations and real‑time language translation for satellite networks.
+        </p>
+        <a href="https://www.quantum.ai/latest" class="card-link">Read More →</a>
+      </div>
+    </article>
 
-<section class="hero">
-  <h1>Where Tomorrow Begins</h1>
-  <p>Explore the most groundbreaking tech innovations shaping our world today. From AI that learns in real-time to quantum computers that can solve complex problems in seconds.</p>
-</section>
+    <!-- 2. 6G Terahertz Communication -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1547425734-0a6f2c1b6f60?auto=format&fit=crop&w=800&q=80" alt="Wireless antenna">
+      <div class="card-content">
+        <h2 class="card-title">6G Terahertz Communication</h2>
+        <p class="card-text">
+          Commercial 6G trials have begun, offering up to 1 Tbps data rates and ultra‑low latency, enabling real‑time holographic displays and fully autonomous vehicle platooning across continents.
+        </p>
+        <a href="https://www.techradar.com/6g" class="card-link">Read More →</a>
+      </div>
+    </article>
 
-<main class="main">
-  <section class="section">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Generative AI</h3>
-        <p>Models that can create realistic text, images, and audio, unlocking creative workflows across industries.</p>
-        <a href="#">Read More →</a>
+    <!-- 3. CRISPR‑X Gene‑Editing Platform -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1593131335590-4e2c2f2f4d27?auto=format&fit=crop&w=800&q=80" alt="Lab scientist">
+      <div class="card-content">
+        <h2 class="card-title">CRISPR‑X Gene‑Editing Platform</h2>
+        <p class="card-text">
+          CRISPR‑X uses base‑editing technology to correct pathogenic mutations with near‑perfect precision, leading to the first FDA‑approved treatment for a heritable form of blindness.
+        </p>
+        <a href="https://www.nature.com/CRISPRX" class="card-link">Read More →</a>
       </div>
-      <div class="card">
-        <h3>AI Ethics Platforms</h3>
-        <p>Tools to audit model bias, ensure transparency, and align AI systems with societal values.</p>
-        <a href="#">Read More →</a>
+    </article>
+
+    <!-- 4. Self‑Repairing Solar Panels -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=800&q=80" alt="Solar panels">
+      <div class="card-content">
+        <h2 class="card-title">Self‑Repairing Solar Panels</h2>
+        <p class="card-text">
+          New perovskite‑based panels now incorporate micro‑capsules that seal micro‑cracks autonomously, boosting lifespan to 30 years and reducing manufacturing waste by 40%.
+        </p>
+        <a href="https://www.energy.gov/selfrepairsolar" class="card-link">Read More →</a>
       </div>
-      <div class="card">
-        <h3>Edge AI Chips</h3>
-        <p>Low-power processors enabling on-device intelligence for smartphones, drones, and autonomous vehicles.</p>
-        <a href="#">Read More →</a>
+    </article>
+
+    <!-- 5. AI‑Driven Autonomous Construction Robots -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1518609878370-4b0b5b0e9f47?auto=format&fit=crop&w=800&q=80" alt="Construction robot">
+      <div class="card-content">
+        <h2 class="card-title">AI‑Driven Autonomous Construction Robots</h2>
+        <p class="card-text">
+          Teams of AI‑powered drones and ground units can now lay foundations, erect frames, and perform precision welding, cutting construction timelines by 70% and slashing labor costs.
+        </p>
+        <a href="https://www.constrrobotics.com" class="card-link">Read More →</a>
       </div>
-    </div>
+    </article>
+
+    <!-- 6. Edge‑AI Powered Brain‑Computer Interface -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1511694228842-6e8a8c5f7e5f?auto=format&fit=crop&w=800&q=80" alt="Brain interface">
+      <div class="card-content">
+        <h2 class="card-title">Edge‑AI Powered Brain‑Computer Interface</h2>
+        <p class="card-text">
+          Miniaturized wearable devices now process neural signals locally with embedded AI, delivering instantaneous command execution for prosthetics and gaming without cloud latency.
+        </p>
+        <a href="https://www.neurotechnews.com/edgeai" class="card-link">Read More →</a>
+      </div>
+    </article>
   </section>
-
-  <section class="section">
-    <h2>Quantum Computing</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Quantum Supremacy</h3>
-        <p>New architectures that solve specific problems faster than classical supercomputers.</p>
-        <a href="#">Read More →</a>
-      </div>
-      <div class="card">
-        <h3>Quantum Networking</h3>
-        <p>Secure communication channels using entanglement, promising ultra-safe data transmission.</p>
-        <a href="#">Read More →</a>
-      </div>
-      <div class="card">
-        <h3>Hybrid Quantum-Classical Workflows</h3>
-        <p>Integrating quantum processors with classical systems for drug discovery and optimization.</p>
-        <a href="#">Read More →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Biotechnology & Health Tech</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>CRISPR Gene Editing</h3>
-        <p>Precision genome editing tools enabling new therapies for genetic disorders.</p>
-        <a href="#">Read More →</a>
-      </div>
-      <div class="card">
-        <h3>Wearable Diagnostics</h3>
-        <p>Continuous monitoring devices that predict health events before they occur.</p>
-        <a href="#">Read More →</a>
-      </div>
-      <div class="card">
-        <h3>AI in Drug Discovery</h3>
-        <p>Accelerated identification of therapeutic molecules using deep learning.</p>
-        <
+</main>
+</body>
+</html>
