@@ -2,135 +2,130 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  body{
-    margin:0; padding:0; font-family:'Inter',sans-serif; background:#f4f6f9; color:#222;
-    line-height:1.6;
+  :root {
+    --primary: #0063a1;
+    --secondary: #004c78;
+    --bg: #f7f9fc;
+    --card-bg: #ffffff;
+    --text: #2c3e50;
+    --accent: #ff6b6b;
   }
-  header{
-    background:#2c3e50; color:#fff; padding:3rem 1rem; text-align:center;
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         background: var(--bg); color: var(--text); line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+  header { text-align: center; margin-bottom: 3rem; }
+  header h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: .5rem; }
+  header p { font-size: 1.1rem; color: var(--secondary); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 1.5rem; }
+  .card { background: var(--card-bg); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,.1);
+          overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+  .card-header { background: var(--primary); color: #fff; padding: 1rem; display: flex; align-items: center; }
+  .card-header i { font-size: 1.5rem; margin-right: .5rem; }
+  .card-body { padding: 1rem; }
+  .card-title { font-size: 1.2rem; margin-bottom: .5rem; }
+  .card-text { font-size: .95rem; color: #555; }
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
   }
-  header h1{
-    margin:0 0 .5rem; font-size:2.5rem;
-  }
-  header p{
-    margin:0; font-size:1.2rem;
-  }
-  .container{
-    max-width:1200px; margin:auto; padding:2rem 1rem;
-  }
-  .grid{
-    display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem;
-  }
-  .card{
-    background:#fff; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,.1); overflow:hidden;
-    transition:transform .2s,box-shadow .2s; display:flex; flex-direction:column;
-  }
-  .card:hover{ transform:translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,.15);}
-  .card img{ width:100%; height:160px; object-fit:cover;}
-  .card-body{ padding:1rem; flex:1;}
-  .card-title{ font-size:1.25rem; margin:0 0 .5rem;}
-  .card-text{ font-size:.95rem; color:#555;}
-  .card-footer{ padding:.75rem 1rem; background:#fafafa; font-size:.85rem; color:#777;}
-  a{ color:#2980b9; text-decoration:none;}
-  a:hover{ text-decoration:underline;}
-  footer{ text-align:center; padding:2rem 1rem; background:#2c3e50; color:#fff; font-size:.9rem;}
 </style>
 </head>
 <body>
-
-<header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Exploring cutting‑edge innovations reshaping the world</p>
-</header>
-
 <div class="container">
-  <section>
-    <h2>Recent Highlights</h2>
-    <div class="grid">
+  <header>
+    <h1>Latest Breakthroughs in Technology – 2024</h1>
+    <p>Discover the most transformative innovations shaping our world today.</p>
+  </header>
 
-      <!-- Breakthrough 1: Quantum Supremacy Demonstrated -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091870621-6f2a2b4f8c87?auto=format&fit=crop&w=400&q=80" alt="Quantum Computer">
-        <div class="card-body">
-          <h3 class="card-title">Quantum Supremacy Achieved</h3>
-          <p class="card-text">In 2024, researchers at IBM and Google surpassed classical supercomputers with quantum processors, performing tasks in seconds that would take traditional machines millennia.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://www.ibm.com/blog/quantum-supremacy" target="_blank">Read More</a>
-        </div>
+  <section class="grid">
+    <article class="card">
+      <div class="card-header"><i>⚛️</i><span>Quantum Supremacy 2.0</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Quantum Supremacy 2.0</h3>
+        <p class="card-text">
+          A new generation of superconducting qubits achieves fault‑tolerant operations,
+          enabling complex simulations that were previously impossible.
+        </p>
       </div>
+    </article>
 
-      <!-- Breakthrough 2: 6G Cellular Networks -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=400&q=80" alt="6G Network">
-        <div class="card-body">
-          <h3 class="card-title">6G Cellular Networks</h3>
-          <p class="card-text">Prototype 6G prototypes have demonstrated terabit-per-second data rates, enabling ultra‑low latency VR, real‑time holography, and fully autonomous vehicle communication.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://www.itu.int/en/ITU-T/6G/Pages/default.aspx" target="_blank">Explore 6G</a>
-        </div>
+    <article class="card">
+      <div class="card-header"><i>🤖</i><span>Generative AI 3.5</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Generative AI 3.5</h3>
+        <p class="card-text">
+          Advanced multimodal models now generate coherent audio, video, and text from a single prompt.
+        </p>
       </div>
+    </article>
 
-      <!-- Breakthrough 3: Solid‑State Batteries -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1587614382347-3b1c4f6c7c23?auto=format&fit=crop&w=400&q=80" alt="Solid State Battery">
-        <div class="card-body">
-          <h3 class="card-title">Solid‑State Battery Advancements</h3>
-          <p class="card-text">Companies like Toyota and QuantumScape have released prototypes that promise 3× energy density, faster charging, and enhanced safety compared to lithium‑ion batteries.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://www.quantumscape.com" target="_blank">Learn More</a>
-        </div>
+    <article class="card">
+      <div class="card-header"><i>📡</i><span>6G Rollout</span></div>
+      <div class="card-body">
+        <h3 class="card-title">6G Rollout</h3>
+        <p class="card-text">
+          Early deployments of 6G networks deliver sub‑millisecond latency and terabit-per‑second speeds.
+        </p>
       </div>
+    </article>
 
-      <!-- Breakthrough 4: AI‑Driven Gene Editing -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1580281657522-4b0b9b7a3f0b?auto=format&fit=crop&w=400&q=80" alt="Gene Editing">
-        <div class="card-body">
-          <h3 class="card-title">AI in Gene Editing</h3>
-          <p class="card-text">Deep learning models now predict CRISPR guide RNAs with unprecedented accuracy, accelerating therapeutic gene editing for diseases like sickle cell anemia and cancer.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://www.biorxiv.org/content/10.1101/2024.04.25.123456v1" target="_blank">Read the Study</a>
-        </div>
+    <article class="card">
+      <div class="card-header"><i>🧬</i><span>mRNA Vaccine Platforms</span></div>
+      <div class="card-body">
+        <h3 class="card-title">mRNA Vaccine Platforms</h3>
+        <p class="card-text">
+          New delivery vectors extend mRNA stability and allow rapid response to emerging pathogens.
+        </p>
       </div>
+    </article>
 
-      <!-- Breakthrough 5: Edge AI & TinyML -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1535081225944-71f8a8b9b7b0?auto=format&fit=crop&w=400&q=80" alt="Edge AI">
-        <div class="card-body">
-          <h3 class="card-title">Edge AI and TinyML</h3>
-          <p class="card-text">New low‑power neural network accelerators allow real‑time AI inference on microcontrollers, opening doors to smarter wearables, autonomous drones, and industrial IoT.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://www.ti.com/lit/an/slyt213/slyt213.pdf" target="_blank">Tech Overview</a>
-        </div>
+    <article class="card">
+      <div class="card-header"><i>🚗</i><span>Autonomous Flight</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Autonomous Flight</h3>
+        <p class="card-text">
+          AI‑driven drones now perform complex air‑traffic management in congested urban skies.
+        </p>
       </div>
+    </article>
 
-      <!-- Breakthrough 6: Autonomous Quantum Networks -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1587734600002-5c2d9f7e8b0b?auto=format&fit=crop&w=400&q=80" alt="Quantum Network">
-        <div class="card-body">
-          <h3 class="card-title">Autonomous Quantum Networks</h3>
-          <p class="card-text">Researchers have developed quantum repeaters that autonomously maintain entanglement over 10,000 km, paving the way for secure global quantum communication.</p>
-        </div>
-        <div class="card-footer">
-          <a href="https://www.nature.com/articles/s41467-024-56789-0" target="_blank">Read Publication</a>
-        </div>
+    <article class="card">
+      <div class="card-header"><i>🧪</i><span>3D Bioprinting</span></div>
+      <div class="card-body">
+        <h3 class="card-title">3D Bioprinting</h3>
+        <p class="card-text">
+          Layer‑by‑layer printing of living tissues has advanced to organ‑scale constructs.
+        </p>
       </div>
+    </article>
 
-    </div>
-  </section>
-</div>
+    <article class="card">
+      <div class="card-header"><i>🛠️</i><span>Neuromorphic Chips</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Neuromorphic Chips</h3>
+        <p class="card-text">
+          Silicon‑based brains now run low‑power AI workloads with brain‑like efficiency.
+        </p>
+      </div>
+    </article>
 
-<footer>
-  <p>© 2024 TechFrontiers. All rights reserved.</p>
-</footer>
+    <article class="card">
+      <div class="card-header"><i>💡</i><span>Edge Computing</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Edge Computing</h3>
+        <p class="card-text">
+          Distributed micro‑data centers process data locally, cutting latency and bandwidth usage.
+        </p>
+      </div>
+    </article>
 
-</body>
-</html>
+    <article class="card">
+      <div class="card-header"><i>🔭</i><span>Quantum Sensors</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Quantum Sensors</h3>
+        <
