@@ -2,153 +2,104 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root{
-    --primary:#0D47A1;
-    --secondary:#1976D2;
-    --accent:#FFC107;
-    --bg:#F5F5F5;
-    --text:#333;
-    --card-bg:#FFF;
-    --shadow:#E0E0E0;
-    --radius:8px;
-    --font-sans:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  }
-  *,*::before,*::after{box-sizing:border-box;}
-  body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg);}
-  header{
-    background:var(--primary);
-    color:#fff;
-    text-align:center;
-    padding:3rem 1rem;
-    box-shadow:0 2px 6px var(--shadow);
-  }
-  header h1{margin:0;font-size:2.5rem;}
-  header p{margin-top:.5rem;font-size:1.1rem;}
-  main{max-width:1200px;margin:0 auto;padding:2rem 1rem;}
-  h2{font-size:1.8rem;margin:2rem 0 1rem;}
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:1.5rem;
-  }
-  .card{
-    background:var(--card-bg);
-    border-radius:var(--radius);
-    box-shadow:0 2px 8px var(--shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-  }
-  .card header{
-    background:var(--secondary);
-    color:#fff;
-    padding:1rem;
-    font-size:1.2rem;
-    display:flex;
-    align-items:center;
-  }
-  .card header .icon{font-size:1.8rem;margin-right:.5rem;}
-  .card .content{
-    padding:1rem;
-    flex:1;
-    display:flex;
-    flex-direction:column;
-  }
-  .card .content p{margin:0 0 .5rem;flex:1;}
-  .card .footer{
-    border-top:1px solid var(--shadow);
-    padding:.8rem 1rem;
-    background:#fafafa;
-    text-align:right;
-    font-size:.9rem;
-  }
-  @media(max-width:600px){
+  /* Reset & Basics */
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#333;line-height:1.6;}
+  a{color:#1e88e5;text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* Header */
+  header{background:#1e88e5;color:#fff;padding:3rem 1rem;text-align:center;}
+  header h1{font-size:2.5rem;margin-bottom:0.5rem;}
+  header p{font-size:1.1rem;}
+
+  /* Main Content */
+  main{max-width:1200px;margin:2rem auto;padding:0 1rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
+  article{background:#fff;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1);overflow:hidden;}
+  article img{width:100%;height:180px;object-fit:cover;}
+  article h3{font-size:1.4rem;margin:1rem;}
+  article p{margin:0 1rem 1rem;}
+  article footer{padding:0.5rem 1rem;background:#fafafa;font-size:0.9rem;color:#666;}
+  footer{background:#333;color:#fff;text-align:center;padding:1rem;margin-top:4rem;font-size:0.9rem;}
+
+  /* Responsive Adjustments */
+  @media (max-width:600px){
     header h1{font-size:2rem;}
-    h2{font-size:1.5rem;}
   }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology (2024)</h1>
-  <p>From quantum leaps to the next frontier of human‑machine collaboration.</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Explore the cutting‑edge innovations that are reshaping our world.</p>
 </header>
 
 <main>
-  <section>
-    <h2>Artificial Intelligence</h2>
-    <div class="grid">
-      <div class="card">
-        <header><span class="icon">🤖</span>GPT‑5 & Foundation Models</header>
-        <div class="content">
-          <p>OpenAI’s GPT‑5 introduces 1 trillion‑parameter models with improved safety and multimodal understanding, enabling seamless text, image, audio, and code generation.</p>
-        </div>
-        <div class="footer">Jan 2024</div>
-      </div>
+  <section class="grid">
+    <!-- 1. AI & Machine Learning -->
+    <article>
+      <img src="https://source.unsplash.com/collection/190727/600x400" alt="Artificial Intelligence">
+      <h3>Generative AI</h3>
+      <p>From language models that write code to AI systems that design molecules, generative AI is driving unprecedented creativity and efficiency across industries.</p>
+      <footer>Tech Trend • 2024</footer>
+    </article>
 
-      <div class="card">
-        <header><span class="icon">🧠</span>Reinforcement Learning & RLHF</header>
-        <div class="content">
-          <p>Reinforcement Learning from Human Feedback now achieves near‑human performance in complex strategy games and real‑world robotics tasks.</p>
-        </div>
-        <div class="footer">Mar 2024</div>
-      </div>
+    <!-- 2. Quantum Computing -->
+    <article>
+      <img src="https://source.unsplash.com/collection/483251/600x400" alt="Quantum Computer">
+      <h3>Quantum Supremacy</h3>
+      <p>New quantum processors are outperforming classical computers in specialized tasks, opening doors to breakthroughs in cryptography and material science.</p>
+      <footer>Tech Trend • 2024</footer>
+    </article>
 
-      <div class="card">
-        <header><span class="icon">🔬</span>AI‑Driven Drug Discovery</header>
-        <div class="content">
-          <p>DeepMind’s AlphaFold‑2 extended to protein–protein interactions accelerates drug target identification, cutting discovery time from years to months.</p>
-        </div>
-        <div class="footer">Feb 2024</div>
-      </div>
-    </div>
+    <!-- 3. Battery & Energy Storage -->
+    <article>
+      <img src="https://source.unsplash.com/collection/1051165/600x400" alt="Battery Technology">
+      <h3>Solid‑State Batteries</h3>
+      <p>Solid‑state cells offer higher energy density, faster charging, and improved safety, promising a new era for electric vehicles and portable electronics.</p>
+      <footer>Tech Trend • 2024</footer>
+    </article>
+
+    <!-- 4. Biotechnology -->
+    <article>
+      <img src="https://source.unsplash.com/collection/1156567/600x400" alt="CRISPR">
+      <h3>CRISPR‑Based Therapies</h3>
+      <p>Gene editing therapies are moving from the lab to clinical trials, targeting conditions like sickle cell disease and hereditary cancers.</p>
+      <footer>Tech Trend • 2024</footer>
+    </article>
+
+    <!-- 5. Autonomous & Connected Vehicles -->
+    <article>
+      <img src="https://source.unsplash.com/collection/133876/600x400" alt="Autonomous Car">
+      <h3>Level 4+ Autonomy</h3>
+      <p>Advanced driver‑assist systems now enable safe, fully autonomous operation in complex urban environments.</p>
+      <footer>Tech Trend • 2024</footer>
+    </article>
+
+    <!-- 6. 6G & Next‑Gen Connectivity -->
+    <article>
+      <img src="https://source.unsplash.com/collection/1302953/600x400" alt="6G Network">
+      <h3>6G & Ultra‑Low Latency</h3>
+      <p>Research into 6G is pushing terahertz frequencies, offering sub‑millisecond latency and unprecedented data rates.</p>
+      <footer>Tech Trend • 2024</footer>
+    </article>
+
+    <!-- 7. Space Technology -->
+    <article>
+      <img src="https://source.unsplash.com/collection/1870/600x400" alt="Space Exploration">
+      <h3>Reusable Launch Systems</h3>
+      <p>Commercial spaceflight is becoming more economical with reusable rockets, enabling deeper space missions and asteroid mining concepts.</p>
+      <footer>Tech Trend • 2024</footer>
+    </article>
   </section>
+</main>
 
-  <section>
-    <h2>Quantum Computing</h2>
-    <div class="grid">
-      <div class="card">
-        <header><span class="icon">🟠</span>IBM Quantum 24Q & Error Correction</header>
-        <div class="content">
-          <p>IBM’s 24‑qubit processor achieves logical error rates below 1 % using surface‑code error correction, a milestone toward fault‑tolerant quantum computers.</p>
-        </div>
-        <div class="footer">Apr 2024</div>
-      </div>
-
-      <div class="card">
-        <header><span class="icon">💡</span>Google Quantum Supremacy 2.0</header>
-        <div class="content">
-          <p>Google demonstrates a 50‑qubit Gaussian circuit that outpaces classical supercomputers in a specific benchmark, pushing the boundary of noisy intermediate‑scale quantum devices.</p>
-        </div>
-        <div class="footer">May 2024</div>
-      </div>
-
-      <div class="card">
-        <header><span class="icon">🔗</span>Hybrid Classical‑Quantum Algorithms</header>
-        <div class="content">
-          <p>New variational algorithms reduce quantum circuit depth, enabling practical optimization for logistics and material science problems on today’s hardware.</p>
-        </div>
-        <div class="footer">Jun 2024</div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Biotechnology & Synthetic Biology</h2>
-    <div class="grid">
-      <div class="card">
-        <header><span class="icon">🧬</span>Prime Editing 2.0</header>
-        <div class="content">
-          <p>CRISPR‑Cas9 prime editors now achieve >95 % editing efficiency with minimal off‑target effects, opening possibilities for precise gene therapies.</p>
-        </div>
-        <div class="footer">Jan 2024</div>
-      </div>
-
-      <div class="card">
-        <header><span class="icon">💉</span>mRNA Vaccine Platform Expansion</header>
-        <div class="content">
-          <p>Adapted mRNA technology targets viral variants and non‑infectious diseases
+<footer>
+  <p>© 2024 Tech Insights. All rights reserved.</p>
+</footer>
+</body>
+</html>
