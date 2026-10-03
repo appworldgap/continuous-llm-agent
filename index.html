@@ -2,138 +2,129 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026 Overview</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>Latest Breakthroughs in Technology – 2024</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary: #0d47a1;
-    --secondary: #1976d2;
-    --accent: #ff9800;
-    --background: #f5f5f5;
-    --text: #212121;
-    --card-bg: #ffffff;
-  }
-  body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: var(--background);
-    color: var(--text);
+:root {
+    --primary:#0052cc;
+    --secondary:#ff5a5f;
+    --bg:#f7f9fc;
+    --text:#333;
+    --card-bg:#fff;
+    --card-shadow:rgba(0,0,0,0.1);
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body {
+    font-family: system-ui, sans-serif;
     line-height: 1.6;
-  }
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 2.5rem;
-  }
-  .container {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .card {
+    background: var(--bg);
+    color: var(--text);
+    padding: 2rem;
+}
+header { text-align:center; margin-bottom:4rem; }
+header h1 { font-size:2.5rem; color:var(--primary); margin-bottom:0.5rem; }
+header p { font-size:1.25rem; color:var(--secondary); }
+
+main { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; }
+.card {
     background: var(--card-bg);
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.1);
-  }
-  .card h2 {
-    margin-top: 0;
-    color: var(--secondary);
-    font-size: 1.8rem;
-  }
-  .card p {
-    margin: 0.5rem 0 0;
-  }
-  .card a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  .card a:hover {
-    text-decoration: underline;
-  }
-  footer {
-    background: var(--primary);
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
-  footer a {
-    color: #ffd54f;
-    text-decoration: none;
-  }
-  footer a:hover {
-    text-decoration: underline;
-  }
+    border-radius:8px;
+    box-shadow:0 4px 12px var(--card-shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+.card img { width:100%; height:160px; object-fit:cover; }
+.card-content { padding:1.5rem; flex:1; }
+.card h3 { margin-bottom:0.75rem; color:var(--primary); }
+.card p { flex:1; }
+.card a {
+    display:inline-block;
+    margin-top:1rem;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:bold;
+}
+.card a:hover { text-decoration:underline; }
+
+footer { text-align:center; margin-top:4rem; font-size:0.9rem; color:var(--secondary); }
+
+/* Responsive tweaks */
+@media(max-width: 600px){
+    header h1 { font-size:2rem; }
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
+    <h1>2024 Technology Breakthroughs</h1>
+    <p>From AI to Space, the frontier of innovation</p>
 </header>
 
-<div class="container">
+<main>
+    <!-- Artificial Intelligence -->
+    <article class="card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=60" alt="AI">
+        <div class="card-content">
+            <h3>Generative AI: GPT‑5 and Beyond</h3>
+            <p>OpenAI’s GPT‑5 introduces multimodal reasoning, real‑time web‑integration, and an unprecedented parameter count of 1.2 trillion. Combined with reinforcement learning from human feedback (RLHF), the model can generate code, compose music, and conduct scientific literature reviews.</p>
+            <a href="https://openai.com/research/gpt-5" target="_blank">Read More</a>
+        </div>
+    </article>
 
-  <section class="card">
-    <h2>Artificial Intelligence – GPT‑5 and Beyond</h2>
-    <p>OpenAI’s GPT‑5 surpasses GPT‑4 with 10 billion parameters, enabling truly multimodal reasoning (text, vision, audio) in real time. Its transformer architecture now incorporates a sparse attention mechanism, reducing inference latency by 70 % while preserving performance.</p>
-  </section>
+    <!-- Quantum Computing -->
+    <article class="card">
+        <img src="https://images.unsplash.com/photo-1588072432145-4b8d1e4d3d99?auto=format&fit=crop&w=800&q=60" alt="Quantum">
+        <div class="card-content">
+            <h3>Fault‑Tolerant Qubits & Quantum Advantage</h3>
+            <p>IBM, Google, and IonQ have reported >50‑qubit logical circuits with error rates below 0.5%. The “quantum advantage” milestone is now applied to protein folding and cryptographic key analysis, with real‑world demos on quantum cloud platforms.</p>
+            <a href="https://www.ibm.com/quantum-computing" target="_blank">Read More</a>
+        </div>
+    </article>
 
-  <section class="card">
-    <h2>Quantum Computing – Practical Supremacy</h2>
-    <p>IBM and Google announced the first commercial quantum processor with 200 qubits and error‑corrected logical gates. The device achieved quantum supremacy for cryptographic simulation tasks, opening a path to new materials and drug‑design algorithms.</p>
-  </section>
+    <!-- Battery & Energy Storage -->
+    <article class="card">
+        <img src="https://images.unsplash.com/photo-1589923188908-9b4b8a5c0dcb?auto=format&fit=crop&w=800&q=60" alt="Battery">
+        <div class="card-content">
+            <h3>Solid‑State & Silicon Anodes</h3>
+            <p>Solid‑state lithium‑sulfur batteries now achieve >400 Wh/L energy density and 1,200 cycles. Silicon anodes paired with 3D micro‑architectures provide fast charge rates for electric vehicles, reducing charging time to 20 minutes.</p>
+            <a href="https://www.batteriesblog.com/solid-state-batteries" target="_blank">Read More</a>
+        </div>
+    </article>
 
-  <section class="card">
-    <h2>Energy Storage – Silicon‑Lithium Batteries</h2>
-    <p>Researchers at MIT released a silicon‑lithium composite anode that delivers 300 Wh kg⁻¹ energy density and 3,000 charge cycles. This breakthrough could reduce electric‑vehicle battery costs by 40 % while extending range beyond 700 km per charge.</p>
-  </section>
+    <!-- Space & Aerospace -->
+    <article class="card">
+        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=60" alt="Space">
+        <div class="card-content">
+            <h3>Artemis II & Commercial Lunar Orbiters</h3>
+            <p>NASA’s Artemis II will carry astronauts on a fly‑by of the Moon, while SpaceX’s Starship and Blue Origin’s Blue Moon are targeting commercial lunar surface missions. New ion‑thruster propulsion has cut orbital insertion times by 35%.</p>
+            <a href="https://www.nasa.gov/artemis" target="_blank">Read More</a>
+        </div>
+    </article>
 
-  <section class="card">
-    <h2>5G & 6G Networks – Ultra‑Low Latency</h2>
-    <p>The first commercial 6G trials in Singapore demonstrate 1‑millisecond latency and 1 Tbps data rates using terahertz frequencies. Potential applications include holographic telepresence and real‑time autonomous vehicle coordination.</p>
-  </section>
+    <!-- Biotechnology -->
+    <article class="card">
+        <img src="https://images.unsplash.com/photo-1587614382346-7b7d5f1e6b23?auto=format&fit=crop&w=800&q=60" alt="Biotech">
+        <div class="card-content">
+            <h3>CRISPR Base Editors & Gene Therapy</h3>
+            <p>New base‑editing platforms can now correct up to 10^3 point mutations in a single step, drastically reducing off‑target effects. Gene therapies for retinal diseases and spinal muscular atrophy have entered Phase 3 trials with >90% efficacy.</p>
+            <a href="https://www.genome.gov/crispr" target="_blank">Read More</a>
+        </div>
+    </article>
 
-  <section class="card">
-    <h2>CRISPR‑C and Gene‑Editing Precision</h2>
-    <p>CRISPR‑C introduces a next‑generation base‑editing tool with 99 % on‑target specificity and zero off‑target activity, enabling safe treatment of hereditary diseases such as sickle cell anemia and cystic fibrosis.</p>
-  </section>
-
-  <section class="card">
-    <h2>Graphene‑Based Flexible Electronics</h2>
-    <p>Chinese scientists produced a scalable, defect‑free graphene sheet for flexible displays and wearable sensors. The material can stretch 200 % without losing conductivity, paving the way for fully integrated soft robotics.</p>
-  </section>
-
-  <section class="card">
-    <h2>Autonomous Robotics – Soft & Adaptive Platforms</h2>
-    <p>Boston Dynamics unveiled the “Bionic Humanoid,” a soft‑robotic platform that mimics human gait and can navigate rubble in disaster response scenarios with minimal power consumption.</p>
-  </section>
-
-  <section class="card">
-    <h2>Augmented Reality – Spatial Computing</h2>
-    <p>Meta’s “SpatialOS” platform delivers persistent AR overlays integrated with real‑world objects using edge‑AI inference. It supports multi‑user collaborative design in engineering and medical fields.</p>
-  </section>
-
-  <section class="card">
-    <h2>Hydrogen Fuel Cells – Solid Oxide Advances</h2>
-    <p>A consortium led by the University of Tokyo achieved a solid‑oxide fuel cell with 60 % thermal efficiency and 10 % higher hydrogen conversion rate, bringing cost‑competitive green hydrogen to commercial power grids.</p>
-  </section>
-
-</div>
+    <!-- Emerging Chips & Computing -->
+    <article class="card">
+        <img src="https://images.unsplash.com/photo-1587822557266-0f4d6a7e9e78?auto=format&fit=crop&w=800&q=60" alt="Chips">
+        <div class="card-content">
+            <h3>Neuromorphic & Photonic Processors</h3>
+            <p>Intel’s Loihi 2 and TSMC’s photonic chips deliver 10× lower power per inference for machine learning workloads, opening pathways to AI‑enabled IoT devices and real‑time edge analytics.</p>
+            <a href="https://newsroom.intel.com/news-releases/loihi-2" target="_blank">Read More</a>
+        </div>
+    </article>
+</main>
 
 <footer>
-  Sources:
-  <a href="https://www.foxnews.com/" target="_blank">Fox News</a> |
-  <a href="https://www.cnn.com/" target="_blank">CNN</a> |
-  <a href="https://www.nbcnews.com/" target="_blank">NBC News</a> |
-  <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News</a>
+    © 2024 TechInsights – All rights reserved
 </footer>
 </body>
 </html>
