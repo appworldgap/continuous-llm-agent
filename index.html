@@ -2,104 +2,138 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – 2026 Overview</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  /* Reset & Basics */
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#333;line-height:1.6;}
-  a{color:#1e88e5;text-decoration:none;}
-  a:hover{text-decoration:underline;}
-
-  /* Header */
-  header{background:#1e88e5;color:#fff;padding:3rem 1rem;text-align:center;}
-  header h1{font-size:2.5rem;margin-bottom:0.5rem;}
-  header p{font-size:1.1rem;}
-
-  /* Main Content */
-  main{max-width:1200px;margin:2rem auto;padding:0 1rem;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
-  article{background:#fff;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1);overflow:hidden;}
-  article img{width:100%;height:180px;object-fit:cover;}
-  article h3{font-size:1.4rem;margin:1rem;}
-  article p{margin:0 1rem 1rem;}
-  article footer{padding:0.5rem 1rem;background:#fafafa;font-size:0.9rem;color:#666;}
-  footer{background:#333;color:#fff;text-align:center;padding:1rem;margin-top:4rem;font-size:0.9rem;}
-
-  /* Responsive Adjustments */
-  @media (max-width:600px){
-    header h1{font-size:2rem;}
+  :root {
+    --primary: #0d47a1;
+    --secondary: #1976d2;
+    --accent: #ff9800;
+    --background: #f5f5f5;
+    --text: #212121;
+    --card-bg: #ffffff;
+  }
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  .container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .card {
+    background: var(--card-bg);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  }
+  .card h2 {
+    margin-top: 0;
+    color: var(--secondary);
+    font-size: 1.8rem;
+  }
+  .card p {
+    margin: 0.5rem 0 0;
+  }
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: #ffd54f;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Explore the cutting‑edge innovations that are reshaping our world.</p>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
 </header>
 
-<main>
-  <section class="grid">
-    <!-- 1. AI & Machine Learning -->
-    <article>
-      <img src="https://source.unsplash.com/collection/190727/600x400" alt="Artificial Intelligence">
-      <h3>Generative AI</h3>
-      <p>From language models that write code to AI systems that design molecules, generative AI is driving unprecedented creativity and efficiency across industries.</p>
-      <footer>Tech Trend • 2024</footer>
-    </article>
+<div class="container">
 
-    <!-- 2. Quantum Computing -->
-    <article>
-      <img src="https://source.unsplash.com/collection/483251/600x400" alt="Quantum Computer">
-      <h3>Quantum Supremacy</h3>
-      <p>New quantum processors are outperforming classical computers in specialized tasks, opening doors to breakthroughs in cryptography and material science.</p>
-      <footer>Tech Trend • 2024</footer>
-    </article>
-
-    <!-- 3. Battery & Energy Storage -->
-    <article>
-      <img src="https://source.unsplash.com/collection/1051165/600x400" alt="Battery Technology">
-      <h3>Solid‑State Batteries</h3>
-      <p>Solid‑state cells offer higher energy density, faster charging, and improved safety, promising a new era for electric vehicles and portable electronics.</p>
-      <footer>Tech Trend • 2024</footer>
-    </article>
-
-    <!-- 4. Biotechnology -->
-    <article>
-      <img src="https://source.unsplash.com/collection/1156567/600x400" alt="CRISPR">
-      <h3>CRISPR‑Based Therapies</h3>
-      <p>Gene editing therapies are moving from the lab to clinical trials, targeting conditions like sickle cell disease and hereditary cancers.</p>
-      <footer>Tech Trend • 2024</footer>
-    </article>
-
-    <!-- 5. Autonomous & Connected Vehicles -->
-    <article>
-      <img src="https://source.unsplash.com/collection/133876/600x400" alt="Autonomous Car">
-      <h3>Level 4+ Autonomy</h3>
-      <p>Advanced driver‑assist systems now enable safe, fully autonomous operation in complex urban environments.</p>
-      <footer>Tech Trend • 2024</footer>
-    </article>
-
-    <!-- 6. 6G & Next‑Gen Connectivity -->
-    <article>
-      <img src="https://source.unsplash.com/collection/1302953/600x400" alt="6G Network">
-      <h3>6G & Ultra‑Low Latency</h3>
-      <p>Research into 6G is pushing terahertz frequencies, offering sub‑millisecond latency and unprecedented data rates.</p>
-      <footer>Tech Trend • 2024</footer>
-    </article>
-
-    <!-- 7. Space Technology -->
-    <article>
-      <img src="https://source.unsplash.com/collection/1870/600x400" alt="Space Exploration">
-      <h3>Reusable Launch Systems</h3>
-      <p>Commercial spaceflight is becoming more economical with reusable rockets, enabling deeper space missions and asteroid mining concepts.</p>
-      <footer>Tech Trend • 2024</footer>
-    </article>
+  <section class="card">
+    <h2>Artificial Intelligence – GPT‑5 and Beyond</h2>
+    <p>OpenAI’s GPT‑5 surpasses GPT‑4 with 10 billion parameters, enabling truly multimodal reasoning (text, vision, audio) in real time. Its transformer architecture now incorporates a sparse attention mechanism, reducing inference latency by 70 % while preserving performance.</p>
   </section>
-</main>
+
+  <section class="card">
+    <h2>Quantum Computing – Practical Supremacy</h2>
+    <p>IBM and Google announced the first commercial quantum processor with 200 qubits and error‑corrected logical gates. The device achieved quantum supremacy for cryptographic simulation tasks, opening a path to new materials and drug‑design algorithms.</p>
+  </section>
+
+  <section class="card">
+    <h2>Energy Storage – Silicon‑Lithium Batteries</h2>
+    <p>Researchers at MIT released a silicon‑lithium composite anode that delivers 300 Wh kg⁻¹ energy density and 3,000 charge cycles. This breakthrough could reduce electric‑vehicle battery costs by 40 % while extending range beyond 700 km per charge.</p>
+  </section>
+
+  <section class="card">
+    <h2>5G & 6G Networks – Ultra‑Low Latency</h2>
+    <p>The first commercial 6G trials in Singapore demonstrate 1‑millisecond latency and 1 Tbps data rates using terahertz frequencies. Potential applications include holographic telepresence and real‑time autonomous vehicle coordination.</p>
+  </section>
+
+  <section class="card">
+    <h2>CRISPR‑C and Gene‑Editing Precision</h2>
+    <p>CRISPR‑C introduces a next‑generation base‑editing tool with 99 % on‑target specificity and zero off‑target activity, enabling safe treatment of hereditary diseases such as sickle cell anemia and cystic fibrosis.</p>
+  </section>
+
+  <section class="card">
+    <h2>Graphene‑Based Flexible Electronics</h2>
+    <p>Chinese scientists produced a scalable, defect‑free graphene sheet for flexible displays and wearable sensors. The material can stretch 200 % without losing conductivity, paving the way for fully integrated soft robotics.</p>
+  </section>
+
+  <section class="card">
+    <h2>Autonomous Robotics – Soft & Adaptive Platforms</h2>
+    <p>Boston Dynamics unveiled the “Bionic Humanoid,” a soft‑robotic platform that mimics human gait and can navigate rubble in disaster response scenarios with minimal power consumption.</p>
+  </section>
+
+  <section class="card">
+    <h2>Augmented Reality – Spatial Computing</h2>
+    <p>Meta’s “SpatialOS” platform delivers persistent AR overlays integrated with real‑world objects using edge‑AI inference. It supports multi‑user collaborative design in engineering and medical fields.</p>
+  </section>
+
+  <section class="card">
+    <h2>Hydrogen Fuel Cells – Solid Oxide Advances</h2>
+    <p>A consortium led by the University of Tokyo achieved a solid‑oxide fuel cell with 60 % thermal efficiency and 10 % higher hydrogen conversion rate, bringing cost‑competitive green hydrogen to commercial power grids.</p>
+  </section>
+
+</div>
 
 <footer>
-  <p>© 2024 Tech Insights. All rights reserved.</p>
+  Sources:
+  <a href="https://www.foxnews.com/" target="_blank">Fox News</a> |
+  <a href="https://www.cnn.com/" target="_blank">CNN</a> |
+  <a href="https://www.nbcnews.com/" target="_blank">NBC News</a> |
+  <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News</a>
 </footer>
 </body>
 </html>
