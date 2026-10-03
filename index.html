@@ -2,130 +2,156 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --primary: #0063a1;
-    --secondary: #004c78;
-    --bg: #f7f9fc;
-    --card-bg: #ffffff;
-    --text: #2c3e50;
-    --accent: #ff6b6b;
+    --primary:#4a90e2;
+    --accent:#ff6b6b;
+    --bg:#fafafa;
+    --card-bg:#fff;
+    --text:#333;
+    --border:#e0e0e0;
+    --font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         background: var(--bg); color: var(--text); line-height: 1.6; }
-  .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
-  header { text-align: center; margin-bottom: 3rem; }
-  header h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: .5rem; }
-  header p { font-size: 1.1rem; color: var(--secondary); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 1.5rem; }
-  .card { background: var(--card-bg); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,.1);
-          overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
-  .card-header { background: var(--primary); color: #fff; padding: 1rem; display: flex; align-items: center; }
-  .card-header i { font-size: 1.5rem; margin-right: .5rem; }
-  .card-body { padding: 1rem; }
-  .card-title { font-size: 1.2rem; margin-bottom: .5rem; }
-  .card-text { font-size: .95rem; color: #555; }
-  @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
+  *, *::before, *::after { box-sizing:border-box; }
+  body { margin:0; font-family:var(--font-family); background:var(--bg); color:var(--text); line-height:1.6; }
+  a { color:var(--primary); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  header {
+    background:var(--primary);
+    color:#fff;
+    padding:1rem 2rem;
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  header h1 { margin:0; font-size:1.8rem; }
+  nav { margin-top:.5rem; }
+  nav a { margin-right:1.5rem; font-weight:500; }
+  main { padding:2rem; }
+  .hero {
+    background:linear-gradient(135deg, var(--primary) 0%, #6b8ce2 100%);
+    color:#fff;
+    padding:3rem 2rem;
+    text-align:center;
+    border-radius:8px;
+    margin-bottom:2rem;
+  }
+  .hero h2 { margin-top:0; font-size:2.5rem; }
+  .hero p { font-size:1.1rem; }
+  .cards {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:1.5rem;
+  }
+  .card {
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 4px 8px rgba(0,0,0,.05);
+    transition:transform .2s,box-shadow .2s;
+  }
+  .card:hover { transform:translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,.1); }
+  .card img { width:100%; height:160px; object-fit:cover; }
+  .card-body { padding:1rem; }
+  .card-title { margin:0 0 .5rem; font-size:1.25rem; }
+  .card-text { margin:0 0 1rem; font-size:.95rem; color:#666; }
+  .card-footer { padding:0 1rem 1rem; text-align:right; }
+  .card-footer a { font-size:.9rem; color:var(--accent); }
+  footer {
+    text-align:center;
+    padding:1rem 0;
+    background:#f0f0f0;
+    color:#777;
+    font-size:.9rem;
+  }
+  @media(max-width:600px) {
+    header h1 { font-size:1.4rem; }
+    .hero h2 { font-size:2rem; }
   }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Latest Breakthroughs in Technology – 2024</h1>
-    <p>Discover the most transformative innovations shaping our world today.</p>
-  </header>
+<header>
+  <h1>Latest Breakthroughs in Technology 2026</h1>
+  <nav>
+    <a href="#ai">Artificial Intelligence</a>
+    <a href="#quantum">Quantum Computing</a>
+    <a href="#space">Space Exploration</a>
+    <a href="#energy">Energy & Storage</a>
+    <a href="#biotech">Biotech & Health</a>
+  </nav>
+</header>
 
-  <section class="grid">
-    <article class="card">
-      <div class="card-header"><i>⚛️</i><span>Quantum Supremacy 2.0</span></div>
+<main>
+  <section class="hero">
+    <h2>From Quantum Chips to Brain‑Computer Interfaces</h2>
+    <p>Explore the most transformative tech breakthroughs reshaping industries and everyday life in 2026.</p>
+  </section>
+
+  <section id="ai" class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x160/4A90E2/ffffff?text=AI+Image" alt="AI breakthrough">
       <div class="card-body">
-        <h3 class="card-title">Quantum Supremacy 2.0</h3>
-        <p class="card-text">
-          A new generation of superconducting qubits achieves fault‑tolerant operations,
-          enabling complex simulations that were previously impossible.
-        </p>
+        <h3 class="card-title">AI-Generated Autonomous Vehicles</h3>
+        <p class="card-text">Full‑self‑driving systems powered by federated learning achieve real‑world deployment across 10 countries.</p>
       </div>
-    </article>
-
-    <article class="card">
-      <div class="card-header"><i>🤖</i><span>Generative AI 3.5</span></div>
-      <div class="card-body">
-        <h3 class="card-title">Generative AI 3.5</h3>
-        <p class="card-text">
-          Advanced multimodal models now generate coherent audio, video, and text from a single prompt.
-        </p>
+      <div class="card-footer">
+        <a href="#">Read More →</a>
       </div>
-    </article>
+    </div>
 
-    <article class="card">
-      <div class="card-header"><i>📡</i><span>6G Rollout</span></div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x160/FF6B6B/ffffff?text=AI+Health" alt="AI health">
       <div class="card-body">
-        <h3 class="card-title">6G Rollout</h3>
-        <p class="card-text">
-          Early deployments of 6G networks deliver sub‑millisecond latency and terabit-per‑second speeds.
-        </p>
+        <h3 class="card-title">AI‑Assisted Early Diagnosis</h3>
+        <p class="card-text">Deep‑learning algorithms detect early-stage cancer in 98% accuracy using routine scans.</p>
       </div>
-    </article>
-
-    <article class="card">
-      <div class="card-header"><i>🧬</i><span>mRNA Vaccine Platforms</span></div>
-      <div class="card-body">
-        <h3 class="card-title">mRNA Vaccine Platforms</h3>
-        <p class="card-text">
-          New delivery vectors extend mRNA stability and allow rapid response to emerging pathogens.
-        </p>
+      <div class="card-footer">
+        <a href="#">Read More →</a>
       </div>
-    </article>
+    </div>
 
-    <article class="card">
-      <div class="card-header"><i>🚗</i><span>Autonomous Flight</span></div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x160/4A90E2/ffffff?text=AI+Robotics" alt="AI robotics">
       <div class="card-body">
-        <h3 class="card-title">Autonomous Flight</h3>
-        <p class="card-text">
-          AI‑driven drones now perform complex air‑traffic management in congested urban skies.
-        </p>
+        <h3 class="card-title">Soft Robotics with AI Control</h3>
+        <p class="card-text">Soft actuators learning from touch sensors create highly adaptable industrial robots.</p>
       </div>
-    </article>
-
-    <article class="card">
-      <div class="card-header"><i>🧪</i><span>3D Bioprinting</span></div>
-      <div class="card-body">
-        <h3 class="card-title">3D Bioprinting</h3>
-        <p class="card-text">
-          Layer‑by‑layer printing of living tissues has advanced to organ‑scale constructs.
-        </p>
+      <div class="card-footer">
+        <a href="#">Read More →</a>
       </div>
-    </article>
+    </div>
+  </section>
 
-    <article class="card">
-      <div class="card-header"><i>🛠️</i><span>Neuromorphic Chips</span></div>
+  <section id="quantum" class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x160/4A90E2/ffffff?text=Quantum+Chip" alt="Quantum chip">
       <div class="card-body">
-        <h3 class="card-title">Neuromorphic Chips</h3>
-        <p class="card-text">
-          Silicon‑based brains now run low‑power AI workloads with brain‑like efficiency.
-        </p>
+        <h3 class="card-title">Commercial Quantum Processors</h3>
+        <p class="card-text">A 256‑qubit processor delivers breakthroughs in cryptography and complex simulations.</p>
       </div>
-    </article>
-
-    <article class="card">
-      <div class="card-header"><i>💡</i><span>Edge Computing</span></div>
-      <div class="card-body">
-        <h3 class="card-title">Edge Computing</h3>
-        <p class="card-text">
-          Distributed micro‑data centers process data locally, cutting latency and bandwidth usage.
-        </p>
+      <div class="card-footer">
+        <a href="#">Read More →</a>
       </div>
-    </article>
+    </div>
 
-    <article class="card">
-      <div class="card-header"><i>🔭</i><span>Quantum Sensors</span></div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x160/FF6B6B/ffffff?text=Quantum+Internet" alt="Quantum internet">
       <div class="card-body">
-        <h3 class="card-title">Quantum Sensors</h3>
-        <
+        <h3 class="card-title">Global Quantum‑Backed Networks</h3>
+        <p class="card-text">Secure quantum key distribution now available over 1,200 km fiber routes.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#">Read More →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="space" class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x160/4A90E2/ffffff?text=Mars+Lander" alt="Mars Lander">
+      <div class="card-body">
+        <h3 class="card-title">Mars Autonomous Lander</h3
