@@ -2,156 +2,153 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology 2026</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary:#4a90e2;
-    --accent:#ff6b6b;
-    --bg:#fafafa;
-    --card-bg:#fff;
+  :root{
+    --primary:#0D47A1;
+    --secondary:#1976D2;
+    --accent:#FFC107;
+    --bg:#F5F5F5;
     --text:#333;
-    --border:#e0e0e0;
-    --font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --card-bg:#FFF;
+    --shadow:#E0E0E0;
+    --radius:8px;
+    --font-sans:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   }
-  *, *::before, *::after { box-sizing:border-box; }
-  body { margin:0; font-family:var(--font-family); background:var(--bg); color:var(--text); line-height:1.6; }
-  a { color:var(--primary); text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  header {
+  *,*::before,*::after{box-sizing:border-box;}
+  body{margin:0;font-family:var(--font-sans);color:var(--text);background:var(--bg);}
+  header{
     background:var(--primary);
     color:#fff;
-    padding:1rem 2rem;
-    position:sticky;
-    top:0;
-    z-index:10;
-  }
-  header h1 { margin:0; font-size:1.8rem; }
-  nav { margin-top:.5rem; }
-  nav a { margin-right:1.5rem; font-weight:500; }
-  main { padding:2rem; }
-  .hero {
-    background:linear-gradient(135deg, var(--primary) 0%, #6b8ce2 100%);
-    color:#fff;
-    padding:3rem 2rem;
     text-align:center;
-    border-radius:8px;
-    margin-bottom:2rem;
+    padding:3rem 1rem;
+    box-shadow:0 2px 6px var(--shadow);
   }
-  .hero h2 { margin-top:0; font-size:2.5rem; }
-  .hero p { font-size:1.1rem; }
-  .cards {
+  header h1{margin:0;font-size:2.5rem;}
+  header p{margin-top:.5rem;font-size:1.1rem;}
+  main{max-width:1200px;margin:0 auto;padding:2rem 1rem;}
+  h2{font-size:1.8rem;margin:2rem 0 1rem;}
+  .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:1.5rem;
   }
-  .card {
+  .card{
     background:var(--card-bg);
-    border:1px solid var(--border);
-    border-radius:8px;
+    border-radius:var(--radius);
+    box-shadow:0 2px 8px var(--shadow);
     overflow:hidden;
-    box-shadow:0 4px 8px rgba(0,0,0,.05);
-    transition:transform .2s,box-shadow .2s;
+    display:flex;
+    flex-direction:column;
   }
-  .card:hover { transform:translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,.1); }
-  .card img { width:100%; height:160px; object-fit:cover; }
-  .card-body { padding:1rem; }
-  .card-title { margin:0 0 .5rem; font-size:1.25rem; }
-  .card-text { margin:0 0 1rem; font-size:.95rem; color:#666; }
-  .card-footer { padding:0 1rem 1rem; text-align:right; }
-  .card-footer a { font-size:.9rem; color:var(--accent); }
-  footer {
-    text-align:center;
-    padding:1rem 0;
-    background:#f0f0f0;
-    color:#777;
+  .card header{
+    background:var(--secondary);
+    color:#fff;
+    padding:1rem;
+    font-size:1.2rem;
+    display:flex;
+    align-items:center;
+  }
+  .card header .icon{font-size:1.8rem;margin-right:.5rem;}
+  .card .content{
+    padding:1rem;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .card .content p{margin:0 0 .5rem;flex:1;}
+  .card .footer{
+    border-top:1px solid var(--shadow);
+    padding:.8rem 1rem;
+    background:#fafafa;
+    text-align:right;
     font-size:.9rem;
   }
-  @media(max-width:600px) {
-    header h1 { font-size:1.4rem; }
-    .hero h2 { font-size:2rem; }
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
+    h2{font-size:1.5rem;}
   }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology 2026</h1>
-  <nav>
-    <a href="#ai">Artificial Intelligence</a>
-    <a href="#quantum">Quantum Computing</a>
-    <a href="#space">Space Exploration</a>
-    <a href="#energy">Energy & Storage</a>
-    <a href="#biotech">Biotech & Health</a>
-  </nav>
+  <h1>Latest Breakthroughs in Technology (2024)</h1>
+  <p>From quantum leaps to the next frontier of human‑machine collaboration.</p>
 </header>
 
 <main>
-  <section class="hero">
-    <h2>From Quantum Chips to Brain‑Computer Interfaces</h2>
-    <p>Explore the most transformative tech breakthroughs reshaping industries and everyday life in 2026.</p>
-  </section>
+  <section>
+    <h2>Artificial Intelligence</h2>
+    <div class="grid">
+      <div class="card">
+        <header><span class="icon">🤖</span>GPT‑5 & Foundation Models</header>
+        <div class="content">
+          <p>OpenAI’s GPT‑5 introduces 1 trillion‑parameter models with improved safety and multimodal understanding, enabling seamless text, image, audio, and code generation.</p>
+        </div>
+        <div class="footer">Jan 2024</div>
+      </div>
 
-  <section id="ai" class="cards">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x160/4A90E2/ffffff?text=AI+Image" alt="AI breakthrough">
-      <div class="card-body">
-        <h3 class="card-title">AI-Generated Autonomous Vehicles</h3>
-        <p class="card-text">Full‑self‑driving systems powered by federated learning achieve real‑world deployment across 10 countries.</p>
+      <div class="card">
+        <header><span class="icon">🧠</span>Reinforcement Learning & RLHF</header>
+        <div class="content">
+          <p>Reinforcement Learning from Human Feedback now achieves near‑human performance in complex strategy games and real‑world robotics tasks.</p>
+        </div>
+        <div class="footer">Mar 2024</div>
       </div>
-      <div class="card-footer">
-        <a href="#">Read More →</a>
-      </div>
-    </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x160/FF6B6B/ffffff?text=AI+Health" alt="AI health">
-      <div class="card-body">
-        <h3 class="card-title">AI‑Assisted Early Diagnosis</h3>
-        <p class="card-text">Deep‑learning algorithms detect early-stage cancer in 98% accuracy using routine scans.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#">Read More →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/400x160/4A90E2/ffffff?text=AI+Robotics" alt="AI robotics">
-      <div class="card-body">
-        <h3 class="card-title">Soft Robotics with AI Control</h3>
-        <p class="card-text">Soft actuators learning from touch sensors create highly adaptable industrial robots.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#">Read More →</a>
+      <div class="card">
+        <header><span class="icon">🔬</span>AI‑Driven Drug Discovery</header>
+        <div class="content">
+          <p>DeepMind’s AlphaFold‑2 extended to protein–protein interactions accelerates drug target identification, cutting discovery time from years to months.</p>
+        </div>
+        <div class="footer">Feb 2024</div>
       </div>
     </div>
   </section>
 
-  <section id="quantum" class="cards">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x160/4A90E2/ffffff?text=Quantum+Chip" alt="Quantum chip">
-      <div class="card-body">
-        <h3 class="card-title">Commercial Quantum Processors</h3>
-        <p class="card-text">A 256‑qubit processor delivers breakthroughs in cryptography and complex simulations.</p>
+  <section>
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+      <div class="card">
+        <header><span class="icon">🟠</span>IBM Quantum 24Q & Error Correction</header>
+        <div class="content">
+          <p>IBM’s 24‑qubit processor achieves logical error rates below 1 % using surface‑code error correction, a milestone toward fault‑tolerant quantum computers.</p>
+        </div>
+        <div class="footer">Apr 2024</div>
       </div>
-      <div class="card-footer">
-        <a href="#">Read More →</a>
-      </div>
-    </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x160/FF6B6B/ffffff?text=Quantum+Internet" alt="Quantum internet">
-      <div class="card-body">
-        <h3 class="card-title">Global Quantum‑Backed Networks</h3>
-        <p class="card-text">Secure quantum key distribution now available over 1,200 km fiber routes.</p>
+      <div class="card">
+        <header><span class="icon">💡</span>Google Quantum Supremacy 2.0</header>
+        <div class="content">
+          <p>Google demonstrates a 50‑qubit Gaussian circuit that outpaces classical supercomputers in a specific benchmark, pushing the boundary of noisy intermediate‑scale quantum devices.</p>
+        </div>
+        <div class="footer">May 2024</div>
       </div>
-      <div class="card-footer">
-        <a href="#">Read More →</a>
+
+      <div class="card">
+        <header><span class="icon">🔗</span>Hybrid Classical‑Quantum Algorithms</header>
+        <div class="content">
+          <p>New variational algorithms reduce quantum circuit depth, enabling practical optimization for logistics and material science problems on today’s hardware.</p>
+        </div>
+        <div class="footer">Jun 2024</div>
       </div>
     </div>
   </section>
 
-  <section id="space" class="cards">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x160/4A90E2/ffffff?text=Mars+Lander" alt="Mars Lander">
-      <div class="card-body">
-        <h3 class="card-title">Mars Autonomous Lander</h3
+  <section>
+    <h2>Biotechnology & Synthetic Biology</h2>
+    <div class="grid">
+      <div class="card">
+        <header><span class="icon">🧬</span>Prime Editing 2.0</header>
+        <div class="content">
+          <p>CRISPR‑Cas9 prime editors now achieve >95 % editing efficiency with minimal off‑target effects, opening possibilities for precise gene therapies.</p>
+        </div>
+        <div class="footer">Jan 2024</div>
+      </div>
+
+      <div class="card">
+        <header><span class="icon">💉</span>mRNA Vaccine Platform Expansion</header>
+        <div class="content">
+          <p>Adapted mRNA technology targets viral variants and non‑infectious diseases
