@@ -4,180 +4,171 @@
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="preconnect" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #fdfdfd;
-  --primary: #1a73e8;
-  --secondary: #f2f4f7;
-  --accent: #ff5722;
-  --text: #333;
-  --shadow: rgba(0,0,0,0.1);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-header {
-  background: var(--primary);
-  color: #fff;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-header p {
-  margin-top: .5rem;
-  font-size: 1.1rem;
-  opacity: .9;
-}
-
-main {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: var(--primary);
-}
-
-.cards {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px var(--shadow);
-  transition: transform .2s, box-shadow .2s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px var(--shadow);
-}
-
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  aspect-ratio: 4/3;
-}
-
-.card-content {
-  padding: 1.5rem;
-}
-.card-content h3 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-  font-size: 1.4rem;
-  color: var(--primary);
-}
-.card-content p {
-  font-size: .95rem;
-  color: #555;
-  margin: 0;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: #777;
-  font-size: .9rem;
-}
+  :root{
+    --bg:#f4f7fb;
+    --primary:#2a7ae2;
+    --secondary:#ff6b6b;
+    --text:#333;
+    --card-bg:#fff;
+    --card-shadow:0 4px 12px rgba(0,0,0,0.1);
+    --radius:8px;
+  }
+  body{
+    margin:0;
+    font-family:'Roboto',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  header{
+    background:var(--primary);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+  }
+  header h1{
+    margin:0;
+    font-size:2.5rem;
+  }
+  header p{
+    margin-top:0.5rem;
+    font-size:1.1rem;
+  }
+  main{
+    padding:2rem 1rem;
+    max-width:1200px;
+    margin:auto;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:1.5rem;
+  }
+  .card{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--card-shadow);
+    display:flex;
+    flex-direction:column;
+    transition:transform 0.2s ease;
+  }
+  .card:hover{
+    transform:translateY(-5px);
+  }
+  .card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+  }
+  .card-body{
+    padding:1rem;
+    flex:1;
+  }
+  .card h3{
+    margin:0 0 0.5rem;
+    font-size:1.3rem;
+    color:var(--primary);
+  }
+  .card p{
+    margin:0 0 1rem;
+    flex:1;
+  }
+  .card a{
+    display:inline-block;
+    text-decoration:none;
+    color:var(--secondary);
+    font-weight:600;
+    transition:color 0.2s;
+  }
+  .card a:hover{
+    color:var(--primary);
+  }
+  footer{
+    text-align:center;
+    padding:1rem;
+    font-size:0.9rem;
+    color:#777;
+  }
+  @media (max-width:600px){
+    header h1{
+      font-size:2rem;
+    }
+  }
 </style>
 </head>
-
 <body>
-
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Discover the innovations shaping tomorrow, from AI and quantum computing to sustainable energy and beyond.</p>
+  <p>Explore the cutting‑edge innovations shaping tomorrow's world.</p>
 </header>
-
 <main>
-  <h2 class="section-title">Highlights</h2>
-  <section class="cards">
-    <!-- AI -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1581276879432-1c6e7f0a8e63?auto=format&fit=crop&w=400&q=80" alt="AI">
-      <div class="card-content">
-        <h3>AI: Multimodal Models (GPT‑4o, Claude‑3)</h3>
-        <p>Generative AI models now understand images, audio, and text simultaneously, enabling real‑time translation, content creation, and advanced robotics.</p>
-      </div>
-    </article>
-
-    <!-- Quantum Computing -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1581067274118-4b5f7e0a9d43?auto=format&fit=crop&w=400&q=80" alt="Quantum">
-      <div class="card-content">
-        <h3>Quantum Supremacy Advances</h3>
-        <p>IBM’s “Eagle” processor and Google’s 433‑qubit prototype achieve new milestones, pushing quantum algorithms toward practical applications.</p>
-      </div>
-    </article>
-
-    <!-- Battery Technology -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1587202372775-8a7e5f9b5d89?auto=format&fit=crop&w=400&q=80" alt="Battery">
-      <div class="card-content">
-        <h3>Solid‑State Batteries</h3>
-        <p>Toyota, Samsung, and others unveil prototypes with higher energy density and faster charging, promising safer electric vehicles.</p>
-      </div>
-    </article>
-
-    <!-- 6G & Connectivity -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1497493292307-4512c072a1f2?auto=format&fit=crop&w=400&q=80" alt="6G">
-      <div class="card-content">
-        <h3>6G Research</h3>
-        <p>Researchers explore terahertz frequencies and AI‑driven network orchestration to achieve sub‑millisecond latency and ultra‑dense connectivity.</p>
-      </div>
-    </article>
-
-    <!-- Space Exploration -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1513910452026-7f93dcd4e8e5?auto=format&fit=crop&w=400&q=80" alt="Space">
-      <div class="card-content">
-        <h3>Reusable Heavy‑Lifters</h3>
-        <p>SpaceX’s Starship and Blue Origin’s New Glenn bring humanity closer to lunar colonies and Mars missions with reusable design.</p>
-      </div>
-    </article>
-
-    <!-- Biotechnology -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1583324113510-2e8c8b4e7f23?auto=format&fit=crop&w=400&q=80" alt="Biotech">
-      <div class="card-content">
-        <h3>CRISPR Base Editing</h3>
-        <p>Precision gene editing tools correct point mutations without double‑strand breaks, opening new therapies for genetic diseases.</p>
-      </div>
-    </article>
+  <section>
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43d5e3fb1b?auto=format&fit=crop&w=400&q=80" alt="AI">
+        <div class="card-body">
+          <h3>GPT‑4.5 and Beyond</h3>
+          <p>OpenAI’s newest language model delivers unprecedented reasoning, multi‑modal capabilities, and safety enhancements, enabling more natural interactions with machines.</p>
+          <a href="https://openai.com/blog/gpt-4-5">Read more</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581093588401-6f1f4c2b3f02?auto=format&fit=crop&w=400&q=80" alt="Deep Learning">
+        <div class="card-body">
+          <h3>Federated Learning</h3>
+          <p>A distributed approach that trains AI models across devices without central data collection, boosting privacy and efficiency.</p>
+          <a href="https://www.nvidia.com/en-us/research/federated-learning/">Read more</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1573497017443-4b9d3dfe5f07?auto=format&fit=crop&w=400&q=80" alt="Autonomous Vehicles">
+        <div class="card-body">
+          <h3>Self‑Driving Lidar‑Free Systems</h3>
+          <p>Companies like Waymo and Tesla are deploying Lidar‑free perception stacks using advanced computer vision, reducing costs and complexity.</p>
+          <a href="https://www.waymo.com/">Read more</a>
+        </div>
+      </article>
+    </div>
   </section>
-</main>
 
-<footer>
-  <p>© 2026 TechInsights. All rights reserved.</p>
-</footer>
+  <section>
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587822557985-7c1e1b5b5e04?auto=format&fit=crop&w=400&q=80" alt="Quantum Chip">
+        <div class="card-body">
+          <h3>3‑Quibit Quantum Processor</h3>
+          <p>IBM’s latest 3‑qubit chip demonstrates error‑corrected operations, a key step toward fault‑tolerant quantum computing.</p>
+          <a href="https://www.ibm.com/quantum-computing/">Read more</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1589572337489-8b5c0a5c4b2b?auto=format&fit=crop&w=400&q=80" alt="Quantum Sensors">
+        <div class="card-body">
+          <h3>Quantum‑Enhanced Sensors</h3>
+          <p>New sensors leverage quantum entanglement to achieve unprecedented precision in navigation and medical imaging.</p>
+          <a href="https://www.quantum-sensing.com/">Read more</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-</body>
-</html>
+  <section>
+    <h2>Space & Aerospace</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1508921912186-1d1a1a0c5e26?auto=format&fit=crop&w=400&q=80" alt="SpaceX Starship">
+        <div class="card-body">
+          <h3>Starship Full‑Throttle Test</h3>
+          <p>SpaceX’s Starship prototype achieved record‑breaking thrust, bringing reusable deep‑space launch closer to reality.</p>
+          <a href="https://www.spacex.com/starship">Read more</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1511917976370-3b4d8eac2e03?auto=format&fit=crop&w=400&q=80" alt="Satellite Constellation">
+        <div class="card-body">
