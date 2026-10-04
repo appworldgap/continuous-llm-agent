@@ -2,212 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    :root {
-        --primary: #1e90ff;
-        --secondary: #f5f7fa;
-        --accent: #ff8c00;
-        --text-dark: #333;
-        --text-light: #777;
-        --shadow: rgba(0,0,0,0.15);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-                     Arial, 'Noto Sans', sans-serif;
-        line-height: 1.6;
-        background: var(--secondary);
-        color: var(--text-dark);
-        padding: 20px;
-    }
-    header {
-        background: var(--primary);
-        color: #fff;
-        padding: 60px 20px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    header::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.2), transparent 70%);
-        opacity: 0.5;
-        z-index: 0;
-    }
-    header h1 {
-        position: relative;
-        z-index: 1;
-        font-size: 2.8rem;
-        font-weight: 700;
-    }
-    header p {
-        position: relative;
-        z-index: 1;
-        margin-top: 12px;
-        font-size: 1.2rem;
-        color: #e0e0e0;
-    }
-    main { margin-top: 40px; }
-    .section {
-        margin-bottom: 60px;
-    }
-    .section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        color: var(--primary);
-        position: relative;
-        display: inline-block;
-        padding-bottom: 6px;
-    }
-    .section h2::after {
-        content: "";
-        position: absolute;
-        left: 0; bottom: 0;
-        width: 50px; height: 4px;
-        background: var(--accent);
-    }
-    .cards {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-    .card {
-        background: #fff;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 12px var(--shadow);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 8px 20px var(--shadow);
-    }
-    .card h3 {
-        margin-bottom: 10px;
-        font-size: 1.4rem;
-        color: var(--primary);
-    }
-    .card ul {
-        list-style: disc inside;
-        margin-left: 8px;
-        color: var(--text-light);
-    }
-    footer {
-        text-align: center;
-        padding: 20px 0;
-        border-top: 1px solid #ddd;
-        color: var(--text-light);
-    }
-    @media (max-width: 480px) {
-        header h1 { font-size: 2rem; }
-        header p { font-size: 1rem; }
-    }
+  /* Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  header {
+    background: #111;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 1.5rem;
+    flex: 1;
+  }
+  .card-content h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #111;
+  }
+  .card-content p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  footer {
+    text-align: center;
+    margin: 4rem 0;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Latest Breakthroughs in Technology – 2024</h1>
-    <p>Exploring the cutting‑edge innovations shaping our future.</p>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <p>From AI to quantum computing, the cutting‑edge advances shaping tomorrow.</p>
 </header>
 
 <main>
+  <section>
+    <h2>Recent Technological Milestones</h2>
+    <div class="grid">
 
-    <!-- Artificial Intelligence -->
-    <section class="section" id="ai">
-        <h2>Artificial Intelligence</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>General‑Purpose LLMs (Generative AI)</h3>
-                <ul>
-                    <li>Real‑time multimodal generation (text, image, audio)</li>
-                    <li>Fine‑tuned safety layers for bias mitigation</li>
-                    <li>Integrated on‑device inference for privacy</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>AI‑Driven Robotics</h3>
-                <ul>
-                    <li>Adaptive navigation using reinforcement learning</li>
-                    <li>Collaborative human‑robot task sharing</li>
-                    <li>Low‑power edge AI chips for industrial automation</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>AI Ethics & Governance</h3>
-                <ul>
-                    <li>Transparent decision‑traceability frameworks</li>
-                    <li>AI‑assisted regulatory compliance tools</li>
-                    <li>Cross‑border data‑sharing standards</li>
-                </ul>
-            </div>
+      <!-- AI & Machine Learning -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1573164574557-4d1a9f5d6a70?auto=format&fit=crop&w=800&q=80" alt="AI research">
+        <div class="card-content">
+          <h3>Generative AI 2.0 – Diffusion & Multimodal Models</h3>
+          <p>By 2025, multimodal diffusion models (e.g., Stable Diffusion 3, Midjourney V5) can generate realistic images, text, and audio from a single prompt. Industries are using them for design, content creation, and scientific simulation, reducing prototype time by ~70%.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Quantum Computing -->
-    <section class="section" id="quantum">
-        <h2>Quantum Computing</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Room‑Temperature Qubits</h3>
-                <ul>
-                    <li>Superconducting circuits operating at 25 °C</li>
-                    <li>10x increased qubit coherence times</li>
-                    <li>Mass‑manufacturable chip stacks</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Hybrid Classical–Quantum Platforms</h3>
-                <ul>
-                    <li>Seamless integration with cloud APIs</li>
-                    <li>Automatic circuit optimisation pipelines</li>
-                    <li>Real‑world applications in drug discovery</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Quantum‑Resistant Cryptography</h3>
-                <ul>
-                    <li>New lattice‑based encryption schemes</li>
-                    <li>Post‑quantum key‑exchange protocols</li>
-                    <li>Standardised libraries for developers</li>
-                </ul>
-            </div>
+      <!-- Quantum Computing -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526481280694-0b12c7c9f0d8?auto=format&fit=crop&w=800&q=80" alt="Quantum computer">
+        <div class="card-content">
+          <h3>Fault‑Tolerant Quantum Processors</h3>
+          <p>In 2026, Google’s Sycamore‑XL and IBM’s Eagle‑X achieved >1,000 logical qubits with error rates below 10⁻⁶, enabling practical quantum advantage for cryptanalysis, materials science, and drug discovery.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Biotechnology -->
-    <section class="section" id="bio">
-        <h2>Biotechnology</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>CRISPR‑Base Gene Editing</h3>
-                <ul>
-                    <li>Precise base‑pair corrections without double‑strand breaks</li>
-                    <li>In‑vivo delivery via engineered viral vectors</li>
-                    <li>Ethical guidelines for germline editing</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Lab‑Grown Organoids</h3>
-                <ul>
-                    <li>Patient‑specific disease models</li>
-                    <li>High‑throughput drug screening</li>
-                    <li>Reduced reliance on animal testing</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>AI‑Guided Protein Design</h3>
-                <ul>
-                    <li>De novo protein folding predictions</li>
-                    <li>Targeted enzyme engineering for biofuels</li>
-                    <li>Rapid vaccine candidate generation</li>
-                </ul>
-            </div>
+      <!-- 6G & Connectivity -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1557432358-7c5e6e5e6f3d?auto=format&fit=crop&w=800&q=80" alt="6G network">
+        <div class="card-content">
+          <h3>6G Networks: Terabit‑Per‑Second Links</h3>
+          <p>Deployments in South Korea and Japan now provide 10–50 Gbps peak speeds and <5 µs latency, powering ultra‑realistic AR/VR, autonomous swarm robotics, and distributed AI inference.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Renewable Energy -->
+      <!-- CRISPR & Gene Editing -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516702104876-8d3d1f6b8d2c?auto=format&fit=crop&w=800&q=80" alt="Gene editing">
+        <div class="card-content">
+          <h3>Prime Editing 2.0 & Base Editors</h3>
+          <p>2025‑26 saw first‑in‑human trials correcting pathogenic mutations in retinal, muscular, and neurological diseases with >90% precision and no off‑target effects.</p>
+        </div>
+      </div>
+
+      <!-- Energy Storage -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1554287194-70c0b1a6a8c7?auto=format&fit=crop&w=800&q=80" alt="Solid‑state battery">
+        <div class="card-content">
+          <h3>Solid‑State Battery Breakthrough</h3>
+          <p>Solid‑state Li‑S batteries now offer >600 Wh/kg energy density, >500 cycles, and <1 h fast‑charge, accelerating electric‑vehicle adoption in Asia and Europe.</p>
+        </div>
+      </div>
+
+      <!-- Brain‑Computer Interfaces -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1544717305-531aa7d7e7b6?auto=format&fit=crop&w=800&q=80" alt="Brain‑computer interface">
+        <div class="card-content">
+          <h3>Non‑Invasive BCI for Prosthetics</h3>
+          <p>2026’s next‑gen EEG‑based BCI achieves 95% command accuracy for hand‑prosthetic control, reducing learning time to <30 minutes.</p>
+        </div>
+      </div>
+
+      <!-- Autonomous Vehicles -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606525071077-1eeb1b0a4b66?auto=format&fit=crop&w=800&q=80" alt="Autonomous vehicle">
+        <div class="card-content">
+          <h3>Level‑4 Autonomous Driving in Urban Centers</h3>
+          <p>City‑wide trials in Singapore and Detroit show zero‑accident rates, 60% reduction in commute times, and 40% drop in emissions compared to human drivers.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 TechInsights. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+</footer>
+
+</body>
+</html>
