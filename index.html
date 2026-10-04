@@ -2,131 +2,212 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – 2024</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* Global styles */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background: #f9f9f9;
-  }
-  a {
-    color: #0066cc;
-    text-decoration: none;
-  }
-  a:hover { text-decoration: underline; }
-
-  /* Layout */
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-  header, section, footer { margin-bottom: 2rem; }
-
-  /* Header */
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    text-align: center;
-    color: #222;
-  }
-  header p {
-    text-align: center;
-    color: #666;
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-  }
-
-  /* Breakthrough cards */
-  .cards { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
-  @media (min-width: 600px) {
-    .cards { grid-template-columns: 1fr 1fr; }
-  }
-  @media (min-width: 900px) {
-    .cards { grid-template-columns: 1fr 1fr 1fr; }
-  }
-  .card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  .card h3 { margin-top: 0; }
-  .card p { flex-grow: 1; }
-  .card footer {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #777;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #555;
-  }
-  footer a { color: #0066cc; }
+    :root {
+        --primary: #1e90ff;
+        --secondary: #f5f7fa;
+        --accent: #ff8c00;
+        --text-dark: #333;
+        --text-light: #777;
+        --shadow: rgba(0,0,0,0.15);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+                     Arial, 'Noto Sans', sans-serif;
+        line-height: 1.6;
+        background: var(--secondary);
+        color: var(--text-dark);
+        padding: 20px;
+    }
+    header {
+        background: var(--primary);
+        color: #fff;
+        padding: 60px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    header::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.2), transparent 70%);
+        opacity: 0.5;
+        z-index: 0;
+    }
+    header h1 {
+        position: relative;
+        z-index: 1;
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+    header p {
+        position: relative;
+        z-index: 1;
+        margin-top: 12px;
+        font-size: 1.2rem;
+        color: #e0e0e0;
+    }
+    main { margin-top: 40px; }
+    .section {
+        margin-bottom: 60px;
+    }
+    .section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: var(--primary);
+        position: relative;
+        display: inline-block;
+        padding-bottom: 6px;
+    }
+    .section h2::after {
+        content: "";
+        position: absolute;
+        left: 0; bottom: 0;
+        width: 50px; height: 4px;
+        background: var(--accent);
+    }
+    .cards {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px var(--shadow);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px var(--shadow);
+    }
+    .card h3 {
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        color: var(--primary);
+    }
+    .card ul {
+        list-style: disc inside;
+        margin-left: 8px;
+        color: var(--text-light);
+    }
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #ddd;
+        color: var(--text-light);
+    }
+    @media (max-width: 480px) {
+        header h1 { font-size: 2rem; }
+        header p { font-size: 1rem; }
+    }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Latest Breakthroughs in Technology – 2026</h1>
-    <p>Discover the most transformative tech advancements shaping our future.</p>
-  </header>
 
-  <section>
-    <h2>Key Breakthroughs</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Generative AI – GPT‑5 & Beyond</h3>
-        <p>OpenAI’s GPT‑5 now processes multimodal data (text, image, audio) at 100x the speed of GPT‑4, enabling real‑time creative assistants, advanced medical diagnostics, and secure on‑device inference.</p>
-        <footer>Sources: <a href="https://www.foxnews.com" target="_blank">Fox News</a>, <a href="https://www.cnn.com" target="_blank">CNN</a></footer>
-      </article>
+<header>
+    <h1>Latest Breakthroughs in Technology – 2024</h1>
+    <p>Exploring the cutting‑edge innovations shaping our future.</p>
+</header>
 
-      <article class="card">
-        <h3>Quantum Supremacy in Chemistry</h3>
-        <p>Google and IBM’s hybrid quantum‑classical processors have achieved chemical simulations of drug‑binding processes in <strong>under 30 seconds</strong>, a milestone that could accelerate drug discovery.</p>
-        <footer>Sources: <a href="https://news.google.com" target="_blank">Google News</a></footer>
-      </article>
+<main>
 
-      <article class="card">
-        <h3>6G Prototype Network</h3>
-        <p>Telecom giants (Samsung, Huawei, Nokia) have unveiled 6G testbeds delivering <strong>1 Tbps peak</strong> with <strong>micro‑second latency</strong>, opening possibilities for holographic communication and AI‑driven edge computing.</p>
-        <footer>Sources: <a href="https://apnews.com" target="_blank">AP News</a></footer>
-      </article>
+    <!-- Artificial Intelligence -->
+    <section class="section" id="ai">
+        <h2>Artificial Intelligence</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>General‑Purpose LLMs (Generative AI)</h3>
+                <ul>
+                    <li>Real‑time multimodal generation (text, image, audio)</li>
+                    <li>Fine‑tuned safety layers for bias mitigation</li>
+                    <li>Integrated on‑device inference for privacy</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>AI‑Driven Robotics</h3>
+                <ul>
+                    <li>Adaptive navigation using reinforcement learning</li>
+                    <li>Collaborative human‑robot task sharing</li>
+                    <li>Low‑power edge AI chips for industrial automation</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>AI Ethics & Governance</h3>
+                <ul>
+                    <li>Transparent decision‑traceability frameworks</li>
+                    <li>AI‑assisted regulatory compliance tools</li>
+                    <li>Cross‑border data‑sharing standards</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-      <article class="card">
-        <h3>CRISPR‑Based Gene Editing in Livestock</h3>
-        <p>Scientists at the University of Cambridge have used CRISPR to create cows resistant to bovine tuberculosis, reducing antibiotic use by 85%.</p>
-        <footer>Sources: <a href="https://www.foxnews.com" target="_blank">Fox News</a></footer>
-      </article>
+    <!-- Quantum Computing -->
+    <section class="section" id="quantum">
+        <h2>Quantum Computing</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Room‑Temperature Qubits</h3>
+                <ul>
+                    <li>Superconducting circuits operating at 25 °C</li>
+                    <li>10x increased qubit coherence times</li>
+                    <li>Mass‑manufacturable chip stacks</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Hybrid Classical–Quantum Platforms</h3>
+                <ul>
+                    <li>Seamless integration with cloud APIs</li>
+                    <li>Automatic circuit optimisation pipelines</li>
+                    <li>Real‑world applications in drug discovery</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Quantum‑Resistant Cryptography</h3>
+                <ul>
+                    <li>New lattice‑based encryption schemes</li>
+                    <li>Post‑quantum key‑exchange protocols</li>
+                    <li>Standardised libraries for developers</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-      <article class="card">
-        <h3>Autonomous Vehicle Lidar Fusion</h3>
-        <p>Waymo’s latest lidar‑camera fusion system now achieves 100 % detection of pedestrians at 200 m, surpassing regulatory safety thresholds.</p>
-        <footer>Sources: <a href="https://www.cnn.com" target="_blank">CNN</a></footer>
-      </article>
+    <!-- Biotechnology -->
+    <section class="section" id="bio">
+        <h2>Biotechnology</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>CRISPR‑Base Gene Editing</h3>
+                <ul>
+                    <li>Precise base‑pair corrections without double‑strand breaks</li>
+                    <li>In‑vivo delivery via engineered viral vectors</li>
+                    <li>Ethical guidelines for germline editing</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Lab‑Grown Organoids</h3>
+                <ul>
+                    <li>Patient‑specific disease models</li>
+                    <li>High‑throughput drug screening</li>
+                    <li>Reduced reliance on animal testing</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>AI‑Guided Protein Design</h3>
+                <ul>
+                    <li>De novo protein folding predictions</li>
+                    <li>Targeted enzyme engineering for biofuels</li>
+                    <li>Rapid vaccine candidate generation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-      <article class="card">
-        <h3>Edge AI Chips for IoT</h3>
-        <p>Arm’s latest "Mistral" family delivers <strong>10× energy efficiency</strong> for low‑power AI inference, enabling smart home devices to run complex models offline.</p>
-        <footer>Sources: <a href="https://news.google.com" target="_blank">Google News</a></footer>
-      </article>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Tech Insight. All rights reserved. | <a href="https://github.com/techinsight" target="_blank">GitHub</a> | <a href="https://twitter.com/techinsight" target="_blank">Twitter</a></p>
-  </footer>
-</div>
-</body>
-</html>
+    <!-- Renewable Energy -->
