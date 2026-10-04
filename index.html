@@ -2,168 +2,181 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  /* Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-  body {
-    margin: 0;
-    font-family: 'Inter', system-ui, sans-serif;
-    background: #fafafa;
-    color: #1a1a1a;
-    line-height: 1.6;
-  }
-  header {
-    background: #111;
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  header p {
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-    color: #e0e0e0;
-  }
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-  .card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.06);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .card img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-  }
-  .card-content {
-    padding: 1.5rem;
-    flex: 1;
-  }
-  .card-content h3 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-    color: #111;
-  }
-  .card-content p {
-    margin: 0;
-    color: #555;
-    font-size: 0.95rem;
-  }
-  footer {
-    text-align: center;
-    margin: 4rem 0;
-    color: #777;
-    font-size: 0.9rem;
-  }
-  a {
-    color: #0066cc;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="preconnect" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #fdfdfd;
+  --primary: #1a73e8;
+  --secondary: #f2f4f7;
+  --accent: #ff5722;
+  --text: #333;
+  --shadow: rgba(0,0,0,0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p {
+  margin-top: .5rem;
+  font-size: 1.1rem;
+  opacity: .9;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+.card-content p {
+  font-size: .95rem;
+  color: #555;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #777;
+  font-size: .9rem;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>From AI to quantum computing, the cutting‑edge advances shaping tomorrow.</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Discover the innovations shaping tomorrow, from AI and quantum computing to sustainable energy and beyond.</p>
 </header>
 
 <main>
-  <section>
-    <h2>Recent Technological Milestones</h2>
-    <div class="grid">
-
-      <!-- AI & Machine Learning -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1573164574557-4d1a9f5d6a70?auto=format&fit=crop&w=800&q=80" alt="AI research">
-        <div class="card-content">
-          <h3>Generative AI 2.0 – Diffusion & Multimodal Models</h3>
-          <p>By 2025, multimodal diffusion models (e.g., Stable Diffusion 3, Midjourney V5) can generate realistic images, text, and audio from a single prompt. Industries are using them for design, content creation, and scientific simulation, reducing prototype time by ~70%.</p>
-        </div>
+  <h2 class="section-title">Highlights</h2>
+  <section class="cards">
+    <!-- AI -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1581276879432-1c6e7f0a8e63?auto=format&fit=crop&w=400&q=80" alt="AI">
+      <div class="card-content">
+        <h3>AI: Multimodal Models (GPT‑4o, Claude‑3)</h3>
+        <p>Generative AI models now understand images, audio, and text simultaneously, enabling real‑time translation, content creation, and advanced robotics.</p>
       </div>
+    </article>
 
-      <!-- Quantum Computing -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1526481280694-0b12c7c9f0d8?auto=format&fit=crop&w=800&q=80" alt="Quantum computer">
-        <div class="card-content">
-          <h3>Fault‑Tolerant Quantum Processors</h3>
-          <p>In 2026, Google’s Sycamore‑XL and IBM’s Eagle‑X achieved >1,000 logical qubits with error rates below 10⁻⁶, enabling practical quantum advantage for cryptanalysis, materials science, and drug discovery.</p>
-        </div>
+    <!-- Quantum Computing -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1581067274118-4b5f7e0a9d43?auto=format&fit=crop&w=400&q=80" alt="Quantum">
+      <div class="card-content">
+        <h3>Quantum Supremacy Advances</h3>
+        <p>IBM’s “Eagle” processor and Google’s 433‑qubit prototype achieve new milestones, pushing quantum algorithms toward practical applications.</p>
       </div>
+    </article>
 
-      <!-- 6G & Connectivity -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1557432358-7c5e6e5e6f3d?auto=format&fit=crop&w=800&q=80" alt="6G network">
-        <div class="card-content">
-          <h3>6G Networks: Terabit‑Per‑Second Links</h3>
-          <p>Deployments in South Korea and Japan now provide 10–50 Gbps peak speeds and <5 µs latency, powering ultra‑realistic AR/VR, autonomous swarm robotics, and distributed AI inference.</p>
-        </div>
+    <!-- Battery Technology -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1587202372775-8a7e5f9b5d89?auto=format&fit=crop&w=400&q=80" alt="Battery">
+      <div class="card-content">
+        <h3>Solid‑State Batteries</h3>
+        <p>Toyota, Samsung, and others unveil prototypes with higher energy density and faster charging, promising safer electric vehicles.</p>
       </div>
+    </article>
 
-      <!-- CRISPR & Gene Editing -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1516702104876-8d3d1f6b8d2c?auto=format&fit=crop&w=800&q=80" alt="Gene editing">
-        <div class="card-content">
-          <h3>Prime Editing 2.0 & Base Editors</h3>
-          <p>2025‑26 saw first‑in‑human trials correcting pathogenic mutations in retinal, muscular, and neurological diseases with >90% precision and no off‑target effects.</p>
-        </div>
+    <!-- 6G & Connectivity -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1497493292307-4512c072a1f2?auto=format&fit=crop&w=400&q=80" alt="6G">
+      <div class="card-content">
+        <h3>6G Research</h3>
+        <p>Researchers explore terahertz frequencies and AI‑driven network orchestration to achieve sub‑millisecond latency and ultra‑dense connectivity.</p>
       </div>
+    </article>
 
-      <!-- Energy Storage -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1554287194-70c0b1a6a8c7?auto=format&fit=crop&w=800&q=80" alt="Solid‑state battery">
-        <div class="card-content">
-          <h3>Solid‑State Battery Breakthrough</h3>
-          <p>Solid‑state Li‑S batteries now offer >600 Wh/kg energy density, >500 cycles, and <1 h fast‑charge, accelerating electric‑vehicle adoption in Asia and Europe.</p>
-        </div>
+    <!-- Space Exploration -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1513910452026-7f93dcd4e8e5?auto=format&fit=crop&w=400&q=80" alt="Space">
+      <div class="card-content">
+        <h3>Reusable Heavy‑Lifters</h3>
+        <p>SpaceX’s Starship and Blue Origin’s New Glenn bring humanity closer to lunar colonies and Mars missions with reusable design.</p>
       </div>
+    </article>
 
-      <!-- Brain‑Computer Interfaces -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1544717305-531aa7d7e7b6?auto=format&fit=crop&w=800&q=80" alt="Brain‑computer interface">
-        <div class="card-content">
-          <h3>Non‑Invasive BCI for Prosthetics</h3>
-          <p>2026’s next‑gen EEG‑based BCI achieves 95% command accuracy for hand‑prosthetic control, reducing learning time to <30 minutes.</p>
-        </div>
+    <!-- Biotechnology -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1583324113510-2e8c8b4e7f23?auto=format&fit=crop&w=400&q=80" alt="Biotech">
+      <div class="card-content">
+        <h3>CRISPR Base Editing</h3>
+        <p>Precision gene editing tools correct point mutations without double‑strand breaks, opening new therapies for genetic diseases.</p>
       </div>
-
-      <!-- Autonomous Vehicles -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1606525071077-1eeb1b0a4b66?auto=format&fit=crop&w=800&q=80" alt="Autonomous vehicle">
-        <div class="card-content">
-          <h3>Level‑4 Autonomous Driving in Urban Centers</h3>
-          <p>City‑wide trials in Singapore and Detroit show zero‑accident rates, 60% reduction in commute times, and 40% drop in emissions compared to human drivers.</p>
-        </div>
-      </div>
-
-    </div>
+    </article>
   </section>
 </main>
 
 <footer>
-  <p>© 2026 TechInsights. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+  <p>© 2026 TechInsights. All rights reserved.</p>
 </footer>
 
 </body>
