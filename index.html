@@ -2,173 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #f9f9f9;
-    --header-bg: #fff;
-    --primary: #1e3a8a;
-    --secondary: #3b82f6;
-    --accent: #f97316;
-    --text: #222;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.05);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: var(--text);
-    background: var(--bg);
-  }
-  a { color: var(--secondary); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  header {
-    background: var(--header-bg);
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px var(--card-shadow);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  header h1 { font-size: 1.5rem; font-weight: 600; color: var(--primary); }
-  nav ul { list-style: none; display: flex; gap: 1rem; }
-  nav li { font-size: 0.95rem; }
-
-  .hero {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-  .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
-
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px var(--card-shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px var(--card-shadow);
-  }
-  .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
-  .card-body {
-    padding: 1rem;
-  }
-  .card-body h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-  .card-body p { font-size: 0.95rem; color: #555; }
-
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: #666;
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 600px) {
-    header h1 { font-size: 1.25rem; }
-    .hero h2 { font-size: 2rem; }
-    .hero p { font-size: 1rem; }
+  body {font-family: 'Roboto', sans-serif; margin:0; background:#f8f9fa; color:#333;}
+  header {background:linear-gradient(135deg,#2a8fbd,#1c4a6e); color:#fff; padding:4rem 2rem; text-align:center;}
+  header h1 {margin:0; font-size:2.8rem;}
+  .container {max-width:1200px; margin:auto; padding:2rem;}
+  .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem;}
+  .card {background:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1); padding:1.5rem; transition:transform .2s;}
+  .card:hover {transform:translateY(-5px);}
+  .card h3 {margin-top:0; font-size:1.4rem; color:#2a8fbd;}
+  .card ul {padding-left:1.2rem; margin-top:.5rem;}
+  .card li {margin-bottom:.4rem;}
+  footer {background:#2a8fbd; color:#fff; text-align:center; padding:1rem; font-size:.9rem;}
+  @media (prefers-color-scheme: dark) {
+    body {background:#121212; color:#e0e0e0;}
+    .card {background:#1e1e1e; color:#e0e0e0;}
+    header {background:linear-gradient(135deg,#1c4a6e,#0d1524);}
+    footer {background:#0d1524;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>TechPulse</h1>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">AI</a></li>
-      <li><a href="#">Quantum</a></li>
-      <li><a href="#">AR/VR</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+  <h1>🚀 Latest Breakthroughs in Technology – 2024</h1>
+  <p>Exploring the innovations reshaping our world</p>
 </header>
 
-<section class="hero">
-  <h2>Explore the Cutting-Edge Breakthroughs Shaping Tomorrow</h2>
-  <p>From quantum supremacy to next-gen AI, discover the latest innovations that are redefining technology across industries.</p>
-</section>
+<div class="container">
+  <section class="grid">
 
-<main>
-  <section>
-    <h2 style="margin-bottom:1rem;">Latest Breakthroughs</h2>
-    <div class="grid">
+    <!-- AI & Machine Learning -->
+    <article class="card">
+      <h3>🤖 AI & Machine Learning</h3>
+      <ul>
+        <li>OpenAI’s GPT‑4.5 Turbo delivers near-human text generation with reduced bias.</li>
+        <li>Meta’s LLaMA-3.1 introduces 70B parameter models trained on multimodal data.</li>
+        <li>Edge AI chips from NVIDIA and Qualcomm now run full GPT‑3 inference on smartphones.</li>
+        <li>Reinforcement learning breakthroughs enable autonomous vehicles to navigate complex city traffic with 98% safety compliance.</li>
+      </ul>
+    </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1587614382341-8c6f8b5b1e23?auto=format&fit=crop&w=400&q=80" alt="AI Model">
-        <div class="card-body">
-          <h3>Generative AI 2.0</h3>
-          <p>New multimodal models can understand and create text, images, and audio with unprecedented realism.</p>
-        </div>
-      </article>
+    <!-- Quantum Computing -->
+    <article class="card">
+      <h3>🔬 Quantum Computing</h3>
+      <ul>
+        <li>IBM’s Eagle processor reaches 127 logical qubits with error correction.</li>
+        <li>Google’s Sycamore-Quantum achieves 300 logical qubits via lattice surgery.</li>
+        <li>Quantum‑assisted drug discovery platforms predict protein folding in hours.</li>
+        <li>Hybrid quantum‑classical algorithms now solve industry‑level logistics problems.</li>
+      </ul>
+    </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1514386658446-1b2c3f3b7b90?auto=format&fit=crop&w=400&q=80" alt="Quantum Computer">
-        <div class="card-body">
-          <h3>Quantum Supremacy Achieved</h3>
-          <p>Researchers have demonstrated practical quantum advantage in solving complex optimization problems.</p>
-        </div>
-      </article>
+    <!-- Energy & Sustainability -->
+    <article class="card">
+      <h3>⚡ Energy & Sustainability</h3>
+      <ul>
+        <li>Solid‑state perovskite solar cells hit 28% efficiency, 50% cheaper than silicon.</li>
+        <li>Floating lithium‑ion batteries generate 3.5 kWh/m² in the Mediterranean.</li>
+        <li>AI‑driven microgrid management reduces peak load by 20% in urban districts.</li>
+        <li>Carbon‑capture tech from Carbon Clean lowers CO₂ conversion to methanol at record rates.</li>
+      </ul>
+    </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581284822256-9c6e1cbb4f0b?auto=format&fit=crop&w=400&q=80" alt="6G Network">
-        <div class="card-body">
-          <h3>6G Tech Preview</h3>
-          <p>Prototypes promise terabit per second speeds, enabling fully autonomous systems and holographic communication.</p>
-        </div>
-      </article>
+    <!-- Biotechnology -->
+    <article class="card">
+      <h3>🧬 Biotechnology</h3>
+      <ul>
+        <li>CRISPR‑Cas13 therapeutics approved for hereditary retinal diseases.</li>
+        <li>Synthetic biology enables lab‑grown meat at 30 % lower cost.</li>
+        <li>Microbiome engineering improves gut health and boosts immune response.</li>
+        <li>Bio‑printed organs (liver & kidney) move from lab to first clinical trials.</li>
+      </ul>
+    </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1517978426955-73e8c3bcb9da?auto=format&fit=crop&w=400&q=80" alt="CRISPR Gene Editing">
-        <div class="card-body">
-          <h3>CRISPR Gene Editing Advances</h3>
-          <p>New base editors reduce off‑target effects, bringing gene therapies closer to mainstream use.</p>
-        </div>
-      </article>
+    <!-- Space Exploration -->
+    <article class="card">
+      <h3>🛰️ Space Exploration</h3>
+      <ul>
+        <li>NASA’s Artemis III crewed mission lands on the Moon’s south pole.</li>
+        <li>SpaceX’s Starship completes a cargo flight to the ISS; first orbital refueling.</li>
+        <li>James Webb Telescope discovers exoplanets with water vapor in the habitable zone.</li>
+        <li>CubeSat swarm networks provide high‑bandwidth deep‑space communications.</li>
+      </ul>
+    </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1584697957455-2a9a2b5c6e6b?auto=format&fit=crop&w=400&q=80" alt="Autonomous Vehicles">
-        <div class="card-body">
-          <h3>Full‑Self Driving Cars</h3>
-          <p>Automakers roll out Level 5 vehicles capable of operating in complex urban environments without a human driver.</p>
-        </div>
-      </article>
+    <!-- Communications -->
+    <article class="card">
+      <h3>📶 Communications</h3>
+      <ul>
+        <li>Early 6G pilots deliver 10 Tbps peak speeds over 5 km.</li>
+        <li>LiDAR‑based wireless links offer sub‑nanosecond latency for autonomous networks.</li>
+        <li>Quantum key distribution (QKD) now operational over 1,200 km fiber links.</li>
+        <li>Starlink’s next‑gen satellites promise global broadband at 1 ms latency.</li>
+      </ul>
+    </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1532250485944-3b8e6c6d4f82?auto=format&fit=crop&w=400&q=80" alt="AR/VR Headset">
-        <div class="card-body">
-          <h3>Mixed Reality Headsets</h3>
-          <p>New lightweight headsets combine AR and VR with high‑resolution displays for immersive training and entertainment.</p>
-        </div>
-      </article>
+    <!-- Robotics -->
+    <article class="card">
+      <h3>🤖 Robotics</h3>
+      <ul>
+        <li>Boston Dynamics’ Atlas demonstrates autonomous obstacle navigation in 3 minutes.</li>
+        <li>Soft robotics with programmable hydrogel actuators for medical prosthetics.</li>
+        <li>Swarm robots coordinate for large‑scale disaster relief.</li>
+        <li>AI‑powered exoskeletons reduce worker fatigue by 60% in construction.</li>
+      </ul>
+    </article>
 
-    </div>
+  </section>
+</div>
+
+<footer>
+  © 2024 TechInsights • Built with ❤️ by AI Research
+</footer>
+
+</body>
+</html>
