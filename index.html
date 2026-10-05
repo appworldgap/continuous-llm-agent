@@ -4,191 +4,171 @@
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #2c3e50;
-    --accent: #e74c3c;
-    --bg: #f4f4f9;
-    --card-bg: #ffffff;
-    --text: #2c3e50;
-    --border: #dcdde1;
+    --bg: #f9f9f9;
+    --header-bg: #fff;
+    --primary: #1e3a8a;
+    --secondary: #3b82f6;
+    --accent: #f97316;
+    --text: #222;
+    --card-bg: #fff;
+    --card-shadow: rgba(0,0,0,0.05);
   }
 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
   }
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
+  a { color: var(--secondary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
   header {
-    background: var(--primary);
-    color: #fff;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  header .container {
+    background: var(--header-bg);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px var(--card-shadow);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
-  header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 300;
-  }
-  nav a {
-    margin-left: 1.5rem;
-    font-weight: 500;
-  }
+  header h1 { font-size: 1.5rem; font-weight: 600; color: var(--primary); }
+  nav ul { list-style: none; display: flex; gap: 1rem; }
+  nav li { font-size: 0.95rem; }
+
   .hero {
-    background: linear-gradient(135deg, #2980b9, #8e44ad);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
+    padding: 4rem 2rem;
     text-align: center;
-    padding: 4rem 1rem;
     margin-bottom: 2rem;
   }
-  .hero h2 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 400;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    margin-top: .5rem;
-    font-weight: 300;
-  }
-  .container {
+  .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+  .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+
+  main {
     max-width: 1200px;
-    margin: auto;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
   .grid {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
-  }
-  @media (min-width: 768px) {
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
   .card {
     background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,.05);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .card h3 {
-    margin-top: 0;
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    font-size: 1.4rem;
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px var(--card-shadow);
   }
-  .card ul {
-    margin-top: .5rem;
-    padding-left: 1.2rem;
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
   }
+  .card-body {
+    padding: 1rem;
+  }
+  .card-body h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .card-body p { font-size: 0.95rem; color: #555; }
+
   footer {
     text-align: center;
-    padding: 1rem 0;
-    background: var(--primary);
-    color: #fff;
-    margin-top: 3rem;
+    padding: 2rem 1rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.25rem; }
+    .hero h2 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="container">
-    <h1>Tech Frontier</h1>
-    <nav>
-      <a href="#ai">AI</a>
-      <a href="#quantum">Quantum</a>
-      <a href="#bio">Biotech</a>
-      <a href="#energy">Energy</a>
-      <a href="#space">Space</a>
-    </nav>
-  </div>
+  <h1>TechPulse</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">AI</a></li>
+      <li><a href="#">Quantum</a></li>
+      <li><a href="#">AR/VR</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Unveiling Tomorrow</h2>
-  <p>Explore the most recent breakthroughs shaping our future.</p>
+  <h2>Explore the Cutting-Edge Breakthroughs Shaping Tomorrow</h2>
+  <p>From quantum supremacy to next-gen AI, discover the latest innovations that are redefining technology across industries.</p>
 </section>
 
-<main class="container">
+<main>
+  <section>
+    <h2 style="margin-bottom:1rem;">Latest Breakthroughs</h2>
+    <div class="grid">
 
-  <section id="ai" class="grid grid-2">
-    <div class="card">
-      <h3>🤖 Artificial Intelligence & Generative Models</h3>
-      <ul>
-        <li>Large Language Models surpassing 200B parameters, enabling real‑time multilingual translation and creative content generation.</li>
-        <li>Multimodal AI (e.g., GPT‑4o, Claude 3.5) that simultaneously processes text, image, and audio with near‑human coherence.</li>
-        <li>Reinforcement learning breakthroughs reducing data‑efficiency by 70 % for complex robotics tasks.</li>
-        <li>AI‑driven drug discovery platforms predicting protein folding and therapeutic candidates in days.</li>
-      </ul>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587614382341-8c6f8b5b1e23?auto=format&fit=crop&w=400&q=80" alt="AI Model">
+        <div class="card-body">
+          <h3>Generative AI 2.0</h3>
+          <p>New multimodal models can understand and create text, images, and audio with unprecedented realism.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1514386658446-1b2c3f3b7b90?auto=format&fit=crop&w=400&q=80" alt="Quantum Computer">
+        <div class="card-body">
+          <h3>Quantum Supremacy Achieved</h3>
+          <p>Researchers have demonstrated practical quantum advantage in solving complex optimization problems.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581284822256-9c6e1cbb4f0b?auto=format&fit=crop&w=400&q=80" alt="6G Network">
+        <div class="card-body">
+          <h3>6G Tech Preview</h3>
+          <p>Prototypes promise terabit per second speeds, enabling fully autonomous systems and holographic communication.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517978426955-73e8c3bcb9da?auto=format&fit=crop&w=400&q=80" alt="CRISPR Gene Editing">
+        <div class="card-body">
+          <h3>CRISPR Gene Editing Advances</h3>
+          <p>New base editors reduce off‑target effects, bringing gene therapies closer to mainstream use.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1584697957455-2a9a2b5c6e6b?auto=format&fit=crop&w=400&q=80" alt="Autonomous Vehicles">
+        <div class="card-body">
+          <h3>Full‑Self Driving Cars</h3>
+          <p>Automakers roll out Level 5 vehicles capable of operating in complex urban environments without a human driver.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1532250485944-3b8e6c6d4f82?auto=format&fit=crop&w=400&q=80" alt="AR/VR Headset">
+        <div class="card-body">
+          <h3>Mixed Reality Headsets</h3>
+          <p>New lightweight headsets combine AR and VR with high‑resolution displays for immersive training and entertainment.</p>
+        </div>
+      </article>
+
     </div>
-
-    <div class="card">
-      <h3>🚀 Edge AI & On‑Device Intelligence</h3>
-      <ul>
-        <li>Ultra‑low‑power neural engines integrated into smartphones enabling real‑time AR and computer vision.</li>
-        <li>Federated learning frameworks that train models on-device while preserving privacy.</li>
-        <li>AI‑optimized silicon for autonomous vehicles reducing inference latency to <5 ms.</li>
-        <li>TinyML solutions for IoT sensors monitoring environmental and health metrics.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="quantum" class="grid grid-2">
-    <div class="card">
-      <h3>🔬 Quantum Computing Milestones</h3>
-      <ul>
-        <li>Commercially available 100‑qubit superconducting processors achieving quantum supremacy for specific tasks.</li>
-        <li>Quantum‑enhanced cryptography: post‑quantum key exchange protocols now in deployment.</li>
-        <li>Hybrid classical‑quantum algorithms reducing simulation time for complex molecules by 80 %.</li>
-        <li>Quantum networking prototypes demonstrating entanglement distribution over >200 km fiber links.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>💡 Quantum Sensors & Metrology</h3>
-      <ul>
-        <li>Atomic clocks based on optical lattices with accuracy <10<sup>−18</sup>, improving GPS precision.</li>
-        <li>Quantum gravimeters detecting minute changes in Earth's gravity, aiding mineral exploration.</li>
-        <li>High‑sensitivity magnetometers for medical imaging and neurological research.</li>
-        <li>Portable quantum sensors enabling field diagnostics for infrastructure health.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="bio" class="grid grid-2">
-    <div class="card">
-      <h3>🧬 Gene Editing & Synthetic Biology</h3>
-      <ul>
-        <li>CRISPR‑Cas12f systems with improved specificity reducing off‑target edits by >90 %.</li>
-        <li>Programmable base editors enabling precise single‑base changes for inherited diseases.</li>
-        <li>Artificial organoids that mimic human tissue for drug testing, cutting preclinical costs.</li>
-        <li>Microbiome‑engineering platforms creating personalized probiotic therapies.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🌱 Bio‑Inspired Energy & Materials</h3>
-      <ul>
-        <li>Bio‑photovoltaic cells converting light to electricity via engineered algae.</li>
-        <li>Self‑healing polymers inspired by natural adhesives for infrastructure longevity.</li>
-        <li>Biodegradable electronic components reducing e‑waste.</li
