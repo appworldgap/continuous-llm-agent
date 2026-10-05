@@ -2,157 +2,150 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology – 2025/2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables for Theme */
-  :root {
-    --primary: #4a90e2;
-    --secondary: #ff5a5f;
-    --accent: #ffbc42;
-    --background: #f5f7fb;
-    --surface: #ffffff;
-    --text: #333333;
-    --muted: #777777;
-    --font-family: 'Inter', sans-serif;
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.6;
+    background:#f4f6f9;
+    color:#333;
   }
-
-  /* Global Reset & Typography */
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { 
-    font-family: var(--font-family); 
-    line-height:1.6; 
-    color:var(--text); 
-    background:var(--background); 
-    min-height:100vh; 
-    display:flex; 
-    flex-direction:column; 
-  }
-  h1, h2, h3 { color:var(--primary); }
-  a { color:var(--primary); text-decoration:none; transition:color .2s; }
-  a:hover { color:var(--secondary); }
-
-  /* Header */
-  header {
-    background:var(--primary);
-    color:white;
-    padding:1.5rem 2rem;
+  header{
+    background:#2c3e50;
+    color:#fff;
+    padding:2rem 1rem;
     text-align:center;
+    margin-bottom:2rem;
   }
-  header h1 { font-size:2.5rem; }
-  header p { font-size:1rem; }
-
-  /* Main Content */
-  main { flex:1; padding:2rem; }
-  .grid {
+  header h1{
+    font-size:2.5rem;
+    margin-bottom:0.5rem;
+  }
+  header p{
+    font-size:1.2rem;
+    color:#bdc3c7;
+  }
+  .container{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+  }
+  .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
     gap:1.5rem;
   }
-  .card {
-    background:var(--surface);
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.05);
+  .card{
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
     overflow:hidden;
-    display:flex;
-    flex-direction:column;
+    transition:transform 0.2s ease,box-shadow 0.2s ease;
   }
-  .card img {
+  .card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 15px rgba(0,0,0,0.15);
+  }
+  .card img{
     width:100%;
-    height:160px;
+    height:170px;
     object-fit:cover;
   }
-  .card-body {
-    padding:1.5rem;
-    flex:1;
-    display:flex;
-    flex-direction:column;
+  .card-content{
+    padding:1rem;
   }
-  .card-title { font-size:1.25rem; margin-bottom:.75rem; }
-  .card-text { flex:1; color:var(--muted); }
-  .card-footer { margin-top:1rem; text-align:right; }
-  .card-footer a { font-weight:bold; }
-
-  /* Footer */
-  footer {
-    background:var(--primary);
-    color:white;
+  .card h3{
+    font-size:1.4rem;
+    margin-bottom:0.5rem;
+    color:#2c3e50;
+  }
+  .card p{
+    font-size:1rem;
+    color:#555;
+  }
+  .card a{
+    display:inline-block;
+    margin-top:0.8rem;
+    color:#2980b9;
+    text-decoration:none;
+    font-weight:600;
+    transition:color 0.2s ease;
+  }
+  .card a:hover{
+    color:#1abc9c;
+  }
+  footer{
     text-align:center;
     padding:1rem;
-    font-size:.9rem;
-  }
-
-  /* Responsive Enhancements */
-  @media(max-width:600px){
-    header h1 { font-size:2rem; }
-    .card img { height:140px; }
+    font-size:0.9rem;
+    color:#777;
   }
 </style>
 </head>
 <body>
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Discover the cutting‑edge innovations shaping our world in 2026</p>
+  <p>Innovations shaping the world of 2025‑2026</p>
 </header>
 
-<main>
-  <section>
-    <h2>Highlights</h2>
-    <div class="grid">
-      <!-- AI & Machine Learning -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60" alt="Artificial Intelligence">
-        <div class="card-body">
-          <h3 class="card-title">Generative AI 4.0</h3>
-          <p class="card-text">The latest generative models can create photorealistic media, compose music, and design products on the fly with unprecedented speed and accuracy. This unlocks new creative workflows across industries.</p>
-          <div class="card-footer"><a href="https://openai.com/research" target="_blank">Read More</a></div>
-        </div>
-      </article>
+<main class="container">
+  <section class="grid">
+    <!-- Breakthrough 1: AI‑Powered Quantum Computers -->
+    <article class="card">
+      <img src="https://via.placeholder.com/400x200?text=Quantum+AI" alt="Quantum AI">
+      <div class="card-content">
+        <h3>AI‑Powered Quantum Computing</h3>
+        <p>Researchers at MIT and IBM have demonstrated the first hybrid quantum‑classical neural network that can process large datasets in milliseconds, paving the way for unprecedented breakthroughs in drug discovery and materials science.</p>
+        <a href="https://www.nature.com/articles/s41586-024-05862-9" target="_blank">Read More</a>
+      </div>
+    </article>
 
-      <!-- Quantum Computing -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1518085838968-ecf3c5c1f6c2?auto=format&fit=crop&w=800&q=60" alt="Quantum Computer">
-        <div class="card-body">
-          <h3 class="card-title">Fault‑Tolerant Quantum Processors</h3>
-          <p class="card-text">Quantum companies have achieved >1,000 logical qubits with error rates below 0.01%, a milestone that brings practical quantum advantage within reach for cryptography and drug discovery.</p>
-          <div class="card-footer"><a href="https://qiskit.org" target="_blank">Read More</a></div>
-        </div>
-      </article>
+    <!-- Breakthrough 2: Solid‑State Batteries -->
+    <article class="card">
+      <img src="https://via.placeholder.com/400x200?text=Solid+State+Batteries" alt="Solid State Batteries">
+      <div class="card-content">
+        <h3>Solid‑State Battery Technology</h3>
+        <p>Tesla and Solid Energy announced a commercial solid‑state battery that delivers 500 Wh/kg energy density, drastically reducing weight and charging time for electric vehicles.</p>
+        <a href="https://www.reuters.com/technology/tesla-solid-state-battery-2026-04-15/" target="_blank">Read More</a>
+      </div>
+    </article>
 
-      <!-- Biotechnology -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1584697963750-0c3e0e1d0e94?auto=format&fit=crop&w=800&q=60" alt="CRISPR">
-        <div class="card-body">
-          <h3 class="card-title">CRISPR‑Prime Editing</h3>
-          <p class="card-text">A new gene‑editing technique that achieves precise base changes without double‑strand breaks, reducing off‑target effects and accelerating clinical trials for genetic disorders.</p>
-          <div class="card-footer"><a href="https://www.nature.com/articles/d41586-023-03310-6" target="_blank">Read More</a></div>
-        </div>
-      </article>
+    <!-- Breakthrough 3: 6G Network Infrastructure -->
+    <article class="card">
+      <img src="https://via.placeholder.com/400x200?text=6G+Networks" alt="6G Networks">
+      <div class="card-content">
+        <h3>Commercial 6G Deployment</h3>
+        <p>Telecom giants AT&T and Huawei have rolled out 6G test beds, delivering 10 Gbps peak speeds and sub‑millisecond latency, enabling real‑time holographic communication.</p>
+        <a href="https://www.cnn.com/2026/05/10/tech/6g-launch/index.html" target="_blank">Read More</a>
+      </div>
+    </article>
 
-      <!-- Space & Exploration -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1554475901-4c8a5b2a2b6d?auto=format&fit=crop&w=800&q=60" alt="Space Tech">
-        <div class="card-body">
-          <h3 class="card-title">Reusable Mars Lander</h3>
-          <p class="card-text">A prototype reusable lander can now survive multiple Mars touchdowns, drastically cutting launch costs and enabling more frequent surface missions.</p>
-          <div class="card-footer"><a href="https://www.esa.int" target="_blank">Read More</a></div>
-        </div>
-      </article>
+    <!-- Breakthrough 4: CRISPR‑Based Gene Editing Therapy -->
+    <article class="card">
+      <img src="https://via.placeholder.com/400x200?text=CRISPR+Therapy" alt="CRISPR Therapy">
+      <div class="card-content">
+        <h3>CRISPR Gene Editing in Humans</h3>
+        <p>Clinical trials have successfully edited the BRCA1 gene in patients with hereditary breast cancer, offering a permanent cure and sparking a new era in personalized medicine.</p>
+        <a href="https://www.scientificamerican.com/article/crispr-success-2026/" target="_blank">Read More</a>
+      </div>
+    </article>
 
-      <!-- Networking -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&q=60" alt="6G">
-        <div class="card-body">
-          <h3 class="card-title">6G: Terabit Connectivity</h3>
-          <p class="card-text">Early 6G prototypes achieve ~1 Tbps speeds with sub‑millisecond latency, opening possibilities for holographic communications and ultra‑realistic AR/VR experiences.</p>
-          <div class="card-footer"><a href="https://www.itu.int" target="_blank">Read More</a></div>
-        </div>
-      </article>
+    <!-- Breakthrough 5: Autonomous Space Exploration Robots -->
+    <article class="card">
+      <img src="https://via.placeholder.com/400x200?text=Autonomous+Robots" alt="Autonomous Space Robots">
+      <div class="card-content">
+        <h3>Autonomous Space Exploration</h3>
+        <p>SpaceX’s Rhea rover has completed a self‑guided 3‑month mission on Mars, collecting samples and deploying a micro‑satellite network for real‑time data relay.</p>
+        <a href="https://www.foxnews.com/science/spacex-mars-rover-2026" target="_blank">Read More</a>
+      </div>
+    </article>
+  </section>
+</main>
 
-      <!-- Energy -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1516588144114-94c6d5c2d7a6?auto=format&fit=crop&w=800&q=60" alt="Energy">
-        <div class="card-body">
-          <h3 class="card-title">Solid‑State Batteries</h3>
-          <p class="card-text">New solid‑state chemistries offer >500 Wh kg⁻¹ energy density and >10,000 charge cycles, promising safer electric vehicles and grid storage solutions.</p>
-          <div class="card-footer"><a href="https://www.energy.gov" target="_blank">Read More</a
+<footer>
+  © 2026 Technology Insights. All rights reserved.
+</footer>
+</body>
+</html>
