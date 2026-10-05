@@ -2,150 +2,193 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2025/2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{
-    font-family:Arial,Helvetica,sans-serif;
-    line-height:1.6;
-    background:#f4f6f9;
-    color:#333;
+  :root {
+    --primary: #2c3e50;
+    --accent: #e74c3c;
+    --bg: #f4f4f9;
+    --card-bg: #ffffff;
+    --text: #2c3e50;
+    --border: #dcdde1;
   }
-  header{
-    background:#2c3e50;
-    color:#fff;
-    padding:2rem 1rem;
-    text-align:center;
-    margin-bottom:2rem;
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
   }
-  header h1{
-    font-size:2.5rem;
-    margin-bottom:0.5rem;
+  a {
+    color: var(--accent);
+    text-decoration: none;
   }
-  header p{
-    font-size:1.2rem;
-    color:#bdc3c7;
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
-  .container{
-    width:90%;
-    max-width:1200px;
-    margin:0 auto;
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:1.5rem;
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
-  .card{
-    background:#fff;
-    border-radius:8px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    overflow:hidden;
-    transition:transform 0.2s ease,box-shadow 0.2s ease;
+  nav a {
+    margin-left: 1.5rem;
+    font-weight: 500;
   }
-  .card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 15px rgba(0,0,0,0.15);
+  .hero {
+    background: linear-gradient(135deg, #2980b9, #8e44ad);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
   }
-  .card img{
-    width:100%;
-    height:170px;
-    object-fit:cover;
+  .hero h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
   }
-  .card-content{
-    padding:1rem;
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    font-weight: 300;
   }
-  .card h3{
-    font-size:1.4rem;
-    margin-bottom:0.5rem;
-    color:#2c3e50;
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
   }
-  .card p{
-    font-size:1rem;
-    color:#555;
+  .grid {
+    display: grid;
+    gap: 1.5rem;
   }
-  .card a{
-    display:inline-block;
-    margin-top:0.8rem;
-    color:#2980b9;
-    text-decoration:none;
-    font-weight:600;
-    transition:color 0.2s ease;
+  @media (min-width: 768px) {
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
-  .card a:hover{
-    color:#1abc9c;
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,.05);
   }
-  footer{
-    text-align:center;
-    padding:1rem;
-    font-size:0.9rem;
-    color:#777;
+  .card h3 {
+    margin-top: 0;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.4rem;
+  }
+  .card ul {
+    margin-top: .5rem;
+    padding-left: 1.2rem;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 3rem;
   }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Innovations shaping the world of 2025‑2026</p>
+  <div class="container">
+    <h1>Tech Frontier</h1>
+    <nav>
+      <a href="#ai">AI</a>
+      <a href="#quantum">Quantum</a>
+      <a href="#bio">Biotech</a>
+      <a href="#energy">Energy</a>
+      <a href="#space">Space</a>
+    </nav>
+  </div>
 </header>
 
+<section class="hero">
+  <h2>Unveiling Tomorrow</h2>
+  <p>Explore the most recent breakthroughs shaping our future.</p>
+</section>
+
 <main class="container">
-  <section class="grid">
-    <!-- Breakthrough 1: AI‑Powered Quantum Computers -->
-    <article class="card">
-      <img src="https://via.placeholder.com/400x200?text=Quantum+AI" alt="Quantum AI">
-      <div class="card-content">
-        <h3>AI‑Powered Quantum Computing</h3>
-        <p>Researchers at MIT and IBM have demonstrated the first hybrid quantum‑classical neural network that can process large datasets in milliseconds, paving the way for unprecedented breakthroughs in drug discovery and materials science.</p>
-        <a href="https://www.nature.com/articles/s41586-024-05862-9" target="_blank">Read More</a>
-      </div>
-    </article>
 
-    <!-- Breakthrough 2: Solid‑State Batteries -->
-    <article class="card">
-      <img src="https://via.placeholder.com/400x200?text=Solid+State+Batteries" alt="Solid State Batteries">
-      <div class="card-content">
-        <h3>Solid‑State Battery Technology</h3>
-        <p>Tesla and Solid Energy announced a commercial solid‑state battery that delivers 500 Wh/kg energy density, drastically reducing weight and charging time for electric vehicles.</p>
-        <a href="https://www.reuters.com/technology/tesla-solid-state-battery-2026-04-15/" target="_blank">Read More</a>
-      </div>
-    </article>
+  <section id="ai" class="grid grid-2">
+    <div class="card">
+      <h3>🤖 Artificial Intelligence & Generative Models</h3>
+      <ul>
+        <li>Large Language Models surpassing 200B parameters, enabling real‑time multilingual translation and creative content generation.</li>
+        <li>Multimodal AI (e.g., GPT‑4o, Claude 3.5) that simultaneously processes text, image, and audio with near‑human coherence.</li>
+        <li>Reinforcement learning breakthroughs reducing data‑efficiency by 70 % for complex robotics tasks.</li>
+        <li>AI‑driven drug discovery platforms predicting protein folding and therapeutic candidates in days.</li>
+      </ul>
+    </div>
 
-    <!-- Breakthrough 3: 6G Network Infrastructure -->
-    <article class="card">
-      <img src="https://via.placeholder.com/400x200?text=6G+Networks" alt="6G Networks">
-      <div class="card-content">
-        <h3>Commercial 6G Deployment</h3>
-        <p>Telecom giants AT&T and Huawei have rolled out 6G test beds, delivering 10 Gbps peak speeds and sub‑millisecond latency, enabling real‑time holographic communication.</p>
-        <a href="https://www.cnn.com/2026/05/10/tech/6g-launch/index.html" target="_blank">Read More</a>
-      </div>
-    </article>
-
-    <!-- Breakthrough 4: CRISPR‑Based Gene Editing Therapy -->
-    <article class="card">
-      <img src="https://via.placeholder.com/400x200?text=CRISPR+Therapy" alt="CRISPR Therapy">
-      <div class="card-content">
-        <h3>CRISPR Gene Editing in Humans</h3>
-        <p>Clinical trials have successfully edited the BRCA1 gene in patients with hereditary breast cancer, offering a permanent cure and sparking a new era in personalized medicine.</p>
-        <a href="https://www.scientificamerican.com/article/crispr-success-2026/" target="_blank">Read More</a>
-      </div>
-    </article>
-
-    <!-- Breakthrough 5: Autonomous Space Exploration Robots -->
-    <article class="card">
-      <img src="https://via.placeholder.com/400x200?text=Autonomous+Robots" alt="Autonomous Space Robots">
-      <div class="card-content">
-        <h3>Autonomous Space Exploration</h3>
-        <p>SpaceX’s Rhea rover has completed a self‑guided 3‑month mission on Mars, collecting samples and deploying a micro‑satellite network for real‑time data relay.</p>
-        <a href="https://www.foxnews.com/science/spacex-mars-rover-2026" target="_blank">Read More</a>
-      </div>
-    </article>
+    <div class="card">
+      <h3>🚀 Edge AI & On‑Device Intelligence</h3>
+      <ul>
+        <li>Ultra‑low‑power neural engines integrated into smartphones enabling real‑time AR and computer vision.</li>
+        <li>Federated learning frameworks that train models on-device while preserving privacy.</li>
+        <li>AI‑optimized silicon for autonomous vehicles reducing inference latency to <5 ms.</li>
+        <li>TinyML solutions for IoT sensors monitoring environmental and health metrics.</li>
+      </ul>
+    </div>
   </section>
-</main>
 
-<footer>
-  © 2026 Technology Insights. All rights reserved.
-</footer>
-</body>
-</html>
+  <section id="quantum" class="grid grid-2">
+    <div class="card">
+      <h3>🔬 Quantum Computing Milestones</h3>
+      <ul>
+        <li>Commercially available 100‑qubit superconducting processors achieving quantum supremacy for specific tasks.</li>
+        <li>Quantum‑enhanced cryptography: post‑quantum key exchange protocols now in deployment.</li>
+        <li>Hybrid classical‑quantum algorithms reducing simulation time for complex molecules by 80 %.</li>
+        <li>Quantum networking prototypes demonstrating entanglement distribution over >200 km fiber links.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💡 Quantum Sensors & Metrology</h3>
+      <ul>
+        <li>Atomic clocks based on optical lattices with accuracy <10<sup>−18</sup>, improving GPS precision.</li>
+        <li>Quantum gravimeters detecting minute changes in Earth's gravity, aiding mineral exploration.</li>
+        <li>High‑sensitivity magnetometers for medical imaging and neurological research.</li>
+        <li>Portable quantum sensors enabling field diagnostics for infrastructure health.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="bio" class="grid grid-2">
+    <div class="card">
+      <h3>🧬 Gene Editing & Synthetic Biology</h3>
+      <ul>
+        <li>CRISPR‑Cas12f systems with improved specificity reducing off‑target edits by >90 %.</li>
+        <li>Programmable base editors enabling precise single‑base changes for inherited diseases.</li>
+        <li>Artificial organoids that mimic human tissue for drug testing, cutting preclinical costs.</li>
+        <li>Microbiome‑engineering platforms creating personalized probiotic therapies.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🌱 Bio‑Inspired Energy & Materials</h3>
+      <ul>
+        <li>Bio‑photovoltaic cells converting light to electricity via engineered algae.</li>
+        <li>Self‑healing polymers inspired by natural adhesives for infrastructure longevity.</li>
+        <li>Biodegradable electronic components reducing e‑waste.</li
