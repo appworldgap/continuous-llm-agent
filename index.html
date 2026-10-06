@@ -1,141 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
 <style>
-  /* CSS Reset */
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Variables */
-  :root {
-    --bg: #f5f7fa;
-    --primary: #0a84ff;
-    --secondary: #6a6e73;
-    --accent: #ff5c57;
-    --card-bg: #ffffff;
-    --text: #1c1c1c;
-    --card-shadow: rgba(0,0,0,0.12);
-    --transition: 0.3s ease;
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Header */
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-  }
-
-  /* Main content container */
-  main {
-    flex: 1;
-    max-width: 1200px;
-    width: 90%;
-    margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  /* Card styles */
-  .card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px var(--card-shadow);
-    padding: 1.5rem;
-    transition: transform var(--transition), box-shadow var(--transition);
-    display: flex;
-    flex-direction: column;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px var(--card-shadow);
-  }
-  .card h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-    color: var(--primary);
-  }
-  .card ul {
-    list-style: disc inside;
-    margin-left: 1rem;
-  }
-  .card li {
-    margin-bottom: 0.4rem;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: var(--secondary);
-  }
-
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    .card h2 { font-size: 1.2rem; }
-  }
+:root {
+  --bg: #f9fafb;
+  --accent: #4f46e5;
+  --text: #111827;
+  --card-bg: #fff;
+  --card-shadow: rgba(0,0,0,0.05);
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-family);background:var(--bg);color:var(--text);line-height:1.6;}
+header{background:var(--accent);color:#fff;padding:3rem 1rem;text-align:center;}
+header h1{font-size:2.5rem;margin-bottom:.5rem;}
+header p{font-size:1.2rem;}
+main{max-width:1200px;margin:auto;padding:2rem 1rem;}
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:var(--card-bg);
+  border-radius:8px;
+  box-shadow:0 4px 8px var(--card-shadow);
+  overflow:hidden;
+  transition:transform .3s;
+}
+.card:hover{transform:translateY(-5px);}
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+.card-content{padding:1.5rem;}
+.card-content h3{margin-bottom:.75rem;color:var(--accent);}
+.card-content p{font-size:.95rem;margin-bottom:1rem;}
+.card-content a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.card-content a:hover{text-decoration:underline;}
+@media (prefers-color-scheme: dark){
+  body{background:#111827;color:#e5e7eb;}
+  header{background:#111827;}
+  .card{background:#1f2937;}
+  .card-shadow{rgba(255,255,255,.05);}
+  .card-content a{color:#8b5cf6;}
+}
 </style>
 </head>
 <body>
-
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI to space exploration—discover what’s reshaping our world.</p>
+  <p>From quantum computers to bio‑printed organs – the frontier of innovation in 2024.</p>
 </header>
 
 <main>
-  <!-- Artificial Intelligence & Machine Learning -->
-  <article class="card">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <ul>
-      <li>GPT‑4.5 & Claude 3.5 – 25‑fold performance jump over GPT‑4 with fewer parameters.</li>
-      <li>Gemini‑1 by Google – real‑time multimodal reasoning across text, images, and video.</li>
-      <li>Llama 3.2 from Meta – open‑source LLM with 70B parameters, optimized for edge inference.</li>
-      <li>Neuromorphic chips (Intel Loihi‑2, BrainChip Akida‑2) – 10‑fold energy efficiency for deep learning workloads.</li>
-    </ul>
-  </article>
+  <section aria-label="Breakthrough Cards">
+    <div class="card-grid">
+      <!-- Quantum AI Co‑Processor -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Quantum+AI" alt="Quantum AI Co‑Processor">
+        <div class="card-content">
+          <h3>Quantum‑Enhanced AI Co‑Processor</h3>
+          <p>
+            A hybrid chip that combines superconducting qubits with classical tensor‑core units, achieving a 50× speed‑up for deep‑learning inference on 4‑TB models. It’s already being trialed in autonomous driving stacks by major OEMs.
+          </p>
+          <a href="#">Read more →</a>
+        </div>
+      </article>
 
-  <!-- Quantum Computing -->
-  <article class="card">
-    <h2>Quantum Computing</h2>
-    <ul>
-      <li>Google Sycamore‑7 – first demonstration of “quantum supremacy” with 54 qubits.</li>
-      <li>IBM OSP‑400 – 400‑qubit processor with error‑correction via surface codes.</li>
-      <li>Quantum‑assisted drug discovery – Qiskit and Rigetti used to model protein folding in hours.</li>
-      <li>Quantum key distribution (QKD) satellites (SpaceX Starlink‑QKD) – global secure communication.</li>
-    </ul>
-  </article>
+      <!-- Solid‑State Battery (SSB) -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Solid+State+Battery" alt="Solid‑State Battery">
+        <div class="card-content">
+          <h3>Solid‑State Lithium‑Silicon Battery</h3>
+          <p>
+            A commercially viable 2.5‑Ah solid‑state cell with 400 Wh/kg energy density and <3‑minute fast‑charge capability. Major automakers are testing it in prototype EVs.
+          </p>
+          <a href="#">Read more →</a>
+        </div>
+      </article>
 
-  <!-- Biotechnology & Gene Editing -->
-  <article class="card">
-    <h2>Biotechnology & Gene Editing</h2>
-    <ul>
-      <li>CRISPR‑Cas13a base editors – precise RNA editing for therapeutic applications.</li>
-      <li>CAR‑T therapies for solid tumours – 20% higher infiltration rates in phase‑II trials.</li>
-      <li>AI‑driven protein folding (AlphaFold‑2) – accelerated vaccine design for emerging pathogens.</li>
+      <!-- CRISPR‑Based Gene‑Editing Platform -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=CRISPR+Platform" alt="CRISPR Gene‑Editing Platform">
+        <div class="card-content">
+          <h3>CRISPR‑Prime‑Editing 3.0</h3>
+          <p>
+            A next‑generation prime‑editor with >98 % on‑target accuracy and minimal off‑target mutations, enabling safe correction of hereditary diseases in vivo.
+          </p>
+          <a href="#">Read more →</a>
+        </div>
+      </article>
+
+      <!-- 6G Ultra‑Wideband Modulation -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=6G+Modulation" alt="6G Ultra‑Wideband Modulation">
+        <div class="card-content">
+          <h3>6G 1‑THz Wideband Modulation</h3>
+          <p>
+            First commercial deployment of 1‑THz carrier bands delivering 10 Tb/s links for data centers and satellite constellations. Low‑power silicon photonics chips make it cost‑effective.
+          </p>
+          <a href="#">Read more →</a>
+        </div>
+      </article>
+
+      <!-- Autonomous Quantum Sensors -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Quantum+Sensors" alt="Autonomous Quantum Sensors">
+        <div class="card-content">
+          <h3>Quantum Magnetometer Array</h3>
+          <p>
+            An array of room‑temperature NV‑center sensors that detect sub‑nT magnetic fields with 10 ps time resolution, enabling real‑time brain‑computer interfacing and seismic monitoring.
+          </p>
+          <a href="#">Read more →</a>
+        </div>
+      </article>
+
+      <!-- AI‑Driven Protein Design -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=AI+Protein+Design" alt="AI‑Driven Protein Design">
+        <div class="card-content">
+          <h3>AlphaFold‑X Protein Designer</h3>
+          <p>
+            A generative model that designs proteins with 90 % accuracy for desired binding affinities, accelerating vaccine and enzyme development pipelines.
+          </p>
+          <a href="#">Read more →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+</body>
+</html>
