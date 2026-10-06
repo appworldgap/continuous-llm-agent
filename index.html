@@ -1,206 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables for easy theming */
+  /* CSS Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Variables */
   :root {
-    --primary: #0066ff;
-    --secondary: #ff6600;
-    --bg-light: #f9f9f9;
-    --bg-dark: #111;
-    --text-dark: #222;
-    --text-light: #eee;
-    --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-serif: 'Georgia', serif;
-    --radius: 8px;
-    --gap: 1.5rem;
+    --bg: #f5f7fa;
+    --primary: #0a84ff;
+    --secondary: #6a6e73;
+    --accent: #ff5c57;
+    --card-bg: #ffffff;
+    --text: #1c1c1c;
+    --card-shadow: rgba(0,0,0,0.12);
+    --transition: 0.3s ease;
   }
 
   body {
-    margin: 0;
-    font-family: var(--font-sans);
-    background: var(--bg-light);
-    color: var(--text-dark);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
-  /* Dark mode toggle (optional) */
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: var(--bg-dark);
-      color: var(--text-light);
-    }
-    header, section, footer {
-      background: #222;
-    }
-  }
-
+  /* Header */
   header {
     background: var(--primary);
     color: #fff;
-    padding: var(--gap);
+    padding: 2rem 1rem;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
   header h1 {
-    margin: 0;
-    font-family: var(--font-serif);
-    font-weight: normal;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
   }
 
+  /* Main content container */
   main {
-    max-width: 1200px;
-    margin: auto;
-    padding: var(--gap);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--gap);
-  }
-
-  @media(min-width: 768px) {
-    main {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  article {
-    background: #fff;
-    border-radius: var(--radius);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-
-  article img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-
-  article .content {
-    padding: var(--gap);
     flex: 1;
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Card styles */
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    padding: 1.5rem;
+    transition: transform var(--transition), box-shadow var(--transition);
     display: flex;
     flex-direction: column;
   }
-
-  article h2 {
-    margin-top: 0;
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px var(--card-shadow);
+  }
+  .card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
     color: var(--primary);
   }
-
-  article p {
-    margin-top: 0.5rem;
-    flex: 1;
+  .card ul {
+    list-style: disc inside;
+    margin-left: 1rem;
+  }
+  .card li {
+    margin-bottom: 0.4rem;
   }
 
-  article a {
-    text-decoration: none;
-    color: var(--secondary);
-    font-weight: bold;
-    margin-top: 1rem;
-  }
-
+  /* Footer */
   footer {
     text-align: center;
-    padding: var(--gap);
+    padding: 1rem 0;
     font-size: 0.9rem;
-    color: var(--text-dark);
+    color: var(--secondary);
   }
 
-  footer a {
-    color: var(--primary);
-    text-decoration: none;
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .card h2 { font-size: 1.2rem; }
   }
 </style>
 </head>
-
 <body>
 
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to space exploration—discover what’s reshaping our world.</p>
 </header>
 
 <main>
   <!-- Artificial Intelligence & Machine Learning -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="AI">
-    <div class="content">
-      <h2>Artificial Intelligence</h2>
-      <p>Generative AI models now produce photorealistic images, code, and music with minimal user input. 
-      OpenAI’s GPT‑4o and Anthropic’s Claude 3 can understand and generate multimodal content, 
-      enabling real‑time language translation, medical diagnostics, and creative storytelling.</p>
-      <a href="https://openai.com/research" target="_blank">Read more</a>
-    </div>
+  <article class="card">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <ul>
+      <li>GPT‑4.5 & Claude 3.5 – 25‑fold performance jump over GPT‑4 with fewer parameters.</li>
+      <li>Gemini‑1 by Google – real‑time multimodal reasoning across text, images, and video.</li>
+      <li>Llama 3.2 from Meta – open‑source LLM with 70B parameters, optimized for edge inference.</li>
+      <li>Neuromorphic chips (Intel Loihi‑2, BrainChip Akida‑2) – 10‑fold energy efficiency for deep learning workloads.</li>
+    </ul>
   </article>
 
   <!-- Quantum Computing -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1580894732444-5e2e2cbd5b9c?auto=format&fit=crop&w=800&q=80" alt="Quantum">
-    <div class="content">
-      <h2>Quantum Computing</h2>
-      <p>IBM’s 127‑qubit Eagle processor and Google’s Sycamore have reached new thresholds in error rates, 
-      bringing quantum advantage closer to real‑world applications. 
-      Quantum‑enhanced cryptography and drug discovery simulations are now within laboratory reach.</p>
-      <a href="https://www.ibm.com/quantum-computing" target="_blank">Read more</a>
-    </div>
+  <article class="card">
+    <h2>Quantum Computing</h2>
+    <ul>
+      <li>Google Sycamore‑7 – first demonstration of “quantum supremacy” with 54 qubits.</li>
+      <li>IBM OSP‑400 – 400‑qubit processor with error‑correction via surface codes.</li>
+      <li>Quantum‑assisted drug discovery – Qiskit and Rigetti used to model protein folding in hours.</li>
+      <li>Quantum key distribution (QKD) satellites (SpaceX Starlink‑QKD) – global secure communication.</li>
+    </ul>
   </article>
 
   <!-- Biotechnology & Gene Editing -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1526393047611-0a0b6f70a0f9?auto=format&fit=crop&w=800&q=80" alt="Biotech">
-    <div class="content">
-      <h2>Gene Editing</h2>
-      <p>CRISPR‑Cas12a variants now allow precise base editing without double‑strand breaks, reducing off‑target effects. 
-      Therapies targeting sickle cell disease and certain cancers are advancing to phase‑III trials.</p>
-      <a href="https://www.genome.gov/genetics-glossary/CRISPR" target="_blank">Read more</a>
-    </div>
-  </article>
-
-  <!-- Renewable Energy & Battery Tech -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1571496055200-0e8e1f4b3a65?auto=format&fit=crop&w=800&q=80" alt="Energy">
-    <div class="content">
-      <h2>Energy Storage</h2>
-      <p>Solid‑state batteries now achieve >500 Wh/kg energy density, while flow‑battery chemistries use renewable
-      redox‑active materials, lowering costs and enabling grid‑scale storage. 
-      Silicon‑anode silicon‑carbon composites also extend cycle life for EVs.</p>
-      <a href="https://www.energy.gov/eere/fuelcells/solid-state-battery-technology" target="_blank">Read more</a>
-    </div>
-  </article>
-
-  <!-- Advanced Materials -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1589878811121-6d2b0e8c5e17?auto=format&fit=crop&w=800&q=80" alt="Materials">
-    <div class="content">
-      <h2>Advanced Materials</h2>
-      <p>Graphene‑based composites now exhibit record tensile strength while remaining flexible, enabling new wearable 
-      electronics and aerospace components. Metamaterials with tunable refractive indices pave the way for cloaking 
-      and ultra‑high‑resolution imaging.</p>
-      <a href="https://www.nature.com/articles/s41586-023-06786-2" target="_blank">Read more</a>
-    </div>
-  </article>
-
-  <!-- Space & Satellite Technology -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1524285203324-8b4c8a1f2a05?auto=format&fit=crop&w=800&q=80" alt="Space">
-    <div class="content">
-      <h2>SpaceTech</h2>
-      <p>SpaceX’s Starship prototype demonstrates reusable inter‑planetary propulsion, while NASA’s James Webb Space Telescope
-      has delivered unprecedented infrared images, revealing the first galaxies beyond the observable universe. 
-      CubeSat swarms now offer real‑time Earth observation for agriculture and disaster response.</p>
-      <a href="https://www.nasa.gov/mission_pages/planetary/deep-space/planetary.html" target="_blank">Read more</a>
-    </div>
-  </article>
-</main>
-
-<footer>
-  <p>© 2026 Tech Insight. All rights reserved. | <a href="https://www.techinsight.com/privacy">Privacy Policy</a></p>
-</footer>
-
-</body>
-</
+  <article class="card">
+    <h2>Biotechnology & Gene Editing</h2>
+    <ul>
+      <li>CRISPR‑Cas13a base editors – precise RNA editing for therapeutic applications.</li>
+      <li>CAR‑T therapies for solid tumours – 20% higher infiltration rates in phase‑II trials.</li>
+      <li>AI‑driven protein folding (AlphaFold‑2) – accelerated vaccine design for emerging pathogens.</li>
