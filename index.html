@@ -3,143 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root{
-    --primary:#0063FF;
-    --secondary:#00C8FF;
-    --bg:#f5f7fa;
-    --text:#333;
-    --card:#fff;
-    --shadow:rgba(0,0,0,0.1);
+  /* CSS Variables */
+  :root {
+    --primary: #0d47a1;      /* Deep blue */
+    --accent: #ff6f61;       /* Coral */
+    --bg: #f5f5f5;          /* Light gray */
+    --text: #333;            /* Dark gray */
+    --card-bg: #fff;         /* White */
+    --card-shadow: rgba(0, 0, 0, 0.1);
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{
-    font-family:"Inter",sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
+
+  /* Global Styles */
+  body, h1, h2, h3, p, ul, li, figure, figcaption {
+    margin: 0;
+    padding: 0;
   }
-  header{
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:#fff;
-    padding:3rem 1rem;
-    text-align:center;
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
   }
-  header h1{
-    font-size:2.8rem;
-    margin-bottom:.5rem;
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color .2s;
   }
-  header p{
-    font-size:1.1rem;
+  a:hover { color: var(--primary); }
+
+  /* Layout */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
   }
-  main{
-    max-width:1200px;
-    margin:2rem auto;
-    padding:0 1rem;
+
+  /* Header */
+  header {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+    margin-bottom: 2rem;
   }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:1.5rem;
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
   }
-  .card{
-    background:var(--card);
-    border-radius:10px;
-    box-shadow:0 4px 8px var(--shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform .2s;
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
   }
-  .card:hover{transform:translateY(-5px);}
-  .card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
-  .card-body{
-    padding:1rem;
-    flex:1;
-    display:flex;
-    flex-direction:column;
+
+  /* Card */
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--card-shadow);
+    transition: transform .2s, box-shadow .2s;
+    display: flex;
+    flex-direction: column;
   }
-  .card-body h3{
-    font-size:1.25rem;
-    margin-bottom:.5rem;
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px var(--card-shadow);
   }
-  .card-body p{
-    flex:1;
-    margin-bottom:.8rem;
-    color:#555;
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
   }
-  .card-body a{
-    text-decoration:none;
-    color:var(--primary);
-    font-weight:600;
-    align-self:flex-start;
-    transition:color .2s;
+  .card-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
-  .card-body a:hover{color:var(--secondary);}
-  footer{
-    text-align:center;
-    padding:2rem 1rem;
-    font-size:.9rem;
-    color:#777;
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
   }
-  @media(max-width:600px){
-    header h1{font-size:2rem;}
+  .card-desc {
+    font-size: 0.95rem;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+  .card-meta {
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 2.3rem; }
+    .card img { height: 150px; }
   }
 </style>
 </head>
 <body>
+
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Discover the cutting‑edge innovations reshaping our world.</p>
+  <p>Discover the innovations shaping tomorrow</p>
 </header>
 
-<main>
-  <section>
-    <h2 style="margin-bottom:1rem;">Breakthrough Highlights</h2>
-    <div class="grid">
-      <!-- Quantum Supremacy -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581276879432-8a8a1c4a1c4c?auto=format&fit=crop&w=400&q=80" alt="Quantum chip">
-        <div class="card-body">
-          <h3>Quantum Supremacy 2.0</h3>
-          <p>IBM's 433‑qubit Eagle processor demonstrates error‑corrected logical qubits, pushing quantum advantage beyond simulation limits.</p>
-          <a href="https://www.ibm.com/quantum" target="_blank" rel="noopener">Read more</a>
-        </div>
-      </article>
-      
-      <!-- GPT-4.5 and Multimodal AI -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1518779578997-4e3c8d3e4e8d?auto=format&fit=crop&w=400&q=80" alt="AI illustration">
-        <div class="card-body">
-          <h3>GPT‑4.5 & Multimodal Models</h3>
-          <p>OpenAI releases GPT‑4.5, a multimodal system that can understand and generate text, images, and audio with unprecedented fidelity.</p>
-          <a href="https://openai.com/research/gpt-4-5" target="_blank" rel="noopener">Read more</a>
-        </div>
-      </article>
-      
-      <!-- Solid‑State Battery Prototype -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1580653512261-3a9e5c9b2e2d?auto=format&fit=crop&w=400&q=80" alt="battery cells">
-        <div class="card-body">
-          <h3>Solid‑State Battery Breakthrough</h3>
-          <p>Toyota and Panasonic unveil a 3‑year life cycle solid‑state battery prototype with 30% higher energy density.</p>
-          <a href="https://www.toyota.co.jp/en/tech/2024/solid-state-battery" target="_blank" rel="noopener">Read more</a>
-        </div>
-      </article>
-      
-      <!-- Graphene Supercapacitors -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1607082349830-3b1a9b5b4f3d?auto=format&fit=crop&w=400&q=80" alt="graphene sheet">
-        <div class="card-body">
-          <h3>Graphene Supercapacitor</h3>
-          <p>Researchers achieve a 10‑fold increase in energy storage using graphene‑based electrodes, enabling ultra‑fast charging.</p>
-          <a href="https://www.nature.com/articles/s41467-024-12345-6" target="_blank" rel="noopener">Read more</a>
-        </div>
-      </article>
-      
-      <!--
+<section class="container">
+  <div class="grid">
+
+    <!-- Card 1: Quantum Supremacy -->
+    <article class="card">
+      <img src="https://via.placeholder.com/400x180?text=Quantum+Supremacy" alt="Quantum Supremacy">
+      <div class="card-content">
+        <h2 class="card-title">Quantum Supremacy with Photonic Processor</h2>
+        <p class="card-desc">
+          In 2024, researchers demonstrated a photonic quantum computer that
+          outperformed the world's most powerful classical supercomputers,
+          marking a milestone in scalable quantum computing.
+        </p>
+        <p class="card-meta">2024 • Quantum Computing</p>
+      </div>
+    </article>
+
+    <!-- Card 2: GPT-5 -->
+    <article class="card">
+      <img src="https://via.placeholder.com/400x180?text=GPT-5" alt="GPT-5">
+      <div class="card-content">
+        <h2 class="card-title">GPT‑5: Ultra‑Efficient LLM</h2>
+        <p class="card-desc">
+          OpenAI released GPT‑5, a transformer with 10× fewer parameters but
+          2× the performance of GPT‑4, enabling real‑time language tasks on
+          edge devices.
+        </p>
+        <p class="card-meta">2024 • AI / NLP</p>
+      </div>
+    </article>
+
+    <!-- Card 3: 6G Communication -->
+    <article class="card">
+      <img src="https://via.placeholder.com/400x180?text=6G" alt="6G Communication">
+      <div class="card-content">
+        <h2 class="card-title">First
