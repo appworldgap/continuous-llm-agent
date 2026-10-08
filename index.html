@@ -2,124 +2,176 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables */
+  /* Import Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
   :root {
-    --primary: #0d47a1;
-    --secondary: #ff6f00;
-    --background: #f5f5f5;
-    --surface: #ffffff;
-    --text-primary: #212121;
-    --text-secondary: #616161;
-    --font-base: 16px;
-    --transition: 0.3s ease;
-    --radius: 8px;
+    --bg: #fafafa;
+    --accent: #1e88e5;
+    --text: #333;
+    --card-bg: #fff;
+    --card-shadow: rgba(0,0,0,0.1);
+    --link: var(--accent);
   }
 
-  /* Global Resets & Base Styles */
-  *, *::before, *::after { box-sizing: border-box; }
-  body, h1, h2, h3, p, ul { margin: 0; padding: 0; }
   body {
-    font-family: system-ui, sans-serif;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
-    font-size: var(--font-base);
-    color: var(--text-primary);
-    background: var(--background);
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
-  a { text-decoration: none; color: var(--primary); transition: var(--transition); }
-  a:hover { color: var(--secondary); }
-  img { max-width: 100%; border-radius: var(--radius); }
 
-  /* Layout */
-  header { 
-    background: var(--primary); 
-    color: #fff; 
-    padding: 2rem 1rem; 
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 2rem 1rem;
     text-align: center;
   }
-  header h1 { font-size: 2.5rem; }
-  header p { font-size: 1rem; margin-top: 0.5rem; }
-  main { padding: 2rem 1rem; max-width: 1200px; margin: 0 auto; }
-  section { margin-bottom: 3rem; }
-  .breakthrough { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
-  .breakthrough:nth-child(even) .content { order: -1; }
-  .content { flex: 1 1 45%; }
-  .content h3 { margin-bottom: 0.5rem; font-size: 1.5rem; color: var(--primary); }
-  .content p { color: var(--text-secondary); }
-  .image { flex: 1 1 45%; text-align: center; }
-  footer { text-align: center; padding: 1rem; background: var(--primary); color: #fff; font-size: 0.9rem; }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .breakthrough { flex-direction: column; }
-    .content, .image { flex: 1 1 100%; }
-    header h1 { font-size: 2rem; }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    flex: 1;
+  }
+
+  .card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .card a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .card a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #777;
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology (2026)</h1>
-  <p>From quantum processors to solid‑state batteries – a snapshot of the most impactful innovations shaping our future.</p>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <p>From AI to quantum computing, a roundup of the most transformative advances.</p>
 </header>
 
 <main>
+  <div class="grid">
+    <!-- AI & Generative Models -->
+    <article class="card">
+      <h3>Generative AI & LLM Evolution</h3>
+      <p>Large Language Models have progressed beyond text generation, integrating multimodal understanding and real‑time reasoning. OpenAI’s GPT‑4o and Anthropic’s Claude 3.5 showcase advanced instruction following, domain‑specific knowledge, and improved safety mitigations.</p>
+      <ul>
+        <li>Real‑time audio, video, and text synthesis.</li>
+        <li>Fine‑tuned industry‑specific adapters (e.g., legal, medical).</li>
+        <li>Open‑source models (LLaMA 3, Falcon-40B) democratize access.</li>
+      </ul>
+      <a href="https://openai.com/research/gpt-4o" target="_blank">Read more</a>
+    </article>
 
-  <!-- 1. Generative AI & LLMs -->
-  <section class="breakthrough">
-    <div class="image">
-      <img src="https://images.unsplash.com/photo-1573497015425-2b9d8e6c0a6b?auto=format&fit=crop&w=800&q=80" alt="AI Brain">
-    </div>
-    <div class="content">
-      <h3>Generative AI & LLMs</h3>
-      <p>Large Language Models (LLMs) continue to scale, now achieving near‑human reasoning in specialized domains. <strong>GPT‑5</strong> and <strong>Claude‑3.5</strong> have integrated multimodal understanding, enabling seamless text, image, and audio synthesis. These models power autonomous design, real‑time translation, and adaptive learning platforms worldwide.</p>
-    </div>
-  </section>
+    <!-- Quantum Computing -->
+    <article class="card">
+      <h3>Quantum Supremacy Milestones</h3>
+      <p>Google’s Sycamore and IBM’s Eagle chips now feature 60‑plus qubits with error rates below 0.5%. Researchers have demonstrated <em>quantum advantage</em> for specific simulation tasks, marking a crucial step toward fault‑tolerant systems.</p>
+      <ul>
+        <li>Hybrid quantum‑classical algorithms for drug discovery.</li>
+        <li>Commercial quantum cloud offerings (IBM Quantum, Rigetti).</li>
+        <li>Progress in quantum error correction (surface code thresholds).</li>
+      </ul>
+      <a href="https://arxiv.org/abs/2403.04567" target="_blank">Read the paper</a>
+    </article>
 
-  <!-- 2. Quantum Computing Milestones -->
-  <section class="breakthrough">
-    <div class="content">
-      <h3>Quantum Computing Milestones</h3>
-      <p>Quantum processors have reached <strong>1,500 logical qubits</strong>, surpassing the <em>threshold for error‑correction</em> and enabling practical cryptographic tasks. <strong>Google’s Sycamore-2</strong> and <strong>IBM’s Condor‑Q</strong> deliver new algorithms for drug discovery and materials science, proving the first commercial quantum advantage in optimization problems.</p>
-    </div>
-    <div class="image">
-      <img src="https://images.unsplash.com/photo-1527430258254-1a5f7a0f3e9b?auto=format&fit=crop&w=800&q=80" alt="Quantum Computer">
-    </div>
-  </section>
+    <!-- Biotech & CRISPR -->
+    <article class="card">
+      <h3>CRISPR Base Editing & Gene Therapy</h3>
+      <p>Base editors now achieve >95% efficiency in vivo, enabling precise correction of pathogenic SNPs without double‑strand breaks. The first FDA‑approved base‑editing therapy for a retinal degenerative disease demonstrates clinical viability.</p>
+      <ul>
+        <li>Non‑viral delivery vectors (lipid nanoparticles).</li>
+        <li>Expansion into hematologic and neurodegenerative disorders.</li>
+        <li>Ethical frameworks for germline editing.</li>
+      </ul>
+      <a href="https://www.nature.com/articles/s41587-024-02078-3" target="_blank">Read the study</a>
+    </article>
 
-  <!-- 3. 6G & Ultra‑High‑Speed Connectivity -->
-  <section class="breakthrough">
-    <div class="image">
-      <img src="https://images.unsplash.com/photo-1581093588401-4c1e5f6b6c9f?auto=format&fit=crop&w=800&q=80" alt="6G Network">
-    </div>
-    <div class="content">
-      <h3>6G & Ultra‑High‑Speed Connectivity</h3>
-      <p>6G networks now offer <strong>10 Tbps</strong> peak data rates and <strong>1 ms</strong> latency. They enable true holographic communication, real‑time edge computing, and seamless integration of IoT devices in smart cities.</p>
-    </div>
-  </section>
+    <!-- Energy Storage -->
+    <article class="card">
+      <h3>Solid‑State Battery Breakthroughs</h3>
+      <p>Companies like QuantumScape and Solid Power have announced prototype solid‑state cells with energy densities >400 Wh kg⁻¹ and 500 Wh L⁻¹, promising longer range EVs and faster charging.</p>
+      <ul>
+        <li>Lithium‑sulfur and lithium‑air chemistries nearing commercialization.</li>
+        <li>Enhanced safety with no flammable electrolytes.</li>
+        <li>Integration into grid‑scale storage.</li>
+      </ul>
+      <a href="https://www.sciencedaily.com/releases/2024/02/240215113400.htm" target="_blank">Read the report</a>
+    </article>
 
-  <!-- 4. Autonomous Vehicles & Mobility -->
-  <section class="breakthrough">
-    <div class="content">
-      <h3>Autonomous Vehicles & Mobility</h3>
-      <p>Level 5 autonomous fleets are operational in several metropolitan hubs. New lidar‑free perception systems use advanced neural networks and millimeter‑wave radar to navigate complex urban environments with 99.99% safety.</p>
-    </div>
-    <div class="image">
-      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b94f?auto=format&fit=crop&w=800&q=80" alt="Self‑Driving Car">
-    </div>
-  </section>
-
-  <!-- 5. Biotechnology & Synthetic Biology -->
-  <section class="breakthrough">
-    <div class="image">
-      <img src="https://images.unsplash.com/photo-1584270354949-6b4b1c8c9d5d?auto=format&fit=crop&w=800&q=80" alt="Lab">
-    </div>
-    <div class="content">
-      <h3>Biotechnology & Synthetic Biology</h3>
-      <p>CRISPR‑based gene therapies now target previously untreatable monogenic disorders, while synthetic biology produces bio‑derived plastics with <em>zero carbon footprint</em>. AI-guided protein folding continues to accelerate vaccine design.</p>
-    </div>
-  </section
+    <!-- 6G & Next‑Gen Connectivity -->
+    <article class="card">
+      <h3>6G Conceptualization & Early
