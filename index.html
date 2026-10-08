@@ -5,162 +5,104 @@
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables */
-  :root {
-    --primary: #0d47a1;      /* Deep blue */
-    --accent: #ff6f61;       /* Coral */
-    --bg: #f5f5f5;          /* Light gray */
-    --text: #333;            /* Dark gray */
-    --card-bg: #fff;         /* White */
-    --card-shadow: rgba(0, 0, 0, 0.1);
-  }
-
-  /* Global Styles */
-  body, h1, h2, h3, p, ul, li, figure, figcaption {
-    margin: 0;
-    padding: 0;
-  }
+  /* Base styling */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     line-height: 1.6;
-    background: var(--bg);
-    color: var(--text);
+    color: #333;
+    background: #f5f7fa;
+    padding: 20px;
   }
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color .2s;
-  }
-  a:hover { color: var(--primary); }
+  a { color: #1e90ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
   /* Layout */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
+  .container { max-width: 1200px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 40px; }
+  h1 { font-size: 2.8rem; margin-bottom: 0.2em; }
+  p.subtitle { font-size: 1.3rem; color: #555; }
 
-  /* Header */
-  header {
-    text-align: center;
-    padding: 4rem 1rem;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: #fff;
-    margin-bottom: 2rem;
-  }
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: -1px;
-  }
-  header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-  }
-
-  /* Grid */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  /* Card */
-  .card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px var(--card-shadow);
-    transition: transform .2s, box-shadow .2s;
-    display: flex;
-    flex-direction: column;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px var(--card-shadow);
-  }
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  .card-content {
-    padding: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-  }
-  .card-desc {
-    font-size: 0.95rem;
-    flex-grow: 1;
-    margin-bottom: 1rem;
-    color: var(--text);
-  }
-  .card-meta {
-    font-size: 0.85rem;
-    color: #777;
-  }
+  /* Grid for breakthroughs */
+  .breakthroughs { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform .2s, box-shadow .2s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .card img { width: 100%; height: 160px; object-fit: cover; }
+  .card-content { padding: 15px; }
+  .card h3 { margin-bottom: 0.5em; font-size: 1.2rem; }
+  .card p { font-size: 0.95rem; color: #666; }
 
   /* Footer */
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: #777;
-    font-size: 0.9rem;
-    margin-top: 4rem;
-  }
-
-  @media (max-width: 600px) {
-    header h1 { font-size: 2.3rem; }
-    .card img { height: 150px; }
-  }
+  footer { text-align: center; margin-top: 60px; font-size: 0.9rem; color: #777; }
+  footer a { color: #1e90ff; }
 </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Latest Breakthroughs in Technology</h1>
+      <p class="subtitle">A snapshot of the most transformative innovations shaping our world in 2024.</p>
+    </header>
 
-<header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Discover the innovations shaping tomorrow</p>
-</header>
+    <section class="breakthroughs">
+      <!-- Artificial Intelligence -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517486808906-6b2b1e5a7a2b?auto=format&fit=crop&w=400&q=80" alt="AI">
+        <div class="card-content">
+          <h3>AI: GPT-5 and Beyond</h3>
+          <p>Generative models now exhibit deeper context understanding, reduced hallucinations, and multimodal reasoning that seamlessly integrates vision, text, and audio.</p>
+        </div>
+      </article>
 
-<section class="container">
-  <div class="grid">
+      <!-- Quantum Computing -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="Quantum Computing">
+        <div class="card-content">
+          <h3>Quantum Supremacy 2.0</h3>
+          <p>New silicon‑based quantum processors surpass 50 qubits, enabling practical simulations for drug discovery and optimization problems.</p>
+        </div>
+      </article>
 
-    <!-- Card 1: Quantum Supremacy -->
-    <article class="card">
-      <img src="https://via.placeholder.com/400x180?text=Quantum+Supremacy" alt="Quantum Supremacy">
-      <div class="card-content">
-        <h2 class="card-title">Quantum Supremacy with Photonic Processor</h2>
-        <p class="card-desc">
-          In 2024, researchers demonstrated a photonic quantum computer that
-          outperformed the world's most powerful classical supercomputers,
-          marking a milestone in scalable quantum computing.
-        </p>
-        <p class="card-meta">2024 • Quantum Computing</p>
-      </div>
-    </article>
+      <!-- Biotechnology -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=400&q=80" alt="Biotech">
+        <div class="card-content">
+          <h3>CRISPR‑Cas13 Therapeutics</h3>
+          <p>Targeted RNA editing treats previously intractable genetic disorders with minimal off‑target effects.</p>
+        </div>
+      </article>
 
-    <!-- Card 2: GPT-5 -->
-    <article class="card">
-      <img src="https://via.placeholder.com/400x180?text=GPT-5" alt="GPT-5">
-      <div class="card-content">
-        <h2 class="card-title">GPT‑5: Ultra‑Efficient LLM</h2>
-        <p class="card-desc">
-          OpenAI released GPT‑5, a transformer with 10× fewer parameters but
-          2× the performance of GPT‑4, enabling real‑time language tasks on
-          edge devices.
-        </p>
-        <p class="card-meta">2024 • AI / NLP</p>
-      </div>
-    </article>
+      <!-- Renewable Energy -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1589923188900-0f4a4e1d3e5b?auto=format&fit=crop&w=400&q=80" alt="Renewable Energy">
+        <div class="card-content">
+          <h3>Solid‑State Batteries</h3>
+          <p>All‑solid electrolytes achieve 500 mAh cm⁻³ energy density with fast charging in under 15 minutes.</p>
+        </div>
+      </article>
 
-    <!-- Card 3: 6G Communication -->
-    <article class="card">
-      <img src="https://via.placeholder.com/400x180?text=6G" alt="6G Communication">
-      <div class="card-content">
-        <h2 class="card-title">First
+      <!-- Space Technology -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1520699363519-3f5e3c7e7d20?auto=format&fit=crop&w=400&q=80" alt="Space Tech">
+        <div class="card-content">
+          <h3>Reusable Lunar Landers</h3>
+          <p>NASA’s Artemis program demonstrates fully reusable landers, cutting launch costs by 40 %.</p>
+        </div>
+      </article>
+
+      <!-- Edge Computing -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587202372775-9d9bde8b8e75?auto=format&fit=crop&w=400&q=80" alt="Edge Computing">
+        <div class="card-content">
+          <h3>5G‑Edge AI Chips</h3>
+          <p>Low‑latency, high‑throughput AI inference at the network edge supports real‑time analytics for autonomous vehicles.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p>© 2024 TechInsights. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+  </div>
+</body>
+</html>
