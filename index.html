@@ -2,180 +2,88 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --primary: #1e90ff;
-    --secondary: #f5f5f5;
-    --accent: #ff6f61;
-    --text-dark: #222;
-    --text-light: #555;
-    --font-stack: "Segoe UI", Helvetica, Arial, sans-serif;
-    --border-radius: 8px;
-    --gap: 20px;
+    --primary:#2d9cdb;
+    --secondary:#ffffff;
+    --accent:#ff9a56;
+    --text:#333333;
+    --muted:#777777;
+    --shadow:#e0e0e0;
   }
-  body {
-    margin:0; padding:0; font-family: var(--font-stack); color:var(--text-dark);
-    background: var(--secondary);
-    line-height:1.6;
-  }
-  header {
-    background: var(--primary);
-    color:white;
-    padding:var(--gap);
-    text-align:center;
-  }
-  header h1 {
-    margin:0; font-size:2.5rem;
-  }
-  header p {
-    margin:10px 0 0;
-    font-size:1.2rem;
-    color:#e0e0e0;
-  }
-  .container {
-    max-width:1200px; margin:auto; padding:var(--gap);
-  }
-  section {
-    background:white;
-    padding:var(--gap);
-    margin-bottom:var(--gap);
-    border-radius:var(--border-radius);
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-  }
-  section h2 {
-    margin-top:0;
-    color:var(--primary);
-    border-bottom:2px solid var(--primary);
-    padding-bottom:8px;
-  }
-  .grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(250px,1fr));
-    gap:var(--gap);
-    margin-top:var(--gap);
-  }
-  .card {
-    padding:var(--gap);
-    background:#fafafa;
-    border:1px solid #e0e0e0;
-    border-radius:var(--border-radius);
-    transition:transform 0.3s,box-shadow 0.3s;
-    display:flex;
-    flex-direction:column;
-  }
-  .card:hover {
-    transform:translateY(-5px);
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
-  }
-  .card h3 {
-    margin:0 0 10px;
-    color:var(--accent);
-  }
-  .card p {
-    flex:1;
-  }
-  .card a {
-    color:var(--primary);
-    text-decoration:none;
-    margin-top:10px;
-    font-weight:bold;
-  }
-  footer {
-    text-align:center;
-    padding:var(--gap);
-    background:#333;
-    color:#bbb;
-    font-size:0.9rem;
-  }
-  @media (max-width:600px) {
-    header h1 {font-size:2rem;}
-  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--secondary);color:var(--text);}
+  a{color:var(--primary);text-decoration:none;}
+  a:hover{color:var(--accent);}
+  header{background:linear-gradient(135deg, var(--primary), #4e79d1);color:#fff;padding:2rem 1rem; text-align:center;}
+  header h1{font-size:2.5rem;margin-bottom:.5rem;}
+  header p{font-size:1.1rem;margin-bottom:0;}
+  main{max-width:1200px;margin:auto;padding:2rem 1rem;}
+  h2{font-size:1.75rem;margin:2rem 0 .5rem;color:var(--primary);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+  .card{background:var(--secondary);border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;transition:transform .2s,box-shadow .2s;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,.15);}
+  .card img{width:100%;height:160px;object-fit:cover;}
+  .card-body{padding:1rem;}
+  .card-title{font-size:1.25rem;margin-bottom:.5rem;color:var(--text);}
+  .card-text{font-size:.95rem;line-height:1.4;color:var(--muted);}
+  .card-link{display:inline-block;margin-top:.75rem;font-weight:600;color:var(--primary);}
+  footer{background:#f8f8f8;text-align:center;padding:1rem 0;margin-top:3rem;color:var(--muted);}
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>Explore cutting‑edge innovations reshaping our world</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Explore the cutting‑edge discoveries shaping our future</p>
 </header>
 
-<div class="container">
-  <!-- AI & Generative Tech -->
+<main>
   <section>
-    <h2>Artificial Intelligence & Generative Tech</h2>
+    <h2>Artificial Intelligence</h2>
     <div class="grid">
-      <div class="card">
-        <h3>GPT‑5 & Multimodal AI</h3>
-        <p>OpenAI’s GPT‑5 pushes the boundaries of multimodal understanding, seamlessly integrating text, image, video, and audio for real‑time translation, creative content, and advanced diagnostics.</p>
-        <a href="https://openai.com/gpt-5" target="_blank">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Self‑Training AI Models</h3>
-        <p>AI models now learn from unlabeled data at scale, reducing reliance on expensive labeled datasets and enabling rapid deployment across industries.</p>
-        <a href="https://www.techcrunch.com/self-training-ai" target="_blank">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Generative 3D & Metaverse Engines</h3>
-        <p>Real‑time 3D generation tools allow designers to prototype environments with a single prompt, accelerating virtual world development.</p>
-        <a href="https://www.engine.com/3d-gen" target="_blank">Read More</a>
-      </div>
+      <article class="card">
+        <img src="https://source.unsplash.com/600x400/?ai,robot" alt="AI">
+        <div class="card-body">
+          <h3 class="card-title">GPT‑4.0</h3>
+          <p class="card-text">OpenAI’s multimodal model that understands text and images, enabling advanced conversational AI.</p>
+          <a href="https://openai.com/research/gpt-4" class="card-link" target="_blank">Learn more</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://source.unsplash.com/600x400/?dalle,ai" alt="DALL·E 3">
+        <div class="card-body">
+          <h3 class="card-title">DALL·E 3</h3>
+          <p class="card-text">Next‑gen image generator that produces highly realistic, context‑aware visuals from text prompts.</p>
+          <a href="https://openai.com/dall-e-3" class="card-link" target="_blank">Discover</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://source.unsplash.com/600x400/?ai,deep-learning" alt="Deep Learning">
+        <div class="card-body">
+          <h3 class="card-title">Transformer‑XL</h3>
+          <p class="card-text">Improved language models that retain context over long sequences, powering next‑generation NLP.</p>
+          <a href="https://arxiv.org/abs/2103.00020" class="card-link" target="_blank">Read Paper</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Quantum & Computing -->
   <section>
-    <h2>Quantum Computing & Advanced Hardware</h2>
+    <h2>Quantum Computing</h2>
     <div class="grid">
-      <div class="card">
-        <h3>IBM’s 4‑Terabit Quantum Processor</h3>
-        <p>IBM unveiled the first commercially available 4‑terabit quantum processor, achieving new milestones in quantum supremacy and practical cryptographic challenges.</p>
-        <a href="https://www.ibm.com/quantum" target="_blank">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Silicon‑Based Quantum Dots</h3>
-        <p>Researchers have demonstrated scalable silicon quantum dots that can operate at 1 K, making quantum computing more accessible for industry.</p>
-        <a href="https://www.nature.com/articles/qdot2026" target="_blank">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Hybrid Classical–Quantum Cloud Platforms</h3>
-        <p>Cloud providers now offer integrated quantum‑classical pipelines, simplifying workflow for researchers and enterprises.</p>
-        <a href="https://aws.amazon.com/quantum" target="_blank">Read More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Energy & Sustainability -->
-  <section>
-    <h2>Energy, Storage & Sustainable Tech</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Solid‑State Battery Breakthroughs</h3>
-        <p>Solid‑state lithium‑sulfur batteries now achieve 400 Wh/kg, enabling next‑generation EVs with 1000 km range.</p>
-        <a href="https://www.energy.gov/solid-state-battery" target="_blank">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Next‑Gen Solar Photovoltaics</h3>
-        <p>Perovskite‑silicon tandem cells hit 30% efficiency, breaking the 25% barrier and cutting manufacturing costs by 40%.</p>
-        <a href="https://www.solartech.com/perovskite" target="_blank">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Artificial Photosynthesis for Carbon Capture</h3>
-        <p>Commercialized photo‑electrochemical cells can convert CO₂ to fuels with >50% efficiency, opening a new avenue for climate mitigation.</p>
-        <a href="https://www.sciencedaily.com/abstracts/2026/03/ai-capture" target="_blank">Read More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Health & Biotechnology -->
-  <section>
-    <h2>Health, Gene Editing & Bio‑Tech</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>CRISPR‑Cas13 Gene‑Editing Platform</h3>
-        <p>Cas13 is now delivering precise RNA editing in vivo, offering a therapeutic solution for genetic disorders and viral infections.</p>
-        <a href="https://www.genome.gov/cas13" target="_blank">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Brain‑Computer Interface (BCI) Chips</h3>
-        <p>Ultra‑thin, flexible B
+      <article class="card">
+        <img src="https://source.unsplash.com/600x400/?quantum,chip" alt="Quantum Chip">
+        <div class="card-body">
+          <h3 class="card-title">IBM Q System Q 127‑qubit</h3>
+          <p class="card-text">The most powerful superconducting quantum processor to date, enabling new algorithms for chemistry.</p>
+          <a href="https://www.ibm.com/qe/tech/quantum-computing" class="card-link" target="_blank">Explore</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://source.unsplash.com/600x400/?quantum,photonic" alt="Photonic Quantum">
+        <div class="card-body">
+          <h3 class="card-title">Photonic Quantum Advantage</h3>
+          <p class="card-text">Silicon‑based photonic chips achieve faster computations for specific optimization problems.</p>
+          <a href="https://www.nature.com/articles/s41467-024-12345-6" class="card-link" target="_blank">Read
