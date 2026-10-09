@@ -2,42 +2,145 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --primary:#4a90e2;
-    --accent:#f39c12;
-    --background:#f5f7fa;
-    --card:#ffffff;
-    --text:#333333;
+  :root {
+    --primary: #1e90ff;
+    --secondary: #ff6347;
+    --bg: #f9f9f9;
+    --text: #333;
+    --card-bg: #fff;
+    --shadow: rgba(0,0,0,0.1);
   }
+  *{box-sizing:border-box;margin:0;padding:0;}
   body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--background);
-    color:var(--text);
+    font-family:"Inter",sans-serif;
     line-height:1.6;
+    background:var(--bg);
+    color:var(--text);
   }
   header{
-    background:linear-gradient(135deg,var(--primary),#7f8cfa);
+    background:var(--primary);
     color:#fff;
-    padding:2rem 1rem;
+    padding:1.5rem;
     text-align:center;
   }
-  header h1{
-    margin:0;
-    font-size:2.4rem;
-  }
-  .subhead{
-    margin-top:0.5rem;
-    font-size:1.1rem;
-    font-weight:400;
-  }
-  .container{
-    max-width:1200px;
-    margin:auto;
-    padding:1.5rem;
-  }
+  header h1{margin-bottom:.5rem;font-weight:700;font-size:2.5rem;}
+  header p{font-size:1rem;opacity:.9;}
+
+  .container{max-width:1200px;margin:auto;padding:2rem;}
   .grid{
     display:grid;
-    grid-template-columns
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
+  }
+  .card{
+    background:var(--card-bg);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px var(--shadow);
+    transition:transform .2s ease;
+  }
+  .card:hover{transform:translateY(-5px);}
+  .card img{
+    width:100%;height:160px;object-fit:cover;
+  }
+  .card-content{
+    padding:1rem;
+  }
+  .card-content h3{
+    margin-bottom:.5rem;
+    font-size:1.25rem;
+  }
+  .card-content p{
+    font-size:.95rem;
+    margin-bottom:.75rem;
+    color:#555;
+  }
+  .card-content .date{
+    font-size:.8rem;
+    color:var(--secondary);
+    font-weight:600;
+  }
+  footer{
+    text-align:center;
+    padding:1rem;
+    background:#222;
+    color:#ccc;
+    font-size:.9rem;
+  }
+
+  @media (max-width:600px){
+    header h1{font-size:2rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to quantum computing – discover the cutting‑edge innovations reshaping our world.</p>
+</header>
+
+<section class="container">
+  <div class="grid">
+    <!-- AI Breakthrough -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1526318472351-1e2a7c4e8f1b?auto=format&fit=crop&w=400&q=80" alt="AI">
+      <div class="card-content">
+        <h3>AI: GPT‑5 Surpasses Human-Like Understanding</h3>
+        <p>OpenAI’s latest language model demonstrates unprecedented contextual comprehension, achieving near-human performance on complex reasoning tasks.</p>
+        <span class="date">Oct 3, 2026</span>
+      </div>
+    </article>
+
+    <!-- Quantum Computing -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1581276879432-1a9f0c1d9c07?auto=format&fit=crop&w=400&q=80" alt="Quantum">
+      <div class="card-content">
+        <h3>Quantum Leap: 100-Qubit Processor Achieved</h3>
+        <p>IBM announces the first commercially viable quantum computer with 100 coherent qubits, opening doors to breakthroughs in cryptography and material science.</p>
+        <span class="date">Sep 28, 2026</span>
+      </div>
+    </article>
+
+    <!-- Biotechnology -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=400&q=80" alt="Biotech">
+      <div class="card-content">
+        <h3>CRISPR‑X: Precision Gene Editing in Live Humans</h3>
+        <p>Researchers at MIT demonstrate safe, targeted correction of genetic disorders in adult patients, heralding a new era of personalized medicine.</p>
+        <span class="date">Aug 15, 2026</span>
+      </div>
+    </article>
+
+    <!-- Renewable Energy -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1590154525873-6d5b2f1f3b44?auto=format&fit=crop&w=400&q=80" alt="Renewables">
+      <div class="card-content">
+        <h3>Solar Power: 5% Efficiency Breakthrough</h3>
+        <p>Perovskite solar cells reach 5% conversion efficiency, a significant leap that could drastically reduce the cost of solar panels.</p>
+        <span class="date">Jul 22, 2026</span>
+      </div>
+    </article>
+
+    <!-- Space Tech -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Space">
+      <div class="card-content">
+        <h3>SpaceX: Reusable Mars Lander Prototype</h3>
+        <p>SpaceX unveils a fully reusable lander capable of carrying cargo to Mars, significantly cutting down interplanetary travel costs.</p>
+        <span class="date">Jun 30, 2026</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  © 2026 TechFrontiers. All rights reserved.
+</footer>
+
+</body>
+</html>
