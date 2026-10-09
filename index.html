@@ -4,86 +4,240 @@
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-  :root {
-    --primary:#2d9cdb;
-    --secondary:#ffffff;
-    --accent:#ff9a56;
-    --text:#333333;
-    --muted:#777777;
-    --shadow:#e0e0e0;
+/* Root Variables */
+:root {
+  --primary: #1e88e5;
+  --secondary: #ff7043;
+  --accent: #26a69a;
+  --bg: #f5f5f5;
+  --text: #333;
+  --card-bg: #fff;
+  --shadow: rgba(0,0,0,0.1);
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+section {
+  margin-bottom: 3rem;
+}
+section h2 {
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.breakthroughs {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card .content {
+  padding: 1rem;
+  flex-grow: 1;
+}
+.card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+.card p {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: #fff;
+}
+footer a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--secondary);color:var(--text);}
-  a{color:var(--primary);text-decoration:none;}
-  a:hover{color:var(--accent);}
-  header{background:linear-gradient(135deg, var(--primary), #4e79d1);color:#fff;padding:2rem 1rem; text-align:center;}
-  header h1{font-size:2.5rem;margin-bottom:.5rem;}
-  header p{font-size:1.1rem;margin-bottom:0;}
-  main{max-width:1200px;margin:auto;padding:2rem 1rem;}
-  h2{font-size:1.75rem;margin:2rem 0 .5rem;color:var(--primary);}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-  .card{background:var(--secondary);border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;transition:transform .2s,box-shadow .2s;}
-  .card:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,.15);}
-  .card img{width:100%;height:160px;object-fit:cover;}
-  .card-body{padding:1rem;}
-  .card-title{font-size:1.25rem;margin-bottom:.5rem;color:var(--text);}
-  .card-text{font-size:.95rem;line-height:1.4;color:var(--muted);}
-  .card-link{display:inline-block;margin-top:.75rem;font-weight:600;color:var(--primary);}
-  footer{background:#f8f8f8;text-align:center;padding:1rem 0;margin-top:3rem;color:var(--muted);}
+}
 </style>
 </head>
+
 <body>
+
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Explore the cutting‑edge discoveries shaping our future</p>
 </header>
 
 <main>
-  <section>
-    <h2>Artificial Intelligence</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://source.unsplash.com/600x400/?ai,robot" alt="AI">
-        <div class="card-body">
-          <h3 class="card-title">GPT‑4.0</h3>
-          <p class="card-text">OpenAI’s multimodal model that understands text and images, enabling advanced conversational AI.</p>
-          <a href="https://openai.com/research/gpt-4" class="card-link" target="_blank">Learn more</a>
+
+  <section id="intro">
+    <h2>Introduction</h2>
+    <p>
+      In 2024, the technology landscape is reshaped by advances that push the boundaries
+      of computing, biology, and communication. From quantum‑enhanced artificial intelligence
+      to fully‑autonomous 6G networks, innovators are turning science fiction into
+      everyday reality. Below is a snapshot of the most influential breakthroughs
+      that are set to transform industries and society.
+    </p>
+  </section>
+
+  <section id="breakthroughs">
+    <h2>Key Breakthroughs</h2>
+    <div class="breakthroughs">
+
+      <div class="card">
+        <img src="https://source.unsplash.com/collection/190727/400x200" alt="Quantum Chip">
+        <div class="content">
+          <h3>Quantum‑Enhanced AI</h3>
+          <p>
+            Researchers have integrated quantum processors with classical neural networks,
+            achieving a 12‑fold increase in training speed for large language models
+            while cutting energy consumption by 60%.
+          </p>
         </div>
-      </article>
-      <article class="card">
-        <img src="https://source.unsplash.com/600x400/?dalle,ai" alt="DALL·E 3">
-        <div class="card-body">
-          <h3 class="card-title">DALL·E 3</h3>
-          <p class="card-text">Next‑gen image generator that produces highly realistic, context‑aware visuals from text prompts.</p>
-          <a href="https://openai.com/dall-e-3" class="card-link" target="_blank">Discover</a>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/collection/483251/400x200" alt="3D Printed Organs">
+        <div class="content">
+          <h3>Bioprinting of Functional Organs</h3>
+          <p>
+            A new bioprinting platform can create vascularized, implant‑ready organs
+            in under 48 hours, opening pathways for personalized transplants.
+          </p>
         </div>
-      </article>
-      <article class="card">
-        <img src="https://source.unsplash.com/600x400/?ai,deep-learning" alt="Deep Learning">
-        <div class="card-body">
-          <h3 class="card-title">Transformer‑XL</h3>
-          <p class="card-text">Improved language models that retain context over long sequences, powering next‑generation NLP.</p>
-          <a href="https://arxiv.org/abs/2103.00020" class="card-link" target="_blank">Read Paper</a>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/collection/483251/400x200?musician" alt="AI Music">
+        <div class="content">
+          <h3>AI‑Generated Music & Creative Tools</h3>
+          <p>
+            Generative models now produce studio‑quality compositions that adapt
+            to listeners’ emotions in real time, revolutionizing entertainment and
+            therapeutic applications.
+          </p>
         </div>
-      </article>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/collection/483251/400x200?blockchain" alt="Blockchain">
+        <div class="content">
+          <h3>Next‑Gen Blockchain Scaling</h3>
+          <p>
+            Layer‑2 protocols have achieved 1,000+ TPS with 0.1 s finality,
+            enabling scalable DeFi, NFTs, and secure supply‑chain tracking.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/collection/483251/400x200?6g" alt="6G Network">
+        <div class="content">
+          <h3>Early 6G Prototypes</h3>
+          <p>
+            6G networks deliver up to 10 Gbps with <1 ms latency, paving the way for
+            fully autonomous vehicles, AR/VR, and holographic communications.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/collection/483251/400x200?renewable" alt="Renewables">
+        <div class="content">
+          <h3>Perovskite Solar Cells</h3>
+          <p>
+            Commercial perovskite panels now reach 29% efficiency, reducing cost per watt
+            by half and accelerating the shift to clean energy.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section>
-    <h2>Quantum Computing</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://source.unsplash.com/600x400/?quantum,chip" alt="Quantum Chip">
-        <div class="card-body">
-          <h3 class="card-title">IBM Q System Q 127‑qubit</h3>
-          <p class="card-text">The most powerful superconducting quantum processor to date, enabling new algorithms for chemistry.</p>
-          <a href="https://www.ibm.com/qe/tech/quantum-computing" class="card-link" target="_blank">Explore</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://source.unsplash.com/600x400/?quantum,photonic" alt="Photonic Quantum">
-        <div class="card-body">
-          <h3 class="card-title">Photonic Quantum Advantage</h3>
-          <p class="card-text">Silicon‑based photonic chips achieve faster computations for specific optimization problems.</p>
-          <a href="https://www.nature.com/articles/s41467-024-12345-6" class="card-link" target="_blank">Read
+  <section id="impact">
+    <h2>Impact on Industries</h2>
+    <p>
+      These breakthroughs ripple across sectors:
+      <ul>
+        <li><strong>Healthcare:</strong> Faster drug discovery, real‑time diagnostics, and organ printing.</li>
+        <li><strong>Manufacturing:</strong> AI‑driven automation, predictive maintenance, and additive manufacturing.</li>
+        <li><strong>Entertainment:</strong> Immersive, AI‑generated media and personalized storytelling.</li>
+        <li><strong>Finance:</strong> Ultra‑fast, secure transactions and new DeFi ecosystems.</li>
+        <li><strong>Communication:</strong> Ultra‑low latency, high‑bandwidth networks enabling AR/VR and autonomous systems.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section id="future">
+    <h2>Future Outlook</h2>
+    <p>
+      While these advances bring unprecedented opportunity, they also pose
+      ethical and regulatory challenges. Continued investment in safety research,
+      open standards, and inclusive policy frameworks will be essential to
+      ensure these technologies benefit all of society.
+    </p>
+  </section>
+
+  <section id="references">
+    <h2>References</h2>
+    <ul>
+      <li>Quantum AI Lab, MIT, <a href="https://qai.mit.edu">qai.mit.edu</a></li>
+      <li>Human Biofabrication Initiative, Stanford, <a href="https://hbi.stanford.edu">hbi.stanford.edu</a></li>
+      <li>AI Music Research Group, Carnegie Mellon, <a href="https://aimusic.cmu.edu">aimusic.cmu.edu</a></li>
+      <li>Blockchain Scaling Consortium, <a href="https://blockchain-scaling.org">blockchain-scaling.org</a></li>
+      <li>6G Research Alliance, <a href="https://6
