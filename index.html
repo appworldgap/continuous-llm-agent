@@ -3,175 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Import Google Font */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-  :root {
-    --bg: #fafafa;
-    --accent: #1e88e5;
-    --text: #333;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.1);
-    --link: var(--accent);
+  :root{
+    --primary:#4a90e2;
+    --accent:#f39c12;
+    --background:#f5f7fa;
+    --card:#ffffff;
+    --text:#333333;
   }
-
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--background);
+    color:var(--text);
+    line-height:1.6;
   }
-
-  header {
-    background: var(--accent);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
+  header{
+    background:linear-gradient(135deg,var(--primary),#7f8cfa);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
   }
-
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 700;
+  header h1{
+    margin:0;
+    font-size:2.4rem;
   }
-
-  header p {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
-    opacity: 0.9;
+  .subhead{
+    margin-top:0.5rem;
+    font-size:1.1rem;
+    font-weight:400;
   }
-
-  main {
-    flex: 1;
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  .container{
+    max-width:1200px;
+    margin:auto;
+    padding:1.5rem;
   }
-
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  @media (min-width: 600px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 900px) {
-    .grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  .card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--card-shadow);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .card h3 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-
-  .card p {
-    flex: 1;
-  }
-
-  .card ul {
-    margin: 0;
-    padding-left: 1.2rem;
-  }
-
-  .card a {
-    color: var(--link);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .card a:hover {
-    text-decoration: underline;
-  }
-
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #777;
-  }
-</style>
-</head>
-<body>
-<header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
-  <p>From AI to quantum computing, a roundup of the most transformative advances.</p>
-</header>
-
-<main>
-  <div class="grid">
-    <!-- AI & Generative Models -->
-    <article class="card">
-      <h3>Generative AI & LLM Evolution</h3>
-      <p>Large Language Models have progressed beyond text generation, integrating multimodal understanding and real‑time reasoning. OpenAI’s GPT‑4o and Anthropic’s Claude 3.5 showcase advanced instruction following, domain‑specific knowledge, and improved safety mitigations.</p>
-      <ul>
-        <li>Real‑time audio, video, and text synthesis.</li>
-        <li>Fine‑tuned industry‑specific adapters (e.g., legal, medical).</li>
-        <li>Open‑source models (LLaMA 3, Falcon-40B) democratize access.</li>
-      </ul>
-      <a href="https://openai.com/research/gpt-4o" target="_blank">Read more</a>
-    </article>
-
-    <!-- Quantum Computing -->
-    <article class="card">
-      <h3>Quantum Supremacy Milestones</h3>
-      <p>Google’s Sycamore and IBM’s Eagle chips now feature 60‑plus qubits with error rates below 0.5%. Researchers have demonstrated <em>quantum advantage</em> for specific simulation tasks, marking a crucial step toward fault‑tolerant systems.</p>
-      <ul>
-        <li>Hybrid quantum‑classical algorithms for drug discovery.</li>
-        <li>Commercial quantum cloud offerings (IBM Quantum, Rigetti).</li>
-        <li>Progress in quantum error correction (surface code thresholds).</li>
-      </ul>
-      <a href="https://arxiv.org/abs/2403.04567" target="_blank">Read the paper</a>
-    </article>
-
-    <!-- Biotech & CRISPR -->
-    <article class="card">
-      <h3>CRISPR Base Editing & Gene Therapy</h3>
-      <p>Base editors now achieve >95% efficiency in vivo, enabling precise correction of pathogenic SNPs without double‑strand breaks. The first FDA‑approved base‑editing therapy for a retinal degenerative disease demonstrates clinical viability.</p>
-      <ul>
-        <li>Non‑viral delivery vectors (lipid nanoparticles).</li>
-        <li>Expansion into hematologic and neurodegenerative disorders.</li>
-        <li>Ethical frameworks for germline editing.</li>
-      </ul>
-      <a href="https://www.nature.com/articles/s41587-024-02078-3" target="_blank">Read the study</a>
-    </article>
-
-    <!-- Energy Storage -->
-    <article class="card">
-      <h3>Solid‑State Battery Breakthroughs</h3>
-      <p>Companies like QuantumScape and Solid Power have announced prototype solid‑state cells with energy densities >400 Wh kg⁻¹ and 500 Wh L⁻¹, promising longer range EVs and faster charging.</p>
-      <ul>
-        <li>Lithium‑sulfur and lithium‑air chemistries nearing commercialization.</li>
-        <li>Enhanced safety with no flammable electrolytes.</li>
-        <li>Integration into grid‑scale storage.</li>
-      </ul>
-      <a href="https://www.sciencedaily.com/releases/2024/02/240215113400.htm" target="_blank">Read the report</a>
-    </article>
-
-    <!-- 6G & Next‑Gen Connectivity -->
-    <article class="card">
-      <h3>6G Conceptualization & Early
+  .grid{
+    display:grid;
+    grid-template-columns
