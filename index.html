@@ -4,240 +4,112 @@
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
-/* Root Variables */
-:root {
-  --primary: #1e88e5;
-  --secondary: #ff7043;
-  --accent: #26a69a;
-  --bg: #f5f5f5;
-  --text: #333;
-  --card-bg: #fff;
-  --shadow: rgba(0,0,0,0.1);
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Global */
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: var(--font-family);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* Layout */
-header {
-  background: var(--primary);
-  color: #fff;
-  padding: 1.5rem;
-  text-align: center;
-}
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-section {
-  margin-bottom: 3rem;
-}
-section h2 {
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Cards */
-.breakthroughs {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-}
-.card {
-  background: var(--card-bg);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px var(--shadow);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-.card .content {
-  padding: 1rem;
-  flex-grow: 1;
-}
-.card h3 {
-  margin-top: 0;
-  color: var(--primary);
-}
-.card p {
-  margin: 0.5rem 0;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--primary);
-  color: #fff;
-}
-footer a {
-  color: #fff;
-  font-weight: bold;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
+  /* Base reset */
+  *, *::before, *::after{margin:0; padding:0; box-sizing:border-box;}
+  body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+       line-height:1.6; color:#222; background:#f7f9fb;}
+  a{color:#0066cc; text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  header{background:#fff; padding:2rem; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+  h1{font-size:2.5rem; margin-bottom:0.5rem;}
+  h2{font-size:1.8rem; margin-bottom:0.4rem; color:#004488;}
+  p{margin-bottom:1rem; color:#555;}
+  main{max-width:960px; margin:auto; padding:2rem;}
+  .breakthrough{background:#fff; border-radius:8px; padding:1.5rem; margin-bottom:1.5rem;
+                display:flex; gap:1.5rem; align-items:flex-start; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+  .breakthrough svg{width:64px; height:64px; flex-shrink:0;}
+  .content{flex:1;}
+  .footer{background:#fff; text-align:center; padding:1rem; box-shadow:0 -2px 5px rgba(0,0,0,0.1); margin-top:2rem;}
+  @media(max-width:600px){
+    .breakthrough{flex-direction:column; text-align:center;}
+    .breakthrough svg{margin:0 auto 1rem;}
   }
-}
 </style>
 </head>
-
 <body>
 
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
+  <p>Exploring the most exciting innovations reshaping our world in 2026.</p>
 </header>
 
 <main>
 
-  <section id="intro">
-    <h2>Introduction</h2>
-    <p>
-      In 2024, the technology landscape is reshaped by advances that push the boundaries
-      of computing, biology, and communication. From quantum‑enhanced artificial intelligence
-      to fully‑autonomous 6G networks, innovators are turning science fiction into
-      everyday reality. Below is a snapshot of the most influential breakthroughs
-      that are set to transform industries and society.
-    </p>
-  </section>
-
-  <section id="breakthroughs">
-    <h2>Key Breakthroughs</h2>
-    <div class="breakthroughs">
-
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/190727/400x200" alt="Quantum Chip">
-        <div class="content">
-          <h3>Quantum‑Enhanced AI</h3>
-          <p>
-            Researchers have integrated quantum processors with classical neural networks,
-            achieving a 12‑fold increase in training speed for large language models
-            while cutting energy consumption by 60%.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/483251/400x200" alt="3D Printed Organs">
-        <div class="content">
-          <h3>Bioprinting of Functional Organs</h3>
-          <p>
-            A new bioprinting platform can create vascularized, implant‑ready organs
-            in under 48 hours, opening pathways for personalized transplants.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/483251/400x200?musician" alt="AI Music">
-        <div class="content">
-          <h3>AI‑Generated Music & Creative Tools</h3>
-          <p>
-            Generative models now produce studio‑quality compositions that adapt
-            to listeners’ emotions in real time, revolutionizing entertainment and
-            therapeutic applications.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/483251/400x200?blockchain" alt="Blockchain">
-        <div class="content">
-          <h3>Next‑Gen Blockchain Scaling</h3>
-          <p>
-            Layer‑2 protocols have achieved 1,000+ TPS with 0.1 s finality,
-            enabling scalable DeFi, NFTs, and secure supply‑chain tracking.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/483251/400x200?6g" alt="6G Network">
-        <div class="content">
-          <h3>Early 6G Prototypes</h3>
-          <p>
-            6G networks deliver up to 10 Gbps with <1 ms latency, paving the way for
-            fully autonomous vehicles, AR/VR, and holographic communications.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/483251/400x200?renewable" alt="Renewables">
-        <div class="content">
-          <h3>Perovskite Solar Cells</h3>
-          <p>
-            Commercial perovskite panels now reach 29% efficiency, reducing cost per watt
-            by half and accelerating the shift to clean energy.
-          </p>
-        </div>
-      </div>
-
+  <!-- Quantum‑AI Integration -->
+  <section class="breakthrough" id="quantum-ai">
+    <svg viewBox="0 0 64 64" fill="#4b9cd3" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="30"/>
+      <path d="M22 22h20v20H22z" fill="#fff"/>
+    </svg>
+    <div class="content">
+      <h2>Quantum‑AI Integration</h2>
+      <p>
+        Researchers have successfully combined quantum processors with classical AI
+        models to solve complex optimization problems in milliseconds,
+        opening doors to breakthroughs in drug discovery, cryptography, and
+        materials science.
+      </p>
     </div>
   </section>
 
-  <section id="impact">
-    <h2>Impact on Industries</h2>
-    <p>
-      These breakthroughs ripple across sectors:
-      <ul>
-        <li><strong>Healthcare:</strong> Faster drug discovery, real‑time diagnostics, and organ printing.</li>
-        <li><strong>Manufacturing:</strong> AI‑driven automation, predictive maintenance, and additive manufacturing.</li>
-        <li><strong>Entertainment:</strong> Immersive, AI‑generated media and personalized storytelling.</li>
-        <li><strong>Finance:</strong> Ultra‑fast, secure transactions and new DeFi ecosystems.</li>
-        <li><strong>Communication:</strong> Ultra‑low latency, high‑bandwidth networks enabling AR/VR and autonomous systems.</li>
-      </ul>
-    </p>
+  <!-- 6G Global Rollout -->
+  <section class="breakthrough" id="6g">
+    <svg viewBox="0 0 64 64" fill="#d4af37" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 52l20-40 20 40H12z" fill="#fff"/>
+      <path d="M32 12v32" stroke="#fff" stroke-width="4"/>
+    </svg>
+    <div class="content">
+      <h2>6G Global Rollout</h2>
+      <p>
+        The first commercial 6G networks are now operational in select cities,
+        delivering sub‑millisecond latency, multi‑terabit per second speeds, and
+        seamless connectivity for IoT ecosystems and immersive AR/VR experiences.
+      </p>
+    </div>
   </section>
 
-  <section id="future">
-    <h2>Future Outlook</h2>
-    <p>
-      While these advances bring unprecedented opportunity, they also pose
-      ethical and regulatory challenges. Continued investment in safety research,
-      open standards, and inclusive policy frameworks will be essential to
-      ensure these technologies benefit all of society.
-    </p>
+  <!-- Solid‑State Battery Advancements -->
+  <section class="breakthrough" id="solid-state-battery">
+    <svg viewBox="0 0 64 64" fill="#ff6f61" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="18" width="48" height="28" rx="4" ry="4"/>
+      <circle cx="20" cy="32" r="4" fill="#fff"/>
+      <circle cx="44" cy="32" r="4" fill="#fff"/>
+    </svg>
+    <div class="content">
+      <h2>Solid‑State Battery Advancements</h2>
+      <p>
+        New solid‑state chemistries now offer 200 Wh kg⁻¹ energy density with
+        charging times under 10 minutes, dramatically extending electric
+        vehicle range and reducing fire risk.
+      </p>
+    </div>
   </section>
 
-  <section id="references">
-    <h2>References</h2>
-    <ul>
-      <li>Quantum AI Lab, MIT, <a href="https://qai.mit.edu">qai.mit.edu</a></li>
-      <li>Human Biofabrication Initiative, Stanford, <a href="https://hbi.stanford.edu">hbi.stanford.edu</a></li>
-      <li>AI Music Research Group, Carnegie Mellon, <a href="https://aimusic.cmu.edu">aimusic.cmu.edu</a></li>
-      <li>Blockchain Scaling Consortium, <a href="https://blockchain-scaling.org">blockchain-scaling.org</a></li>
-      <li>6G Research Alliance, <a href="https://6
+  <!-- CRISPR‑Gene Editing Enhancements -->
+  <section class="breakthrough" id="crispr">
+    <svg viewBox="0 0 64 64" fill="#6ab04c" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="30" stroke="#fff" stroke-width="4" fill="none"/>
+      <path d="M20 20l24 24M44 20L20 44" stroke="#fff" stroke-width="4"/>
+    </svg>
+    <div class="content">
+      <h2>CRISPR‑Gene Editing Enhancements</h2>
+      <p>
+        A novel CRISPR‑Cas9 variant with 99.9 % precision has been approved for
+        clinical trials targeting hereditary blindness and sickle‑cell disease,
+        promising earlier and safer treatments.
+      </p>
+    </div>
+  </section>
+
+  <!-- Autonomous AI‑Driven Vehicles -->
+  <section class="breakthrough" id="autonomous-vehicles">
+    <svg viewBox="0 0 64 64" fill="#9c88ff" xmlns="http://www.w3.org/2000/svg">
+      <rect x="12" y="20" width="40" height="24" rx="8" ry="8"/>
+      <circle cx="24" cy="48" r="4" fill="#fff"/>
+      <circle cx="40" cy="48" r="4" fill="#fff"/>
+    </svg>
+    <div class="content">
+      <h2>Autonomous AI‑Driven Vehicles</h2>
+      <p>
+        Level 5
