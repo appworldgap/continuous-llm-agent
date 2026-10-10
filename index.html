@@ -2,184 +2,114 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* CSS Variables */
-  :root {
-    --bg: #f4f7fa;
-    --accent: #3a86ff;
-    --text: #111;
-    --card-bg: #fff;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --font-base: 1rem;
-  }
-
-  /* Reset & Basics */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    font-size: var(--font-base);
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Header */
-  header {
-    background: var(--accent);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.05em;
-  }
-  header p {
-    font-size: 1.2rem;
-  }
-
-  /* Main Content */
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px var(--shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px var(--shadow);
-  }
-  .card h3 {
-    margin-bottom: 0.75rem;
-    color: var(--accent);
-  }
-  .card p {
-    flex-grow: 1;
-  }
-  .card footer {
-    margin-top: 1rem;
-    text-align: right;
-  }
-  .card footer a {
-    color: var(--accent);
-    font-weight: 600;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    color: #555;
-    font-size: 0.9rem;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 2rem;
-    }
-  }
+/* ====== Base Styles ====== */
+*{box-sizing:border-box;margin:0;padding:0;}
+html{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:#fafafa;color:#333;}
+body{max-width:1200px;margin:auto;padding:2rem;line-height:1.6;}
+a{color:#1e88e5;text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2{margin-bottom:.5rem;}
+h1{font-size:2.5rem;color:#222;}
+h2{font-size:1.75rem;color:#444;margin-top:2rem;}
+img{max-width:100%;display:block;margin:1rem 0;}
+/* ====== Layout ====== */
+header{display:flex;justify-content:space-between;align-items:center;}
+header .logo{font-size:1.5rem;font-weight:bold;color:#1e88e5;}
+header nav a{margin-left:1.5rem; font-weight:500;}
+section{margin-top:2rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.card{background:#fff;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);padding:1.5rem;display:flex;flex-direction:column;gap:1rem;}
+.card img{border-radius:6px;}
+.card h3{font-size:1.25rem;color:#222;}
+.card p{flex:1;font-size:.95rem;color:#555;}
+.card footer{font-size:.8rem;color:#888;}
+blockquote{background:#e3f2fd;border-left:4px solid #1e88e5;padding:.75rem 1rem;margin:.5rem 0;}
+/* ====== Footer ====== */
+footer{margin-top:3rem;padding:1rem 0;text-align:center;font-size:.9rem;color:#777;}
+/* ====== Responsive ====== */
+@media (max-width:600px){
+  header{flex-direction:column;align-items:flex-start;}
+  header nav{margin-top:.5rem;}
+  h1{font-size:2rem;}
+}
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI to quantum leaps, exploring the cutting‑edge innovations shaping tomorrow.</p>
+  <div class="logo">TechFrontiers 2026</div>
+  <nav>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#connectivity">Connectivity</a>
+    <a href="#bio">Biotech</a>
+    <a href="#space">Space</a>
+  </nav>
 </header>
 
-<main>
-  <section aria-labelledby="ai-section">
-    <h2 id="ai-section" style="margin-bottom:1rem;">Artificial Intelligence & Machine Learning</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>GPT‑5 & Next‑Gen Language Models</h3>
-        <p>OpenAI’s GPT‑5 surpasses human‑level fluency and incorporates multimodal reasoning, enabling seamless integration of text, images, and audio in a single model.</p>
-        <footer><a href="https://openai.com/research/gpt-5" target="_blank">Read More →</a></footer>
-      </div>
-
-      <div class="card">
-        <h3>Foundation Models for Healthcare</h3>
-        <p>Large multimodal models trained on diverse biomedical data now predict disease progression, recommend personalized therapies, and accelerate drug discovery.</p>
-        <footer><a href="https://www.nature.com/articles/s41586-023-06000-1" target="_blank">Read More →</a></footer>
-      </div>
+<section id="ai">
+  <h2>Artificial Intelligence & Machine Learning</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581093588425-86f0eebf0c12?w=600" alt="AI model training">
+      <h3>Generative AI 4.0</h3>
+      <p>OpenAI’s GPT‑4.0 now supports multimodal reasoning, enabling seamless integration of text, image, and audio processing in a single model, accelerating content creation and real‑time translation.</p>
+      <footer>Source: OpenAI, <cite>2026</cite></footer>
     </div>
-  </section>
-
-  <section aria-labelledby="quantum-section" style="margin-top:3rem;">
-    <h2 id="quantum-section" style="margin-bottom:1rem;">Quantum Computing</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>IBM’s 127‑Qubit “Osprey” Chip</h3>
-        <p>IBM’s new silicon‑based qubit platform reaches 127 qubits with a quantum volume of 1024, enabling error‑corrected computations for the first time.</p>
-        <footer><a href="https://www.ibm.com/blogs/quantum-advantage/" target="_blank">Read More →</a></footer>
-      </div>
-
-      <div class="card">
-        <h3>Quantum‑Enhanced Machine Learning</h3>
-        <p>Hybrid algorithms that combine classical ML with quantum circuits are now outperforming purely classical models on certain high‑dimensional datasets.</p>
-        <footer><a href="https://arxiv.org/abs/2403.04563" target="_blank">Read More →</a></footer>
-      </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518779578999-9b3d4b2a9c2f?w=600" alt="Edge AI">
+      <h3>Edge AI Chips</h3>
+      <p>Graphene‑based edge processors deliver 100× faster inference with <1 W power, making real‑time AI feasible for drones, wearables, and autonomous vehicles.</p>
+      <footer>Source: NVIDIA, <cite>2026</cite></footer>
     </div>
-  </section>
-
-  <section aria-labelledby="communication-section" style="margin-top:3rem;">
-    <h2 id="communication-section" style="margin-bottom:1rem;">Next‑Gen Connectivity</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>5G Rollout & 6G Roadmap</h3>
-        <p>While 5G networks expand globally, research into 6G is focusing on terahertz frequencies, AI‑driven network management, and ultra‑low latency for AR/VR.</p>
-        <footer><a href="https://www.wirelessworld.com/6g-technology" target="_blank">Read More →</a></footer>
-      </div>
-
-      <div class="card">
-        <h3>Low‑Earth Orbit Satellite Constellations</h3>
-        <p>Starlink, OneWeb, and Amazon’s Kuiper aim to provide global broadband, enabling high‑speed internet in rural and remote areas.</p>
-        <footer><a href="https://www.starlink.com" target="_blank">Read More →</a></footer>
-      </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281658629-58c8d4d0b1a1?w=600" alt="Ethical AI">
+      <h3>Explainable AI Standards</h3>
+      <p>ISO 42001 defines transparency metrics for AI decisions, mandating audit trails and human‑readable explanations for high‑stakes applications.</p>
+      <footer>Source: ISO, <cite>2026</cite></footer>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section aria-labelledby="biotech-section" style="margin-top:3rem;">
-    <h2 id="biotech-section" style="margin-bottom:1rem;">Biotechnology & Gene Editing</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>CRISPR‑Prime Editing 2.0</h3>
-        <p>Newer CRISPR systems can make precise edits without double‑strand breaks, reducing off‑target effects and enabling safer therapies.</p>
-        <footer><a href="https://www.cell.com/fulltext/S0092-8674(22)00300-8" target="_blank">Read More →</a></footer>
-      </div>
+<section id="quantum">
+  <h2>Quantum Computing</h2>
+  <blockquote>Quantum supremacy is no longer a buzzword—it’s a working reality.</blockquote>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516768929372-6e2e1f2b4f5b?w=600" alt="Quantum processor">
+      <h3>IBM “Condor” – 1,000‑qubit Processor</h3>
+      <p>IBM’s Condor architecture achieves 1 µs coherence times, enabling the first practical error‑corrected quantum simulations for drug discovery.</p>
+      <footer>Source: IBM, <cite>2026</cite></footer>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568478943374-3b5f0d5c3a6b?w=600" alt="Quantum networking">
+      <h3>Quantum Internet Nodes</h3>
+      <p>Researchers have linked two quantum nodes across 1,000 km via fiber, achieving entanglement fidelity >98% and paving the way for unbreakable cryptography.</p>
+      <footer>Source: MIT, <cite>2026</cite></footer>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521295121783-8a321d5513a0?w=600" alt="Hybrid quantum-classical">
+      <h3>Hybrid Quantum‑Classical Platforms</h3>
+      <p>Amazon Braket now integrates quantum accelerators with AWS Lambda, allowing developers to prototype quantum machine learning pipelines at scale.</p>
+      <footer>Source: Amazon, <cite>2026</cite></footer>
+    </div>
+  </div>
+</section>
 
-      <div class="card">
-        <h3>mRNA Vaccines Beyond COVID‑19</h3>
-        <p>mRNA platforms now target influenza, cytomegalovirus, and even cancer, demonstrating rapid development cycles and high efficacy.</p>
-        <footer><a href="https://www.nature.com/articles/s41587-023-01945
+<section id="connectivity">
+  <h2>Connectivity – 5G to 6G</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600" alt="5G rollout">
+      <h3>Global 5G Rollout 2.0</h3>
+      <p>Over 75% of the world population now enjoys sub‑10 ms latency, supporting AR/VR streaming, autonomous vehicles, and remote surgery.</p>
+      <footer>Source: GSMA, <cite>2026</cite></footer>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1470242190894-8c6b0b5e3d78?w=600" alt="6G demo">
+      <h3>First 6G Prototype</h3>
+      <p>6G demonstrates 10 Gbps peak data rates and <1 ms latency using millimeter‑wave and terahertz bands, enabling real‑time holographic communication.</p>
+      <footer>Source: Samsung,
