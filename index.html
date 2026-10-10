@@ -2,141 +2,186 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Fonts – Montserrat & Roboto -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --primary:#1e90ff;
-    --background:#fafafa;
-    --card:#fff;
-    --text:#333;
-    --accent:#ff6f61;
-  }
-  body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--background);
-    color:var(--text);
-    line-height:1.6;
-  }
-  header{
-    background:var(--primary);
-    color:#fff;
-    padding:2rem 1rem;
-    text-align:center;
-  }
-  header h1{
-    margin:0;
-    font-size:2.5rem;
-  }
-  section{
-    padding:2rem 1rem;
-    max-width:1200px;
-    margin:auto;
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:1.5rem;
-  }
-  .card{
-    background:var(--card);
-    border-radius:8px;
-    padding:1.5rem;
-    box-shadow:0 2px 6px rgba(0,0,0,.1);
-    transition:transform .2s,box-shadow .2s;
-    display:flex;
-    flex-direction:column;
-    height:100%;
-  }
-  .card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 6px 12px rgba(0,0,0,.15);
-  }
-  .icon{
-    font-size:2.5rem;
-    margin-bottom:.75rem;
-    color:var(--accent);
-  }
-  .title{
-    font-size:1.25rem;
-    font-weight:600;
-    margin:0 0 .5rem 0;
-  }
-  .desc{
-    flex-grow:1;
-    margin-bottom:1rem;
-  }
-  .link{
-    align-self:flex-start;
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:500;
-  }
-  .link:hover{
-    text-decoration:underline;
-  }
-  @media (max-width:600px){
-    header h1{font-size:2rem;}
-    .icon{font-size:2rem;}
-  }
+    :root {
+        --primary:#0A84FF;
+        --secondary:#E5E5EA;
+        --bg:#F5F5F7;
+        --text:#1C1C1E;
+        --card-bg:#FFFFFF;
+        --shadow:rgba(0,0,0,0.1);
+        --radius:8px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+        font-family:'Roboto',sans-serif;
+        background:var(--bg);
+        color:var(--text);
+        line-height:1.6;
+    }
+    header{
+        background:var(--primary);
+        color:white;
+        padding:2rem 1rem;
+        text-align:center;
+        font-family:'Montserrat',sans-serif;
+        font-weight:700;
+        font-size:2rem;
+    }
+    nav{
+        background:white;
+        padding:0.5rem 1rem;
+        box-shadow:0 1px 3px var(--shadow);
+        position:sticky;
+        top:0;
+        z-index:999;
+    }
+    nav ul{display:flex;justify-content:center;gap:2rem;}
+    nav a{
+        text-decoration:none;
+        color:var(--text);
+        font-weight:500;
+        transition:color 0.3s;
+    }
+    nav a:hover{color:var(--primary);}
+    main{
+        max-width:1200px;
+        margin:auto;
+        padding:2rem 1rem;
+        display:grid;
+        grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+        gap:2rem;
+    }
+    .card{
+        background:var(--card-bg);
+        border-radius:var(--radius);
+        box-shadow:0 2px 5px var(--shadow);
+        overflow:hidden;
+        transition:transform 0.3s,box-shadow 0.3s;
+    }
+    .card:hover{transform:translateY(-5px);box-shadow:0 4px 10px var(--shadow);}
+    .card img{width:100%;height:170px;object-fit:cover;}
+    .card-body{
+        padding:1rem;
+    }
+    .card-title{
+        font-family:'Montserrat',sans-serif;
+        font-weight:700;
+        margin-bottom:0.5rem;
+    }
+    .card-text{
+        font-size:0.95rem;
+        margin-bottom:1rem;
+    }
+    .card-link{
+        display:inline-block;
+        text-decoration:none;
+        color:var(--primary);
+        font-weight:500;
+        transition:color 0.3s;
+    }
+    .card-link:hover{color:darken(var(--primary),10%);}
+    footer{
+        text-align:center;
+        padding:1rem;
+        background:white;
+        box-shadow:0 -1px 3px var(--shadow);
+        margin-top:2rem;
+        font-size:0.9rem;
+        color:gray;
+    }
+    @media (prefers-color-scheme: dark){
+        :root{
+            --bg:#121212;
+            --secondary:#272727;
+            --text:#E5E5E5;
+            --card-bg:#1E1E1E;
+            --shadow:rgba(255,255,255,0.1);
+        }
+        header, nav{background:var(--secondary);}
+        footer{background:var(--secondary);}
+    }
 </style>
 </head>
 <body>
-<header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
-</header>
-<section>
-  <div class="grid">
-    <article class="card">
-      <div class="icon">🤖</div>
-      <h2 class="title">GPT‑4.5</h2>
-      <p class="desc">OpenAI’s newest language model improves efficiency by 30% and adds robust multimodal reasoning, enabling better image, text, and code integration.</p>
-      <a class="link" href="https://openai.com/research/gpt-4.5" target="_blank">Read More</a>
-    </article>
-    <article class="card">
-      <div class="icon">🧠</div>
-      <h2 class="title">Claude 3.5</h2>
-      <p class="desc">Anthropic’s latest Claude model features 2‑hour memory, advanced safety filters, and a new “clarity” mode that tailors responses for experts or novices.</p>
-      <a class="link" href="https://anthropic.com/claude-3.5" target="_blank">Read More</a>
-    </article>
-    <article class="card">
-      <div class="icon">⚛️</div>
-      <h2 class="title">IBM Eagle – 433 Qubits</h2>
-      <p class="desc">IBM’s 433‑qubit quantum processor, “Eagle,” surpasses previous error‑correction milestones, pushing the field closer to practical quantum advantage.</p>
-      <a class="link" href="https://ibm.com/quantum/processor/eagle" target="_blank">Read More</a>
-    </article>
-    <article class="card">
-      <div class="icon">📶</div>
-      <h2 class="title">6G Research Begins</h2>
-      <p class="desc">Telecom giants are testing 100 GHz band frequencies, promising sub‑millisecond latency and 1‑Tbps data rates for future networks.</p>
-      <a class="link" href="https://ieee.org/6g-research" target="_blank">Read More</a>
-    </article>
-    <article class="card">
-      <div class="icon">🔋</div>
-      <h2 class="title">Solid‑State Battery Prototype</h2>
-      <p class="desc">Toyota’s new battery reaches 500 Wh/kg and 500 kWh/m³, doubling energy density while eliminating flammable electrolytes.</p>
-      <a class="link" href="https://toyota.com/solid-state-battery" target="_blank">Read More</a>
-    </article>
-    <article class="card">
-      <div class="icon">🛠️</div>
-      <h2 class="title">Graphene Transistor</h2>
-      <p class="desc">Researchers at MIT demonstrate a graphene‑based transistor with 10× speed increase over silicon and ultra‑low power consumption.</p>
-      <a class="link" href="https://mit.edu/graphene-transistor" target="_blank">Read More</a>
-    </article>
-    <article class="card">
-      <div class="icon">💊</div>
-      <h2 class="title">AlphaFold 2.0</h2>
-      <p class="desc">DeepMind releases a new protein‑folding AI that predicts 3D structures with 95% accuracy, accelerating drug discovery pipelines.</p>
-      <a class="link" href="https://deepmind.com/alphafold-2" target="_blank">Read More</a>
-    </article>
-    <article class="card">
-      <div class="icon">🚗</div>
-      <h2 class="title">Tesla Full‑Self‑Driving Beta</h2>
-      <p class="desc">Tesla’s FSD beta now handles complex urban scenarios, including unmarked intersections and dynamic traffic signals, using on‑board neural nets.</p>
-      <a class="link" href="https://tesla.com/fsd-beta" target="_blank">Read More</a>
-    </article>
-    <article class="card">
-      <div class="icon">🚀</div>
-      <h2 class="title">Starship Orbital Flight</h2>
-      <p class="desc">SpaceX’s Starship achieves the first fully reusable orbital launch, reaching 300 km altitude and returning safely to the launch site.</p>
-      <a class
+
+<header>Latest Breakthroughs in Technology – 2026</header>
+
+<nav>
+<ul>
+    <li><a href="#ai">Artificial Intelligence</a></li>
+    <li><a href="#quantum">Quantum Computing</a></li>
+    <li><a href="#6g">6G & Connectivity</a></li>
+    <li><a href="#bio">Biotech & CRISPR</a></li>
+    <li><a href="#autonomous">Autonomous Systems</a></li>
+</ul>
+</nav>
+
+<main id="ai">
+    <div class="card">
+        <img src="https://source.unsplash.com/featured/?ai" alt="Artificial Intelligence">
+        <div class="card-body">
+            <h3 class="card-title">Generative AI 4.0</h3>
+            <p class="card-text">Multi-modal models that seamlessly blend text, vision, audio, and code, enabling real-time, context-aware creation and problem solving.</p>
+            <a class="card-link" href="https://www.openai.com/research" target="_blank">Learn More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/featured/?deep-learning" alt="Deep Learning">
+        <div class="card-body">
+            <h3 class="card-title">Self‑Supervised Learning</h3>
+            <p class="card-text">Models that learn directly from raw data without labels, reducing training cost and accelerating deployment across domains.</p>
+            <a class="card-link" href="https://arxiv.org/abs/2307.00001" target="_blank">Read Paper</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/featured/?robotics" alt="Robotics">
+        <div class="card-body">
+            <h3 class="card-title">Neural‑Control Robotics</h3>
+            <p class="card-text">Soft robots driven by neural networks that adapt on the fly, enabling delicate manipulation in medical and manufacturing tasks.</p>
+            <a class="card-link" href="https://www.nature.com/articles/s41586-026-1234-5" target="_blank">Research</a>
+        </div>
+    </div>
+</main>
+
+<main id="quantum">
+    <div class="card">
+        <img src="https://source.unsplash.com/featured/?quantum-computing" alt="Quantum Computing">
+        <div class="card-body">
+            <h3 class="card-title">Fault‑Tolerant Quantum Processors</h3>
+            <p class="card-text">Scalable silicon‑based qubits with error rates below 1%, achieving logical qubit operation and practical cryptographic applications.</p>
+            <a class="card-link" href="https://www.ibm.com/qe" target="_blank">IBM Quantum</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/featured/?quantum-network" alt="Quantum Network">
+        <div class="card-body">
+            <h3 class="card-title">Quantum Internet</h3>
+            <p class="card-text">Nation‑wide entanglement‑based network enabling ultra‑secure communications and distributed quantum computing.</p>
+            <a class="card-link" href="https://www.quantinuum.com" target="_blank">More Info</a>
+        </div>
+    </div>
+</main>
+
+<main id="6g">
+    <div class="card">
+        <img src="https://source.unsplash.com/featured/?6g" alt="6G">
+        <div class="card-body">
+            <h3 class="card-title">6G Ultra‑High‑Speed Networks</h3>
+            <p class="card-text">Terabit per second data rates with sub‑millisecond latency, powered by terahertz wavebands and AI‑optimized routing.</p>
+            <a class="card-link" href="https://www.fcc.gov/6g" target="_blank">FCC 6G</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://source.unsplash.com/featured/?satellite" alt="Satellite">
+        <div class="card-body">
+            <h3 class="card-title">Mega‑Constellation Integration</h3>
+            <p class="card-text">Seamless hand
