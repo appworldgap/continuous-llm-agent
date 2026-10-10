@@ -3,113 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Base reset */
-  *, *::before, *::after{margin:0; padding:0; box-sizing:border-box;}
-  body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-       line-height:1.6; color:#222; background:#f7f9fb;}
-  a{color:#0066cc; text-decoration:none;}
-  a:hover{text-decoration:underline;}
-  header{background:#fff; padding:2rem; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-  h1{font-size:2.5rem; margin-bottom:0.5rem;}
-  h2{font-size:1.8rem; margin-bottom:0.4rem; color:#004488;}
-  p{margin-bottom:1rem; color:#555;}
-  main{max-width:960px; margin:auto; padding:2rem;}
-  .breakthrough{background:#fff; border-radius:8px; padding:1.5rem; margin-bottom:1.5rem;
-                display:flex; gap:1.5rem; align-items:flex-start; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
-  .breakthrough svg{width:64px; height:64px; flex-shrink:0;}
-  .content{flex:1;}
-  .footer{background:#fff; text-align:center; padding:1rem; box-shadow:0 -2px 5px rgba(0,0,0,0.1); margin-top:2rem;}
-  @media(max-width:600px){
-    .breakthrough{flex-direction:column; text-align:center;}
-    .breakthrough svg{margin:0 auto 1rem;}
+  /* CSS Variables */
+  :root {
+    --bg: #f4f7fa;
+    --accent: #3a86ff;
+    --text: #111;
+    --card-bg: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --font-base: 1rem;
+  }
+
+  /* Reset & Basics */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: var(--font-base);
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Header */
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  header p {
+    font-size: 1.2rem;
+  }
+
+  /* Main Content */
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px var(--shadow);
+  }
+  .card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+  }
+  .card p {
+    flex-grow: 1;
+  }
+  .card footer {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  .card footer a {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
   }
 </style>
 </head>
 <body>
-
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Exploring the most exciting innovations reshaping our world in 2026.</p>
+  <p>From AI to quantum leaps, exploring the cutting‑edge innovations shaping tomorrow.</p>
 </header>
 
 <main>
+  <section aria-labelledby="ai-section">
+    <h2 id="ai-section" style="margin-bottom:1rem;">Artificial Intelligence & Machine Learning</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>GPT‑5 & Next‑Gen Language Models</h3>
+        <p>OpenAI’s GPT‑5 surpasses human‑level fluency and incorporates multimodal reasoning, enabling seamless integration of text, images, and audio in a single model.</p>
+        <footer><a href="https://openai.com/research/gpt-5" target="_blank">Read More →</a></footer>
+      </div>
 
-  <!-- Quantum‑AI Integration -->
-  <section class="breakthrough" id="quantum-ai">
-    <svg viewBox="0 0 64 64" fill="#4b9cd3" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="32" cy="32" r="30"/>
-      <path d="M22 22h20v20H22z" fill="#fff"/>
-    </svg>
-    <div class="content">
-      <h2>Quantum‑AI Integration</h2>
-      <p>
-        Researchers have successfully combined quantum processors with classical AI
-        models to solve complex optimization problems in milliseconds,
-        opening doors to breakthroughs in drug discovery, cryptography, and
-        materials science.
-      </p>
+      <div class="card">
+        <h3>Foundation Models for Healthcare</h3>
+        <p>Large multimodal models trained on diverse biomedical data now predict disease progression, recommend personalized therapies, and accelerate drug discovery.</p>
+        <footer><a href="https://www.nature.com/articles/s41586-023-06000-1" target="_blank">Read More →</a></footer>
+      </div>
     </div>
   </section>
 
-  <!-- 6G Global Rollout -->
-  <section class="breakthrough" id="6g">
-    <svg viewBox="0 0 64 64" fill="#d4af37" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 52l20-40 20 40H12z" fill="#fff"/>
-      <path d="M32 12v32" stroke="#fff" stroke-width="4"/>
-    </svg>
-    <div class="content">
-      <h2>6G Global Rollout</h2>
-      <p>
-        The first commercial 6G networks are now operational in select cities,
-        delivering sub‑millisecond latency, multi‑terabit per second speeds, and
-        seamless connectivity for IoT ecosystems and immersive AR/VR experiences.
-      </p>
+  <section aria-labelledby="quantum-section" style="margin-top:3rem;">
+    <h2 id="quantum-section" style="margin-bottom:1rem;">Quantum Computing</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>IBM’s 127‑Qubit “Osprey” Chip</h3>
+        <p>IBM’s new silicon‑based qubit platform reaches 127 qubits with a quantum volume of 1024, enabling error‑corrected computations for the first time.</p>
+        <footer><a href="https://www.ibm.com/blogs/quantum-advantage/" target="_blank">Read More →</a></footer>
+      </div>
+
+      <div class="card">
+        <h3>Quantum‑Enhanced Machine Learning</h3>
+        <p>Hybrid algorithms that combine classical ML with quantum circuits are now outperforming purely classical models on certain high‑dimensional datasets.</p>
+        <footer><a href="https://arxiv.org/abs/2403.04563" target="_blank">Read More →</a></footer>
+      </div>
     </div>
   </section>
 
-  <!-- Solid‑State Battery Advancements -->
-  <section class="breakthrough" id="solid-state-battery">
-    <svg viewBox="0 0 64 64" fill="#ff6f61" xmlns="http://www.w3.org/2000/svg">
-      <rect x="8" y="18" width="48" height="28" rx="4" ry="4"/>
-      <circle cx="20" cy="32" r="4" fill="#fff"/>
-      <circle cx="44" cy="32" r="4" fill="#fff"/>
-    </svg>
-    <div class="content">
-      <h2>Solid‑State Battery Advancements</h2>
-      <p>
-        New solid‑state chemistries now offer 200 Wh kg⁻¹ energy density with
-        charging times under 10 minutes, dramatically extending electric
-        vehicle range and reducing fire risk.
-      </p>
+  <section aria-labelledby="communication-section" style="margin-top:3rem;">
+    <h2 id="communication-section" style="margin-bottom:1rem;">Next‑Gen Connectivity</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>5G Rollout & 6G Roadmap</h3>
+        <p>While 5G networks expand globally, research into 6G is focusing on terahertz frequencies, AI‑driven network management, and ultra‑low latency for AR/VR.</p>
+        <footer><a href="https://www.wirelessworld.com/6g-technology" target="_blank">Read More →</a></footer>
+      </div>
+
+      <div class="card">
+        <h3>Low‑Earth Orbit Satellite Constellations</h3>
+        <p>Starlink, OneWeb, and Amazon’s Kuiper aim to provide global broadband, enabling high‑speed internet in rural and remote areas.</p>
+        <footer><a href="https://www.starlink.com" target="_blank">Read More →</a></footer>
+      </div>
     </div>
   </section>
 
-  <!-- CRISPR‑Gene Editing Enhancements -->
-  <section class="breakthrough" id="crispr">
-    <svg viewBox="0 0 64 64" fill="#6ab04c" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="32" cy="32" r="30" stroke="#fff" stroke-width="4" fill="none"/>
-      <path d="M20 20l24 24M44 20L20 44" stroke="#fff" stroke-width="4"/>
-    </svg>
-    <div class="content">
-      <h2>CRISPR‑Gene Editing Enhancements</h2>
-      <p>
-        A novel CRISPR‑Cas9 variant with 99.9 % precision has been approved for
-        clinical trials targeting hereditary blindness and sickle‑cell disease,
-        promising earlier and safer treatments.
-      </p>
-    </div>
-  </section>
+  <section aria-labelledby="biotech-section" style="margin-top:3rem;">
+    <h2 id="biotech-section" style="margin-bottom:1rem;">Biotechnology & Gene Editing</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>CRISPR‑Prime Editing 2.0</h3>
+        <p>Newer CRISPR systems can make precise edits without double‑strand breaks, reducing off‑target effects and enabling safer therapies.</p>
+        <footer><a href="https://www.cell.com/fulltext/S0092-8674(22)00300-8" target="_blank">Read More →</a></footer>
+      </div>
 
-  <!-- Autonomous AI‑Driven Vehicles -->
-  <section class="breakthrough" id="autonomous-vehicles">
-    <svg viewBox="0 0 64 64" fill="#9c88ff" xmlns="http://www.w3.org/2000/svg">
-      <rect x="12" y="20" width="40" height="24" rx="8" ry="8"/>
-      <circle cx="24" cy="48" r="4" fill="#fff"/>
-      <circle cx="40" cy="48" r="4" fill="#fff"/>
-    </svg>
-    <div class="content">
-      <h2>Autonomous AI‑Driven Vehicles</h2>
-      <p>
-        Level 5
+      <div class="card">
+        <h3>mRNA Vaccines Beyond COVID‑19</h3>
+        <p>mRNA platforms now target influenza, cytomegalovirus, and even cancer, demonstrating rapid development cycles and high efficacy.</p>
+        <footer><a href="https://www.nature.com/articles/s41587-023-01945
