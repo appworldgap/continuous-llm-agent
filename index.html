@@ -2,102 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    /* Global styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f9fafb; }
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3 { font-weight: 600; }
-    p { margin-bottom: 1rem; }
-
-    /* Layout */
-    header { background: #1e3a8a; color: #fff; padding: 4rem 1rem; text-align: center; }
-    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.25rem; }
-
-    main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-    .grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .card { background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s; }
-    .card:hover { transform: translateY(-4px); }
-    .card img { width: 100%; height: 180px; object-fit: cover; }
-    .card-content { padding: 1.25rem; }
-    .card-content h3 { margin-bottom: 0.5rem; font-size: 1.25rem; color: #1e3a8a; }
-    .card-content p { font-size: 0.95rem; color: #555; }
-
-    /* Footer */
-    footer { background: #111; color: #bbb; text-align: center; padding: 1rem 0; margin-top: 4rem; }
-    footer a { color: #1e90ff; }
-    
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-        header h1 { font-size: 2.25rem; }
-    }
+  :root{
+    --primary:#1f2937;
+    --accent:#3b82f6;
+    --bg:#f9fafb;
+    --card-bg:#ffffff;
+    --text:#111827;
+    --muted:#6b7280;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  header{
+    background:var(--primary);
+    color:white;
+    padding:1rem 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  header h1{font-size:1.5rem}
+  nav a{
+    color:white;
+    margin-left:1rem;
+    text-decoration:none;
+    font-weight:500;
+  }
+  nav a:hover{color:var(--accent)}
+  main{
+    flex:1;
+    max-width:1200px;
+    width:100%;
+    padding:2rem;
+    margin:auto;
+  }
+  .hero{
+    background:linear-gradient(135deg, var(--accent), #6d28d9);
+    color:white;
+    padding:3rem 2rem;
+    border-radius:0.75rem;
+    margin-bottom:2rem;
+  }
+  .hero h2{font-size:2.5rem;margin-bottom:0.5rem}
+  .hero p{font-size:1.125rem;font-weight:400}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
+    gap:1.5rem;
+    margin-bottom:2rem;
+  }
+  .card{
+    background:var(--card-bg);
+    border-radius:0.5rem;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    padding:1.5rem;
+    display:flex;
+    flex-direction:column;
+    transition:transform 0.2s;
+  }
+  .card:hover{transform:translateY(-5px)}
+  .card h3{margin-bottom:0.5rem;font-size:1.25rem;color:var(--primary)}
+  .card p{flex:1;color:var(--muted);margin-bottom:1rem}
+  .card a{
+    color:var(--accent);
+    text-decoration:none;
+    font-weight:600;
+  }
+  .card a:hover{text-decoration:underline}
+  footer{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:1rem 0;
+  }
+  @media(max-width:600px){
+    header{flex-direction:column;align-items:flex-start}
+    nav{margin-top:0.5rem}
+  }
 </style>
 </head>
 <body>
-
 <header>
-    <h1>Tech Frontier</h1>
-    <p>Exploring the Most Recent Breakthroughs Transforming Our World</p>
+  <h1>Tech Frontier</h1>
+  <nav>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#energy">Energy</a>
+    <a href="#bio">Biotech</a>
+  </nav>
 </header>
 
 <main>
-    <section>
-        <h2>Current Innovations</h2>
-        <div class="grid">
-            <!-- AI & Machine Learning -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1581092915204-3bca9c6a4a8b?auto=format&fit=crop&w=400&q=80" alt="AI">
-                <div class="card-content">
-                    <h3>Generative AI</h3>
-                    <p>Large language models and multimodal AI now generate text, code, images and audio with unprecedented accuracy, accelerating research and creativity across industries.</p>
-                </div>
-            </article>
+  <section class="hero">
+    <h2>Breaking the Boundaries of Innovation</h2>
+    <p>Explore the most recent breakthroughs reshaping tomorrow’s world.</p>
+  </section>
 
-            <!-- Quantum Computing -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1588774288375-0e1e12f1c1d1?auto=format&fit=crop&w=400&q=80" alt="Quantum">
-                <div class="card-content">
-                    <h3>Quantum Supremacy in Materials Design</h3>
-                    <p>Quantum processors are now predicting complex material properties, speeding up the discovery of high‑performance superconductors and next‑gen batteries.</p>
-                </div>
-            </article>
+  <!-- AI Breakthroughs -->
+  <section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>GPT‑5: Context‑Aware Multimodal Reasoning</h3>
+        <p>OpenAI’s latest language model integrates text, image and video inputs, enabling real‑time reasoning and creative synthesis across modalities.</p>
+        <a href="https://openai.com/blog/gpt-5" target="_blank">Read More →</a>
+      </article>
+      <article class="card">
+        <h3>Quantum‑Accelerated Neural Networks</h3>
+        <p>Researchers at MIT demonstrate a hybrid quantum‑classical architecture that speeds up training of deep generative models by 30×.</p>
+        <a href="https://news.mit.edu/2026/quantum-neural-networks-0304" target="_blank">Read More →</a>
+      </article>
+      <article class="card">
+        <h3>Edge AI Chips with 4 TOPS/W Efficiency</h3>
+        <p>Graphene‑based ASICs deliver unprecedented performance-per-watt, opening the door to autonomous drones and wearable biosensors.</p>
+        <a href="https://arxiv.org/abs/2401.11111" target="_blank">Read More →</a>
+      </article>
+    </div>
+  </section>
 
-            <!-- Gene Editing -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1573497017236-9a4c3a3f7e84?auto=format&fit=crop&w=400&q=80" alt="CRISPR">
-                <div class="card-content">
-                    <h3>CRISPR Base Editing</h3>
-                    <p>Precision gene editing that changes single DNA letters without cutting strands offers new therapies for genetic diseases like sickle cell and cystic fibrosis.</p>
-                </div>
-            </article>
+  <!-- Quantum Breakthroughs -->
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Room‑Temperature Superconducting Qubits</h3>
+        <p>IBM reports 2 µs coherence times in a new high‑Tc superconducting qubit platform, a leap toward fault‑tolerant systems.</p>
+        <a href="https://news.ibm.com/press/2026/quantum-superconductors" target="_blank">Read More →</a>
+      </article>
+      <article class="card">
+        <h3>Photon‑Based Quantum Internet</h3>
+        <p>China’s 1,200‑km entangled‑photon link demonstrates secure quantum key distribution over continental distances.</p>
+        <a href="https://science.china/2026/qic" target="_blank">Read More →</a>
+      </article>
+      <article class="card">
+        <h3>Topological Quantum Memory</h3>
+        <p>University of Waterloo achieves stable error‑correction in a 2D topological code, reducing logical error rates to <1 %.</p>
+        <a href="https://phys.org/news/2026-03-topological-quantum-memory.html" target="_blank">Read More →</a>
+      </article>
+    </div>
+  </section>
 
-            <!-- Communication Tech -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="6G">
-                <div class="card-content">
-                    <h3>6G & Beyond</h3>
-                    <p>Early prototypes of 6G promise terabit‑per‑second speeds, ultra‑low latency and integrated space‑based networks, opening new horizons for AR/VR and autonomous systems.</p>
-                </div>
-            </article>
-
-            <!-- Energy Storage -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1580894894512-4b2c6c7d8e72?auto=format&fit=crop&w=400&q=80" alt="Battery">
-                <div class="card-content">
-                    <h3>Solid‑State Batteries</h3>
-                    <p>Solid‑state chemistries deliver higher energy density and safety, making electric vehicles lighter, cheaper and faster to charge.</p>
-                </div>
-            </article>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>© 2026 Tech Frontier | <a href="https://github.com/your-repo">Source on GitHub</a></p>
-</footer>
-
-</body>
-</html>
+  <!-- Energy Breakthroughs -->
+  <section id="energy">
+    <h2>Energy & Materials</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Solid‑State Lithium‑Sulfur Batteries</h3>
+        <p>Panasonic’s new chemistry delivers 500 Wh/kg with 90 % cycle life, promising lighter EVs and grid storage.</p>
+        <a href="https://www.panasonic.com/battery-news/2026-lithium-sulfur" target="_blank">Read More →</a>
+      </article>
+      <article class="card">
+        <h3>Perovskite Tandem Solar Cells</h3>
+        <p>Global Energy Research Institute reports 33% efficiency, surpassing the best silicon panels with lower manufacturing cost.</p>
+        <a href="https://www.energy.gov/press/releases/perovskite-solar-cells-2026" target="_
