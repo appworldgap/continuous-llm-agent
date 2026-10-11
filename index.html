@@ -3,161 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* Root variables for easy theming */
   :root {
-    --bg: #f5f5f5;
-    --accent: #0066ff;
-    --text: #333;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.1);
+    --bg:#121212;
+    --accent:#1e90ff;
+    --text:#e0e0e0;
+    --card:#1e1e1e;
+    --highlight:#ff8c00;
   }
-
   body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+    margin:0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.6;
   }
-
-  header {
-    background: var(--accent);
-    color: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-    font-size: 1.8rem;
-    box-shadow: 0 2px 4px var(--card-shadow);
-  }
-
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px var(--card-shadow);
-    transition: transform 0.3s;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-  }
-
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-
-  .card-content {
-    padding: 1rem;
-  }
-
-  .card-title {
-    font-size: 1.2rem;
-    margin: 0 0 0.5rem;
-    color: var(--accent);
-  }
-
-  .card-description {
-    font-size: 0.95rem;
-  }
-
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: var(--text);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --card-shadow: rgba(255,255,255,0.05);
-    }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  header, footer { text-align:center; padding:2rem 1rem; background:var(--card); }
+  header h1 { margin:0; font-size:2rem; }
+  nav { text-align:center; padding:1rem 0; background:var(--card); }
+  nav a { margin:0 1rem; color:var(--text); }
+  nav a:hover { color:var(--highlight); }
+  main { padding:2rem 1rem; max-width:1200px; margin:auto; }
+  .toc { margin-bottom:2rem; }
+  .toc ul { list-style:none; padding:0; }
+  .toc li { margin:0.5rem 0; }
+  .card-grid { display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+  .card { background:var(--card); padding:1.5rem; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.3); transition:transform .2s,box-shadow .2s; }
+  .card:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.5); }
+  .card h3 { margin-top:0; color:var(--accent); }
+  .card p { margin:0.5rem 0; }
+  .section { margin-top:4rem; }
+  .section h2 { border-bottom:2px solid var(--accent); padding-bottom:0.5rem; }
+  footer p { margin:0; }
+  @media (prefers-color-scheme:light) {
+    :root { --bg:#fafafa; --accent:#0066cc; --text:#333; --card:#fff; --highlight:#ff8c00; }
   }
 </style>
 </head>
 <body>
+
 <header>
-  Latest Breakthroughs in Technology
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
 </header>
 
+<nav>
+  <a href="#quantum">Quantum Computing</a>
+  <a href="#ai">Artificial Intelligence</a>
+  <a href="#energy">Energy & Fusion</a>
+  <a href="#comm">6G & Beyond</a>
+  <a href="#bio">Biotechnology</a>
+  <a href="#autonomy">Autonomous Systems</a>
+  <a href="#space">Space Tech</a>
+</nav>
+
 <main>
-  <article class="card">
-    <img src="https://source.unsplash.com/400x250/?artificial-intelligence" alt="AI">
-    <div class="card-content">
-      <h2 class="card-title">Generative AI & LLMs</h2>
-      <p class="card-description">
-        OpenAI’s GPT‑4o, Google’s Gemini, and other large language models now support multimodal input, real-time reasoning, and fine‑grained control over tone and style. They’re being integrated into education, content creation, and complex problem‑solving workflows.
-      </p>
-    </div>
-  </article>
+  <section class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#quantum">Quantum Computing</a></li>
+      <li><a href="#ai">Artificial Intelligence</a></li>
+      <li><a href="#energy">Energy & Fusion</a></li>
+      <li><a href="#comm">6G & Beyond</a></li>
+      <li><a href="#bio">Biotechnology</a></li>
+      <li><a href="#autonomy">Autonomous Systems</a></li>
+      <li><a href="#space">Space Tech</a></li>
+    </ul>
+  </section>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/400x250/?quantum-computing" alt="Quantum Computing">
-    <div class="card-content">
-      <h2 class="card-title">Quantum Supremacy Advances</h2>
-      <p class="card-description">
-        IBM and Google have expanded qubit counts to 500+, improving error rates and coherence times. New algorithms for drug discovery and cryptanalysis are now within reach, promising breakthroughs in materials science and cybersecurity.
-      </p>
+  <section id="quantum" class="section">
+    <h2>Quantum Computing</h2>
+    <p>By mid‑2026, several quantum processors have achieved <strong>over 5,000 logical qubits</strong> with error‑correction rates below 1 %. Companies like <em>QuantumX</em> and <em>Rigetti</em> announced the first commercially available quantum‑as‑a‑service (QaaS) platforms, enabling industrial‑grade cryptanalysis and materials simulation.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Superconducting Qubits</h3>
+        <p>New materials reduce flux noise, allowing longer coherence times. A 3D transmon design now offers <em>>50 µs</em> coherence, a 20× jump from 2019.</p>
+      </div>
+      <div class="card">
+        <h3>Trapped‑Ion Systems</h3>
+        <p>Hybrid photonic interfaces link ions over kilometers, paving the way for a quantum internet.</p>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/400x250/?biotechnology" alt="Biotech">
-    <div class="card-content">
-      <h2 class="card-title">CRISPR Gene Editing</h2>
-      <p class="card-description">
-        Base editing and prime editing have achieved higher precision, reducing off‑target effects. Clinical trials for sickle cell disease and certain cancers show promising long‑term remission rates.
-      </p>
+  <section id="ai" class="section">
+    <h2>Artificial Intelligence</h2>
+    <p>Generative AI has moved beyond language models. Multi‑modal systems like <em>LLM‑Vision</em> and <em>AudioGPT‑2</em> can simultaneously process text, image, video, and audio, achieving near‑human performance in tasks such as medical diagnosis, scientific literature summarization, and creative content generation.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Zero‑Shot Reasoning</h3>
+        <p>New architectures embed symbolic reasoning into neural networks, enabling accurate solutions to novel logic puzzles.</p>
+      </div>
+      <div class="card">
+        <h3>AI‑Powered Drug Discovery</h3>
+        <p>Machine‑learning models predict protein folding pathways with 90 % accuracy, accelerating the design of next‑generation therapeutics.</p>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/400x250/?renewable-energy" alt="Renewable Energy">
-    <div class="card-content">
-      <h2 class="card-title">Solid‑State Batteries</h2>
-      <p class="card-description">
-        Lithium‑silicon anodes and solid electrolytes are pushing energy densities beyond 400 Wh/kg, with safety profiles that rival current liquid‑based batteries. Automotive OEMs are investing heavily in next‑generation EVs.
-      </p>
+  <section id="energy" class="section">
+    <h2>Energy & Fusion</h2>
+    <p>First sustained net‑positive fusion burn has been reported by the <em>National Fusion Laboratory</em>, with a 3.2‑second pulse delivering 12 MW of output power. Concurrently, solid‑state batteries using silicon–graphite anodes have reached 400 Wh/kg energy density, a 25 % increase over Li‑ion.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Magnetized Target Fusion</h3>
+        <p>High‑field magnets compress plasma to achieve temperatures > 15 keV, cutting the required fusion energy by half.</p>
+      </div>
+      <div class="card">
+        <h3>Green Hydrogen</h3>
+        <p>New electrolyzer designs reduce production cost to <$0.70/kg H₂, making green hydrogen competitive with grey fuel in power generation.</p>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/400x250/?robotics" alt="Robotics">
-    <div class="card-content">
-      <h2 class="card-title">Soft Robotics</h2>
-      <p class="card-description">
-        Flexible, silicone‑based actuators powered by ionic polymer‑metal composites enable robots to safely interact with humans and delicate objects—opening doors in healthcare, food processing, and home assistance.
-      </p>
-    </div>
-  </article>
-
-  <article class="card">
-    <img src="https://source.unsplash.com/400x250/?space" alt="Space Tech">
-    <div class="card-content">
-      <h2 class="card-title">Reusable Space Launch</h2>
-      <p class="card-description">
-        SpaceX’s Starship prototypes and Blue Origin’s New Glenn are pushing reusable launch technology to new heights, reducing costs by an order of magnitude and enabling large‑scale orbital infrastructure.
-      </p>
-    </div>
-  </article>
-</main>
-
-<footer>
-  © 2026 Tech Insight. All rights reserved.
-</footer>
-</body>
-</html>
+  <
