@@ -2,186 +2,175 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google Fonts – Montserrat & Roboto -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    :root {
-        --primary:#0A84FF;
-        --secondary:#E5E5EA;
-        --bg:#F5F5F7;
-        --text:#1C1C1E;
-        --card-bg:#FFFFFF;
-        --shadow:rgba(0,0,0,0.1);
-        --radius:8px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{
-        font-family:'Roboto',sans-serif;
-        background:var(--bg);
-        color:var(--text);
-        line-height:1.6;
-    }
-    header{
-        background:var(--primary);
-        color:white;
-        padding:2rem 1rem;
-        text-align:center;
-        font-family:'Montserrat',sans-serif;
-        font-weight:700;
-        font-size:2rem;
-    }
-    nav{
-        background:white;
-        padding:0.5rem 1rem;
-        box-shadow:0 1px 3px var(--shadow);
-        position:sticky;
-        top:0;
-        z-index:999;
-    }
-    nav ul{display:flex;justify-content:center;gap:2rem;}
-    nav a{
-        text-decoration:none;
-        color:var(--text);
-        font-weight:500;
-        transition:color 0.3s;
-    }
-    nav a:hover{color:var(--primary);}
-    main{
-        max-width:1200px;
-        margin:auto;
-        padding:2rem 1rem;
-        display:grid;
-        grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-        gap:2rem;
-    }
-    .card{
-        background:var(--card-bg);
-        border-radius:var(--radius);
-        box-shadow:0 2px 5px var(--shadow);
-        overflow:hidden;
-        transition:transform 0.3s,box-shadow 0.3s;
-    }
-    .card:hover{transform:translateY(-5px);box-shadow:0 4px 10px var(--shadow);}
-    .card img{width:100%;height:170px;object-fit:cover;}
-    .card-body{
-        padding:1rem;
-    }
-    .card-title{
-        font-family:'Montserrat',sans-serif;
-        font-weight:700;
-        margin-bottom:0.5rem;
-    }
-    .card-text{
-        font-size:0.95rem;
-        margin-bottom:1rem;
-    }
-    .card-link{
-        display:inline-block;
-        text-decoration:none;
-        color:var(--primary);
-        font-weight:500;
-        transition:color 0.3s;
-    }
-    .card-link:hover{color:darken(var(--primary),10%);}
-    footer{
-        text-align:center;
-        padding:1rem;
-        background:white;
-        box-shadow:0 -1px 3px var(--shadow);
-        margin-top:2rem;
-        font-size:0.9rem;
-        color:gray;
-    }
-    @media (prefers-color-scheme: dark){
-        :root{
-            --bg:#121212;
-            --secondary:#272727;
-            --text:#E5E5E5;
-            --card-bg:#1E1E1E;
-            --shadow:rgba(255,255,255,0.1);
-        }
-        header, nav{background:var(--secondary);}
-        footer{background:var(--secondary);}
-    }
+  :root {
+    --primary: #1f2937;      /* dark slate */
+    --accent: #3b82f6;       /* sky blue */
+    --bg: #f9fafb;           /* off‑white */
+    --card-bg: #fff;
+    --text: #111827;
+    --muted: #6b7280;
+    --radius: 0.75rem;
+    --transition: 0.3s ease;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.125rem;
+    opacity: 0.85;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media(min-width: 640px){
+    .container { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media(min-width: 1024px){
+    .container { grid-template-columns: repeat(3, 1fr); }
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  .card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .card p {
+    color: var(--muted);
+    flex-grow: 1;
+    margin-bottom: 1rem;
+  }
+  .card .meta {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  .card a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    transition: color var(--transition);
+  }
+  .card a:hover { color: #2563eb; }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
 </style>
 </head>
 <body>
+<header>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to quantum computing, stay ahead of tomorrow’s innovations.</p>
+</header>
 
-<header>Latest Breakthroughs in Technology – 2026</header>
-
-<nav>
-<ul>
-    <li><a href="#ai">Artificial Intelligence</a></li>
-    <li><a href="#quantum">Quantum Computing</a></li>
-    <li><a href="#6g">6G & Connectivity</a></li>
-    <li><a href="#bio">Biotech & CRISPR</a></li>
-    <li><a href="#autonomous">Autonomous Systems</a></li>
-</ul>
-</nav>
-
-<main id="ai">
-    <div class="card">
-        <img src="https://source.unsplash.com/featured/?ai" alt="Artificial Intelligence">
-        <div class="card-body">
-            <h3 class="card-title">Generative AI 4.0</h3>
-            <p class="card-text">Multi-modal models that seamlessly blend text, vision, audio, and code, enabling real-time, context-aware creation and problem solving.</p>
-            <a class="card-link" href="https://www.openai.com/research" target="_blank">Learn More</a>
-        </div>
+<div class="container">
+  <!-- Card 1: Quantum Computing Milestone -->
+  <div class="card">
+    <img src="https://picsum.photos/seed/quantum/400/200" alt="Quantum Computing">
+    <div class="card-content">
+      <h3>Quantum Supremacy Achieved by XYZ Corp</h3>
+      <p>A groundbreaking demonstration where a quantum processor solved a problem in seconds that would take supercomputers years.</p>
+      <div class="meta">June 2026 • <a href="#" target="_blank">Read article</a></div>
     </div>
+  </div>
 
-    <div class="card">
-        <img src="https://source.unsplash.com/featured/?deep-learning" alt="Deep Learning">
-        <div class="card-body">
-            <h3 class="card-title">Self‑Supervised Learning</h3>
-            <p class="card-text">Models that learn directly from raw data without labels, reducing training cost and accelerating deployment across domains.</p>
-            <a class="card-link" href="https://arxiv.org/abs/2307.00001" target="_blank">Read Paper</a>
-        </div>
+  <!-- Card 2: AI Model Breakthrough -->
+  <div class="card">
+    <img src="https://picsum.photos/seed/ai/400/200" alt="Artificial Intelligence">
+    <div class="card-content">
+      <h3>GPT‑8: A New Era of Few‑Shot Learning</h3>
+      <p>OpenAI’s latest language model dramatically reduces training data while improving reasoning and creativity.</p>
+      <div class="meta">May 2026 • <a href="#" target="_blank">Read article</a></div>
     </div>
+  </div>
 
-    <div class="card">
-        <img src="https://source.unsplash.com/featured/?robotics" alt="Robotics">
-        <div class="card-body">
-            <h3 class="card-title">Neural‑Control Robotics</h3>
-            <p class="card-text">Soft robots driven by neural networks that adapt on the fly, enabling delicate manipulation in medical and manufacturing tasks.</p>
-            <a class="card-link" href="https://www.nature.com/articles/s41586-026-1234-5" target="_blank">Research</a>
-        </div>
+  <!-- Card 3: CRISPR Gene Editing -->
+  <div class="card">
+    <img src="https://picsum.photos/seed/crispr/400/200" alt="CRISPR">
+    <div class="card-content">
+      <h3>CRISPR‑C: A Safer, More Precise Gene Therapy</h3>
+      <p>Scientists report successful editing of the HBB gene in human embryos with zero off‑target effects.</p>
+      <div class="meta">April 2026 • <a href="#" target="_blank">Read article</a></div>
     </div>
-</main>
+  </div>
 
-<main id="quantum">
-    <div class="card">
-        <img src="https://source.unsplash.com/featured/?quantum-computing" alt="Quantum Computing">
-        <div class="card-body">
-            <h3 class="card-title">Fault‑Tolerant Quantum Processors</h3>
-            <p class="card-text">Scalable silicon‑based qubits with error rates below 1%, achieving logical qubit operation and practical cryptographic applications.</p>
-            <a class="card-link" href="https://www.ibm.com/qe" target="_blank">IBM Quantum</a>
-        </div>
+  <!-- Card 4: Autonomous Vehicles -->
+  <div class="card">
+    <img src="https://picsum.photos/seed/av/400/200" alt="Autonomous Vehicles">
+    <div class="card-content">
+      <h3>Level 5 Autonomy Demonstrated on Public Roads</h3>
+      <p>Automakers complete the first fully driverless test run in a busy city center.</p>
+      <div class="meta">March 2026 • <a href="#" target="_blank">Read article</a></div>
     </div>
+  </div>
 
-    <div class="card">
-        <img src="https://source.unsplash.com/featured/?quantum-network" alt="Quantum Network">
-        <div class="card-body">
-            <h3 class="card-title">Quantum Internet</h3>
-            <p class="card-text">Nation‑wide entanglement‑based network enabling ultra‑secure communications and distributed quantum computing.</p>
-            <a class="card-link" href="https://www.quantinuum.com" target="_blank">More Info</a>
-        </div>
+  <!-- Card 5: Brain‑Computer Interfaces -->
+  <div class="card">
+    <img src="https://picsum.photos/seed/bci/400/200" alt="Brain‑Computer Interface">
+    <div class="card-content">
+      <h3>NeuroLink: Direct Cortical Communication in Humans</h3>
+      <p>A minimally invasive implant allowing patients to control devices using thought alone.</p>
+      <div class="meta">February 2026 • <a href="#" target="_blank">Read article</a></div>
     </div>
-</main>
+  </div>
 
-<main id="6g">
-    <div class="card">
-        <img src="https://source.unsplash.com/featured/?6g" alt="6G">
-        <div class="card-body">
-            <h3 class="card-title">6G Ultra‑High‑Speed Networks</h3>
-            <p class="card-text">Terabit per second data rates with sub‑millisecond latency, powered by terahertz wavebands and AI‑optimized routing.</p>
-            <a class="card-link" href="https://www.fcc.gov/6g" target="_blank">FCC 6G</a>
-        </div>
+  <!-- Card 6: 6G Network Prototype -->
+  <div class="card">
+    <img src="https://picsum.photos/seed/6g/400/200" alt="6G Network">
+    <div class="card-content">
+      <h3>6G: Terabit‑Per‑Second Connectivity Achieved</h3>
+      <p>Researchers unveil a prototype that delivers data at unprecedented speeds, opening possibilities for holographic displays.</p>
+      <div class="meta">January 2026 • <a href="#" target="_blank">Read article</a></div>
     </div>
+  </div>
+</div>
 
-    <div class="card">
-        <img src="https://source.unsplash.com/featured/?satellite" alt="Satellite">
-        <div class="card-body">
-            <h3 class="card-title">Mega‑Constellation Integration</h3>
-            <p class="card-text">Seamless hand
+<footer>
+  <p>&copy; 2026 TechFrontiers. All rights reserved.</p>
+</footer>
+</body>
+</html>
+``
