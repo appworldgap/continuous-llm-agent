@@ -2,166 +2,162 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root{
-    --primary:#1f2937;
-    --accent:#3b82f6;
-    --bg:#f9fafb;
-    --card-bg:#ffffff;
-    --text:#111827;
-    --muted:#6b7280;
+  /* Root variables for easy theming */
+  :root {
+    --bg: #f5f5f5;
+    --accent: #0066ff;
+    --text: #333;
+    --card-bg: #fff;
+    --card-shadow: rgba(0,0,0,0.1);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
   }
-  header{
-    background:var(--primary);
-    color:white;
-    padding:1rem 2rem;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    box-shadow: 0 2px 4px var(--card-shadow);
   }
-  header h1{font-size:1.5rem}
-  nav a{
-    color:white;
-    margin-left:1rem;
-    text-decoration:none;
-    font-weight:500;
+
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
-  nav a:hover{color:var(--accent)}
-  main{
-    flex:1;
-    max-width:1200px;
-    width:100%;
-    padding:2rem;
-    margin:auto;
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: transform 0.3s;
   }
-  .hero{
-    background:linear-gradient(135deg, var(--accent), #6d28d9);
-    color:white;
-    padding:3rem 2rem;
-    border-radius:0.75rem;
-    margin-bottom:2rem;
+
+  .card:hover {
+    transform: translateY(-5px);
   }
-  .hero h2{font-size:2.5rem;margin-bottom:0.5rem}
-  .hero p{font-size:1.125rem;font-weight:400}
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
-    gap:1.5rem;
-    margin-bottom:2rem;
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
   }
-  .card{
-    background:var(--card-bg);
-    border-radius:0.5rem;
-    box-shadow:0 4px 6px rgba(0,0,0,0.1);
-    padding:1.5rem;
-    display:flex;
-    flex-direction:column;
-    transition:transform 0.2s;
+
+  .card-content {
+    padding: 1rem;
   }
-  .card:hover{transform:translateY(-5px)}
-  .card h3{margin-bottom:0.5rem;font-size:1.25rem;color:var(--primary)}
-  .card p{flex:1;color:var(--muted);margin-bottom:1rem}
-  .card a{
-    color:var(--accent);
-    text-decoration:none;
-    font-weight:600;
+
+  .card-title {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+    color: var(--accent);
   }
-  .card a:hover{text-decoration:underline}
-  footer{
-    background:var(--primary);
-    color:white;
-    text-align:center;
-    padding:1rem 0;
+
+  .card-description {
+    font-size: 0.95rem;
   }
-  @media(max-width:600px){
-    header{flex-direction:column;align-items:flex-start}
-    nav{margin-top:0.5rem}
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --card-bg: #1e1e1e;
+      --card-shadow: rgba(255,255,255,0.05);
+    }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Tech Frontier</h1>
-  <nav>
-    <a href="#ai">AI</a>
-    <a href="#quantum">Quantum</a>
-    <a href="#energy">Energy</a>
-    <a href="#bio">Biotech</a>
-  </nav>
+  Latest Breakthroughs in Technology
 </header>
 
 <main>
-  <section class="hero">
-    <h2>Breaking the Boundaries of Innovation</h2>
-    <p>Explore the most recent breakthroughs reshaping tomorrow’s world.</p>
-  </section>
-
-  <!-- AI Breakthroughs -->
-  <section id="ai">
-    <h2>Artificial Intelligence</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>GPT‑5: Context‑Aware Multimodal Reasoning</h3>
-        <p>OpenAI’s latest language model integrates text, image and video inputs, enabling real‑time reasoning and creative synthesis across modalities.</p>
-        <a href="https://openai.com/blog/gpt-5" target="_blank">Read More →</a>
-      </article>
-      <article class="card">
-        <h3>Quantum‑Accelerated Neural Networks</h3>
-        <p>Researchers at MIT demonstrate a hybrid quantum‑classical architecture that speeds up training of deep generative models by 30×.</p>
-        <a href="https://news.mit.edu/2026/quantum-neural-networks-0304" target="_blank">Read More →</a>
-      </article>
-      <article class="card">
-        <h3>Edge AI Chips with 4 TOPS/W Efficiency</h3>
-        <p>Graphene‑based ASICs deliver unprecedented performance-per-watt, opening the door to autonomous drones and wearable biosensors.</p>
-        <a href="https://arxiv.org/abs/2401.11111" target="_blank">Read More →</a>
-      </article>
+  <article class="card">
+    <img src="https://source.unsplash.com/400x250/?artificial-intelligence" alt="AI">
+    <div class="card-content">
+      <h2 class="card-title">Generative AI & LLMs</h2>
+      <p class="card-description">
+        OpenAI’s GPT‑4o, Google’s Gemini, and other large language models now support multimodal input, real-time reasoning, and fine‑grained control over tone and style. They’re being integrated into education, content creation, and complex problem‑solving workflows.
+      </p>
     </div>
-  </section>
+  </article>
 
-  <!-- Quantum Breakthroughs -->
-  <section id="quantum">
-    <h2>Quantum Computing</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Room‑Temperature Superconducting Qubits</h3>
-        <p>IBM reports 2 µs coherence times in a new high‑Tc superconducting qubit platform, a leap toward fault‑tolerant systems.</p>
-        <a href="https://news.ibm.com/press/2026/quantum-superconductors" target="_blank">Read More →</a>
-      </article>
-      <article class="card">
-        <h3>Photon‑Based Quantum Internet</h3>
-        <p>China’s 1,200‑km entangled‑photon link demonstrates secure quantum key distribution over continental distances.</p>
-        <a href="https://science.china/2026/qic" target="_blank">Read More →</a>
-      </article>
-      <article class="card">
-        <h3>Topological Quantum Memory</h3>
-        <p>University of Waterloo achieves stable error‑correction in a 2D topological code, reducing logical error rates to <1 %.</p>
-        <a href="https://phys.org/news/2026-03-topological-quantum-memory.html" target="_blank">Read More →</a>
-      </article>
+  <article class="card">
+    <img src="https://source.unsplash.com/400x250/?quantum-computing" alt="Quantum Computing">
+    <div class="card-content">
+      <h2 class="card-title">Quantum Supremacy Advances</h2>
+      <p class="card-description">
+        IBM and Google have expanded qubit counts to 500+, improving error rates and coherence times. New algorithms for drug discovery and cryptanalysis are now within reach, promising breakthroughs in materials science and cybersecurity.
+      </p>
     </div>
-  </section>
+  </article>
 
-  <!-- Energy Breakthroughs -->
-  <section id="energy">
-    <h2>Energy & Materials</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Solid‑State Lithium‑Sulfur Batteries</h3>
-        <p>Panasonic’s new chemistry delivers 500 Wh/kg with 90 % cycle life, promising lighter EVs and grid storage.</p>
-        <a href="https://www.panasonic.com/battery-news/2026-lithium-sulfur" target="_blank">Read More →</a>
-      </article>
-      <article class="card">
-        <h3>Perovskite Tandem Solar Cells</h3>
-        <p>Global Energy Research Institute reports 33% efficiency, surpassing the best silicon panels with lower manufacturing cost.</p>
-        <a href="https://www.energy.gov/press/releases/perovskite-solar-cells-2026" target="_
+  <article class="card">
+    <img src="https://source.unsplash.com/400x250/?biotechnology" alt="Biotech">
+    <div class="card-content">
+      <h2 class="card-title">CRISPR Gene Editing</h2>
+      <p class="card-description">
+        Base editing and prime editing have achieved higher precision, reducing off‑target effects. Clinical trials for sickle cell disease and certain cancers show promising long‑term remission rates.
+      </p>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://source.unsplash.com/400x250/?renewable-energy" alt="Renewable Energy">
+    <div class="card-content">
+      <h2 class="card-title">Solid‑State Batteries</h2>
+      <p class="card-description">
+        Lithium‑silicon anodes and solid electrolytes are pushing energy densities beyond 400 Wh/kg, with safety profiles that rival current liquid‑based batteries. Automotive OEMs are investing heavily in next‑generation EVs.
+      </p>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://source.unsplash.com/400x250/?robotics" alt="Robotics">
+    <div class="card-content">
+      <h2 class="card-title">Soft Robotics</h2>
+      <p class="card-description">
+        Flexible, silicone‑based actuators powered by ionic polymer‑metal composites enable robots to safely interact with humans and delicate objects—opening doors in healthcare, food processing, and home assistance.
+      </p>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://source.unsplash.com/400x250/?space" alt="Space Tech">
+    <div class="card-content">
+      <h2 class="card-title">Reusable Space Launch</h2>
+      <p class="card-description">
+        SpaceX’s Starship prototypes and Blue Origin’s New Glenn are pushing reusable launch technology to new heights, reducing costs by an order of magnitude and enabling large‑scale orbital infrastructure.
+      </p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  © 2026 Tech Insight. All rights reserved.
+</footer>
+</body>
+</html>
