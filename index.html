@@ -1,134 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary: #1976d2;
-    --accent: #ff6f00;
-    --bg: #f5f5f5;
-    --card-bg: #ffffff;
-    --text: #333333;
-    --muted: #777777;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+:root{
+  --primary:#0052cc;
+  --primary-dark:#003d99;
+  --bg:#f8f9fc;
+  --card-bg:#fff;
+  --card-shadow:rgba(0,0,0,0.12);
+  --text:#333;
+  --link:#0066cc;
+  --link-hover:#0052cc;
+  --radius:8px;
+  --transition:0.25s ease;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+header{
+  background:var(--primary);
+  color:#fff;
+  padding:2rem 1rem;
+  text-align:center;
+}
+header h1{
+  font-size:2.5rem;
+  margin-bottom:.5rem;
+}
+header p{
+  font-size:1.1rem;
+  opacity:.9;
+}
+main{
+  flex:1;
+  padding:2rem 1rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  box-shadow:0 2px 8px var(--card-shadow);
+  overflow:hidden;
+  transition:transform var(--transition),box-shadow var(--transition);
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 4px 12px var(--card-shadow);
+}
+.card .image{
+  width:100%;
+  height:160px;
+  background-size:cover;
+  background-position:center;
+}
+.card .content{
+  padding:1.25rem;
+}
+.card h3{
+  font-size:1.3rem;
+  margin-bottom:.75rem;
+  color:var(--primary);
+}
+.card p{
+  font-size:.95rem;
+  color:var(--text);
+}
+.card a{
+  display:inline-block;
+  margin-top:.75rem;
+  color:var(--link);
+  text-decoration:none;
+  font-weight:600;
+  border-bottom:1px solid transparent;
+  transition:border-color var(--transition);
+}
+.card a:hover{
+  border-color:var(--link);
+  color:var(--link-hover);
+}
+footer{
+  background:#222;
+  color:#aaa;
+  text-align:center;
+  padding:1rem;
+  font-size:.9rem;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#18181b;
+    --card-bg:#242526;
+    --text:#e4e4e7;
+    --primary:#1e90ff;
+    --primary-dark:#1c86ee;
+    --link:#4ea5ff;
+    --link-hover:#1e90ff;
+    --card-shadow:rgba(255,255,255,0.05);
   }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--font-family); background: var(--bg); color: var(--text); line-height: 1.6; }
-  a { color: var(--primary); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  header p {
-    font-size: 1.2rem;
-    color: var(--accent);
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-
-  .breakthroughs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  }
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  .card-content {
-    padding: 1rem;
-    flex: 1;
-  }
-  .card-content h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-    color: var(--primary);
-  }
-  .card-content p {
-    flex: 1;
-    font-size: 0.95rem;
-    color: var(--muted);
-  }
-  .card-content .date {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-top: 0.5rem;
-  }
-
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 4rem;
-    font-size: 0.9rem;
-    color: var(--muted);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121212;
-      --card-bg: #1e1e1e;
-      --text: #e0e0e0;
-      --muted: #aaa;
-    }
-  }
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>Explore the frontiers reshaping our world</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Cutting‑edge innovations shaping the world of tomorrow</p>
 </header>
 
-<div class="container">
-  <section class="breakthroughs">
-    <!-- Quantum Computing -->
-    <article class="card">
-      <img src="https://picsum.photos/seed/quantum/600/400" alt="Quantum Computing">
-      <div class="card-content">
-        <h3>Fault‑Tolerant Quantum Processors</h3>
-        <p>Researchers have built the first fault‑tolerant quantum chip with over 100 logical qubits, enabling practical quantum advantage for cryptography and simulation.</p>
-        <span class="date">Feb 2026</span>
-      </div>
-    </article>
-
+<main>
+  <section class="grid">
     <!-- Generative AI -->
-    <article class="card">
-      <img src="https://picsum.photos/seed/ai/600/400" alt="Generative AI">
-      <div class="card-content">
-        <h3>GPT‑5: Multimodal Mastery</h3>
-        <p>GPT‑5 can understand and generate text, code, images, and music in a single model, opening new possibilities in creative industries and education.</p>
-        <span class="date">Mar 2026</span>
+    <div class="card">
+      <div class="image" style="background-image:url('https://picsum.photos/id/1015/400/200');"></div>
+      <div class="content">
+        <h3>Generative AI Evolution</h3>
+        <p>Models like GPT‑5, Claude 3 and Gemini showcase unprecedented language understanding and multimodal creativity, enabling new applications in design, content creation, and scientific research.</p>
+        <a href="https://openai.com/research/" target="_blank">Explore Research</a>
       </div>
-    </article>
+    </div>
 
-    <!-- Brain‑Computer Interfaces
+    <!-- Quantum Supremacy -->
+    <div class="card">
+      <div class="image" style="background-image:url('https://picsum.photos/id/1025/400/200');"></div>
+      <div class="content">
+        <h3>Quantum Computing Milestones</h3>
+        <p>IBM’s Eagle (127‑qubit) and Google’s Sycamore achieve quantum advantage, opening doors for cryptography, material science, and complex optimization problems.</p>
+        <a href="https://www.ibm.com/quantum-computing/technology/" target="_blank">IBM Quantum</a>
+      </div>
+    </div>
+
+    <!-- AI Chips -->
+    <div class="card">
+      <div class="image" style="background-image:url('https://picsum.photos/id/1035/400/200');"></div>
+      <div class="content">
+        <h3>Next‑Gen AI Processors</h3>
+        <p>Nvidia H100 and Cerebras CS-2 deliver petaflops of tensor throughput, accelerating AI workloads from data centers to edge devices.</p>
+        <a href="https://www.nvidia.com/en-us/data-center/ai-accelerator-h100/" target="_blank">Nvidia H100</a>
+      </div>
+    </div>
+
+    <!-- SpaceTech -->
+    <div class="card">
+      <div class="image" style="background-image:url('https://picsum.photos/id/1045/
