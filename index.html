@@ -5,154 +5,176 @@
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-:root{
-  --primary:#0052cc;
-  --primary-dark:#003d99;
-  --bg:#f8f9fc;
-  --card-bg:#fff;
-  --card-shadow:rgba(0,0,0,0.12);
-  --text:#333;
-  --link:#0066cc;
-  --link-hover:#0052cc;
-  --radius:8px;
-  --transition:0.25s ease;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-}
-header{
-  background:var(--primary);
-  color:#fff;
-  padding:2rem 1rem;
-  text-align:center;
-}
-header h1{
-  font-size:2.5rem;
-  margin-bottom:.5rem;
-}
-header p{
-  font-size:1.1rem;
-  opacity:.9;
-}
-main{
-  flex:1;
-  padding:2rem 1rem;
-  max-width:1200px;
-  margin:0 auto;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1.5rem;
-}
-.card{
-  background:var(--card-bg);
-  border-radius:var(--radius);
-  box-shadow:0 2px 8px var(--card-shadow);
-  overflow:hidden;
-  transition:transform var(--transition),box-shadow var(--transition);
-}
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 4px 12px var(--card-shadow);
-}
-.card .image{
-  width:100%;
-  height:160px;
-  background-size:cover;
-  background-position:center;
-}
-.card .content{
-  padding:1.25rem;
-}
-.card h3{
-  font-size:1.3rem;
-  margin-bottom:.75rem;
-  color:var(--primary);
-}
-.card p{
-  font-size:.95rem;
-  color:var(--text);
-}
-.card a{
-  display:inline-block;
-  margin-top:.75rem;
-  color:var(--link);
-  text-decoration:none;
-  font-weight:600;
-  border-bottom:1px solid transparent;
-  transition:border-color var(--transition);
-}
-.card a:hover{
-  border-color:var(--link);
-  color:var(--link-hover);
-}
-footer{
-  background:#222;
-  color:#aaa;
-  text-align:center;
-  padding:1rem;
-  font-size:.9rem;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#18181b;
-    --card-bg:#242526;
-    --text:#e4e4e7;
-    --primary:#1e90ff;
-    --primary-dark:#1c86ee;
-    --link:#4ea5ff;
-    --link-hover:#1e90ff;
-    --card-shadow:rgba(255,255,255,0.05);
+  :root {
+    --primary: #1e3a8a;
+    --secondary: #2563eb;
+    --bg: #f9fafb;
+    --card-bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --shadow: rgba(0, 0, 0, 0.1);
   }
-}
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.25rem;
+  }
+  nav {
+    margin-top: 0.5rem;
+  }
+  nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    color: var(--muted);
+    font-size: 1.125rem;
+  }
+  .grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--shadow);
+  }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 1.5rem;
+  }
+  .card-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem 0;
+  }
+  .card-text {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .card-link {
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  .card-link:hover {
+    color: var(--primary);
+  }
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--muted);
+    font-size: 0.875rem;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 4rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #3b82f6;
+      --secondary: #2563eb;
+      --bg: #111827;
+      --card-bg: #1f2937;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --shadow: rgba(255, 255, 255, 0.05);
+    }
+    nav a {
+      color: #9ca3af;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Cutting‑edge innovations shaping the world of tomorrow</p>
+  <h1>Tech Horizons</h1>
+  <nav>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#energy">Energy</a>
+    <a href="#health">Health</a>
+    <a href="#transport">Transport</a>
+  </nav>
 </header>
 
 <main>
-  <section class="grid">
-    <!-- Generative AI -->
+  <section class="hero">
+    <h2 id="ai">Latest Breakthroughs in Technology</h2>
+    <p>Explore the forefront of innovation shaping tomorrow.</p>
+  </section>
+
+  <section id="ai" class="grid">
     <div class="card">
-      <div class="image" style="background-image:url('https://picsum.photos/id/1015/400/200');"></div>
-      <div class="content">
-        <h3>Generative AI Evolution</h3>
-        <p>Models like GPT‑5, Claude 3 and Gemini showcase unprecedented language understanding and multimodal creativity, enabling new applications in design, content creation, and scientific research.</p>
-        <a href="https://openai.com/research/" target="_blank">Explore Research</a>
+      <img src="https://images.unsplash.com/photo-1587614382349-1e2b1d3b4b6b?auto=format&fit=crop&w=400&q=80" alt="Generative AI">
+      <div class="card-body">
+        <h3 class="card-title">Generative AI & Multimodal Models</h3>
+        <p class="card-text">
+          OpenAI’s GPT‑4 and GPT‑5 variants now understand images, audio, and code, enabling richer
+          interactions and creative content generation across industries.
+        </p>
+        <a class="card-link" href="https://openai.com/research/gpt-5" target="_blank">Read more</a>
       </div>
     </div>
 
-    <!-- Quantum Supremacy -->
     <div class="card">
-      <div class="image" style="background-image:url('https://picsum.photos/id/1025/400/200');"></div>
-      <div class="content">
-        <h3>Quantum Computing Milestones</h3>
-        <p>IBM’s Eagle (127‑qubit) and Google’s Sycamore achieve quantum advantage, opening doors for cryptography, material science, and complex optimization problems.</p>
-        <a href="https://www.ibm.com/quantum-computing/technology/" target="_blank">IBM Quantum</a>
+      <img src="https://images.unsplash.com/photo-1573164574398-6e3d8a0f6c69?auto=format&fit=crop&w=400&q=80" alt="Quantum Supremacy">
+      <div class="card-body">
+        <h3 class="card-title">Quantum Supremacy Achieved</h3>
+        <p class="card-text">
+          Google’s Sycamore processor completed a complex calculation in 200 seconds that would take
+          the world's fastest supercomputer over 10,000 years, marking a milestone in quantum
+          computing.
+        </p>
+        <a class="card-link" href="https://ai.googleblog.com/2024/05/google-quantum-supremacy.html" target="_blank">Read more</a>
       </div>
     </div>
 
-    <!-- AI Chips -->
     <div class="card">
-      <div class="image" style="background-image:url('https://picsum.photos/id/1035/400/200');"></div>
-      <div class="content">
-        <h3>Next‑Gen AI Processors</h3>
-        <p>Nvidia H100 and Cerebras CS-2 deliver petaflops of tensor throughput, accelerating AI workloads from data centers to edge devices.</p>
-        <a href="https://www.nvidia.com/en-us/data-center/ai-accelerator-h100/" target="_blank">Nvidia H100</a>
-      </div>
-    </div>
-
-    <!-- SpaceTech -->
-    <div class="card">
-      <div class="image" style="background-image:url('https://picsum.photos/id/1045/
+      <img src="https://images.unsplash.com/photo-1517486808906-6e678b4efb66?auto=format&fit=crop&w=400&q=80" alt="Brain-Computer Interface">
+      <div class="card-body">
+        <h3 class="card-title">Brain–Computer
