@@ -1,187 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<meta charset="utf-8">
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-:root {
-  --bg: #f9fafb;
-  --primary: #0d47a1;
-  --secondary: #1976d2;
-  --accent: #ff6f61;
-  --text: #222;
-  --card-bg: #fff;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --radius: 12px;
-  --transition: 0.3s ease;
-}
+  :root {
+    --primary: #1976d2;
+    --accent: #ff6f00;
+    --bg: #f5f5f5;
+    --card-bg: #ffffff;
+    --text: #333333;
+    --muted: #777777;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
 
-body {
-  margin:0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-family); background: var(--bg); color: var(--text); line-height: 1.6; }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-a {
-  color: var(--secondary);
-  text-decoration: none;
-}
-a:hover { text-decoration: underline; }
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
 
-header {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #fff;
-  padding: 3rem 1rem;
-  text-align:center;
-}
-header h1 {
-  margin:0;
-  font-size:2.5rem;
-}
-header p {
-  margin-top:.5rem;
-  font-size:1.2rem;
-}
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
 
-main {
-  max-width:1200px;
-  margin:2rem auto;
-  padding:0 1rem;
-}
+  .breakthroughs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
 
-.grid {
-  display:grid;
-  gap:1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 1rem;
+    flex: 1;
+  }
+  .card-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--primary);
+  }
+  .card-content p {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .card-content .date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
 
-.card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 12px var(--shadow);
-  overflow:hidden;
-  transition:var(--transition);
-}
-.card:hover { transform:translateY(-4px); }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
 
-.card img {
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-.card-content {
-  padding:1.5rem;
-}
-.card-content h3 {
-  margin-top:0;
-  color:var(--primary);
-}
-.card-content p {
-  margin: .75rem 0 1.25rem;
-  font-size:.95rem;
-}
-.card-content a {
-  display:inline-block;
-  background: var(--accent);
-  color:#fff;
-  padding:.5rem 1rem;
-  border-radius:4px;
-  font-weight:600;
-  transition:var(--transition);
-}
-.card-content a:hover { background: #ff4f4f; }
-
-footer {
-  text-align:center;
-  padding:1rem;
-  font-size:.9rem;
-  color:#777;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root { --bg:#121212; --text:#e0e0e0; --card-bg:#1e1e1e; }
-  header { background: linear-gradient(135deg, #1e3a8a, #1d4ed8); }
-}
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --card-bg: #1e1e1e;
+      --text: #e0e0e0;
+      --muted: #aaa;
+    }
+  }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
-  <p>From AI to Quantum Computing: the innovations shaping our future.</p>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <p>Explore the frontiers reshaping our world</p>
 </header>
 
-<main>
-  <section class="grid">
-    <!-- AI & Machine Learning -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1542744173-8a0b2f4c2dbe?auto=format&fit=crop&w=600&q=80" alt="AI">
-      <div class="card-content">
-        <h3>Generative AI 3.0</h3>
-        <p>OpenAI’s GPT‑5 and Anthropic’s Claude 3 surpass previous models in understanding nuance and generating context‑aware code, art, and scientific research.</p>
-        <a href="https://www.openai.com" target="_blank">Learn More</a>
-      </div>
-    </article>
-
+<div class="container">
+  <section class="breakthroughs">
     <!-- Quantum Computing -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1611194009375-5d6e5d1e9d93?auto=format&fit=crop&w=600&q=80" alt="Quantum">
+      <img src="https://picsum.photos/seed/quantum/600/400" alt="Quantum Computing">
       <div class="card-content">
-        <h3>Quantum Supremacy Achieved</h3>
-        <p>IBM and Google announce a quantum processor with 1,000 logical qubits, enabling practical simulations of complex molecules and cryptographic algorithms.</p>
-        <a href="https://www.ibm.com/quantum" target="_blank">Discover</a>
+        <h3>Fault‑Tolerant Quantum Processors</h3>
+        <p>Researchers have built the first fault‑tolerant quantum chip with over 100 logical qubits, enabling practical quantum advantage for cryptography and simulation.</p>
+        <span class="date">Feb 2026</span>
       </div>
     </article>
 
-    <!-- Space & Exploration -->
+    <!-- Generative AI -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1587032683988-8b1f3e4c3c52?auto=format&fit=crop&w=600&q=80" alt="Space">
+      <img src="https://picsum.photos/seed/ai/600/400" alt="Generative AI">
       <div class="card-content">
-        <h3>Mars Sample Return Mission</h3>
-        <p>NASA’s Perseverance rover successfully delivered a sealed Martian rock sample to Earth, opening a new chapter in planetary science.</p>
-        <a href="https://www.nasa.gov" target="_blank">Read More</a>
+        <h3>GPT‑5: Multimodal Mastery</h3>
+        <p>GPT‑5 can understand and generate text, code, images, and music in a single model, opening new possibilities in creative industries and education.</p>
+        <span class="date">Mar 2026</span>
       </div>
     </article>
 
-    <!-- Energy & Sustainability -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1584422413660-3b5a9c0e6c15?auto=format&fit=crop&w=600&q=80" alt="Energy">
-      <div class="card-content">
-        <h3>Solid‑State Batteries</h3>
-        <p>Commercial production of solid‑state batteries offers higher energy density and safer operation for EVs and grid storage.</p>
-        <a href="https://www.energy.gov" target="_blank">Explore</a>
-      </div>
-    </article>
-
-    <!-- Biotechnology -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1581091870628-0a1a5e1d6c7f?auto=format&fit=crop&w=600&q=80" alt="Biotech">
-      <div class="card-content">
-        <h3>CRISPR Gene Therapies</h3>
-        <p>CRISPR‑Cas13 therapies approved for treating genetic blindness and certain cancers, showcasing the power of precision editing.</p>
-        <a href="https://www.fda.gov" target="_blank">Details</a>
-      </div>
-    </article>
-
-    <!-- Connectivity (6G) -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1519985176271-961d05379b80?auto=format&fit=crop&w=600&q=80" alt="Connectivity">
-      <div class="card-content">
-        <h3>6G Roadmap</h3>
-        <p>Global telecom leaders outline 6G standards, targeting terabit‑per‑second speeds, sub‑millisecond latency, and integrated AI.</p>
-        <a href="https://www.itu.int" target="_blank">See Specs</a>
-      </div>
-    </article>
-  </section>
-</main>
-
-<footer>
-  © 2024 Tech Insight. All rights reserved.
-</footer>
-
-</body>
-</html>
+    <!-- Brain‑Computer Interfaces
