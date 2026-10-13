@@ -2,179 +2,83 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – 2024</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
-    --primary: #1e3a8a;
-    --secondary: #2563eb;
-    --bg: #f9fafb;
-    --card-bg: #ffffff;
-    --text: #111827;
-    --muted: #6b7280;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --primary:#1e3a8a;
+    --secondary:#f59e0b;
+    --accent:#10b981;
+    --bg:#fafafa;
+    --text:#1f2937;
+    --card-bg:#fff;
+    --card-shadow:rgba(0,0,0,0.1);
   }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 1.5rem 2rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.25rem;
-  }
-  nav {
-    margin-top: 0.5rem;
-  }
-  nav a {
-    color: #d1d5db;
-    text-decoration: none;
-    margin: 0 1rem;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #fff;
-  }
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .hero {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  .hero h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .hero p {
-    color: var(--muted);
-    font-size: 1.125rem;
-  }
-  .grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: 0.75rem;
-    overflow: hidden;
-    box-shadow: 0 4px 12px var(--shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px var(--shadow);
-  }
-  .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
-  .card-body {
-    padding: 1.5rem;
-  }
-  .card-title {
-    font-size: 1.25rem;
-    margin: 0 0 0.75rem 0;
-  }
-  .card-text {
-    color: var(--muted);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-  .card-link {
-    display: inline-block;
-    color: var(--secondary);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  .card-link:hover {
-    color: var(--primary);
-  }
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    color: var(--muted);
-    font-size: 0.875rem;
-    border-top: 1px solid #e5e7eb;
-    margin-top: 4rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --primary: #3b82f6;
-      --secondary: #2563eb;
-      --bg: #111827;
-      --card-bg: #1f2937;
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --shadow: rgba(255, 255, 255, 0.05);
-    }
-    nav a {
-      color: #9ca3af;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
+  header{background:var(--primary);color:#fff;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+  header h1{font-size:1.8rem;}
+  nav a{color:#fff;text-decoration:none;margin-left:1rem;font-weight:500;}
+  nav a:hover{color:var(--accent);}
+  main{max-width:1200px;margin:auto;padding:2rem;}
+  .hero{background:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA5MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJub25lIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjYwIiByeD0iMTAiIHJ5PSIxMCIgcng9IjAiIGZpbGw9IiNFOTBBQ0MiIC8+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjUwIiByeD0iNzAiIHJ5PSI3MCIgcng9IjAiIGZpbGw9IiNGRkYxMDAiIC8+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM4IiByeD0iMTEwIiBjeD0iMTAwIiBjeT0iODAiIGZpbGw9IiNGRjAwMDAiIC8+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjI4IiByeD0iMTEwIiBjeD0iMTAwIiBjeT0iODAiIGZpbGw9IiNGRkZGRkYiIC8+</svg>') no-repeat center/cover;color:#fff;text-align:center;padding:4rem 2rem;}
+  .hero h2{font-size:2.5rem;max-width:800px;margin:auto;}
+  .section{margin-top:4rem;}
+  .section h2{font-size:1.75rem;color:var(--primary);margin-bottom:1rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+  .card{background:var(--card-bg);box-shadow:0 4px 8px var(--card-shadow);padding:1.5rem;border-radius:8px;transition:transform .2s ease;}
+  .card:hover{transform:translateY(-5px);}
+  .card h3{font-size:1.4rem;margin-bottom:.75rem;color:var(--primary);}
+  .card p{font-size:.95rem;color:var(--text);}
+  footer{background:#1f2937;color:#d1d5db;text-align:center;padding:1rem 0;margin-top:4rem;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
 <header>
-  <h1>Tech Horizons</h1>
+  <h1>TechPulse</h1>
   <nav>
     <a href="#ai">AI</a>
     <a href="#quantum">Quantum</a>
+    <a href="#bio">Biotech</a>
     <a href="#energy">Energy</a>
-    <a href="#health">Health</a>
-    <a href="#transport">Transport</a>
+    <a href="#space">Space</a>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <h2 id="ai">Latest Breakthroughs in Technology</h2>
-    <p>Explore the forefront of innovation shaping tomorrow.</p>
+    <h2>Cutting‑Edge Innovations Shaping the Future – 2024</h2>
   </section>
 
-  <section id="ai" class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1587614382349-1e2b1d3b4b6b?auto=format&fit=crop&w=400&q=80" alt="Generative AI">
-      <div class="card-body">
-        <h3 class="card-title">Generative AI & Multimodal Models</h3>
-        <p class="card-text">
-          OpenAI’s GPT‑4 and GPT‑5 variants now understand images, audio, and code, enabling richer
-          interactions and creative content generation across industries.
-        </p>
-        <a class="card-link" href="https://openai.com/research/gpt-5" target="_blank">Read more</a>
+  <!-- AI Breakthroughs -->
+  <section id="ai" class="section">
+    <h2>🧠 Artificial Intelligence</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>GPT‑4 Turbo & GPT‑5 Alpha</h3>
+        <p>OpenAI’s GPT‑4 Turbo offers 10× faster inference with 90% lower latency, enabling real‑time AI assistants. GPT‑5 Alpha, released Q4 2024, introduces multimodal reasoning across text, images, and code, surpassing human performance on several benchmark tasks.</p>
+      </div>
+      <div class="card">
+        <h3>AI‑Accelerated Edge Chips</h3>
+        <p>Apple’s M7 Neural Engine, NVIDIA’s H100 Tensor Core GPU, and Google’s Coral Edge TPU bring high‑throughput ML inference to smartphones, industrial IoT, and autonomous vehicles, reducing power consumption by 30‑50% compared to previous generations.</p>
+      </div>
+      <div class="card">
+        <h3>Self‑Supervised Learning</h3>
+        <p>Meta’s BLIP‑2 and Google’s DALL·E 3.5 use self‑supervised pretraining to generate images from textual prompts, enabling zero‑shot content creation across languages and modalities.</p>
       </div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1573164574398-6e3d8a0f6c69?auto=format&fit=crop&w=400&q=80" alt="Quantum Supremacy">
-      <div class="card-body">
-        <h3 class="card-title">Quantum Supremacy Achieved</h3>
-        <p class="card-text">
-          Google’s Sycamore processor completed a complex calculation in 200 seconds that would take
-          the world's fastest supercomputer over 10,000 years, marking a milestone in quantum
-          computing.
-        </p>
-        <a class="card-link" href="https://ai.googleblog.com/2024/05/google-quantum-supremacy.html" target="_blank">Read more</a>
+  <!-- Quantum Computing Breakthroughs -->
+  <section id="quantum" class="section">
+    <h2>⚛️ Quantum Computing</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Google Sycamore 1.0 – 5‑Qubit Error‑Correction</h3>
+        <p>Google’s Sycamore 1.0 achieves logical qubit fidelity of 99.9% using surface‑code error correction, a critical step toward fault‑tolerant quantum processors.</p>
       </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1517486808906-6e678b4efb66?auto=format&fit=crop&w=400&q=80" alt="Brain-Computer Interface">
-      <div class="card-body">
-        <h3 class="card-title">Brain–Computer
+      <div class="card">
+        <h3>IBM Quantum Hummingbird</h3>
+        <p>IBM’s Hummingbird architecture adds 12 superconducting qubits with 80 % error rates below the threshold for quantum advantage in
