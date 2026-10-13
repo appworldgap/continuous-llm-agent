@@ -5,182 +5,118 @@
 <title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Root variables */
-:root {
-  --primary: #2d9cdb;
-  --secondary: #27ae60;
-  --bg: #f9f9f9;
-  --text: #333;
-  --accent: #f39c12;
-  --font-family: 'Helvetica Neue', Arial, sans-serif;
-}
+  /* ---------- Reset & Base ---------- */
+  *, *::before, *::after {box-sizing: border-box;}
+  body, h1, h2, h3, p, ul, li, figure {margin:0; padding:0;}
+  body {font-family: 'Inter', sans-serif; line-height:1.6; background:#f4f7fb; color:#333;}
+  a {color:inherit; text-decoration:none;}
 
-/* Global styles */
-body {
-  margin: 0;
-  font-family: var(--font-family);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
+  /* ---------- Layout ---------- */
+  .container {max-width:1200px; margin:0 auto; padding:2rem;}
+  header {text-align:center; padding:3rem 0; background:#1c1e26; color:#fff;}
+  header h1 {font-size:3rem; margin-bottom:0.5rem;}
+  header p {font-size:1.2rem; opacity:0.8;}
+  
+  .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:2rem; margin-top:2rem;}
+  article {background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:transform .2s;}
+  article:hover {transform:translateY(-4px);}
+  figure {margin:0; width:100%; height:180px; background:#e0e5eb;}
+  figure img {width:100%; height:100%; object-fit:cover;}
+  .content {padding:1.5rem;}
+  h2 {font-size:1.5rem; margin-bottom:0.75rem;}
+  .meta {font-size:0.9rem; color:#777; margin-bottom:1rem;}
+  .description {font-size:1rem; color:#555;}
+  footer {text-align:center; padding:2rem 0; margin-top:4rem; color:#777;}
 
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-a:hover { color: var(--accent); }
-
-header {
-  background: var(--primary);
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-header h1 { margin: 0; font-size: 2.5rem; }
-header p { margin-top: 0.5rem; }
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-}
-nav a {
-  padding: 0.75rem 1.25rem;
-  border-radius: 25px;
-  background: var(--secondary);
-  color: #fff;
-  transition: background 0.3s;
-}
-nav a:hover { background: var(--accent); }
-
-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-section:nth-child(even) { background: #fff; }
-section:nth-child(odd) { background: var(--bg); }
-
-section h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: var(--primary);
-}
-section p { margin-bottom: 1rem; }
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-.card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.card img { width: 100%; height: 150px; object-fit: cover; }
-.card .content {
-  padding: 1rem;
-  flex: 1;
-}
-.card h3 { margin-top: 0; font-size: 1.25rem; color: var(--primary); }
-.card p { flex: 1; }
-
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: var(--primary);
-  color: #fff;
-}
-footer p { margin: 0; }
+  /* ---------- Responsive ---------- */
+  @media (max-width:600px) {
+    header h1 {font-size:2.2rem;}
+    header p {font-size:1rem;}
+  }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>Explore the cutting‑edge innovations shaping our world</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Exploring the most transformative innovations of 2026</p>
 </header>
 
-<nav>
-  <a href="#ai">Artificial Intelligence</a>
-  <a href="#quantum">Quantum Computing</a>
-  <a href="#biotech">Biotechnology</a>
-  <a href="#renewable">Renewable Energy</a>
-  <a href="#space">Space Technology</a>
-</nav>
+<div class="container">
+  <div class="grid">
+    <!-- Breakthrough 1 -->
+    <article>
+      <figure>
+        <img src="https://picsum.photos/id/1011/400/250" alt="Quantum Processor">
+      </figure>
+      <div class="content">
+        <h2>5‑Qubit Quantum Processor “Quantex‑5”</h2>
+        <div class="meta">Quantum Computing • 12 Jan 2026</div>
+        <p class="description">
+          Quantex‑5, developed by Qubitica, surpasses the 4‑qubit threshold with error‑correction levels that enable practical small‑scale algorithms. The device can now factor 20‑digit numbers in minutes, bringing real‑world quantum advantage closer to commercial deployment.
+        </p>
+      </div>
+    </article>
 
-<section id="ai">
-  <h2>Artificial Intelligence</h2>
-  <p>2026 marks a new era for AI with the advent of <strong>Self‑Evolving Neural Networks (SENN)</strong>, enabling systems to autonomously restructure their own architectures for optimal performance. Combined with <strong>Zero‑Shot Reasoning Models (ZSRM)</strong>, AI can now adapt to novel tasks without prior training data, revolutionizing robotics, medical diagnostics, and creative content generation.</p>
-  <div class="cards">
-    <div class="card">
-      <img src="https://source.unsplash.com/collection/142902/300x200" alt="Robotics">
+    <!-- Breakthrough 2 -->
+    <article>
+      <figure>
+        <img src="https://picsum.photos/id/1025/400/250" alt="Foldable AI Chip">
+      </figure>
       <div class="content">
-        <h3>Adaptive Robotics</h3>
-        <p>Robots that reconfigure their neural pathways on the fly, allowing unprecedented agility and learning speed.</p>
+        <h2>Foldable AI Chips for Mobile Devices</h2>
+        <div class="meta">Semiconductors • 5 Mar 2026</div>
+        <p class="description">
+          SiliconFold released a bendable, high‑performance AI inference chip that can be integrated into foldable smartphones and wearable tech. It delivers 10× higher AI throughput per watt while maintaining 0.9× the power consumption of current mobile GPUs.
+        </p>
       </div>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/collection/142903/300x200" alt="Medical AI">
+    </article>
+
+    <!-- Breakthrough 3 -->
+    <article>
+      <figure>
+        <img src="https://picsum.photos/id/1045/400/250" alt="Solar‑Battery Grid">
+      </figure>
       <div class="content">
-        <h3>Medical Diagnostics</h3>
-        <p>AI-driven imaging analysis with 99.9% accuracy, reducing misdiagnosis rates and speeding up treatment plans.</p>
+        <h2>Perovskite–Silicon Tandem Solar Panels</h2>
+        <div class="meta">Energy • 18 Apr 2026</div>
+        <p class="description">
+          The new tandem panels combine perovskite top cells with silicon bottoms, achieving 27.5% efficiency—10% above the current industry record. Their scalable manufacturing process cuts production cost by 35%, accelerating grid‑scale solar adoption.
+        </p>
       </div>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/collection/142904/300x200" alt="Creative AI">
+    </article>
+
+    <!-- Breakthrough 4 -->
+    <article>
+      <figure>
+        <img src="https://picsum.photos/id/1060/400/250" alt="Bio‑Engineered Cell">
+      </figure>
       <div class="content">
-        <h3>Creative AI</h3>
-        <p>Generative models that compose music, write narratives, and design products without human prompts.</p>
+        <h2>CRISPR‑Based Cell Therapy for Rare Diseases</h2>
+        <div class="meta">Biotech • 22 May 2026</div>
+        <p class="description">
+          GeneHeal’s CRISPR platform edits patient‑derived stem cells to correct mutations responsible for transthyretin amyloidosis. Early phase trials show 90% reduction in circulating amyloid proteins, paving the way for the first curative cell therapy.
+        </p>
       </div>
-    </div>
+    </article>
+
+    <!-- Breakthrough 5 -->
+    <article>
+      <figure>
+        <img src="https://picsum.photos/id/1070/400/250" alt="Space‑Tether Launch">
+      </figure>
+      <div class="content">
+        <h2>Space‑Tether Satellite Deployment System</h2>
+        <div class="meta">Space Tech • 7 Jun 2026</div>
+        <p class="description">
+          AstroTethers introduced a rapid‑deployment tether system that lowers launch mass by 40% and allows satellites to adjust orbit post‑launch with micro‑thrusters. The first mission demonstrated a 3‑hour on‑orbit deployment for a small CubeSat constellation.
+        </p>
+      </div>
+    </article>
   </div>
-</section>
+</div>
 
-<section id="quantum">
-  <h2>Quantum Computing</h2>
-  <p>Commercially viable <strong>Error‑Corrected Quantum Processors (ECQP)</strong> are now in production, offering a breakthrough in fault tolerance that allows 10,000 logical qubits to operate reliably. These processors power <strong>Quantum‑Enhanced Optimization</strong> for logistics, cryptography, and material science, significantly outperforming classical supercomputers.</p>
-  <div class="cards">
-    <div class="card">
-      <img src="https://source.unsplash.com/collection/142905/300x200" alt="Quantum Chip">
-      <div class="content">
-        <h3>Scalable Qubits</h3>
-        <p>Hybrid silicon–superconducting qubits with coherence times exceeding 10 milliseconds.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/collection/142906/300x200" alt="Optimization">
-      <div class="content">
-        <h3>Logistics Optimization</h3>
-        <p>Quantum algorithms reduce route planning times by up to 95%, cutting fuel consumption and emissions.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://source.unsplash.com/collection/142907/300x200" alt="Cryptography">
-      <div class="content">
-        <h3>Post‑Quantum Cryptography</h3>
-        <p>New quantum‑resistant protocols secure data against future quantum attacks.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="biotech">
-  <h2>Biotechnology</h2>
-  <p>CRISPR‑based <strong>Genome‑Editing Platforms</strong> now deliver 99.8% precision, enabling targeted gene therapies for previously untreatable genetic disorders. In parallel, <strong>Lab‑Grown Organs</strong> are entering clinical trials, offering realistic organ models for drug testing and transplantation.</p>
-  <div class="cards">
-    <div class="card">
-      <img src="https://source.unsplash.com/collection/142908/300x200" alt="CRISPR">
-      <div
+<footer>
+  <p>© 2026 TechInsight – All rights reserved.</p>
+</footer>
+</body>
+</html>
