@@ -2,83 +2,185 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary:#1e3a8a;
-    --secondary:#f59e0b;
-    --accent:#10b981;
-    --bg:#fafafa;
-    --text:#1f2937;
-    --card-bg:#fff;
-    --card-shadow:rgba(0,0,0,0.1);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
-  header{background:var(--primary);color:#fff;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;}
-  header h1{font-size:1.8rem;}
-  nav a{color:#fff;text-decoration:none;margin-left:1rem;font-weight:500;}
-  nav a:hover{color:var(--accent);}
-  main{max-width:1200px;margin:auto;padding:2rem;}
-  .hero{background:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA5MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJub25lIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjYwIiByeD0iMTAiIHJ5PSIxMCIgcng9IjAiIGZpbGw9IiNFOTBBQ0MiIC8+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjUwIiByeD0iNzAiIHJ5PSI3MCIgcng9IjAiIGZpbGw9IiNGRkYxMDAiIC8+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM4IiByeD0iMTEwIiBjeD0iMTAwIiBjeT0iODAiIGZpbGw9IiNGRjAwMDAiIC8+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjI4IiByeD0iMTEwIiBjeD0iMTAwIiBjeT0iODAiIGZpbGw9IiNGRkZGRkYiIC8+</svg>') no-repeat center/cover;color:#fff;text-align:center;padding:4rem 2rem;}
-  .hero h2{font-size:2.5rem;max-width:800px;margin:auto;}
-  .section{margin-top:4rem;}
-  .section h2{font-size:1.75rem;color:var(--primary);margin-bottom:1rem;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
-  .card{background:var(--card-bg);box-shadow:0 4px 8px var(--card-shadow);padding:1.5rem;border-radius:8px;transition:transform .2s ease;}
-  .card:hover{transform:translateY(-5px);}
-  .card h3{font-size:1.4rem;margin-bottom:.75rem;color:var(--primary);}
-  .card p{font-size:.95rem;color:var(--text);}
-  footer{background:#1f2937;color:#d1d5db;text-align:center;padding:1rem 0;margin-top:4rem;}
-  a{color:var(--accent);text-decoration:none;}
-  a:hover{text-decoration:underline;}
+/* Root variables */
+:root {
+  --primary: #2d9cdb;
+  --secondary: #27ae60;
+  --bg: #f9f9f9;
+  --text: #333;
+  --accent: #f39c12;
+  --font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover { color: var(--accent); }
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+header h1 { margin: 0; font-size: 2.5rem; }
+header p { margin-top: 0.5rem; }
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+nav a {
+  padding: 0.75rem 1.25rem;
+  border-radius: 25px;
+  background: var(--secondary);
+  color: #fff;
+  transition: background 0.3s;
+}
+nav a:hover { background: var(--accent); }
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+section:nth-child(even) { background: #fff; }
+section:nth-child(odd) { background: var(--bg); }
+
+section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+section p { margin-bottom: 1rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card img { width: 100%; height: 150px; object-fit: cover; }
+.card .content {
+  padding: 1rem;
+  flex: 1;
+}
+.card h3 { margin-top: 0; font-size: 1.25rem; color: var(--primary); }
+.card p { flex: 1; }
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--primary);
+  color: #fff;
+}
+footer p { margin: 0; }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>TechPulse</h1>
-  <nav>
-    <a href="#ai">AI</a>
-    <a href="#quantum">Quantum</a>
-    <a href="#bio">Biotech</a>
-    <a href="#energy">Energy</a>
-    <a href="#space">Space</a>
-  </nav>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <p>Explore the cutting‑edge innovations shaping our world</p>
 </header>
 
-<main>
-  <section class="hero">
-    <h2>Cutting‑Edge Innovations Shaping the Future – 2024</h2>
-  </section>
+<nav>
+  <a href="#ai">Artificial Intelligence</a>
+  <a href="#quantum">Quantum Computing</a>
+  <a href="#biotech">Biotechnology</a>
+  <a href="#renewable">Renewable Energy</a>
+  <a href="#space">Space Technology</a>
+</nav>
 
-  <!-- AI Breakthroughs -->
-  <section id="ai" class="section">
-    <h2>🧠 Artificial Intelligence</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>GPT‑4 Turbo & GPT‑5 Alpha</h3>
-        <p>OpenAI’s GPT‑4 Turbo offers 10× faster inference with 90% lower latency, enabling real‑time AI assistants. GPT‑5 Alpha, released Q4 2024, introduces multimodal reasoning across text, images, and code, surpassing human performance on several benchmark tasks.</p>
-      </div>
-      <div class="card">
-        <h3>AI‑Accelerated Edge Chips</h3>
-        <p>Apple’s M7 Neural Engine, NVIDIA’s H100 Tensor Core GPU, and Google’s Coral Edge TPU bring high‑throughput ML inference to smartphones, industrial IoT, and autonomous vehicles, reducing power consumption by 30‑50% compared to previous generations.</p>
-      </div>
-      <div class="card">
-        <h3>Self‑Supervised Learning</h3>
-        <p>Meta’s BLIP‑2 and Google’s DALL·E 3.5 use self‑supervised pretraining to generate images from textual prompts, enabling zero‑shot content creation across languages and modalities.</p>
+<section id="ai">
+  <h2>Artificial Intelligence</h2>
+  <p>2026 marks a new era for AI with the advent of <strong>Self‑Evolving Neural Networks (SENN)</strong>, enabling systems to autonomously restructure their own architectures for optimal performance. Combined with <strong>Zero‑Shot Reasoning Models (ZSRM)</strong>, AI can now adapt to novel tasks without prior training data, revolutionizing robotics, medical diagnostics, and creative content generation.</p>
+  <div class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/collection/142902/300x200" alt="Robotics">
+      <div class="content">
+        <h3>Adaptive Robotics</h3>
+        <p>Robots that reconfigure their neural pathways on the fly, allowing unprecedented agility and learning speed.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Quantum Computing Breakthroughs -->
-  <section id="quantum" class="section">
-    <h2>⚛️ Quantum Computing</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Google Sycamore 1.0 – 5‑Qubit Error‑Correction</h3>
-        <p>Google’s Sycamore 1.0 achieves logical qubit fidelity of 99.9% using surface‑code error correction, a critical step toward fault‑tolerant quantum processors.</p>
+    <div class="card">
+      <img src="https://source.unsplash.com/collection/142903/300x200" alt="Medical AI">
+      <div class="content">
+        <h3>Medical Diagnostics</h3>
+        <p>AI-driven imaging analysis with 99.9% accuracy, reducing misdiagnosis rates and speeding up treatment plans.</p>
       </div>
-      <div class="card">
-        <h3>IBM Quantum Hummingbird</h3>
-        <p>IBM’s Hummingbird architecture adds 12 superconducting qubits with 80 % error rates below the threshold for quantum advantage in
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/collection/142904/300x200" alt="Creative AI">
+      <div class="content">
+        <h3>Creative AI</h3>
+        <p>Generative models that compose music, write narratives, and design products without human prompts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quantum">
+  <h2>Quantum Computing</h2>
+  <p>Commercially viable <strong>Error‑Corrected Quantum Processors (ECQP)</strong> are now in production, offering a breakthrough in fault tolerance that allows 10,000 logical qubits to operate reliably. These processors power <strong>Quantum‑Enhanced Optimization</strong> for logistics, cryptography, and material science, significantly outperforming classical supercomputers.</p>
+  <div class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/collection/142905/300x200" alt="Quantum Chip">
+      <div class="content">
+        <h3>Scalable Qubits</h3>
+        <p>Hybrid silicon–superconducting qubits with coherence times exceeding 10 milliseconds.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/collection/142906/300x200" alt="Optimization">
+      <div class="content">
+        <h3>Logistics Optimization</h3>
+        <p>Quantum algorithms reduce route planning times by up to 95%, cutting fuel consumption and emissions.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/collection/142907/300x200" alt="Cryptography">
+      <div class="content">
+        <h3>Post‑Quantum Cryptography</h3>
+        <p>New quantum‑resistant protocols secure data against future quantum attacks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="biotech">
+  <h2>Biotechnology</h2>
+  <p>CRISPR‑based <strong>Genome‑Editing Platforms</strong> now deliver 99.8% precision, enabling targeted gene therapies for previously untreatable genetic disorders. In parallel, <strong>Lab‑Grown Organs</strong> are entering clinical trials, offering realistic organ models for drug testing and transplantation.</p>
+  <div class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/collection/142908/300x200" alt="CRISPR">
+      <div
