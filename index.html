@@ -2,121 +2,144 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* ---------- Reset & Base ---------- */
-  *, *::before, *::after {box-sizing: border-box;}
-  body, h1, h2, h3, p, ul, li, figure {margin:0; padding:0;}
-  body {font-family: 'Inter', sans-serif; line-height:1.6; background:#f4f7fb; color:#333;}
-  a {color:inherit; text-decoration:none;}
+  /* Import a clean Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-  /* ---------- Layout ---------- */
-  .container {max-width:1200px; margin:0 auto; padding:2rem;}
-  header {text-align:center; padding:3rem 0; background:#1c1e26; color:#fff;}
-  header h1 {font-size:3rem; margin-bottom:0.5rem;}
-  header p {font-size:1.2rem; opacity:0.8;}
-  
-  .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:2rem; margin-top:2rem;}
-  article {background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:transform .2s;}
-  article:hover {transform:translateY(-4px);}
-  figure {margin:0; width:100%; height:180px; background:#e0e5eb;}
-  figure img {width:100%; height:100%; object-fit:cover;}
-  .content {padding:1.5rem;}
-  h2 {font-size:1.5rem; margin-bottom:0.75rem;}
-  .meta {font-size:0.9rem; color:#777; margin-bottom:1rem;}
-  .description {font-size:1rem; color:#555;}
-  footer {text-align:center; padding:2rem 0; margin-top:4rem; color:#777;}
+  :root {
+    --primary: #0066ff;
+    --accent: #ff6600;
+    --bg: #f9f9f9;
+    --text: #222;
+    --card-bg: #fff;
+    --card-shadow: rgba(0,0,0,0.1);
+  }
 
-  /* ---------- Responsive ---------- */
-  @media (max-width:600px) {
-    header h1 {font-size:2.2rem;}
-    header p {font-size:1rem;}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+
+  header {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  header p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--card-shadow);
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .card a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 0.85rem;
+    color: #666;
   }
 </style>
 </head>
 <body>
+
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Exploring the most transformative innovations of 2026</p>
+  <p>From AI & quantum computing to sustainable tech, discover the innovations shaping the future.</p>
 </header>
 
-<div class="container">
-  <div class="grid">
-    <!-- Breakthrough 1 -->
-    <article>
-      <figure>
-        <img src="https://picsum.photos/id/1011/400/250" alt="Quantum Processor">
-      </figure>
-      <div class="content">
-        <h2>5‑Qubit Quantum Processor “Quantex‑5”</h2>
-        <div class="meta">Quantum Computing • 12 Jan 2026</div>
-        <p class="description">
-          Quantex‑5, developed by Qubitica, surpasses the 4‑qubit threshold with error‑correction levels that enable practical small‑scale algorithms. The device can now factor 20‑digit numbers in minutes, bringing real‑world quantum advantage closer to commercial deployment.
-        </p>
-      </div>
-    </article>
+<section class="results">
+  <article class="card">
+    <h3>Breaking News - CNN</h3>
+    <p>View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at …</p>
+    <a href="https://www.cnn.com/" target="_blank" rel="noopener">Visit CNN <span aria-hidden="true">→</span></a>
+  </article>
 
-    <!-- Breakthrough 2 -->
-    <article>
-      <figure>
-        <img src="https://picsum.photos/id/1025/400/250" alt="Foldable AI Chip">
-      </figure>
-      <div class="content">
-        <h2>Foldable AI Chips for Mobile Devices</h2>
-        <div class="meta">Semiconductors • 5 Mar 2026</div>
-        <p class="description">
-          SiliconFold released a bendable, high‑performance AI inference chip that can be integrated into foldable smartphones and wearable tech. It delivers 10× higher AI throughput per watt while maintaining 0.9× the power consumption of current mobile GPUs.
-        </p>
-      </div>
-    </article>
+  <article class="card">
+    <h3>Fox News – Breaking News Updates</h3>
+    <p>Latest Current News: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports.</p>
+    <a href="https://www.foxnews.com/" target="_blank" rel="noopener">Visit Fox News <span aria-hidden="true">→</span></a>
+  </article>
 
-    <!-- Breakthrough 3 -->
-    <article>
-      <figure>
-        <img src="https://picsum.photos/id/1045/400/250" alt="Solar‑Battery Grid">
-      </figure>
-      <div class="content">
-        <h2>Perovskite–Silicon Tandem Solar Panels</h2>
-        <div class="meta">Energy • 18 Apr 2026</div>
-        <p class="description">
-          The new tandem panels combine perovskite top cells with silicon bottoms, achieving 27.5% efficiency—10% above the current industry record. Their scalable manufacturing process cuts production cost by 35%, accelerating grid‑scale solar adoption.
-        </p>
-      </div>
-    </article>
+  <article class="card">
+    <h3>NDTV Latest News</h3>
+    <p>4 hours ago – Latest news headlines from India & around the world. Check out today’s news coverage live with videos & photos …</p>
+    <a href="https://www.ndtv.com/latest" target="_blank" rel="noopener">Visit NDTV <span aria-hidden="true">→</span></a>
+  </article>
 
-    <!-- Breakthrough 4 -->
-    <article>
-      <figure>
-        <img src="https://picsum.photos/id/1060/400/250" alt="Bio‑Engineered Cell">
-      </figure>
-      <div class="content">
-        <h2>CRISPR‑Based Cell Therapy for Rare Diseases</h2>
-        <div class="meta">Biotech • 22 May 2026</div>
-        <p class="description">
-          GeneHeal’s CRISPR platform edits patient‑derived stem cells to correct mutations responsible for transthyretin amyloidosis. Early phase trials show 90% reduction in circulating amyloid proteins, paving the way for the first curative cell therapy.
-        </p>
-      </div>
-    </article>
-
-    <!-- Breakthrough 5 -->
-    <article>
-      <figure>
-        <img src="https://picsum.photos/id/1070/400/250" alt="Space‑Tether Launch">
-      </figure>
-      <div class="content">
-        <h2>Space‑Tether Satellite Deployment System</h2>
-        <div class="meta">Space Tech • 7 Jun 2026</div>
-        <p class="description">
-          AstroTethers introduced a rapid‑deployment tether system that lowers launch mass by 40% and allows satellites to adjust orbit post‑launch with micro‑thrusters. The first mission demonstrated a 3‑hour on‑orbit deployment for a small CubeSat constellation.
-        </p>
-      </div>
-    </article>
-  </div>
-</div>
+  <article class="card">
+    <h3>Google News – Headlines</h3>
+    <p>Read full articles, watch videos, browse thousands of titles and more on the "Headlines" topic with Google News.</p>
+    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank" rel="noopener">Visit Google News <span aria-hidden="true">→</span></a>
+  </article>
+</section>
 
 <footer>
-  <p>© 2026 TechInsight – All rights reserved.</p>
+  © 2026 Technology Insights. All rights reserved.
 </footer>
+
 </body>
 </html>
