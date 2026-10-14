@@ -2,78 +2,173 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology (2024‑2026)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --bg:#111;
-    --fg:#f0f0f0;
-    --accent:#4CAF50;
-    --accent-light:#66BB6A;
-    --card-bg:#1e1e1e;
-    --shadow:#000;
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  body { margin:0; font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--fg); line-height:1.6; }
-  header { padding:2rem; text-align:center; background:linear-gradient(135deg, #2c3e50, #4ca1af); }
-  header h1 { margin:0; font-size:2.5rem; color:#fff; }
-  main { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; padding:2rem; }
-  .card { background:var(--card-bg); padding:1.5rem; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,.3); transition:transform .2s, box-shadow .2s; }
-  .card:hover { transform:translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,.4); }
-  .card h2 { margin-top:0; margin-bottom:.5rem; color:var(--accent); font-size:1.25rem; }
-  .card p { margin:0 0 1rem 0; }
-  .card a { color:var(--accent-light); text-decoration:none; font-weight:600; }
-  footer { text-align:center; padding:1rem; font-size:.9rem; color:#777; }
-  @media (prefers-color-scheme: light) {
-    :root { --bg:#f9f9f9; --fg:#222; --card-bg:#fff; }
-    header { background:linear-gradient(135deg, #e0e0e0, #bdbdbd); }
-    .card { box-shadow:0 2px 4px rgba(0,0,0,.1); }
-    .card:hover { transform:none; box-shadow:0 4px 8px rgba(0,0,0,.15); }
-    footer { color:#444; }
-  }
+/* ====================== Variables & Reset ====================== */
+:root {
+  --primary: #0066cc;      /* Blue */
+  --accent: #ff6600;       /* Orange */
+  --bg: #f9f9f9;           /* Light background */
+  --card-bg: #ffffff;      /* Card background */
+  --text: #222222;         /* Main text color */
+  --muted: #666666;        /* Muted text color */
+  --border-radius: 12px;
+  --transition: .3s ease;
+  --max-width: 1200px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover { color: var(--accent); }
+
+/* ====================== Layout ====================== */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+header p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,.05);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: .5rem;
+  color: var(--primary);
+}
+
+.card-body p {
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: 1rem;
+}
+
+.card-body .read-more {
+  display: inline-block;
+  padding: .4rem .8rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  font-size: .9rem;
+  text-transform: uppercase;
+  transition: background var(--transition);
+}
+
+.card-body .read-more:hover { background: var(--accent); }
+
+footer {
+  text-align: center;
+  font-size: .9rem;
+  color: var(--muted);
+  margin-top: 3rem;
+}
+
+/* ====================== Media Queries ====================== */
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  .card-body h3 { font-size: 1.2rem; }
+}
 </style>
 </head>
+
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI & quantum computing to bio‑engineering – what’s shaping our world in 2024‑2026.</p>
 </header>
 
-<main>
-  <!-- 1. Artificial Intelligence & Machine Learning -->
-  <article class="card">
-    <h2>🤖 AI & LLMs</h2>
-    <p>OpenAI’s GPT‑4 and Claude‑3 deliver unprecedented multimodal understanding—text, images, code, and even audio—enabling fully autonomous creative workflows. <br>
-    New alignment techniques, such as reinforcement learning from human feedback (RLHF) with interpretability layers, reduce harmful outputs.</p>
-    <a href="https://openai.com/research/gpt-4" target="_blank">Read more →</a>
-  </article>
+<!-- AI & Machine Learning -->
+<section id="ai">
+  <h2>Artificial Intelligence</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="https://via.placeholder.com/400x160/0066cc/ffffff?text=LLM+Evolution" alt="Large Language Models">
+      <div class="card-body">
+        <h3>Generative AI 3.0</h3>
+        <p>Transformer‑based models now incorporate multimodal learning at scale, enabling seamless text‑image‑audio generation with real‑time fine‑tuning.</p>
+        <a href="#" class="read-more">Learn More</a>
+      </div>
+    </article>
 
-  <!-- 2. Quantum Computing -->
-  <article class="card">
-    <h2>🧪 Quantum Supremacy 2.0</h2>
-    <p>IBM’s “Eagle” 433‑qubit processor and Google’s “Sycamore‑X” reach quantum advantage for linear‑algebra problems and unstructured search. Quantum‑safe encryption protocols (Post‑Quantum Key Exchange) are moving from research to early adoption.</p>
-    <a href="https://www.ibm.com/quantum-computing/technology" target="_blank">Read more →</a>
-  </article>
+    <article class="card">
+      <img src="https://via.placeholder.com/400x160/ff6600/ffffff?text=Diffusion+Models" alt="Diffusion Models">
+      <div class="card-body">
+        <h3>Diffusion Models in Production</h3>
+        <p>Companies are deploying diffusion‑based generative systems for everything from drug design to creative content, drastically reducing computational budgets.</p>
+        <a href="#" class="read-more">Learn More</a>
+      </div>
+    </article>
+  </div>
+</section>
 
-  <!-- 3. Biotechnology & Gene Editing -->
-  <article class="card">
-    <h2>🧬 CRISPR & Synthetic Biology</h2>
-    <p>Prime editing with base‑specific fidelity now corrects ~98 % of pathogenic mutations in vitro. First-in‑human trials for beta‑thalassemia using synthetic mRNA Cas9 delivered via lipid nanoparticles show durable hematologic improvement.</p>
-    <a href="https://www.nature.com/articles/s41587-024-01234-5" target="_blank">Read more →</a>
-  </article>
+<!-- Quantum Computing -->
+<section id="quantum">
+  <h2>Quantum Computing</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="https://via.placeholder.com/400x160/0066cc/ffffff?text=Quantum+Supremacy" alt="Quantum Supremacy">
+      <div class="card-body">
+        <h3>Error‑Corrected Quantum Advantage</h3>
+        <p>Google and partners now demonstrate fault‑tolerant qubits that outperform classical supercomputers on cryptographic tasks.</p>
+        <a href="#" class="read-more">Learn More</a>
+      </div>
+    </article>
 
-  <!-- 4. Energy & Materials -->
-  <article class="card">
-    <h2>⚡ Energy Revolution</h2>
-    <p>Perovskite‑silicon tandem cells exceed 28 % efficiency and pass the 300‑W‑day stability benchmark. Solid‑state lithium‑sulfur batteries with graphene separators now reach 400 Wh kg⁻¹, a 50 % leap in energy density.</p>
-    <a href="https://www.sciencedirect.com/science/article/pii/S2542-0251(24)00156-5" target="_blank">Read more →</a>
-  </article>
-
-  <!-- 5. Space & Aerospace -->
-  <article class="card">
-    <h2>🚀 Space Exploration</h2>
-    <p>SpaceX Starship achieves a fully reusable orbital flight, paving the way for Artemis‑2 lunar missions and the first human‑crewed Mars mission timeline of 2035. NASA’s James Webb Telescope’s exoplanet spectra now resolve water vapor and methane in habitable zone planets.</p>
-    <a href="https://www.nasa.gov/jwst" target="_blank">Read more →</a>
-  </article>
-
-  <!-- 6. Robotics & Automation -->
-  <article class
+    <article class="card">
+      <img src="https://via.placeholder.com/400x160/ff6600/ffffff?text=Silicon+Qubits" alt="Silicon Qubits">
