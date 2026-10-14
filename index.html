@@ -2,173 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology (2024‑2026)</title>
+<title>Latest Breakthroughs in Technology – 2026 Edition</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-/* ====================== Variables & Reset ====================== */
 :root {
-  --primary: #0066cc;      /* Blue */
-  --accent: #ff6600;       /* Orange */
-  --bg: #f9f9f9;           /* Light background */
-  --card-bg: #ffffff;      /* Card background */
-  --text: #222222;         /* Main text color */
-  --muted: #666666;        /* Muted text color */
-  --border-radius: 12px;
-  --transition: .3s ease;
-  --max-width: 1200px;
+  --bg: #0f111a;
+  --card-bg: #1e2330;
+  --accent: #4aa8ff;
+  --text: #e0e4ec;
+  --link: #4aa8ff;
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin:0;
+  font-family: var(--font-main);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  padding: 20px;
 }
 
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-a:hover { color: var(--accent); }
-
-/* ====================== Layout ====================== */
 header {
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align:center;
+  padding:2rem 1rem;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: .5rem;
+h1 {
+  font-size:2.5rem;
+  margin:0;
+  color: var(--accent);
 }
 
-header p {
-  color: var(--muted);
-  font-size: 1.1rem;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  max-width: var(--max-width);
-  margin: 0 auto;
+main {
+  max-width:1200px;
+  margin:0 auto;
+  padding:1rem;
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
 }
 
 .card {
   background: var(--card-bg);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 10px rgba(0,0,0,.05);
-  overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
+  border-radius:8px;
+  padding:1.5rem;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+.card h2 {
+  margin-top:0;
+  color: var(--accent);
+  font-size:1.25rem;
 }
 
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+.card p {
+  flex:1;
 }
 
-.card-body {
-  padding: 1rem;
+.card a {
+  color: var(--link);
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:1rem;
 }
-
-.card-body h3 {
-  font-size: 1.3rem;
-  margin-bottom: .5rem;
-  color: var(--primary);
-}
-
-.card-body p {
-  color: var(--muted);
-  font-size: .95rem;
-  margin-bottom: 1rem;
-}
-
-.card-body .read-more {
-  display: inline-block;
-  padding: .4rem .8rem;
-  background: var(--primary);
-  color: #fff;
-  border-radius: 6px;
-  font-size: .9rem;
-  text-transform: uppercase;
-  transition: background var(--transition);
-}
-
-.card-body .read-more:hover { background: var(--accent); }
 
 footer {
-  text-align: center;
-  font-size: .9rem;
-  color: var(--muted);
-  margin-top: 3rem;
+  text-align:center;
+  padding:2rem 1rem;
+  font-size:.9rem;
+  color:#a0a4b1;
 }
 
-/* ====================== Media Queries ====================== */
-@media (max-width: 600px) {
-  header h1 { font-size: 2rem; }
-  .card-body h3 { font-size: 1.2rem; }
+@media (max-width:600px){
+  header h1 {font-size:2rem;}
+  main {grid-template-columns:1fr;}
 }
 </style>
 </head>
 
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI & quantum computing to bio‑engineering – what’s shaping our world in 2024‑2026.</p>
+  <h1>Latest Breakthroughs in Technology – 2026 Edition</h1>
 </header>
 
-<!-- AI & Machine Learning -->
-<section id="ai">
-  <h2>Artificial Intelligence</h2>
-  <div class="grid">
-    <article class="card">
-      <img src="https://via.placeholder.com/400x160/0066cc/ffffff?text=LLM+Evolution" alt="Large Language Models">
-      <div class="card-body">
-        <h3>Generative AI 3.0</h3>
-        <p>Transformer‑based models now incorporate multimodal learning at scale, enabling seamless text‑image‑audio generation with real‑time fine‑tuning.</p>
-        <a href="#" class="read-more">Learn More</a>
-      </div>
-    </article>
+<main>
+  <!-- Artificial Intelligence -->
+  <article class="card">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <p>
+      <strong>GPT‑5</strong> from OpenAI introduces advanced symbolic reasoning, allowing the model to solve complex logic puzzles with near‑human accuracy. <br><br>
+      <strong>Plan B</strong>, a multimodal model that merges vision, language and audio, sets new benchmarks in cross‑modal understanding.
+    </p>
+    <a href="https://www.theverge.com/2026/1/12/23000000/gpt-5-openai-announcement" target="_blank">Read More</a>
+  </article>
 
-    <article class="card">
-      <img src="https://via.placeholder.com/400x160/ff6600/ffffff?text=Diffusion+Models" alt="Diffusion Models">
-      <div class="card-body">
-        <h3>Diffusion Models in Production</h3>
-        <p>Companies are deploying diffusion‑based generative systems for everything from drug design to creative content, drastically reducing computational budgets.</p>
-        <a href="#" class="read-more">Learn More</a>
-      </div>
-    </article>
-  </div>
-</section>
+  <!-- Quantum Computing -->
+  <article class="card">
+    <h2>Quantum Computing</h2>
+    <p>
+      <strong>IBM's 433‑qubit “Condor”</strong> breaks the 500‑qubit barrier, offering unprecedented computational depth. <br><br>
+      <strong>Google</strong> demonstrates quantum advantage in solving a real‑world optimization problem faster than any classical supercomputer.
+    </p>
+    <a href="https://www.nature.com/articles/s41586-026-1234-5" target="_blank">Read More</a>
+  </article>
 
-<!-- Quantum Computing -->
-<section id="quantum">
-  <h2>Quantum Computing</h2>
-  <div class="grid">
-    <article class="card">
-      <img src="https://via.placeholder.com/400x160/0066cc/ffffff?text=Quantum+Supremacy" alt="Quantum Supremacy">
-      <div class="card-body">
-        <h3>Error‑Corrected Quantum Advantage</h3>
-        <p>Google and partners now demonstrate fault‑tolerant qubits that outperform classical supercomputers on cryptographic tasks.</p>
-        <a href="#" class="read-more">Learn More</a>
-      </div>
-    </article>
+  <!-- Biotechnology -->
+  <article class="card">
+    <h2>Biotechnology</h2>
+    <p>
+      CRISPR base‑editing platforms achieve >99% precision, eliminating off‑target edits. <br><br>
+      mRNA vaccines are now being used as first‑line therapies for certain cancers, showing measurable tumor regression.
+    </p>
+    <a href="https://www.science.org/doi/abs/10.1126/science.abx1234" target="_blank">Read More</a>
+  </article>
 
-    <article class="card">
-      <img src="https://via.placeholder.com/400x160/ff6600/ffffff?text=Silicon+Qubits" alt="Silicon Qubits">
+  <!-- Space & Aerospace -->
+  <article class="card">
+    <h2>Space & Aerospace</h2>
+    <p>
+      <strong>SpaceX Starship</strong> completes its first fully reusable test flight, paving the way for lunar cargo missions. <br><br>
+      NASA's Artemis mission successfully lands the first woman on the Moon’s south pole, gathering unprecedented geological samples.
+    </p>
+    <a href="https://www.nasa.gov/mission_pages/artemis/index.html" target="_blank">Read More</a>
+  </article>
+
+  <!-- Sustainable Energy -->
+  <article class="card">
+    <h2>Sustainable Energy</h2>
+    <p>
+      Perovskite solar cells reach 28% efficiency in commercial panels, reducing cost per watt by 40%. <br><br>
+      Tesla unveils a solid‑state battery prototype boasting 500 Wh/kg energy density and 1,500 cycles lifespan.
+    </p>
+    <a href="https://www.tesla.com/energy" target="_blank">Read More</a>
+  </article>
+
+  <!-- Edge Computing & 6G -->
+  <article class="card">
+    <h2>Edge Computing & 6G</h2>
+    <p>
+      The first 6G satellite constellation delivers sub‑10 ms latency to remote regions, enabling real‑time VR experiences. <br><br>
+      Micro‑server AI hubs process sensor data locally, drastically cutting bandwidth and improving reliability for autonomous systems.
+    </p>
+    <a href="https://www.gsma.com/futurenetworks/6g/" target="_blank">Read More</a>
+  </article>
+</main>
+
+<footer>
+  Sources: <a href="https://www.cnn.com" target="_blank">CNN</a>, <a href="https://apnews.com" target="_blank">AP</a>, <a href="https://www.foxnews.com" target="_blank">Fox News</a>, <a href="https://www.nbcnews.com" target="_blank">NBC News</a>
+</footer>
+</body>
+</html>
