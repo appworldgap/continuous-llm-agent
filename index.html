@@ -4,174 +4,76 @@
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0a0a;
-    --surface: #1e1e1e;
-    --accent: #4e94ce;
-    --text: #e0e0e0;
-    --highlight: #ffb74d;
+    --bg:#111;
+    --fg:#f0f0f0;
+    --accent:#4CAF50;
+    --accent-light:#66BB6A;
+    --card-bg:#1e1e1e;
+    --shadow:#000;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin:0;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    background: var(--surface);
-    padding: 2rem;
-    text-align: center;
-    position: sticky;
-    top:0;
-    z-index: 10;
-  }
-  header h1 {
-    margin:0;
-    font-size:2.5rem;
-    color: var(--accent);
-  }
-  nav {
-    margin-top:1rem;
-  }
-  nav a {
-    color: var(--text);
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight:600;
-    position: relative;
-  }
-  nav a::after {
-    content:'';
-    position:absolute;
-    width:0;
-    height:2px;
-    background:var(--highlight);
-    bottom:-4px;
-    left:0;
-    transition:width .3s;
-  }
-  nav a:hover::after { width:100%; }
-  main { padding:2rem 1rem; }
-  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:2rem; }
-  .card {
-    background: var(--surface);
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,.5);
-    transition:transform .2s,box-shadow .2s;
-  }
-  .card:hover { transform:translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,.6); }
-  .card img { width:100%; height:160px; object-fit:cover; }
-  .card-content { padding:1.5rem; }
-  .card-title {
-    margin:0 0 .5rem 0;
-    font-size:1.25rem;
-    color:var(--accent);
-  }
-  .card-text { margin:0; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin:0; font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--fg); line-height:1.6; }
+  header { padding:2rem; text-align:center; background:linear-gradient(135deg, #2c3e50, #4ca1af); }
+  header h1 { margin:0; font-size:2.5rem; color:#fff; }
+  main { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; padding:2rem; }
+  .card { background:var(--card-bg); padding:1.5rem; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,.3); transition:transform .2s, box-shadow .2s; }
+  .card:hover { transform:translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,.4); }
+  .card h2 { margin-top:0; margin-bottom:.5rem; color:var(--accent); font-size:1.25rem; }
+  .card p { margin:0 0 1rem 0; }
+  .card a { color:var(--accent-light); text-decoration:none; font-weight:600; }
   footer { text-align:center; padding:1rem; font-size:.9rem; color:#777; }
-  @media(max-width:600px){ header h1{font-size:2rem;} }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f9f9f9; --fg:#222; --card-bg:#fff; }
+    header { background:linear-gradient(135deg, #e0e0e0, #bdbdbd); }
+    .card { box-shadow:0 2px 4px rgba(0,0,0,.1); }
+    .card:hover { transform:none; box-shadow:0 4px 8px rgba(0,0,0,.15); }
+    footer { color:#444; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Tech Breakthroughs 2024</h1>
-  <nav>
-    <a href="#ai">AI & ML</a>
-    <a href="#quantum">Quantum</a>
-    <a href="#space">Space</a>
-    <a href="#biotech">Biotech</a>
-    <a href="#energy">Energy</a>
-  </nav>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
 </header>
+
 <main>
-  <section id="ai">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://picsum.photos/seed/ai1/600/400" alt="Large Language Models">
-        <div class="card-content">
-          <h3 class="card-title">Generative AI 4.0</h3>
-          <p class="card-text">Next‑generation LLMs now run on efficient, edge‑deployable architectures, enabling real‑time creative assistants on smartphones and IoT devices.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/seed/ai2/600/400" alt="Federated Learning">
-        <div class="card-content">
-          <h3 class="card-title">Federated AI</h3>
-          <p class="card-text">Distributed models trained across millions of devices without centralizing data, boosting privacy and reducing bandwidth costs.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/seed/ai3/600/400" alt="Neuromorphic Chips">
-        <div class="card-content">
-          <h3 class="card-title">Neuromorphic Processors</h3>
-          <p class="card-text">Spike‑based chips mimic brain architecture, achieving 10× energy efficiency for pattern recognition tasks.</p>
-        </div>
-      </article>
-    </div>
-  </section>
+  <!-- 1. Artificial Intelligence & Machine Learning -->
+  <article class="card">
+    <h2>🤖 AI & LLMs</h2>
+    <p>OpenAI’s GPT‑4 and Claude‑3 deliver unprecedented multimodal understanding—text, images, code, and even audio—enabling fully autonomous creative workflows. <br>
+    New alignment techniques, such as reinforcement learning from human feedback (RLHF) with interpretability layers, reduce harmful outputs.</p>
+    <a href="https://openai.com/research/gpt-4" target="_blank">Read more →</a>
+  </article>
 
-  <section id="quantum" style="margin-top:3rem;">
-    <h2>Quantum Computing & Communications</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://picsum.photos/seed/quantum1/600/400" alt="Quantum Network">
-        <div class="card-content">
-          <h3 class="card-title">Quantum‑Internet Backbone</h3>
-          <p class="card-text">Nation‑wide fiber networks with entangled photon links deliver provably secure, ultra‑low‑latency communications.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/seed/quantum2/600/400" alt="Error Correction">
-        <div class="card-content">
-          <h3 class="card-title">Surface‑Code Error Correction</h3>
-          <p class="card-text">Fault‑tolerant qubits now sustain >10,000 logical operations, a key milestone toward scalable quantum processors.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/seed/quantum3/600/400" alt="Hybrid Quantum-Classical">
-        <div class="card-content">
-          <h3 class="card-title">Hybrid Algorithms</h3>
-          <p class="card-text">Co‑optimized classical–quantum pipelines accelerate material discovery and drug design.</p>
-        </div>
-      </article>
-    </div>
-  </section>
+  <!-- 2. Quantum Computing -->
+  <article class="card">
+    <h2>🧪 Quantum Supremacy 2.0</h2>
+    <p>IBM’s “Eagle” 433‑qubit processor and Google’s “Sycamore‑X” reach quantum advantage for linear‑algebra problems and unstructured search. Quantum‑safe encryption protocols (Post‑Quantum Key Exchange) are moving from research to early adoption.</p>
+    <a href="https://www.ibm.com/quantum-computing/technology" target="_blank">Read more →</a>
+  </article>
 
-  <section id="space" style="margin-top:3rem;">
-    <h2>Space Exploration & Satellite Tech</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://picsum.photos/seed/space1/600/400" alt="Lunar Habitat">
-        <div class="card-content">
-          <h3 class="card-title">Lunar Habitat Modules</h3>
-          <p class="card-text">Modular, 3D‑printed habitats powered by in‑situ resource utilization now support 12‑person crews on the Moon.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/seed/space2/600/400" alt="Mars Rover">
-        <div class="card-content">
-          <h3 class="card-title">Mars Autonomous Rovers</h3>
-          <p class="card-text">AI‑driven rovers traverse 200 km of Martian terrain, conducting autonomous science operations.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/seed/space3/600/400" alt="Satellite Mesh">
-        <div class="card-content">
-          <h3 class="card-title">Satellite Mesh Networks</h3>
-          <p class="card-text">Low‑Earth orbit constellations now interconnect via laser links, providing gigabit‑rate global broadband.</p>
-        </div>
-      </article>
-    </div>
-  </section>
+  <!-- 3. Biotechnology & Gene Editing -->
+  <article class="card">
+    <h2>🧬 CRISPR & Synthetic Biology</h2>
+    <p>Prime editing with base‑specific fidelity now corrects ~98 % of pathogenic mutations in vitro. First-in‑human trials for beta‑thalassemia using synthetic mRNA Cas9 delivered via lipid nanoparticles show durable hematologic improvement.</p>
+    <a href="https://www.nature.com/articles/s41587-024-01234-5" target="_blank">Read more →</a>
+  </article>
 
-  <section id="biotech" style="margin-top:3rem;">
-    <h2>Biotechnology & Medicine</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://picsum.photos/seed/
+  <!-- 4. Energy & Materials -->
+  <article class="card">
+    <h2>⚡ Energy Revolution</h2>
+    <p>Perovskite‑silicon tandem cells exceed 28 % efficiency and pass the 300‑W‑day stability benchmark. Solid‑state lithium‑sulfur batteries with graphene separators now reach 400 Wh kg⁻¹, a 50 % leap in energy density.</p>
+    <a href="https://www.sciencedirect.com/science/article/pii/S2542-0251(24)00156-5" target="_blank">Read more →</a>
+  </article>
+
+  <!-- 5. Space & Aerospace -->
+  <article class="card">
+    <h2>🚀 Space Exploration</h2>
+    <p>SpaceX Starship achieves a fully reusable orbital flight, paving the way for Artemis‑2 lunar missions and the first human‑crewed Mars mission timeline of 2035. NASA’s James Webb Telescope’s exoplanet spectra now resolve water vapor and methane in habitable zone planets.</p>
+    <a href="https://www.nasa.gov/jwst" target="_blank">Read more →</a>
+  </article>
+
+  <!-- 6. Robotics & Automation -->
+  <article class
