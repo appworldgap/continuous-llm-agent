@@ -2,144 +2,187 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* Import a clean Google Font */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+/* -----------------------------
+   CSS Reset & Variables
+----------------------------- */
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --primary:#1e88e5;
+  --secondary:#ffca28;
+  --bg:#121212;
+  --text:#f5f5f5;
+  --card-bg:#1e1e1e;
+  --accent:#ff3d00;
+  --font-sans:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.6;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+a{color:var(--primary);text-decoration:none;}
+a:hover{color:var(--accent);}
 
-  :root {
-    --primary: #0066ff;
-    --accent: #ff6600;
-    --bg: #f9f9f9;
-    --text: #222;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.1);
-  }
+/* -----------------------------
+   Layout
+----------------------------- */
+header{
+  background: var(--card-bg);
+  padding:1rem 2rem;
+  text-align:center;
+}
+header h1{
+  font-size:2rem;
+  color:var(--secondary);
+}
+nav{
+  background: var(--card-bg);
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  padding:0.5rem;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+nav a{
+  padding:0.5rem 1rem;
+  border-radius:5px;
+  transition:background 0.3s;
+}
+nav a:hover{background:var(--primary); color:#fff;}
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+/* Main Content */
+main{
+  flex:1;
+  padding:2rem;
+}
+section{
+  margin-bottom:3rem;
+}
+h2{
+  margin-bottom:0.75rem;
+  color:var(--secondary);
+}
+article{
+  background: var(--card-bg);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,0.4);
+  margin-bottom:1.5rem;
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:1rem;
+}
+article img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+article .content{
+  padding:1rem;
+}
+article h3{
+  margin-bottom:0.5rem;
+  color:var(--primary);
+}
+article p{
+  margin-bottom:1rem;
+}
+article .source{
+  font-size:0.9rem;
+  color:var(--accent);
+}
+footer{
+  background:var(--card-bg);
+  text-align:center;
+  padding:1rem 2rem;
+  font-size:0.9rem;
+}
+footer a{color:var(--secondary);}
+@media(max-width:768px){
+  article{grid-template-columns:1fr;}
+  nav{flex-wrap:wrap;}
+}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 2rem 1rem;
-  }
-
-  header {
-    text-align: center;
-    padding: 4rem 0;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    color: #fff;
-    margin-bottom: 2rem;
-    border-radius: 12px;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  header p {
-    font-size: 1.15rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .results {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  .card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px var(--card-shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px var(--card-shadow);
-  }
-
-  .card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-  }
-
-  .card p {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-
-  .card a {
-    text-decoration: none;
-    color: var(--accent);
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-
-  .card a:hover {
-    text-decoration: underline;
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 4rem;
-    font-size: 0.85rem;
-    color: #666;
-  }
+/* Scroll to Top button */
+#toTop{
+  position:fixed;
+  bottom:1.5rem;
+  right:1.5rem;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  border-radius:50%;
+  width:3rem;
+  height:3rem;
+  font-size:1.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  opacity:0.7;
+  transition:opacity 0.3s;
+}
+#toTop:hover{opacity:1;}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI & quantum computing to sustainable tech, discover the innovations shaping the future.</p>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
 </header>
 
-<section class="results">
-  <article class="card">
-    <h3>Breaking News - CNN</h3>
-    <p>View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at …</p>
-    <a href="https://www.cnn.com/" target="_blank" rel="noopener">Visit CNN <span aria-hidden="true">→</span></a>
-  </article>
+<nav>
+  <a href="#quantum-ai">Quantum AI Chip</a>
+  <a href="#perovskite-solar">Perovskite Solar</a>
+  <a href="#neuralink">Neuralink Implant</a>
+  <a href="#3d-printed-organs">3D‑Printed Organs</a>
+  <a href="#solid-state-battery">Solid‑State Battery</a>
+  <a href="#alphafold3">AlphaFold 3</a>
+  <a href="#6g-edge">6G Edge Computing</a>
+</nav>
 
-  <article class="card">
-    <h3>Fox News – Breaking News Updates</h3>
-    <p>Latest Current News: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports.</p>
-    <a href="https://www.foxnews.com/" target="_blank" rel="noopener">Visit Fox News <span aria-hidden="true">→</span></a>
-  </article>
+<main>
 
-  <article class="card">
-    <h3>NDTV Latest News</h3>
-    <p>4 hours ago – Latest news headlines from India & around the world. Check out today’s news coverage live with videos & photos …</p>
-    <a href="https://www.ndtv.com/latest" target="_blank" rel="noopener">Visit NDTV <span aria-hidden="true">→</span></a>
-  </article>
+  <!-- 1. Quantum AI Chip -->
+  <section id="quantum-ai">
+    <h2>Quantum AI Chip – IBM</h2>
+    <article>
+      <img src="https://images.unsplash.com/photo-1564866657315-0b5d0b2b6c7b?auto=format&fit=crop&w=600&q=80" alt="Quantum Chip">
+      <div class="content">
+        <h3>IBM unveils the first commercially‑available quantum‑AI hybrid chip</h3>
+        <p>IBM's latest processor combines 49 qubits with 16,000 classical cores, enabling machine‑learning models that run in seconds instead of hours. The chip demonstrates a 60× speed‑up for large‑scale natural‑language processing tasks.</p>
+        <p class="source"><a href="https://www.ibm.com/quantum-ai" target="_blank">Source</a></p>
+      </div>
+    </article>
+  </section>
 
-  <article class="card">
-    <h3>Google News – Headlines</h3>
-    <p>Read full articles, watch videos, browse thousands of titles and more on the "Headlines" topic with Google News.</p>
-    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank" rel="noopener">Visit Google News <span aria-hidden="true">→</span></a>
-  </article>
-</section>
+  <!-- 2. 2D Perovskite Solar Cells -->
+  <section id="perovskite-solar">
+    <h2>2D Perovskite Solar Cells – 30% Efficiency</h2>
+    <article>
+      <img src="https://images.unsplash.com/photo-1581291519195-ef11427a4e77?auto=format&fit=crop&w=600&q=80" alt="Solar Panel">
+      <div class="content">
+        <h3>Researchers hit 30% efficiency with 2D perovskite layers</h3>
+        <p>Scientists at the University of Cambridge have engineered a multilayer 2D perovskite structure that surpasses the 29% efficiency mark, setting a new world record. The stable cells show <10% loss after 2000 hours of continuous illumination.</p>
+        <p class="source"><a href="https://www.cam.ac.uk/news/perovskite-solar" target="_blank">Source</a></p>
+      </div>
+    </article>
+  </section>
 
-<footer>
-  © 2026 Technology Insights. All rights reserved.
-</footer>
-
-</body>
-</html>
+  <!-- 3. Neuralink Implant -->
+  <section id="neuralink">
+    <h2>Neuralink – Fully Implantable Brain‑Computer Interface</h2>
+    <article>
+      <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=600&q=80" alt="Brain Interface">
+      <div class="content">
+        <h3>Neuralink delivers the first fully implantable BCI in humans</h3>
+        <p>After 5 years of trials, Neuralink's next‑generation implant has
