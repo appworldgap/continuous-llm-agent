@@ -2,189 +2,171 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* CSS Variables */
-:root {
-  --primary: #1e88e5;      /* Blue */
-  --accent: #ff6f00;       /* Orange */
-  --bg: #f9f9f9;           /* Light grey */
-  --text: #333;            /* Dark grey */
-  --header-height: 4rem;
-  --nav-width: 220px;
-}
-
-/* Global Reset */
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  background: var(--bg);
-  color: var(--text);
-}
-
-/* Layout */
-.wrapper {
-  display: flex;
-  min-height: 100vh;
-}
-
-aside {
-  width: var(--nav-width);
-  background: var(--primary);
-  color: #fff;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
-
-aside h2 {
-  margin-top: 0;
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-}
-
-aside nav a {
-  display: block;
-  padding: 0.5rem 0.8rem;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-aside nav a:hover,
-aside nav a:focus {
-  background: rgba(255,255,255,0.15);
-}
-
-main {
-  flex: 1;
-  padding: 2rem 3rem;
-  overflow-y: auto;
-}
-
-section {
-  margin-bottom: 3rem;
-  background: #fff;
-  padding: 1.5rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-section h3 {
-  margin-top: 0;
-  color: var(--primary);
-}
-
-section ul {
-  list-style: disc inside;
-  margin-left: 1rem;
-}
-
-section li {
-  margin-bottom: 0.5rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #777;
-  border-top: 1px solid #ddd;
-  margin-top: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  aside { 
-    width: 100%; 
-    height: auto; 
-    position: relative; 
+  :root {
+    --primary: #1e90ff;
+    --secondary: #f5f5f5;
+    --accent: #ff7f50;
+    --dark: #333;
+    --light: #fff;
   }
-  main { padding: 1rem 1.5rem; }
-}
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--secondary);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary);
+    color: var(--light);
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--primary);
+    padding: 0.5rem 0;
+  }
+  nav a {
+    color: var(--light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  nav a:hover {
+    background: var(--accent);
+  }
+  .content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .section h2 {
+    margin-top: 0;
+    color: var(--primary);
+  }
+  .section ul {
+    list-style: disc inside;
+    margin: 0.5rem 0 0 1rem;
+  }
+  footer {
+    background: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .section { padding: 1rem; }
+  }
 </style>
 </head>
 <body>
-<div class="wrapper">
-  <aside>
-    <h2>Categories</h2>
-    <nav>
-      <a href="#ai">Artificial Intelligence</a>
-      <a href="#quantum">Quantum Computing</a>
-      <a href="#bio">Biotechnology</a>
-      <a href="#energy">Energy & Sustainability</a>
-      <a href="#space">Space & Exploration</a>
-    </nav>
-  </aside>
 
-  <main>
-    <header>
-      <h1>Latest Breakthroughs in Technology – 2026</h1>
-      <p>Curated insights on the most transformative tech developments of the year.</p>
-    </header>
+<header>
+  <h1>Latest Breakthroughs in Technology</h1>
+</header>
 
-    <section id="ai">
-      <h3>Artificial Intelligence</h3>
-      <p>Generative AI has entered the era of “reasoning‑augmented” models, enabling machines to plan complex tasks, explain their decisions, and collaborate with humans in real-time.</p>
-      <ul>
-        <li>OpenAI’s GPT‑5 achieves 99% factual accuracy in knowledge queries.</li>
-        <li>Google’s Gemini-4 introduces real‑time multimodal reasoning with video and text.</li>
-        <li>AI-driven protein folding now predicts full 3D structures for 90% of protein families.</li>
-      </ul>
-    </section>
+<nav>
+  <a href="#ai">Artificial Intelligence</a>
+  <a href="#quantum">Quantum Computing</a>
+  <a href="#energy">Renewable Energy</a>
+  <a href="#robotics">Robotics</a>
+  <a href="#biotech">Biotechnology</a>
+</nav>
 
-    <section id="quantum">
-      <h3>Quantum Computing</h3>
-      <p>Quantum processors have crossed the 1,000‑qubit threshold, bringing fault‑tolerant operations within reach for the first time.</p>
-      <ul>
-        <li>IBM’s “Quantum Eagle” delivers 1,200 logical qubits with error‑correction.</li>
-        <li>Google’s Sycamore‑2 surpasses quantum advantage in cryptanalysis.</li>
-        <li>Alibaba’s Quantum Cloud Platform offers on‑demand quantum services for optimization problems.</li>
-      </ul>
-    </section>
+<div class="content">
 
-    <section id="bio">
-      <h3>Biotechnology</h3>
-      <p>CRISPR‑derived therapies have expanded from rare diseases to mainstream oncology and metabolic disorders.</p>
-      <ul>
-        <li>CRISPR‑Cas13 therapy for hereditary retinal dystrophy shows 90% vision restoration.</li>
-        <li>mRNA‑based vaccines now target multiple antigens for universal flu protection.</li>
-        <li>Gene‑edited “designer” plants exhibit 70% drought resilience.</li>
-      </ul>
-    </section>
+  <section id="ai" class="section">
+    <h2>Artificial Intelligence</h2>
+    <p>Recent advances in large language models and multimodal AI have dramatically expanded the capabilities of machines to understand, generate, and interact with human language and visual content. Key breakthroughs include:</p>
+    <ul>
+      <li>OpenAI’s GPT‑4 and subsequent iterations offering unprecedented contextual understanding.</li>
+      <li>Multimodal models that seamlessly combine text, image, and audio generation.</li>
+      <li>Efficient fine‑tuning techniques that reduce training time and computational costs.</li>
+    </ul>
+  </section>
 
-    <section id="energy">
-      <h3>Energy & Sustainability</h3>
-      <p>Innovations in storage and green synthesis are accelerating the shift to a carbon‑neutral grid.</p>
-      <ul>
-        <li>Solid‑state lithium‑sulfur batteries achieve 300 Wh/kg energy density.</li>
-        <li>Direct Air Capture (DAC) units now run on solar‑derived hydrogen.</li>
-        <li>Perovskite solar cells surpass 29% efficiency in commercial modules.</li>
-      </ul>
-    </section>
+  <section id="quantum" class="section">
+    <h2>Quantum Computing</h2>
+    <p>Quantum processors are moving from research labs toward commercial applications. Highlights:</p>
+    <ul>
+      <li>IBM’s 127‑qubit prototype and roadmap to 1,000 qubits.</li>
+      <li>Google’s demonstration of quantum supremacy in specialized workloads.</li>
+      <li>Development of quantum‑safe cryptography protocols.</li>
+    </ul>
+  </section>
 
-    <section id="space">
-      <h3>Space & Exploration</h3>
-      <p>New propulsion methods and habitat technologies are paving the way for Mars and beyond.</p>
-      <ul>
-        <li>NASA’s Artemis 3 utilizes electric propulsion for rapid transit to lunar orbit.</li>
-        <li>SpaceX’s Starship “Reusability Index” reaches 95% for first‑stage recovery.</li>
-        <li>European Space Agency launches the “Mars 2028” rover with autonomous AI navigation.</li>
-      </ul>
-    </section>
+  <section id="energy" class="section">
+    <h2>Renewable Energy</h2>
+    <p>Technological innovations are making clean energy more efficient and affordable:</p>
+    <ul>
+      <li>Perovskite solar cells achieving record efficiencies over 25%.</li>
+      <li>Grid‑scale battery storage solutions reducing the intermittency of renewables.</li>
+      <li>Advanced geothermal extraction techniques expanding access in non‑volcanic regions.</li>
+    </ul>
+  </section>
 
-    <footer>
-      © 2026 TechInsights. All rights reserved.
-    </footer>
-  </main>
+  <section id="robotics" class="section">
+    <h2>Robotics</h2>
+    <p>Robots are becoming more autonomous and capable of complex tasks:</p>
+    <ul>
+      <li>Boston Dynamics’ Atlas and Stretch robots with advanced locomotion and manipulation.</li>
+      <li>Collaborative robots (cobots) integrating AI for real‑time safety and decision‑making.</li>
+      <li>Swarm robotics enabling distributed problem‑solving in logistics and agriculture.</li>
+    </ul>
+  </section>
+
+  <section id="biotech" class="section">
+    <h2>Biotechnology</h2>
+    <p>Genomic editing and synthetic biology are unlocking new treatments and materials:</p>
+    <ul>
+      <li>CRISPR‑Cas9 variants with higher precision and lower off‑target effects.</li>
+      <li>Programmable DNA‑based nanostructures for targeted drug delivery.</li>
+      <li>Bio‑printed tissues and organs progressing toward clinical trials.</li>
+    </ul>
+  </section>
+
 </div>
+
+<footer>
+  <p>Sources: 
+    <a href="https://www.foxnews.com/?msockid=0104fa3a5877675f0dfaedc9593e6672" target="_blank">Fox News</a> | 
+    <a href="https://www.cnn.com/" target="_blank">CNN</a> | 
+    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News</a> | 
+    <a href="https://apnews.com/" target="_blank">AP News</a>
+  </p>
+  <p>&copy; 2026 Tech Insights</p>
+</footer>
+
 </body>
 </html>
