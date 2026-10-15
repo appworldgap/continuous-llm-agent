@@ -2,136 +2,113 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* CSS Custom Properties */
-  :root {
-    --primary: #1a73e8;
-    --secondary: #ff6f61;
-    --background: #f4f6f9;
-    --card-bg: #ffffff;
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  /* CSS Variables */
+  :root{
+    --primary:#0a84ff;
+    --secondary:#00c4ff;
+    --accent:#ff9500;
+    --bg:#f4f7fa;
+    --text:#333;
+    --card-bg:#fff;
+    --shadow:0 4px 12px rgba(0,0,0,0.1);
   }
-
-  body {
-    margin: 0;
-    font-family: var(--font-stack);
-    background: var(--background);
-    color: var(--text-primary);
-    line-height: 1.6;
-  }
-
-  /* Layout */
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 600;
-  }
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
-  .card-content {
-    padding: 1rem;
-    flex-grow: 1;
-  }
-  .card-content h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-    font-size: 1.3rem;
-  }
-  .card-content p {
-    margin: 0 0 1rem 0;
-    color: var(--text-secondary);
-  }
-  .card-content a {
-    color: var(--secondary);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .card-content a:hover {
-    text-decoration: underline;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: #121212;
-      color: #e0e0e0;
-    }
-    header {
-      background: #1f1f1f;
-      color: #fff;
-    }
-    .card {
-      background: #1e1e1e;
-      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
-    }
-    .card-content p,
-    .card-content a {
-      color: #b0b0b0;
-    }
-    .card-content a {
-      color: #ff8a65;
-    }
+  /* Reset */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:system-ui, sans-serif;line-height:1.6;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;}
+  a{color:var(--primary);text-decoration:none;}
+  a:hover{opacity:.8;}
+  header{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:3rem 1rem;text-align:center;}
+  header h1{font-size:2.5rem;margin-bottom:.5rem;}
+  header p{font-size:1.2rem;margin-bottom:1rem;}
+  nav{background:#fff;padding:1rem 0;box-shadow:var(--shadow);position:sticky;top:0;z-index:100;}
+  nav ul{display:flex;justify-content:center;gap:1.5rem;}
+  nav li{list-style:none;}
+  main{flex:1;max-width:1200px;margin:2rem auto;padding:0 1rem;}
+  .section{margin-bottom:4rem;}
+  .section h2{font-size:2rem;margin-bottom:1.5rem;border-bottom:2px solid var(--primary);padding-bottom:.5rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+  .card{background:var(--card-bg);border-radius:.75rem;padding:1.5rem;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;}
+  .card:hover{transform:translateY(-5px);box-shadow:0 8px 18px rgba(0,0,0,0.15);}
+  .card img{width:100%;height:180px;object-fit:cover;border-radius:.5rem;margin-bottom:1rem;}
+  .card h3{font-size:1.4rem;margin-bottom:.75rem;color:var(--primary);}
+  .card p{font-size:1rem;line-height:1.5;color:#555;}
+  footer{background:#222;color:#ddd;padding:1.5rem;text-align:center;font-size:.9rem;}
+  footer a{color:var(--accent);}
+  @media (max-width:600px){
+    header h1{font-size:2rem;}
+    header p{font-size:1rem;}
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Breakthroughs in Technology – 2026</h1>
+  <p>Exploring the most transformative advances across AI, quantum, energy, space, materials, and health.</p>
 </header>
+
+<nav>
+  <ul>
+    <li><a href="#ai">AI</a></li>
+    <li><a href="#quantum">Quantum</a></li>
+    <li><a href="#energy">Energy</a></li>
+    <li><a href="#space">Space</a></li>
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#health">Health</a></li>
+  </ul>
+</nav>
+
 <main>
-  <!-- AI & Machine Learning -->
-  <article class="card">
-    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2RkZGRkZCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSI5MCIgZmlsbD0iI2VmZWZmZiIgLz48dGV4dCB4PSI1MCIgeT0iNTUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3ZmZmZiI+SVM8L3RleHQ+PC9nPjwvc3ZnPg==" alt="AI breakthrough">
-    <div class="card-content">
-      <h3>Generative AI 3.5</h3>
-      <p>OpenAI’s GPT‑4.5 turbo and other large language models now achieve near‑human level reasoning across multiple domains, with built‑in safety mitigations that reduce hallucinations and biased outputs.</p>
-      <a href="https://openai.com/research/gpt-4.5" target="_blank" rel="noopener">Read more</a>
-    </div>
-  </article>
+  <section id="ai" class="section">
+    <h2>Artificial Intelligence</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581093588401-7aebf1d9c4b3?auto=format&fit=crop&w=400&q=80" alt="AI brain">
+        <h3>Multimodal Foundation Models</h3>
+        <p>2026 sees the first truly multimodal foundation models that process text, vision, audio, and sensor data in a unified architecture, enabling seamless cross‑modal reasoning for robotics, healthcare, and autonomous systems.</p>
+      </article>
 
-  <!-- Quantum Computing -->
-  <article class="card">
-    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2RkZGRkZCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSI5MCIgZmlsbD0iI2VmZWZmZiIgLz48dGV4dCB4PSI1MCIgeT0iNTUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3ZmZmZiI+S3VwPC90ZXh0PjwvZz48L3N2Zz4=" alt="Quantum breakthrough">
-    <div class="card-content">
-      <h3>Quantum Supremacy 2.0</h3>
-      <p>Google and IBM have announced quantum processors with 200+ qubits and error correction that perform tasks beyond the reach of classical supercomputers, paving the way for new material simulations.</p>
-      <a href="https://www.quantum.gov" target="_blank" rel="noopener">Read more</a>
-    </div>
-  </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=400&q=80" alt="AI chip">
+        <h3>AI‑Optimized Silicon 2</h3>
+        <p>New silicon process with sub‑0.6 nm feature size and integrated photonic interconnects boosts inference throughput by 15× while cutting power use by 60 % for edge AI deployments.</p>
+      </article>
 
-  <!-- Biotechnology -->
-  <article class="card">
-    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2RkZGRkZCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSI5MCIgZmlsbD0iI2VmZWZmZiIgLz48dGV4dCB4PSI1MCIgeT0iNTUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3ZmZmZiI+Rm9uZXM8L3RleHQ+PC9nPjwvc3ZnPg==" alt="Biotech breakthrough">
-    <div class="card-content">
-      <h3>CRISPR-3.0 Gene Therapy</h3>
-      <p>New CRISPR variants enable precise editing in non-dividing cells, opening treatments for previously untreatable genetic disorders such as late-onset Huntington’s and
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1564518098551-4a4c6f4e6a44?auto=format&fit=crop&w=400&q=80" alt="Neurosymbolic AI">
+        <h3>Neurosymbolic Reasoning Engines</h3>
+        <p>Hybrid neural‑symbolic systems combine deep learning’s pattern recognition with logical inference, enabling transparent AI that can explain decisions in high‑stakes domains like finance and aviation.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="quantum" class="section">
+    <h2>Quantum Technologies</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1537487831022-0f2e4e70a1c6?auto=format&fit=crop&w=400&q=80" alt="Quantum computer">
+        <h3>Fault‑Tolerant Quantum Processors</h3>
+        <p>Commercial‑grade quantum processors with >1,000 logical qubits and error rates <1 % are now available, making quantum advantage realistic for cryptography, material simulation, and optimization.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1542744173-8e6c1e0a3a79?auto=format&fit=crop&w=400&q=80" alt="Quantum sensors">
+        <h3>Quantum‑Enhanced Sensing</h3>
+        <p>Quantum magnetometers and gravimeters provide unprecedented sensitivity for geological surveys, navigation, and medical imaging, with field‑ready units now on the market.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="energy" class="section">
+    <h2>Energy & Sustainability</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1514978927273-6b9c5e1b3a8c?auto=format&fit=crop&w=400&q=80" alt="Solar cell">
+        <h3>Perovskite Tandem Solar Cells</h3>
+        <p>Perovskite‑on‑silicon tandem modules now achieve >30 % efficiency with a 15 % price reduction, accelerating grid‑scale deployment and rooftop adoption.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1559127086-73a7f3d1c70e
