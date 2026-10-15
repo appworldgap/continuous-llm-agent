@@ -6,167 +6,173 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --primary: #1e90ff;
-    --secondary: #f5f5f5;
-    --accent: #ff7f50;
-    --dark: #333;
-    --light: #fff;
+    --bg: #121212;
+    --fg: #e0e0e0;
+    --accent: #1e90ff;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0,0,0,0.4);
+    --link-hover: #ff8c00;
   }
-  * {
-    box-sizing: border-box;
-  }
-  body, html {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--secondary);
-    color: var(--dark);
+  body {
+    margin:0;
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
     line-height: 1.6;
   }
   header {
-    background: var(--primary);
-    color: var(--light);
-    padding: 2rem 1rem;
+    background: var(--accent);
+    padding: 1.5rem 2rem;
     text-align: center;
   }
   header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    font-weight: 300;
+    color: #fff;
+    font-size: 2.2rem;
   }
   nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 1rem;
-    background: var(--primary);
     padding: 0.5rem 0;
+    flex-wrap: wrap;
   }
   nav a {
-    color: var(--light);
+    color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
+    transition: background .2s;
   }
   nav a:hover {
-    background: var(--accent);
+    background: var(--link-hover);
   }
-  .content {
-    max-width: 1200px;
+  main {
+    max-width: 960px;
     margin: 2rem auto;
     padding: 0 1rem;
   }
-  .section {
-    margin-bottom: 3rem;
+  section {
+    background: var(--card-bg);
     padding: 1.5rem;
-    background: var(--light);
+    margin-bottom: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px var(--card-shadow);
+    transition: transform .2s;
   }
-  .section h2 {
+  section:hover {
+    transform: translateY(-4px);
+  }
+  h2 {
     margin-top: 0;
-    color: var(--primary);
+    color: var(--accent);
   }
-  .section ul {
+  p {
+    margin: 1rem 0;
+  }
+  ul {
     list-style: disc inside;
-    margin: 0.5rem 0 0 1rem;
+    padding-left: 1rem;
   }
   footer {
-    background: var(--primary);
-    color: var(--light);
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 2rem 0;
+    font-size: .9rem;
+    color: #bbb;
   }
-  footer a {
+  a.reference {
     color: var(--accent);
     text-decoration: none;
   }
-  footer a:hover {
+  a.reference:hover {
     text-decoration: underline;
   }
-  @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    .section { padding: 1rem; }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f9f9f9;
+      --fg: #222;
+      --card-bg: #fff;
+      --card-shadow: rgba(0,0,0,0.1);
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+    }
   }
 </style>
 </head>
 <body>
-
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
 </header>
-
 <nav>
-  <a href="#ai">Artificial Intelligence</a>
+  <a href="#ai">AI & Machine Learning</a>
   <a href="#quantum">Quantum Computing</a>
-  <a href="#energy">Renewable Energy</a>
-  <a href="#robotics">Robotics</a>
-  <a href="#biotech">Biotechnology</a>
+  <a href="#6g">6G & Next‑Gen Networks</a>
+  <a href="#renewable">Renewable Energy Tech</a>
+  <a href="#future">Emerging Trends</a>
 </nav>
-
-<div class="content">
-
-  <section id="ai" class="section">
-    <h2>Artificial Intelligence</h2>
-    <p>Recent advances in large language models and multimodal AI have dramatically expanded the capabilities of machines to understand, generate, and interact with human language and visual content. Key breakthroughs include:</p>
+<main>
+  <section id="ai">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <p>Recent advancements in generative AI models, such as GPT‑4 and Claude 3, have pushed the limits of natural‑language understanding and creation. These models are now being integrated into industry workflows for content generation, code synthesis, and scientific research assistance.</p>
+    <p>Key developments:</p>
     <ul>
-      <li>OpenAI’s GPT‑4 and subsequent iterations offering unprecedented contextual understanding.</li>
-      <li>Multimodal models that seamlessly combine text, image, and audio generation.</li>
-      <li>Efficient fine‑tuning techniques that reduce training time and computational costs.</li>
+      <li>Large‑scale multimodal models that can process text, images, and audio simultaneously.</li>
+      <li>Self‑supervised learning techniques that drastically reduce the need for labeled data.</li>
+      <li>AI‑driven drug discovery pipelines that accelerate candidate identification by an order of magnitude.</li>
     </ul>
   </section>
 
-  <section id="quantum" class="section">
+  <section id="quantum">
     <h2>Quantum Computing</h2>
-    <p>Quantum processors are moving from research labs toward commercial applications. Highlights:</p>
+    <p>Quantum processors have achieved new milestones in qubit count and coherence times. Companies and research labs are moving toward fault‑tolerant architectures that could transform cryptography, optimization, and materials science.</p>
     <ul>
-      <li>IBM’s 127‑qubit prototype and roadmap to 1,000 qubits.</li>
-      <li>Google’s demonstration of quantum supremacy in specialized workloads.</li>
-      <li>Development of quantum‑safe cryptography protocols.</li>
+      <li>Superconducting qubit chips with > 1000 qubits in a single cryostat.</li>
+      <li>Error‑correction codes that allow practical quantum simulations.</li>
+      <li>Commercial quantum cloud services now offering user‑friendly APIs for industrial use.</li>
     </ul>
   </section>
 
-  <section id="energy" class="section">
-    <h2>Renewable Energy</h2>
-    <p>Technological innovations are making clean energy more efficient and affordable:</p>
+  <section id="6g">
+    <h2>6G & Next‑Gen Networks</h2>
+    <p>While 5G rollout continues, research into 6G is already underway, promising terabit‑per‑second speeds, ultra‑low latency, and integrated satellite‑ground links for ubiquitous connectivity.</p>
     <ul>
-      <li>Perovskite solar cells achieving record efficiencies over 25%.</li>
-      <li>Grid‑scale battery storage solutions reducing the intermittency of renewables.</li>
-      <li>Advanced geothermal extraction techniques expanding access in non‑volcanic regions.</li>
+      <li>High‑frequency (THz) bands being tested for dense urban deployments.</li>
+      <li>AI‑based network orchestration for real‑time traffic optimization.</li>
+      <li>Hybrid terrestrial‑satellite networks that extend coverage to remote regions.</li>
     </ul>
   </section>
 
-  <section id="robotics" class="section">
-    <h2>Robotics</h2>
-    <p>Robots are becoming more autonomous and capable of complex tasks:</p>
+  <section id="renewable">
+    <h2>Renewable Energy & Energy Storage</h2>
+    <p>Breakthroughs in battery chemistry, solar panel efficiency, and grid integration are accelerating the transition to a low‑carbon economy.</p>
     <ul>
-      <li>Boston Dynamics’ Atlas and Stretch robots with advanced locomotion and manipulation.</li>
-      <li>Collaborative robots (cobots) integrating AI for real‑time safety and decision‑making.</li>
-      <li>Swarm robotics enabling distributed problem‑solving in logistics and agriculture.</li>
+      <li>Solid‑state Li‑ion batteries with > 200 Wh/kg energy density.</li>
+      <li>Perovskite‑based solar cells surpassing 30% conversion efficiency.</li>
+      <li>Grid‑scale flow batteries providing flexible, long‑duration storage.</li>
     </ul>
   </section>
 
-  <section id="biotech" class="section">
-    <h2>Biotechnology</h2>
-    <p>Genomic editing and synthetic biology are unlocking new treatments and materials:</p>
+  <section id="future">
+    <h2>Emerging Trends & Future Outlook</h2>
+    <p>Beyond the pillars above, several nascent technologies are poised to reshape industries:</p>
     <ul>
-      <li>CRISPR‑Cas9 variants with higher precision and lower off‑target effects.</li>
-      <li>Programmable DNA‑based nanostructures for targeted drug delivery.</li>
-      <li>Bio‑printed tissues and organs progressing toward clinical trials.</li>
+      <li>Neural‑interface devices enabling direct brain‑computer interaction.</li>
+      <li>Bioprinting and organ‑on‑chip platforms for personalized medicine.</li>
+      <li>Advanced robotics with soft‑material actuation and autonomous decision‑making.</li>
     </ul>
   </section>
-
-</div>
-
+</main>
 <footer>
-  <p>Sources: 
-    <a href="https://www.foxnews.com/?msockid=0104fa3a5877675f0dfaedc9593e6672" target="_blank">Fox News</a> | 
-    <a href="https://www.cnn.com/" target="_blank">CNN</a> | 
-    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News</a> | 
-    <a href="https://apnews.com/" target="_blank">AP News</a>
+  <p>Sources:</p>
+  <p>
+    <a href="https://www.foxnews.com/" class="reference" target="_blank">Fox News</a> |
+    <a href="https://www.cnn.com/" class="reference" target="_blank">CNN</a> |
+    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" class="reference" target="_blank">Google News</a> |
+    <a href="https://www.dawn.com/latest-news" class="reference" target="_blank">DAWN</a>
   </p>
-  <p>&copy; 2026 Tech Insights</p>
+  <p>© 2026 Technology Insights</p>
 </footer>
-
 </body>
 </html>
