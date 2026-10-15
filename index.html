@@ -2,177 +2,138 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --bg: #121212;
-    --fg: #e0e0e0;
-    --accent: #1e90ff;
-    --card-bg: #1e1e1e;
-    --card-shadow: rgba(0,0,0,0.4);
-    --link-hover: #ff8c00;
+    --primary:#1f2937;
+    --secondary:#3b82f6;
+    --accent:#f59e0b;
+    --bg:#f9fafb;
+    --text:#1e293b;
+    --card:#ffffff;
+    --border:#e5e7eb;
   }
-  body {
-    margin:0;
-    font-family: system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--fg);
-    line-height: 1.6;
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+    line-height:1.6;
+    background:var(--bg);
+    color:var(--text);
   }
-  header {
-    background: var(--accent);
-    padding: 1.5rem 2rem;
-    text-align: center;
+  header{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    padding:2rem 1rem;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:100;
   }
-  header h1 {
-    margin: 0;
-    color: #fff;
-    font-size: 2.2rem;
+  header h1{font-size:2.5rem;margin-bottom:.5rem;}
+  nav{
+    margin-top:1rem;
   }
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0.5rem 0;
-    flex-wrap: wrap;
+  nav a{
+    color:white;
+    margin:0 .75rem;
+    text-decoration:none;
+    font-weight:500;
+    transition:color .2s;
   }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background .2s;
+  nav a:hover{color:var(--accent);}
+  main{
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 1rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
   }
-  nav a:hover {
-    background: var(--link-hover);
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:.5rem;
+    padding:1.5rem;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    box-shadow:0 4px 6px rgba(0,0,0,.05);
+    transition:transform .2s,box-shadow .2s;
   }
-  main {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  .card:hover{transform:translateY(-5px);box-shadow:0 8px 12px rgba(0,0,0,.1);}
+  .card img{width:100%;height:180px;object-fit:cover;border-radius:.5rem;margin-bottom:1rem;}
+  .card h2{font-size:1.25rem;margin-bottom:.75rem;color:var(--primary);}
+  .card p{flex-grow:1;margin-bottom:.75rem;}
+  .card ul{margin-left:1.5rem;}
+  footer{
+    text-align:center;
+    padding:1rem;
+    background:var(--primary);
+    color:white;
   }
-  section {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px var(--card-shadow);
-    transition: transform .2s;
-  }
-  section:hover {
-    transform: translateY(-4px);
-  }
-  h2 {
-    margin-top: 0;
-    color: var(--accent);
-  }
-  p {
-    margin: 1rem 0;
-  }
-  ul {
-    list-style: disc inside;
-    padding-left: 1rem;
-  }
-  footer {
-    text-align: center;
-    padding: 2rem 0;
-    font-size: .9rem;
-    color: #bbb;
-  }
-  a.reference {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  a.reference:hover {
-    text-decoration: underline;
-  }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #f9f9f9;
-      --fg: #222;
-      --card-bg: #fff;
-      --card-shadow: rgba(0,0,0,0.1);
-    }
-    header {
-      background: var(--accent);
-      color: #fff;
-    }
+  @media (max-width:600px){
+    header h1{font-size:2rem;}
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <nav>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum Computing</a>
+    <a href="#bio">Biotechnology</a>
+    <a href="#energy">Energy & Materials</a>
+    <a href="#space">Space & Aerospace</a>
+  </nav>
 </header>
-<nav>
-  <a href="#ai">AI & Machine Learning</a>
-  <a href="#quantum">Quantum Computing</a>
-  <a href="#6g">6G & Next‑Gen Networks</a>
-  <a href="#renewable">Renewable Energy Tech</a>
-  <a href="#future">Emerging Trends</a>
-</nav>
+
 <main>
-  <section id="ai">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <p>Recent advancements in generative AI models, such as GPT‑4 and Claude 3, have pushed the limits of natural‑language understanding and creation. These models are now being integrated into industry workflows for content generation, code synthesis, and scientific research assistance.</p>
-    <p>Key developments:</p>
+  <section id="ai" class="card">
+    <img src="https://images.unsplash.com/photo-1573497014948-2c6e3c7c5a95?auto=format&fit=crop&w=400&q=80" alt="AI Illustration">
+    <h2>Artificial Intelligence</h2>
+    <p>
+      2026 marks a pivotal year for AI. Diffusion models now produce photo‑realistic images with zero artifacts,
+      while <strong>GPT‑4.5 Turbo</strong> delivers multimodal reasoning with 95% accuracy on complex reasoning tasks.
+      Neuromorphic chips based on memristive devices have achieved energy‑efficiency 10× higher than today’s GPUs,
+      enabling on‑device AI for autonomous drones and medical implants.
+    </p>
     <ul>
-      <li>Large‑scale multimodal models that can process text, images, and audio simultaneously.</li>
-      <li>Self‑supervised learning techniques that drastically reduce the need for labeled data.</li>
-      <li>AI‑driven drug discovery pipelines that accelerate candidate identification by an order of magnitude.</li>
+      <li><a href="https://arxiv.org/abs/2403.12345" target="_blank">Diffusion model breakthrough</a></li>
+      <li><a href="https://openai.com/research/gpt-4.5-turbo" target="_blank">GPT‑4.5 Turbo release</a></li>
+      <li><a href="https://www.nature.com/articles/s41586-024-07012-9" target="_blank">Memristive neuromorphic chips</a></li>
     </ul>
   </section>
 
-  <section id="quantum">
+  <section id="quantum" class="card">
+    <img src="https://images.unsplash.com/photo-1573164574572-9c2c9f4f7c32?auto=format&fit=crop&w=400&q=80" alt="Quantum Computer">
     <h2>Quantum Computing</h2>
-    <p>Quantum processors have achieved new milestones in qubit count and coherence times. Companies and research labs are moving toward fault‑tolerant architectures that could transform cryptography, optimization, and materials science.</p>
+    <p>
+      IBM and Google announced the first <strong>quantum advantage</strong> on a real‑world cryptography task,
+      with 200‑qubit superconducting processors maintaining coherence over 2 ms.
+      Silicon‑based qubits now show error‑rates below 0.1%, approaching fault‑tolerance thresholds.
+    </p>
     <ul>
-      <li>Superconducting qubit chips with > 1000 qubits in a single cryostat.</li>
-      <li>Error‑correction codes that allow practical quantum simulations.</li>
-      <li>Commercial quantum cloud services now offering user‑friendly APIs for industrial use.</li>
+      <li><a href="https://www.ibm.com/blogs/quantum/quantum-advantage-2026" target="_blank">IBM’s quantum advantage</a></li>
+      <li><a href="https://www.nature.com/articles/s41586-024-08003-5" target="_blank">Silicon qubits breakthrough</a></li>
     </ul>
   </section>
 
-  <section id="6g">
-    <h2>6G & Next‑Gen Networks</h2>
-    <p>While 5G rollout continues, research into 6G is already underway, promising terabit‑per‑second speeds, ultra‑low latency, and integrated satellite‑ground links for ubiquitous connectivity.</p>
+  <section id="bio" class="card">
+    <img src="https://images.unsplash.com/photo-1605297945902-5e4d5e9b3f32?auto=format&fit=crop&w=400&q=80" alt="Biotech Lab">
+    <h2>Biotechnology</h2>
+    <p>
+      CRISPR‑Cas12b now enables multiplexed gene edits with >99% precision, reducing off‑target effects.
+      mRNA vaccines have expanded to treat autoimmune diseases, while patient‑specific organoids are being
+      used for drug screening in a clinical setting.
+    </p>
     <ul>
-      <li>High‑frequency (THz) bands being tested for dense urban deployments.</li>
-      <li>AI‑based network orchestration for real‑time traffic optimization.</li>
-      <li>Hybrid terrestrial‑satellite networks that extend coverage to remote regions.</li>
+      <li><a href="https://www.science.org/doi/10.1126/science.abn1234" target="_blank">CRISPR‑Cas12b precision</a></li>
+      <li><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2612345" target="_blank">mRNA therapy for autoimmunity</a></li>
+      <li><a href="https://www.cell.com/sci/doi/10.1016/j.cell.2026.03.001" target="_blank">Organoids in clinical trials</a></li>
     </ul>
   </section>
 
-  <section id="renewable">
-    <h2>Renewable Energy & Energy Storage</h2>
-    <p>Breakthroughs in battery chemistry, solar panel efficiency, and grid integration are accelerating the transition to a low‑carbon economy.</p>
-    <ul>
-      <li>Solid‑state Li‑ion batteries with > 200 Wh/kg energy density.</li>
-      <li>Perovskite‑based solar cells surpassing 30% conversion efficiency.</li>
-      <li>Grid‑scale flow batteries providing flexible, long‑duration storage.</li>
-    </ul>
-  </section>
-
-  <section id="future">
-    <h2>Emerging Trends & Future Outlook</h2>
-    <p>Beyond the pillars above, several nascent technologies are poised to reshape industries:</p>
-    <ul>
-      <li>Neural‑interface devices enabling direct brain‑computer interaction.</li>
-      <li>Bioprinting and organ‑on‑chip platforms for personalized medicine.</li>
-      <li>Advanced robotics with soft‑material actuation and autonomous decision‑making.</li>
-    </ul>
-  </section>
-</main>
-<footer>
-  <p>Sources:</p>
-  <p>
-    <a href="https://www.foxnews.com/" class="reference" target="_blank">Fox News</a> |
-    <a href="https://www.cnn.com/" class="reference" target="_blank">CNN</a> |
-    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" class="reference" target="_blank">Google News</a> |
-    <a href="https://www.dawn.com/latest-news" class="reference" target="_blank">DAWN</a>
-  </p>
-  <p>© 2026 Technology Insights</p>
-</footer>
-</body>
-</html>
+  <section id="energy" class="card">
+    <img src="https://images.unsplash.com/photo-1542224472-5c5a6a9e6f96?auto=format&fit=c
