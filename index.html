@@ -2,169 +2,136 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* CSS Custom Properties */
   :root {
-    --bg:#121212;
-    --card-bg:#1e1e1e;
-    --text:#e0e0e0;
-    --accent:#4f93e6;
-    --radius:8px;
-    --shadow:0 4px 12px rgba(0,0,0,0.3);
+    --primary: #1a73e8;
+    --secondary: #ff6f61;
+    --background: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   }
+
   body {
-    margin:0;
-    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
+    margin: 0;
+    font-family: var(--font-stack);
+    background: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
   }
+
+  /* Layout */
   header {
-    padding:2rem;
-    text-align:center;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:#fff;
+    background: var(--primary);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   header h1 {
-    margin:0;
-    font-size:2.5rem;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
   }
-  .container {
-    flex:1;
-    max-width:1200px;
-    margin:auto;
-    padding:2rem 1rem;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:1.5rem;
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
   .card {
-    background:var(--card-bg);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform .2s;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
-  .card:hover {transform:translateY(-5px);}
   .card img {
-    width:100%;
-    height:160px;
-    object-fit:cover;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
   }
   .card-content {
-    padding:1.25rem;
-    flex:1;
-    display:flex;
-    flex-direction:column;
+    padding: 1rem;
+    flex-grow: 1;
   }
-  .card h3 {
-    margin:0 0 .5rem;
-    color:var(--accent);
-    font-size:1.25rem;
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    font-size: 1.3rem;
   }
-  .card p {
-    flex:1;
-    margin:0;
+  .card-content p {
+    margin: 0 0 1rem 0;
+    color: var(--text-secondary);
   }
-  .card footer {
-    margin-top:1rem;
-    font-size:.9rem;
-    color:#9e9e9e;
+  .card-content a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
   }
-  footer {
-    text-align:center;
-    padding:1rem;
-    background:var(--card-bg);
-    font-size:.85rem;
-    color:#9e9e9e;
+  .card-content a:hover {
+    text-decoration: underline;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      background: #1f1f1f;
+      color: #fff;
+    }
+    .card {
+      background: #1e1e1e;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+    }
+    .card-content p,
+    .card-content a {
+      color: #b0b0b0;
+    }
+    .card-content a {
+      color: #ff8a65;
+    }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
-
-<div class="container">
-  <!-- Artificial Intelligence -->
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?ai,robotics" alt="AI">
+<main>
+  <!-- AI & Machine Learning -->
+  <article class="card">
+    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2RkZGRkZCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSI5MCIgZmlsbD0iI2VmZWZmZiIgLz48dGV4dCB4PSI1MCIgeT0iNTUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3ZmZmZiI+SVM8L3RleHQ+PC9nPjwvc3ZnPg==" alt="AI breakthrough">
     <div class="card-content">
-      <h3>Generative AI Models with Zero-Shot Learning</h3>
-      <p>2024’s flagship language models can generate multimodal content and understand context without task-specific training, enabling instant prototyping across industries.</p>
-      <footer>Nov 2024 • <a href="#" style="color:inherit;">Read More</a></footer>
+      <h3>Generative AI 3.5</h3>
+      <p>OpenAI’s GPT‑4.5 turbo and other large language models now achieve near‑human level reasoning across multiple domains, with built‑in safety mitigations that reduce hallucinations and biased outputs.</p>
+      <a href="https://openai.com/research/gpt-4.5" target="_blank" rel="noopener">Read more</a>
     </div>
-  </div>
+  </article>
 
   <!-- Quantum Computing -->
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?quantum,computer" alt="Quantum Computing">
+  <article class="card">
+    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2RkZGRkZCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSI5MCIgZmlsbD0iI2VmZWZmZiIgLz48dGV4dCB4PSI1MCIgeT0iNTUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3ZmZmZiI+S3VwPC90ZXh0PjwvZz48L3N2Zz4=" alt="Quantum breakthrough">
     <div class="card-content">
-      <h3>Commercial Quantum Processors Reach 1,000 Qubits</h3>
-      <p>First-of-its-kind quantum chips now deliver 10× higher coherence, opening doors to real-world cryptography and material‑design simulations.</p>
-      <footer>Oct 2024 • <a href="#" style="color:inherit;">Read More</a></footer>
+      <h3>Quantum Supremacy 2.0</h3>
+      <p>Google and IBM have announced quantum processors with 200+ qubits and error correction that perform tasks beyond the reach of classical supercomputers, paving the way for new material simulations.</p>
+      <a href="https://www.quantum.gov" target="_blank" rel="noopener">Read more</a>
     </div>
-  </div>
-
-  <!-- Energy & Sustainability -->
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?solar,energy" alt="Solar">
-    <div class="card-content">
-      <h3>Ultra‑Efficient Perovskite Solar Cells</h3>
-      <p>New perovskite stacks surpass 30% efficiency, approaching silicon while remaining cost‑competitive and scalable.</p>
-      <footer>Jul 2024 • <a href="#" style="color:inherit;">Read More</a></footer>
-    </div>
-  </div>
+  </article>
 
   <!-- Biotechnology -->
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?biology,lab" alt="Biotech">
+  <article class="card">
+    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2RkZGRkZCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSI5MCIgZmlsbD0iI2VmZWZmZiIgLz48dGV4dCB4PSI1MCIgeT0iNTUiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3ZmZmZiI+Rm9uZXM8L3RleHQ+PC9nPjwvc3ZnPg==" alt="Biotech breakthrough">
     <div class="card-content">
-      <h3>CRISPR‑Cas13 Therapies for Viral Infections</h3>
-      <p>Gene‑editing platform neutralizes active viral RNA, offering rapid treatment options for emergent respiratory diseases.</p>
-      <footer>Aug 2024 • <a href="#" style="color:inherit;">Read More</a></footer>
-    </div>
-  </div>
-
-  <!-- Space Exploration -->
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?space,probe" alt="Space">
-    <div class="card-content">
-      <h3>Reusable Deep‑Space Probes</h3>
-      <p>NASA’s next generation of probes use regenerative heat shields, reducing launch costs by 40% and enabling multi‑mission deep‑space travel.</p>
-      <footer>Sep 2024 • <a href="#" style="color:inherit;">Read More</a></footer>
-    </div>
-  </div>
-
-  <!-- Consumer Tech -->
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?smartphone,wearable" alt="Consumer Tech">
-    <div class="card-content">
-      <h3>Foldable OLED 8K Smartphones</h3>
-      <p>New foldable displays achieve 8K resolution and 120Hz refresh on flexible panels, redefining mobile media consumption.</p>
-      <footer>Jun 2024 • <a href="#" style="color:inherit;">Read More</a></footer>
-    </div>
-  </div>
-
-  <!-- Cybersecurity -->
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?cybersecurity,security" alt="Cybersecurity">
-    <div class="card-content">
-      <h3>AI‑Driven Threat Detection with Quantum‑Secure Channels</h3>
-      <p>Hybrid AI/quantum systems provide real‑time intrusion analysis and encrypted communication, outpacing traditional cryptographic defenses.</p>
-      <footer>Dec 2024 • <a href="#" style="color:inherit;">Read More</a></footer>
-    </div>
-  </div>
-</div>
-
-<footer>
-  &copy; 2024 Tech Insights | All rights reserved
-</footer>
-</body>
-</html>
+      <h3>CRISPR-3.0 Gene Therapy</h3>
+      <p>New CRISPR variants enable precise editing in non-dividing cells, opening treatments for previously untreatable genetic disorders such as late-onset Huntington’s and
