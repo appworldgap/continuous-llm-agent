@@ -2,206 +2,128 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+/* CSS Variables */
 :root {
-  --primary:#1a73e8;
-  --accent:#ff7043;
-  --bg:#f7fafc;
-  --text:#2d3748;
-  --card-bg:#ffffff;
-  --shadow:#e2e8f0;
-  --border:#d1d5db;
-  --radius:0.5rem;
+  --primary:#4f46e5;      /* Indigo 600 */
+  --secondary:#06b6d4;    /* Cyan 400 */
+  --background:#f9fafb;   /* Gray 50 */
+  --surface:#ffffff;      /* White */
+  --text-primary:#111827; /* Gray 900 */
+  --text-secondary:#6b7280; /* Gray 500 */
+  --shadow:rgba(0, 0, 0, 0.1);
 }
-body {
-  margin:0; padding:0;
-  font-family:'Inter', sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-header {
-  background:var(--primary);
-  color:#fff;
-  padding:2rem 1rem;
-  text-align:center;
-}
-header h1 {
-  margin:0;
-  font-size:2.5rem;
-  font-weight:700;
-}
-nav {
-  background:#fff;
-  box-shadow:0 1px 3px var(--shadow);
-}
-nav ul {
-  list-style:none;
-  display:flex;
-  justify-content:center;
-  margin:0;
-  padding:0.5rem 0;
-}
-nav li {
-  margin:0 1rem;
-}
-nav a {
-  text-decoration:none;
-  color:var(--primary);
-  font-weight:600;
-}
-main {
-  max-width:1200px;
-  margin:auto;
-  padding:2rem 1rem;
-}
-section {
-  margin-bottom:3rem;
-}
-section h2 {
-  margin-top:0;
-  margin-bottom:0.5rem;
-  font-size:1.75rem;
-  color:var(--primary);
-}
-article {
-  display:flex;
-  flex-wrap:wrap;
-  gap:1.5rem;
-}
-article .card {
-  flex:1 1 calc(33% - 1.5rem);
-  background:var(--card-bg);
-  border-radius:var(--radius);
-  box-shadow:0 1px 2px var(--shadow);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-}
-article .card img {
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
-article .card .content {
-  padding:1rem;
-  flex:1;
-}
-article .card h3 {
-  margin:0 0 0.5rem;
-  font-size:1.25rem;
-  color:var(--accent);
-}
-article .card p {
-  margin:0;
-  font-size:0.95rem;
-  line-height:1.5;
-}
-article .card a {
-  margin-top:auto;
-  display:block;
-  text-align:center;
-  padding:0.75rem;
-  background:var(--primary);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-}
-footer {
-  background:#fff;
-  padding:1rem;
-  text-align:center;
-  font-size:0.9rem;
-  color:#555;
-}
-footer a {
-  color:var(--primary);
-  text-decoration:none;
-  margin:0 0.5rem;
-}
-@media(max-width:900px){
-  article .card {flex-basis:calc(50% - 1.5rem);}
-}
-@media(max-width:600px){
-  article .card {flex-basis:100%;}
-}
+
+/* Global Styles */
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: 'Inter', sans-serif; background:var(--background); color:var(--text-primary); line-height:1.6; }
+a { color:var(--primary); text-decoration:none; transition:color .3s; }
+a:hover { color:var(--secondary); }
+
+/* Layout */
+header { background:var(--surface); padding:2rem 1rem; box-shadow:0 2px 4px var(--shadow); }
+header h1 { font-size:2.25rem; font-weight:700; color:var(--primary); text-align:center; }
+header p { text-align:center; color:var(--text-secondary); margin-top:.5rem; }
+
+main { max-width:1200px; margin:2rem auto; padding:0 1rem; }
+section { margin-bottom:3rem; }
+section h2 { font-size:1.75rem; margin-bottom:1rem; color:var(--primary); }
+.cards { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:1.5rem; }
+
+/* Card Styles */
+.card { background:var(--surface); border-radius:8px; box-shadow:0 4px 6px var(--shadow); overflow:hidden; display:flex; flex-direction:column; }
+.card img { width:100%; height:160px; object-fit:cover; }
+.card-content { padding:1rem; flex:1; display:flex; flex-direction:column; }
+.card h3 { font-size:1.25rem; margin-bottom:.75rem; color:var(--primary); }
+.card p { flex:1; color:var(--text-secondary); }
+.card a { margin-top:.75rem; align-self:flex-start; font-weight:600; }
+
+/* Footer */
+footer { background:var(--surface); padding:1.5rem 1rem; text-align:center; color:var(--text-secondary); font-size:.875rem; }
+footer a { color:var(--primary); }
 </style>
 </head>
+
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>2026 Tech Horizon</h1>
+  <p>Explore the cutting‑edge breakthroughs shaping tomorrow</p>
 </header>
-<nav>
-  <ul>
-    <li><a href="#ai">AI</a></li>
-    <li><a href="#quantum">Quantum</a></li>
-    <li><a href="#energy">Energy</a></li>
-    <li><a href="#bio">Biotech</a></li>
-    <li><a href="#connectivity">Connectivity</a></li>
-  </ul>
-</nav>
+
 <main>
-  <!-- AI Section -->
-  <section id="ai">
+  <!-- AI & Machine Learning -->
+  <section>
     <h2>Artificial Intelligence & Machine Learning</h2>
-    <article>
+    <div class="cards">
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?ai" alt="AI illustration">
-        <div class="content">
-          <h3>OpenAI’s GPT‑5</h3>
-          <p>GPT‑5 introduces multimodal understanding with a 5‑fold increase in parameter count, enabling real‑time video, audio, and text synthesis. The model also boasts improved safety mitigations and lower energy consumption per inference.</p>
+        <img src="https://images.unsplash.com/photo-1525070466355-7c2b7e4d1b7c?auto=format&fit=crop&w=400&q=80" alt="AI">
+        <div class="card-content">
+          <h3>GPT‑5 and Beyond</h3>
+          <p>OpenAI’s GPT‑5 delivers multimodal reasoning with 10‑fold efficiency, enabling real‑time generative workflows in education, healthcare, and creative industries.</p>
+          <a href="#">Read More →</a>
         </div>
-        <a href="https://openai.com/research/gpt-5" target="_blank">Read More</a>
       </div>
+
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?machine-learning" alt="Machine learning">
-        <div class="content">
-          <h3>Federated Learning in Healthcare</h3>
-          <p>Hospitals worldwide are using federated learning frameworks to train predictive models on patient data without sharing sensitive information, enhancing privacy compliance and accelerating disease diagnostics.</p>
+        <img src="https://images.unsplash.com/photo-1534283327485-3e3f9d5c3b50?auto=format&fit=crop&w=400&q=80" alt="Edge AI">
+        <div class="card-content">
+          <h3>Edge AI Chips</h3>
+          <p>New silicon architectures integrate neural‑network cores with low‑power DSPs, making real‑time inference on wearables and autonomous drones possible.</p>
+          <a href="#">Read More →</a>
         </div>
-        <a href="https://www.wired.com/story/federated-learning-healthcare/" target="_blank">Read More</a>
       </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/featured/?ai-robotics" alt="AI robotics">
-        <div class="content">
-          <h3>Robotic Process Automation (RPA) 2.0</h3>
-          <p>New RPA tools now integrate natural language understanding, allowing robots to interpret unstructured documents and adjust workflows in real time.</p>
-        </div>
-        <a href="https://www.forbes.com/sites/forbestechcouncil/2024/06/10/robotic-process-automation-2-0/" target="_blank">Read More</a>
-      </div>
-    </article>
+    </div>
   </section>
 
-  <!-- Quantum Section -->
-  <section id="quantum">
+  <!-- Quantum Computing -->
+  <section>
     <h2>Quantum Computing</h2>
-    <article>
+    <div class="cards">
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?quantum-computing" alt="Quantum computer">
-        <div class="content">
-          <h3>Google’s Quantum Supremacy 2.0</h3>
-          <p>Google’s Sycamore processor now hosts 54 qubits with error correction, achieving computations in seconds that would take classical supercomputers millennia.</p>
+        <img src="https://images.unsplash.com/photo-1587829741301-dc5e9c9f4e01?auto=format&fit=crop&w=400&q=80" alt="Quantum">
+        <div class="card-content">
+          <h3>500‑Qubit Quantum Processors</h3>
+          <p>IBM and Google announced 500‑qubit devices, reaching the threshold for practical fault‑tolerant computing and opening new horizons in cryptography.</p>
+          <a href="#">Read More →</a>
         </div>
-        <a href="https://blog.google/technology/quantum/" target="_blank">Read More</a>
       </div>
+
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?quantum-chemistry" alt="Quantum chemistry">
-        <div class="content">
-          <h3>Quantum Chemistry Simulation</h3>
-          <p>IBM and D‑Wave collaboration has enabled the simulation of complex molecules for drug discovery, reducing development cycles from years to weeks.</p>
+        <img src="https://images.unsplash.com/photo-1518447867085-2e92f9f5c8e3?auto=format&fit=crop&w=400&q=80" alt="Quantum Software">
+        <div class="card-content">
+          <h3>Quantum‑Ready Algorithms</h3>
+          <p>Software frameworks like Qiskit 2.0 and Cirq 2.0 streamline hybrid quantum‑classical workflows for drug discovery and optimization.</p>
+          <a href="#">Read More →</a>
         </div>
-        <a href="https://www.ibm.com/blogs/quantum/quantum-chemistry/" target="_blank">Read More</a>
       </div>
-    </article>
+    </div>
   </section>
 
-  <!-- Energy Section -->
-  <section id="energy">
-    <h2>Energy & Battery Innovations</h2>
-    <article>
+  <!-- 5G / 6G & Connectivity -->
+  <section>
+    <h2>5G / 6G & Connectivity</h2>
+    <div class="cards">
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?lithium-ion" alt="Lithium ion battery">
-        <div class="content">
-          <h3>Sil
+        <img src="https://images.unsplash.com/photo-1573164574474-9a9b0b6d2b69?auto=format&fit=crop&w=400&q=80" alt="6G">
+        <div class="card-content">
+          <h3>6G Prototypes</h3>
+          <p>Research labs have demonstrated terabit-per-second links at 100 GHz, promising ultra‑low latency for holographic AR and real‑time quantum networks.</p>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581093588401-1f3d7d6a2b1b?auto=format&fit=crop&w=400&q=80" alt="Satellite">
+        <div class="card-content">
+          <h3>Low‑Earth Orbit Constellations</h3>
+          <p>Starlink‑3 and OneWeb‑V4 now deliver gigabit connectivity to remote regions, accelerating digital inclusion worldwide.</p>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Renewable Energy & Storage -->
