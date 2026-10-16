@@ -3,148 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  :root{
-    --primary:#2e86de;
-    --secondary:#fff;
-    --bg:#f4f6f8;
-    --accent:#e91e63;
-    --text:#333;
+  /* =======================
+     Base Styles
+  ======================= */
+  :root {
+    --primary:#2c3e50;
+    --accent:#e74c3c;
+    --bg:#f8f9fa;
     --card-bg:#fff;
+    --text:#2c3e50;
+    --shadow:rgba(0,0,0,0.1);
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{opacity:.8;}
+
+  /* =======================
+     Layout
+  ======================= */
   header{
-    background:linear-gradient(135deg,#2e86de,#1b9e77);
-    color:#fff;
-    padding:4rem 2rem;
+    background:var(--primary);color:#fff;padding:2rem 1rem;
     text-align:center;
-    position:relative;
-    overflow:hidden;
+    margin-bottom:2rem;
   }
-  header::before{
-    content:"";
-    position:absolute;
-    top:-10%;
-    left:-10%;
-    width:120%;
-    height:120%;
-    background:radial-gradient(circle at center,rgba(255,255,255,.2),transparent);
-    transform:rotate(45deg);
-    z-index:0;
-  }
-  header h1{
-    font-size:3rem;
-    z-index:1;
-    position:relative;
-    margin-bottom:.5rem;
-  }
-  header p{
-    font-size:1.2rem;
-    z-index:1;
-    position:relative;
-  }
-  main{
-    max-width:1200px;
-    margin:auto;
-    padding:2rem;
-    display:grid;
-    gap:1.5rem;
-  }
+  header h1{font-size:2.5rem;margin-bottom:.5rem;}
+  header p{font-size:1.2rem;margin-top:.5rem;}
+  main{max-width:1200px;margin:auto;padding:0 1rem;}
+  .grid{display:grid;gap:1.5rem;margin-top:2rem;}
+  @media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr);}}
+
+  /* =======================
+     Cards
+  ======================= */
   .card{
-    background:var(--card-bg);
-    box-shadow:0 4px 8px rgba(0,0,0,.05);
-    border-radius:8px;
-    padding:2rem;
-    transition:transform .2s ease, box-shadow .2s ease;
+    background:var(--card-bg);border-radius:8px;
+    box-shadow:0 4px 12px var(--shadow);
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    transition:transform .2s ease;
   }
-  .card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 12px rgba(0,0,0,.1);
-  }
-  .card h2{
-    margin-bottom:1rem;
-    color:var(--primary);
-    font-size:1.8rem;
-  }
-  .card p{
-    font-size:1rem;
-    margin-bottom:1rem;
-  }
-  .card .badge{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    padding:.3rem .8rem;
-    border-radius:12px;
-    font-size:.75rem;
-    margin-top:1rem;
-  }
-  @media(min-width:768px){
-    main{
-      grid-template-columns:repeat(2,1fr);
-    }
-  }
-  @media(min-width:1024px){
-    main{
-      grid-template-columns:repeat(3,1fr);
-    }
-  }
+  .card:hover{transform:translateY(-4px);}
+  .card img{width:100%;height:180px;object-fit:cover;}
+  .card-body{padding:1rem;flex:1;}
+  .card-title{font-size:1.3rem;margin-bottom:.5rem;}
+  .card-text{font-size:.95rem;color:#555;margin-bottom:1rem;}
+  .card-footer{padding:0 1rem 1rem;display:flex;justify-content:flex-end;}
+  .card-footer a{background:var(--accent);color:#fff;padding:.5rem 1rem;border-radius:4px;}
+  .card-footer a:hover{opacity:.9;}
+
+  /* =======================
+     Footer
+  ======================= */
+  footer{margin-top:4rem;text-align:center;color:#777;font-size:.9rem;}
 </style>
 </head>
 <body>
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Exploring the frontiers that are shaping tomorrow’s world today.</p>
+  <p>Discover the innovations shaping tomorrow – from AI to quantum computing, energy, biotech, and beyond.</p>
 </header>
+
 <main>
-  <article class="card">
+  <section id="ai-ml">
     <h2>Artificial Intelligence & Machine Learning</h2>
-    <p>Large language models now understand context across multiple languages, enabling real‑time translation, advanced content generation, and deeper insights into scientific literature.</p>
-    <p>Generative AI tools are powering new forms of design, code synthesis, and predictive modeling, reducing the time from concept to prototype.</p>
-    <span class="badge">AI</span>
-  </article>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581093588401-1c7e0f8c0b94?auto=format&fit=crop&w=400&q=80" alt="AI">
+        <div class="card-body">
+          <h3 class="card-title">Large Language Models (LLMs) & Multi‑Modal AI</h3>
+          <p class="card-text">Models like GPT‑4, Claude 3, and PaLM 2 now understand text, images, and code, enabling advanced chatbots, code generation, and creative content creation.</p>
+        </div>
+        <div class="card-footer"><a href="https://openai.com/research/gpt-4" target="_blank">Learn More</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1523986371879-4d30f4e6d9f2?auto=format&fit=crop&w=400&q=80" alt="AI Ethics">
+        <div class="card-body">
+          <h3 class="card-title">AI Ethics & Governance</h3>
+          <p class="card-text">New frameworks for transparency, bias mitigation, and human‑in‑the‑loop decision‑making are being adopted by tech giants and regulators alike.</p>
+        </div>
+        <div class="card-footer"><a href="https://www.weforum.org/agenda/2024/03/ai-ethics-standards/" target="_blank">Learn More</a></div>
+      </article>
+    </div>
+  </section>
 
-  <article class="card">
-    <h2>Quantum Computing</h2>
-    <p>Silicon‑based quantum processors have reached 100 qubits with error rates below 1%, bringing practical quantum advantage within reach for cryptography, drug discovery, and complex optimization.</p>
-    <p>Hybrid quantum‑classical algorithms are now being used in industrial settings for real‑world problem solving.</p>
-    <span class="badge">Quantum</span>
-  </article>
+  <section id="quantum">
+    <h2>Quantum Computing & Simulation</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1617177281549-4c6e6c3f4b7d?auto=format&fit=crop&w=400&q=80" alt="Quantum">
+        <div class="card-body">
+          <h3 class="card-title">5‑Qubit Superconducting Processor</h3>
+          <p class="card-text">IBM’s 5‑qubit “Osprey” demonstrator achieved 99.9% gate fidelity, a key milestone toward fault‑tolerant quantum processors.</p>
+        </div>
+        <div class="card-footer"><a href="https://www.ibm.com/blogs/research/2024/05/osprey/" target="_blank">Read More</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1523486982696-3b6f7e6b4b40?auto=format&fit=crop&w=400&q=80" alt="Quantum Simulation">
+        <div class="card-body">
+          <h3 class="card-title">Quantum‑Enhanced Drug Discovery</h3>
+          <p class="card-text">A joint effort between Microsoft and pharmaceutical firms achieved a 30% reduction in the time required to model protein‑ligand interactions.</p>
+        </div>
+        <div class="card-footer"><a href="https://blogs.microsoft.com/ai/2024/04/18/quantum-chemistry/" target="_blank">Read More</a></div>
+      </article>
+    </div>
+  </section>
 
-  <article class="card">
-    <h2>5G & 6G Development</h2>
-    <p>5G networks now deliver sub‑millisecond latency, supporting autonomous vehicles, remote surgery, and massive IoT deployments.</p>
-    <p>Research into 6G is targeting terabit‑per‑second data rates, terahertz frequencies, and AI‑driven network slicing.</p>
-    <span class="badge">Networking</span>
-  </article>
-
-  <article class="card">
-    <h2>Energy Storage & Battery Tech</h2>
-    <p>Sodium‑ion batteries offer cost‑effective, scalable options for grid storage, while solid‑state lithium batteries are approaching commercial viability with higher energy density and safety.</p>
-    <p>Flow battery systems are improving throughput and lifespan, making them ideal for renewable integration.</p>
-    <span class="badge">Energy</span>
-  </article>
-
-  <article class="card">
-    <h2>Biotechnology & Gene Editing</h2>
-    <p>CRISPR‑Cas12 and base‑editing tools allow precise correction of pathogenic mutations with fewer off‑target effects.</p>
-    <p>mRNA vaccine platforms have expanded to deliver targeted therapeutics for cancer and rare diseases.</p>
-    <span class="badge">Biotech</span>
-  </article>
-
-  <article class="card">
-    <h2>Space & Satellite Tech</h2>
-    <p>CubeSat constellations provide low‑cost, high‑resolution Earth observation, while reusable launch vehicles lower access barriers to orbit.</p>
-    <p>Interplanetary probes are employing autonomous navigation systems, enabling deeper exploration of the outer Solar System.</p>
-    <span class="badge">Space</span>
-  </article>
-</main>
-</body>
-</html>
+  <section id="energy">
+    <h2>Energy & Sustainability</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587303815595-4e1e2e4e1f56?auto=format&fit=crop&w=400&q=80" alt="Battery">
+        <div class="card-body">
+          <h3 class="card-title">Solid‑State Battery Breakthrough</h3>
+          <p class="card-text">Researchers at Stanford
