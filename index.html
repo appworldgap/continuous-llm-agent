@@ -2,113 +2,149 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables */
   :root{
-    --primary:#0a84ff;
-    --secondary:#00c4ff;
-    --accent:#ff9500;
-    --bg:#f4f7fa;
+    --primary:#2e86de;
+    --secondary:#fff;
+    --bg:#f4f6f8;
+    --accent:#e91e63;
     --text:#333;
     --card-bg:#fff;
-    --shadow:0 4px 12px rgba(0,0,0,0.1);
   }
-  /* Reset */
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:system-ui, sans-serif;line-height:1.6;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;}
-  a{color:var(--primary);text-decoration:none;}
-  a:hover{opacity:.8;}
-  header{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:3rem 1rem;text-align:center;}
-  header h1{font-size:2.5rem;margin-bottom:.5rem;}
-  header p{font-size:1.2rem;margin-bottom:1rem;}
-  nav{background:#fff;padding:1rem 0;box-shadow:var(--shadow);position:sticky;top:0;z-index:100;}
-  nav ul{display:flex;justify-content:center;gap:1.5rem;}
-  nav li{list-style:none;}
-  main{flex:1;max-width:1200px;margin:2rem auto;padding:0 1rem;}
-  .section{margin-bottom:4rem;}
-  .section h2{font-size:2rem;margin-bottom:1.5rem;border-bottom:2px solid var(--primary);padding-bottom:.5rem;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-  .card{background:var(--card-bg);border-radius:.75rem;padding:1.5rem;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;}
-  .card:hover{transform:translateY(-5px);box-shadow:0 8px 18px rgba(0,0,0,0.15);}
-  .card img{width:100%;height:180px;object-fit:cover;border-radius:.5rem;margin-bottom:1rem;}
-  .card h3{font-size:1.4rem;margin-bottom:.75rem;color:var(--primary);}
-  .card p{font-size:1rem;line-height:1.5;color:#555;}
-  footer{background:#222;color:#ddd;padding:1.5rem;text-align:center;font-size:.9rem;}
-  footer a{color:var(--accent);}
-  @media (max-width:600px){
-    header h1{font-size:2rem;}
-    header p{font-size:1rem;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  header{
+    background:linear-gradient(135deg,#2e86de,#1b9e77);
+    color:#fff;
+    padding:4rem 2rem;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:"";
+    position:absolute;
+    top:-10%;
+    left:-10%;
+    width:120%;
+    height:120%;
+    background:radial-gradient(circle at center,rgba(255,255,255,.2),transparent);
+    transform:rotate(45deg);
+    z-index:0;
+  }
+  header h1{
+    font-size:3rem;
+    z-index:1;
+    position:relative;
+    margin-bottom:.5rem;
+  }
+  header p{
+    font-size:1.2rem;
+    z-index:1;
+    position:relative;
+  }
+  main{
+    max-width:1200px;
+    margin:auto;
+    padding:2rem;
+    display:grid;
+    gap:1.5rem;
+  }
+  .card{
+    background:var(--card-bg);
+    box-shadow:0 4px 8px rgba(0,0,0,.05);
+    border-radius:8px;
+    padding:2rem;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 12px rgba(0,0,0,.1);
+  }
+  .card h2{
+    margin-bottom:1rem;
+    color:var(--primary);
+    font-size:1.8rem;
+  }
+  .card p{
+    font-size:1rem;
+    margin-bottom:1rem;
+  }
+  .card .badge{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    padding:.3rem .8rem;
+    border-radius:12px;
+    font-size:.75rem;
+    margin-top:1rem;
+  }
+  @media(min-width:768px){
+    main{
+      grid-template-columns:repeat(2,1fr);
+    }
+  }
+  @media(min-width:1024px){
+    main{
+      grid-template-columns:repeat(3,1fr);
+    }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Breakthroughs in Technology – 2026</h1>
-  <p>Exploring the most transformative advances across AI, quantum, energy, space, materials, and health.</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Exploring the frontiers that are shaping tomorrow’s world today.</p>
 </header>
-
-<nav>
-  <ul>
-    <li><a href="#ai">AI</a></li>
-    <li><a href="#quantum">Quantum</a></li>
-    <li><a href="#energy">Energy</a></li>
-    <li><a href="#space">Space</a></li>
-    <li><a href="#materials">Materials</a></li>
-    <li><a href="#health">Health</a></li>
-  </ul>
-</nav>
-
 <main>
-  <section id="ai" class="section">
-    <h2>Artificial Intelligence</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581093588401-7aebf1d9c4b3?auto=format&fit=crop&w=400&q=80" alt="AI brain">
-        <h3>Multimodal Foundation Models</h3>
-        <p>2026 sees the first truly multimodal foundation models that process text, vision, audio, and sensor data in a unified architecture, enabling seamless cross‑modal reasoning for robotics, healthcare, and autonomous systems.</p>
-      </article>
+  <article class="card">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <p>Large language models now understand context across multiple languages, enabling real‑time translation, advanced content generation, and deeper insights into scientific literature.</p>
+    <p>Generative AI tools are powering new forms of design, code synthesis, and predictive modeling, reducing the time from concept to prototype.</p>
+    <span class="badge">AI</span>
+  </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=400&q=80" alt="AI chip">
-        <h3>AI‑Optimized Silicon 2</h3>
-        <p>New silicon process with sub‑0.6 nm feature size and integrated photonic interconnects boosts inference throughput by 15× while cutting power use by 60 % for edge AI deployments.</p>
-      </article>
+  <article class="card">
+    <h2>Quantum Computing</h2>
+    <p>Silicon‑based quantum processors have reached 100 qubits with error rates below 1%, bringing practical quantum advantage within reach for cryptography, drug discovery, and complex optimization.</p>
+    <p>Hybrid quantum‑classical algorithms are now being used in industrial settings for real‑world problem solving.</p>
+    <span class="badge">Quantum</span>
+  </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1564518098551-4a4c6f4e6a44?auto=format&fit=crop&w=400&q=80" alt="Neurosymbolic AI">
-        <h3>Neurosymbolic Reasoning Engines</h3>
-        <p>Hybrid neural‑symbolic systems combine deep learning’s pattern recognition with logical inference, enabling transparent AI that can explain decisions in high‑stakes domains like finance and aviation.</p>
-      </article>
-    </div>
-  </section>
+  <article class="card">
+    <h2>5G & 6G Development</h2>
+    <p>5G networks now deliver sub‑millisecond latency, supporting autonomous vehicles, remote surgery, and massive IoT deployments.</p>
+    <p>Research into 6G is targeting terabit‑per‑second data rates, terahertz frequencies, and AI‑driven network slicing.</p>
+    <span class="badge">Networking</span>
+  </article>
 
-  <section id="quantum" class="section">
-    <h2>Quantum Technologies</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1537487831022-0f2e4e70a1c6?auto=format&fit=crop&w=400&q=80" alt="Quantum computer">
-        <h3>Fault‑Tolerant Quantum Processors</h3>
-        <p>Commercial‑grade quantum processors with >1,000 logical qubits and error rates <1 % are now available, making quantum advantage realistic for cryptography, material simulation, and optimization.</p>
-      </article>
+  <article class="card">
+    <h2>Energy Storage & Battery Tech</h2>
+    <p>Sodium‑ion batteries offer cost‑effective, scalable options for grid storage, while solid‑state lithium batteries are approaching commercial viability with higher energy density and safety.</p>
+    <p>Flow battery systems are improving throughput and lifespan, making them ideal for renewable integration.</p>
+    <span class="badge">Energy</span>
+  </article>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1542744173-8e6c1e0a3a79?auto=format&fit=crop&w=400&q=80" alt="Quantum sensors">
-        <h3>Quantum‑Enhanced Sensing</h3>
-        <p>Quantum magnetometers and gravimeters provide unprecedented sensitivity for geological surveys, navigation, and medical imaging, with field‑ready units now on the market.</p>
-      </article>
-    </div>
-  </section>
+  <article class="card">
+    <h2>Biotechnology & Gene Editing</h2>
+    <p>CRISPR‑Cas12 and base‑editing tools allow precise correction of pathogenic mutations with fewer off‑target effects.</p>
+    <p>mRNA vaccine platforms have expanded to deliver targeted therapeutics for cancer and rare diseases.</p>
+    <span class="badge">Biotech</span>
+  </article>
 
-  <section id="energy" class="section">
-    <h2>Energy & Sustainability</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1514978927273-6b9c5e1b3a8c?auto=format&fit=crop&w=400&q=80" alt="Solar cell">
-        <h3>Perovskite Tandem Solar Cells</h3>
-        <p>Perovskite‑on‑silicon tandem modules now achieve >30 % efficiency with a 15 % price reduction, accelerating grid‑scale deployment and rooftop adoption.</p>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1559127086-73a7f3d1c70e
+  <article class="card">
+    <h2>Space & Satellite Tech</h2>
+    <p>CubeSat constellations provide low‑cost, high‑resolution Earth observation, while reusable launch vehicles lower access barriers to orbit.</p>
+    <p>Interplanetary probes are employing autonomous navigation systems, enabling deeper exploration of the outer Solar System.</p>
+    <span class="badge">Space</span>
+  </article>
+</main>
+</body>
+</html>
