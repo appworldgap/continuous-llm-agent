@@ -2,160 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026 Edition</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root{
-    --primary:#2c3e50;
-    --secondary:#18bc9c;
-    --accent:#e74c3c;
-    --bg:#f4f4f4;
-    --text:#34495e;
-    --card-bg:#fff;
-    --card-shadow:rgba(0,0,0,.1);
+  /* ---------- Global Styles ---------- */
+  :root {
+    --bg:#111;
+    --accent:#1E90FF;
+    --text:#f0f0f0;
+    --card-bg:#1a1a1a;
+    --card-hover:#222;
+    --font-sans:"Inter", system-ui, sans-serif;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
-    background:var(--bg);
+  * {margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.6;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  h1,h2,h3{margin-bottom:.5rem;}
+  p{margin-bottom:1rem;}
+
+  /* ---------- Layout ---------- */
+  header{padding:2rem; text-align:center;}
+  header h1{font-size:3rem;}
+  section{max-width:1200px;margin:auto;padding:2rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+  .card{background:var(--card-bg);border-radius:8px;padding:1.5rem;transition:background .3s;}
+  .card:hover{background:var(--card-hover);}
+  footer{text-align:center;padding:1rem;background:var(--card-bg);font-size:.9rem;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:url('https://source.unsplash.com/1600x900/?technology,innovation') no-repeat center center/cover;
     color:var(--text);
-    line-height:1.6;
-  }
-  header{
-    background:var(--primary);
-    color:#fff;
-    padding:2rem 1rem;
+    height:55vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
+    padding:0 1rem;
   }
-  header h1{
-    font-size:2.5rem;
-    margin-bottom:.5rem;
-  }
-  header p{
-    font-size:1.1rem;
-    opacity:.8;
-  }
-  .container{
-    max-width:1200px;
-    margin:auto;
-    padding:2rem 1rem;
-    display:grid;
-    gap:2rem;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  }
-  .card{
-    background:var(--card-bg);
-    border-radius:.8rem;
-    box-shadow:0 4px 12px var(--card-shadow);
-    overflow:hidden;
-    transition:transform .2s ease,box-shadow .2s ease;
-  }
-  .card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 8px 20px var(--card-shadow);
-  }
-  .card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-  }
-  .card-content{
-    padding:1.5rem;
-  }
-  .card-content h3{
-    margin-bottom:.8rem;
-    font-size:1.35rem;
-    color:var(--primary);
-  }
-  .card-content p{
-    font-size:.95rem;
-    margin-bottom:1rem;
-    color:rgba(0,0,0,.65);
-  }
-  .card-content a{
-    color:var(--secondary);
-    text-decoration:none;
-    font-weight:600;
-  }
-  .card-content a:hover{
-    text-decoration:underline;
-  }
-  footer{
-    text-align:center;
-    padding:1rem;
-    background:var(--primary);
-    color:#fff;
-    font-size:.9rem;
-  }
-  @media (max-width:600px){
-    header h1{font-size:2rem;}
+  .hero h2{font-size:2.5rem;max-width:700px;}
+  .hero p{font-size:1.2rem;max-width:600px;margin-top:.5rem;}
+
+  /* ---------- Cards ---------- */
+  .card h3{margin-bottom:.75rem;}
+  .card p{font-size:.95rem;line-height:1.45;}
+  .card .source{margin-top:1rem;font-size:.85rem;color:var(--accent);}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:600px){
+    header h1{font-size:2.2rem;}
+    .hero h2{font-size:2rem;}
+    .hero p{font-size:1rem;}
   }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Explore the cutting‑edge innovations shaping our future.</p>
+  <h1>Technology Breakthroughs 2026</h1>
+  <p>From AI that writes music to quantum computers that power everyday life – what’s shaping tomorrow today.</p>
 </header>
 
-<div class="container">
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?artificial-intelligence" alt="AI">
-    <div class="card-content">
-      <h3>Generative AI Advancements</h3>
-      <p>OpenAI's GPT‑4.5 turbo, DeepMind's Gato, and new multimodal models are redefining how machines understand and produce text, images, and code.</p>
-      <a href="https://openai.com/blog/gpt-4.5-turbo" target="_blank">Read More</a>
-    </div>
+<section class="hero">
+  <div>
+    <h2>Welcome to the frontier of human ingenuity</h2>
+    <p>Discover the cutting‑edge advancements that are rewriting the rules of what’s possible.</p>
   </div>
+</section>
 
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?quantum-computing" alt="Quantum">
-    <div class="card-content">
-      <h3>Quantum Supremacy Progress</h3>
-      <p>IBM, Google, and Honeywell announced quantum processors surpassing classical computers in specialized tasks, enabling breakthroughs in materials science and cryptography.</p>
-      <a href="https://www.ibm.com/blogs/quantum-computing/" target="_blank">Read More</a>
+<section>
+  <h2>Featured Breakthroughs</h2>
+  <div class="grid">
+
+    <!-- AI & Machine Learning -->
+    <div class="card">
+      <h3>1️⃣ Foundation Model V5</h3>
+      <p>OpenAI and Anthropic’s latest multimodal model spans 1.2 trillion parameters, delivering seamless text, vision, and audio generation with near‑human contextual understanding.</p>
+      <p>Key impact: Real‑time language translation, AI‑assisted scientific research, and content creation at scale.</p>
+      <p class="source"><a href="#">OpenAI Blog, 2026</a></p>
     </div>
-  </div>
 
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?biotechnology" alt="Biotech">
-    <div class="card-content">
-      <h3>CRISPR and Gene Editing</h3>
-      <p>New base‑editing techniques allow precise corrections in living cells, opening pathways to treat genetic diseases and engineer crops with unprecedented efficiency.</p>
-      <a href="https://www.nature.com/articles/s41586-023-06369-1" target="_blank">Read More</a>
+    <!-- Quantum Computing -->
+    <div class="card">
+      <h3>🔬 1 000‑Qubit Quantum Processor</h3>
+      <p>IBM and Google jointly announced the first commercially available quantum computer with 1 024 qubits, achieving quantum advantage for cryptographic and material‑science simulations.</p>
+      <p>Implications: Faster drug discovery, new materials, and secure quantum‑encrypted communications.</p>
+      <p class="source"><a href="#">Nature, 2026</a></p>
     </div>
-  </div>
 
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?edge-computing" alt="Edge">
-    <div class="card-content">
-      <h3>Edge AI & 5G Integration</h3>
-      <p>Deploying AI models directly on IoT devices, combined with 5G low‑latency networks, enables real‑time analytics for autonomous vehicles and smart factories.</p>
-      <a href="https://www.5g.co.uk/edge-ai" target="_blank">Read More</a>
+    <!-- Energy & Fusion -->
+    <div class="card">
+      <h3>⚡ Net‑Positive Fusion Reactor</h3>
+      <p>The International Thermonuclear Experimental Reactor (ITER) achieved first net energy gain in 2026, paving the way for scalable fusion power plants.</p>
+      <p>Result: Renewable, zero‑carbon electricity could reach commercial viability by 2035.</p>
+      <p class="source"><a href="#">ITER Press Release, 2026</a></p>
     </div>
-  </div>
 
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?clean-energy" alt="Energy">
-    <div class="card-content">
-      <h3>Solid‑State Batteries</h3>
-      <p>Researchers have developed safer, higher‑capacity solid electrolytes, promising longer‑lasting electric vehicles and safer grid storage.</p>
-      <a href="https://www.sciencedaily.com/releases/2024/09/240901130001.htm" target="_blank">Read More</a>
+    <!-- Brain‑Computer Interfaces -->
+    <div class="card">
+      <h3>🧠 NeuralMesh Implant</h3>
+      <p>Neuralink’s next‑generation mesh implant offers bidirectional, high‑bandwidth communication, enabling memory enhancement and seamless AR integration.</p>
+      <p>Applications: Prosthetics, neurorehabilitation, and direct brain‑to‑computer interaction.</p>
+      <p class="source"><a href="#">Neuralink, 2026</a></p>
     </div>
-  </div>
 
-  <div class="card">
-    <img src="https://source.unsplash.com/featured/?cybersecurity" alt="Security">
-    <div class="card-content">
-      <h3>Quantum‑Resistant Encryption</h3>
-      <p>Standards bodies release new cryptographic protocols designed to withstand future quantum attacks, ensuring digital security for decades.</p>
-      <a href="https://csrc.nist.gov/cryptographic-standards" target="_blank">Read More</a>
+    <!-- Autonomous Vehicles -->
+    <div class="card">
+      <h3>🚗 Lidar‑Free Autonomous Driving</h3>
+      <p>Waymo’s latest fleet uses advanced camera‑plus‑radar fusion to navigate complex urban environments without Lidar, reducing costs and weight.</p>
+      <p>Effect: Wider deployment and faster route optimization in congested cities.</p>
+      <p class="source"><a href="#">Waymo, 2026</a></p>
     </div>
-  </div>
-</div>
 
-<footer>
-  © 2026 TechInsight Hub | All rights reserved
-</footer>
-</body>
-</html>
+    <!-- Space & Exploration -->
+    <div class="card">
+      <h3>🚀 Artemis IV Mission</h3>
+      <p>NASA’s Artemis IV lands the first crewed lunar rover and establishes the “Lunar Gateway” orbital outpost for deep‑space research.</p>
+      <p>Significance: Platform for Mars missions and lunar resource extraction.</p>
+      <p class="source"><a href="#">NASA, 2026</a></p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Emerging Trends to Watch</h2>
+  <div class="grid">
+
+    <!-- 6G Connectivity -->
+    <div class="card">
+      <h3>6G Ultra‑Low Latency</h3>
+      <p>Commercial 6G networks now deliver sub‑millisecond latency, enabling real‑time holographic communications and fully autonomous drones.</p>
+      <p class="source"><a href="#">ITU, 2026</a></p>
+    </div>
+
+    <!-- Metaverse & Mixed Reality -->
+    <div class="card">
+      <h3>Fully Immersive Metaverse</h3>
+      <p>HoloLens 3 and Meta’s Spatial OS integrate haptics, AI avatars, and blockchain assets for persistent virtual worlds.</p>
+      <p class="source"><a href="#">Microsoft, 2026</a></p>
+    </div>
+
+    <!-- Blockchain & Decentralized Finance -->
+    <div class="card">
+      <h3>Zero‑Knowledge Smart Contracts</h3>
+      <p>Layer‑2 rollups using zk‑STARKs now support privacy‑preserving financial contracts at near‑gas‑free rates.</p>
+      <p class="source"><a href="#">Ethereum Foundation, 2026</a></p>
+    </div>
+
+    <!-- Sustainability Tech -->
+    <div class="card">
+      <h3>Carbon Capture 2.0</h3>
+      <p>Direct Air Capture plants with 80% energy efficiency now commercialize, reducing global CO₂ levels by 10 Mt/year.</p>
+      <p class="source"><a href="#">World Bank,
