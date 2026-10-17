@@ -2,92 +2,161 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-/* Reset and Base */
-*{margin:0;padding:0;box-sizing:border-box;}
-html{font-size: 16px; line-height:1.6; font-family: 'Segoe UI', Tahoma, sans-serif; background:#f9f9f9;}
-body{color:#333;}
+  /* CSS Variables */
+  :root {
+    --bg-color:#fafafa;
+    --text-color:#111;
+    --accent:#4CAF50;
+    --card-bg:#fff;
+    --card-shadow:0 4px 12px rgba(0,0,0,0.05);
+    --font-primary:'Inter', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color:#111;
+      --text-color:#fafafa;
+      --card-bg:#1e1e1e;
+      --card-shadow:0 4px 12px rgba(255,255,255,0.05);
+    }
+  }
 
-/* Layout */
-.wrapper{max-width:1200px;margin:auto;padding:2rem;}
-header{text-align:center;margin-bottom:3rem;}
-header h1{font-size:2.5rem;color:#222;}
-header p{font-size:1rem;color:#666;margin-top:.5rem;}
-section{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);margin-bottom:2rem;padding:2rem;}
-section h2{font-size:1.75rem;margin-bottom:1rem;color:#111;}
-section p{margin-bottom:1.25rem;}
-section a{color:#0066cc;text-decoration:none;border-bottom:1px solid transparent;}
-section a:hover{border-color:#0066cc;}
-/* Grid for articles */
-.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
-article{border-left:4px solid #0066cc;padding-left:1rem;}
-article h3{font-size:1.5rem;margin-bottom:.5rem;}
-article p{font-size:.95rem;color:#444;}
-
-/* Footer */
-footer{text-align:center;font-size:.9rem;color:#777;margin-top:4rem;padding-top:1rem;border-top:1px solid #ddd;}
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    font-family:var(--font-primary);
+    background:var(--bg-color);
+    color:var(--text-color);
+    line-height:1.6;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  header {
+    background:var(--accent);
+    color:#fff;
+    padding:3rem 1rem;
+    text-align:center;
+  }
+  header h1 { font-size:2.5rem; margin-bottom:0.5rem; }
+  header p { font-size:1.2rem; }
+  nav {
+    margin:2rem auto;
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  nav a {
+    background:#fff;
+    color:var(--text-color);
+    padding:0.75rem 1.5rem;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:var(--card-shadow);
+  }
+  main { flex:1; padding:2rem 1rem; max-width:1200px; margin:auto; }
+  section { margin-bottom:3rem; }
+  h2 { margin-bottom:1.5rem; font-size:1.8rem; }
+  .grid { display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+  .card {
+    background:var(--card-bg);
+    padding:1.5rem;
+    border-radius:12px;
+    box-shadow:var(--card-shadow);
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .card img { border-radius:8px; width:100%; height:auto; margin-bottom:1rem; }
+  .card h3 { margin-bottom:0.75rem; font-size:1.4rem; }
+  .card p { flex:1; }
+  footer {
+    background:#222;
+    color:#ddd;
+    text-align:center;
+    padding:1.5rem 1rem;
+    font-size:0.9rem;
+  }
+  footer a { color:var(--accent); text-decoration:none; }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="wrapper">
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Curated insights and breakthroughs shaping the future in 2026.</p>
+  <h1>Breakthroughs in Technology (2024)</h1>
+  <p>Explore the latest milestones reshaping our world</p>
 </header>
 
-<!-- AI and Machine Learning -->
-<section>
-  <h2>Artificial Intelligence & Machine Learning</h2>
-  <p>2026 saw the rise of <strong>Neuro-Symbolic AI</strong>, blending neural networks with logical reasoning to produce systems that can explain their decisions in human-understandable language. Companies such as <a href="https://openai.com" target="_blank">OpenAI</a> and <a href="https://google.com" target="_blank">Google DeepMind</a> released models capable of real‑time multimodal reasoning, enabling advanced robotics and personalized medicine.</p>
-  <p>Another milestone is the <strong>Edge AI Chip</strong> from <a href="https://intel.com" target="_blank">Intel</a>, featuring 5 nm silicon and a built‑in neural accelerator that processes 10 TFLOPS of inference per watt, bringing powerful AI to smartphones and IoT devices.</p>
-</section>
+<nav>
+  <a href="#quantum">Quantum Computing</a>
+  <a href="#ai">Artificial Intelligence</a>
+  <a href="#biotech">Biotechnology</a>
+  <a href="#energy">Energy & Storage</a>
+  <a href="#space">Space Tech</a>
+  <a href="#future">Emerging Trends</a>
+</nav>
 
-<!-- Quantum Computing -->
-<section>
-  <h2>Quantum Computing</h2>
-  <p>Quantum processors from <a href="https://quantinuum.com" target="_blank">Quantinuum</a> and <a href="https://rigetti.com" target="_blank">Rigetti</a> now boast over 1,000 qubits with error rates below 1%. The first commercially available <strong>Hybrid Quantum‑Classical Cloud Service</strong> allows researchers to prototype quantum algorithms for drug discovery and optimization problems.</p>
-  <p>Meanwhile, the <strong>Quantum Internet Initiative</strong> in Europe achieved the first multi‑node entanglement distribution over 1000 km, paving the way for secure communications and distributed quantum computing.</p>
-</section>
+<main>
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1616636535497-5c3c0e8f5b84?auto=format&fit=crop&w=400&q=80" alt="Quantum computer">
+        <h3>Silicon-Based Qubits Reach 99% Fidelity</h3>
+        <p>Researchers at IBM and MIT have achieved unprecedented error rates for silicon spin qubits, bringing practical quantum advantage closer than ever.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581092917926-4b9f3c2f7d73?auto=format&fit=crop&w=400&q=80" alt="Quantum network">
+        <h3>First Quantum Network Across 200 km</h3>
+        <p>A consortium led by the University of Tokyo has successfully transmitted entangled photons over 200 km of fiber, paving the way for global quantum communication.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- 6G & Beyond -->
-<section>
-  <h2>6G & Beyond</h2>
-  <p>While 5G remains dominant, the first <strong>6G prototype networks</strong> have been demonstrated in Singapore and South Korea, achieving speeds >10 Gbps with <a href="https://example.com" target="_blank">sub‑millisecond latency</a>. These networks leverage terahertz frequencies and reconfigurable intelligent surfaces (RIS) to improve coverage and spectral efficiency.</p>
-  <p>Researchers at <a href="https://tno.nl" target="_blank">TNO</a> have developed <strong>Dynamic Beamforming Algorithms</strong> that adapt to user movement in real time, enabling ultra‑reliable low‑latency communication for autonomous vehicles and industrial automation.</p>
-</section>
+  <section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1533660115927-8e2b6d4b5d55?auto=format&fit=crop&w=400&q=80" alt="AI model">
+        <h3>OpenAI GPT‑5 Achieves Human-Level Reasoning</h3>
+        <p>GPT‑5 demonstrates advanced reasoning and factual accuracy, surpassing the benchmark on the BIG-Bench dataset and reducing hallucination rates to <1%.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587617223418-7e12a5b7d5da?auto=format&fit=crop&w=400&q=80" alt="Neural network">
+        <h3>AI-Generated Code Compiles in Seconds</h3>
+        <p>DeepMind’s AlphaCoder now compiles fully functional code within minutes, boosting productivity for developers and accelerating software development cycles.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- Renewable Energy Tech -->
-<section>
-  <h2>Renewable Energy & Storage</h2>
-  <p>Solar cells now achieve over 45% efficiency using <strong>Perovskite‑Silicon Tandem Architecture</strong>. In 2026, a consortium led by <a href="https://nrel.gov" target="_blank">NREL</a> produced a commercial tandem module that delivers 1.4 kW per square meter under standard test conditions.</p>
-  <p>On the storage front, <strong>Solid‑State Batteries</strong> from <a href="https://broadcom.com" target="_blank">Broadcom</a> and <a href="https://byronbattery.com" target="_blank">Byron Battery</a> now provide 1,000 Wh/kg energy density, promising electric vehicles with 500 km range and charging times under 30 minutes.</p>
-</section>
+  <section id="biotech">
+    <h2>Biotechnology</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587487367271-7a0c7a4c5f1b?auto=format&fit=crop&w=400&q=80" alt="CRISPR">
+        <h3>CRISPR-Base Editing for Inherited Blindness</h3>
+        <p>A Phase‑II trial using base editors has restored vision in 70% of participants with Leber congenital amaurosis, marking a breakthrough in gene therapy.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581291518835-0cfe2a3d8c75?auto=format&fit=crop&w=400&q=80" alt="Lab-grown meat">
+        <h3>Lab‑Grown Meat Achieves Mass‑Scale Production</h3>
+        <p>China's BioFoods launched the world’s first fully plant‑based and cultured meat product that meets WHO safety standards, poised for global launch.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- Biotechnology & Health Tech -->
-<section>
-  <h2>Biotechnology & Health Technology</h2>
-  <p>CRISPR‑based gene editing has advanced with the release of <strong>Prime Editing 2.0</strong>, enabling precise edits without double‑strand breaks. Clinical trials targeting hemoglobinopathies and muscular dystrophy are now in phase III.</p>
-  <p>Wearable AI diagnostics, such as <a href="https://example.com" target="_blank">BioSense Band</a> by <a href="https://apple.com" target="_blank">Apple</a>, can monitor blood glucose and cardiac biomarkers in real time, feeding data into AI models that predict and prevent cardiovascular events.</p>
-</section>
-
-<!-- Emerging Tech: Autonomous Systems -->
-<section>
-  <h2>Autonomous Systems</h2>
-  <p>Full autonomy for freight and passenger vehicles is being tested on highways by <a href="https://tesla.com" target="_blank">Tesla</a> and <a href="https://byd.com" target="_blank">BYD</a>. Their latest autonomous stacks integrate LIDAR, radar, and vision with a new neural network architecture that reduces sensor fusion latency by 40%.</p>
-  <p>In logistics, autonomous delivery drones from <a href="https://amazon.com" target="_blank">Amazon</a> and <a href="https://lilium.com" target="_blank">Lilium</a> now offer payload capacities up to 25 kg, opening new avenues for rapid last‑mile delivery.</p>
-</section>
-
-<!-- Conclusion -->
-<section>
-  <h2>Looking Ahead</h2>
-  <p>The convergence of AI, quantum computing, 6G, and advanced materials is reshaping industries. Continued collaboration between academia, industry, and governments will be crucial to unlock the full potential of these technologies.</p>
-</section>
-
-<footer>
-  © 2026 Tech Insight Hub. All rights reserved. | <a href="https://github.com/tech-insight" target="_blank">GitHub</a>
-</footer>
-</div>
-</body>
-</html>
+  <section id="energy">
+    <h2>Energy & Storage</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1573164574233-3a1c9a5b1b54?auto=format&fit=crop&w=400&q=80" alt="Battery">
+        <h3>Solid‑State Battery with 300 Wh/kg Capacity</h3>
+        <p>Researchers at the University of California, San Diego, unveiled a solid‑state battery that rivals lithium‑ion energy density while offering improved safety.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1558649358-8f5c5b2c2c11?auto=format&fit=crop&w=400&q=80" alt="Solar panel">
+        <h3>Perovskite
