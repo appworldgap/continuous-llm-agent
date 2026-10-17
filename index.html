@@ -2,184 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026 Research Summary</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #4a90e2;
-    --secondary: #f5f7fa;
-    --accent: #ff8e53;
-    --text-dark: #222;
-    --text-light: #555;
-    --shadow: rgba(0,0,0,0.15);
+    --primary: #1e1e2f;
+    --secondary: #3c3c4e;
+    --accent: #4f46e5;
+    --text: #f9fafb;
+    --bg: #111111;
+    --border: #27272a;
+    --radius: 8px;
+    --transition: 0.3s ease;
+  }
+  body, h1, h2, h3, p, a, li, figure {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
   }
   body {
-    margin:0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--secondary);
-    color: var(--text-dark);
+    background-color: var(--bg);
     line-height: 1.6;
   }
   header {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color:#fff;
-    padding:2rem 1rem;
-    text-align:center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--border);
   }
   header h1 {
-    margin:0;
-    font-size:2.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
   }
   nav {
-    margin-top:1rem;
+    margin-top: 1rem;
   }
   nav a {
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    margin:0 0.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 1rem;
+    transition: var(--transition);
+  }
+  nav a:hover {
+    text-decoration: underline;
   }
   main {
-    max-width:1200px;
-    margin:2rem auto;
-    padding:0 1rem;
-  }
-  .grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-    gap:1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
   }
   .card {
-    background:#fff;
-    border-radius:8px;
-    box-shadow:0 4px 8px var(--shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform 0.2s, box-shadow 0.2s;
+    background: var(--primary);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: var(--transition);
   }
   .card:hover {
-    transform:translateY(-4px);
-    box-shadow:0 8px 16px var(--shadow);
+    transform: translateY(-5px);
+    border-color: var(--accent);
   }
-  .card-header {
-    background:var(--primary);
-    color:#fff;
-    padding:1rem;
+  .card h3 {
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
   }
-  .card-header h2 {
-    margin:0;
-    font-size:1.25rem;
+  .card p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
   }
-  .card-body {
-    flex:1;
-    padding:1rem;
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
   }
-  .card-body p {
-    margin:0;
-    color:var(--text-light);
-  }
-  .card-footer {
-    padding:0.75rem 1rem;
-    background:#fafafa;
-    text-align:right;
-  }
-  .card-footer a {
-    text-decoration:none;
-    color:var(--primary);
-    font-weight:600;
+  .card a:hover {
+    text-decoration: underline;
   }
   footer {
-    text-align:center;
-    padding:1rem;
-    font-size:0.9rem;
-    color:var(--text-light);
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
   }
-  @media(max-width:600px) {
-    header h1 {font-size:2rem;}
+  @media (prefers-color-scheme: light) {
+    :root {
+      --primary: #f3f4f6;
+      --secondary: #e5e7eb;
+      --accent: #6366f1;
+      --text: #1f2937;
+      --bg: #ffffff;
+      --border: #d1d5db;
+    }
   }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology (2026)</h1>
+  <h1>🚀 Latest Breakthroughs in Technology</h1>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Categories</a>
-    <a href="#">Contact</a>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#energy">Energy</a>
+    <a href="#bio">Biotech</a>
+    <a href="#space">Space</a>
+    <a href="#connectivity">Connectivity</a>
+    <a href="#hci">HCI</a>
   </nav>
 </header>
 
 <main>
-  <h2>Recent Research Highlights</h2>
-  <section class="grid">
-    <!-- AI & Machine Learning -->
-    <article class="card">
-      <header class="card-header"><h2>GPT‑4.5 & Multimodal LLMs</h2></header>
-      <div class="card-body">
-        <p>OpenAI’s GPT‑4.5 now supports real‑time video, audio, and sensor data, enabling seamless interaction with physical devices and advanced multimodal reasoning.</p>
-      </div>
-      <footer class="card-footer">
-        <a href="https://openai.com/research/gpt-4-5" target="_blank">Read More</a>
-      </footer>
-    </article>
+  <section id="ai" class="card">
+    <h3>Artificial Intelligence</h3>
+    <p>Generative AI models such as GPT‑4 and diffusion-based image generators have reached unprecedented fidelity, enabling realistic content creation and advanced multimodal understanding.</p>
+    <a href="https://openai.com/research/gpt-4" target="_blank">Read More</a>
+  </section>
 
-    <!-- Quantum Computing -->
-    <article class="card">
-      <header class="card-header"><h2>Quantum Supremacy 2.0</h2></header>
-      <div class="card-body">
-        <p>IBM & Google have achieved quantum advantage on a 120‑qubit processor, solving complex optimization problems 10,000× faster than classical supercomputers.</p>
-      </div>
-      <footer class="card-footer">
-        <a href="https://www.ibm.com/quantum/quantum-supremacy-2" target="_blank">Read More</a>
-      </footer>
-    </article>
+  <section id="quantum" class="card">
+    <h3>Quantum Computing</h3>
+    <p>IBM’s “Hummingbird” processor now surpasses 500 logical qubits, while Google reports quantum supremacy in error‑corrected systems, moving quantum computing from labs to practical applications.</p>
+    <a href="https://www.ibm.com/quantum-computing" target="_blank">Explore</a>
+  </section>
 
-    <!-- 6G Communications -->
-    <article class="card">
-      <header class="card-header"><h2>Commercial 6G Deployment</h2></header>
-      <div class="card-body">
-        <p>Early 6G networks now deliver up to 1 Tbps and <200µs latency, powering autonomous drone fleets and ultra‑reliable AR/VR applications.</p>
-      </div>
-      <footer class="card-footer">
-        <a href="https://www.telecomtech.org/6g-commercial-launch" target="_blank">Read More</a>
-      </footer>
-    </article>
+  <section id="energy" class="card">
+    <h3>Energy & Storage</h3>
+    <p>Solid‑state batteries from QuantumScape and Toyota promise 10‑fold energy density, drastically reducing charging time for EVs and boosting grid storage capabilities.</p>
+    <a href="https://www.quantumscape.com" target="_blank">Learn More</a>
+  </section>
 
-    <!-- Energy & Batteries -->
-    <article class="card">
-      <header class="card-header"><h2>Graphene‑Based Lithium‑Sulfur Batteries</h2></header>
-      <div class="card-body">
-        <p>Researchers have demonstrated >300 Wh kg⁻¹ energy density with graphene separators, promising longer‑lasting electric vehicles and portable devices.</p>
-      </div>
-      <footer class="card-footer">
-        <a href="https://www.nature.com/articles/graphene-battery" target="_blank">Read More</a>
-      </footer>
-    </article>
+  <section id="bio" class="card">
+    <h3>Biotechnology</h3>
+    <p>CRISPR‑Cas12 and base‑editing technologies now allow precise correction of genetic disorders in early trials, heralding a new era of personalized gene therapies.</p>
+    <a href="https://www.genome.gov/CRISPR" target="_blank">Discover</a>
+  </section>
 
-    <!-- Gene Editing -->
-    <article class="card">
-      <header class="card-header"><h2>CRISPR‑CasX Precision Editing</h2></header>
-      <div class="card-body">
-        <p>CasX offers single‑nucleotide accuracy with minimal off‑target effects, accelerating therapeutic development for hereditary disorders.</p>
-      </div>
-      <footer class="card-footer">
-        <a href="https://www.cell.com/CRISPR-casX" target="_blank">Read More</a>
-      </footer>
-    </article>
+  <section id="space" class="card">
+    <h3>Space Exploration</h3>
+    <p>SpaceX’s Starship has achieved orbital flight and is slated for the first crewed Mars mission, while NASA’s Artemis program aims to establish a lunar research outpost by 2026.</p>
+    <a href="https://www.spacex.com/mission/starship" target="_blank">Details</a>
+  </section>
 
-    <!-- Brain‑Computer Interface -->
-    <article class="card">
-      <header class="card-header"><h2>Neuralink 3.0 Implant</h2></header>
-      <div class="card-body">
-        <p>Implantable mesh now achieves real‑time bidirectional communication with the cortex, enabling advanced prosthetic control and neuro‑rehabilitation.</p>
-      </div>
-      <footer class="card-footer">
-        <a href="https://www.neuralink.com/research" target="_blank">Read More</a>
-      </footer>
-    </article>
+  <section id="connectivity" class="card">
+    <h3>Connectivity</h3>
+    <p>5G deployment now covers 70% of the global population, and 6G research is targeting terabit‑per‑second data rates and AI‑integrated network management.</p>
+    <a href="https://www.5gworldwide.com" target="_blank">More Info</a>
+  </section>
 
-    <!-- Autonomous Vehicles -->
-    <article class="card">
-      <header class="card-header"><h2
+  <section id="hci" class="card">
+    <h3>Human‑Computer Interaction</h3>
+    <p>Brain‑computer interface (BCI) prototypes from Neuralink and OpenBCI allow direct neural control of devices, promising advances in assistive tech and immersive experiences.</p>
+    <a href="https://www.neuralink.com" target="_blank">Explore</a>
+  </section>
+</main>
+
+<footer>
+  © 2026 Tech Insights • Designed with love by an AI researcher
+</footer>
+</body>
+</html>
