@@ -1,167 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    /* Google Font */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  <meta charset="UTF-8">
+  <title>Latest Breakthroughs in Technology – 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background: #f4f4f9;
-        color: #222;
-        line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background: #f7f9fc;
+      color: #333;
+      padding: 2rem 1rem;
     }
-    header {
-        background: #4a90e2;
-        color: white;
-        padding: 2rem 1rem;
-        text-align: center;
+
+    h1, h2, h3 {
+      margin-bottom: 0.5rem;
+      color: #222;
     }
-    header h1 {
-        margin: 0;
-        font-weight: 600;
-        font-size: 2.5rem;
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; }
+    .grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
     }
-    main {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
+    @media (min-width: 1024px) {
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
     }
+
+    /* Card */
     .card {
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,.05);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        transition: transform .2s ease-in-out, box-shadow .2s;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
     }
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(0,0,0,.1);
-    }
-    .card img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-    }
-    .card-body {
-        padding: 1rem;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    .card-body h3 {
-        margin: 0 0 .5rem;
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: #333;
-    }
-    .card-body p {
-        flex-grow: 1;
-        margin: 0 0 1rem;
-        font-size: 0.95rem;
-        color: #555;
-    }
-    .card-body a {
-        align-self: flex-start;
-        text-decoration: none;
-        color: #4a90e2;
-        font-weight: 600;
-        transition: color .15s;
-    }
-    .card-body a:hover {
-        color: #2c6cb9;
-    }
+    .card:hover { transform: translateY(-4px); }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card-body { padding: 1rem; }
+    .card-title { font-size: 1.15rem; margin-bottom: 0.5rem; color: #0066ff; }
+    .card-desc { font-size: 0.95rem; color: #555; }
+
+    /* Footer */
     footer {
-        text-align: center;
-        padding: 2rem 1rem;
-        background: #222;
-        color: #ddd;
-        font-size: 0.9rem;
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
     }
-    @media (max-width: 600px) {
-        header h1 { font-size: 2rem; }
-        .card-body h3 { font-size: 1.15rem; }
+
+    /* Utility */
+    .center { text-align: center; }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      margin-top: 1rem;
+      background: #0066ff;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
     }
-</style>
+    .btn:hover { background: #0051c2; }
+  </style>
 </head>
 <body>
-<header>
-    <h1>Latest Breakthroughs in Technology</h1>
-</header>
+  <div class="container">
+    <header class="center">
+      <h1>2026 Technology Breakthroughs</h1>
+      <p>A snapshot of the most transformative tech advancements across AI, quantum, biotech, energy, and space.</p>
+    </header>
 
-<main>
-    <!-- 1. AI: GPT-5 -->
-    <div class="card">
-        <img src="https://picsum.photos/id/1021/600/400" alt="AI breakthrough">
-        <div class="card-body">
-            <h3>GPT-5 – Human‑Level Reasoning</h3>
-            <p>OpenAI’s GPT‑5 surpasses its predecessor with advanced context retention, zero‑shot reasoning and real‑time multimodal learning, opening new horizons for AI‑assisted creativity and problem‑solving.</p>
-            <a href="#">Learn more</a>
+    <!-- AI & Machine Learning -->
+    <section>
+      <h2>Artificial Intelligence & Machine Learning</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1526388742169-8b9b5d9d6b5e?auto=format&fit=crop&w=400&q=80" alt="AI">
+          <div class="card-body">
+            <h3 class="card-title">AI‑Driven Protein Folding</h3>
+            <p class="card-desc">DeepMind’s AlphaFold 2.0 now predicts protein structures with near‑experimental accuracy, accelerating drug discovery.</p>
+          </div>
         </div>
-    </div>
-
-    <!-- 2. Quantum Computing -->
-    <div class="card">
-        <img src="https://picsum.photos/id/1023/600/400" alt="Quantum computer">
-        <div class="card-body">
-            <h3>Google’s Quantum Supremacy 2.0</h3>
-            <p>A 2‑terabyte quantum processor now performs complex simulations that would take classical supercomputers over a millennium, enabling breakthroughs in cryptography and materials science.</p>
-            <a href="#">Explore details</a>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1553869097-7f6d2c7b4d4b?auto=format&fit=crop&w=400&q=80" alt="Generative AI">
+          <div class="card-body">
+            <h3 class="card-title">Generative AI for Code Generation</h3>
+            <p class="card-desc">OpenAI’s Codex 4.0 can generate entire applications from plain‑English specs, cutting development time by 70 %.</p>
+          </div>
         </div>
-    </div>
-
-    <!-- 3. Biotech: CRISPR‑9 -->
-    <div class="card">
-        <img src="https://picsum.photos/id/1040/600/400" alt="CRISPR technology">
-        <div class="card-body">
-            <h3>CRISPR‑9: Precision Gene Editing</h3>
-            <p>A new CRISPR variant reduces off‑target effects by 95%, providing safer treatments for genetic disorders such as sickle cell anemia and muscular dystrophy.</p>
-            <a href="#">Read study</a>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1547721064-237f7f14dd63?auto=format&fit=crop&w=400&q=80" alt="AI Ethics">
+          <div class="card-body">
+            <h3 class="card-title">AI Ethics Frameworks</h3>
+            <p class="card-desc">New EU and US guidelines ensure transparent AI systems, incorporating fairness, privacy, and accountability.</p>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- 4. Renewable Energy -->
-    <div class="card">
-        <img src="https://picsum.photos/id/1024/600/400" alt="Solar panel">
-        <div class="card-body">
-            <h3>Perovskite Solar Cells – 28% Efficiency</h3>
-            <p>Perovskite layers integrated into tandem modules achieve record efficiencies while maintaining low production costs and environmental safety.</p>
-            <a href="#">See tech specs</a>
+    <!-- Quantum Computing -->
+    <section style="margin-top:2rem;">
+      <h2>Quantum Computing</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1531427186611-0f4f9e5b2f61?auto=format&fit=crop&w=400&q=80" alt="Quantum Processor">
+          <div class="card-body">
+            <h3 class="card-title">IBM's 1,000‑Qubit Processor</h3>
+            <p class="card-desc">The first commercial quantum computer surpassing 1,000 qubits, enabling simulations for material science.</p>
+          </div>
         </div>
-    </div>
-
-    <!-- 5. Space Exploration -->
-    <div class="card">
-        <img src="https://picsum.photos/id/1043/600/400" alt="Mars rover">
-        <div class="card-body">
-            <h3>Mars Sample Return Mission (2025)</h3>
-            <p>NASA successfully returned the first Martian rock samples to Earth, offering unprecedented insights into the planet’s geological history.</p>
-            <a href="#">Mission overview</a>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1584395630827-860f5a4b8f90?auto=format&fit=crop&w=400&q=80" alt="Quantum Internet">
+          <div class="card-body">
+            <h3 class="card-title">Global Quantum Internet</h3>
+            <p class="card-desc">China and Europe complete a 1,200‑km quantum key distribution network, promising ultra‑secure communications.</p>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- 6. 6G Connectivity -->
-    <div class="card">
-        <img src="https://picsum.photos/id/1067/600/400" alt="6G network">
-        <div class="card-body">
-            <h3>6G – 1 Tbps, <1 ms Latency</h3>
-            <p>Early trials of 6G networks achieve data rates of 1 Tbps with sub‑millisecond latency, enabling real‑time holographic communication and autonomous vehicle coordination.</p>
-            <a href="#">Technical brief</a>
+    <!-- Biotechnology -->
+    <section style="margin-top:2rem;">
+      <h2>Biotechnology & Healthcare</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1589571519916-5b3f2f8e8a1f?auto=format&fit=crop&w=400&q=80" alt="CRISPR">
+          <div class="card-body">
+            <h3 class="card-title">Base‑Editing CRISPR</h3>
+            <p class="card-desc">A new CRISPR variant edits single DNA bases without double‑strand breaks, reducing off‑target effects.</p>
+          </div>
         </div>
-    </div>
-
-    <!-- 7. Autonomous Vehicles -->
-    <div class="card">
-        <img src="https://picsum.photos/id/1080/600/400" alt="autonomous car">
-        <div class="card-body">
-            <h3>Waymo L4 – Fully Autonomous City Driving</h3>
-            <p>Waymo’s Level‑4 platform now operates without a driver in all but the most complex urban scenarios, boosting safety and reducing traffic congestion.</p>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1581092334723-9e8e7c6c0c61?auto=format&fit=crop&w=400&q=80" alt="Telehealth">
+          <div class="card-body">
+            <h3 class="card-title">AI‑Assisted Telehealth</h3>
+            <p class="card-desc">AI triage platforms predict patient risk scores, optimizing remote care and reducing ER visits by 30 %.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1573497011470-7e0a0c2a5a1d?auto=format&fit=crop&w=400&q=80" alt="Wearables">
+          <div class="card-body">
+            <h3 class="card-title">Next‑Gen Wearables</h3>
+            <p class="card-desc">Flexible
