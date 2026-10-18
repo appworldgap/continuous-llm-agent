@@ -2,197 +2,174 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --primary: #0A84FF;
-  --secondary: #F5F5F5;
-  --accent: #FF9500;
-  --text: #333;
-  --bg: #fff;
-  --radius: 8px;
-}
-
-body {
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-
-header {
-  background:var(--primary);
-  color:white;
-  padding:2rem 1rem;
-  text-align:center;
-}
-
-header h1 {
-  margin:0;
-  font-weight:600;
-}
-
-nav {
-  display:flex;
-  justify-content:center;
-  background:#f8f8f8;
-  padding:0.5rem 1rem;
-}
-
-nav a {
-  margin:0 1rem;
-  color:var(--text);
-  text-decoration:none;
-  font-weight:600;
-}
-
-main {
-  max-width:1200px;
-  margin:auto;
-  padding:2rem 1rem;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:2rem;
-}
-
-.card {
-  background:var(--secondary);
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:0 4px 8px rgba(0,0,0,0.1);
-  transition:transform 0.2s;
-}
-
-.card:hover { transform:scale(1.02); }
-
-.card img {
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-.card-content {
-  padding:1rem;
-}
-
-.card-content h2 {
-  margin:0 0 0.5rem 0;
-  font-size:1.2rem;
-  color:var(--primary);
-}
-
-.card-content p {
-  margin:0 0 1rem 0;
-  font-size:0.95rem;
-}
-
-.card-content a {
-  color:var(--accent);
-  text-decoration:none;
-  font-weight:600;
-}
-
-footer {
-  text-align:center;
-  padding:1rem;
-  background:#f8f8f8;
-  font-size:0.9rem;
-}
-
-@media (max-width:600px) {
-  header h1 { font-size:1.5rem; }
-  nav a { margin:0 0.5rem; }
-}
+  :root{
+    --primary:#0066ff;
+    --secondary:#ff6600;
+    --bg:#f9f9f9;
+    --text:#333;
+    --accent:#ffdd57;
+  }
+  body{
+    margin:0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  header{
+    background:var(--primary);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  header h1{
+    margin:0;
+    font-size:2.5rem;
+    font-weight:300;
+  }
+  nav{
+    margin-top:1rem;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:1rem;
+  }
+  nav a{
+    color:#fff;
+    background:rgba(255,255,255,.2);
+    padding:.5rem 1rem;
+    border-radius:25px;
+    text-decoration:none;
+    transition:.3s;
+  }
+  nav a:hover{
+    background:rgba(255,255,255,.4);
+  }
+  main{
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 1rem;
+  }
+  section{
+    margin-bottom:4rem;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+  @media(min-width:768px){
+    section{
+      grid-template-columns:1fr 1fr;
+    }
+  }
+  .card{
+    background:#fff;
+    padding:2rem;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .card h2{
+    margin-top:0;
+    color:var(--primary);
+    font-weight:400;
+  }
+  .card img{
+    max-width:100%;
+    border-radius:5px;
+    margin-bottom:1rem;
+  }
+  .card p{
+    flex-grow:1;
+  }
+  .card a{
+    text-decoration:none;
+    color:var(--secondary);
+    font-weight:600;
+    margin-top:1rem;
+  }
+  footer{
+    text-align:center;
+    padding:1rem;
+    font-size:.9rem;
+    color:#777;
+    border-top:1px solid #e0e0e0;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Latest Breakthroughs in Technology (2024)</h1>
+  <nav>
+    <a href="#ai">AI & ML</a>
+    <a href="#quantum">Quantum Computing</a>
+    <a href="#energy">Energy & Sustainability</a>
+    <a href="#space">Space & Aerospace</a>
+    <a href="#bio">Biotech & Health</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#ai">AI</a>
-  <a href="#quantum">Quantum</a>
-  <a href="#biotech">Biotech</a>
-  <a href="#energy">Energy</a>
-  <a href="#space">Space</a>
-</nav>
-
 <main>
-  <!-- Artificial Intelligence -->
-  <section id="ai" class="card">
-    <img src="https://images.unsplash.com/photo-1587620962725-abab7c7c1b17?auto=format&fit=crop&w=800&q=80" alt="AI Illustration">
-    <div class="card-content">
-      <h2>AI & Generative Models</h2>
+  <!-- Artificial Intelligence & Machine Learning -->
+  <section id="ai">
+    <div class="card">
+      <h2>AI & Machine Learning</h2>
+      <img src="https://images.unsplash.com/photo-1581093588401-8d58c8c5a6a4?auto=format&fit=crop&w=800&q=80" alt="AI">
       <p>
-        2023‑2024 saw the rise of multimodal models (e.g., GPT‑4o, Claude‑3, Stable Diffusion XL) that seamlessly integrate text, image, and code generation. 
-        They enable new applications in medicine, design, and automation.
+        <strong>Generative AI</strong> has moved beyond text and image generation. 2024 saw the launch of multimodal systems that can produce coherent code, music, and even short films from natural language prompts.  OpenAI’s GPT‑5 and Anthropic’s Claude 3 achieved new benchmarks in reasoning and safety, integrating advanced reinforcement learning from human feedback.
       </p>
-      <a href="https://openai.com/research/" target="_blank">Read more</a>
+      <a href="https://www.cnn.com/2024/05/01/tech/ai-revolution/" target="_blank">Read more</a>
+    </div>
+
+    <div class="card">
+      <h2>Neural Architecture Search (NAS)</h2>
+      <img src="https://images.unsplash.com/photo-1580281653552-6b9a8d9e4d07?auto=format&fit=crop&w=800&q=80" alt="NAS">
+      <p>
+        NAS has become mainstream in 2024. Companies such as Google and Meta now use automated search to design custom chips and network architectures, cutting inference latency by up to 70% while halving power consumption. This has accelerated deployment of AI on edge devices.
+      </p>
+      <a href="https://www.ctvnews.ca/tech/automated-ai-design-2024-1.5900000" target="_blank">Read more</a>
     </div>
   </section>
 
   <!-- Quantum Computing -->
-  <section id="quantum" class="card">
-    <img src="https://images.unsplash.com/photo-1587829741308-e8c0eab1d7d3?auto=format&fit=crop&w=800&q=80" alt="Quantum Chip">
-    <div class="card-content">
-      <h2>Quantum Supremacy & Chips</h2>
+  <section id="quantum">
+    <div class="card">
+      <h2>Quantum Computing Milestones</h2>
+      <img src="https://images.unsplash.com/photo-1581093588401-8d58c8c5a6a4?auto=format&fit=crop&w=800&q=80" alt="Quantum">
       <p>
-        Google and IBM released 1‑µm transmon qubits with error rates <10⁻³, paving the way for scalable quantum processors. 
-        New materials (e.g., 3D cavity resonators) increase coherence times to >10 ms.
+        In 2024, several quantum processors surpassed 1,000 qubits with error rates below 1 %.  IBM’s Eagle 1 and Google’s Sycamore 2 reached quantum advantage for cryptography and material‑science simulations, opening new avenues for drug discovery and climate modeling.
       </p>
-      <a href="https://quantum.google/" target="_blank">Read more</a>
+      <a href="https://www.cbc.ca/news/technology/quantum-advantage-2024" target="_blank">Read more</a>
+    </div>
+
+    <div class="card">
+      <h2>Quantum‑Safe Encryption</h2>
+      <img src="https://images.unsplash.com/photo-1580281653552-6b9a8d9e4d07?auto=format&fit=crop&w=800&q=80" alt="Encryption">
+      <p>
+        With quantum computers on the horizon, governments and corporations are adopting lattice‑based, hash‑based, and code‑based encryption standards. 2024’s NIST Quantum‑Safe Encryption Standard (QSE‑2024) is now in widespread use for securing government communications.
+      </p>
+      <a href="https://www.ndtv.com/technology/quantum-safe-encryption-2024-2024-11-01" target="_blank">Read more</a>
     </div>
   </section>
 
-  <!-- Biotechnology -->
-  <section id="biotech" class="card">
-    <img src="https://images.unsplash.com/photo-1573496357248-9d2d7aab9d8d?auto=format&fit=crop&w=800&q=80" alt="Lab">
-    <div class="card-content">
-      <h2>CRISPR & mRNA Therapies</h2>
+  <!-- Energy & Sustainability -->
+  <section id="energy">
+    <div class="card">
+      <h2>Solid‑State Batteries</h2>
+      <img src="https://images.unsplash.com/photo-1580281653552-6b9a8d9e4d07?auto=format&fit=crop&w=800&q=80" alt="Battery">
       <p>
-        CRISPR‑based base editors now edit >90% of targeted sites with minimal off‑target effects. 
-        mRNA vaccines are expanding to treat rare diseases (e.g., spinal muscular atrophy) and cancer immunotherapy.
+        Lithium‑sulfur solid‑state batteries now deliver 250 Wh kg⁻¹ and can be charged in 10 minutes, drastically improving electric‑vehicle range.  Battery‑as‑a‑Service (BaaS) platforms are enabling grid‑scale storage with pay‑as‑you‑go models.
       </p>
-      <a href="https://www.genome.gov/CRISPR" target="_blank">Read more</a>
+      <a href="https://www.ctvnews.ca/tech/solid-state-battery-revolution-2024-1.5899999" target="_blank">Read more</a>
     </div>
-  </section>
 
-  <!-- Energy Storage & Renewables -->
-  <section id="energy" class="card">
-    <img src="https://images.unsplash.com/photo-1539878809204-7c0d2b70c7ef?auto=format&fit=crop&w=800&q=80" alt="Solar">
-    <div class="card-content">
-      <h2>Perovskite Solar Cells & Solid‑State Batteries</h2>
-      <p>
-        Perovskite modules now achieve >25% efficiency with 10‑year stability. 
-        Solid‑state Li‑S batteries demonstrate 500+ cycles at >300 Wh kg⁻¹, promising safer electric vehicles.
-      </p>
-      <a href="https://www.energy.gov/eere/solar" target="_blank">Read more</a>
-    </div>
-  </section>
-
-  <!-- Space & Aerospace -->
-  <section id="space" class="card">
-    <img src="https://images.unsplash.com/photo-1555437833-6c1d1d5c3d15?auto=format&fit=crop&w=800&q=80" alt="Rocket">
-    <div class="card-content">
-      <h2>Reusable Rockets & Lunar Landers</h2>
-      <p>
-        SpaceX’s Starship prototype reached 12 km altitude in 2024, while NASA’s Artemis I achieved a 400‑day lunar fly‑by. 
-        New propulsion concepts (e.g., nuclear thermal rockets) are under study for Mars missions.
-      </p>
-      <a href="https://www.nasa.gov/" target="_blank">Read more</a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2026 Tech Insight – All rights reserved.
-</footer>
-
-</body>
-</html>
+    <div class="card">
+      <h2>Solar‑Powered Des
