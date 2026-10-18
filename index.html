@@ -1,163 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Latest Breakthroughs in Technology</title>
-  <style>
-    :root{
-      --bg:#1e1e1e;
-      --card-bg:#2b2b2b;
-      --accent:#00e5ff;
-      --text:#e0e0e0;
-      --font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    :root {
+        --primary: #1e90ff;
+        --secondary: #ff6347;
+        --background: #f9f9f9;
+        --text: #333;
+        --card-bg: #fff;
+        --card-shadow: rgba(0,0,0,0.1);
     }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{
-      font-family:var(--font);
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-      display:flex;
-      flex-direction:column;
-      min-height:100vh;
+    body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.6;
     }
-    header{
-      padding:2rem;
-      text-align:center;
-      background:linear-gradient(135deg,#0e0e0e,#1e1e1e);
-      box-shadow:0 2px 5px rgba(0,0,0,0.5);
+    header {
+        background: var(--primary);
+        color: #fff;
+        padding: 3rem 1rem;
+        text-align: center;
     }
-    header h1{
-      font-size:2.5rem;
-      color:var(--accent);
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
-    main{
-      flex:1;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:1.5rem;
-      padding:2rem;
+    header p {
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
     }
-    .card{
-      background:var(--card-bg);
-      padding:1.5rem;
-      border-radius:10px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.4);
-      transition:transform .2s,background .2s;
-      display:flex;
-      flex-direction:column;
-      height:100%;
+    main {
+        max-width: 1200px;
+        margin: -3rem auto 3rem auto;
+        padding: 1rem;
     }
-    .card:hover{
-      transform:translateY(-5px);
-      background:linear-gradient(135deg,#2b2b2b,#3a3a3a);
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
     }
-    .card h2{
-      margin-bottom:0.75rem;
-      color:var(--accent);
-      font-size:1.5rem;
+    .card {
+        background: var(--card-bg);
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px var(--card-shadow);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease;
     }
-    .card p{
-      flex-grow:1;
-      margin-bottom:1rem;
+    .card:hover { transform: translateY(-5px); }
+    .card h2 {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        font-size: 1.3rem;
+        color: var(--primary);
     }
-    .card a{
-      text-decoration:none;
-      color:var(--accent);
-      font-weight:bold;
-      align-self:flex-start;
+    .card p {
+        flex-grow: 1;
     }
-    footer{
-      text-align:center;
-      padding:1rem;
-      background:#0e0e0e;
-      color:#777;
-      font-size:0.9rem;
+    .card .icon {
+        font-size: 3rem;
+        margin-bottom: 0.75rem;
     }
-    @media (prefers-color-scheme:light){
-      :root{
-        --bg:#f5f5f5;
-        --card-bg:#ffffff;
-        --accent:#0066cc;
-        --text:#333;
-      }
-      header{
-        background:linear-gradient(135deg,#ffffff,#e0e0e0);
-      }
+    footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 0.9rem;
+        color: #777;
     }
-  </style>
+    @media (max-width: 600px) {
+        header h1 { font-size: 2rem; }
+    }
+</style>
 </head>
 <body>
-  <header>
+<header>
     <h1>Latest Breakthroughs in Technology</h1>
-  </header>
-  <main>
-    <!-- Artificial Intelligence -->
-    <div class="card">
-      <h2>Generative AI & LLMs</h2>
-      <p>
-        Models like GPT‑4o and Claude 3.5 Turbo now handle multimodal inputs,
-        generating realistic images, audio, and code with unprecedented accuracy.
-        Their integration into consumer tools accelerates creative workflows.
-      </p>
-      <a href="#">Read more ➜</a>
-    </div>
+    <p>Explore the cutting‑edge innovations that are shaping our future.</p>
+</header>
 
-    <!-- Quantum Computing -->
-    <div class="card">
-      <h2>Quantum Processors</h2>
-      <p>
-        IBM's Osprey 127‑qubit chip and Google’s Sycamore 204‑qubit prototype
-        showcase error‑correction advances, bringing practical quantum advantage
-        closer for cryptography and material science.
-      </p>
-      <a href="#">Read more ➜</a>
-    </div>
+<main>
+    <section class="grid">
+        <article class="card">
+            <div class="icon">🤖</div>
+            <h2>Artificial Intelligence</h2>
+            <p>
+                The release of GPT‑4.5 and DALL·E 3 demonstrates unprecedented capabilities in natural language understanding and image generation. These models are now being integrated into industrial automation, personalized education, and creative arts, pushing the boundaries of what machines can learn and produce.
+            </p>
+        </article>
 
-    <!-- 6G & Connectivity -->
-    <div class="card">
-      <h2>6G & Ultra‑Low Latency</h2>
-      <p>
-        Early 6G prototypes promise sub‑microsecond latency, terabit‑per‑second
-        throughput, and integration of space‑based satellites for truly
-        global coverage.
-      </p>
-      <a href="#">Read more ➜</a>
-    </div>
+        <article class="card">
+            <div class="icon">⚛️</div>
+            <h2>Quantum Computing</h2>
+            <p>
+                Quantum processors have achieved “quantum supremacy” on specific tasks, with Google's Sycamore chip and IBM's Eagle architecture reducing error rates via advanced error‑correction codes. These milestones bring us closer to practical quantum solutions for cryptography, materials science, and complex optimization problems.
+            </p>
+        </article>
 
-    <!-- Biotechnology -->
-    <div class="card">
-      <h2>CRISPR Therapeutics</h2>
-      <p>
-        Base‑editing and prime‑editing tools now target previously “undruggable”
-        genes, with several trials entering phase III for genetic disorders.
-      </p>
-      <a href="#">Read more ➜</a>
-    </div>
+        <article class="card">
+            <div class="icon">📶</div>
+            <h2>6G Communications</h2>
+            <p>
+                Research into terahertz (THz) frequencies is paving the way for 6G, promising data rates up to 1 Tbps and ultra‑low latency. Early prototypes demonstrate beam‑forming antennas capable of supporting real‑time holographic displays and autonomous vehicle networks across urban landscapes.
+            </p>
+        </article>
 
-    <!-- Autonomous Systems -->
-    <div class="card">
-      <h2>Self‑Driving Tech</h2>
-      <p>
-        Waymo, Tesla, and Cruise deploy full‑self‑driving (FSD) platforms in
-        controlled urban environments, backed by advanced LiDAR‑free perception.
-      </p>
-      <a href="#">Read more ➜</a>
-    </div>
+        <article class="card">
+            <div class="icon">🔋</div>
+            <h2>Energy Storage</h2>
+            <p>
+                Solid‑state batteries featuring lithium‑sulfur chemistry now exhibit higher energy densities and longer cycle life compared to traditional lithium‑ion cells. These advances could enable electric vehicles with 400‑km range on a single charge and grid‑scale storage for renewable energy integration.
+            </p>
+        </article>
 
-    <!-- AR/VR & Metaverse -->
-    <div class="card">
-      <h2>Spatial Computing</h2>
-      <p>
-        HoloLens 3 and Meta Quest 3 bring eye‑tracking, hand‑tracking, and
-        room‑scale mapping to the next level, enabling immersive collaboration.
-      </p>
-      <a href="#">Read more ➜</a>
-    </div>
-  </main>
-  <footer>
-    © 2026 Tech Frontier. All rights reserved.
-  </footer>
+        <article class="card">
+            <div class="icon">🧬</div>
+            <h2>Biotechnology</h2>
+            <p>
+                CRISPR‑Cas12 and base‑editing techniques now allow precise, single‑nucleotide modifications with fewer off‑target effects. This progress is accelerating therapeutic gene editing for genetic disorders such as sickle cell disease and beta‑thalassemia, and improving crop resilience against climate stress.
+            </p>
+        </article>
+
+        <article class="card">
+            <div class="icon">🚀</div>
+            <h2>Space & Satellite Tech</h2>
+            <p>
+                SpaceX's Starship and Blue Origin's New Glenn are advancing reusable launch vehicles, significantly reducing launch costs. AI‑driven satellite constellations are optimizing Earth‑observation data streams, supporting everything from agriculture to disaster response in near real‑time.
+            </p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>Data compiled from leading research institutions, industry releases, and peer‑reviewed journals. © 2026 Tech Insight</p>
+</footer>
 </body>
 </html>
