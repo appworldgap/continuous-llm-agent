@@ -2,139 +2,92 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* Root variables for easy theming */
-  :root {
-    --primary: #4a90e2;
-    --secondary: #ff6f61;
-    --bg: #f5f7fa;
-    --card-bg: #ffffff;
-    --text: #333333;
-    --shadow: rgba(0, 0, 0, 0.1);
-  }
-
-  /* Global styles */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  a { color: var(--primary); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Header */
-  header {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-  header p { font-size: 1.1rem; opacity: 0.9; }
-
-  /* Main section */
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px var(--shadow);
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px var(--shadow); }
-  .card h3 {
-    margin-bottom: 0.75rem;
-    color: var(--primary);
-    font-size: 1.35rem;
-  }
-  .card p { margin-bottom: 1rem; }
-  .card .cta {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--primary);
-    color: #fff;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: var(--primary);
-    color: #fff;
-    margin-top: 3rem;
-  }
-  footer a { color: #fff; }
+    body{
+        font-family:Arial,Helvetica,sans-serif;
+        background:#f8f9fa;
+        margin:0;
+        padding:0;
+        color:#333;
+    }
+    header{
+        background:#343a40;
+        color:white;
+        padding:2rem 1rem;
+        text-align:center;
+    }
+    h1{
+        margin:0;
+        font-size:2.5rem;
+    }
+    main{
+        max-width:1200px;
+        margin:auto;
+        padding:2rem;
+    }
+    section{
+        margin-bottom:2rem;
+    }
+    .cards{
+        display:flex;
+        flex-wrap:wrap;
+        gap:1rem;
+    }
+    .card{
+        background:white;
+        border-radius:8px;
+        box-shadow:0 2px 5px rgba(0,0,0,.1);
+        overflow:hidden;
+        flex:1 1 calc(50% - 1rem);
+        transition:transform .2s;
+    }
+    .card:hover{
+        transform:scale(1.02);
+    }
+    .card img{
+        width:100%;
+        height:auto;
+    }
+    .card-body{
+        padding:1.5rem;
+    }
+    .card-title{
+        font-size:1.25rem;
+        margin:0 0 .5rem;
+    }
+    .card-text{
+        font-size:1rem;
+        line-height:1.5;
+    }
+    footer{
+        background:#e9ecef;
+        color:#6c757d;
+        text-align:center;
+        padding:1rem;
+    }
+    @media (min-width:768px){
+        .card{
+            flex:1 1 calc(50% - 1rem);
+        }
+    }
+    @media (min-width:992px){
+        .card{
+            flex:1 1 calc(33.333% - 1rem);
+        }
+    }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>From quantum supremacy to brain‑computer interfaces, explore the frontier of modern tech.</p>
+    <h1>Latest Breakthroughs in Technology</h1>
 </header>
-
 <main>
-  <section>
-    <h2 style="margin-bottom:1rem;">Top Innovations</h2>
-    <div class="grid">
-      <!-- Breakthrough 1 -->
-      <article class="card">
-        <h3>Artificial General Intelligence (AGI) Prototype</h3>
-        <p>Researchers at the MIT AI Lab have unveiled the first self‑learning AGI system, capable of transferring knowledge across domains without retraining.</p>
-        <a href="https://example.com/agi" class="cta">Learn More</a>
-      </article>
-      <!-- Breakthrough 2 -->
-      <article class="card">
-        <h3>Quantum Supremacy 2026</h3>
-        <p>A 1,200‑qubit quantum computer achieves tasks beyond classical reach, opening possibilities for drug discovery and cryptanalysis.</p>
-        <a href="https://example.com/quantum" class="cta">Explore Details</a>
-      </article>
-      <!-- Breakthrough 3 -->
-      <article class="card">
-        <h3>Graphene Solar Cells</h3>
-        <p>New flexible solar panels based on graphene reach 38% efficiency, dramatically reducing renewable energy costs.</p>
-        <a href="https://example.com/graphene" class="cta">Read Study</a>
-      </article>
-      <!-- Breakthrough 4 -->
-      <article class="card">
-        <h3>Brain‑Computer Interface (BCI) Implant</h3>
-        <p>NeuroTech’s implant translates neural spikes into digital commands, enabling seamless control of prosthetics and computers.</p>
-        <a href="https://example.com/bci" class="cta">See Demo</a>
-      </article>
-      <!-- Breakthrough 5 -->
-      <article class="card">
-        <h3>6G Ultra‑High‑Speed Networks</h3>
-        <p>Telecom giants launch commercial 6G networks delivering 1 Tbps, enabling holographic communication and real‑time AI inference.</p>
-        <a href="https://example.com/6g" class="cta">Learn More</a>
-      </article>
-      <!-- Breakthrough 6 -->
-      <article class="card">
-        <h3>Autonomous Quantum Sensors</h3>
-        <p>Quantum‑enhanced sensors detect gravitational waves with unprecedented precision, aiding in deep‑space navigation.</p>
-        <a href="https://example.com/quantum-sensors" class="cta">Read Article</a>
-      </article>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <p>© 2026 TechFrontier. All rights reserved. | <a href="https://github.com/techfrontier">GitHub</a> | <a href="https://twitter.com/techfrontier">Twitter</a></p>
-</footer>
-
-</body>
-</html>
+    <section>
+        <h2>Artificial Intelligence</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://source.unsplash.com/600x400/?ai" alt="AI">
+                <div class="card-body">
+                    <h3 class="card-title">Generative AI Models</
