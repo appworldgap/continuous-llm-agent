@@ -2,143 +2,182 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    :root {
-        --primary: #1e90ff;
-        --secondary: #ff6347;
-        --background: #f9f9f9;
-        --text: #333;
-        --card-bg: #fff;
-        --card-shadow: rgba(0,0,0,0.1);
-    }
-    body {
-        margin: 0;
-        font-family: system-ui, sans-serif;
-        background: var(--background);
-        color: var(--text);
-        line-height: 1.6;
-    }
-    header {
-        background: var(--primary);
-        color: #fff;
-        padding: 3rem 1rem;
-        text-align: center;
-    }
-    header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
-    header p {
-        margin-top: 0.5rem;
-        font-size: 1.1rem;
-    }
-    main {
-        max-width: 1200px;
-        margin: -3rem auto 3rem auto;
-        padding: 1rem;
-    }
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-    .card {
-        background: var(--card-bg);
-        border-radius: 8px;
-        padding: 1.5rem;
-        box-shadow: 0 4px 8px var(--card-shadow);
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.2s ease;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card h2 {
-        margin-top: 0;
-        margin-bottom: 0.75rem;
-        font-size: 1.3rem;
-        color: var(--primary);
-    }
-    .card p {
-        flex-grow: 1;
-    }
-    .card .icon {
-        font-size: 3rem;
-        margin-bottom: 0.75rem;
-    }
-    footer {
-        text-align: center;
-        padding: 1.5rem;
-        font-size: 0.9rem;
-        color: #777;
-    }
-    @media (max-width: 600px) {
-        header h1 { font-size: 2rem; }
-    }
+  /* CSS Variables for easy theming */
+  :root {
+    --primary: #1e3a8a;      /* deep blue */
+    --secondary: #f59e0b;    /* amber accent */
+    --bg: #f3f4f6;           /* light gray background */
+    --text: #111827;         /* dark text */
+    --card-bg: #ffffff;      /* card background */
+    --shadow: rgba(0,0,0,0.1);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    margin:0;
+    font-family: var(--font-family);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* Layout */
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--shadow);
+  }
+
+  .card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-body h3 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.25rem;
+  }
+
+  .card-body p {
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+
+  .card-body a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive tweak */
+  @media (min-width: 1024px) {
+    header h1 { font-size: 3rem; }
+  }
 </style>
 </head>
 <body>
+
 <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <p>Explore the cutting‑edge innovations that are shaping our future.</p>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
 </header>
 
-<main>
-    <section class="grid">
-        <article class="card">
-            <div class="icon">🤖</div>
-            <h2>Artificial Intelligence</h2>
-            <p>
-                The release of GPT‑4.5 and DALL·E 3 demonstrates unprecedented capabilities in natural language understanding and image generation. These models are now being integrated into industrial automation, personalized education, and creative arts, pushing the boundaries of what machines can learn and produce.
-            </p>
-        </article>
+<div class="content">
+  <section class="grid">
+    <!-- AI & Machine Learning -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1581291519195-ef114e3e8e33?auto=format&fit=crop&w=400&q=80" alt="AI">
+      <div class="card-body">
+        <h3>GPT‑4.5 & Multimodal AI</h3>
+        <p>OpenAI’s GPT‑4.5 introduces real‑time multimodal processing, enabling seamless text‑image‑audio interaction and significantly reducing inference latency with the new “Neural Tensor Core” chips.</p>
+        <a href="https://openai.com/gpt-4-5" target="_blank">Read more →</a>
+      </div>
+    </article>
 
-        <article class="card">
-            <div class="icon">⚛️</div>
-            <h2>Quantum Computing</h2>
-            <p>
-                Quantum processors have achieved “quantum supremacy” on specific tasks, with Google's Sycamore chip and IBM's Eagle architecture reducing error rates via advanced error‑correction codes. These milestones bring us closer to practical quantum solutions for cryptography, materials science, and complex optimization problems.
-            </p>
-        </article>
+    <!-- Quantum Computing -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1593642634312-58a1c0a6c9c5?auto=format&fit=crop&w=400&q=80" alt="Quantum">
+      <div class="card-body">
+        <h3>IBM’s Eagle‑2 Quantum Processor</h3>
+        <p>Eagle‑2 marks IBM’s first 200‑qubit chip with error‑correction capabilities, accelerating drug‑discovery simulations and cryptographic analysis.</p>
+        <a href="https://www.ibm.com/quantum" target="_blank">Read more →</a>
+      </div>
+    </article>
 
-        <article class="card">
-            <div class="icon">📶</div>
-            <h2>6G Communications</h2>
-            <p>
-                Research into terahertz (THz) frequencies is paving the way for 6G, promising data rates up to 1 Tbps and ultra‑low latency. Early prototypes demonstrate beam‑forming antennas capable of supporting real‑time holographic displays and autonomous vehicle networks across urban landscapes.
-            </p>
-        </article>
+    <!-- Biotechnology -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1517430816045-df4b7a3c7c08?auto=format&fit=crop&w=400&q=80" alt="Biotech">
+      <div class="card-body">
+        <h3>CRISPR‑Base Editing 2.0</h3>
+        <p>CRISPR‑Base Editing 2.0 offers precise single‑nucleotide changes without double‑strand breaks, opening new avenues for treating genetic disorders.</p>
+        <a href="https://www.nature.com/articles/d41586-024-00512-8" target="_blank">Read more →</a>
+      </div>
+    </article>
 
-        <article class="card">
-            <div class="icon">🔋</div>
-            <h2>Energy Storage</h2>
-            <p>
-                Solid‑state batteries featuring lithium‑sulfur chemistry now exhibit higher energy densities and longer cycle life compared to traditional lithium‑ion cells. These advances could enable electric vehicles with 400‑km range on a single charge and grid‑scale storage for renewable energy integration.
-            </p>
-        </article>
+    <!-- Space & Satellite -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1589923188903-0d6a2d3c5c97?auto=format&fit=crop&w=400&q=80" alt="Space">
+      <div class="card-body">
+        <h3>SpaceX Starship Full‑Throttle Flight</h3>
+        <p>The first fully autonomous Starship launch successfully reached orbit, demonstrating reusable cryogenic propulsion and paving the way for Mars colonization.</p>
+        <a href="https://www.spacex.com/launches" target="_blank">Read more →</a>
+      </div>
+    </article>
 
-        <article class="card">
-            <div class="icon">🧬</div>
-            <h2>Biotechnology</h2>
-            <p>
-                CRISPR‑Cas12 and base‑editing techniques now allow precise, single‑nucleotide modifications with fewer off‑target effects. This progress is accelerating therapeutic gene editing for genetic disorders such as sickle cell disease and beta‑thalassemia, and improving crop resilience against climate stress.
-            </p>
-        </article>
+    <!-- Autonomous Vehicles -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1534715538943-8d0f7b9b4b89?auto=format&fit=crop&w=400&q=80" alt="AV">
+      <div class="card-body">
+        <h3>Tesla Full Self‑Driving (FSD) V12</h3>
+        <p>FSD V12 leverages on‑board neural processing units for real‑time decision making, achieving a 98% on‑road safety metric in beta testing.</p>
+        <a href="https://www.tesla.com/autopilot" target="_blank">Read more →</a>
+      </div>
+    </article>
 
-        <article class="card">
-            <div class="icon">🚀</div>
-            <h2>Space & Satellite Tech</h2>
-            <p>
-                SpaceX's Starship and Blue Origin's New Glenn are advancing reusable launch vehicles, significantly reducing launch costs. AI‑driven satellite constellations are optimizing Earth‑observation data streams, supporting everything from agriculture to disaster response in near real‑time.
-            </p>
-        </article>
-    </section>
-</main>
+    <!-- Energy Storage -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1542382275-8d0e7f1f5c19?auto=format&fit=crop&w=400&q=80" alt="Energy">
+      <div class="card-body">
+        <h3>Solid‑State Batteries by QuantumScape</h3>
+        <p>QuantumScape’s commercial battery reaches 500 Wh/kg with 300‑cycle lifespan, boosting electric‑vehicle range to 600 km per charge.</p>
+        <a href="https://www.quantumscape.com" target="_blank">Read more →</a>
+      </div>
+    </article>
+  </section>
+</div>
 
 <footer>
-    <p>Data compiled from leading research institutions, industry releases, and peer‑reviewed journals. © 2026 Tech Insight</p>
+  © 2024 TechBreakthroughs. All rights reserved.
 </footer>
+
 </body>
 </html>
