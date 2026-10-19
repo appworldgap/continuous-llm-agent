@@ -2,116 +2,149 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --primary: #1d4ed8;
-    --secondary: #f3f4f6;
-    --accent: #10b981;
-    --bg: #f9fafb;
-    --text: #111827;
-    --shadow: rgba(0,0,0,0.1);
+    --primary: #0066cc;
+    --secondary: #004999;
+    --bg-light: #f5f5f5;
+    --bg-dark: #1a1a1a;
+    --text-dark: #333;
+    --text-light: #f8f8f8;
+    --accent: #ff6600;
+    --max-width: 1200px;
   }
-  body, h1, h2, h3, p, ul, li {
-    margin: 0; padding: 0; box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   body {
     font-family: system-ui, sans-serif;
-    color: var(--text);
-    background: var(--bg);
     line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--bg-light);
+    padding: 20px;
   }
-  a { color: var(--primary); text-decoration: none; transition: color .2s;}
-  a:hover { color: var(--accent); }
   header {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: #fff;
-    padding: 1rem 2rem;
-    position: sticky; top: 0; z-index: 10;
-  }
-  nav ul { list-style: none; display: flex; gap: 1.5rem; }
-  nav li { font-weight: 500; }
-  .hero {
+    background: var(--primary);
+    color: var(--text-light);
+    padding: 2rem 1rem;
     text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(145deg, rgba(29,78,216,.1), rgba(16,185,129,.05));
   }
-  .hero h1 { font-size: 2.5rem; margin-bottom: .5rem; }
-  .hero p { font-size: 1.2rem; color: var(--text); opacity: .85; }
-  main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-  .breakthroughs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+  header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  nav {
+    background: var(--secondary);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  main {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    display: grid;
+    gap: 2rem;
+  }
   article {
-    background: #fff;
-    border-radius: .75rem;
-    box-shadow: 0 4px 6px var(--shadow);
-    overflow: hidden;
-    transition: transform .2s, box-shadow .2s;
+    background: var(--text-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
-  article:hover { transform: scale(1.02); box-shadow: 0 6px 12px var(--shadow); }
-  article h3 { background: var(--primary); color: #fff; padding: .75rem 1rem; }
-  article p { padding: 1rem; }
+  article h2 {
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+  }
+  article p {
+    margin-bottom: 1rem;
+  }
+  article a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
   footer {
     text-align: center;
-    padding: 1rem;
-    font-size: .9rem;
-    color: var(--text);
-    opacity: .7;
+    margin-top: 4rem;
+    color: var(--text-dark);
+    font-size: 0.9rem;
   }
-  @media (prefers-color-scheme: dark) {
-    body { background: #111827; color: #e5e7eb; }
-    header { background: linear-gradient(135deg, #111827, #1e293b); }
-    article { background: #1f2937; color: #e5e7eb; }
-    a { color: var(--accent); }
-    a:hover { color: var(--primary); }
+  @media (min-width: 768px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    main {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>
 </head>
 <body>
 <header>
-  <h2>TechFront</h2>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Breakthroughs</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </nav>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to quantum computing – staying ahead of tomorrow, today.</p>
 </header>
-
-<section class="hero">
-  <h1>2026 – The Year of Technological Revolutions</h1>
-  <p>Explore the most groundbreaking innovations reshaping our world.</p>
-</section>
-
+<nav>
+  <ul>
+    <li><a href="#ai">AI</a></li>
+    <li><a href="#quantum">Quantum Computing</a></li>
+    <li><a href="#biotech">Biotech</a></li>
+    <li><a href="#energy">Energy</a></li>
+    <li><a href="#future">Future Tech</a></li>
+  </ul>
+</nav>
 <main>
-  <h2>Top Breakthroughs</h2>
-  <section class="breakthroughs">
-    <article>
-      <h3>🧠 Generative AI 3.5</h3>
-      <p>New architecture reduces compute by 60% while increasing contextual understanding, enabling real‑time multi‑modal synthesis for AR/VR, medicine, and creative industries.</p>
-    </article>
-    <article>
-      <h3>⚛️ Quantum‑Integrated Processors</h3>
-      <p>Commercially available 256‑qubit chips with error‑correction reach near‑fault‑tolerant regimes, accelerating cryptography, drug discovery and materials science simulations.</p>
-    </article>
-    <article>
-      <h3>🚀 6G Wireless Networks</h3>
-      <p>Ultra‑low latency (sub‑10 µs) and terabit‑per‑second throughput open new horizons in holographic communication, autonomous fleets, and edge AI.</p>
-    </article>
-    <article>
-      <h3>🔋 Solid‑State Batteries</h3>
-      <p>Commercial batteries with 500 Wh/kg energy density and 1 year cycle life surpass lithium‑ion, powering electric vehicles and grid‑storage at lower cost.</p>
-    </article>
-    <article>
-      <h3>🌞 Perovskite Solar Cells</h3>
-      <p>Stable, 28% efficient cells fabricated via roll‑to‑roll processes reduce manufacturing cost and enable building‑integrated photovoltaics.</p>
-    </article>
-  </section>
-</main>
+  <article id="ai">
+    <h2>Artificial Intelligence</h2>
+    <p>Recent advances in generative models, such as GPT‑4 and its successors, are pushing the boundaries of natural language processing. Coupled with multimodal learning, AI systems can now understand and generate text, images, audio, and video with unprecedented coherence.</p>
+    <a href="https://www.openai.com" target="_blank">Learn more</a>
+  </article>
 
+  <article id="quantum">
+    <h2>Quantum Computing</h2>
+    <p>Quantum supremacy milestones continue to be achieved. Companies like Google, IBM, and Rigetti are working on error‑corrected qubits and scalable architectures, bringing us closer to practical, high‑performance quantum processors.</p>
+    <a href="https://www.ibm.com/quantum" target="_blank">Explore quantum tech</a>
+  </article>
+
+  <article id="biotech">
+    <h2>Biotechnology</h2>
+    <p>CRISPR‑Cas9 gene editing has seen remarkable progress in precision and safety, enabling targeted treatments for genetic disorders and advancing personalized medicine. Recent clinical trials have demonstrated efficacy in conditions such as sickle cell disease and hereditary blindness.</p>
+    <a href="https://www.nature.com/genes" target="_blank">Read the research</a>
+  </article>
+
+  <article id="energy">
+    <h2>Energy Storage</h2>
+    <p>Solid‑state battery technology is emerging as a game‑changer, offering higher energy density, faster charging, and improved safety over conventional lithium‑ion cells. Research institutions and startups are prototyping next‑generation batteries for electric vehicles and grid storage.</p>
+    <a href="https://www.energy.gov" target="_blank">Discover innovations</a>
+  </article>
+
+  <article id="future">
+    <h2>Future Technologies</h2>
+    <p>5G and the nascent 6G networks are set to revolutionize connectivity, supporting massive IoT deployments, autonomous systems, and ultra‑low latency applications. Meanwhile, advances in nanotechnology and 3D printing are redefining manufacturing and materials science.</p>
+    <a href="https://www.technologyreview.com" target="_blank">Explore future trends</a>
+  </article>
+</main>
 <footer>
-  © 2026 TechFront. All rights reserved.
+  © 2026 Tech Insight – All rights reserved
 </footer>
 </body>
 </html>
