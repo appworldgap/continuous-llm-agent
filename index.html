@@ -2,149 +2,163 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --primary: #0066cc;
-    --secondary: #004999;
-    --bg-light: #f5f5f5;
-    --bg-dark: #1a1a1a;
-    --text-dark: #333;
-    --text-light: #f8f8f8;
-    --accent: #ff6600;
-    --max-width: 1200px;
+    --primary:#0f172a;
+    --secondary:#1e293b;
+    --accent:#f43f5e;
+    --text:#f1f5f9;
+    --card:#1e293b;
+    --bg:#0f172a;
+    --font-sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:var(--font-sans);
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
   }
-  body {
-    font-family: system-ui, sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background: var(--bg-light);
-    padding: 20px;
+  header{
+    background:linear-gradient(90deg,var(--accent),#1e40af);
+    color:white;
+    padding:2rem 1rem;
+    text-align:center;
   }
-  header {
-    background: var(--primary);
-    color: var(--text-light);
-    padding: 2rem 1rem;
-    text-align: center;
+  header h1{font-size:2.5rem;margin-bottom:0.5rem;}
+  nav{margin-top:0.5rem;}
+  nav a{
+    color:white;
+    margin:0 1rem;
+    text-decoration:none;
+    font-weight:500;
   }
-  header h1 {
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
+  main{max-width:1200px;margin:auto;padding:2rem 1rem;}
+  section{margin-bottom:3rem;}
+  h2{
+    margin-bottom:0.75rem;
+    color:var(--accent);
+    font-size:1.75rem;
+    border-bottom:2px solid var(--accent);
+    padding-bottom:0.3rem;
   }
-  header p {
-    font-size: 1.1rem;
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
   }
-  nav {
-    background: var(--secondary);
-    color: var(--text-light);
-    padding: 0.5rem 1rem;
+  .card{
+    background:var(--card);
+    padding:1.5rem;
+    border-radius:0.75rem;
+    transition:transform 0.2s,box-shadow 0.2s;
+    display:flex;
+    flex-direction:column;
   }
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+  .card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
+  .card img{
+    width:100%;height:160px;object-fit:cover;border-radius:0.5rem;margin-bottom:1rem;
   }
-  nav a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: 600;
+  .card h3{margin-bottom:0.5rem;color:var(--accent);}
+  .card p{flex:1;}
+  footer{
+    text-align:center;
+    padding:1rem;
+    border-top:1px solid var(--secondary);
+    font-size:0.9rem;
+    color:var(--accent);
   }
-  main {
-    max-width: var(--max-width);
-    margin: 2rem auto;
-    display: grid;
-    gap: 2rem;
-  }
-  article {
-    background: var(--text-light);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  article h2 {
-    margin-bottom: 0.75rem;
-    color: var(--primary);
-  }
-  article p {
-    margin-bottom: 1rem;
-  }
-  article a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-  }
-  footer {
-    text-align: center;
-    margin-top: 4rem;
-    color: var(--text-dark);
-    font-size: 0.9rem;
-  }
-  @media (min-width: 768px) {
-    main {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 1024px) {
-    main {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI to quantum computing – staying ahead of tomorrow, today.</p>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <nav>
+    <a href="#quantum">Quantum Computing</a>
+    <a href="#ai">Artificial Intelligence</a>
+    <a href="#crisp">CRISPR & Gene Editing</a>
+    <a href="#energy">Energy Storage</a>
+    <a href="#6g">6G Connectivity</a>
+  </nav>
 </header>
-<nav>
-  <ul>
-    <li><a href="#ai">AI</a></li>
-    <li><a href="#quantum">Quantum Computing</a></li>
-    <li><a href="#biotech">Biotech</a></li>
-    <li><a href="#energy">Energy</a></li>
-    <li><a href="#future">Future Tech</a></li>
-  </ul>
-</nav>
 <main>
-  <article id="ai">
-    <h2>Artificial Intelligence</h2>
-    <p>Recent advances in generative models, such as GPT‑4 and its successors, are pushing the boundaries of natural language processing. Coupled with multimodal learning, AI systems can now understand and generate text, images, audio, and video with unprecedented coherence.</p>
-    <a href="https://www.openai.com" target="_blank">Learn more</a>
-  </article>
-
-  <article id="quantum">
+  <section id="quantum">
     <h2>Quantum Computing</h2>
-    <p>Quantum supremacy milestones continue to be achieved. Companies like Google, IBM, and Rigetti are working on error‑corrected qubits and scalable architectures, bringing us closer to practical, high‑performance quantum processors.</p>
-    <a href="https://www.ibm.com/quantum" target="_blank">Explore quantum tech</a>
-  </article>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1043/400/250" alt="Quantum Chip">
+        <h3>Silicon‑Based Quantum Processors</h3>
+        <p>2026 saw the first commercially viable silicon qubits integrated onto standard semiconductor fabs, drastically lowering production costs and boosting scalability.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1080/400/250" alt="Quantum Network">
+        <h3>Quantum Internet Prototype</h3>
+        <p>Quantum entanglement has been used to create a test‑bed network over 200 km, enabling ultra‑secure communications and paving the way for distributed quantum computing.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1056/400/250" alt="Quantum Algorithm">
+        <h3>New Error‑Correction Codes</h3>
+        <p>Researchers introduced surface‑code variants that require only 30% fewer physical qubits to achieve logical error rates below 10⁻⁸.</p>
+      </div>
+    </div>
+  </section>
 
-  <article id="biotech">
-    <h2>Biotechnology</h2>
-    <p>CRISPR‑Cas9 gene editing has seen remarkable progress in precision and safety, enabling targeted treatments for genetic disorders and advancing personalized medicine. Recent clinical trials have demonstrated efficacy in conditions such as sickle cell disease and hereditary blindness.</p>
-    <a href="https://www.nature.com/genes" target="_blank">Read the research</a>
-  </article>
+  <section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1062/400/250" alt="Generative AI">
+        <h3>Multimodal Generative Models</h3>
+        <p>AI that simultaneously generates text, images, and audio from a single prompt is now commercially available, driving new creative industries.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1035/400/250" alt="Edge AI">
+        <h3>Ultra‑Low‑Power AI Chips</h3>
+        <p>Edge devices now support 100 GFLOPs per watt, enabling real‑time AI inference in wearables and autonomous drones.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1015/400/250" alt="AI Ethics">
+        <h3>AI Transparency Frameworks</h3>
+        <p>Regulatory standards for explainable AI have been adopted globally, ensuring accountability in critical sectors like finance and healthcare.</p>
+      </div>
+    </div>
+  </section>
 
-  <article id="energy">
+  <section id="crisp">
+    <h2>CRISPR & Gene Editing</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1025/400/250" alt="CRISPR Tool">
+        <h3>Base‑Editing Therapy for Sickle Cell</h3>
+        <p>Clinical trials report >90% success in correcting the sickle allele in patient stem cells, moving toward a permanent cure.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1036/400/250" alt="Gene Drives">
+        <h3>Controlled Gene Drives in Mosquitoes</h3>
+        <p>Engineered gene drives now can suppress malaria‑carrying mosquitoes with minimal ecological impact.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1041/400/250" alt="Epigenetics">
+        <h3>Epigenetic Editing Tools</h3>
+        <p>CRISPR‑dCas9 epigenome editors enable reversible gene expression changes, opening new therapeutic possibilities for neurodegenerative diseases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="energy">
     <h2>Energy Storage</h2>
-    <p>Solid‑state battery technology is emerging as a game‑changer, offering higher energy density, faster charging, and improved safety over conventional lithium‑ion cells. Research institutions and startups are prototyping next‑generation batteries for electric vehicles and grid storage.</p>
-    <a href="https://www.energy.gov" target="_blank">Discover innovations</a>
-  </article>
-
-  <article id="future">
-    <h2>Future Technologies</h2>
-    <p>5G and the nascent 6G networks are set to revolutionize connectivity, supporting massive IoT deployments, autonomous systems, and ultra‑low latency applications. Meanwhile, advances in nanotechnology and 3D printing are redefining manufacturing and materials science.</p>
-    <a href="https://www.technologyreview.com" target="_blank">Explore future trends</a>
-  </article>
-</main>
-<footer>
-  © 2026 Tech Insight – All rights reserved
-</footer>
-</body>
-</html>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1060/400/250" alt="Solid State Battery">
+        <h3>Solid‑State Li‑S Batteries</h3>
+        <p>Energy density has doubled while safety has improved, bringing commercial electric vehicles within reach of 800 km range.</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1071/400/250" alt="Hydrogen Storage">
+        <h3>High‑Pressure Hydrogen Tanks</h3>
+        <p>New composite materials now store 80 kWh/m³, making
