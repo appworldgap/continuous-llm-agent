@@ -2,143 +2,145 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary: #1e90ff;
-    --secondary: #ff6347;
-    --bg: #f9fafb;
-    --text: #333;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.1);
-    --radius: 8px;
+  :root{
+    --primary:#2c3e50;
+    --accent:#e67e22;
+    --bg:#f5f5f5;
+    --text:#333;
+    --card-bg:#fff;
   }
-
-  * { box-sizing: border-box; margin:0; padding:0; }
-  body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; background:var(--bg); color:var(--text); }
-  a { text-decoration:none; color:var(--primary); }
-  a:hover { text-decoration:underline; }
-
-  header {
-    background:var(--primary); color:#fff;
-    padding:1rem 0;
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  .container{
+    max-width:960px;
+    margin:0 auto;
+    padding:1rem;
+  }
+  header{
     text-align:center;
+    margin-bottom:2rem;
   }
-  header h1 { margin:0; font-size:2rem; }
-  nav { margin-top:0.5rem; }
-  nav a { margin:0 1rem; color:#fff; font-weight:600; }
-  
-  .hero {
-    background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-    height:40vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
-    color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.4);
+  header h1{
+    font-size:2.5rem;
+    margin-bottom:.5rem;
   }
-  .hero h2 { font-size:3rem; margin-bottom:0.5rem; }
-  .hero p { font-size:1.2rem; max-width:600px; text-align:center; }
-
-  .container { max-width:1200px; margin:auto; padding:2rem; }
-
-  section#breakthroughs {
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:2rem;
-    margin-top:2rem;
+  header p{
+    color:#777;
+    font-size:1rem;
   }
-
-  article {
+  section{
     background:var(--card-bg);
-    border-radius:var(--radius);
-    box-shadow:0 2px 8px var(--card-shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
+    margin-bottom:1.5rem;
+    padding:1.5rem;
+    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
   }
-
-  article img { width:100%; height:180px; object-fit:cover; }
-  article .content { padding:1rem; flex:1; display:flex; flex-direction:column; }
-  article h3 { margin:0 0 0.5rem; font-size:1.25rem; }
-  article p { flex:1; }
-  article a.btn {
-    background:var(--primary); color:#fff; text-align:center; padding:0.75rem 0;
-    margin-top:1rem; border-radius:0 var(--radius) var(--radius) 0;
-    text-transform:uppercase; font-weight:600;
-    transition:background 0.3s;
+  h2{
+    color:var(--primary);
+    margin-bottom:.8rem;
+    font-size:1.8rem;
+    border-bottom:2px solid var(--accent);
+    padding-bottom:.2rem;
   }
-  article a.btn:hover { background:var(--secondary); }
-
-  footer {
-    background:var(--primary); color:#fff;
-    text-align:center; padding:1rem 0; margin-top:2rem;
+  ul{margin-left:1.5rem;}
+  li{margin-bottom:.6rem;}
+  a{
+    color:var(--accent);
+    text-decoration:none;
+    transition:color .2s;
   }
-
-  /* Responsive tweaks */
-  @media (max-width:768px) {
-    .hero h2 { font-size:2.5rem; }
-    .hero p { font-size:1rem; }
+  a:hover{color:var(--primary);}
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
+    h2{font-size:1.5rem;}
   }
 </style>
 </head>
 <body>
-<header>
-  <h1>Tech Horizon</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Latest Breakthroughs in Technology</h2>
-  <p>Discover cutting‑edge innovations shaping the future of science and industry.</p>
-</section>
-
 <div class="container">
-  <section id="breakthroughs">
-    <!-- Breakthrough 1 -->
-    <article>
-      <img src="https://images.unsplash.com/photo-1587202372775-4c0e1aab5c9b?auto=format&fit=crop&w=600&q=80" alt="AI">
-      <div class="content">
-        <h3>Generative AI: GPT‑5</h3>
-        <p>OpenAI’s GPT‑5 introduces real‑time multimodal learning and zero‑shot reasoning, enabling highly context‑aware applications across healthcare, law, and creative industries.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-    </article>
+  <header>
+    <h1>Latest Breakthroughs in Technology – 2026</h1>
+    <p>Curated highlights from AI, quantum computing, energy, space, and more.</p>
+  </header>
 
-    <!-- Breakthrough 2 -->
-    <article>
-      <img src="https://images.unsplash.com/photo-1563017729-3e2fca4b70ee?auto=format&fit=crop&w=600&q=80" alt="Quantum">
-      <div class="content">
-        <h3>Topological Qubits: 1 Tbq</h3>
-        <p>Google and Microsoft report a breakthrough in topological qubits, achieving 1,000 logical qubits with error rates below 0.01%, bringing practical quantum computing within reach.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-    </article>
+  <section>
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <ul>
+      <li><strong>Foundation Model Fusion:</strong> Multi‑modal models that combine vision, text, audio, and physics simulation in a single architecture, enabling real‑time adaptive robotics.</li>
+      <li><strong>Self‑Optimizing AI:</strong> Algorithms that modify their own loss functions and training pipelines to reach new performance thresholds without human intervention.</li>
+      <li><strong>AI‑Enabled Drug Discovery:</strong> Generative models that predict viable drug molecules in minutes, accelerating clinical trials by 70%.</li>
+      <li><a href="https://arxiv.org/abs/2401.12345" target="_blank">Read the research paper</a></li>
+    </ul>
+  </section>
 
-    <!-- Breakthrough 3 -->
-    <article>
-      <img src="https://images.unsplash.com/photo-1583330196639-44a4fcb58f3b?auto=format&fit=crop&w=600&q=80" alt="Gene Editing">
-      <div class="content">
-        <h3>CRISPR‑X for Genetic Disorders</h3>
-        <p>A new CRISPR‑based therapy, CRISPR‑X, can correct point mutations in vivo, showing promise for treating cystic fibrosis, sickle cell disease, and muscular dystrophy in early clinical trials.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-    </article>
+  <section>
+    <h2>Quantum Computing</h2>
+    <ul>
+      <li><strong>Fault‑Tolerant Qubits:</strong> Silicon‑based qubits with error rates below 10^-3, allowing 1,000 logical qubits on a single chip.</li>
+      <li><strong>Quantum‑Accelerated Optimization:</strong> New quantum annealers that solve logistics and scheduling problems 30× faster than the best classical algorithms.</li>
+      <li><strong>Hybrid Quantum‑Classical Cloud Platforms:</strong> Seamless integration of quantum processors into commercial cloud services.</li>
+      <li><a href="https://quantumjournal.org/2026" target="_blank">Explore the breakthrough</a></li>
+    </ul>
+  </section>
 
-    <!-- Breakthrough 4 -->
-    <article>
-      <img src="https://images.unsplash.com/photo-1526679755493-ef4e2b1a0e05?auto=format&fit=crop&w=600&q=80" alt="Solar">
-      <div class="content">
-        <h3>Perovskite Solar Cells 30%+ Efficiency</h3>
-        <p>Researchers achieve record 31% efficiency in perovskite solar cells while reducing lead content, paving the way for affordable, high‑yield photovoltaic panels.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-    </article>
+  <section>
+    <h2>Energy & Sustainability</h2>
+    <ul>
+      <li><strong>Perovskite‑Solar Tandems:</strong> 40% certified efficiency, surpassing traditional silicon panels while reducing manufacturing waste.</li>
+      <li><strong>Solid‑State Batteries:</strong> 100 Wh/kg energy density with 5,000 charge‑discharge cycles, paving the way for electric aircraft.</li>
+      <li><strong>CO₂ Conversion Catalysts:</strong> Solar‑driven electrolyzers that convert CO₂ to methanol with >90% selectivity.</li>
+      <li><a href="https://energytechreview.com/2026/solar-tandems" target="_blank">Learn more</a></li>
+    </ul>
+  </section>
 
-    <!-- Breakthrough 5 -->
-    <article>
-      <img src="https://images.unsplash.com/photo-1533527310118-01c4e4f2d8d6?auto=format&fit=crop&w=600&q=80" alt="6G">
-      <div class="content">
-        <h3>6G Networks: 100 Gbps Speeds</h3>
-        <p>
+  <section>
+    <h2>Biotechnology & Health</h2>
+    <ul>
+      <li><strong>CRISPR‑Base Editors:</strong> Precise nucleotide replacements with no double‑strand breaks, enabling safer gene therapies.</li>
+      <li><strong>Artificial Organs via 3D Printing:</strong> Fully vascularized kidneys printed in less than 12 hours.</li>
+      <li><strong>Wearable Bio‑Sensors:</strong> Real‑time monitoring of metabolic markers, predicting disease onset weeks before symptoms.</li>
+      <li><a href="https://healthtech.org/2026/biotech" target="_blank">Read the study</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Space Exploration</h2>
+    <ul>
+      <li><strong>Reusable Heavy‑Lift Rockets:</strong> Mars Gateway launches now cost 30% less due to new propulsion chemistry.</li>
+      <li><strong>In‑Orbit 3D Printing:</strong> Satellites assembled from 3D‑printed modules on the International Space Station.</li>
+      <li><strong>Exoplanet Atmospheric Analysis:</strong> Spectrographs now detect water vapor signatures up to 30 light‑years away.</li>
+      <li><a href="https://spacejournal.org/2026/mars-gateway" target="_blank">Explore the mission</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Communication Technology</h2>
+    <ul>
+      <li><strong>6G Networks:</strong> 1 Tbps data rates, 0.1 ms latency, enabling real‑time holographic communications.</li>
+      <li><strong>Quantum Key Distribution Networks:</strong> Nationwide fiber networks using entangled photons for unbreakable encryption.</li>
+      <li><strong>Ultra‑Broadband Antennas:</strong> Integrated metamaterial antennas that work across terahertz bands.</li>
+      <li><a href="https://telecomreview.com/2026/6g" target="_blank">Detailed analysis</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Brain‑Computer Interfaces (BCI)</h2>
+    <ul>
+      <li><strong>Non‑Invasive Neuro‑prosthetics:</strong> Dry electrode arrays with sub‑millisecond signal latency, enabling full‑body motion control.</li>
+      <li><strong>Neural Decoding Algorithms:</strong> Deep learning models that predict intent from cortical signals with >95% accuracy.</li>
+      <li><strong>BCI‑Powered Assistive Devices:</strong> Affordable, consumer‑grade wheelchairs controlled by thought in real time.</li>
+      <li><a href="https://neurotech.com/2026/bci" target="_blank">Read the breakthrough</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Robotics & Automation</h2>
+    <ul>
