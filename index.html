@@ -2,111 +2,117 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary: #1d4ed8;
-    --accent: #f59e0b;
-    --bg: #f9fafb;
-    --card-bg: #fff;
-    --text: #111;
-    --muted: #6b7280;
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont,
-                  "Segoe UI", Roboto, "Helvetica Neue", Arial,
-                  "Noto Sans", sans-serif, "Apple Color Emoji",
-                  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --radius: 0.5rem;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--font-sans); background: var(--bg); color: var(--text); line-height: 1.6; }
-  header { background: var(--primary); color: #fff; padding: 2rem 1rem; text-align: center; }
-  header h1 { margin-bottom: 0.5rem; font-size: 2.5rem; }
-  header p { font-size: 1.1rem; opacity: 0.9; }
-  main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .card { background: var(--card-bg); border-radius: var(--radius); box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column; }
-  .card img { width: 100%; height: 160px; object-fit: cover; }
-  .card-content { padding: 1rem; flex: 1; display: flex; flex-direction: column; }
-  .card-content h3 { margin-bottom: 0.5rem; color: var(--primary); }
-  .card-content p { flex: 1; color: var(--muted); margin-bottom: 1rem; }
-  .card-content a { text-decoration: none; color: var(--accent); font-weight: 600; align-self: flex-start; }
-  footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: var(--muted); }
-  @media (prefers-color-scheme: dark) {
-    body { background: #111; color: #e5e7eb; }
-    header { background: #0f172a; }
-    .card { background: #1e293b; }
-  }
+/* Reset and basic styles */
+*, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height:1.6;
+    color:#333;
+    background:#f9f9f9;
+    background-image:linear-gradient(120deg,#f5f5f5,#e0e0e0);
+}
+a { color:#0066cc; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* Layout */
+.container { width:90%; max-width:1200px; margin:0 auto; padding:2rem 0; }
+header { text-align:center; margin-bottom:3rem; }
+header h1 { font-size:3rem; margin-bottom:.5rem; }
+header p { font-size:1.2rem; color:#555; }
+
+section { margin-bottom:3rem; }
+section h2 { font-size:2rem; margin-bottom:1rem; color:#222; }
+
+article { display:flex; flex-wrap:wrap; margin-bottom:2rem; }
+article img { width:100%; max-width:400px; height:auto; border-radius:8px; margin-right:1rem; flex:1 1 350px; }
+article .text { flex:2 1 400px; }
+
+footer { text-align:center; font-size:.9rem; color:#777; padding:1rem 0; }
+
+/* Grid for breakthroughs */
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
+.card {
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.05);
+    overflow:hidden;
+    transition:transform .2s,box-shadow .2s;
+}
+.card:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,.1); }
+.card img { width:100%; height:180px; object-fit:cover; }
+.card .content { padding:1rem; }
+.card h3 { margin-bottom:.5rem; font-size:1.2rem; color:#222; }
+.card p { font-size:.95rem; color:#555; }
+
+/* Search results */
+.results { background:#fff; padding:1.5rem; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,.05); }
+.results ul { list-style:none; }
+.results li { margin-bottom:.8rem; }
+.results a { font-weight:500; }
+
+/* Responsive tweaks */
+@media(max-width:600px){
+    header h1 { font-size:2.4rem; }
+    article { flex-direction:column; }
+    article img { margin-right:0; margin-bottom:1rem; }
+}
 </style>
 </head>
 <body>
+<div class="container">
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI and quantum computing to sustainable energy and biotech – the frontiers of 2026.</p>
+    <h1>Latest Breakthroughs in Technology</h1>
+    <p>Explore the most exciting advancements shaping our world in 2024 and beyond.</p>
 </header>
-<main>
-  <section>
-    <h2>Recent Highlights</h2>
+
+<!-- AI & Machine Learning -->
+<section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <article>
+        <img src="https://images.unsplash.com/photo-1580281657528-3e6f1a5c4d32?auto=format&fit=crop&w=400&q=80" alt="AI neural network">
+        <div class="text">
+            <p>OpenAI’s <strong>GPT‑4.5</strong> pushes the frontier of language understanding with multimodal capabilities and reduced hallucination rates. Its integration into industry tools—from coding assistants to medical diagnosis—has accelerated the adoption of generative AI across sectors.</p>
+            <p>Meanwhile, Google’s <strong>PaLM‑2</strong> and Meta’s <strong>LLaMA‑3</strong> models demonstrate new training efficiencies, enabling larger context windows and faster inference on edge devices.</p>
+        </div>
+    </article>
+</section>
+
+<!-- Quantum Computing -->
+<section id="quantum">
+    <h2>Quantum Computing</h2>
     <div class="grid">
-      <!-- AI & Machine Learning -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1592194996300-8c6b0e7b3e69?auto=format&fit=crop&w=600&q=80" alt="AI">
-        <div class="card-content">
-          <h3>Generative AI Models Reach Human‑Level Creativity</h3>
-          <p>Large multimodal transformers can now produce code, music, and visual art indistinguishable from human creations, pushing creative AI beyond text.</p>
-          <a href="https://www.techradar.com/news/generative-ai-breakthroughs" target="_blank" rel="noopener">Read more</a>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1601758003127-7bca0a9d3c2e?auto=format&fit=crop&w=400&q=80" alt="Quantum processor">
+            <div class="content">
+                <h3>Microsoft’s 1,000‑Qubit Processor</h3>
+                <p>Microsoft announced its first <strong>1,000‑qubit</strong> superconducting processor, surpassing the “quantum advantage” threshold for a broader class of problems, including protein folding and cryptographic analysis.</p>
+            </div>
         </div>
-      </article>
-      <!-- Quantum Computing -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1587202372775-1a8a4d6d4e2a?auto=format&fit=crop&w=600&q=80" alt="Quantum">
-        <div class="card-content">
-          <h3>Commercial Quantum Processors Reach 100 Qubits</h3>
-          <p>New silicon‑based quantum chips offer 100+ logical qubits with error‑correction, making scalable quantum‑enhanced machine learning realistic.</p>
-          <a href="https://www.nature.com/articles/s41586-026-0457-9" target="_blank" rel="noopener">Read more</a>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542367528-1c2b8f3b6d07?auto=format&fit=crop&w=400&q=80" alt="Quantum lab">
+            <div class="content">
+                <h3>Quantum‑Enhanced Sensors</h3>
+                <p>Researchers have leveraged entangled photon states to develop <strong>nanometer‑scale magnetic field sensors</strong>, promising breakthroughs in medical imaging and geological surveying.</p>
+            </div>
         </div>
-      </article>
-      <!-- Renewable Energy -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1589927987223-2e4d5a4c7f13?auto=format&fit=crop&w=600&q=80" alt="Solar">
-        <div class="card-content">
-          <h3>Perovskite Solar Cells Hit 30% Efficiency</h3>
-          <p>All‑in‑organic perovskite layers now deliver 30% efficiency in commercial modules, potentially lowering PV costs by 40%.</p>
-          <a href="https://www.energeia.com/tech/perovskite-solar-breakthrough" target="_blank" rel="noopener">Read more</a>
-        </div>
-      </article>
-      <!-- Biotechnology -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1533723229159-8e1b9c8e6c4f?auto=format&fit=crop&w=600&q=80" alt="Biotech">
-        <div class="card-content">
-          <h3>CRISPR‑Base Editing for Gene Therapy</h3>
-          <p>Base‑editing platforms now correct pathogenic mutations in vivo with <2% off‑target activity, marking a new era for inherited diseases.</p>
-          <a href="https://www.cell.com/abstract/S0092-8674(26)00058-8" target="_blank" rel="noopener">Read more</a>
-        </div>
-      </article>
-      <!-- Robotics & Automation -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1565232474646-5a2d3d2e2f6b?auto=format&fit=crop&w=600&q=80" alt="Robotics">
-        <div class="card-content">
-          <h3>Soft‑Robotics for Human‑Assistive Devices</h3>
-          <p>New pneumatically‑driven soft actuators enable lightweight, compliant prosthetics with real‑time sensor feedback.</p>
-          <a href="https://www.sciencedirect.com/science/article/pii/S1743009126000379" target="_blank" rel="noopener">Read more</a>
-        </div>
-      </article>
-      <!-- Space Tech -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1582193542331-0b7c4a1c7e1e?auto=format&fit=crop&w=600&q=80" alt="Space">
-        <div class="card-content">
-          <h3>Reusable Mid‑Orbit Launch Vehicles</h3>
-          <p>New modular launch systems now return to Earth after delivering payloads to 350 km orbit, reducing launch costs by 60%.</p>
-          <a href="https://www.space.com/launch-vehicle-reuse-2026" target="_blank" rel="noopener">Read more</a>
-        </div>
-      </article>
     </div>
-  </section>
-</main>
-<footer>
-  © 2026 TechInsights. All rights reserved.
-</footer>
-</body>
-</html>
+</section>
+
+<!-- Biotechnology -->
+<section id="bio">
+    <h2>Biotechnology</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1593642532400-2682810df6a5?auto=format&fit=crop&w=400&q=80" alt="Lab work">
+            <div class="content">
+                <h3>CRISPR‑Cas12c Therapeutics</h3>
+                <p>CRISPR‑Cas12c platforms are moving into clinical trials for treating genetic blindness and Duchenne muscular dystrophy, offering a programmable, off‑target‑reduced approach.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581327579075-1f4b6bcd6e2b?auto=format&fit=crop&w=400&q=80" alt="mRNA vaccine">
+            <div class="content">
+                <h3>Next‑Gen mRNA Vaccines</h3>
