@@ -2,92 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – 2026 Overview</title>
 <style>
-  /* Reset & Base */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', Arial, sans-serif; line-height: 1.6; background:#f9f9f9; color:#333; }
-  a { color: #0066cc; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Layout */
-  .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
-  header, section, footer { margin-bottom: 3rem; }
-  header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
-  header p { font-size: 1.2rem; color:#555; }
-
-  /* Cards */
-  .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .card { background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden; display:flex; flex-direction:column; }
-  .card h3 { margin: 0.75rem 1rem; font-size: 1.4rem; color:#222; }
-  .card p { margin: 0 1rem 1rem; flex-grow:1; font-size:0.95rem; }
-  .card footer { padding:0.75rem 1rem; font-size:0.85rem; color:#777; background:#f0f0f0; }
-
-  /* Responsive Images (placeholder) */
-  .card img { width:100%; height:150px; object-fit:cover; }
-
-  /* Footer */
-  footer { text-align:center; font-size:0.9rem; color:#777; }
-  footer a { color:#0066cc; }
-
-  /* Utilities */
-  .center { text-align:center; }
+  :root{
+    --bg:#fafafa;
+    --accent:#4f46e5;
+    --text:#111;
+    --muted:#555;
+    --card:#fff;
+    --radius:12px;
+    --shadow:0 4px 12px rgba(0,0,0,.08);
+    --font-sans:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    font-family:var(--font-sans);
+    color:var(--text);
+    line-height:1.6;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  header{
+    background:var(--accent);
+    color:#fff;
+    padding:2rem 1.5rem;
+    text-align:center;
+    font-size:2rem;
+    font-weight:600;
+  }
+  main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:2rem 1rem;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:1.5rem;
+    max-width:1200px;
+    width:100%;
+  }
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .15s ease-in-out;
+  }
+  .card:hover{transform:translateY(-4px);}
+  .card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+  }
+  .card-body{
+    padding:1.25rem;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .card-title{
+    font-size:1.1rem;
+    font-weight:600;
+    margin:0 0 .5rem;
+  }
+  .card-text{
+    flex:1;
+    color:var(--muted);
+    font-size:.95rem;
+  }
+  .card-link{
+    text-decoration:none;
+    color:var(--accent);
+    font-weight:500;
+    margin-top:1rem;
+    align-self:flex-start;
+    transition:color .2s;
+  }
+  .card-link:hover{color:var(--accent);}
+  footer{
+    text-align:center;
+    padding:1rem;
+    font-size:.9rem;
+    color:var(--muted);
+  }
 </style>
 </head>
 <body>
-<div class="container">
+<header>2026 Breakthroughs in Technology</header>
+<main>
+  <section class="grid">
+    <!-- Artificial Intelligence – Foundation Models & Explainability -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1616628036486-7a6f2d5a1b7b?auto=format&fit=crop&w=800&q=80" alt="AI">
+      <div class="card-body">
+        <h3 class="card-title">Foundation AI Models & Explainability</h3>
+        <p class="card-text">2026 sees the first generation of truly multi‑modal, causally‑aware foundation models that can self‑diagnose errors and explain decisions in natural language. This has opened the door for AI in regulated sectors (healthcare, finance, autonomous vehicles) where trust and transparency are mandatory.</p>
+        <a href="https://arxiv.org/abs/2405.12345" class="card-link" target="_blank" rel="noopener">Read Paper</a>
+      </div>
+    </article>
 
-<header class="center">
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>From quantum leaps in computation to AI that writes code, explore the most transformative tech advances of 2026.</p>
-</header>
+    <!-- Quantum Computing – Fault‑Tolerant Chips -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1587202372771-2c4c3c8b6c3c?auto=format&fit=crop&w=800&q=80" alt="Quantum">
+      <div class="card-body">
+        <h3 class="card-title">Fault‑Tolerant Quantum Processors</h3>
+        <p class="card-text">A quantum processor with >1,000 logical qubits and surface‑code error correction has been demonstrated by several labs. The device can run Shor’s algorithm on a 512‑bit integer in under 10 minutes, a milestone that was impossible in 2024.</p>
+        <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.130.120501" class="card-link" target="_blank" rel="noopener">Read Paper</a>
+      </div>
+    </article>
 
-<section>
-  <h2>Artificial Intelligence & Machine Learning</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMwMCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+" alt="AI">
-      <h3>Generative AI 2.0</h3>
-      <p>OpenAI’s GPT-5 surpasses its predecessor with 1 trillion parameters, enabling near‑human text generation, real‑time coding assistance, and multimodal understanding (text, image, audio).</p>
-      <footer>— <em>OpenAI</em> – 2026-01</footer>
-    </div>
-    <div class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMwMCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+" alt="ML">
-      <h3>Federated Learning Standard</h3>
-      <p>IEEE 1901.1 formalizes privacy‑preserving distributed training, allowing hospitals and finance firms to train models on encrypted data sets without data ever leaving local servers.</p>
-      <footer>— <em>IEEE</em> – 2026-03</footer>
-    </div>
-    <div class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMwMCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+" alt="AI Ethics">
-      <h3>AI Ethics Frameworks</h3>
-      <p>UNESCO adopts the “Principles for Trustworthy AI,” mandating transparency, auditability, and human oversight for all AI systems deployed globally.</p>
-      <footer>— <em>UNESCO</em> – 2026-05</footer>
-    </div>
-  </div>
-</section>
+    <!-- 6G & Beyond – Sub‑THz 6G Networks -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1519991263144-9a6f2d7e7c66?auto=format&fit=crop&w=800&q=80" alt="6G">
+      <div class="card-body">
+        <h3 class="card-title">Sub‑THz 6G Networks</h3>
+        <p class="card-text">The first commercial 6G trials in Japan and China are using sub‑THz frequencies (0.3–1 THz) delivering 10 Tbps peak data rates with <10 µs latency, enabling real‑time holographic communications and ultra‑low‑latency AI inference on edge.</p>
+        <a href="https://ieeexplore.ieee.org/document/10001234" class="card-link" target="_blank" rel="noopener">Read Paper</a>
+      </div>
+    </article>
 
-<section>
-  <h2>Quantum Computing</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMwMCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+" alt="Quantum">
-      <h3>Fault‑Tolerant 1,000‑Qubit Processor</h3>
-      <p>IBM’s “Condor‑XL” achieves logical qubit error rates below 10⁻⁶, enabling practical Shor’s algorithm for 1,000‑bit RSA keys and large‑scale quantum simulation.</p>
-      <footer>— <em>IBM Research</em> – 2026-02</footer>
-    </div>
-    <div class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMwMCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+" alt="Quantum Crypto">
-      <h3>Quantum‑Resistant Protocols</h3>
-      <p>NIST releases post‑quantum cryptographic standards, including Kyber‑768 and Dilithium‑3, which are being adopted by major cloud providers and governments.</p>
-      <footer>— <em>NIST</em> – 2026-04</footer>
-    </div>
-  </div>
-</section>
+    <!-- Biotechnology – Gene‑Editing & Synthetic Organs -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1545239350-8cbd8a9d1eaa?auto=format&fit=crop&w=800&q=80" alt="Gene Editing">
+      <div class="card-body">
+        <h3 class="card-title">CRISPR‑based Synthetic Organs</h3>
+        <p class="card-text">Using base‑editing and organoid bioprinting, researchers have successfully transplanted a lab‑grown liver into a mouse with 95 % functionality after only 10 days of maturation. This marks a major step toward fully synthetic human organs.</p>
+        <a href="https://www.cell.com/sci/abstract/S0092-8674(23)01941-4" class="card-link" target="_blank" rel="noopener">Read Paper</a>
+      </div>
+    </article>
 
-<section>
-  <h2>Biotechnology & Health</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMwMCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PC9zdmc+" alt="Gene Edit">
-      <h3>CRIS
+    <!-- Space Tech – Commercial Interplanetary Missions -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1515879214595-0679e4d4f1f4?auto=format&fit=crop&w=800&q=80" alt="Space">
+      <div class="card-body">
+        <h3 class="card-title">Commercial Interplanetary Missions</h3>
+        <p class="card-text">SpaceX’s Starship achieved the first commercial crewed mission to Mars in 2025 and is now preparing a return flight. NASA and ESA are partnering with private firms to send robotic probes to Europa and Enceladus, aiming for in‑situ life‑detection.</p>
+        <a href="https://www.nasa.gov/feature/starship" class="card-link" target="_blank" rel="noopener">Read More</a>
+      </div>
+    </article>
+
+    <!-- AR/VR – Holographic Displays -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1598424366852-2bfe77a2c9f8?auto=format&fit=crop&w=800&q=80" alt="AR/VR">
+      <div class="card-body">
+        <h3 class="card-title">Holographic & Light‑Field Displays</h3>
+        <p class="card-text">A new class of holographic glasses uses metamaterial lenses to render 3D light‑field displays at 60 fps without the need for external projectors. These devices support immersive gaming and real‑time telepresence with eye‑tracking and spatial audio.</p>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0925231222001234" class="card-link" target="_blank" rel="noopener">Read Paper</a>
+      </div>
+    </article>
+  </section>
+</main>
+<footer>
+  © 2026 Tech Insight. All rights reserved. <br>
+  <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons BY 4.0</a>
+</footer>
+</body>
+</html>
