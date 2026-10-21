@@ -4,137 +4,123 @@
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* Base styles */
-* { box-sizing: border-box; margin:0; padding:0; }
-html { font-family: 'Inter', sans-serif; background:#f8f9fa; color:#212529; }
-body { line-height:1.6; }
-a { color:#2d86ff; text-decoration:none; }
-a:hover { text-decoration:underline; }
+/* Basic Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Typography */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f7f9fc; }
+h1, h2, h3 { line-height: 1.2; color: #1a1a1a; }
+h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+h2 { font-size: 2rem; margin-top: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+p { margin-bottom: 1rem; }
+a { color: #0078d4; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 /* Layout */
-header, footer { background:#ffffff; padding:2rem; text-align:center; }
-header h1 { font-size:2.5rem; }
-section { max-width:1200px; margin:auto; padding:2rem 1rem; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
-.card { background:#ffffff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.05); overflow:hidden; transition:transform .2s ease; }
-.card:hover { transform:translateY(-5px); }
-.card img { width:100%; height:160px; object-fit:cover; }
-.card-content { padding:1rem; }
-.card-title { font-size:1.25rem; margin-bottom:.5rem; }
-.card-text { font-size:.95rem; color:#555; }
+header { background: #ffffff; padding: 2rem 1rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+section { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+.grid { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+.grid-2 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 
-/* Responsive typography */
-@media (min-width:768px) {
-  header h1 { font-size:3rem; }
-  .card-title { font-size:1.35rem; }
+/* Cards */
+.card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 1.5rem; transition: transform 0.2s; }
+.card:hover { transform: translateY(-5px); }
+.card h3 { margin-bottom: 0.5rem; }
+.card p { font-size: 0.95rem; }
+.card .icon { font-size: 2rem; display: inline-block; margin-right: 0.5rem; vertical-align: middle; }
+
+/* Footer */
+footer { background: #222; color: #ccc; text-align: center; padding: 1rem; margin-top: 3rem; }
+footer a { color: #fff; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
 }
-footer p { font-size:.9rem; color:#777; }
-
-/* Utility */
-.center { text-align:center; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
-  <p class="center">A snapshot of the most transformative tech advances of the year</p>
+    <h1>Latest Breakthroughs in Technology – 2024</h1>
+    <p>Discover the cutting‑edge innovations reshaping our world.</p>
 </header>
 
-<section id="ai">
-  <h2>Artificial Intelligence & Machine Learning</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581093588401-2a6b0b2b9c8e" alt="AI">
-      <div class="card-content">
-        <h3 class="card-title">Generative AI 2.0</h3>
-        <p class="card-text">Next‑gen models now generate coherent, multi‑modal content—text, audio, video—at near‑human fidelity, powering creative industries and accelerating scientific discovery.</p>
-      </div>
+<section id="ai-ml">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <div class="grid grid-2">
+        <div class="card">
+            <h3><span class="icon">🤖</span> GPT‑4.5 & Multimodal LLMs</h3>
+            <p>OpenAI’s GPT‑4.5 integrates advanced vision, audio, and text modalities, delivering seamless cross‑modal reasoning and real‑time code generation.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">🖼️</span> Diffusion Models in Production</h3>
+            <p>Companies like Stability AI and Midjourney deploy diffusion pipelines for scalable image, video, and 3D content creation with near‑real‑time performance.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">⚙️</span> Edge AI Accelerators</h3>
+            <p>NVIDIA Jetson Orin and Intel Arc mobile GPUs enable on‑device inference for autonomous drones, smart cameras, and wearables.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">🧠</span> Neuromorphic Chips</h3>
+            <p>Intel Loihi 3 and BrainChip Akida deliver ultra‑low‑power spiking‑neural‑network inference for robotics and IoT.</p>
+        </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Edge AI">
-      <div class="card-content">
-        <h3 class="card-title">Edge AI Chips</h3>
-        <p class="card-text">Low‑power, high‑efficiency AI processors enable real‑time inference on IoT devices, reducing latency and cloud dependency for autonomous vehicles and smart cities.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1525253086316-f0a4b4c2a9c4" alt="AI Ethics">
-      <div class="card-content">
-        <h3 class="card-title">AI Governance Frameworks</h3>
-        <p class="card-text">Global standards now require transparent model auditing, bias mitigation, and explainability, setting a new baseline for responsible AI deployment.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section id="quantum">
-  <h2>Quantum Computing</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1607175041209-3a8b3c4c3a0c" alt="Quantum">
-      <div class="card-content">
-        <h3 class="card-title">100-Qubit Superconducting Processor</h3>
-        <p class="card-text">IBM’s latest QPU surpasses 100 logical qubits, dramatically increasing computational depth for chemistry and materials simulations.</p>
-      </div>
+    <h2>Quantum Computing</h2>
+    <div class="grid grid-2">
+        <div class="card">
+            <h3><span class="icon">🔬</span> Google Sycamore 2.0</h3>
+            <p>Achieves 100 qubits of error‑corrected computation, demonstrating practical quantum advantage in cryptographic tasks.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">🧪</span> IBM Quantum Eagle</h3>
+            <p>500‑qubit superconducting processor with integrated cryo‑electronics and a new QASM‑v3 language for large‑scale experiments.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">💡</span> Silicon‑Based Quantum Photonics</h3>
+            <p>Oxford Quantum Circuits introduces silicon waveguide arrays for scalable, room‑temperature photonic qubits.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">🌐</span> Quantum Internet Prototype</h3>
+            <p>China and the EU test a 500 km quantum key distribution (QKD) link over fiber, paving the way for secure global communication.</p>
+        </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1573497492808-01f7b9c5d1e4" alt="Quantum Internet">
-      <div class="card-content">
-        <h3 class="card-title">Quantum‑Secure Communications</h3>
-        <p class="card-text">Commercial deployment of quantum key distribution (QKD) across metro networks guarantees unconditional encryption for financial and governmental data.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section id="energy">
-  <h2>Energy & Sustainability</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1542744173-8a2a7c5b9c42" alt="Solar">
-      <div class="card-content">
-        <h3 class="card-title">Perovskite Solar Cells</h3>
-        <p class="card-text">Record efficiencies of 27% with lower manufacturing costs make perovskite modules a strong contender for grid‑scale deployment.</p>
-      </div>
+    <h2>Energy & Materials</h2>
+    <div class="grid grid-2">
+        <div class="card">
+            <h3><span class="icon">⚡</span> Solid‑State Battery Advancements</h3>
+            <p>SolidPower delivers 400 Wh/kg energy density and 500‑charge cycles for electric vehicles.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">🌞</span> Perovskite Solar Cells</h3>
+            <p>Perovskite modules reach 26.5 % efficiency with tandem architectures, approaching silicon record levels.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">🔋</span> High‑Capacitance Supercapacitors</h3>
+            <p>Graphene‑oxide hybrid electrodes achieve 500 F/g, enabling rapid charging for grid storage.</p>
+        </div>
+        <div class="card">
+            <h3><span class="icon">💨</span> Green Hydrogen Production</h3>
+            <p>Solid Oxide Electrolysis Cells (SOECs) now operate at 800 °C with 75 % efficiency, reducing carbon emissions.</p>
+        </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581276879432-8e0a5dcb1c19" alt="Battery">
-      <div class="card-content">
-        <h3 class="card-title">Solid‑State Lithium‑Ion Batteries</h3>
-        <p class="card-text">New electrolyte chemistries deliver 20% higher energy density and safer operation, accelerating EV adoption.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="bio">
-  <h2>Biotechnology</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1611095973610-1b4b6a3f8d61" alt="CRISPR">
-      <div class="card-content">
-        <h3 class="card-title">CRISPR‑Base Editing</h3>
-        <p class="card-text">Precision base editors now correct disease‑causing mutations without double‑strand breaks, opening new therapeutic avenues.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1591929381229-4fba1b8a0e1e" alt="Synthetic Biology">
-      <div class="card-content">
-        <h3 class="card-title">Synthetic Microbial Factories</h3>
-        <p class="card-text">Engineered microbes produce complex biochemicals, reducing reliance on petrochemicals and lowering CO₂ footprints.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section id="space">
-  <h2>Space & Exploration</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1557207728-0c8a6e8e1a6c" alt="Mars Rover">
-      <div class="card-content">
-        <h3 class="card-title">Mars Sample Return</h3>
-        <p class="card-text">Successful deployment of a robotic lander to
+    <h2>Space & Aerospace</h2>
+    <div class="grid grid-2">
+        <div class="card">
+            <h3><span class="icon">🚀</span> Starship Full‑Stack Reusability</h3>
+            <p>SpaceX’s Starship completes the first fully reusable orbital flight, lowering launch costs to $3,500 per kilogram.</p>
+        </div>
+        <div class="card">
+            <h3
