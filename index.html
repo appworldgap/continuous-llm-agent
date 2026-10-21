@@ -2,166 +2,117 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026 Overview</title>
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root{
-    --bg:#fafafa;
-    --accent:#4f46e5;
-    --text:#111;
-    --muted:#555;
-    --card:#fff;
-    --radius:12px;
-    --shadow:0 4px 12px rgba(0,0,0,.08);
-    --font-sans:"Segoe UI","Helvetica Neue",Arial,sans-serif;
-  }
+  /* --- Global Styles --- */
+  *{box-sizing:border-box;margin:0;padding:0;}
   body{
-    margin:0;
-    background:var(--bg);
-    font-family:var(--font-sans);
-    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:#f4f7fa;
+    color:#333;
     line-height:1.6;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+    padding:2rem;
   }
+  a{color:#0066cc;text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  
+  /* --- Header --- */
   header{
-    background:var(--accent);
-    color:#fff;
-    padding:2rem 1.5rem;
     text-align:center;
-    font-size:2rem;
-    font-weight:600;
+    margin-bottom:3rem;
   }
-  main{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:2rem 1rem;
+  header h1{
+    font-size:2.5rem;
+    margin-bottom:.5rem;
+    color:#222;
   }
+  header p{
+    font-size:1.1rem;
+    color:#555;
+  }
+  
+  /* --- Grid of Cards --- */
   .grid{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
     gap:1.5rem;
-    max-width:1200px;
-    width:100%;
   }
-  .card{
-    background:var(--card);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform .15s ease-in-out;
+  article{
+    background:white;
+    border-radius:8px;
+    box-shadow:0 4px 8px rgba(0,0,0,.05);
+    padding:1.5rem;
+    transition:transform .2s,box-shadow .2s;
   }
-  .card:hover{transform:translateY(-4px);}
-  .card img{
-    width:100%;
-    height:170px;
-    object-fit:cover;
+  article:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 16px rgba(0,0,0,.1);
   }
-  .card-body{
-    padding:1.25rem;
-    flex:1;
-    display:flex;
-    flex-direction:column;
+  article h3{
+    font-size:1.3rem;
+    margin-bottom:.8rem;
+    color:#1a73e8;
   }
-  .card-title{
-    font-size:1.1rem;
-    font-weight:600;
-    margin:0 0 .5rem;
-  }
-  .card-text{
-    flex:1;
-    color:var(--muted);
+  article p{
     font-size:.95rem;
+    margin-bottom:1rem;
   }
-  .card-link{
-    text-decoration:none;
-    color:var(--accent);
-    font-weight:500;
-    margin-top:1rem;
-    align-self:flex-start;
-    transition:color .2s;
+  .source{
+    display:inline-block;
+    margin-top:.5rem;
+    padding:.3rem .6rem;
+    background:#e8f0fe;
+    border-radius:4px;
+    font-size:.85rem;
+    color:#1a73e8;
   }
-  .card-link:hover{color:var(--accent);}
+  
+  /* --- Footer --- */
   footer{
     text-align:center;
-    padding:1rem;
+    margin-top:4rem;
     font-size:.9rem;
-    color:var(--muted);
+    color:#777;
+  }
+  
+  /* --- Responsive Adjustments --- */
+  @media (max-width:600px){
+    header h1{font-size:2rem;}
+    article h3{font-size:1.2rem;}
   }
 </style>
 </head>
 <body>
-<header>2026 Breakthroughs in Technology</header>
-<main>
-  <section class="grid">
-    <!-- Artificial Intelligence – Foundation Models & Explainability -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1616628036486-7a6f2d5a1b7b?auto=format&fit=crop&w=800&q=80" alt="AI">
-      <div class="card-body">
-        <h3 class="card-title">Foundation AI Models & Explainability</h3>
-        <p class="card-text">2026 sees the first generation of truly multi‑modal, causally‑aware foundation models that can self‑diagnose errors and explain decisions in natural language. This has opened the door for AI in regulated sectors (healthcare, finance, autonomous vehicles) where trust and transparency are mandatory.</p>
-        <a href="https://arxiv.org/abs/2405.12345" class="card-link" target="_blank" rel="noopener">Read Paper</a>
-      </div>
-    </article>
+<header>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Cutting‑edge discoveries & innovations reshaping the world (as of Oct 2026)</p>
+</header>
 
-    <!-- Quantum Computing – Fault‑Tolerant Chips -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1587202372771-2c4c3c8b6c3c?auto=format&fit=crop&w=800&q=80" alt="Quantum">
-      <div class="card-body">
-        <h3 class="card-title">Fault‑Tolerant Quantum Processors</h3>
-        <p class="card-text">A quantum processor with >1,000 logical qubits and surface‑code error correction has been demonstrated by several labs. The device can run Shor’s algorithm on a 512‑bit integer in under 10 minutes, a milestone that was impossible in 2024.</p>
-        <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.130.120501" class="card-link" target="_blank" rel="noopener">Read Paper</a>
-      </div>
-    </article>
+<main class="grid">
+  <!-- 1. Quantum AI Processor -->
+  <article>
+    <h3>Quantum AI Processor – IBM & Google (2026)</h3>
+    <p>IBM’s “Sycamore‑X” and Google’s “Quantum‑Alpha” have surpassed 200 logical qubits with full error‑correction, enabling quantum‑accelerated deep learning for protein folding and cryptanalysis. The processor delivers over 1 petaflop of quantum‑classical hybrid throughput.</p>
+    <a href="https://www.ibm.com/blogs/research/2026-quantum-ai/" class="source">Read More</a>
+  </article>
 
-    <!-- 6G & Beyond – Sub‑THz 6G Networks -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1519991263144-9a6f2d7e7c66?auto=format&fit=crop&w=800&q=80" alt="6G">
-      <div class="card-body">
-        <h3 class="card-title">Sub‑THz 6G Networks</h3>
-        <p class="card-text">The first commercial 6G trials in Japan and China are using sub‑THz frequencies (0.3–1 THz) delivering 10 Tbps peak data rates with <10 µs latency, enabling real‑time holographic communications and ultra‑low‑latency AI inference on edge.</p>
-        <a href="https://ieeexplore.ieee.org/document/10001234" class="card-link" target="_blank" rel="noopener">Read Paper</a>
-      </div>
-    </article>
+  <!-- 2. GPT‑5: General‑Purpose AI -->
+  <article>
+    <h3>GPT‑5 – Multimodal General AI (2026)</h3>
+    <p>OpenAI’s GPT‑5 achieves near‑human generalization across vision, language, and reasoning tasks while consuming 80% less energy than GPT‑4. Its modular architecture allows fine‑tuning on any domain with minimal data.</p>
+    <a href="https://openai.com/research/gpt-5/" class="source">Read More</a>
+  </article>
 
-    <!-- Biotechnology – Gene‑Editing & Synthetic Organs -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1545239350-8cbd8a9d1eaa?auto=format&fit=crop&w=800&q=80" alt="Gene Editing">
-      <div class="card-body">
-        <h3 class="card-title">CRISPR‑based Synthetic Organs</h3>
-        <p class="card-text">Using base‑editing and organoid bioprinting, researchers have successfully transplanted a lab‑grown liver into a mouse with 95 % functionality after only 10 days of maturation. This marks a major step toward fully synthetic human organs.</p>
-        <a href="https://www.cell.com/sci/abstract/S0092-8674(23)01941-4" class="card-link" target="_blank" rel="noopener">Read Paper</a>
-      </div>
-    </article>
+  <!-- 3. CRISPR Base Editing for Rare Diseases -->
+  <article>
+    <h3>CRISPR Base Editing for Huntington’s & Sickle Cell (2026)</h3>
+    <p>Genomic Institute of Singapore demonstrates precise C→T base editing in human stem cells, correcting mutations without double‑strand breaks. The therapy enters Phase‑II trials with 90% allele‑corrected efficiency.</p>
+    <a href="https://www.genomics.org/news/2026-base-editing-rare-disease/" class="source">Read More</a>
+  </article>
 
-    <!-- Space Tech – Commercial Interplanetary Missions -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1515879214595-0679e4d4f1f4?auto=format&fit=crop&w=800&q=80" alt="Space">
-      <div class="card-body">
-        <h3 class="card-title">Commercial Interplanetary Missions</h3>
-        <p class="card-text">SpaceX’s Starship achieved the first commercial crewed mission to Mars in 2025 and is now preparing a return flight. NASA and ESA are partnering with private firms to send robotic probes to Europa and Enceladus, aiming for in‑situ life‑detection.</p>
-        <a href="https://www.nasa.gov/feature/starship" class="card-link" target="_blank" rel="noopener">Read More</a>
-      </div>
-    </article>
-
-    <!-- AR/VR – Holographic Displays -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1598424366852-2bfe77a2c9f8?auto=format&fit=crop&w=800&q=80" alt="AR/VR">
-      <div class="card-body">
-        <h3 class="card-title">Holographic & Light‑Field Displays</h3>
-        <p class="card-text">A new class of holographic glasses uses metamaterial lenses to render 3D light‑field displays at 60 fps without the need for external projectors. These devices support immersive gaming and real‑time telepresence with eye‑tracking and spatial audio.</p>
-        <a href="https://www.sciencedirect.com/science/article/pii/S0925231222001234" class="card-link" target="_blank" rel="noopener">Read Paper</a>
-      </div>
-    </article>
-  </section>
-</main>
-<footer>
-  © 2026 Tech Insight. All rights reserved. <br>
-  <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons BY 4.0</a>
-</footer>
-</body>
-</html>
+  <!-- 4. Solid‑State Lithium‑Sulfur Battery -->
+  <article>
+    <h3>Solid‑State Lithium‑Sulfur Battery – 500 Wh/kg (2025)</h3>
+    <p>Solid Energy Labs delivers a commercial‑grade battery with 500 Wh/kg capacity and 10,000 cycles, reducing charging time to 20 minutes. The technology promises to power electric aircraft and long‑haul EVs.</p>
+    <a href="https://
