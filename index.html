@@ -2,142 +2,132 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology (2024)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   /* CSS Variables */
   :root {
-    --clr-primary: #1e3a8a;      /* deep blue */
-    --clr-secondary: #f59e0b;    /* amber accent */
-    --clr-bg: #f9fafb;
-    --clr-text: #111827;
-    --clr-muted: #6b7280;
-    --clr-card-bg: #fff;
-    --clr-card-shadow: rgba(0,0,0,0.1);
-    --radius: 0.5rem;
-    --transition: 0.3s ease;
+    --bg: #f8f9fa;
+    --primary: #2c3e50;
+    --accent: #e67e22;
+    --card-bg: #ffffff;
+    --shadow: rgba(0,0,0,0.1);
+    --font-base: 16px;
+    --max-width: 1200px;
   }
-
-  /* Global Styles */
-  * { box-sizing: border-box; margin:0; padding:0; }
+  * { box-sizing: border-box; }
   body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    background: var(--clr-bg);
-    color: var(--clr-text);
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--font-base);
+    background: var(--bg);
+    color: var(--primary);
     line-height: 1.6;
-    padding: 2rem 1rem;
   }
-  a {
-    color: var(--clr-primary);
-    text-decoration: none;
-    transition: color var(--transition);
-  }
-  a:hover { color: var(--clr-secondary); }
-
+  a { text-decoration:none; color:var(--accent); }
   header {
+    background: var(--primary);
+    color:#fff;
+    padding:1rem 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  header h1{margin:0;font-size:1.8rem;}
+  nav a{margin-left:1.5rem;color:#fff;}
+  main{max-width:var(--max-width);margin:auto;padding:2rem;}
+  .hero{
+    background:url('https://images.unsplash.com/photo-1526052727351-5f44a1a0e4a6?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    color:#fff;
     text-align:center;
-    margin-bottom:3rem;
+    padding:6rem 1rem;
+    border-radius:8px;
+    box-shadow:0 4px 12px var(--shadow);
   }
-  header h1 {
-    font-size:2.5rem;
-    margin-bottom:0.5rem;
-    color: var(--clr-primary);
-  }
-  header p { color:var(--clr-muted); }
-
-  /* Grid of cards */
-  .breakthroughs {
+  .hero h2{font-size:3rem;margin-bottom:0.5rem;}
+  .hero p{font-size:1.2rem;max-width:700px;margin:auto;}
+  section{margin-top:3rem;}
+  section h2{font-size:2rem;margin-bottom:1.5rem;}
+  .grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:1.5rem;
   }
-  .card {
-    background:var(--clr-card-bg);
-    border-radius:var(--radius);
-    box-shadow:0 4px 6px var(--clr-card-shadow);
-    overflow:hidden;
+  .card{
+    background:var(--card-bg);
+    border-radius:8px;
+    box-shadow:0 2px 6px var(--shadow);
+    padding:1.5rem;
+    transition:transform .2s ease,box-shadow .2s ease;
     display:flex;
     flex-direction:column;
-    transition:transform var(--transition),box-shadow var(--transition);
+    justify-content:space-between;
   }
-  .card:hover{transform:scale(1.02); box-shadow:0 8px 12px var(--clr-card-shadow);}
-  .card img{width:100%; height:160px; object-fit:cover;}
-  .card-content{padding:1rem; flex:1 1 auto;}
-  .card h3{font-size:1.25rem; margin-bottom:0.5rem; color:var(--clr-primary);}
-  .card p{font-size:0.95rem; margin-bottom:1rem; color:var(--clr-muted);}
-  .card .source {font-size:0.85rem; color:var(--clr-muted); margin-bottom:0.5rem;}
-  .card .read-more{margin-top:auto; font-weight:600; color:var(--clr-secondary);}
-  
-  /* Footer */
+  .card:hover{transform:translateY(-4px);box-shadow:0 4px 12px var(--shadow);}
+  .card h3{margin-top:0;color:var(--accent);}
+  .card p{margin:0.5rem 0 1rem;}
+  .card .icon{width:48px;height:48px;margin-bottom:1rem;}
   footer{
     text-align:center;
+    padding:1.5rem;
+    border-top:1px solid #e0e0e0;
     margin-top:4rem;
-    padding-top:1rem;
-    border-top:1px solid #e5e7eb;
-    color:var(--clr-muted);
-    font-size:0.9rem;
+    color:#777;
   }
-
-  /* Responsive text */
-  @media(max-width:480px){
-    header h1{font-size:2rem;}
+  @media (max-width:600px){
+    header{flex-direction:column;align-items:flex-start;}
+    nav{margin-top:0.5rem;}
+    .hero h2{font-size:2.2rem;}
   }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
-  <p>From quantum computing to brain‑machine interfaces, the cutting‑edge advances that are reshaping our world.</p>
+  <h1>Tech Horizon 2024</h1>
+  <nav>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#bio">Biotech</a>
+    <a href="#communications">Communications</a>
+    <a href="#energy">Energy</a>
+    <a href="#space">Space</a>
+    <a href="#robotics">Robotics</a>
+  </nav>
 </header>
 
 <main>
-  <section class="breakthroughs">
+  <section class="hero">
+    <h2>Latest Breakthroughs in Technology</h2>
+    <p>Discover the innovations that are shaping the future—from AI and quantum computing to space exploration and bio‑engineering.</p>
+  </section>
 
-    <!-- Breakthrough 1 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1555939594-58d3d6a4d0cf?auto=format&fit=crop&w=800&q=60" alt="Quantum chip">
-      <div class="card-content">
-        <h3>Quantum Supremacy on 1,000‑Qubit Processor</h3>
-        <p class="source">Source: <a href="https://www.nature.com/articles/d41586-024-02345-2" target="_blank">Nature</a></p>
-        <p>QuantumTech Labs announced the first 1,000‑qubit superconducting processor that performed a complex simulation in seconds—something infeasible for any classical supercomputer.</p>
-        <a class="read-more" href="https://www.nature.com/articles/d41586-024-02345-2" target="_blank">Read Article</a>
+  <!-- AI Section -->
+  <section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#e67e22" viewBox="0 0 24 24"><path d="M12 2L2 7v6c0 5.55 4.45 10 10 10s10-4.45 10-10V7L12 2zm0 12c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+        </div>
+        <h3>GPT‑4o & Multimodal Models</h3>
+        <p>OpenAI’s GPT‑4o delivers real‑time multimodal understanding, combining text, audio, and video for interactive AI assistants.</p>
       </div>
-    </article>
-
-    <!-- Breakthrough 2 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1528475937282-1c23e70f9d4a?auto=format&fit=crop&w=800&q=60" alt="AI model">
-      <div class="card-content">
-        <h3>GPT‑6: Multimodal, Energy‑Efficient AI</h3>
-        <p class="source">Source: <a href="https://www.mit.edu/news/2024/gpt6" target="_blank">MIT News</a></p>
-        <p>OpenAI’s GPT‑6 integrates vision, language, and audio in a single model that requires 70% less training energy than its predecessor.</p>
-        <a class="read-more" href="https://www.mit.edu/news/2024/gpt6" target="_blank">Read Article</a>
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#e67e22" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </div>
+        <h3>Sparse Attention & RLHF</h3>
+        <p>New training tricks like sparse transformers and reinforcement learning from human feedback reduce compute cost by over 70% while boosting performance.</p>
       </div>
-    </article>
+    </div>
+  </section>
 
-    <!-- Breakthrough 3 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1518472134616-7c6bff3d8a6e?auto=format&fit=crop&w=800&q=60" alt="CRISPR gene editing">
-      <div class="card-content">
-        <h3>CRISPR‑C: Targeted, Non‑viral Gene Therapy</h3>
-        <p class="source">Source: <a href="https://science.sciencemag.org/content/383/6593/1234" target="_blank">Science</a></p>
-        <p>A new CRISPR variant allows precise editing inside liver cells using a biodegradable nanoparticle, eliminating the need for viral vectors.</p>
-        <a class="read-more" href="https://science.sciencemag.org/content/383/6593/1234" target="_blank">Read Article</a>
-      </div>
-    </article>
-
-    <!-- Breakthrough 4 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1544477027-9d2e1b1e5b33?auto=format&fit=crop&w=800&q=60" alt="Brain‑computer interface">
-      <div class="card-content">
-        <h3>BCI‑NeuroLink: 10‑Mbps Neural Data Stream</h3>
-        <p class="source">Source: <a href="https://www.nature.com/articles/d41586-024-01987-1" target="_blank">Nature</a></p>
-        <p>NeuroLink’s new hardware captures and decodes 10,000 neural spikes per second, enabling real‑time prosthetic control with unprecedented precision.</p>
-        <a class="read-more" href="https://www.nature.com/articles/d41586-024-01987-1" target="_blank">Read Article</a>
-      </div>
-    </article>
-
-    <!-- Breakthrough 5 -->
-    <article class="card">
-      <img src="https://images.unsplash
+  <!-- Quantum Computing -->
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#e67e22" viewBox="0 0 24 24"><path d="M12 2L2 7v6c0 5.55 4.45 10 10 10s10-4.45 10-10V7L12 2zm0 12c
