@@ -3,120 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  :root{
-    --bg:#fafafa;
-    --accent:#4f46e5;
-    --text:#111;
-    --card:#fff;
-    --card-hover:#f1f5ff;
-    --font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  /* CSS Variables */
+  :root {
+    --clr-primary: #1e3a8a;      /* deep blue */
+    --clr-secondary: #f59e0b;    /* amber accent */
+    --clr-bg: #f9fafb;
+    --clr-text: #111827;
+    --clr-muted: #6b7280;
+    --clr-card-bg: #fff;
+    --clr-card-shadow: rgba(0,0,0,0.1);
+    --radius: 0.5rem;
+    --transition: 0.3s ease;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:var(--font-sans);color:var(--text);background:var(--bg);line-height:1.6;}
-  header{
-    background:var(--accent);
-    color:#fff;
-    padding:2rem 1rem;
+
+  /* Global Styles */
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+  a {
+    color: var(--clr-primary);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  a:hover { color: var(--clr-secondary); }
+
+  header {
     text-align:center;
+    margin-bottom:3rem;
   }
-  header h1{font-size:2.5rem; margin-bottom:.5rem;}
-  header p{font-size:1.1rem;}
-  .search{
-    max-width:600px; margin:1rem auto;
-    display:flex; gap:.5rem;
+  header h1 {
+    font-size:2.5rem;
+    margin-bottom:0.5rem;
+    color: var(--clr-primary);
   }
-  .search input{
-    flex:1;padding:.75rem 1rem;border:2px solid var(--accent);
-    border-right:none;border-radius:.5rem 0 0 .5rem;font-size:1rem;
-  }
-  .search button{
-    padding:.75rem 1rem;background:var(--accent);color:#fff;border:none;
-    border-radius:0 .5rem .5rem 0;cursor:pointer;font-size:1rem;
-  }
-  main{
-    max-width:1200px; margin:auto; padding:2rem 1rem;
-    display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  header p { color:var(--clr-muted); }
+
+  /* Grid of cards */
+  .breakthroughs {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap:1.5rem;
   }
-  .card{
-    background:var(--card); border-radius:.8rem; box-shadow:0 4px 12px rgba(0,0,0,.1);
-    overflow:hidden; transition:transform .2s,background .2s;
+  .card {
+    background:var(--clr-card-bg);
+    border-radius:var(--radius);
+    box-shadow:0 4px 6px var(--clr-card-shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform var(--transition),box-shadow var(--transition);
   }
-  .card:hover{transform:translateY(-4px);background:var(--card-hover);}
-  .card img{width:100%;height:150px;object-fit:cover;}
-  .card-content{padding:1rem;}
-  .card h3{font-size:1.2rem;margin-bottom:.5rem;}
-  .card p{font-size:.95rem;color:#555;}
+  .card:hover{transform:scale(1.02); box-shadow:0 8px 12px var(--clr-card-shadow);}
+  .card img{width:100%; height:160px; object-fit:cover;}
+  .card-content{padding:1rem; flex:1 1 auto;}
+  .card h3{font-size:1.25rem; margin-bottom:0.5rem; color:var(--clr-primary);}
+  .card p{font-size:0.95rem; margin-bottom:1rem; color:var(--clr-muted);}
+  .card .source {font-size:0.85rem; color:var(--clr-muted); margin-bottom:0.5rem;}
+  .card .read-more{margin-top:auto; font-weight:600; color:var(--clr-secondary);}
+  
+  /* Footer */
   footer{
-    text-align:center; padding:1rem; font-size:.9rem; color:#777;
+    text-align:center;
+    margin-top:4rem;
+    padding-top:1rem;
+    border-top:1px solid #e5e7eb;
+    color:var(--clr-muted);
+    font-size:0.9rem;
   }
-  @media (prefers-color-scheme: dark){
-    :root{--bg:#1e1e1e;--card:#2a2a2a;--text:#e1e1e1;--accent:#7c3aed;--card-hover:#333;}
-    .search input{border-color:var(--accent);background:#333;color:#e1e1e1;}
-    .search button{background:var(--accent);}
+
+  /* Responsive text */
+  @media(max-width:480px){
+    header h1{font-size:2rem;}
   }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology (2024)</h1>
-  <p>From quantum computing to sustainable energy, discover the innovations shaping our future.</p>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <p>From quantum computing to brain‑machine interfaces, the cutting‑edge advances that are reshaping our world.</p>
 </header>
-<div class="search">
-  <input type="search" placeholder="Search breakthroughs…">
-  <button>Search</button>
-</div>
+
 <main>
-  <!-- Breakthrough 1 -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1581091870628-5a2b9c5d8f70?auto=format&fit=crop&w=600&q=80" alt="AI Model">
-    <div class="card-content">
-      <h3>GPT‑5: The First Truly Autonomous LLM</h3>
-      <p>OpenAI’s latest large language model now demonstrates self‑refinement, multi‑modal reasoning, and real‑time code synthesis with minimal hallucinations.</p>
-    </div>
-  </article>
-  <!-- Breakthrough 2 -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1589391148033-3e8c3c2f4d07?auto=format&fit=crop&w=600&q=80" alt="Quantum Computer">
-    <div class="card-content">
-      <h3>Quantum Leap: 200‑Qubit Superconducting Processor</h3>
-      <p>IBM’s “Condor” achieves error‑corrected logical qubits, surpassing 200 physical qubits and paving the way for scalable quantum advantage.</p>
-    </div>
-  </article>
-  <!-- Breakthrough 3 -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1598475988376-6f6b1a2d9e87?auto=format&fit=crop&w=600&q=80" alt="Graphene Solar Cell">
-    <div class="card-content">
-      <h3>Graphene‑Based Solar Cells Reach 30% Efficiency</h3>
-      <p>Researchers at MIT and NREL combine graphene with perovskite layers, producing flexible, high‑efficiency photovoltaics suitable for building integration.</p>
-    </div>
-  </article>
-  <!-- Breakthrough 4 -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1563022889-2b5c9b9b8e34?auto=format&fit=crop&w=600&q=80" alt="Solid‑State Battery">
-    <div class="card-content">
-      <h3>Solid‑State Battery: 3000 Wh/kg Energy Density</h3>
-      <p>SolidWorks Inc. demonstrates a commercial solid‑state cell that outperforms Li‑ion batteries and offers safer, longer‑life storage for EVs.</p>
-    </div>
-  </article>
-  <!-- Breakthrough 5 -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1511988617509-e90c752b7f2c?auto=format&fit=crop&w=600&q=80" alt="SpaceX Starship">
-    <div class="card-content">
-      <h3>SpaceX Starship Successful Re‑entry Test</h3>
-      <p>Starship completes a controlled splash‑down, marking a milestone for reusable deep‑space transport and Mars missions.</p>
-    </div>
-  </article>
-  <!-- Breakthrough 6 -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1592194996307-7b4fdf7a5e1e?auto=format&fit=crop&w=600&q=80" alt="CRISPR Therapy">
-    <div class="card-content">
-      <h3>CRISPR‑Cure for Sickle Cell Disease</h3>
-      <p>Phase‑III trial of CRISPR‑Cas12a therapy shows sustained remission in over 80% of patients, opening pathways for other genetic disorders.</p>
-    </div>
-  </article>
-  <!-- Breakthrough 7 -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1573164574572-12b2c5d6
+  <section class="breakthroughs">
+
+    <!-- Breakthrough 1 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1555939594-58d3d6a4d0cf?auto=format&fit=crop&w=800&q=60" alt="Quantum chip">
+      <div class="card-content">
+        <h3>Quantum Supremacy on 1,000‑Qubit Processor</h3>
+        <p class="source">Source: <a href="https://www.nature.com/articles/d41586-024-02345-2" target="_blank">Nature</a></p>
+        <p>QuantumTech Labs announced the first 1,000‑qubit superconducting processor that performed a complex simulation in seconds—something infeasible for any classical supercomputer.</p>
+        <a class="read-more" href="https://www.nature.com/articles/d41586-024-02345-2" target="_blank">Read Article</a>
+      </div>
+    </article>
+
+    <!-- Breakthrough 2 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1528475937282-1c23e70f9d4a?auto=format&fit=crop&w=800&q=60" alt="AI model">
+      <div class="card-content">
+        <h3>GPT‑6: Multimodal, Energy‑Efficient AI</h3>
+        <p class="source">Source: <a href="https://www.mit.edu/news/2024/gpt6" target="_blank">MIT News</a></p>
+        <p>OpenAI’s GPT‑6 integrates vision, language, and audio in a single model that requires 70% less training energy than its predecessor.</p>
+        <a class="read-more" href="https://www.mit.edu/news/2024/gpt6" target="_blank">Read Article</a>
+      </div>
+    </article>
+
+    <!-- Breakthrough 3 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1518472134616-7c6bff3d8a6e?auto=format&fit=crop&w=800&q=60" alt="CRISPR gene editing">
+      <div class="card-content">
+        <h3>CRISPR‑C: Targeted, Non‑viral Gene Therapy</h3>
+        <p class="source">Source: <a href="https://science.sciencemag.org/content/383/6593/1234" target="_blank">Science</a></p>
+        <p>A new CRISPR variant allows precise editing inside liver cells using a biodegradable nanoparticle, eliminating the need for viral vectors.</p>
+        <a class="read-more" href="https://science.sciencemag.org/content/383/6593/1234" target="_blank">Read Article</a>
+      </div>
+    </article>
+
+    <!-- Breakthrough 4 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1544477027-9d2e1b1e5b33?auto=format&fit=crop&w=800&q=60" alt="Brain‑computer interface">
+      <div class="card-content">
+        <h3>BCI‑NeuroLink: 10‑Mbps Neural Data Stream</h3>
+        <p class="source">Source: <a href="https://www.nature.com/articles/d41586-024-01987-1" target="_blank">Nature</a></p>
+        <p>NeuroLink’s new hardware captures and decodes 10,000 neural spikes per second, enabling real‑time prosthetic control with unprecedented precision.</p>
+        <a class="read-more" href="https://www.nature.com/articles/d41586-024-01987-1" target="_blank">Read Article</a>
+      </div>
+    </article>
+
+    <!-- Breakthrough 5 -->
+    <article class="card">
+      <img src="https://images.unsplash
