@@ -2,167 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026 Edition</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Reset & Basics */
-  *, *::before, *::after{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Arial","Noto Sans",sans-serif;
-    line-height:1.6;
-    background:#f5f5fa;
-    color:#222;
-    min-height:100vh;
-    display:grid;
-    grid-template-rows:auto 1fr auto;
-    gap:1rem;
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600&display=swap');
+
+  body {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    background:#f5f7fa;
+    color:#333;
   }
-  a{text-decoration:none;color:inherit;}
-  h1,h2,h3{color:#111;}
-  /* Variables */
-  :root{
-    --primary:#4a90e2;
-    --accent:#e94e77;
-    --bg:#f5f5fa;
-    --card:#fff;
-    --shadow:rgba(0,0,0,.12);
-  }
-  /* Header */
-  header{
-    background:linear-gradient(135deg,var(--primary),#6aa8f0);
-    color:#fff;
-    padding:3rem 1rem;
+  header {
+    background:#1e1e2f;
+    color:white;
     text-align:center;
+    padding:4rem 1rem;
   }
-  header h1{font-size:2.5rem;margin-bottom:.5rem;}
-  header p{font-size:1.25rem;margin-bottom:1.5rem;}
-  header nav a{
-    margin:0 .5rem;
-    font-weight:600;
-    padding: .5rem 1rem;
-    border-radius: .3rem;
-    transition:.3s;
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:2.8rem;
+    margin:0 0 0.5rem;
   }
-  header nav a:hover{background:rgba(255,255,255,.2);}
-  /* Main Content */
-  main{
+  header p {
+    font-size:1.1rem;
+    opacity:0.85;
+  }
+  main {
     max-width:1200px;
-    margin:0 auto;
-    padding:1rem;
+    margin:2rem auto;
+    padding:0 1rem;
   }
-  section{
-    background:#fff;
-    border-radius:.5rem;
-    padding:2rem 1.5rem;
-    margin-bottom:2rem;
-    box-shadow:0 4px 8px var(--shadow);
+  .grid {
     display:grid;
-    grid-template-columns:1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap:1.5rem;
   }
-  section img{
+  .card {
+    background:white;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform:translateY(-4px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.1);
+  }
+  .card img {
     width:100%;
-    height:auto;
-    border-radius:.3rem;
+    height:160px;
+    object-fit:cover;
   }
-  section figcaption{
-    font-size:.9rem;
-    color:#666;
-    margin-top:.5rem;
-  }
-  section h2{
-    margin-bottom:.75rem;
-    font-size:1.75rem;
-    color:var(--primary);
-  }
-  .btn{
-    display:inline-block;
-    padding:.75rem 1.5rem;
-    background:var(--primary);
-    color:#fff;
-    border-radius:.4rem;
-    text-transform:uppercase;
-    font-weight:700;
-    transition:.3s;
-  }
-  .btn:hover{background:var(--accent);}
-  /* Responsive Grid for Images & Text */
-  @media(min-width:768px){
-    section{
-      grid-template-columns:1fr 1fr;
-      align-items:center;
-    }
-  }
-  /* Footer */
-  footer{
-    text-align:center;
+  .card-content {
     padding:1rem;
-    background:#eaeaf4;
+    flex:1;
+  }
+  .card-title {
+    font-size:1.25rem;
+    margin:0 0 0.4rem;
+    color:#1e1e2f;
+  }
+  .card-date {
+    font-size:0.9rem;
+    color:#777;
+    margin-bottom:0.8rem;
+  }
+  .card-description {
+    font-size:1rem;
+    line-height:1.4;
     color:#555;
-    font-size:.9rem;
+    margin-bottom:1rem;
+  }
+  .card a {
+    display:inline-block;
+    margin-top:auto;
+    color:#0066cc;
+    text-decoration:none;
+    font-weight:500;
+    transition:color 0.2s;
+  }
+  .card a:hover {color:#004999;}
+  footer {
+    text-align:center;
+    font-size:0.85rem;
+    color:#777;
+    padding:2rem 1rem;
+  }
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
   }
 </style>
 </head>
 <body>
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Innovations shaping the world in 2026</p>
-  <nav>
-    <a href="#ai">AI</a>
-    <a href="#quantum">Quantum</a>
-    <a href="#bio">Biotech</a>
-    <a href="#energy">Energy</a>
-    <a href="#space">Space</a>
-  </nav>
+  <p>From AI to Quantum, exploring the innovations shaping our future</p>
 </header>
-
 <main>
-  <!-- Artificial Intelligence -->
-  <section id="ai">
-    <h2>Artificial Intelligence</h2>
-    <figure>
-      <img src="https://source.unsplash.com/600x400/?AI,brain" alt="AI Network">
-      <figcaption>AI Model Visualizing Deep Neural Networks</figcaption>
-    </figure>
-    <p>
-      In 2026, <strong>Transformer-based multimodal models</strong> have achieved near-human performance across vision, language, and audio tasks, enabling real-time, context-aware translation and predictive diagnostics. Researchers have also introduced <em>privacy-preserving federated learning</em> protocols that allow hospitals to train shared models without exposing patient data, dramatically accelerating medical AI adoption.
-    </p>
-    <a href="https://arxiv.org/abs/2407.00123" class="btn">Read Paper</a>
-  </section>
-
-  <!-- Quantum Computing -->
-  <section id="quantum">
-    <h2>Quantum Computing</h2>
-    <figure>
-      <img src="https://source.unsplash.com/600x400/?quantum,chip" alt="Quantum Chip">
-      <figcaption>Superconducting Quantum Processor (QUBO)</figcaption>
-    </figure>
-    <p>
-      The first commercial <strong>1000-qubit</strong> superconducting system, unveiled by QuantumLeap Labs, now offers error rates below 0.01%, making fault-tolerant quantum advantage a reality for optimization and drug discovery. Simultaneously, topological qubit prototypes have demonstrated >10⁶ coherence times, paving the way for scalable quantum networks.
-    </p>
-    <a href="https://quantumjournal.org/2026/07" class="btn">Explore More</a>
-  </section>
-
-  <!-- Biotechnology -->
-  <section id="bio">
-    <h2>Biotechnology</h2>
-    <figure>
-      <img src="https://source.unsplash.com/600x400/?CRISPR,lab" alt="CRISPR Lab">
-      <figcaption>CRISPR-Cas12b Gene Editing Platform</figcaption>
-    </figure>
-    <p>
-      CRISPR-Cas12b has been engineered to target single nucleotide variants with unprecedented specificity, offering therapeutic potential for rare genetic disorders. Meanwhile, <strong>mRNA-based vaccines</strong> are now being used to treat metabolic diseases, with the first FDA‑approved therapy for hereditary transthyretin amyloidosis receiving approval in 2025.
-    </p>
-    <a href="https://genetics.org/2026/05" class="btn">Read Study</a>
-  </section>
-
-  <!-- Energy & Sustainability -->
-  <section id="energy">
-    <h2>Energy & Sustainability</h2>
-    <figure>
-      <img src="https://source.unsplash.com/600x400/?solar,wind" alt="Renewable Energy">
-      <figcaption>Hybrid Solar-Wind Farm</figcaption>
-    </figure>
-    <p>
-      New <strong>perovskite-silicon tandem solar cells</strong
+  <div class="grid">
+    <!-- GPT-5 -->
+    <article class="card">
+      <img src="https://source.unsplash.com/400x300/?artificial-intelligence" alt="GPT-5">
+      <div class="card-content">
+        <h2 class="card-title">GPT‑5: Next‑Gen Conversational AI</h2>
+        <div class="card-date">March 2025</div>
+        <p class="card-description">
+          OpenAI’s GPT‑5 surpasses its predecessor with multimodal understanding, zero‑shot reasoning, and a 10× reduction in energy consumption per inference.
+        </p>
+        <a href="https://openai.com/blog/gpt-5" target="_blank">Read More</a>
+      </div>
+    </article>
+    <!-- Quantum Supremacy -->
+    <article class="card">
+      <img src="https://source.unsplash.com/400x300/?quantum-computer" alt="Quantum Supremacy">
+      <div class="card-content">
+        <h2 class="card-title">Quantum Supremacy Achieved by X‑Quantum</h2>
+        <div class="card-date">January 2025</div>
+        <p class="card-description">
+          A 127‑qubit processor solves a classically infeasible problem in minutes, validating quantum advantage for the first time in a practical application.
+        </p>
+        <a href="https://xquantum.com/supremacy" target="_blank">Read More</a>
+      </div>
+    </article>
+    <!-- Graphene Transistor -->
+    <article class="card">
+      <img src="https://source.unsplash.com/400x300/?graphene" alt="Graphene Transistor">
+      <div class="card-content">
+        <h2 class="card-title">Graphene‑Based Transistor Breaks 1 Tbps Speed</h2>
+        <div class="card-date">November 2024</div>
+        <p class="card-description">
+          Researchers from MIT develop a graphene transistor that operates at 1 Tbps, promising ultra‑fast, low‑power electronics for AI accelerators.
+        </p>
+        <a href="https://mit.edu/graphene-transistor" target="_blank">Read More</a>
+      </div>
+    </article>
+    <!-- CRISPR Base Editors -->
+    <article class="card">
+      <img src="https://source.unsplash.com/400x300/?crispr" alt="CRISPR Base Editors">
+      <div class="card-content">
+        <h2 class="card-title">Base‑Editing CRISPR Fixes 3000 Gene Variants</h2>
+        <div class="card-date">June 2024</div>
+        <p class="card-description">
+          A new CRISPR system edits single nucleotides without double‑strand breaks, enabling precise correction of thousands of disease‑causing mutations.
+        </p>
+        <a href="https://genome.gov/base-editor" target="_blank">Read More</a>
+      </div>
+    </article>
+    <!-- 6G Development -->
+    <article class="card">
+      <img src="https://source.unsplash.com/400x300/?6g" alt="6G Development">
+      <div class="card-content">
+        <h2 class="card-title">6G Prototypes Deliver 1 Tbps Latency</h2>
+        <div class="card-date">April 2025</div>
+        <p class="card-description">
+          Early 6G networks achieve 1 Tbps throughput with <10 ms latency, opening doors for holographic AR, real‑time VR, and autonomous drone swarms.
+        </p>
+        <a href="https://6g.org/2025" target="_blank">Read More</a>
+      </div>
+    </article>
+  </div>
+</main>
+<footer>
+  <p
