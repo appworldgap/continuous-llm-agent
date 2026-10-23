@@ -2,106 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – 2024</title>
 <style>
   :root {
-    --bg: #fafafa;
-    --accent: #0066cc;
-    --text: #333;
-    --muted: #777;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.1);
+    --bg: #111;
+    --accent: #ff6b6b;
+    --accent-light: #ff9e9e;
+    --text: #eee;
+    --card-bg: #1e1e1e;
+    --card-hover: #2b2b2b;
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
-
   body {
-    margin:0; font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    font-family: var(--font-family);
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    display:flex; flex-direction:column; min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
-
-  header {
-    background: var(--accent);
-    color:#fff;
-    padding: 2rem 1rem;
-    text-align:center;
+  header, footer {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
   }
   header h1 {
-    margin:0; font-size:2.5rem;
+    margin: 0;
+    font-size: 2rem;
   }
-  header p {margin-top:0.5rem;}
-
   main {
-    flex:1; max-width:1200px; margin:2rem auto; padding:0 1rem;
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem;
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 960px;
+    margin: auto;
   }
-  article {
-    background:var(--card-bg);
-    padding:1.5rem;
-    border-radius:8px;
-    box-shadow:0 4px 10px var(--card-shadow);
-    display:flex; flex-direction:column;
+  .section {
+    margin-bottom: 3rem;
   }
-  article h2 {
-    margin-top:0; color:var(--accent);
+  .section h2 {
+    font-size: 1.5rem;
+    border-left: 5px solid var(--accent);
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
   }
-  article p {flex:1;}
-
-  footer {
-    background:#222; color:#bbb;
-    text-align:center; padding:1rem;
-    font-size:0.9rem;
+  .card {
+    background: var(--card-bg);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
   }
-  a {color:var(--accent); text-decoration:none;}
-  a:hover {text-decoration:underline;}
-  @media (prefers-color-scheme: dark) {
-    :root {--bg:#1e1e1e; --card-bg:#2e2e2e; --text:#f0f0f0; --muted:#aaa;}
-    body, footer {color:var(--text);}
+  .card:hover {
+    background: var(--card-hover);
+    transform: translateY(-3px);
+  }
+  .card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent);
+  }
+  .card p {
+    margin: 0;
+  }
+  @media (min-width: 600px) {
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
   }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>Explore the most transformative innovations reshaping our world.</p>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
 </header>
 
 <main>
-  <article>
-    <h2>Artificial Intelligence – GPT‑5 & Beyond</h2>
-    <p>OpenAI’s GPT‑5 introduces a multimodal architecture that integrates text, vision, and real‑time sensor data, enabling truly context‑aware assistants. The model’s parameter count exceeded 2 trillion, delivering unprecedented reasoning speed and zero‑shot generalization.</p>
-  </article>
 
-  <article>
-    <h2>Quantum Computing – Fault‑Tolerant Chips</h2>
-    <p>IBM and Google announced the first commercially viable 1 M‑qubit processor with logical error rates below 1 %. Coupled with new surface‑code error correction, these devices promise scalable quantum advantage for cryptography, simulation, and optimization.</p>
-  </article>
+  <section class="section">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>GPT‑4.5 and Beyond</h3>
+        <p>OpenAI’s latest language models now incorporate real‑time memory, multimodal inputs, and fine‑tuned alignment protocols, enabling safer, more context‑aware interactions.</p>
+      </div>
+      <div class="card">
+        <h3>Neuromorphic Chips</h3>
+        <p>Spiking‑neuron based processors from companies like Intel and BrainChip deliver 10‑fold reductions in power consumption for edge AI tasks.</p>
+      </div>
+      <div class="card">
+        <h3>Generative AI for Drug Discovery</h3>
+        <p>Generative models now predict novel molecular structures with 95% accuracy, cutting drug‑design cycles from years to weeks.</p>
+      </div>
+    </div>
+  </section>
 
-  <article>
-    <h2>Biotechnology – CRISPR‑Prime Editing</h2>
-    <p>Prime editing systems now allow precise base changes without double‑strand breaks, reducing off‑target effects to <0.1 %. Clinical trials for sickle cell disease and muscular dystrophy have entered phase III, moving us closer to gene‑level cures.</p>
-  </article>
+  <section class="section">
+    <h2>Quantum Technology</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Fault‑Tolerant Quantum Processors</h3>
+        <p>IBM and Google have announced 1,000‑qubit chips with error‑correction layers that surpass the quantum supremacy threshold for practical applications.</p>
+      </div>
+      <div class="card">
+        <h3>Quantum Internet</h2>
+        <p>Experimental quantum key distribution networks across the US and Europe demonstrate secure, low‑latency communication over thousands of kilometers.</p>
+      </div>
+      <div class="card">
+        <h3>Quantum Sensors</h3>
+        <p>Portable magnetometers and accelerometers now achieve picotesla sensitivity, revolutionizing navigation and geological surveying.</p>
+      </div>
+    </div>
+  </section>
 
-  <article>
-    <h2>Energy – Fusion Breakthrough</h2>
-    <p>ITER’s latest run achieved a 300 MJ energy output with net‑positive gain, the first sustained fusion pulse. Commercial power plants based on this technology are expected to enter service by 2035.</p>
-  </article>
+  <section class="section">
+    <h2>Biotechnology & Genetics</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>CRISPR‑Base Editing</h3>
+        <p>Base editors with 99.9% precision reduce off‑target effects, accelerating gene‑therapy trials for inherited diseases.</p>
+      </div>
+      <div class="card">
+        <h3>3‑D Bioprinting of Organs</h3>
+        <p>Multi‑material bioprinters now produce functional kidney and liver tissues with vascular networks, a step toward transplantable organs.</p>
+      </div>
+      <div class="card">
+        <h3>Artificial Cell Membranes</h3>
+        <p>Programmable lipid bilayers enable synthetic cells that can communicate via electrical signals, opening new avenues for biosensing.</p>
+      </div>
+    </div>
+  </section>
 
-  <article>
-    <h2>Communication – 6G & Terahertz Band</h2>
-    <p>Global carriers deployed 6G networks with 1 Tbps peak data rates using terahertz frequencies. Latency dropped below 10 µs, enabling ultra‑realistic AR/VR and real‑time AI inference at the edge.</p>
-  </article>
+  <section class="section">
+    <h2>Energy & Sustainability</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Solid‑State Batteries</h3>
+        <p>Commercial prototypes now offer 500 Wh/kg energy density and 1,000 charge cycles, promising safer electric vehicles.</p>
+      </div>
+      <div class="card">
+        <h3>Perovskite Solar Cells</h3>
+        <p>Manufacturers achieve >25% efficiency with cost‑effective roll‑to‑roll production, rivaling crystalline silicon.</p>
+      </div>
+      <div class="card">
+        <h3>Green Hydrogen Infrastructure</h3>
+        <p>Large‑scale electrolyzers powered by offshore wind deliver 50 MW green hydrogen plants, scaling up decarbonization of heavy industry.</p>
+      </div>
+    </div>
+  </section>
 
-  <article>
-    <h2>Neuromorphic Computing – Brain‑Inspired Chips</h2>
-    <p>Intel’s Loihi 3 integrates 1 billion spiking neurons with 200 Tbps/s network bandwidth, achieving 10× efficiency over conventional GPUs for deep‑learning inference tasks.</p>
-  </article>
-</main>
-
-<footer>
-  <p>© 2026 TechInsight. All rights reserved.</p>
-</footer>
-</body>
-</html>
+  <section class="section">
+    <h2>Space & Exploration</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Mars Sample Return</h3>
+        <p>NASA’s Perseverance rover successfully extracts Martian regolith
