@@ -2,169 +2,147 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology – 2025</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --bg: #111;
-    --accent: #ff6b6b;
-    --accent-light: #ff9e9e;
-    --text: #eee;
-    --card-bg: #1e1e1e;
-    --card-hover: #2b2b2b;
-    --font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+/* CSS Variables */
+:root{
+  --bg:#121212;
+  --text:#e0e0e0;
+  --card-bg:#1e1e1e;
+  --accent:#1e88e5;
+  --accent-light:#42a5f5;
+  --font-family:'Segoe UI','Roboto',Helvetica,Arial,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-family);
+  line-height:1.6;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+header{
+  background:linear-gradient(135deg,#2c3e50,#4ca1af);
+  padding:2rem 1rem;
+  text-align:center;
+  color:var(--text);
+}
+header h1{
+  font-size:2.5rem;
+  margin-bottom:0.5rem;
+}
+header p{
+  font-size:1.2rem;
+  opacity:0.8;
+}
+main{
+  flex:1;
+  padding:2rem 1rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:var(--card-bg);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  transition:transform 0.2s ease,box-shadow 0.2s ease;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 8px 16px rgba(0,0,0,0.4);
+}
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+.card-content{
+  padding:1rem;
+}
+.card h3{
+  font-size:1.3rem;
+  margin-bottom:0.5rem;
+  color:var(--accent);
+}
+.card p{
+  font-size:0.95rem;
+  margin-bottom:0.8rem;
+  line-height:1.4;
+}
+.card a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.card a:hover{
+  text-decoration:underline;
+}
+footer{
+  text-align:center;
+  padding:1rem;
+  font-size:0.9rem;
+  opacity:0.6;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f5f5f5;
+    --text:#212121;
+    --card-bg:#ffffff;
   }
-  body {
-    margin: 0;
-    font-family: var(--font-family);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  header, footer {
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 1rem;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  main {
-    flex: 1;
-    padding: 2rem 1rem;
-    max-width: 960px;
-    margin: auto;
-  }
-  .section {
-    margin-bottom: 3rem;
-  }
-  .section h2 {
-    font-size: 1.5rem;
-    border-left: 5px solid var(--accent);
-    padding-left: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  .card {
-    background: var(--card-bg);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.3s;
-    display: flex;
-    flex-direction: column;
-  }
-  .card:hover {
-    background: var(--card-hover);
-    transform: translateY(-3px);
-  }
-  .card h3 {
-    margin: 0 0 0.5rem 0;
-    color: var(--accent);
-  }
-  .card p {
-    margin: 0;
-  }
-  @media (min-width: 600px) {
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-  }
-  footer p {
-    margin: 0;
-    font-size: 0.9rem;
-  }
+}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>2025 – The Future is Now</p>
 </header>
 
 <main>
+  <div class="grid">
+    <!-- Card 1: GPT‑5 & Next‑Gen LLMs -->
+    <article class="card">
+      <img src="https://via.placeholder.com/600x400?text=GPT‑5" alt="GPT‑5 AI model">
+      <div class="card-content">
+        <h3>GPT‑5 – Human‑Level Multimodal Intelligence</h3>
+        <p>
+          OpenAI’s GPT‑5 pushes the boundaries of language models with
+          100 billion parameters, true few‑shot programming, and real‑time
+          multimodal reasoning. Integrated with Edge AI chips, it enables
+          on‑device inference for smartphones and IoT devices.
+        </p>
+        <a href="#">Read more</a>
+      </div>
+    </article>
 
-  <section class="section">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <div class="cards-grid">
-      <div class="card">
-        <h3>GPT‑4.5 and Beyond</h3>
-        <p>OpenAI’s latest language models now incorporate real‑time memory, multimodal inputs, and fine‑tuned alignment protocols, enabling safer, more context‑aware interactions.</p>
+    <!-- Card 2: 1,000‑Qubit Quantum Processor -->
+    <article class="card">
+      <img src="https://via.placeholder.com/600x400?text=Quantum+Processor" alt="Quantum computer">
+      <div class="card-content">
+        <h3>1,000‑Qubit Quantum Processor</h3>
+        <p>
+          Google and collaborating partners announced a 1,000‑qubit
+          superconducting processor with logical qubit error rates below
+          0.5 %. This milestone brings practical quantum advantage within
+          reach for materials science and cryptographic analysis.
+        </p>
+        <a href="#">Read more</a>
       </div>
-      <div class="card">
-        <h3>Neuromorphic Chips</h3>
-        <p>Spiking‑neuron based processors from companies like Intel and BrainChip deliver 10‑fold reductions in power consumption for edge AI tasks.</p>
-      </div>
-      <div class="card">
-        <h3>Generative AI for Drug Discovery</h3>
-        <p>Generative models now predict novel molecular structures with 95% accuracy, cutting drug‑design cycles from years to weeks.</p>
-      </div>
-    </div>
-  </section>
+    </article>
 
-  <section class="section">
-    <h2>Quantum Technology</h2>
-    <div class="cards-grid">
-      <div class="card">
-        <h3>Fault‑Tolerant Quantum Processors</h3>
-        <p>IBM and Google have announced 1,000‑qubit chips with error‑correction layers that surpass the quantum supremacy threshold for practical applications.</p>
-      </div>
-      <div class="card">
-        <h3>Quantum Internet</h2>
-        <p>Experimental quantum key distribution networks across the US and Europe demonstrate secure, low‑latency communication over thousands of kilometers.</p>
-      </div>
-      <div class="card">
-        <h3>Quantum Sensors</h3>
-        <p>Portable magnetometers and accelerometers now achieve picotesla sensitivity, revolutionizing navigation and geological surveying.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Biotechnology & Genetics</h2>
-    <div class="cards-grid">
-      <div class="card">
-        <h3>CRISPR‑Base Editing</h3>
-        <p>Base editors with 99.9% precision reduce off‑target effects, accelerating gene‑therapy trials for inherited diseases.</p>
-      </div>
-      <div class="card">
-        <h3>3‑D Bioprinting of Organs</h3>
-        <p>Multi‑material bioprinters now produce functional kidney and liver tissues with vascular networks, a step toward transplantable organs.</p>
-      </div>
-      <div class="card">
-        <h3>Artificial Cell Membranes</h3>
-        <p>Programmable lipid bilayers enable synthetic cells that can communicate via electrical signals, opening new avenues for biosensing.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Energy & Sustainability</h2>
-    <div class="cards-grid">
-      <div class="card">
-        <h3>Solid‑State Batteries</h3>
-        <p>Commercial prototypes now offer 500 Wh/kg energy density and 1,000 charge cycles, promising safer electric vehicles.</p>
-      </div>
-      <div class="card">
-        <h3>Perovskite Solar Cells</h3>
-        <p>Manufacturers achieve >25% efficiency with cost‑effective roll‑to‑roll production, rivaling crystalline silicon.</p>
-      </div>
-      <div class="card">
-        <h3>Green Hydrogen Infrastructure</h3>
-        <p>Large‑scale electrolyzers powered by offshore wind deliver 50 MW green hydrogen plants, scaling up decarbonization of heavy industry.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Space & Exploration</h2>
-    <div class="cards-grid">
-      <div class="card">
-        <h3>Mars Sample Return</h3>
-        <p>NASA’s Perseverance rover successfully extracts Martian regolith
+    <!--
