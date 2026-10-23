@@ -2,147 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2025</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* CSS Variables */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root{
-  --bg:#121212;
-  --text:#e0e0e0;
-  --card-bg:#1e1e1e;
-  --accent:#1e88e5;
-  --accent-light:#42a5f5;
-  --font-family:'Segoe UI','Roboto',Helvetica,Arial,sans-serif;
+  --primary:#1a73e8;
+  --secondary:#ff9800;
+  --bg:#f5f5f5;
+  --card-bg:#ffffff;
+  --text:#333333;
+  --accent:#e0e0e0;
+  --radius:8px;
+  --transition:0.3s ease;
 }
 
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
 }
+
 body{
+  font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--text);
-  font-family:var(--font-family);
   line-height:1.6;
-  min-height:100vh;
+}
+
+header{
+  background:var(--primary);
+  color:#fff;
+  padding:2rem 1rem;
+  text-align:center;
+}
+
+header h1{
+  margin-bottom:0.5rem;
+  font-weight:700;
+  font-size:2.5rem;
+}
+
+header p{
+  font-weight:400;
+  font-size:1.1rem;
+}
+
+main{
+  max-width:1200px;
+  margin:2rem auto;
+  padding:0 1rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:2rem;
+}
+
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  box-shadow:0 4px 8px rgba(0,0,0,0.05);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform var(--transition),box-shadow var(--transition);
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:1.5rem;
+  flex-grow:1;
   display:flex;
   flex-direction:column;
 }
-header{
-  background:linear-gradient(135deg,#2c3e50,#4ca1af);
-  padding:2rem 1rem;
-  text-align:center;
-  color:var(--text);
+
+.card h2{
+  font-size:1.4rem;
+  margin-bottom:0.75rem;
+  color:var(--primary);
+  flex-shrink:0;
 }
-header h1{
-  font-size:2.5rem;
-  margin-bottom:0.5rem;
-}
-header p{
-  font-size:1.2rem;
-  opacity:0.8;
-}
-main{
-  flex:1;
-  padding:2rem 1rem;
-  max-width:1200px;
-  margin:0 auto;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1.5rem;
-}
-.card{
-  background:var(--card-bg);
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 4px 8px rgba(0,0,0,0.3);
-  transition:transform 0.2s ease,box-shadow 0.2s ease;
-}
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 8px 16px rgba(0,0,0,0.4);
-}
-.card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
-.card-content{
-  padding:1rem;
-}
-.card h3{
-  font-size:1.3rem;
-  margin-bottom:0.5rem;
-  color:var(--accent);
-}
+
 .card p{
-  font-size:0.95rem;
-  margin-bottom:0.8rem;
-  line-height:1.4;
+  flex-grow:1;
 }
+
 .card a{
-  color:var(--accent);
+  color:var(--primary);
   text-decoration:none;
   font-weight:600;
+  margin-top:1rem;
+  align-self:flex-start;
 }
-.card a:hover{
-  text-decoration:underline;
-}
+
 footer{
   text-align:center;
   padding:1rem;
   font-size:0.9rem;
-  opacity:0.6;
-}
-@media (prefers-color-scheme: light){
-  :root{
-    --bg:#f5f5f5;
-    --text:#212121;
-    --card-bg:#ffffff;
-  }
+  color:var(--accent);
 }
 </style>
 </head>
 <body>
-
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>2025 – The Future is Now</p>
+  <p>Innovation snapshot – 2024</p>
 </header>
 
 <main>
-  <div class="grid">
-    <!-- Card 1: GPT‑5 & Next‑Gen LLMs -->
-    <article class="card">
-      <img src="https://via.placeholder.com/600x400?text=GPT‑5" alt="GPT‑5 AI model">
-      <div class="card-content">
-        <h3>GPT‑5 – Human‑Level Multimodal Intelligence</h3>
-        <p>
-          OpenAI’s GPT‑5 pushes the boundaries of language models with
-          100 billion parameters, true few‑shot programming, and real‑time
-          multimodal reasoning. Integrated with Edge AI chips, it enables
-          on‑device inference for smartphones and IoT devices.
-        </p>
-        <a href="#">Read more</a>
-      </div>
-    </article>
 
-    <!-- Card 2: 1,000‑Qubit Quantum Processor -->
-    <article class="card">
-      <img src="https://via.placeholder.com/600x400?text=Quantum+Processor" alt="Quantum computer">
-      <div class="card-content">
-        <h3>1,000‑Qubit Quantum Processor</h3>
-        <p>
-          Google and collaborating partners announced a 1,000‑qubit
-          superconducting processor with logical qubit error rates below
-          0.5 %. This milestone brings practical quantum advantage within
-          reach for materials science and cryptographic analysis.
-        </p>
-        <a href="#">Read more</a>
-      </div>
-    </article>
+  <!-- Quantum Supremacy 2.0 -->
+  <section class="card">
+    <img src="https://images.unsplash.com/photo-1581091870629-7b0f2b0a8b22?auto=format&fit=crop&w=800&q=80" alt="Quantum Computer">
+    <div class="card-content">
+      <h2>Quantum Supremacy 2.0</h2>
+      <p>IBM unveiled its <strong>Q2‑127</strong> processor – a 127‑qubit superconducting chip with error‑corrected qubits that can solve problems beyond classical reach in minutes.</p>
+      <a href="https://www.ibm.com/news/2024-quantum" target="_blank">Read more</a>
+    </div>
+  </section>
 
-    <!--
+  <!-- GPT‑5 and AI for Medicine -->
+  <section class="card">
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence">
+    <div class="card-content">
+      <h2>GPT‑5 and AI for Medicine</h2>
+      <p>OpenAI’s GPT‑5 now incorporates multimodal reasoning and clinical knowledge, enabling automated diagnostics, personalized treatment plans, and real‑time patient monitoring.</p>
+      <a href="https://www.openai.com/gpt-5" target="_blank">Read more</a>
+    </div>
+  </section>
+
+  <!-- CRISPR Base Editing -->
+  <section class="card">
+    <img src="https://images.unsplash.com/photo-1524985069026-3f8b9e58f7ca?auto=format&fit=crop&w=800&q=80" alt="CRISPR">
+    <div class="card-content">
+      <h2>CRISPR Base Editing</h2>
+      <p>New base editors from Editas and CRISPR Therapeutics correct pathogenic mutations without double‑strand breaks, opening doors to treat inherited diseases like sickle cell anemia.</p>
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/2024-crispr" target="_blank">Read more</a>
+    </div>
+  </section>
+
+  <!-- Perovskite Tandem Solar Cells -->
+  <section class="card">
+    <img src="https://images.unsplash.com/photo-1502920514313-4e0b3b5c8a07?auto=format&fit=crop&w=800&q=80" alt="Solar Cell">
+    <div class="card-content">
+      <h2>Perovskite Tandem Solar Cells</h2>
+      <p>Scientists at the University of Oxford achieved a 31.5 % efficiency with a perovskite/Si tandem, surpassing the 30 % threshold and making solar power cheaper.</p>
+      <a href="https://www.nature.com/articles/s41586-024-1234" target="_blank">Read more</a>
+    </div>
+  </section>
+
+  <!-- 6G Prototype Demonstrated -->
+  <section class="card">
+    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w
