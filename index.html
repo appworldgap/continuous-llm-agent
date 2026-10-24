@@ -2,123 +2,156 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Global resets */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f7fa;
-    color: #333;
-    line-height: 1.6;
-    padding: 2rem;
-  }
-  h1, h2 { margin-bottom: 1rem; }
-  h1 { font-size: 2.5rem; color: #2c3e50; }
-  h2 { font-size: 1.8rem; color: #34495e; }
-  .intro { margin-bottom: 2rem; }
-  .breakthroughs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  }
-  .card h3 {
-    margin-bottom: 0.75rem;
-    color: #1abc9c;
-    font-size: 1.2rem;
-  }
-  .card p {
-    flex-grow: 1;
-    font-size: 0.95rem;
-  }
-  .footer {
-    margin-top: 4rem;
-    text-align: center;
-    color: #777;
-    font-size: 0.9rem;
-  }
-  /* Responsive typography */
-  @media (max-width: 600px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-  }
+    :root{
+        --clr-primary:#4a90e2;
+        --clr-bg:#f9fafb;
+        --clr-bg-dark:#2b2b2b;
+        --clr-text:#333;
+        --clr-text-light:#fff;
+        --clr-accent:#ff4d4d;
+        --radius:8px;
+        --shadow:0 4px 12px rgba(0,0,0,.1);
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+        font-family:'Inter',sans-serif;
+        background:#fff;
+        color:var(--clr-text);
+        line-height:1.6;
+        min-height:100vh;
+    }
+    header{
+        background:linear-gradient(135deg,var(--clr-primary),#6fb2e5);
+        color:var(--clr-text-light);
+        padding:3rem 1rem;
+        text-align:center;
+    }
+    header h1{
+        font-size:2.8rem;
+        font-weight:700;
+        margin-bottom:.5rem;
+    }
+    header p{
+        font-size:1.2rem;
+    }
+    nav{
+        background:#fff;
+        border-bottom:1px solid #e0e0e0;
+        position:sticky;top:0;z-index:999;
+    }
+    nav ul{
+        list-style:none;display:flex;justify-content:center;gap:1.5rem;
+        padding:1rem 0;
+    }
+    nav a{
+        text-decoration:none;
+        color:var(--clr-text);
+        font-weight:600;
+        transition:color .3s;
+    }
+    nav a:hover{color:var(--clr-primary);}
+    main{
+        max-width:1200px;margin:auto;padding:2rem 1rem;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:1.5rem;
+    }
+    .card{
+        background:#fff;
+        border-radius:var(--radius);
+        box-shadow:var(--shadow);
+        overflow:hidden;
+        transition:transform .3s,box-shadow .3s;
+    }
+    .card:hover{
+        transform:translateY(-4px);
+        box-shadow:0 8px 20px rgba(0,0,0,.15);
+    }
+    .card-header{
+        padding:1.5rem 1.5rem 1rem;
+        font-size:1.4rem;
+        font-weight:600;
+        color:var(--clr-primary);
+        border-bottom:1px solid #e0e0e0;
+    }
+    .card-body{
+        padding:1.5rem;
+        font-size:1rem;
+        color:#555;
+    }
+    .card-body p{margin-bottom:1rem;}
+    .footer{
+        background:#f1f1f1;
+        text-align:center;
+        padding:2rem 1rem;
+        margin-top:2rem;
+        font-size:.9rem;
+        color:#777;
+    }
+    @media(max-width:600px){
+        header h1{font-size:2rem;}
+        header p{font-size:1rem;}
+        nav ul{flex-direction:column;}
+        nav a{margin-top:.5rem;}
+    }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Latest Breakthroughs in Technology (2026)</h1>
-  <p class="intro">From AI that understands context like a human to quantum processors that run real-world algorithms, the tech landscape is evolving faster than ever. Below are the most impactful innovations of the past year.</p>
+    <h1>Latest Breakthroughs in Technology</h1>
+    <p>From AI to quantum computing, the frontier of innovation keeps moving forward.</p>
 </header>
 
-<section class="breakthroughs">
-  <!-- AI & Machine Learning -->
-  <article class="card">
-    <h3>🧠 GPT‑5.5 & Multimodal Models</h3>
-    <p>OpenAI’s GPT‑5.5 pushes conversational AI beyond text, seamlessly integrating vision, audio, and sensor data. It powers real-time language understanding for autonomous vehicles and healthcare diagnostics.</p>
-  </article>
+<nav>
+    <ul>
+        <li><a href="#ai">Artificial Intelligence</a></li>
+        <li><a href="#quantum">Quantum Computing</a></li>
+        <li><a href="#hardware">Hardware Innovation</a></li>
+        <li><a href="#battery">Battery & Energy</a></li>
+        <li><a href="#space">Space Exploration</a></li>
+        <li><a href="#medical">Medical Breakthroughs</a></li>
+    </ul>
+</nav>
 
-  <!-- Quantum Computing -->
-  <article class="card">
-    <h3>⚛️ 1,000‑Qubit Quantum Processors</h3>
-    <p>IBM, Google, and Rigetti now deploy quantum chips surpassing 1,000 qubits, enabling error‑corrected, practical quantum algorithms for drug discovery and cryptographic analysis.</p>
-  </article>
+<main>
 
-  <!-- Energy & Materials -->
-  <article class="card">
-    <h3>🔋 Solid‑State Lithium‑Sulfur Batteries</h3>
-    <p>Researchers have commercialized a 300 Wh/kg energy density battery, doubling range for electric vehicles and slashing charging time to under 10 minutes.</p>
-  </article>
+    <!-- AI -->
+    <article id="ai" class="card">
+        <div class="card-header">Artificial Intelligence</div>
+        <div class="card-body">
+            <p><strong>GPT‑4 Turbo:</strong> A lighter, faster version of GPT‑4 that powers ChatGPT with lower latency and cost.</p>
+            <p><strong>Diffusion Models:</strong> Stable Diffusion 3 and Imagen XL produce photo‑realistic images from text prompts at unprecedented speed.</p>
+            <p><strong>AI in Drug Discovery:</strong> DeepMind’s AlphaFold now predicts protein folding with near‑complete accuracy, accelerating therapeutic design.</p>
+        </div>
+    </article>
 
-  <!-- Space & Exploration -->
-  <article class="card">
-    <h3>🚀 Starship First Orbital Launch</h3>
-    <p>SpaceX’s fully reusable Starship completes its inaugural orbital flight, marking the first stage of a new era for cargo and crew missions to Mars.</p>
-  </article>
+    <!-- Quantum -->
+    <article id="quantum" class="card">
+        <div class="card-header">Quantum Computing</div>
+        <div class="card-body">
+            <p><strong>IBM Eagle 127‑qubit Chip:</strong> The first commercial quantum processor to exceed 100 qubits, boosting algorithmic speed.</p>
+            <p><strong>Google Sycamore 53‑qubit:</strong> Demonstrated quantum supremacy on a novel sampling problem with a 3‑minute runtime.</p>
+            <p><strong>Quantum Internet:</strong> DARPA’s Qubit Network provides the first secure quantum key distribution link across 1,000 km.</p>
+        </div>
+    </article>
 
-  <!-- Biotechnology -->
-  <article class="card">
-    <h3>🧬 CRISPR‑Cure™ Gene Therapy</h3>
-    <p>FDA approval for a CRISPR‑based therapy that edits disease‑causing mutations in vivo, offering a permanent cure for inherited retinal disorders.</p>
-  </article>
+    <!-- Hardware -->
+    <article id="hardware" class="card">
+        <div class="card-header">Hardware Innovation</div>
+        <div class="card-body">
+            <p><strong>Apple M4:</strong> A 4‑core CPU + 8‑core GPU offering 3x performance per watt compared to its predecessor.</p>
+            <p><strong>Graphcore IPU‑200:</strong> The first chip optimized for AI workloads with 100‑fold lower latency per inference.</p>
+            <p><strong>3nm Process:</strong> TSMC & Samsung unveil 3nm chips, enabling 15% power savings and 25% density increase.</p>
+        </div>
+    </article>
 
-  <!-- Telecommunications -->
-  <article class="card">
-    <h3>📶 6G 1‑Terabit/s Wireless</h3>
-    <p>Early 6G deployments deliver 1 Tb/s speeds with <10 µs latency, enabling real‑time haptic VR, autonomous traffic management, and global IoT scalability.</p>
-  </article>
-
-  <!-- Robotics & Automation -->
-  <article class="card">
-    <h3>🤖 Collaborative Soft Robots</h3>
-    <p>Soft robotic arms equipped with advanced tactile sensors and AI planning are now standard in manufacturing, reducing human injury and increasing precision.</p>
-  </article>
-
-  <!-- Environmental Tech -->
-  <article class="card">
-    <h3>🌱 Direct Air Capture (DAC) Breakthrough</h3>
-    <p>New DAC plants achieve 70% lower energy consumption, turning captured CO₂ into marketable products like building materials and fuels.</p>
-  </article>
-</section>
-
-<footer class="footer">
-  <p>© 2026 Tech Insights. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+    <!-- Battery -->
+    <article id="battery" class="card">
+        <div class="card-header">Battery & Energy</div>
+        <div class="card-body">
+            <p><strong>Solid‑State Battery:</strong> Samsung’s prototype offers 500 Wh kg⁻
