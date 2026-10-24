@@ -2,136 +2,82 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – Search Results</title>
 <style>
-    :root {
-        --bg: #f5f5f5;
-        --text: #333;
-        --accent: #0066cc;
-        --accent-light: #e0f2ff;
-        --shadow: rgba(0,0,0,0.1);
-        --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-    body {
-        margin:0; font-family: var(--font-stack); color: var(--text); background: var(--bg);
-        line-height: 1.6;
-    }
-    header {
-        background: var(--accent);
-        color:#fff;
-        padding:2rem 1rem;
-        text-align:center;
-    }
-    header h1 {margin:0; font-size:2.5rem; }
-    header p {margin-top:.5rem; font-size:1.1rem; opacity:.9;}
-    main {max-width:90rem; margin:2rem auto; padding:0 1rem;}
-    section {background:#fff; margin-bottom:1.5rem; border-radius:8px; box-shadow:0 2px 6px var(--shadow); overflow:hidden;}
-    .section-header {
-        display:flex; align-items:center; justify-content:space-between; padding:1.2rem 1.5rem; background: var(--accent-light);
-        cursor:pointer;
-        transition:background .3s;
-    }
-    .section-header:hover {background:var(--accent-light);}
-    .section-header h2{margin:0; font-size:1.4rem;}
-    .section-header .arrow {font-size:1.2rem; transition:transform .3s;}
-    .section-header[aria-expanded="true"] .arrow {transform:rotate(90deg);}
-    .content {padding:1.5rem; display:none;}
-    .content[aria-hidden="false"] {display:block;}
-    .grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem;}
-    .card {background:#fafafa; border-radius:6px; padding:1.2rem; transition:transform .3s, box-shadow .3s;}
-    .card:hover {transform:translateY(-4px); box-shadow:0 4px 12px var(--shadow);}
-    .card h3 {margin-top:0; font-size:1.2rem;}
-    .card p {font-size:.95rem; color:#555;}
-    footer {text-align:center; padding:1.5rem; font-size:.9rem; color:#777;}
-    a {color:var(--accent); text-decoration:none;}
-    a:hover {text-decoration:underline;}
+  /* Reset & base */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; color: #222; line-height: 1.6; }
+  a { text-decoration: none; color: #1a73e8; transition: color .2s; }
+  a:hover { color: #0049b3; }
+
+  /* Layout */
+  .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+  header { margin-bottom: 2rem; }
+  header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+  header p { color: #555; font-size: 1.1rem; }
+
+  /* Search bar */
+  .search-form { display: flex; margin-top: 1rem; }
+  .search-form input { flex: 1; padding: .75rem 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px 0 0 4px; outline: none; }
+  .search-form button { padding: .75rem 1.5rem; font-size: 1rem; border: none; background: #1a73e8; color: #fff; border-radius: 0 4px 4px 0; cursor: pointer; }
+  .search-form button:hover { background: #0049b3; }
+
+  /* Results */
+  .results { list-style: none; }
+  .result-item { background: #fff; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,.07); display: flex; flex-direction: column; }
+  .result-item h2 { font-size: 1.4rem; margin-bottom: .5rem; }
+  .result-item p { color: #555; margin-bottom: .75rem; }
+  .result-item .link { font-weight: 500; }
+  .result-item .meta { font-size: .9rem; color: #777; }
+
+  /* Responsive */
+  @media (min-width: 600px) {
+    .result-item { flex-direction: row; align-items: center; }
+    .result-item h2 { flex: 1; }
+    .result-item .meta { text-align: right; }
+  }
 </style>
 </head>
 <body>
-
-<header>
+<div class="container">
+  <header>
     <h1>Latest Breakthroughs in Technology</h1>
-    <p>Exploring the frontiers that are reshaping our world.</p>
-</header>
+    <p>Search the web for the newest innovations, research papers, and industry news.</p>
+    <form class="search-form" action="#" method="GET">
+      <input type="search" name="q" placeholder="Search breakthroughs..." required>
+      <button type="submit">Search</button>
+    </form>
+  </header>
 
-<main>
-    <!-- 1. Artificial Intelligence & Machine Learning -->
-    <section>
-        <div class="section-header" role="button" aria-controls="ai" aria-expanded="false">
-            <h2>🤖 Artificial Intelligence & Machine Learning</h2>
-            <span class="arrow">▶</span>
-        </div>
-        <div class="content" id="ai" aria-hidden="true">
-            <p>Generative AI models have advanced to produce high‑fidelity images, video, and code. <strong>OpenAI's GPT‑4o</strong> can interpret images and perform multimodal reasoning. <strong>DeepMind's AlphaFold 2.5</strong> now predicts protein structures with near‑atomic precision, accelerating drug discovery. Edge AI chips from <strong>Qualcomm</strong> and <strong>Apple</strong> enable real‑time inference on smartphones without cloud connectivity.</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>GPT‑4o</h3>
-                    <p>Multimodal large‑language model with image, audio, and text input.</p>
-                </div>
-                <div class="card">
-                    <h3>AlphaFold 2.5</h3>
-                    <p>Protein folding predictions with 90 % accuracy at atomic resolution.</p>
-                </div>
-                <div class="card">
-                    <h3>Apple Neural Engine</h3>
-                    <p>On‑device AI for AR, photography, and health monitoring.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <ul class="results">
+    <li class="result-item">
+      <h2>Quantum-Resilient Cryptography Standard (2026)</h2>
+      <p>Scientists unveil a new encryption algorithm that remains secure even against quantum computers, paving the way for safer digital communications.</p>
+      <a class="link" href="https://example.com/quantum-cryptography" target="_blank">Read More →</a>
+      <span class="meta">Published: 2026-04-12 • 3 mins read</span>
+    </li>
 
-    <!-- 2. Quantum Computing & Advanced Materials -->
-    <section>
-        <div class="section-header" role="button" aria-controls="quantum" aria-expanded="false">
-            <h2>🟠 Quantum Computing & Advanced Materials</h2>
-            <span class="arrow">▶</span>
-        </div>
-        <div class="content" id="quantum" aria-hidden="true">
-            <p>Quantum processors now surpass 200 qubits, and error‑correction protocols bring us closer to fault‑tolerant systems. <strong>Google's Sycamore‑V2</strong> achieved a new milestone in quantum advantage. In materials science, 2D “graphene‑like” layers exhibit superconductivity at 30 K, opening doors to efficient power grids.</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>Google Sycamore‑V2</h3>
-                    <p>200‑qubit processor with improved coherence times.</p>
-                </div>
-                <div class="card">
-                    <h3>High‑Temperature Superconductor</h3>
-                    <p>2D material demonstrating superconductivity above 30 K.</p>
-                </div>
-                <div class="card">
-                    <h3>Quantum‑Safe Cryptography</h3>
-                    <p>Post‑quantum algorithms ready for deployment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <li class="result-item">
+      <h2>AI-Generated Autonomous Vehicles Reach 99.5% Accuracy</h2>
+      <p>Recent trials show self-driving cars achieving unprecedented precision, reducing accidents to near-zero levels and setting a new industry benchmark.</p>
+      <a class="link" href="https://example.com/ai-vehicles" target="_blank">Read More →</a>
+      <span class="meta">Published: 2026-03-08 • 5 mins read</span>
+    </li>
 
-    <!-- 3. Space & Exploration Tech -->
-    <section>
-        <div class="section-header" role="button" aria-controls="space" aria-expanded="false">
-            <h2>🚀 Space & Exploration Tech</h2>
-            <span class="arrow">▶</span>
-        </div>
-        <div class="content" id="space" aria-hidden="true">
-            <p>SpaceX's Starship prototypes have completed high‑velocity re‑entry tests, while NASA's Artemis program is building the Gateway lunar outpost. <strong>Planetary Defense</strong> initiatives deploy kinetic impactor probes to divert near‑Earth objects. The <strong>James Webb Space Telescope</strong> continues to reveal the first galaxies, pushing the frontier of observational cosmology.</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>Starship High‑Velocity Test</h3>
-                    <p>Successful sub‑orbital re‑entry at 10 km/s.</p>
-                </div>
-                <div class="card">
-                    <h3>Artemis Gateway</h3>
-                    <p>Lunar orbital platform for crewed missions.</p>
-                </div>
-                <div class="card">
-                    <h3>James Webb Spectroscopy</h3>
-                    <p>First direct imaging of exoplanet atmospheres.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <li class="result-item">
+      <h2>Flexible Solar Panels Integrated into Building Materials</h2>
+      <p>Architects now can embed photovoltaic cells directly into window glass and wall panels, turning everyday surfaces into efficient solar harvesters.</p>
+      <a class="link" href="https://example.com/flexible-solar" target="_blank">Read More →</a>
+      <span class="meta">Published: 2026-02-21 • 4 mins read</span>
+    </li>
 
-    <!-- 4. Energy & Sustainability -->
-    <section>
-        <div class="section-header" role="button" aria-controls="energy" aria-expanded="false">
-            <h2>⚡ Energy & Sustainability</h
+    <li class="result-item">
+      <h2>Brain‑Computer Interface Enables 1‑Second Response Times</h2>
+      <p>New neural‑ink technology translates thoughts into machine commands within milliseconds, revolutionizing accessibility and gaming experiences.</p>
+      <a class="link" href="https://example.com/brain-computer-interface" target="_blank">Read More →</a>
+      <span class="meta">Published: 2026-01-15 • 6 mins read</span>
+    </li>
+  </ul>
+</div>
+</body>
+</html>
