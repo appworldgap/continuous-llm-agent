@@ -2,166 +2,155 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* CSS Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root{
-  --primary:#1a73e8;
-  --secondary:#ff9800;
-  --bg:#f5f5f5;
-  --card-bg:#ffffff;
-  --text:#333333;
-  --accent:#e0e0e0;
-  --radius:8px;
-  --transition:0.3s ease;
+/* Global Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f7fa;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 4px solid #2d2e2e;
 }
 
-body{
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-header{
-  background:var(--primary);
-  color:#fff;
-  padding:2rem 1rem;
-  text-align:center;
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-header h1{
-  margin-bottom:0.5rem;
-  font-weight:700;
-  font-size:2.5rem;
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-header p{
-  font-weight:400;
-  font-size:1.1rem;
+.section {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-main{
-  max-width:1200px;
-  margin:2rem auto;
-  padding:0 1rem;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:2rem;
+.section:last-child { border-bottom: none; }
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  color: #4e54c8;
 }
 
-.card{
-  background:var(--card-bg);
-  border-radius:var(--radius);
-  box-shadow:0 4px 8px rgba(0,0,0,0.05);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  transition:transform var(--transition),box-shadow var(--transition);
+.section p {
+  margin-bottom: 1rem;
+  color: #555;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 8px 16px rgba(0,0,0,0.1);
+.section ul {
+  list-style: disc inside;
+  margin-left: 1rem;
 }
 
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
+.section li {
+  margin-bottom: 0.5rem;
 }
 
-.card-content{
-  padding:1.5rem;
-  flex-grow:1;
-  display:flex;
-  flex-direction:column;
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #777;
 }
 
-.card h2{
-  font-size:1.4rem;
-  margin-bottom:0.75rem;
-  color:var(--primary);
-  flex-shrink:0;
-}
-
-.card p{
-  flex-grow:1;
-}
-
-.card a{
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:600;
-  margin-top:1rem;
-  align-self:flex-start;
-}
-
-footer{
-  text-align:center;
-  padding:1rem;
-  font-size:0.9rem;
-  color:var(--accent);
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  .section h2 { font-size: 1.5rem; }
 }
 </style>
 </head>
 <body>
+
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Innovation snapshot – 2024</p>
+  <p>Exploring the frontiers of AI, quantum, biotech, energy, and space</p>
 </header>
 
-<main>
+<main class="container">
 
-  <!-- Quantum Supremacy 2.0 -->
-  <section class="card">
-    <img src="https://images.unsplash.com/photo-1581091870629-7b0f2b0a8b22?auto=format&fit=crop&w=800&q=80" alt="Quantum Computer">
-    <div class="card-content">
-      <h2>Quantum Supremacy 2.0</h2>
-      <p>IBM unveiled its <strong>Q2‑127</strong> processor – a 127‑qubit superconducting chip with error‑corrected qubits that can solve problems beyond classical reach in minutes.</p>
-      <a href="https://www.ibm.com/news/2024-quantum" target="_blank">Read more</a>
-    </div>
+  <section class="section" id="ai">
+    <h2>Artificial Intelligence</h2>
+    <p>Generative AI continues to reshape creative industries, while multi‑modal models integrate vision, text, and audio for unprecedented context understanding.</p>
+    <ul>
+      <li>GPT‑4o and Claude 3.5 Turbo provide advanced natural language reasoning.</li>
+      <li>Diffusion models produce photorealistic images with fine control.</li>
+      <li>AI‑driven drug discovery accelerates pipeline times by up to 50%.</li>
+    </ul>
   </section>
 
-  <!-- GPT‑5 and AI for Medicine -->
-  <section class="card">
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence">
-    <div class="card-content">
-      <h2>GPT‑5 and AI for Medicine</h2>
-      <p>OpenAI’s GPT‑5 now incorporates multimodal reasoning and clinical knowledge, enabling automated diagnostics, personalized treatment plans, and real‑time patient monitoring.</p>
-      <a href="https://www.openai.com/gpt-5" target="_blank">Read more</a>
-    </div>
+  <section class="section" id="quantum">
+    <h2>Quantum Computing</h2>
+    <p>Quantum processors are surpassing classical systems on specialized tasks, heralding a new era of computation.</p>
+    <ul>
+      <li>Google’s Sycamore demonstrates quantum supremacy on sampling problems.</li>
+      <li>IBM’s Osprey and Honeywell’s trapped‑ion chips reach 50+ qubits with error suppression.</li>
+      <li>Hybrid quantum‑classical algorithms for optimization appear in finance and logistics.</li>
+    </ul>
   </section>
 
-  <!-- CRISPR Base Editing -->
-  <section class="card">
-    <img src="https://images.unsplash.com/photo-1524985069026-3f8b9e58f7ca?auto=format&fit=crop&w=800&q=80" alt="CRISPR">
-    <div class="card-content">
-      <h2>CRISPR Base Editing</h2>
-      <p>New base editors from Editas and CRISPR Therapeutics correct pathogenic mutations without double‑strand breaks, opening doors to treat inherited diseases like sickle cell anemia.</p>
-      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/2024-crispr" target="_blank">Read more</a>
-    </div>
+  <section class="section" id="biotech">
+    <h2>Biotechnology</h2>
+    <p>CRISPR and mRNA platforms deliver precise genetic edits and rapid vaccine development.</p>
+    <ul>
+      <li>Base editing now targets single‑nucleotide mutations with high fidelity.</li>
+      <li>mRNA boosters show improved durability against emerging variants.</li>
+      <li>Organoid technology enables patient‑specific disease modeling.</li>
+    </ul>
   </section>
 
-  <!-- Perovskite Tandem Solar Cells -->
-  <section class="card">
-    <img src="https://images.unsplash.com/photo-1502920514313-4e0b3b5c8a07?auto=format&fit=crop&w=800&q=80" alt="Solar Cell">
-    <div class="card-content">
-      <h2>Perovskite Tandem Solar Cells</h2>
-      <p>Scientists at the University of Oxford achieved a 31.5 % efficiency with a perovskite/Si tandem, surpassing the 30 % threshold and making solar power cheaper.</p>
-      <a href="https://www.nature.com/articles/s41586-024-1234" target="_blank">Read more</a>
-    </div>
+  <section class="section" id="energy">
+    <h2>Energy & Sustainability</h2>
+    <p>Advances in materials science and battery chemistry push efficiency and storage capacity.</p>
+    <ul>
+      <li>Perovskite solar cells exceed 26% efficiency with scalable deposition.</li>
+      <li>Solid‑state Li‑S batteries promise >400 Wh kg⁻¹ energy density.</li>
+      <li>Carbon capture technologies now reach <5 USD t⁻¹ cost in pilot plants.</li>
+    </ul>
   </section>
 
-  <!-- 6G Prototype Demonstrated -->
-  <section class="card">
-    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w
+  <section class="section" id="space">
+    <h2>Space Exploration</h2>
+    <p>New propulsion concepts and reusable launch systems are opening deeper space access.</p>
+    <ul>
+      <li>SpaceX’s Starship prototypes achieve 100 km sub‑orbital flights.</li>
+      <li>NASA’s Artemis program plans the first lunar sample return by 2025.</li>
+      <li>Ion‑thruster missions like NASA’s Dragonfly probe demonstrate high‑efficiency orbit transfers.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 TechInsight. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
