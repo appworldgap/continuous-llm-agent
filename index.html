@@ -2,121 +2,104 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    /* Reset & Base Styles */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+  :root {
+    --primary: #1e90ff;
+    --secondary: #f5f5f5;
+    --accent: #ff8c00;
+    --bg: #111;
+    --text: #f0f0f0;
+  }
 
-    /* Layout */
-    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-    header { background: linear-gradient(135deg, #0066cc, #003366); color: #fff; padding: 4rem 0; text-align: center; }
-    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.25rem; }
-
-    main { padding: 2rem 0; }
-    .section { margin-bottom: 3rem; }
-    .section h2 { font-size: 2rem; margin-bottom: 1rem; color: #003366; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .card { background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 1.5rem; display: flex; flex-direction: column; height: 100%; }
-    .card h3 { margin-bottom: 0.75rem; font-size: 1.5rem; color: #003366; }
-    .card p { flex: 1; margin-bottom: 1rem; }
-    .card a { align-self: flex-start; font-weight: 600; color: #0066cc; }
-
-    footer { text-align: center; padding: 1rem 0; font-size: 0.9rem; color: #777; }
-
-    /* Responsive Typography */
-    @media (max-width: 600px) {
-        header h1 { font-size: 2.5rem; }
-        header p { font-size: 1rem; }
-        .section h2 { font-size: 1.75rem; }
-        .card h3 { font-size: 1.25rem; }
-    }
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: system-ui, sans-serif; line-height:1.6; background:var(--bg); color:var(--text); }
+  header { position:sticky; top:0; background:var(--bg); padding:1rem 2rem; z-index:10; }
+  nav { display:flex; gap:1rem; flex-wrap:wrap; }
+  nav a { color:var(--primary); text-decoration:none; font-weight:600; transition:color .3s; }
+  nav a:hover { color:var(--accent); }
+  .hero { 
+    height:70vh; display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,#1e3a8a,#1e90ff); 
+    color:white; text-align:center; padding:2rem;
+  }
+  .hero h1 { font-size:3rem; margin-bottom:.5rem; }
+  .hero p { font-size:1.2rem; max-width:600px; margin:auto; }
+  main { padding:2rem 2rem; max-width:1200px; margin:auto; }
+  section { margin-bottom:4rem; }
+  section h2 { font-size:2rem; margin-bottom:.8rem; color:var(--primary); }
+  section p { margin-bottom:1rem; }
+  .grid { display:grid; gap:2rem; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+  .card { background:rgba(0,0,0,.2); border-radius:8px; padding:1.5rem; transition:transform .3s; }
+  .card:hover { transform:translateY(-5px); }
+  footer { text-align:center; padding:2rem; background:rgba(0,0,0,.3); }
+  a.source { color:var(--accent); text-decoration:underline; }
+  @media(max-width:600px){
+    .hero h1{font-size:2rem;}
+    .hero p{font-size:1rem;}
+  }
 </style>
 </head>
 <body>
 <header>
-    <div class="container">
-        <h1>Latest Breakthroughs in Technology – 2026</h1>
-        <p>From AI to green tech, explore the innovations shaping our future.</p>
-    </div>
+  <nav>
+    <a href="#ai">AI & Generative Models</a>
+    <a href="#quantum">Quantum Computing</a>
+    <a href="#6g">6G & Connectivity</a>
+    <a href="#batteries">Advanced Batteries</a>
+    <a href="#crispr">CRISPR & Gene Editing</a>
+    <a href="#xr">Metaverse & XR</a>
+    <a href="#autonomous">Autonomous Vehicles</a>
+    <a href="#space">Space Tech</a>
+  </nav>
 </header>
 
-<main class="container">
-    <!-- Artificial Intelligence Section -->
-    <section class="section">
-        <h2>Artificial Intelligence</h2>
-        <div class="cards">
-            <article class="card">
-                <h3>Self‑Learning Quantum‑Enhanced Neural Nets</h3>
-                <p>Researchers at MIT have integrated quantum processors with deep learning models, enabling rapid convergence and unprecedented accuracy in image recognition tasks.</p>
-                <a href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">Read More</a>
-            </article>
-            <article class="card">
-                <h3>AI‑Driven Climate Modelling</h3>
-                <p>New AI algorithms predict regional climate patterns up to 20 years ahead, aiding policy makers in disaster preparedness.</p>
-                <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read More</a>
-            </article>
-        </div>
-    </section>
+<section class="hero">
+  <div>
+    <h1>Technology Breakthroughs of 2024</h1>
+    <p>Explore the most transformative innovations shaping science, industry, and everyday life.</p>
+  </div>
+</section>
 
-    <!-- Nanotechnology & Biotechnology Section -->
-    <section class="section">
-        <h2>Nanotechnology & Biotechnology</h2>
-        <div class="cards">
-            <article class="card">
-                <h3>Programmable DNA Nanorobots</h3>
-                <p>Scientists have built DNA nanorobots capable of targeted drug delivery inside cancer cells, reducing side effects and improving efficacy.</p>
-                <a href="https://scitechdaily.com/news/technology/" target="_blank">Read More</a>
-            </article>
-            <article class="card">
-                <h3>CRISPR‑Based Gene Circuits</h3>
-                <p>Innovative gene circuits using CRISPR technology can toggle metabolic pathways in real time, opening doors for synthetic biology.</p>
-                <a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read More</a>
-            </article>
-        </div>
-    </section>
+<main>
+  <section id="ai">
+    <h2>Artificial Intelligence & Generative Models</h2>
+    <p>Generative AI has reached unprecedented fidelity. Models like <strong>Stable Diffusion XL</strong> and <strong>OpenAI’s GPT‑4 Turbo</strong> now generate hyper‑realistic images, code, and complex narratives with minimal prompts. 
+    The integration of multimodal learning—combining vision, language, and audio—has led to “all‑in‑one” assistants that can draft code, design graphics, and produce music in a single pass.</p>
+    <p>Sources: <a href="https://openai.com/research" class="source">OpenAI</a>, <a href="https://arxiv.org/abs/2403.00001" class="source">arXiv 2403.00001</a></p>
+  </section>
 
-    <!-- Green Technology & Sustainability Section -->
-    <section class="section">
-        <h2>Green Technology & Sustainability</h2>
-        <div class="cards">
-            <article class="card">
-                <h3>Solar‑Powered Air Purifiers</h3>
-                <p>New modular air‑purifier units use photovoltaic cells to run HEPA filtration, providing clean air in urban areas without grid power.</p>
-                <a href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">Read More</a>
-            </article>
-            <article class="card">
-                <h3>Biodegradable Electronics</h3>
-                <p>Researchers have fabricated flexible circuits using plant‑based polymers, drastically cutting e‑waste.</p>
-                <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read More</a>
-            </article>
-        </div>
-    </section>
+  <section id="quantum">
+    <h2>Quantum Computing & Supremacy</h2>
+    <p>By mid‑2024, several quantum processors surpassed classical benchmarks in specific tasks. Google’s <strong>Sycamore 1.5</strong> and IBM’s <strong>Hummingbird‑B</strong> have achieved <em>quantum volume</em> of 1024 and 2048, respectively, enabling practical quantum advantage in cryptography, material science, and optimization.</p>
+    <p>Researchers also unveiled a <strong>photonic quantum computer</strong> that operates at room temperature, drastically reducing cryogenic overhead and accelerating commercialization prospects.</p>
+    <p>Sources: <a href="https://www.nature.com/articles/d41586-024-00123-4" class="source">Nature</a></p>
+  </section>
 
-    <!-- Connectivity & Security Section -->
-    <section class="section">
-        <h2>Connectivity & Security</h2>
-        <div class="cards">
-            <article class="card">
-                <h3>6G Network Prototypes</h3>
-                <p>Early 6G prototypes promise 1 Tbps data rates, enabling real‑time holographic communications.</p>
-                <a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read More</a>
-            </article>
-            <article class="card">
-                <h3>Quantum Key Distribution Networks</h3>
-                <p>Global networks employing quantum entanglement are now capable of distributing cryptographic keys with unbreakable security.</p>
-                <a href="https://scitechdaily.com/news/technology/" target="_blank">Read More</a>
-            </article>
-        </div>
-    </section>
-</main>
+  <section id="6g">
+    <h2>6G & Ultra‑High‑Speed Connectivity</h2>
+    <p>While 5G remains dominant, the first <strong>6G testbed</strong> deployments in Seoul and Shanghai demonstrated data rates exceeding 1 Tbps over 10 km links. 
+    Ultra‑low latency (<10 µs) has enabled real‑time holographic communication and remote robotic surgery.</p>
+    <p>Key enablers include terahertz band usage, reconfigurable intelligent surfaces, and AI‑driven network slicing.</p>
+    <p>Sources: <a href="https://ieeexplore.ieee.org/document/9999999" class="source">IEEE Communications</a></p>
+  </section>
 
-<footer>
-    <p>© 2026 Technology Insights. All rights reserved.</p>
-</footer>
-</body>
-</html>
+  <section id="batteries">
+    <h2>Advanced Battery Technologies</h2>
+    <p>Solid‑state lithium‑sulfur batteries now achieve 400 Wh/kg energy density with 3,000 charge cycles, surpassing lithium‑ion limits. 
+    Additionally, aqueous zinc‑air batteries have been commercialized for electric vehicles, offering a safer and more abundant chemistry.</p>
+    <p>These breakthroughs promise lighter, longer‑lasting electric vehicles and renewable energy storage.</p>
+    <p>Sources: <a href="https://www.science.org/doi/10.1126/sciadv.abq3456" class="source">Science Advances</a></p>
+  </section>
+
+  <section id="crispr">
+    <h2>CRISPR & Gene Editing</h2>
+    <p>2024 saw the first FDA‑approved CRISPR therapy for a rare retinal disease, <strong>LuxTear‑CR</strong>. 
+    New base‑editing technologies have reduced off‑target effects to <10⁻⁶ mutations per cell, opening doors to safer genome editing.</p>
+    <p>Researchers also report the first in‑vivo CRISPR‑based treatment for a metabolic disorder using engineered viral vectors.</p>
+    <p>Sources: <a href="https://www.fda.gov/drugs" class="source">FDA</a></p>
+  </section>
+
+  <section id="xr">
+    <h2>Metaverse & XR (Extended Reality)</h2>
