@@ -2,104 +2,102 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology</title>
 <style>
-  :root {
-    --primary: #1e90ff;
-    --secondary: #f5f5f5;
-    --accent: #ff8c00;
-    --bg: #111;
-    --text: #f0f0f0;
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:#f4f4f9;
+    color:#333;
+    line-height:1.6;
   }
-
-  * { box-sizing: border-box; margin:0; padding:0; }
-  body { font-family: system-ui, sans-serif; line-height:1.6; background:var(--bg); color:var(--text); }
-  header { position:sticky; top:0; background:var(--bg); padding:1rem 2rem; z-index:10; }
-  nav { display:flex; gap:1rem; flex-wrap:wrap; }
-  nav a { color:var(--primary); text-decoration:none; font-weight:600; transition:color .3s; }
-  nav a:hover { color:var(--accent); }
-  .hero { 
-    height:70vh; display:flex; align-items:center; justify-content:center;
-    background:linear-gradient(135deg,#1e3a8a,#1e90ff); 
-    color:white; text-align:center; padding:2rem;
+  header{
+    background:#1a73e8;
+    color:#fff;
+    text-align:center;
+    padding:3rem 1rem;
   }
-  .hero h1 { font-size:3rem; margin-bottom:.5rem; }
-  .hero p { font-size:1.2rem; max-width:600px; margin:auto; }
-  main { padding:2rem 2rem; max-width:1200px; margin:auto; }
-  section { margin-bottom:4rem; }
-  section h2 { font-size:2rem; margin-bottom:.8rem; color:var(--primary); }
-  section p { margin-bottom:1rem; }
-  .grid { display:grid; gap:2rem; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
-  .card { background:rgba(0,0,0,.2); border-radius:8px; padding:1.5rem; transition:transform .3s; }
-  .card:hover { transform:translateY(-5px); }
-  footer { text-align:center; padding:2rem; background:rgba(0,0,0,.3); }
-  a.source { color:var(--accent); text-decoration:underline; }
-  @media(max-width:600px){
-    .hero h1{font-size:2rem;}
-    .hero p{font-size:1rem;}
+  header h1{
+    margin:0;
+    font-size:2.5rem;
+  }
+  section{
+    max-width:1200px;
+    margin:auto;
+    padding:2rem 1rem;
+  }
+  .cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+    margin-bottom:2rem;
+  }
+  .card{
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    flex:1 1 calc(50% - 1.5rem);
+    padding:1.5rem;
+    min-width:280px;
+  }
+  .card h2{
+    margin-top:0;
+    color:#1a73e8;
+    font-size:1.8rem;
+  }
+  .card p{
+    margin:0.5rem 0 0;
+  }
+  footer{
+    text-align:center;
+    background:#e0e0e0;
+    padding:1.5rem;
+    color:#555;
+    font-size:0.9rem;
+  }
+  @media (max-width:600px){
+    .card{flex-basis:100%;}
   }
 </style>
 </head>
 <body>
 <header>
-  <nav>
-    <a href="#ai">AI & Generative Models</a>
-    <a href="#quantum">Quantum Computing</a>
-    <a href="#6g">6G & Connectivity</a>
-    <a href="#batteries">Advanced Batteries</a>
-    <a href="#crispr">CRISPR & Gene Editing</a>
-    <a href="#xr">Metaverse & XR</a>
-    <a href="#autonomous">Autonomous Vehicles</a>
-    <a href="#space">Space Tech</a>
-  </nav>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
-
-<section class="hero">
-  <div>
-    <h1>Technology Breakthroughs of 2024</h1>
-    <p>Explore the most transformative innovations shaping science, industry, and everyday life.</p>
+<section>
+  <div class="cards">
+    <div class="card">
+      <h2>AI & Machine Learning</h2>
+      <p>Generative AI models such as GPT‑4 and its successors now support multimodal understanding, enabling breakthroughs in creative design, personalized medicine, and autonomous systems.</p>
+    </div>
+    <div class="card">
+      <h2>Quantum Computing</h2>
+      <p>Quantum processors have surpassed the 100‑qubit mark with advanced error correction, inching closer to fault‑tolerant operation and practical quantum advantage for cryptography and complex simulations.</p>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h2>Biotechnology & Gene Editing</h2>
+      <p>New CRISPR‑Cas variants achieve base‑level precision with minimal off‑target effects, while synthetic biology creates programmable cell therapies and bio‑factories for sustainable materials.</p>
+    </div>
+    <div class="card">
+      <h2>Energy & Sustainability</h2>
+      <p>Solid‑state batteries deliver higher energy density, and perovskite solar cells now exceed 25% efficiency, making renewable storage and generation more scalable.</p>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h2>Space & Exploration</h2>
+      <p>NASA’s Artemis program and private ventures are paving the way for lunar habitats, while ion‑drive and nuclear thermal propulsion concepts promise faster interplanetary travel.</p>
+    </div>
+    <div class="card">
+      <h2>Internet & Connectivity</h2>
+      <p>Research into 6G and edge‑AI processing foresees sub‑millisecond latency, enabling real‑time AR/VR, remote surgery, and coordinated autonomous vehicles.</p>
+    </div>
   </div>
 </section>
-
-<main>
-  <section id="ai">
-    <h2>Artificial Intelligence & Generative Models</h2>
-    <p>Generative AI has reached unprecedented fidelity. Models like <strong>Stable Diffusion XL</strong> and <strong>OpenAI’s GPT‑4 Turbo</strong> now generate hyper‑realistic images, code, and complex narratives with minimal prompts. 
-    The integration of multimodal learning—combining vision, language, and audio—has led to “all‑in‑one” assistants that can draft code, design graphics, and produce music in a single pass.</p>
-    <p>Sources: <a href="https://openai.com/research" class="source">OpenAI</a>, <a href="https://arxiv.org/abs/2403.00001" class="source">arXiv 2403.00001</a></p>
-  </section>
-
-  <section id="quantum">
-    <h2>Quantum Computing & Supremacy</h2>
-    <p>By mid‑2024, several quantum processors surpassed classical benchmarks in specific tasks. Google’s <strong>Sycamore 1.5</strong> and IBM’s <strong>Hummingbird‑B</strong> have achieved <em>quantum volume</em> of 1024 and 2048, respectively, enabling practical quantum advantage in cryptography, material science, and optimization.</p>
-    <p>Researchers also unveiled a <strong>photonic quantum computer</strong> that operates at room temperature, drastically reducing cryogenic overhead and accelerating commercialization prospects.</p>
-    <p>Sources: <a href="https://www.nature.com/articles/d41586-024-00123-4" class="source">Nature</a></p>
-  </section>
-
-  <section id="6g">
-    <h2>6G & Ultra‑High‑Speed Connectivity</h2>
-    <p>While 5G remains dominant, the first <strong>6G testbed</strong> deployments in Seoul and Shanghai demonstrated data rates exceeding 1 Tbps over 10 km links. 
-    Ultra‑low latency (<10 µs) has enabled real‑time holographic communication and remote robotic surgery.</p>
-    <p>Key enablers include terahertz band usage, reconfigurable intelligent surfaces, and AI‑driven network slicing.</p>
-    <p>Sources: <a href="https://ieeexplore.ieee.org/document/9999999" class="source">IEEE Communications</a></p>
-  </section>
-
-  <section id="batteries">
-    <h2>Advanced Battery Technologies</h2>
-    <p>Solid‑state lithium‑sulfur batteries now achieve 400 Wh/kg energy density with 3,000 charge cycles, surpassing lithium‑ion limits. 
-    Additionally, aqueous zinc‑air batteries have been commercialized for electric vehicles, offering a safer and more abundant chemistry.</p>
-    <p>These breakthroughs promise lighter, longer‑lasting electric vehicles and renewable energy storage.</p>
-    <p>Sources: <a href="https://www.science.org/doi/10.1126/sciadv.abq3456" class="source">Science Advances</a></p>
-  </section>
-
-  <section id="crispr">
-    <h2>CRISPR & Gene Editing</h2>
-    <p>2024 saw the first FDA‑approved CRISPR therapy for a rare retinal disease, <strong>LuxTear‑CR</strong>. 
-    New base‑editing technologies have reduced off‑target effects to <10⁻⁶ mutations per cell, opening doors to safer genome editing.</p>
-    <p>Researchers also report the first in‑vivo CRISPR‑based treatment for a metabolic disorder using engineered viral vectors.</p>
-    <p>Sources: <a href="https://www.fda.gov/drugs" class="source">FDA</a></p>
-  </section>
-
-  <section id="xr">
-    <h2>Metaverse & XR (Extended Reality)</h2>
+<footer>
+  &copy; 2026 Technology Insights. All rights reserved.
+</footer>
+</body>
+</html>
