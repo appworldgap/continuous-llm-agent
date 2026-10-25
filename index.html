@@ -2,82 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – Search Results</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Reset & base */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; color: #222; line-height: 1.6; }
-  a { text-decoration: none; color: #1a73e8; transition: color .2s; }
-  a:hover { color: #0049b3; }
-
-  /* Layout */
-  .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
-  header { margin-bottom: 2rem; }
-  header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+  :root {
+    --bg: #fafafa;
+    --text: #222;
+    --accent: #006666;
+    --card-bg: #fff;
+    --card-shadow: rgba(0,0,0,0.05);
+    --link-hover: #004444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+  a:hover { color: var(--link-hover); }
+  header {
+    background: var(--card-bg);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    margin-bottom: 2rem;
+  }
+  header h1 { font-size: 2.4rem; margin-bottom: .5rem; }
   header p { color: #555; font-size: 1.1rem; }
+  nav {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  nav a { font-weight: 600; padding: .5rem 1rem; border-radius: 4px; background: #e0f2f2; }
+  nav a:hover { background: var(--accent); color: #fff; }
 
-  /* Search bar */
-  .search-form { display: flex; margin-top: 1rem; }
-  .search-form input { flex: 1; padding: .75rem 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px 0 0 4px; outline: none; }
-  .search-form button { padding: .75rem 1.5rem; font-size: 1rem; border: none; background: #1a73e8; color: #fff; border-radius: 0 4px 4px 0; cursor: pointer; }
-  .search-form button:hover { background: #0049b3; }
+  main { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+  section { margin-bottom: 4rem; }
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: .8rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+    padding-bottom: .2rem;
+  }
+  .breakthroughs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px var(--card-shadow); }
+  .card h3 { font-size: 1.3rem; margin-bottom: .5rem; color: var(--accent); }
+  .card p { margin-bottom: .8rem; }
+  .card a { font-size: .9rem; }
 
-  /* Results */
-  .results { list-style: none; }
-  .result-item { background: #fff; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,.07); display: flex; flex-direction: column; }
-  .result-item h2 { font-size: 1.4rem; margin-bottom: .5rem; }
-  .result-item p { color: #555; margin-bottom: .75rem; }
-  .result-item .link { font-weight: 500; }
-  .result-item .meta { font-size: .9rem; color: #777; }
-
-  /* Responsive */
-  @media (min-width: 600px) {
-    .result-item { flex-direction: row; align-items: center; }
-    .result-item h2 { flex: 1; }
-    .result-item .meta { text-align: right; }
+  footer { text-align: center; padding: 2rem 1rem; color: #555; font-size: .9rem; }
+  footer a { color: var(--accent); }
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    nav a { padding: .4rem .8rem; }
   }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <p>Search the web for the newest innovations, research papers, and industry news.</p>
-    <form class="search-form" action="#" method="GET">
-      <input type="search" name="q" placeholder="Search breakthroughs..." required>
-      <button type="submit">Search</button>
-    </form>
-  </header>
+<header>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <p>From AI to spaceflight, discover the innovations shaping tomorrow.</p>
+  <nav>
+    <a href="#ai">AI & ML</a>
+    <a href="#quantum">Quantum Computing</a>
+    <a href="#bio">Biotechnology</a>
+    <a href="#energy">Energy & Environment</a>
+    <a href="#space">Space Exploration</a>
+    <a href="#communication">Communication</a>
+    <a href="#autonomous">Autonomous Systems</a>
+  </nav>
+</header>
 
-  <ul class="results">
-    <li class="result-item">
-      <h2>Quantum-Resilient Cryptography Standard (2026)</h2>
-      <p>Scientists unveil a new encryption algorithm that remains secure even against quantum computers, paving the way for safer digital communications.</p>
-      <a class="link" href="https://example.com/quantum-cryptography" target="_blank">Read More →</a>
-      <span class="meta">Published: 2026-04-12 • 3 mins read</span>
-    </li>
+<main>
+  <section id="ai">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <div class="breakthroughs">
+      <div class="card">
+        <h3>Generative AI Maturity</h3>
+        <p>Large multimodal models (e.g., GPT‑4o, Claude 3.5) now combine text, image, and audio generation, achieving near-human fluency in creative tasks.</p>
+        <a href="https://openai.com/blog/gpt-4o" target="_blank">OpenAI Blog</a>
+      </div>
+      <div class="card">
+        <h3>Diffusion Models in Production</h3>
+        <p>Stable Diffusion XL and Imagen Pro are deployed at scale, enabling high‑resolution image generation for advertising, gaming, and medical imaging.</p>
+        <a href="https://stability.ai/blog/stable-diffusion-xl" target="_blank">Stability AI</a>
+      </div>
+      <div class="card">
+        <h3>AI‑Accelerated Drug Discovery</h3>
+        <p>DeepMind’s AlphaFold 2.0 now predicts protein structures with >95% accuracy, expediting vaccine and therapeutic development.</p>
+        <a href="https://deepmind.com/blog/article/alphafold-2" target="_blank">DeepMind</a>
+      </div>
+    </div>
+  </section>
 
-    <li class="result-item">
-      <h2>AI-Generated Autonomous Vehicles Reach 99.5% Accuracy</h2>
-      <p>Recent trials show self-driving cars achieving unprecedented precision, reducing accidents to near-zero levels and setting a new industry benchmark.</p>
-      <a class="link" href="https://example.com/ai-vehicles" target="_blank">Read More →</a>
-      <span class="meta">Published: 2026-03-08 • 5 mins read</span>
-    </li>
-
-    <li class="result-item">
-      <h2>Flexible Solar Panels Integrated into Building Materials</h2>
-      <p>Architects now can embed photovoltaic cells directly into window glass and wall panels, turning everyday surfaces into efficient solar harvesters.</p>
-      <a class="link" href="https://example.com/flexible-solar" target="_blank">Read More →</a>
-      <span class="meta">Published: 2026-02-21 • 4 mins read</span>
-    </li>
-
-    <li class="result-item">
-      <h2>Brain‑Computer Interface Enables 1‑Second Response Times</h2>
-      <p>New neural‑ink technology translates thoughts into machine commands within milliseconds, revolutionizing accessibility and gaming experiences.</p>
-      <a class="link" href="https://example.com/brain-computer-interface" target="_blank">Read More →</a>
-      <span class="meta">Published: 2026-01-15 • 6 mins read</span>
-    </li>
-  </ul>
-</div>
-</body>
-</html>
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <div class="breakthroughs">
+      <div class="card">
+        <h3>Quantum Supremacy 2.0</h3>
+        <p>Google’s Sycamore‑3 and IBM’s Eagle‑12 have demonstrated error‑corrected, 60‑qubit circuits surpassing classical supercomputers on specialized tasks.</p>
+        <a href="https://research.google/papers/sycamore-3" target="_blank">Google Research</a>
+      </div>
+      <div class="card">
+        <h3>Commercial Quantum APIs</h3>
+        <p>IBM Quantum’s new cloud platform offers tiered access to 100‑qubit machines, democratizing quantum algorithm development.</p>
