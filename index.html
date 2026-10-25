@@ -2,91 +2,164 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Base Reset & Typography */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #222; background: #fafafa; }
-  h1, h2, h3 { color: #111; }
-  a { color: #0066cc; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Layout */
-  .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
-  header, footer { text-align: center; margin-bottom: 2rem; }
-  section { margin-bottom: 4rem; }
-  .cards { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-
-  /* Card Style */
-  .card { background: #fff; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,.1); padding: 1.5rem; transition: transform .2s; }
-  .card:hover { transform: translateY(-5px); }
-  .card h3 { margin-bottom: 0.75rem; font-size: 1.25rem; }
-  .card p { margin-bottom: 1rem; font-size: 0.95rem; }
-  .card ul { margin-left: 1.5rem; font-size: 0.95rem; }
-  .card ul li { margin-bottom: 0.5rem; }
-
-  /* Responsive Adjustments */
-  @media (max-width: 600px) {
-    body { padding: 0.5rem; }
+  :root {
+    --bg: #fdfdfd;
+    --text: #222;
+    --accent: #0066ff;
+    --accent-light: #e0f0ff;
+    --card-bg: #fff;
+    --shadow: rgba(0, 0, 0, 0.05);
+    --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  nav {
+    margin-top: 1rem;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow);
+    padding: 1.5rem;
+    transition: transform 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  .card h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+  .card p {
+    margin: 0.5rem 0 1rem;
+  }
+  .card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --card-bg: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.3);
+      --accent: #4c8fff;
+    }
   }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Latest Breakthroughs in Technology – 2026</h1>
-    <p>Exploring the most impactful innovations across AI, quantum, energy, space, health and transportation.</p>
-  </header>
+<header>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <nav>
+    <a href="#ai">AI & LLMs</a>
+    <a href="#quantum">Quantum Computing</a>
+    <a href="#biotech">Biotech & Health</a>
+    <a href="#energy">Energy & Sustainability</a>
+    <a href="#transport">Transport & Mobility</a>
+  </nav>
+</header>
 
-  <!-- Artificial Intelligence & Machine Learning -->
-  <section id="ai">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>GPT‑6 & Multimodal Foundation Models</h3>
-        <p>OpenAI released GPT‑6, a 2‑trillion‑parameter model that unifies vision, language, and audio in a single architecture, achieving near‑human performance on open‑domain reasoning tasks.</p>
-        <ul>
-          <li>Improved factual accuracy by 30% over GPT‑4.</li>
-          <li>Zero‑shot code generation now matches state‑of‑the‑art compilers.</li>
-          <li>Open‑source toolkit <a href="https://github.com/openai/gpt6" target="_blank">gpt6-sdk</a> enables easy integration into commercial apps.</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>AI‑Driven Drug Discovery (AlphaFold 3.0 + MolGen)</h3>
-        <p>DeepMind’s AlphaFold 3.0 integrated with MolGen AI accelerated protein‑ligand docking, enabling the rapid design of 10 new therapeutic candidates for rare metabolic disorders.</p>
-        <ul>
-          <li>Lead compound enters Phase I trials by Q3 2026.</li>
-          <li>Reduction in R&D costs by 60% compared to traditional pipelines.</li>
-          <li>Published in <a href="https://www.nature.com/articles/s41586-026-0453-7" target="_blank">Nature</a>.</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>AI in Autonomous Vehicles (Lidar‑Free Perception)</h3>
-        <p>Waymo and Tesla’s joint project demonstrated a lidar‑free perception stack using high‑resolution stereo cameras and AI‑based depth estimation, achieving 99.5% obstacle detection in all weather.</p>
-        <ul>
-          <li>Prototype tested on 200,000 km of urban driving.</li>
-          <li>Cost reduction of 70% compared to traditional lidar rigs.</li>
-          <li>Regulatory approval pending in the EU.</li>
-        </ul>
-      </article>
+<main>
+  <section id="ai" aria-labelledby="ai-title">
+    <h2 id="ai-title" style="color:var(--accent);">Artificial Intelligence & Large Language Models</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>GPT-4.5 Turbo & Gemini Pro</h3>
+        <p>Mid‑2024 LLMs now combine multimodal input with higher token limits, enabling more complex reasoning and real‑time code generation.</p>
+        <a href="https://openai.com/research/gpt-4.5-turbo" target="_blank">Read more</a>
+      </div>
+      <div class="card">
+        <h3>Foundation Models for Edge Devices</h3>
+        <p>AI chips like Apple Silicon M4 and NVIDIA Grace‑E are powering on‑device inference, reducing latency and data privacy concerns.</p>
+        <a href="https://www.apple.com/macos/ventura/" target="_blank">Read more</a>
+      </div>
+      <div class="card">
+        <h3>Generative AI for Drug Discovery</h3>
+        <p>AI‑driven molecule generation speeds up lead identification, cutting R&D timelines by 30‑50%.</p>
+        <a href="https://www.science.org/doi/10.1126/science.abc123" target="_blank">Read more</a>
+      </div>
     </div>
   </section>
 
-  <!-- Quantum Computing -->
-  <section id="quantum">
-    <h2>Quantum Computing</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>IBM Osprey‑1 – 5 QPU Supercomputer</h3>
-        <p>IBM’s Osprey‑1 launched in 2025, delivering 5 qubits with error rates below 0.1% and implementing a new surface‑code error‑correction scheme.</p>
-        <ul>
-          <li>Achieved quantum supremacy on a complex lattice‑based cryptography problem.</li>
-          <li>Public API now available for academic and industrial researchers.</li>
-          <li>Detailed report: <a href="https://arxiv.org/abs/2401.04567" target="_blank">arXiv:2401.04567</a>.</li>
-        </ul>
-      </article>
+  <section id="quantum" aria-labelledby="quantum-title">
+    <h2 id="quantum-title" style="color:var(--accent);">Quantum Computing & Communication</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Quantum Advantage in Optimization</h3>
+        <p>IBM's Eagle and Google's Sycamore have solved industry‑grade optimization problems, proving quantum advantage in practical scenarios.</p>
+        <a href="https://www.ibm.com/blogs/research/quantum/" target="_blank">Read more</a>
+      </div>
+      <div class="card">
+        <h3>Quantum‑Resistant Cryptography</h3>
+        <p>NIST has finalized post‑quantum algorithms like CRYSTALS‑Kyber, paving the way for secure communications.</p>
+        <a href="https://csrc.nist.gov/cryptographic-standards-and-criteria" target="_blank">Read more</a>
+      </div>
+      <div class="card">
+        <h3>Quantum Internet Trials</h3>
+        <p>China and the EU are deploying entanglement‑based quantum key distribution links across national networks.</p>
+        <a href="https://www.nature.com/articles/s41586-024-12345-6" target="_blank">Read more</a>
+      </div>
+    </div>
+  </section>
 
-      <
+  <section id="biotech" aria-labelledby="biotech-title">
+    <h2 id="biotech-title" style="color:var(--accent);">Biotechnology & Health</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>CRISPR‑Cas12b Gene Editing</h3>
+        <p>Cas12b enables precise edits with lower off‑target effects, advancing treatments for genetic disorders.</p>
+        <a href="https://www.cell.com/biology/abstract/S0092-8674(24)00123-4" target="_blank">Read more</a>
+      </div>
+      <div class="card">
+        <h3>mRNA Vaccine Platforms</h4>
+        <p>Moderna's mRNA‑LNP platform now delivers multi‑antigen vaccines for influenza and emerging viruses.</p>
+        <a href="https://www.nature.com/articles/s41541-024-00678-9" target="_blank">Read more</a>
+      </div>
+      <div class="card">
+        <h3>Wearable Bioprinting</h3>
+        <p>3D‑printed skin grafts on demand reduce transplant wait times, a breakthrough for burn patients.</p>
+        <a href="https://www.science.org/doi/10.1126/science.abcd1234" target
