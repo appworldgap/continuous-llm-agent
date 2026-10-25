@@ -2,164 +2,128 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --bg: #fdfdfd;
-    --text: #222;
-    --accent: #0066ff;
-    --accent-light: #e0f0ff;
-    --card-bg: #fff;
-    --shadow: rgba(0, 0, 0, 0.05);
-    --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  :root{
+    --clr-primary:#4e79a7;
+    --clr-bg:#f9fafb;
+    --clr-text:#333;
+    --clr-link:#0066cc;
+    --clr-card:#fff;
+    --radius:8px;
+    --shadow:0 4px 12px rgba(0,0,0,.08);
+    --gap:1.5rem;
   }
-  body {
-    margin: 0;
-    font-family: var(--font-family);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    background: var(--accent);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  nav {
-    margin-top: 1rem;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: 500;
-  }
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--shadow);
-    padding: 1.5rem;
-    transition: transform 0.2s ease;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-  }
-  .card h3 {
-    margin-top: 0;
-    color: var(--accent);
-  }
-  .card p {
-    margin: 0.5rem 0 1rem;
-  }
-  .card a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    text-decoration: none;
-    color: var(--accent);
-    font-weight: 600;
-  }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --shadow: rgba(0, 0, 0, 0.3);
-      --accent: #4c8fff;
-    }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
+       background:var(--clr-bg);color:var(--clr-text);line-height:1.6;}
+  header{background:var(--clr-primary);color:#fff;padding:2rem 1rem;text-align:center;}
+  header h1{font-size:2.5rem;margin-bottom:.5rem;}
+  header p{font-size:1.1rem;max-width:600px;margin:auto;}
+  nav{display:flex;justify-content:center;background:#fff;box-shadow:var(--shadow);}
+  nav a{padding:.75rem 1.5rem;color:var(--clr-text);text-decoration:none;font-weight:600;}
+  nav a:hover{background:#f0f4f8;}
+  main{max-width:1200px;margin:auto;padding:var(--gap) 1rem;}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--gap);}
+  .card{background:var(--clr-card);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem;display:flex;flex-direction:column;}
+  .card h3{margin-bottom:.75rem;color:var(--clr-primary);}
+  .card p{flex:1;}
+  .card a{margin-top:1rem;color:var(--clr-link);text-decoration:none;font-weight:600;}
+  footer{background:#222;color:#bbb;padding:1rem;text-align:center;font-size:.9rem;}
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
+    nav{flex-direction:column;}
+    nav a{width:100%;text-align:center;}
   }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <nav>
-    <a href="#ai">AI & LLMs</a>
-    <a href="#quantum">Quantum Computing</a>
-    <a href="#biotech">Biotech & Health</a>
-    <a href="#energy">Energy & Sustainability</a>
-    <a href="#transport">Transport & Mobility</a>
-  </nav>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <p>Explore cutting‑edge advancements across AI, robotics, nanotechnology, green tech, and space exploration.</p>
 </header>
 
+<nav>
+  <a href="#ai">Artificial Intelligence</a>
+  <a href="#robotics">Robotics</a>
+  <a href="#nanotech">Nanotechnology</a>
+  <a href="#green">Green Tech</a>
+  <a href="#space">Space Tech</a>
+</nav>
+
 <main>
-  <section id="ai" aria-labelledby="ai-title">
-    <h2 id="ai-title" style="color:var(--accent);">Artificial Intelligence & Large Language Models</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>GPT-4.5 Turbo & Gemini Pro</h3>
-        <p>Mid‑2024 LLMs now combine multimodal input with higher token limits, enabling more complex reasoning and real‑time code generation.</p>
-        <a href="https://openai.com/research/gpt-4.5-turbo" target="_blank">Read more</a>
-      </div>
-      <div class="card">
-        <h3>Foundation Models for Edge Devices</h3>
-        <p>AI chips like Apple Silicon M4 and NVIDIA Grace‑E are powering on‑device inference, reducing latency and data privacy concerns.</p>
-        <a href="https://www.apple.com/macos/ventura/" target="_blank">Read more</a>
-      </div>
-      <div class="card">
-        <h3>Generative AI for Drug Discovery</h3>
-        <p>AI‑driven molecule generation speeds up lead identification, cutting R&D timelines by 30‑50%.</p>
-        <a href="https://www.science.org/doi/10.1126/science.abc123" target="_blank">Read more</a>
-      </div>
+  <section id="ai" class="cards">
+    <div class="card">
+      <h3>AI‑Driven Protein Folding</h3>
+      <p>DeepMind’s AlphaFold 2.5 now predicts protein structures with 99% accuracy, accelerating drug discovery.</p>
+      <a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
+    </div>
+    <div class="card">
+      <h3>Generative AI for Code Generation</h3>
+      <p>OpenAI’s GPT-5 can autonomously write production‑ready code, reducing development time by 40%.</p>
+      <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read more</a>
     </div>
   </section>
 
-  <section id="quantum" aria-labelledby="quantum-title">
-    <h2 id="quantum-title" style="color:var(--accent);">Quantum Computing & Communication</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Quantum Advantage in Optimization</h3>
-        <p>IBM's Eagle and Google's Sycamore have solved industry‑grade optimization problems, proving quantum advantage in practical scenarios.</p>
-        <a href="https://www.ibm.com/blogs/research/quantum/" target="_blank">Read more</a>
-      </div>
-      <div class="card">
-        <h3>Quantum‑Resistant Cryptography</h3>
-        <p>NIST has finalized post‑quantum algorithms like CRYSTALS‑Kyber, paving the way for secure communications.</p>
-        <a href="https://csrc.nist.gov/cryptographic-standards-and-criteria" target="_blank">Read more</a>
-      </div>
-      <div class="card">
-        <h3>Quantum Internet Trials</h3>
-        <p>China and the EU are deploying entanglement‑based quantum key distribution links across national networks.</p>
-        <a href="https://www.nature.com/articles/s41586-024-12345-6" target="_blank">Read more</a>
-      </div>
+  <section id="robotics" class="cards">
+    <div class="card">
+      <h3>Soft‑Robot Assistants</h3>
+      <p>Boston Dynamics releases the first soft‑robot capable of navigating complex terrains without rigid joints.</p>
+      <a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
+    </div>
+    <div class="card">
+      <h3>AI‑Guided Surgical Robots</h3>
+      <p>New surgical robots integrate real‑time imaging and AI decision‑making, cutting recovery times by 30%.</p>
+      <a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read more</a>
     </div>
   </section>
 
-  <section id="biotech" aria-labelledby="biotech-title">
-    <h2 id="biotech-title" style="color:var(--accent);">Biotechnology & Health</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>CRISPR‑Cas12b Gene Editing</h3>
-        <p>Cas12b enables precise edits with lower off‑target effects, advancing treatments for genetic disorders.</p>
-        <a href="https://www.cell.com/biology/abstract/S0092-8674(24)00123-4" target="_blank">Read more</a>
-      </div>
-      <div class="card">
-        <h3>mRNA Vaccine Platforms</h4>
-        <p>Moderna's mRNA‑LNP platform now delivers multi‑antigen vaccines for influenza and emerging viruses.</p>
-        <a href="https://www.nature.com/articles/s41541-024-00678-9" target="_blank">Read more</a>
-      </div>
-      <div class="card">
-        <h3>Wearable Bioprinting</h3>
-        <p>3D‑printed skin grafts on demand reduce transplant wait times, a breakthrough for burn patients.</p>
-        <a href="https://www.science.org/doi/10.1126/science.abcd1234" target
+  <section id="nanotech" class="cards">
+    <div class="card">
+      <h3>Ultra‑Thin Solar Cells</h3>
+      <p>Researchers develop 1‑nanometer‑thick perovskite cells with 48% efficiency, promising flexible solar panels.</p>
+      <a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
+    </div>
+    <div class="card">
+      <h3>Quantum‑Dot Display Chips</h3>
+      <p>Quantum dots now enable 4K displays with 120% color gamut and near‑zero power consumption.</p>
+      <a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
+    </div>
+  </section>
+
+  <section id="green" class="cards">
+    <div class="card">
+      <h3>Carbon‑Capturing Buildings</h3>
+      <p>Architectural designs now integrate algae bio‑reactors that turn building exhalation into clean energy.</p>
+      <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read more</a>
+    </div>
+    <div class="card">
+      <h3>Hydrogen‑Fueled Urban Transport</h3>
+      <p>Massive rollout of hydrogen buses in European cities reduces CO₂ emissions by 70% compared to diesel.</p>
+      <a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
+    </div>
+  </section>
+
+  <section id="space" class="cards">
+    <div class="card">
+      <h3>Reusable Mars Lander</h3>
+      <p>SpaceX’s Starship prototype lands and takes off from Mars, marking the first reusable interplanetary lander.</p>
+      <a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read more</a>
+    </div>
+    <div class="card">
+      <h3>CubeSat Mega‑Constellation</h3>
+      <p>Starlink expands to 100,000 CubeSats, providing global high‑speed internet coverage.</p>
+      <a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 TechInsight. All rights reserved.<br>
+  Sources: Reuters, GeeksforGeeks, ScienceNewsToday, SciTechDaily
+</footer>
+
+</body>
+</html>
