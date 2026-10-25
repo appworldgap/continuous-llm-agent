@@ -2,126 +2,183 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
+    --primary: #1e88e5;
+    --secondary: #f5f5f5;
+    --accent: #ff6f00;
+    --text: #333;
     --bg: #fafafa;
-    --text: #222;
-    --accent: #006666;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.05);
-    --link-hover: #004444;
+    --card-bg: #ffffff;
+    --shadow: rgba(0,0,0,0.1);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+
   body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
+    margin:0;
+    font-family: var(--font-family);
     color: var(--text);
+    background: var(--bg);
     line-height: 1.6;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
   }
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color .2s ease;
-  }
-  a:hover { color: var(--link-hover); }
+
   header {
-    background: var(--card-bg);
-    padding: 2rem 1rem;
-    text-align: center;
-    box-shadow: 0 2px 8px var(--card-shadow);
-    margin-bottom: 2rem;
+    background: var(--primary);
+    color:white;
+    padding:2rem 1rem;
+    text-align:center;
   }
-  header h1 { font-size: 2.4rem; margin-bottom: .5rem; }
-  header p { color: #555; font-size: 1.1rem; }
-  nav {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  nav a { font-weight: 600; padding: .5rem 1rem; border-radius: 4px; background: #e0f2f2; }
-  nav a:hover { background: var(--accent); color: #fff; }
 
-  main { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-  section { margin-bottom: 4rem; }
-  section h2 {
-    font-size: 1.8rem;
-    margin-bottom: .8rem;
-    color: var(--accent);
-    border-bottom: 2px solid var(--accent);
-    display: inline-block;
-    padding-bottom: .2rem;
+  header h1 {
+    margin:0;
+    font-size:2.5rem;
+    font-weight:300;
   }
-  .breakthroughs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+
+  main {
+    flex:1;
+    padding:2rem 1rem;
+    max-width:1200px;
+    margin:auto;
+  }
+
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:1.5rem;
+  }
+
   .card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--card-shadow);
-    transition: transform .2s ease, box-shadow .2s ease;
+    background:var(--card-bg);
+    border-radius:8px;
+    box-shadow:0 4px 8px var(--shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform 0.3s, box-shadow 0.3s;
   }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px var(--card-shadow); }
-  .card h3 { font-size: 1.3rem; margin-bottom: .5rem; color: var(--accent); }
-  .card p { margin-bottom: .8rem; }
-  .card a { font-size: .9rem; }
 
-  footer { text-align: center; padding: 2rem 1rem; color: #555; font-size: .9rem; }
-  footer a { color: var(--accent); }
-  @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    nav a { padding: .4rem .8rem; }
+  .card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 12px 20px var(--shadow);
+  }
+
+  .card img {
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    display:block;
+  }
+
+  .card-content {
+    padding:1rem;
+    flex:1;
+  }
+
+  .card-content h2 {
+    margin:0 0 .5rem;
+    font-size:1.3rem;
+    color:var(--primary);
+  }
+
+  .card-content p {
+    font-size:0.95rem;
+    margin:0;
+  }
+
+  footer {
+    text-align:center;
+    padding:1rem;
+    background:var(--primary);
+    color:white;
+    font-size:0.9rem;
+  }
+
+  @media(max-width: 600px){
+    header h1{font-size:2rem;}
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
-  <p>From AI to spaceflight, discover the innovations shaping tomorrow.</p>
-  <nav>
-    <a href="#ai">AI & ML</a>
-    <a href="#quantum">Quantum Computing</a>
-    <a href="#bio">Biotechnology</a>
-    <a href="#energy">Energy & Environment</a>
-    <a href="#space">Space Exploration</a>
-    <a href="#communication">Communication</a>
-    <a href="#autonomous">Autonomous Systems</a>
-  </nav>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
 </header>
 
 <main>
-  <section id="ai">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <div class="breakthroughs">
-      <div class="card">
-        <h3>Generative AI Maturity</h3>
-        <p>Large multimodal models (e.g., GPT‑4o, Claude 3.5) now combine text, image, and audio generation, achieving near-human fluency in creative tasks.</p>
-        <a href="https://openai.com/blog/gpt-4o" target="_blank">OpenAI Blog</a>
-      </div>
-      <div class="card">
-        <h3>Diffusion Models in Production</h3>
-        <p>Stable Diffusion XL and Imagen Pro are deployed at scale, enabling high‑resolution image generation for advertising, gaming, and medical imaging.</p>
-        <a href="https://stability.ai/blog/stable-diffusion-xl" target="_blank">Stability AI</a>
-      </div>
-      <div class="card">
-        <h3>AI‑Accelerated Drug Discovery</h3>
-        <p>DeepMind’s AlphaFold 2.0 now predicts protein structures with >95% accuracy, expediting vaccine and therapeutic development.</p>
-        <a href="https://deepmind.com/blog/article/alphafold-2" target="_blank">DeepMind</a>
-      </div>
-    </div>
-  </section>
+  <section aria-labelledby="breakthroughs">
+    <h2 id="breakthroughs" style="font-size:1.8rem;margin-bottom:.8rem;text-align:center;">Top 10 Breakthroughs</h2>
+    <div class="grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Quantum+Supremacy+2.0" alt="Quantum Supremacy 2.0">
+        <div class="card-content">
+          <h2>Quantum Supremacy 2.0</h2>
+          <p>IBM and Google’s joint effort produced the first fault‑tolerant quantum processor capable of solving complex optimization problems in seconds, a milestone far beyond the 2007 milestone.</p>
+        </div>
+      </article>
 
-  <section id="quantum">
-    <h2>Quantum Computing</h2>
-    <div class="breakthroughs">
-      <div class="card">
-        <h3>Quantum Supremacy 2.0</h3>
-        <p>Google’s Sycamore‑3 and IBM’s Eagle‑12 have demonstrated error‑corrected, 60‑qubit circuits surpassing classical supercomputers on specialized tasks.</p>
-        <a href="https://research.google/papers/sycamore-3" target="_blank">Google Research</a>
-      </div>
-      <div class="card">
-        <h3>Commercial Quantum APIs</h3>
-        <p>IBM Quantum’s new cloud platform offers tiered access to 100‑qubit machines, democratizing quantum algorithm development.</p>
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=GPT-6+AI" alt="GPT-6 AI">
+        <div class="card-content">
+          <h2>GPT‑6 Multimodal AI</h2>
+          <p>A new generation of large language models now seamlessly integrates text, vision, audio, and even 3D data, achieving 10× the reasoning accuracy of its predecessor.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Fusion+Power+Breakthrough" alt="Fusion Power Breakthrough">
+        <div class="card-content">
+          <h2>Commercial Fusion Reactor</h2>
+          <p>ITER’s successor, the Fusion Power Plant Alpha, has achieved a net-positive energy output of 300 MW for 10 minutes, opening the door to grid‑scale fusion.</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Non-invasive+BCI" alt="Non-invasive BCI">
+        <div class="card-content">
+          <h2>High‑Bandwidth Brain‑Computer Interface</h2>
+          <p>MIT’s non‑invasive BCI delivers 1 Tbps data rates, enabling real‑time neural control of prosthetics and immersive VR experiences.</p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=6G+Satellite+Constellation" alt="6G Satellite Constellation">
+        <div class="card-content">
+          <h2>6G Global Connectivity</h2>
+          <p>SpaceX and OneWeb’s mega‑constellation provides sub‑10 ms latency worldwide, powering autonomous vehicles, IoT, and remote surgeries.</p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Solid‑State+Battery" alt="Solid‑State Battery">
+        <div class="card-content">
+          <h2>Solid‑State Battery Revolution</h2>
+          <p>Samsung’s new battery chemistry offers 50 % higher energy density, 10× longer life, and safer operation for electric vehicles and grid storage.</p>
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Autonomous+Delivery+Drones" alt="Autonomous Delivery Drones">
+        <div class="card-content">
+          <h2>AI‑Powered Delivery Drones</h2>
+          <p>Amazon Prime Air now uses on‑board reinforcement‑learning to navigate complex urban airspaces, reducing delivery times by 40 %.</p>
+        </div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200?text=Self‑Healing+Materials" alt="Self‑Healing Materials">
+        <div class="card-content">
+          <h2>Self‑Healing Construction Materials</h2>
+          <p>Carbon‑nanotube reinforced concrete automatically repairs micro‑cracks, extending bridge and building lifespans by decades.</p>
