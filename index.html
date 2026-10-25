@@ -2,183 +2,97 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary: #1e88e5;
-    --secondary: #f5f5f5;
-    --accent: #ff6f00;
-    --text: #333;
-    --bg: #fafafa;
-    --card-bg: #ffffff;
-    --shadow: rgba(0,0,0,0.1);
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+/* Global Resets */
+* {box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:#f7f9fc;color:#333;line-height:1.6;}
+a{color:#0066cc;text-decoration:none;}
+a:hover{color:#004999;}
 
-  body {
-    margin:0;
-    font-family: var(--font-family);
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.6;
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
-  }
+/* Layout */
+.wrapper{max-width:1200px;margin:auto;padding:2rem;}
+header{text-align:center;margin-bottom:3rem;}
+header h1{font-size:3rem;letter-spacing:-1px;margin-bottom:.5rem;}
+header p{font-size:1.2rem;color:#666;}
 
-  header {
-    background: var(--primary);
-    color:white;
-    padding:2rem 1rem;
-    text-align:center;
-  }
+/* Cards Grid */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
 
-  header h1 {
-    margin:0;
-    font-size:2.5rem;
-    font-weight:300;
-  }
+/* Individual Card */
+.card{background:#fff;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.05);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s ease;}
+.card:hover{transform:translateY(-5px);}
+.card img{width:100%;height:180px;object-fit:cover;}
+.card-body{padding:1.5rem;flex:1;}
+.card-body h3{font-size:1.25rem;margin-bottom:.8rem;}
+.card-body p{font-size:.95rem;color:#555;margin-bottom:1.2rem;}
+.card-body a{display:inline-block;background:#0066cc;color:#fff;padding:.5rem 1rem;border-radius:4px;transition:background .3s;}
+.card-body a:hover{background:#004999;}
 
-  main {
-    flex:1;
-    padding:2rem 1rem;
-    max-width:1200px;
-    margin:auto;
-  }
-
-  .grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-    gap:1.5rem;
-  }
-
-  .card {
-    background:var(--card-bg);
-    border-radius:8px;
-    box-shadow:0 4px 8px var(--shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform 0.3s, box-shadow 0.3s;
-  }
-
-  .card:hover {
-    transform:translateY(-5px);
-    box-shadow:0 12px 20px var(--shadow);
-  }
-
-  .card img {
-    width:100%;
-    height:160px;
-    object-fit:cover;
-    display:block;
-  }
-
-  .card-content {
-    padding:1rem;
-    flex:1;
-  }
-
-  .card-content h2 {
-    margin:0 0 .5rem;
-    font-size:1.3rem;
-    color:var(--primary);
-  }
-
-  .card-content p {
-    font-size:0.95rem;
-    margin:0;
-  }
-
-  footer {
-    text-align:center;
-    padding:1rem;
-    background:var(--primary);
-    color:white;
-    font-size:0.9rem;
-  }
-
-  @media(max-width: 600px){
-    header h1{font-size:2rem;}
-  }
+/* Footer */
+footer{text-align:center;margin-top:3rem;font-size:.9rem;color:#777;}
+footer a{color:#0066cc;}
+footer a:hover{color:#004999;}
 </style>
 </head>
 <body>
+<div class="wrapper">
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
+<h1>Latest Breakthroughs in Technology</h1>
+<p>Discover the most recent innovations reshaping our world—from AI and robotics to green technology and beyond.</p>
 </header>
 
 <main>
-  <section aria-labelledby="breakthroughs">
-    <h2 id="breakthroughs" style="font-size:1.8rem;margin-bottom:.8rem;text-align:center;">Top 10 Breakthroughs</h2>
-    <div class="grid">
-      <!-- Card 1 -->
-      <article class="card">
-        <img src="https://via.placeholder.com/400x200?text=Quantum+Supremacy+2.0" alt="Quantum Supremacy 2.0">
-        <div class="card-content">
-          <h2>Quantum Supremacy 2.0</h2>
-          <p>IBM and Google’s joint effort produced the first fault‑tolerant quantum processor capable of solving complex optimization problems in seconds, a milestone far beyond the 2007 milestone.</p>
-        </div>
-      </article>
+<div class="cards">
 
-      <!-- Card 2 -->
-      <article class="card">
-        <img src="https://via.placeholder.com/400x200?text=GPT-6+AI" alt="GPT-6 AI">
-        <div class="card-content">
-          <h2>GPT‑6 Multimodal AI</h2>
-          <p>A new generation of large language models now seamlessly integrates text, vision, audio, and even 3D data, achieving 10× the reasoning accuracy of its predecessor.</p>
-        </div>
-      </article>
+<!-- Card 1: Reuters Technology -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60" alt="Technology News">
+<div class="card-body">
+<h3>Global Tech Trends – Reuters</h3>
+<p>Stay updated on cutting‑edge developments across AI, cybersecurity, and quantum computing.</p>
+<a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
+</div>
+</div>
 
-      <!-- Card 3 -->
-      <article class="card">
-        <img src="https://via.placeholder.com/400x200?text=Fusion+Power+Breakthrough" alt="Fusion Power Breakthrough">
-        <div class="card-content">
-          <h2>Commercial Fusion Reactor</h2>
-          <p>ITER’s successor, the Fusion Power Plant Alpha, has achieved a net-positive energy output of 300 MW for 10 minutes, opening the door to grid‑scale fusion.</p>
-        </div>
-      </article>
+<!-- Card 2: GeeksforGeeks Trends -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581276879432-9d1c5d5e7c4c?auto=format&fit=crop&w=800&q=60" alt="Tech Trends">
+<div class="card-body">
+<h3>New Technology Trends – GeeksforGeeks</h3>
+<p>Explore breakthroughs in AI, connectivity, security, and sustainability shaping 2026.</p>
+<a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read more</a>
+</div>
+</div>
 
-      <!-- Card 4 -->
-      <article class="card">
-        <img src="https://via.placeholder.com/400x200?text=Non-invasive+BCI" alt="Non-invasive BCI">
-        <div class="card-content">
-          <h2>High‑Bandwidth Brain‑Computer Interface</h2>
-          <p>MIT’s non‑invasive BCI delivers 1 Tbps data rates, enabling real‑time neural control of prosthetics and immersive VR experiences.</p>
-        </div>
-      </article>
+<!-- Card 3: ScienceNewsToday -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542744173-8e9e5c6e7f40?auto=format&fit=crop&w=800&q=60" alt="Science News">
+<div class="card-body">
+<h3>Technology News & Innovations – ScienceNewsToday</h3>
+<p>From AI-driven diagnostics to next‑gen robotics, get the latest breakthrough insights.</p>
+<a href="https://www.sciencenewstoday.org/technology" target="_blank">Read more</a>
+</div>
+</div>
 
-      <!-- Card 5 -->
-      <article class="card">
-        <img src="https://via.placeholder.com/400x200?text=6G+Satellite+Constellation" alt="6G Satellite Constellation">
-        <div class="card-content">
-          <h2>6G Global Connectivity</h2>
-          <p>SpaceX and OneWeb’s mega‑constellation provides sub‑10 ms latency worldwide, powering autonomous vehicles, IoT, and remote surgeries.</p>
-        </div>
-      </article>
+<!-- Card 4: SciTechDaily -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526324159337-2b8c8d8e0d66?auto=format&fit=crop&w=800&q=60" alt="SciTech">
+<div class="card-body">
+<h3>Technology News & Research – SciTechDaily</h3>
+<p>Discover advances in nanotechnology, biotechnology, green tech, and more.</p>
+<a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
+</div>
+</div>
 
-      <!-- Card 6 -->
-      <article class="card">
-        <img src="https://via.placeholder.com/400x200?text=Solid‑State+Battery" alt="Solid‑State Battery">
-        <div class="card-content">
-          <h2>Solid‑State Battery Revolution</h2>
-          <p>Samsung’s new battery chemistry offers 50 % higher energy density, 10× longer life, and safer operation for electric vehicles and grid storage.</p>
-        </div>
-      </article>
+</div>
+</main>
 
-      <!-- Card 7 -->
-      <article class="card">
-        <img src="https://via.placeholder.com/400x200?text=Autonomous+Delivery+Drones" alt="Autonomous Delivery Drones">
-        <div class="card-content">
-          <h2>AI‑Powered Delivery Drones</h2>
-          <p>Amazon Prime Air now uses on‑board reinforcement‑learning to navigate complex urban airspaces, reducing delivery times by 40 %.</p>
-        </div>
-      </article>
-
-      <!-- Card 8 -->
-      <article class="card">
-        <img src="https://via.placeholder.com/400x200?text=Self‑Healing+Materials" alt="Self‑Healing Materials">
-        <div class="card-content">
-          <h2>Self‑Healing Construction Materials</h2>
-          <p>Carbon‑nanotube reinforced concrete automatically repairs micro‑cracks, extending bridge and building lifespans by decades.</p>
+<footer>
+<p>© 2026 Latest Breakthroughs in Technology. All rights reserved.</p>
+<p>Powered by <a href="https://www.reuters.com/technology/" target="_blank">Reuters Tech</a></p>
+</footer>
+</div>
+</body>
+</html>
