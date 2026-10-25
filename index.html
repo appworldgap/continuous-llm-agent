@@ -2,128 +2,119 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root{
-    --clr-primary:#4e79a7;
-    --clr-bg:#f9fafb;
-    --clr-text:#333;
-    --clr-link:#0066cc;
-    --clr-card:#fff;
-    --radius:8px;
-    --shadow:0 4px 12px rgba(0,0,0,.08);
-    --gap:1.5rem;
+  :root {
+    --primary: #4f46e5;
+    --secondary: #f3f4f6;
+    --bg: #ffffff;
+    --text: #111827;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0,0,0,0.12);
+    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
-       background:var(--clr-bg);color:var(--clr-text);line-height:1.6;}
-  header{background:var(--clr-primary);color:#fff;padding:2rem 1rem;text-align:center;}
-  header h1{font-size:2.5rem;margin-bottom:.5rem;}
-  header p{font-size:1.1rem;max-width:600px;margin:auto;}
-  nav{display:flex;justify-content:center;background:#fff;box-shadow:var(--shadow);}
-  nav a{padding:.75rem 1.5rem;color:var(--clr-text);text-decoration:none;font-weight:600;}
-  nav a:hover{background:#f0f4f8;}
-  main{max-width:1200px;margin:auto;padding:var(--gap) 1rem;}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--gap);}
-  .card{background:var(--clr-card);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem;display:flex;flex-direction:column;}
-  .card h3{margin-bottom:.75rem;color:var(--clr-primary);}
-  .card p{flex:1;}
-  .card a{margin-top:1rem;color:var(--clr-link);text-decoration:none;font-weight:600;}
-  footer{background:#222;color:#bbb;padding:1rem;text-align:center;font-size:.9rem;}
-  @media(max-width:600px){
-    header h1{font-size:2rem;}
-    nav{flex-direction:column;}
-    nav a{width:100%;text-align:center;}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-stack); line-height: 1.6; }
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--primary);
+    color: #fff;
+  }
+  header h1 { font-size: 2.5rem; }
+  header p { font-size: 1.2rem; margin-top: .5rem; }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px var(--card-shadow); }
+  .card img { width: 100%; height: 180px; object-fit: cover; }
+  .card-content { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
+  .card-content h3 { margin-bottom: .75rem; color: var(--primary); }
+  .card-content p { flex-grow: 1; font-size: .95rem; margin-bottom: 1rem; }
+  .card-content a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    align-self: flex-start;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: .9rem;
+    color: #6b7280;
+  }
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
   }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>Explore cutting‑edge advancements across AI, robotics, nanotechnology, green tech, and space exploration.</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Exploring the forefront of innovation across AI, quantum, biotech, and more</p>
 </header>
 
-<nav>
-  <a href="#ai">Artificial Intelligence</a>
-  <a href="#robotics">Robotics</a>
-  <a href="#nanotech">Nanotechnology</a>
-  <a href="#green">Green Tech</a>
-  <a href="#space">Space Tech</a>
-</nav>
-
 <main>
-  <section id="ai" class="cards">
-    <div class="card">
-      <h3>AI‑Driven Protein Folding</h3>
-      <p>DeepMind’s AlphaFold 2.5 now predicts protein structures with 99% accuracy, accelerating drug discovery.</p>
-      <a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
+  <!-- Artificial Intelligence -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=400&q=60" alt="AI Neural Network">
+    <div class="card-content">
+      <h3>Artificial Intelligence & Machine Learning</h3>
+      <p>2025 marks the release of GPT‑4.5, featuring 1.5 trillion parameters, real‑time multimodal reasoning, and self‑improving safety protocols. Parallelly, AI-driven protein folding models like AlphaFold 2.0 continue to revolutionize drug discovery.</p>
+      <a href="https://openai.com/" target="_blank">OpenAI</a>
     </div>
-    <div class="card">
-      <h3>Generative AI for Code Generation</h3>
-      <p>OpenAI’s GPT-5 can autonomously write production‑ready code, reducing development time by 40%.</p>
-      <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read more</a>
-    </div>
-  </section>
+  </article>
 
-  <section id="robotics" class="cards">
-    <div class="card">
-      <h3>Soft‑Robot Assistants</h3>
-      <p>Boston Dynamics releases the first soft‑robot capable of navigating complex terrains without rigid joints.</p>
-      <a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
+  <!-- Quantum Computing -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1581321544529-ff1f30b1b0b5?auto=format&fit=crop&w=400&q=60" alt="Quantum Computer">
+    <div class="card-content">
+      <h3>Quantum Computing</h3>
+      <p>IBM unveiled its 127‑qubit “Condor” processor with error‑correction codes that push the quantum volume over 1000. Google’s Sycamore platform now achieves “quantum supremacy” for specific cryptographic tasks.</p>
+      <a href="https://www.ibm.com/quantum-computing/" target="_blank">IBM Quantum</a>
     </div>
-    <div class="card">
-      <h3>AI‑Guided Surgical Robots</h3>
-      <p>New surgical robots integrate real‑time imaging and AI decision‑making, cutting recovery times by 30%.</p>
-      <a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read more</a>
-    </div>
-  </section>
+  </article>
 
-  <section id="nanotech" class="cards">
-    <div class="card">
-      <h3>Ultra‑Thin Solar Cells</h3>
-      <p>Researchers develop 1‑nanometer‑thick perovskite cells with 48% efficiency, promising flexible solar panels.</p>
-      <a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
+  <!-- Biotechnology -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1526234614527-1c87e0f2b3b7?auto=format&fit=crop&w=400&q=60" alt="CRISPR Editing">
+    <div class="card-content">
+      <h3>Biotechnology & Gene Editing</h3>
+      <p>CRISPR‑Cas9 advancements enable base‑editing with >99% precision, opening new therapies for inherited retinal diseases. mRNA vaccine platforms now target seasonal influenza with 80%+ efficacy.</p>
+      <a href="https://www.crispr.tech/" target="_blank">CRISPR Therapeutics</a>
     </div>
-    <div class="card">
-      <h3>Quantum‑Dot Display Chips</h3>
-      <p>Quantum dots now enable 4K displays with 120% color gamut and near‑zero power consumption.</p>
-      <a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
-    </div>
-  </section>
+  </article>
 
-  <section id="green" class="cards">
-    <div class="card">
-      <h3>Carbon‑Capturing Buildings</h3>
-      <p>Architectural designs now integrate algae bio‑reactors that turn building exhalation into clean energy.</p>
-      <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read more</a>
+  <!-- Energy Storage -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1541866539-1a6b7e4b1c30?auto=format&fit=crop&w=400&q=60" alt="Solid State Battery">
+    <div class="card-content">
+      <h3>Energy Storage & Batteries</h3>
+      <p>Solid‑state lithium‑silicon batteries now achieve 300 Wh/L density, surpassing conventional Li‑ion tech. Graphene‑based supercapacitors can charge in seconds, promising instant‑on electric vehicles.</p>
+      <a href="https://www.ionq.com/" target="_blank">IonQ</a>
     </div>
-    <div class="card">
-      <h3>Hydrogen‑Fueled Urban Transport</h3>
-      <p>Massive rollout of hydrogen buses in European cities reduces CO₂ emissions by 70% compared to diesel.</p>
-      <a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
-    </div>
-  </section>
+  </article>
 
-  <section id="space" class="cards">
-    <div class="card">
-      <h3>Reusable Mars Lander</h3>
-      <p>SpaceX’s Starship prototype lands and takes off from Mars, marking the first reusable interplanetary lander.</p>
-      <a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read more</a>
-    </div>
-    <div class="card">
-      <h3>CubeSat Mega‑Constellation</h3>
-      <p>Starlink expands to 100,000 CubeSats, providing global high‑speed internet coverage.</p>
-      <a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2026 TechInsight. All rights reserved.<br>
-  Sources: Reuters, GeeksforGeeks, ScienceNewsToday, SciTechDaily
-</footer>
-
-</body>
-</html>
+  <!-- 6G & Connectivity -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1593642634317-58fba6c9d5c2?auto=format&fit=crop&w=400&q=60" alt="6G Network">
+    <div class="card-content">
+      <h3>6G & Next‑Gen Connectivity</h3>
+      <p>Telecom giants begin pilot deployments of 6G at 1 THz frequencies, aiming for 1 Tbps data rates. Edge computing nodes will reduce latency below 0.1 ms, enabling real‑time VR and AR applications.</p>
+      <a href="https://www.3
