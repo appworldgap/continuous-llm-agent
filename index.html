@@ -2,117 +2,139 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology</title>
 <style>
-/* CSS Variables */
-:root {
-  --primary:#2d9cdb;
-  --secondary:#f9c74f;
-  --accent:#6a4c93;
-  --bg:#f8f9fa;
-  --text:#333;
-  --light-text:#555;
-  --font-sans:'Helvetica Neue', Arial, sans-serif;
-  --font-serif:'Georgia', serif;
-}
+  /* CSS Reset */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; background:#f0f4f7; color:#333; }
 
-/* Global Styles */
-* {box-sizing:border-box;margin:0;padding:0;}
-body {
-  font-family: var(--font-sans);
-  background: var(--bg);
-  color: var(--text);
-  line-height:1.6;
-}
-h1,h2,h3{font-family: var(--font-serif);}
+  :root {
+    --primary:#4f46e5;
+    --accent:#06b6d4;
+    --bg-card:#fff;
+    --shadow:#0003;
+  }
 
-/* Layout */
-header{
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color:#fff;
-  padding:3rem 1rem;
-  text-align:center;
-}
-header h1{font-size:3rem; margin-bottom:.5rem;}
-header p{font-size:1.25rem; opacity:.9;}
-main{max-width:960px;margin:auto;padding:2rem 1rem;}
-section{margin-bottom:3rem; padding:2rem 0; border-bottom:1px solid #e0e0e0;}
-section:last-child{border:none;}
-section h2{font-size:1.75rem;color:var(--primary);margin-bottom:.5rem;}
-section p{margin-bottom:1rem; color:var(--light-text);}
-section .icon{
-  display:inline-block;
-  font-size:2rem;
-  margin-right:.5rem;
-  vertical-align:middle;
-}
-footer{
-  text-align:center;
-  padding:1.5rem;
-  font-size:.9rem;
-  color:var(--light-text);
-}
+  header {
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#fff;
+    padding:4rem 1rem;
+    text-align:center;
+  }
+  header h1 { font-size:3rem; margin-bottom:.5rem; }
+  header p { font-size:1.25rem; opacity:.9; }
 
-/* Responsive */
-@media(min-width: 600px){
-  main{padding:4rem 1rem;}
-  header h1{font-size:4rem;}
-  header p{font-size:1.5rem;}
-}
+  .container { max-width:1280px; margin:auto; padding:2rem 1rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
 
-/* Animation */
-section{
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeInUp 0.8s forwards;
-}
-section:nth-child(1){animation-delay:.2s;}
-section:nth-child(2){animation-delay:.4s;}
-section:nth-child(3){animation-delay:.6s;}
-section:nth-child(4){animation-delay:.8s;}
-section:nth-child(5){animation-delay:1s;}
-@keyframes fadeInUp{
-  to{opacity:1;transform:translateY(0);}
-}
+  .card {
+    background:var(--bg-card);
+    border-radius:12px;
+    box-shadow:0 4px 12px var(--shadow);
+    overflow:hidden;
+    transition:transform .2s ease;
+  }
+  .card:hover { transform:translateY(-4px); }
+
+  .card img { width:100%; height:170px; object-fit:cover; }
+  .card-content { padding:1.25rem; }
+  .card h3 { margin-bottom:.75rem; font-size:1.5rem; color:var(--primary); }
+  .card p { font-size:1rem; margin-bottom:1rem; }
+  .card a { text-decoration:none; color:var(--accent); font-weight:600; display:inline-block; }
+
+  footer { text-align:center; padding:2rem 1rem; background:#e8eff5; margin-top:3rem; color:#555; }
+
+  @media (prefers-color-scheme: dark) {
+    body { background:#1a202c; color:#e2e8f0; }
+    .card { background:#2d3748; }
+    .card h3, header h1 { color:#90cdf4; }
+    header { background:linear-gradient(135deg,#2b6cb0,#2c5282); }
+  }
 </style>
 </head>
-
 <body>
+
 <header>
-  <h1>Technology Breakthroughs 2026</h1>
-  <p>From AI Alignment to Fusion Power – the frontier of human ingenuity</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to space exploration – discover what’s shaping the future.</p>
 </header>
 
-<main>
-  <section id="ai">
-    <h2><span class="icon">🤖</span>Artificial Intelligence</h2>
-    <p>GPT‑5 has set a new benchmark in context length, processing 2 million tokens in a single inference. Coupled with the <strong>Alignment Engine™</strong>, it can self‑audit its decisions, reducing hallucinations to <0.01% for factual queries.</p>
-  </section>
+<main class="container">
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/483251/400x250" alt="Generative AI">
+    <div class="card-content">
+      <h3>Generative AI</h3>
+      <p>Massive language and image models now produce realistic text, art, and code, pushing creative and productivity tools to new heights.</p>
+      <a href="#">Read more</a>
+    </div>
+  </article>
 
-  <section id="quantum">
-    <h2><span class="icon">🔬</span>Quantum Computing</h2>
-    <p>Quantum processors now exceed 1,000 logical qubits with error‑correction protocols from <em>QubitShield</em>. This milestone unlocks practical cryptographic attacks and advanced materials simulations that were previously infeasible.</p>
-  </section>
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/113411/400x250" alt="Quantum Computing">
+    <div class="card-content">
+      <h3>Quantum Supremacy</h3>
+      <p>Google’s Sycamore and IBM’s Q System One demonstrate unprecedented processing power for cryptography and complex simulations.</p>
+      <a href="#">Read more</a>
+    </div>
+  </article>
 
-  <section id="energy">
-    <h2><span class="icon">⚡</span>Energy & Sustainability</h2>
-    <p>A commercial <em>Tokamak Fusion Reactor</em> in the UAE achieved net‑positive energy for the first time, delivering 10 MW of continuous power. Concurrently, solid‑state batteries with lithium‑silicon anodes promise 600 Wh kg⁻¹ energy density.</p>
-  </section>
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/205376/400x250" alt="mRNA Vaccines">
+    <div class="card-content">
+      <h3>mRNA Therapeutics</h3>
+      <p>Beyond COVID, mRNA platforms are tackling rare diseases, cancers, and personalized therapies with rapid development cycles.</p>
+      <a href="#">Read more</a>
+    </div>
+  </article>
 
-  <section id="neurotech">
-    <h2><span class="icon">🧠</span>Neurotechnology</h2>
-    <p>Brain‑computer interfaces (BCI) now support bidirectional communication, enabling real‑time prosthetic control and telepathic data sharing. The <strong>NeuralMesh™</strong> platform has been adopted in 35 countries for rehabilitation and communication aids.</p>
-  </section>
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/1545959/400x250" alt="Solid-State Batteries">
+    <div class="card-content">
+      <h3>Solid-State Batteries</h3>
+      <p>Higher energy density, faster charging, and improved safety are making these batteries a reality for electric vehicles.</p>
+      <a href="#">Read more</a>
+    </div>
+  </article>
 
-  <section id="space">
-    <h2><span class="icon">🚀</span>Space & Exploration</h2>
-    <p>Private consortium <em>Solaris Space</em> has launched the first fully autonomous lunar habitat, capable of sustaining 12 crew members for 18 months. The habitat incorporates 3D‑printed regolith bricks and zero‑gravity bioregenerative life‑support.</p>
-  </section>
-</main>
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/2071049/400x250" alt="6G Wireless">
+    <div class="card-content">
+      <h3>6G Prototypes</h3>
+      <p>Explorations into terahertz frequencies and AI-driven network management promise ultra-low latency and hyper-connectivity.</p>
+      <a href="#">Read more</a>
+    </div>
+  </article>
 
-<footer>
-  © 2026 TechInsight – All Rights Reserved
-</footer>
-</body>
-</html>
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/1129/400x250" alt="Autonomous Vehicles">
+    <div class="card-content">
+      <h3>Self-Driving Tech</h3>
+      <p>Tesla, Waymo, and others refine perception and safety, edging toward full autonomy across varied environments.</p>
+      <a href="#">Read more</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/1907275/400x250" alt="CRISPR Advancements">
+    <div class="card-content">
+      <h3>CRISPR Gene Editing</h3>
+      <p>Precise base editing and prime editing expand therapeutic possibilities for genetic disorders.</p>
+      <a href="#">Read more</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/1582132/400x250" alt="Space Launches">
+    <div class="card-content">
+      <h3>Reusable Rockets</h3>
+      <p>SpaceX Starship, Blue Origin, and others are scaling reusable launch systems to open deep space access.</p>
+      <a href="#">Read more</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://source.unsplash.com/collection/1279414/400x250" alt="AI Drug Discovery">
+    <div class="card-content">
+      <h3>AI-Driven Drug Discovery</h3>
+      <p>Machine learning accelerates molecule design, reducing discovery time from years to months.</p>
+      <a href="#">
