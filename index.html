@@ -2,154 +2,117 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables */
-  :root {
-    --bg: #f4f7fa;
-    --accent: #4c6ef5;
-    --text: #2c3e50;
-    --card-bg: #ffffff;
-    --shadow: rgba(0,0,0,0.1);
-    --radius: 12px;
-  }
+/* CSS Variables */
+:root {
+  --primary:#2d9cdb;
+  --secondary:#f9c74f;
+  --accent:#6a4c93;
+  --bg:#f8f9fa;
+  --text:#333;
+  --light-text:#555;
+  --font-sans:'Helvetica Neue', Arial, sans-serif;
+  --font-serif:'Georgia', serif;
+}
 
-  /* Global Styles */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  a { text-decoration: none; color: inherit; }
+/* Global Styles */
+* {box-sizing:border-box;margin:0;padding:0;}
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.6;
+}
+h1,h2,h3{font-family: var(--font-serif);}
 
-  /* Header */
-  header {
-    background: linear-gradient(135deg, var(--accent), #6f42c1);
-    color: #fff;
-    padding: 1.5rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  header h1 { font-size: 1.4rem; font-weight: 600; }
-  nav a { margin-left: 1.5rem; font-weight: 500; transition: opacity .3s; }
-  nav a:hover { opacity: .8; }
+/* Layout */
+header{
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color:#fff;
+  padding:3rem 1rem;
+  text-align:center;
+}
+header h1{font-size:3rem; margin-bottom:.5rem;}
+header p{font-size:1.25rem; opacity:.9;}
+main{max-width:960px;margin:auto;padding:2rem 1rem;}
+section{margin-bottom:3rem; padding:2rem 0; border-bottom:1px solid #e0e0e0;}
+section:last-child{border:none;}
+section h2{font-size:1.75rem;color:var(--primary);margin-bottom:.5rem;}
+section p{margin-bottom:1rem; color:var(--light-text);}
+section .icon{
+  display:inline-block;
+  font-size:2rem;
+  margin-right:.5rem;
+  vertical-align:middle;
+}
+footer{
+  text-align:center;
+  padding:1.5rem;
+  font-size:.9rem;
+  color:var(--light-text);
+}
 
-  /* Hero */
-  .hero {
-    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80') center/cover;
-    color: #fff;
-    padding: 6rem 2rem;
-    text-align: center;
-    position: relative;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4));
-  }
-  .hero > * { position: relative; }
-  .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; }
-  .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
+/* Responsive */
+@media(min-width: 600px){
+  main{padding:4rem 1rem;}
+  header h1{font-size:4rem;}
+  header p{font-size:1.5rem;}
+}
 
-  /* Card Grid */
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-    padding: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: 0 4px 12px var(--shadow);
-    transition: transform .3s, box-shadow .3s;
-  }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px var(--shadow); }
-  .card img { width: 100%; height: 160px; object-fit: cover; }
-  .card-content { padding: 1.2rem; }
-  .card-content h3 { margin-bottom: .5rem; font-size: 1.25rem; }
-  .card-content p { font-size: .95rem; color: #555; }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    color: #777;
-    font-size: .9rem;
-  }
-
-  /* Responsive Tweaks */
-  @media (max-width: 600px) {
-    header h1 { font-size: 1.2rem; }
-    .hero h2 { font-size: 2rem; }
-    .hero p { font-size: 1rem; }
-  }
+/* Animation */
+section{
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeInUp 0.8s forwards;
+}
+section:nth-child(1){animation-delay:.2s;}
+section:nth-child(2){animation-delay:.4s;}
+section:nth-child(3){animation-delay:.6s;}
+section:nth-child(4){animation-delay:.8s;}
+section:nth-child(5){animation-delay:1s;}
+@keyframes fadeInUp{
+  to{opacity:1;transform:translateY(0);}
+}
 </style>
 </head>
 
 <body>
 <header>
-  <h1>Tech Pulse</h1>
-  <nav>
-    <a href="#">AI</a>
-    <a href="#">Quantum</a>
-    <a href="#">Bio</a>
-    <a href="#">Space</a>
-  </nav>
+  <h1>Technology Breakthroughs 2026</h1>
+  <p>From AI Alignment to Fusion Power – the frontier of human ingenuity</p>
 </header>
 
-<section class="hero">
-  <h2>Latest Breakthroughs in Technology</h2>
-  <p>Explore the cutting‑edge discoveries that are shaping tomorrow—from AI that writes code, to quantum processors that solve problems in milliseconds, to gene editing that could cure genetic diseases.</p>
-</section>
+<main>
+  <section id="ai">
+    <h2><span class="icon">🤖</span>Artificial Intelligence</h2>
+    <p>GPT‑5 has set a new benchmark in context length, processing 2 million tokens in a single inference. Coupled with the <strong>Alignment Engine™</strong>, it can self‑audit its decisions, reducing hallucinations to <0.01% for factual queries.</p>
+  </section>
 
-<main class="grid">
-  <!-- Artificial Intelligence -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1587620962725-abab7b5b1f75?auto=format&fit=crop&w=400&q=80" alt="AI">
-    <div class="card-content">
-      <h3>Generative AI Advances</h3>
-      <p>OpenAI’s GPT‑5 and other large‑language models now understand context over 50 000 tokens, enabling more coherent long‑form content and real‑time collaboration tools.</p>
-    </div>
-  </article>
+  <section id="quantum">
+    <h2><span class="icon">🔬</span>Quantum Computing</h2>
+    <p>Quantum processors now exceed 1,000 logical qubits with error‑correction protocols from <em>QubitShield</em>. This milestone unlocks practical cryptographic attacks and advanced materials simulations that were previously infeasible.</p>
+  </section>
 
-  <!-- Quantum Computing -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1584697964409-5f0b1d1e8d8f?auto=format&fit=crop&w=400&q=80" alt="Quantum">
-    <div class="card-content">
-      <h3>Quantum Supremacy Achieved</h3>
-      <p>Google’s Sycamore processor completed a 53‑qubit calculation in 200 seconds, far surpassing the best classical supercomputers—ushering in a new era of quantum advantage.</p>
-    </div>
-  </article>
+  <section id="energy">
+    <h2><span class="icon">⚡</span>Energy & Sustainability</h2>
+    <p>A commercial <em>Tokamak Fusion Reactor</em> in the UAE achieved net‑positive energy for the first time, delivering 10 MW of continuous power. Concurrently, solid‑state batteries with lithium‑silicon anodes promise 600 Wh kg⁻¹ energy density.</p>
+  </section>
 
-  <!-- Gene Editing -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1550439062-6094a1a1e3ca?auto=format&fit=crop&w=400&q=80" alt="Gene Editing">
-    <div class="card-content">
-      <h3>CRISPR‑C: Precision Gene Editing</h3>
-      <p>Scientists have developed CRISPR‑C, a base‑editing platform that corrects point mutations in living cells with near‑zero off‑target effects, offering hope for monogenic diseases.</p>
-    </div>
-  </article>
+  <section id="neurotech">
+    <h2><span class="icon">🧠</span>Neurotechnology</h2>
+    <p>Brain‑computer interfaces (BCI) now support bidirectional communication, enabling real‑time prosthetic control and telepathic data sharing. The <strong>NeuralMesh™</strong> platform has been adopted in 35 countries for rehabilitation and communication aids.</p>
+  </section>
 
-  <!-- Space Exploration -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1573497493555-b6c6b2c1d7ac?auto=format&fit=crop&w=400&q=80" alt="Space">
-    <div class="card-content">
-      <h3>Starship Demonstrates Re‑usability</h3>
-      <p>SpaceX’s Starship successfully completed its first orbital flight with a fully reusable design, cutting launch costs and paving the way for Mars missions.</p>
-    </div>
-  </article>
+  <section id="space">
+    <h2><span class="icon">🚀</span>Space & Exploration</h2>
+    <p>Private consortium <em>Solaris Space</em> has launched the first fully autonomous lunar habitat, capable of sustaining 12 crew members for 18 months. The habitat incorporates 3D‑printed regolith bricks and zero‑gravity bioregenerative life‑support.</p>
+  </section>
+</main>
 
-  <!-- 5G & 6G Connectivity -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1580670627298-4c2b5b3f5a4a?auto=format&fit=crop&w=400&q=80" alt="Connectivity">
-    <div class="card
+<footer>
+  © 2026 TechInsight – All Rights Reserved
+</footer>
+</body>
+</html>
