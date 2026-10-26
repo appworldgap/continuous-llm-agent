@@ -5,116 +5,151 @@
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* CSS Variables */
   :root {
-    --primary: #4f46e5;
-    --secondary: #f3f4f6;
-    --bg: #ffffff;
-    --text: #111827;
+    --bg: #f4f7fa;
+    --accent: #4c6ef5;
+    --text: #2c3e50;
     --card-bg: #ffffff;
-    --card-shadow: rgba(0,0,0,0.12);
-    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --shadow: rgba(0,0,0,0.1);
+    --radius: 12px;
   }
+
+  /* Global Styles */
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: var(--font-stack); line-height: 1.6; }
-  header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: var(--primary);
-    color: #fff;
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
   }
-  header h1 { font-size: 2.5rem; }
-  header p { font-size: 1.2rem; margin-top: .5rem; }
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  a { text-decoration: none; color: inherit; }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, var(--accent), #6f42c1);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header h1 { font-size: 1.4rem; font-weight: 600; }
+  nav a { margin-left: 1.5rem; font-weight: 500; transition: opacity .3s; }
+  nav a:hover { opacity: .8; }
+
+  /* Hero */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80') center/cover;
+    color: #fff;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4));
+  }
+  .hero > * { position: relative; }
+  .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; }
+  .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
+
+  /* Card Grid */
+  .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
   .card {
     background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px var(--card-shadow);
+    border-radius: var(--radius);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform .3s, box-shadow .3s;
   }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px var(--card-shadow); }
-  .card img { width: 100%; height: 180px; object-fit: cover; }
-  .card-content { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
-  .card-content h3 { margin-bottom: .75rem; color: var(--primary); }
-  .card-content p { flex-grow: 1; font-size: .95rem; margin-bottom: 1rem; }
-  .card-content a {
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: 600;
-    align-self: flex-start;
-  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px var(--shadow); }
+  .card img { width: 100%; height: 160px; object-fit: cover; }
+  .card-content { padding: 1.2rem; }
+  .card-content h3 { margin-bottom: .5rem; font-size: 1.25rem; }
+  .card-content p { font-size: .95rem; color: #555; }
+
+  /* Footer */
   footer {
     text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
+    padding: 1rem 0;
+    color: #777;
     font-size: .9rem;
-    color: #6b7280;
   }
+
+  /* Responsive Tweaks */
   @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
+    header h1 { font-size: 1.2rem; }
+    .hero h2 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
   }
 </style>
 </head>
+
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Exploring the forefront of innovation across AI, quantum, biotech, and more</p>
+  <h1>Tech Pulse</h1>
+  <nav>
+    <a href="#">AI</a>
+    <a href="#">Quantum</a>
+    <a href="#">Bio</a>
+    <a href="#">Space</a>
+  </nav>
 </header>
 
-<main>
+<section class="hero">
+  <h2>Latest Breakthroughs in Technology</h2>
+  <p>Explore the cutting‑edge discoveries that are shaping tomorrow—from AI that writes code, to quantum processors that solve problems in milliseconds, to gene editing that could cure genetic diseases.</p>
+</section>
+
+<main class="grid">
   <!-- Artificial Intelligence -->
   <article class="card">
-    <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=400&q=60" alt="AI Neural Network">
+    <img src="https://images.unsplash.com/photo-1587620962725-abab7b5b1f75?auto=format&fit=crop&w=400&q=80" alt="AI">
     <div class="card-content">
-      <h3>Artificial Intelligence & Machine Learning</h3>
-      <p>2025 marks the release of GPT‑4.5, featuring 1.5 trillion parameters, real‑time multimodal reasoning, and self‑improving safety protocols. Parallelly, AI-driven protein folding models like AlphaFold 2.0 continue to revolutionize drug discovery.</p>
-      <a href="https://openai.com/" target="_blank">OpenAI</a>
+      <h3>Generative AI Advances</h3>
+      <p>OpenAI’s GPT‑5 and other large‑language models now understand context over 50 000 tokens, enabling more coherent long‑form content and real‑time collaboration tools.</p>
     </div>
   </article>
 
   <!-- Quantum Computing -->
   <article class="card">
-    <img src="https://images.unsplash.com/photo-1581321544529-ff1f30b1b0b5?auto=format&fit=crop&w=400&q=60" alt="Quantum Computer">
+    <img src="https://images.unsplash.com/photo-1584697964409-5f0b1d1e8d8f?auto=format&fit=crop&w=400&q=80" alt="Quantum">
     <div class="card-content">
-      <h3>Quantum Computing</h3>
-      <p>IBM unveiled its 127‑qubit “Condor” processor with error‑correction codes that push the quantum volume over 1000. Google’s Sycamore platform now achieves “quantum supremacy” for specific cryptographic tasks.</p>
-      <a href="https://www.ibm.com/quantum-computing/" target="_blank">IBM Quantum</a>
+      <h3>Quantum Supremacy Achieved</h3>
+      <p>Google’s Sycamore processor completed a 53‑qubit calculation in 200 seconds, far surpassing the best classical supercomputers—ushering in a new era of quantum advantage.</p>
     </div>
   </article>
 
-  <!-- Biotechnology -->
+  <!-- Gene Editing -->
   <article class="card">
-    <img src="https://images.unsplash.com/photo-1526234614527-1c87e0f2b3b7?auto=format&fit=crop&w=400&q=60" alt="CRISPR Editing">
+    <img src="https://images.unsplash.com/photo-1550439062-6094a1a1e3ca?auto=format&fit=crop&w=400&q=80" alt="Gene Editing">
     <div class="card-content">
-      <h3>Biotechnology & Gene Editing</h3>
-      <p>CRISPR‑Cas9 advancements enable base‑editing with >99% precision, opening new therapies for inherited retinal diseases. mRNA vaccine platforms now target seasonal influenza with 80%+ efficacy.</p>
-      <a href="https://www.crispr.tech/" target="_blank">CRISPR Therapeutics</a>
+      <h3>CRISPR‑C: Precision Gene Editing</h3>
+      <p>Scientists have developed CRISPR‑C, a base‑editing platform that corrects point mutations in living cells with near‑zero off‑target effects, offering hope for monogenic diseases.</p>
     </div>
   </article>
 
-  <!-- Energy Storage -->
+  <!-- Space Exploration -->
   <article class="card">
-    <img src="https://images.unsplash.com/photo-1541866539-1a6b7e4b1c30?auto=format&fit=crop&w=400&q=60" alt="Solid State Battery">
+    <img src="https://images.unsplash.com/photo-1573497493555-b6c6b2c1d7ac?auto=format&fit=crop&w=400&q=80" alt="Space">
     <div class="card-content">
-      <h3>Energy Storage & Batteries</h3>
-      <p>Solid‑state lithium‑silicon batteries now achieve 300 Wh/L density, surpassing conventional Li‑ion tech. Graphene‑based supercapacitors can charge in seconds, promising instant‑on electric vehicles.</p>
-      <a href="https://www.ionq.com/" target="_blank">IonQ</a>
+      <h3>Starship Demonstrates Re‑usability</h3>
+      <p>SpaceX’s Starship successfully completed its first orbital flight with a fully reusable design, cutting launch costs and paving the way for Mars missions.</p>
     </div>
   </article>
 
-  <!-- 6G & Connectivity -->
+  <!-- 5G & 6G Connectivity -->
   <article class="card">
-    <img src="https://images.unsplash.com/photo-1593642634317-58fba6c9d5c2?auto=format&fit=crop&w=400&q=60" alt="6G Network">
-    <div class="card-content">
-      <h3>6G & Next‑Gen Connectivity</h3>
-      <p>Telecom giants begin pilot deployments of 6G at 1 THz frequencies, aiming for 1 Tbps data rates. Edge computing nodes will reduce latency below 0.1 ms, enabling real‑time VR and AR applications.</p>
-      <a href="https://www.3
+    <img src="https://images.unsplash.com/photo-1580670627298-4c2b5b3f5a4a?auto=format&fit=crop&w=400&q=80" alt="Connectivity">
+    <div class="card
