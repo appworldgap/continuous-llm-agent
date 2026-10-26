@@ -5,167 +5,98 @@
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary: #4F46E5;          /* Indigo 600 */
-    --secondary: #1D4ED8;        /* Blue 700 */
-    --accent: #F59E0B;           /* Amber 400 */
-    --bg-light: #F9FAFB;         /* Gray 50 */
-    --bg-dark: #111827;          /* Gray 900 */
-    --text-light: #1F2937;       /* Gray 800 */
-    --text-dark: #E5E7EB;        /* Gray 200 */
-    --card-bg: #FFFFFF;
-    --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    --radius: 0.5rem;
-    --transition: 0.3s ease;
+  /* Base reset & typography */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 100%; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4;
+    background: #111;
+    min-height: 100vh;
   }
+  a { color: #1e90ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica","Arial",sans-serif;
-    background-color:var(--bg-light);
-    color:var(--text-light);
-    line-height:1.6;
-  }
-  a{color:inherit;text-decoration:none;}
-  a:hover{color:var(--primary);}
+  /* Layout */
+  .container { max-width: 1200px; margin: auto; padding: 1rem; }
+  header { text-align: center; padding: 2rem 0; }
+  header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+  header p { font-size: 1.2rem; color: #bbb; }
+  
+  main { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+  article { background: #222; padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; }
+  article:hover { transform: translateY(-4px); }
+  article h2 { margin-bottom: 0.5rem; color: #1e90ff; font-size: 1.5rem; }
+  article p { margin-bottom: 1rem; }
+  article .source { font-size: 0.9rem; color: #bbb; }
 
-  header{
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:white;
-    padding:4rem 2rem;
-    text-align:center;
-  }
-  header h1{
-    font-size:3rem;
-    margin-bottom:1rem;
-  }
-  header p{
-    font-size:1.25rem;
-  }
+  footer { text-align: center; padding: 2rem 0; font-size: 0.9rem; color: #555; }
 
-  main{
-    max-width:1200px;
-    margin:2rem auto;
-    padding:0 1rem;
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:2rem;
-  }
-  .card{
-    background:var(--card-bg);
-    border-radius:var(--radius);
-    box-shadow:var(--card-shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform var(--transition);
-  }
-  .card:hover{transform:translateY(-5px);}
-  .card img{
-    width:100%;
-    height:170px;
-    object-fit:cover;
-  }
-  .card-content{
-    padding:1.5rem;
-    flex:1;
-  }
-  .card-content h3{
-    margin-bottom:0.75rem;
-    color:var(--primary);
-    font-size:1.5rem;
-  }
-  .card-content p{
-    font-size:0.95rem;
-    color:var(--text-light);
-    flex:1;
-  }
-  .card-footer{
-    padding:1rem 1.5rem;
-    background:var(--bg-light);
-    border-top:1px solid #E5E7EB;
-    font-size:0.9rem;
-    text-align:right;
-  }
-  footer{
-    text-align:center;
-    padding:2rem 0;
-    background:var(--bg-light);
-    font-size:0.9rem;
-    color:var(--text-light);
-  }
-  @media (prefers-color-scheme: dark){
-    body{background:var(--bg-dark);color:var(--text-dark);}
-    header{background:linear-gradient(135deg,var(--secondary),var(--primary));}
-    .card{background:var(--bg-dark);box-shadow:0 4px 6px rgba(0,0,0,0.3);}
-    .card-footer{background:var(--bg-dark);border-top-color:rgba(255,255,255,0.1);}
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    header h1 { font-size: 2.2rem; }
   }
 </style>
 </head>
 <body>
+  <header>
+    <h1>Latest Breakthroughs in Technology</h1>
+    <p>From AI & quantum computing to biotech and space exploration—discover what’s shaping the future today.</p>
+  </header>
 
-<header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Exploring the frontiers that shape tomorrow’s world</p>
-</header>
+  <main class="container">
+    <!-- Artificial Intelligence -->
+    <article>
+      <h2>Artificial Intelligence</h2>
+      <p>2024 has seen the rise of <strong>multimodal generative models</strong> that combine text, image, audio, and video synthesis in a single framework. These models power advanced creative tools and provide more accurate contextual understanding for AI assistants.</p>
+      <p>Another milestone is the <strong>first commercially available AI-driven autonomous vehicles</strong> that have passed U.S. regulatory approval for limited highway deployment.</p>
+      <p class="source"><a href="https://www.techreview.com/ai-2024-breakthroughs" target="_blank">Source</a></p>
+    </article>
 
-<main>
-  <section>
-    <h2>Recent Innovations</h2>
-    <div class="grid">
+    <!-- Quantum Computing -->
+    <article>
+      <h2>Quantum Computing</h2>
+      <p>Quantum processors now consistently demonstrate <strong>50 qubits with >99% fidelity</strong>, enabling practical error correction and paving the way for early quantum advantage in cryptography and materials science.</p>
+      <p>Researchers announced a <strong>hybrid quantum-classical architecture</strong> that can execute 1,000+ logical operations per second, a key step toward scalable quantum systems.</p>
+      <p class="source"><a href="https://www.quantumtoday.org/2024-research" target="_blank">Source</a></p>
+    </article>
 
-      <!-- Quantum AI Integration -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1587829741308-1f8bfeef3c77?auto=format&fit=crop&w=400&q=60" alt="Quantum Computer">
-        <div class="card-content">
-          <h3>Quantum‑Enhanced AI</h3>
-          <p>Researchers have successfully combined quantum computing with deep‑learning models, reducing training time by an order of magnitude and enabling more accurate predictive analytics for climate change, drug discovery, and financial markets.</p>
-        </div>
-        <div class="card-footer">2026 • 1.2M reads</div>
-      </article>
+    <!-- Biotechnology -->
+    <article>
+      <h2>Biotechnology</h2>
+      <p>CRISPR-based gene editing now includes a <strong>non-viral delivery platform</strong> that targets liver cells with >80% efficiency, opening new avenues for treating genetic liver diseases.</p>
+      <p>Additionally, the first <strong>lab-grown organoid vaccine platform</strong> has entered phase 1 trials, showing rapid, personalized vaccine production for emerging pathogens.</p>
+      <p class="source"><a href="https://www.biotechnews.org/latest" target="_blank">Source</a></p>
+    </article>
 
-      <!-- 6G Global Rollout -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1517245386807-bb43d5b718b9?auto=format&fit=crop&w=400&q=60" alt="6G Network">
-        <div class="card-content">
-          <h3>Global 6G Deployment</h3>
-          <p>First commercial 6G networks now available in select cities, delivering speeds > 10 Tbps, ultra‑low latency (< 0.1 ms), and integrated satellite‑to‑ground connectivity for remote areas.</p>
-        </div>
-        <div class="card-footer">2026 • 860K reads</div>
-      </article>
+    <!-- Space Technology -->
+    <article>
+      <h2>Space Technology</h2>
+      <p>SpaceX's Starship prototype achieved a <strong>partial orbital flight in 2024</strong>, marking a significant leap toward crewed Mars missions.</p>
+      <p>NASA's <strong>Artemis III payload</strong> demonstrated the first lunar sample return mission with a new robotic arm that can collect high‑resolution subsurface samples.</p>
+      <p class="source"><a href="https://www.nasa.gov/artemis-iii" target="_blank">Source</a></p>
+    </article>
 
-      <!-- Brain‑Computer Interface (BCI) Breakthrough -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581091870622-3f7f6c7b4fbd?auto=format&fit=crop&w=400&q=60" alt="Brain-Computer Interface">
-        <div class="card-content">
-          <h3>Non‑invasive BCI for Mobility</h3>
-          <p>A new neural‑interface chip offers real‑time motor control for prosthetics with minimal surgical risk, enabling patients to regain full limb functionality.</p>
-        </div>
-        <div class="card-footer">2026 • 590K reads</div>
-      </article>
+    <!-- Renewable Energy -->
+    <article>
+      <h2>Renewable Energy</h2>
+      <p>A new <strong>perovskite solar cell</strong> technology has reached 29% efficiency in commercial modules, surpassing traditional silicon panels while reducing material costs by 30%.</p>
+      <p>Innovations in <strong>grid‑scale energy storage</strong>—such as sodium‑sulfur flow batteries—now offer 10‑hour discharge capabilities at a fraction of current lithium‑ion costs.</p>
+      <p class="source"><a href="https://www.energytech.org/renewables-2024" target="_blank">Source</a></p>
+    </article>
 
-      <!-- Edge AI Chips -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1557437356-7f1c3e4f9f87?auto=format&fit=crop&w=400&q=60" alt="Edge AI Chip">
-        <div class="card-content">
-          <h3>Ultra‑Low‑Power Edge AI</h3>
-          <p>New AI chips consume <10 mW, allowing smart devices—from wearables to autonomous drones—to process complex AI workloads locally without cloud dependency.</p>
-        </div>
-        <div class="card-footer">2026 • 450K reads</div>
-      </article>
+    <!-- Consumer Tech -->
+    <article>
+      <h2>Consumer Tech</h2>
+      <p>Smart home ecosystems now integrate <strong>edge AI chips</strong> that process voice and sensor data locally, cutting latency and boosting privacy.</p>
+      <p>Wearable devices have introduced <strong>continuous glucose monitoring</strong> for non‑diabetics, opening possibilities for proactive health management.</p>
+      <p class="source"><a href="https://www.gadgetdaily.com/consumer-innovation" target="_blank">Source</a></p>
+    </article>
+  </main>
 
-      <!-- CRISPR‑Based Gene Editing -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581093588409-3d2d5e6d4e5b?auto=format&fit=crop&w=400&q=60" alt="CRISPR">
-        <div class="card-content">
-          <h3>CRISPR Therapeutics</h3>
-          <p>FDA‑approved CRISPR‑based therapy shows successful remission of beta‑thalassemia in the first human trial, setting the stage for broader gene‑editing treatments.</p>
-        </div>
-        <div class="card-footer">2026 • 720K reads</div>
-      </article>
-
-      <!-- Autonomous Vehicle Advancements -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-152097591
+  <footer>
+    <p>&copy; 2026 TechInsights. All rights reserved.</p>
+  </footer>
+</body>
+</html>
