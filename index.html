@@ -2,53 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Reset */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; background:#f0f4f7; color:#333; }
-
   :root {
-    --primary:#4f46e5;
-    --accent:#06b6d4;
-    --bg-card:#fff;
-    --shadow:#0003;
+    --primary: #4F46E5;          /* Indigo 600 */
+    --secondary: #1D4ED8;        /* Blue 700 */
+    --accent: #F59E0B;           /* Amber 400 */
+    --bg-light: #F9FAFB;         /* Gray 50 */
+    --bg-dark: #111827;          /* Gray 900 */
+    --text-light: #1F2937;       /* Gray 800 */
+    --text-dark: #E5E7EB;        /* Gray 200 */
+    --card-bg: #FFFFFF;
+    --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --radius: 0.5rem;
+    --transition: 0.3s ease;
   }
 
-  header {
-    background:linear-gradient(135deg,var(--primary),var(--accent));
-    color:#fff;
-    padding:4rem 1rem;
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica","Arial",sans-serif;
+    background-color:var(--bg-light);
+    color:var(--text-light);
+    line-height:1.6;
+  }
+  a{color:inherit;text-decoration:none;}
+  a:hover{color:var(--primary);}
+
+  header{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    padding:4rem 2rem;
     text-align:center;
   }
-  header h1 { font-size:3rem; margin-bottom:.5rem; }
-  header p { font-size:1.25rem; opacity:.9; }
-
-  .container { max-width:1280px; margin:auto; padding:2rem 1rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
-
-  .card {
-    background:var(--bg-card);
-    border-radius:12px;
-    box-shadow:0 4px 12px var(--shadow);
-    overflow:hidden;
-    transition:transform .2s ease;
+  header h1{
+    font-size:3rem;
+    margin-bottom:1rem;
   }
-  .card:hover { transform:translateY(-4px); }
+  header p{
+    font-size:1.25rem;
+  }
 
-  .card img { width:100%; height:170px; object-fit:cover; }
-  .card-content { padding:1.25rem; }
-  .card h3 { margin-bottom:.75rem; font-size:1.5rem; color:var(--primary); }
-  .card p { font-size:1rem; margin-bottom:1rem; }
-  .card a { text-decoration:none; color:var(--accent); font-weight:600; display:inline-block; }
-
-  footer { text-align:center; padding:2rem 1rem; background:#e8eff5; margin-top:3rem; color:#555; }
-
-  @media (prefers-color-scheme: dark) {
-    body { background:#1a202c; color:#e2e8f0; }
-    .card { background:#2d3748; }
-    .card h3, header h1 { color:#90cdf4; }
-    header { background:linear-gradient(135deg,#2b6cb0,#2c5282); }
+  main{
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 1rem;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:2rem;
+  }
+  .card{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--card-shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform var(--transition);
+  }
+  .card:hover{transform:translateY(-5px);}
+  .card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+  }
+  .card-content{
+    padding:1.5rem;
+    flex:1;
+  }
+  .card-content h3{
+    margin-bottom:0.75rem;
+    color:var(--primary);
+    font-size:1.5rem;
+  }
+  .card-content p{
+    font-size:0.95rem;
+    color:var(--text-light);
+    flex:1;
+  }
+  .card-footer{
+    padding:1rem 1.5rem;
+    background:var(--bg-light);
+    border-top:1px solid #E5E7EB;
+    font-size:0.9rem;
+    text-align:right;
+  }
+  footer{
+    text-align:center;
+    padding:2rem 0;
+    background:var(--bg-light);
+    font-size:0.9rem;
+    color:var(--text-light);
+  }
+  @media (prefers-color-scheme: dark){
+    body{background:var(--bg-dark);color:var(--text-dark);}
+    header{background:linear-gradient(135deg,var(--secondary),var(--primary));}
+    .card{background:var(--bg-dark);box-shadow:0 4px 6px rgba(0,0,0,0.3);}
+    .card-footer{background:var(--bg-dark);border-top-color:rgba(255,255,255,0.1);}
   }
 </style>
 </head>
@@ -56,85 +108,64 @@
 
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI to space exploration – discover what’s shaping the future.</p>
+  <p>Exploring the frontiers that shape tomorrow’s world</p>
 </header>
 
-<main class="container">
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/483251/400x250" alt="Generative AI">
-    <div class="card-content">
-      <h3>Generative AI</h3>
-      <p>Massive language and image models now produce realistic text, art, and code, pushing creative and productivity tools to new heights.</p>
-      <a href="#">Read more</a>
-    </div>
-  </article>
+<main>
+  <section>
+    <h2>Recent Innovations</h2>
+    <div class="grid">
 
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/113411/400x250" alt="Quantum Computing">
-    <div class="card-content">
-      <h3>Quantum Supremacy</h3>
-      <p>Google’s Sycamore and IBM’s Q System One demonstrate unprecedented processing power for cryptography and complex simulations.</p>
-      <a href="#">Read more</a>
-    </div>
-  </article>
+      <!-- Quantum AI Integration -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587829741308-1f8bfeef3c77?auto=format&fit=crop&w=400&q=60" alt="Quantum Computer">
+        <div class="card-content">
+          <h3>Quantum‑Enhanced AI</h3>
+          <p>Researchers have successfully combined quantum computing with deep‑learning models, reducing training time by an order of magnitude and enabling more accurate predictive analytics for climate change, drug discovery, and financial markets.</p>
+        </div>
+        <div class="card-footer">2026 • 1.2M reads</div>
+      </article>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/205376/400x250" alt="mRNA Vaccines">
-    <div class="card-content">
-      <h3>mRNA Therapeutics</h3>
-      <p>Beyond COVID, mRNA platforms are tackling rare diseases, cancers, and personalized therapies with rapid development cycles.</p>
-      <a href="#">Read more</a>
-    </div>
-  </article>
+      <!-- 6G Global Rollout -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43d5b718b9?auto=format&fit=crop&w=400&q=60" alt="6G Network">
+        <div class="card-content">
+          <h3>Global 6G Deployment</h3>
+          <p>First commercial 6G networks now available in select cities, delivering speeds > 10 Tbps, ultra‑low latency (< 0.1 ms), and integrated satellite‑to‑ground connectivity for remote areas.</p>
+        </div>
+        <div class="card-footer">2026 • 860K reads</div>
+      </article>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/1545959/400x250" alt="Solid-State Batteries">
-    <div class="card-content">
-      <h3>Solid-State Batteries</h3>
-      <p>Higher energy density, faster charging, and improved safety are making these batteries a reality for electric vehicles.</p>
-      <a href="#">Read more</a>
-    </div>
-  </article>
+      <!-- Brain‑Computer Interface (BCI) Breakthrough -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581091870622-3f7f6c7b4fbd?auto=format&fit=crop&w=400&q=60" alt="Brain-Computer Interface">
+        <div class="card-content">
+          <h3>Non‑invasive BCI for Mobility</h3>
+          <p>A new neural‑interface chip offers real‑time motor control for prosthetics with minimal surgical risk, enabling patients to regain full limb functionality.</p>
+        </div>
+        <div class="card-footer">2026 • 590K reads</div>
+      </article>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/2071049/400x250" alt="6G Wireless">
-    <div class="card-content">
-      <h3>6G Prototypes</h3>
-      <p>Explorations into terahertz frequencies and AI-driven network management promise ultra-low latency and hyper-connectivity.</p>
-      <a href="#">Read more</a>
-    </div>
-  </article>
+      <!-- Edge AI Chips -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1557437356-7f1c3e4f9f87?auto=format&fit=crop&w=400&q=60" alt="Edge AI Chip">
+        <div class="card-content">
+          <h3>Ultra‑Low‑Power Edge AI</h3>
+          <p>New AI chips consume <10 mW, allowing smart devices—from wearables to autonomous drones—to process complex AI workloads locally without cloud dependency.</p>
+        </div>
+        <div class="card-footer">2026 • 450K reads</div>
+      </article>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/1129/400x250" alt="Autonomous Vehicles">
-    <div class="card-content">
-      <h3>Self-Driving Tech</h3>
-      <p>Tesla, Waymo, and others refine perception and safety, edging toward full autonomy across varied environments.</p>
-      <a href="#">Read more</a>
-    </div>
-  </article>
+      <!-- CRISPR‑Based Gene Editing -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581093588409-3d2d5e6d4e5b?auto=format&fit=crop&w=400&q=60" alt="CRISPR">
+        <div class="card-content">
+          <h3>CRISPR Therapeutics</h3>
+          <p>FDA‑approved CRISPR‑based therapy shows successful remission of beta‑thalassemia in the first human trial, setting the stage for broader gene‑editing treatments.</p>
+        </div>
+        <div class="card-footer">2026 • 720K reads</div>
+      </article>
 
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/1907275/400x250" alt="CRISPR Advancements">
-    <div class="card-content">
-      <h3>CRISPR Gene Editing</h3>
-      <p>Precise base editing and prime editing expand therapeutic possibilities for genetic disorders.</p>
-      <a href="#">Read more</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/1582132/400x250" alt="Space Launches">
-    <div class="card-content">
-      <h3>Reusable Rockets</h3>
-      <p>SpaceX Starship, Blue Origin, and others are scaling reusable launch systems to open deep space access.</p>
-      <a href="#">Read more</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <img src="https://source.unsplash.com/collection/1279414/400x250" alt="AI Drug Discovery">
-    <div class="card-content">
-      <h3>AI-Driven Drug Discovery</h3>
-      <p>Machine learning accelerates molecule design, reducing discovery time from years to months.</p>
-      <a href="#">
+      <!-- Autonomous Vehicle Advancements -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-152097591
