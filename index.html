@@ -3,100 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* Base reset & typography */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-size: 100%; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #f4f4f4;
-    background: #111;
-    min-height: 100vh;
+  /* Root variables for easy theming */
+  :root {
+    --primary: #1e90ff;
+    --background: #f9f9f9;
+    --text: #333;
+    --card-bg: #fff;
+    --card-shadow: rgba(0,0,0,0.1);
+    --border-radius: 12px;
+    --spacing: 1.5rem;
+    --max-width: 1200px;
   }
-  a { color: #1e90ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Layout */
-  .container { max-width: 1200px; margin: auto; padding: 1rem; }
-  header { text-align: center; padding: 2rem 0; }
-  header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-  header p { font-size: 1.2rem; color: #bbb; }
-  
-  main { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-  article { background: #222; padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; }
-  article:hover { transform: translateY(-4px); }
-  article h2 { margin-bottom: 0.5rem; color: #1e90ff; font-size: 1.5rem; }
-  article p { margin-bottom: 1rem; }
-  article .source { font-size: 0.9rem; color: #bbb; }
-
-  footer { text-align: center; padding: 2rem 0; font-size: 0.9rem; color: #555; }
-
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    header h1 { font-size: 2.2rem; }
+  body {
+    margin:0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: var(--spacing);
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  main {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: var(--spacing);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing);
+  }
+  article {
+    background: var(--card-bg);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  article:hover {
+    transform: translateY(-5px);
+  }
+  article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  article .content {
+    padding: var(--spacing);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  article h2 {
+    margin-top: 0;
+    color: var(--primary);
+  }
+  article p {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+  footer {
+    text-align: center;
+    padding: var(--spacing);
+    font-size: 0.9rem;
+    color: #777;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121212; color: #e0e0e0; }
+    article { background: #1e1e1e; }
+    footer { color: #888; }
   }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <p>From AI & quantum computing to biotech and space exploration—discover what’s shaping the future today.</p>
-  </header>
+<header>
+  <h1>Latest Breakthroughs in Technology</h1>
+</header>
 
-  <main class="container">
-    <!-- Artificial Intelligence -->
-    <article>
-      <h2>Artificial Intelligence</h2>
-      <p>2024 has seen the rise of <strong>multimodal generative models</strong> that combine text, image, audio, and video synthesis in a single framework. These models power advanced creative tools and provide more accurate contextual understanding for AI assistants.</p>
-      <p>Another milestone is the <strong>first commercially available AI-driven autonomous vehicles</strong> that have passed U.S. regulatory approval for limited highway deployment.</p>
-      <p class="source"><a href="https://www.techreview.com/ai-2024-breakthroughs" target="_blank">Source</a></p>
-    </article>
+<main>
+  <!-- AI & Machine Learning -->
+  <article>
+    <img src="https://via.placeholder.com/400x250?text=AI+Advances" alt="AI Advances">
+    <div class="content">
+      <h2>Artificial Intelligence & Machine Learning</h2>
+      <p>From generative models that can create realistic art to AI-driven drug discovery platforms, the AI field is rapidly expanding. Recent breakthroughs include:</p>
+      <ul>
+        <li>Large multimodal models that combine vision, text, and audio.</li>
+        <li>Self‑supervised learning achieving near‑human performance on complex tasks.</li>
+        <li>AI‑powered automation in manufacturing and logistics.</li>
+      </ul>
+    </div>
+  </article>
 
-    <!-- Quantum Computing -->
-    <article>
+  <!-- Quantum Computing -->
+  <article>
+    <img src="https://via.placeholder.com/400x250?text=Quantum+Computing" alt="Quantum Computing">
+    <div class="content">
       <h2>Quantum Computing</h2>
-      <p>Quantum processors now consistently demonstrate <strong>50 qubits with >99% fidelity</strong>, enabling practical error correction and paving the way for early quantum advantage in cryptography and materials science.</p>
-      <p>Researchers announced a <strong>hybrid quantum-classical architecture</strong> that can execute 1,000+ logical operations per second, a key step toward scalable quantum systems.</p>
-      <p class="source"><a href="https://www.quantumtoday.org/2024-research" target="_blank">Source</a></p>
-    </article>
+      <p>Quantum processors are edging closer to practical applications. Key developments:</p>
+      <ul>
+        <li>Increased qubit counts with error rates below 1%.</li>
+        <li>Hybrid quantum‑classical algorithms for chemistry simulations.</li>
+        <li>Commercial cloud access to quantum machines.</li>
+      </ul>
+    </div>
+  </article>
 
-    <!-- Biotechnology -->
-    <article>
-      <h2>Biotechnology</h2>
-      <p>CRISPR-based gene editing now includes a <strong>non-viral delivery platform</strong> that targets liver cells with >80% efficiency, opening new avenues for treating genetic liver diseases.</p>
-      <p>Additionally, the first <strong>lab-grown organoid vaccine platform</strong> has entered phase 1 trials, showing rapid, personalized vaccine production for emerging pathogens.</p>
-      <p class="source"><a href="https://www.biotechnews.org/latest" target="_blank">Source</a></p>
-    </article>
+  <!-- 6G & Connectivity -->
+  <article>
+    <img src="https://via.placeholder.com/400x250?text=6G+Connectivity" alt="6G Connectivity">
+    <div class="content">
+      <h2>6G and Next‑Gen Connectivity</h2>
+      <p>While 5G is still rolling out, research is already shaping 6G. Highlights include:</p>
+      <ul>
+        <li>Terahertz communication for petabit‑per‑second speeds.</li>
+        <li>Integrated space‑ground networks for global coverage.</li>
+        <li>AI‑based network slicing for ultra‑low latency.</li>
+      </ul>
+    </div>
+  </article>
 
-    <!-- Space Technology -->
-    <article>
-      <h2>Space Technology</h2>
-      <p>SpaceX's Starship prototype achieved a <strong>partial orbital flight in 2024</strong>, marking a significant leap toward crewed Mars missions.</p>
-      <p>NASA's <strong>Artemis III payload</strong> demonstrated the first lunar sample return mission with a new robotic arm that can collect high‑resolution subsurface samples.</p>
-      <p class="source"><a href="https://www.nasa.gov/artemis-iii" target="_blank">Source</a></p>
-    </article>
+  <!-- Gene Editing -->
+  <article>
+    <img src="https://via.placeholder.com/400x250?text=CRISPR+Tech" alt="CRISPR Technology">
+    <div class="content">
+      <h2>CRISPR & Gene Editing</h2>
+      <p>Genome editing tools are becoming more precise and ethical frameworks mature. Recent achievements:</p>
+      <ul>
+        <li>Base editors correcting single‑nucleotide mutations.</li>
+        <li>Prime editing with reduced off‑target effects.</li>
+        <li>Clinical trials targeting rare genetic diseases.</li>
+      </ul>
+    </div>
+  </article>
 
-    <!-- Renewable Energy -->
-    <article>
-      <h2>Renewable Energy</h2>
-      <p>A new <strong>perovskite solar cell</strong> technology has reached 29% efficiency in commercial modules, surpassing traditional silicon panels while reducing material costs by 30%.</p>
-      <p>Innovations in <strong>grid‑scale energy storage</strong>—such as sodium‑sulfur flow batteries—now offer 10‑hour discharge capabilities at a fraction of current lithium‑ion costs.</p>
-      <p class="source"><a href="https://www.energytech.org/renewables-2024" target="_blank">Source</a></p>
-    </article>
+  <!-- Space Technology -->
+  <article>
+    <img src="https://via.placeholder.com/400x250?text=Space+Technology" alt="Space Technology">
+    <div class="content">
+      <h2>Space Technology & Exploration</h2>
+      <p>Private and public agencies push the boundaries of space travel. Notable strides:</p>
+      <ul>
+        <li>Reusable launch vehicles cutting launch costs.</li>
+        <li>In‑orbit servicing and refueling missions.</li>
+        <li>Mars sample‑return preparations and lunar habitat prototypes.</li>
+      </ul>
+    </div>
+  </article>
+</main>
 
-    <!-- Consumer Tech -->
-    <article>
-      <h2>Consumer Tech</h2>
-      <p>Smart home ecosystems now integrate <strong>edge AI chips</strong> that process voice and sensor data locally, cutting latency and boosting privacy.</p>
-      <p>Wearable devices have introduced <strong>continuous glucose monitoring</strong> for non‑diabetics, opening possibilities for proactive health management.</p>
-      <p class="source"><a href="https://www.gadgetdaily.com/consumer-innovation" target="_blank">Source</a></p>
-    </article>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 TechInsights. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>© 2026 Tech Insight. All rights reserved.</p>
+</footer>
 </body>
 </html>
