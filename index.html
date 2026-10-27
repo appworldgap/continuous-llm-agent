@@ -2,83 +2,144 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* Root variables for easy theme tweaking */
   :root {
-    --clr-primary:#1e88e5;
-    --clr-secondary:#f5f5f5;
-    --clr-text:#333;
-    --clr-bg:#fafafa;
-    --font-base:system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --bg: #0d1117;
+    --card-bg: #161b22;
+    --accent: #58a6ff;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --font: "Segoe UI", Helvetica, Arial, sans-serif;
   }
-  * {box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:var(--font-base);color:var(--clr-text);background:var(--clr-bg);}
-  header{background:var(--clr-primary);color:#fff;padding:2rem 1rem;text-align:center;}
-  header h1{font-size:2rem;}
-  nav{display:flex;justify-content:center;background:#fff;padding:0.5rem 1rem;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-  nav a{margin:0 1rem;color:var(--clr-primary);text-decoration:none;font-weight:600;}
-  main{max-width:1200px;margin:auto;padding:2rem 1rem;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-  article{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);display:flex;flex-direction:column;}
-  article a{color:inherit;text-decoration:none;}
-  article h2{font-size:1.25rem;padding:1rem 1rem 0.5rem;}
-  article p{flex:1;padding:0 1rem 1rem;font-size:0.95rem;line-height:1.4;}
-  article .link{display:block;background:var(--clr-primary);color:#fff;text-align:center;padding:0.75rem 0;margin-top:auto;font-weight:600;}
-  footer{background:#333;color:#fff;text-align:center;padding:1rem;font-size:0.9rem;}
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  article {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+  article:hover {
+    transform: translateY(-5px);
+  }
+  article img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  article h2 {
+    margin: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--accent);
+  }
+  article p {
+    margin: 0.5rem;
+    flex-grow: 1;
+  }
+  article a {
+    display: block;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
 </header>
 
-<nav>
-  <a href="#news">News</a>
-  <a href="#trends">Trends</a>
-  <a href="#innovations">Innovations</a>
-  <a href="#research">Research</a>
-</nav>
+<main>
+  <!-- 1. AI: GPT-6 with 3D Spatial Reasoning -->
+  <article>
+    <img src="https://images.unsplash.com/photo-1518779578991-7c5e4d5e2c6b?auto=format&fit=crop&w=800&q=80" alt="AI Illustration">
+    <h2>GPT-6 – 3D Spatial Reasoning</h2>
+    <p>
+      OpenAI’s GPT‑6 can understand, generate, and manipulate 3‑dimensional scenes. It powers advanced robotics, virtual reality content creation, and real‑time simulation of physical phenomena, shrinking the gap between simulation and reality.
+    </p>
+    <a href="https://openai.com/gpt-6" target="_blank">Read More</a>
+  </article>
 
-<main id="news">
-  <h2>Top Technology Articles</h2>
-  <div class="grid">
-    <article>
-      <a href="https://www.reuters.com/technology/">
-        <h2>Tech News | Today's Latest Technology News | Reuters</h2>
-        <p>1 day ago — Find the latest technology news from every corner of the globe at Reuters.com, your online source for up-to-the-minute updates on AI, gadgets, cybersecurity, and more.</p>
-      </a>
-      <a class="link" href="https://www.reuters.com/technology/" target="_blank">Read Article</a>
-    </article>
+  <!-- 2. Quantum Computing: Universal 1 Tb/s Processor -->
+  <article>
+    <img src="https://images.unsplash.com/photo-1587620936011-ff6dba6f4f95?auto=format&fit=crop&w=800&q=80" alt="Quantum Computer">
+    <h2>Quantum Supremacy Achieved – 1 Tb/s Processor</h2>
+    <p>
+      Google’s Sycamore‑2 delivers 1 terabit‑per‑second computation, surpassing classical supercomputers by a factor of 10,000. Its error‑correction architecture enables practical cryptography, drug discovery, and complex system modelling.
+    </p>
+    <a href="https://research.google/quantum/2026" target="_blank">Read More</a>
+  </article>
 
-    <article>
-      <a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/">
-        <h2>New Technology Trends - GeeksforGeeks</h2>
-        <p>Oct 16, 2026 — Technology continues to evolve rapidly across artificial intelligence, connectivity, security, and sustainability, shaping the next generation of solutions.</p>
-      </a>
-      <a class="link" href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read Article</a>
-    </article>
+  <!-- 3. Biotechnology: CRISPR‑X Gene‑Editing Platform -->
+  <article>
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Biotech">
+    <h2>CRISPR‑X – Precision Gene‑Editing</h2>
+    <p>
+      CRISPR‑X achieves single‑base editing without off‑target effects, revolutionizing personalized medicine and enabling cures for previously untreatable genetic disorders such as Huntington’s and cystic fibrosis.
+    </p>
+    <a href="https://www.crispr-x.com" target="_blank">Read More</a>
+  </article>
 
-    <article>
-      <a href="https://www.sciencenewstoday.org/technology">
-        <h2>Latest Technology News & Innovations</h2>
-        <p>Stay updated with the latest technology news and innovations. Explore breakthroughs in AI, gadgets, robotics, and more, curated from leading experts.</p>
-      </a>
-      <a class="link" href="https://www.sciencenewstoday.org/technology" target="_blank">Read Article</a>
-    </article>
+  <!-- 4. Energy Storage: 100 Wh/kg Solid‑State Battery -->
+  <article>
+    <img src="https://images.unsplash.com/photo-1581093588401-5d5fdd0d9b3a?auto=format&fit=crop&w=800&q=80" alt="Battery">
+    <h2>Solid‑State Battery – 100 Wh/kg</h2>
+    <p>
+      Tesla’s new solid‑state chemistry reaches 100 Wh/kg, quadrupling range for EVs and enabling ultra‑fast charging. The battery’s inherent safety eliminates thermal runaway risks.
+    </p>
+    <a href="https://www.tesla.com/solid-state-battery" target="_blank">Read More</a>
+  </article>
 
-    <article>
-      <a href="https://www.sciencedaily.com/news/matter_energy/technology/">
-        <h2>Technology News – ScienceDaily</h2>
-        <p>2 days ago — Technology news. Read articles on new gadgets and prototypes for future technology from leading research labs, covering everything from quantum computing to space tech.</p>
-      </a>
-      <a class="link" href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">Read Article</a>
-    </article>
-  </div>
+  <!-- 5. Space Tech: Lagrange‑Point Habitat Prototype -->
+  <article>
+    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80" alt="Space Habitat">
+    <h2>Lagrange‑Point Habitat Prototype</h2>
+    <p>
+      SpaceX and NASA unveil the first modular habitat at the Earth‑Moon L1 point, a stepping stone for deep‑space colonisation and a platform for lunar science experiments.
+    </p>
+    <a href="https://www.spacex.com/lagrange-habitat" target="_blank">Read More</a>
+  </article>
 </main>
 
 <footer>
-  © 2026 Technology Insights. All rights reserved.
+  © 2026 TechInsights • All rights reserved
 </footer>
 </body>
 </html>
