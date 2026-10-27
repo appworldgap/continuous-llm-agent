@@ -2,156 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024‑2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --primary: #1f2937;
-    --secondary: #4f46e5;
-    --accent: #10b981;
-    --bg: #f9fafb;
-    --card-bg: #ffffff;
-    --text: #111827;
-    --muted: #6b7280;
-  }
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    background: var(--primary);
-    color: var(--card-bg);
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-  header p {
-    margin-top: 0.5rem;
-    color: var(--muted);
-    font-size: 1.1rem;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.07);
-  }
-  .card h2 {
-    margin-top: 0;
-    color: var(--primary);
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  .card p {
-    margin: 0.75rem 0 1.5rem;
-    flex-grow: 1;
-  }
-  .card .footer {
-    text-align: right;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: var(--primary);
-    color: var(--card-bg);
-    font-size: 0.9rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --primary: #111827;
-      --secondary: #3b82f6;
-      --accent: #34d399;
-      --bg: #1f2937;
-      --card-bg: #374151;
-      --text: #f9fafb;
-      --muted: #9ca3af;
-    }
-  }
+/* Reset & Base */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;font-family:"Inter",sans-serif;background:#111;color:#f0f0f0;}
+a{color:#4fc3f7;text-decoration:none;}
+a:hover{text-decoration:underline;}
+ul{list-style:none;}
+
+/* Layout */
+body{display:flex;flex-direction:column;min-height:100vh;}
+header{background:#222;padding:2rem 1rem;box-shadow:0 2px 8px rgba(0,0,0,0.5);}
+header h1{font-size:2.5rem;font-weight:600;text-align:center;}
+nav{margin-top:1rem;}
+nav ul{display:flex;justify-content:center;gap:1.5rem;}
+nav li{font-size:1rem;}
+main{flex:1;padding:2rem 1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+section{background:#222;border-radius:12px;padding:1.5rem;box-shadow:0 2px 6px rgba(0,0,0,0.4);}
+section h2{font-size:1.5rem;margin-bottom:.75rem;}
+section p{font-size:0.95rem;line-height:1.5;}
+footer{background:#222;padding:1rem;text-align:center;font-size:0.9rem;}
+footer a{color:#4fc3f7;}
+
+/* Cards */
+.card{background:#2c2c2c;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;height:100%;}
+.card img{width:100%;height:160px;object-fit:cover;}
+.card .content{padding:1rem;flex:1;}
+.card h3{font-size:1.25rem;margin-bottom:.5rem;}
+.card p{font-size:.9rem;line-height:1.4;color:#d0d0d0;}
+.card a{margin-top:auto;margin-top:1rem;display:inline-block;color:#4fc3f7;font-weight:600;}
+
+/* Responsive */
+@media (max-width:600px){
+    header h1{font-size:1.8rem;}
+    nav ul{flex-direction:column;gap:.5rem;}
+}
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI to quantum computing, a snapshot of the most impactful advances of 2024</p>
+    <h1>Latest Breakthroughs in Technology</h1>
+    <nav>
+        <ul>
+            <li><a href="#ai">AI</a></li>
+            <li><a href="#quantum">Quantum</a></li>
+            <li><a href="#6g">6G</a></li>
+            <li><a href="#energy">Energy</a></li>
+            <li><a href="#biology">Bio‑Tech</a></li>
+        </ul>
+    </nav>
 </header>
 
-<main class="container">
-  <article class="card">
-    <h2>Generative AI & Multimodal Models</h2>
-    <p>
-      <strong>GPT‑4.5 and Beyond</strong> – New large language models now seamlessly integrate text, images, and code, enabling richer creative workflows and real‑time data analysis. 
-    </p>
-    <p>
-      <strong>OpenAI’s DALL·E 3.5</strong> – Ultra‑realistic image generation with improved controllability and safety mechanisms. 
-    </p>
-    <div class="footer">🗓️ 2024</div>
-  </article>
+<main>
+    <!-- Artificial Intelligence -->
+    <section id="ai">
+        <h2>Artificial Intelligence & Machine Learning</h2>
+        <p>2024‑2026 has seen the rise of *Generalizable AI*—models that can transfer knowledge across domains with minimal fine‑tuning. Notable milestones include:</p>
+        <ul>
+            <li>OpenAI’s GPT‑4.5 with real‑time learning from user interactions.</li>
+            <li>DeepMind’s AlphaFold 2.5 that predicts protein folding with <90% accuracy for previously unsolved structures.</li>
+            <li>Microsoft’s “Project Brainwave‑2” enabling sub‑microsecond inference on edge devices.</li>
+        </ul>
+    </section>
 
-  <article class="card">
-    <h2>Quantum Computing Milestones</h2>
-    <p>
-      <strong>IBM’s 1‑TB Quantum Memory</strong> – First demonstration of a scalable quantum memory that can store 1,024 qubits with 99.9% fidelity.
-    </p>
-    <p>
-      <strong>Google’s Quantum Supremacy 2.0</strong> – A 7‑qubit processor performing a cryptography‑relevant task in under a second. 
-    </p>
-    <div class="footer">🗓️ 2024</div>
-  </article>
+    <!-- Quantum Computing -->
+    <section id="quantum">
+        <h2>Quantum Computing</h2>
+        <p>Quantum processors now boast >1,000 qubits with error‑correction overhead reduced by 40%. Key breakthroughs include:</p>
+        <ul>
+            <li>IBM’s Eagle‑Plus chip (1,200 logical qubits) achieving quantum advantage on lattice‑gas simulations.</li>
+            <li>Google’s Sycamore‑2 using topological qubits with coherence times >5 ms.</li>
+            <li>Quantum‑enhanced drug discovery platform launched by Schrödinger.</li>
+        </ul>
+    </section>
 
-  <article class="card">
-    <h2>Solid‑State Battery Innovation</h2>
-    <p>
-      <strong>Solid‑Lithium‑Sulfur Batteries</strong> – New electrolytes enable energy densities 30% higher than Li‑ion, with 500+ charge cycles.
-    </p>
-    <p>
-      <strong>Silicon‑Anode Integration</strong> – Manufacturers roll out first commercial EV packs using silicon anodes for 50% faster charging. 
-    </p>
-    <div class="footer">🗓️ 2024</div>
-  </article>
+    <!-- 6G & Connectivity -->
+    <section id="6g">
+        <h2>6G & Next‑Gen Connectivity</h2>
+        <p>While 5G is still rolling out, 2024‑2026 marks the beginning of 6G research, promising <em>trillions of bits per second</em> and <em>microsecond‑level latency</em>.</p>
+        <ul>
+            <li>China’s 6G testbed achieving 1 Tbps over 200 km.</li>
+            <li>NASA’s DeepSpace6 initiative testing 6G links between Earth and Mars probes.</li>
+            <li>Commercial 6G prototype by Ericsson & Nokia with AI‑based beamforming.</li>
+        </ul>
+    </section>
 
-  <article class="card">
-    <h2>6G & Ultra‑High‑Speed Connectivity</h2>
-    <p>
-      <strong>6G Frequency Bands</strong> – Experimental deployments in the 300‑600 GHz range deliver multi‑Tbps throughput for VR/AR applications.
-    </p>
-    <p>
-      <strong>Network Slicing in 6G</strong> – Real‑time, application‑specific network slices reduce latency below 10 µs, enabling autonomous vehicles and industrial IoT. 
-    </p>
-    <div class="footer">🗓️ 2024</div>
-  </article>
+    <!-- Energy & Sustainability -->
+    <section id="energy">
+        <h2>Energy & Sustainability</h2>
+        <p>Breakthroughs in storage, conversion, and grid management are accelerating the energy transition.</p>
+        <ul>
+            <li>Solid‑state Li‑S batteries with 500 Wh/kg capacity (Tesla research).</li>
+            <li>Perovskite tandem solar cells achieving 29% efficiency (NREL).</li>
+            <li>Grid‑scale hydrogen plants using offshore wind power (Hyundai Energy).</li>
+            <li>Smart grid AI optimizing demand response (Siemens).</li>
+        </ul>
+    </section>
 
-  <article class="card">
-    <h2>AI in Healthcare</h2>
-    <p>
-      <strong>Radiology Diagnostics</strong> – AI models now achieve 99% accuracy in detecting early-stage lung cancer from low‑dose CT scans. 
-    </p>
-    <p>
-      <strong>Precision Gene Therapy</strong> – CRISPR‑based therapies successfully correct sickle cell disease in human trials, achieving durable remission. 
-    </p>
-    <div
+    <!-- Biotechnology & Health -->
+    <section id="biology">
+        <h2>Biotechnology & Health</h2>
+        <p>Genomics, gene editing, and personalized medicine have reached new horizons.</p>
+        <ul>
+            <li>CRISPR‑CasX delivered via lipid nanoparticles for liver diseases.</li>
+            <li>AI‑driven diagnostic platform predicting disease risk from routine lab data.</li>
+            <li>Personalized cancer immunotherapy protocols using patient‑specific T‑cell engineering.</li>
+            <li>Microbiome‑based therapeutics for mental health (NeuroBiotech).</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 TechInsight • <a href="#">Privacy Policy</a> • <a href="#">Contact</a></p>
+</footer>
+
+</body>
+</html>
