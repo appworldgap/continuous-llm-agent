@@ -2,144 +2,156 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Root variables for easy theme tweaking */
   :root {
-    --bg: #0d1117;
-    --card-bg: #161b22;
-    --accent: #58a6ff;
-    --text: #c9d1d9;
-    --muted: #8b949e;
-    --font: "Segoe UI", Helvetica, Arial, sans-serif;
+    --primary: #1f2937;
+    --secondary: #4f46e5;
+    --accent: #10b981;
+    --bg: #f9fafb;
+    --card-bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
   }
   body {
     margin: 0;
+    font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--text);
-    font-family: var(--font);
     line-height: 1.6;
   }
   header {
-    background: var(--accent);
-    color: #fff;
-    padding: 1rem 2rem;
+    background: var(--primary);
+    color: var(--card-bg);
+    padding: 2rem 1rem;
     text-align: center;
   }
   header h1 {
     margin: 0;
     font-size: 2.5rem;
+    font-weight: 700;
   }
-  main {
-    max-width: 1100px;
+  header p {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+  .container {
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
   }
-  article {
+  .card {
     background: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s;
+    justify-content: space-between;
   }
-  article:hover {
+  .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.07);
   }
-  article img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
+  .card h2 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: 600;
   }
-  article h2 {
-    margin: 0.5rem;
-    font-size: 1.3rem;
-    color: var(--accent);
-  }
-  article p {
-    margin: 0.5rem;
+  .card p {
+    margin: 0.75rem 0 1.5rem;
     flex-grow: 1;
   }
-  article a {
-    display: block;
-    padding: 0.5rem 1rem;
-    background: var(--accent);
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
+  .card .footer {
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--muted);
   }
   footer {
     text-align: center;
-    padding: 1rem;
-    color: var(--muted);
+    padding: 2rem 1rem;
+    background: var(--primary);
+    color: var(--card-bg);
     font-size: 0.9rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #111827;
+      --secondary: #3b82f6;
+      --accent: #34d399;
+      --bg: #1f2937;
+      --card-bg: #374151;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+    }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to quantum computing, a snapshot of the most impactful advances of 2024</p>
 </header>
 
-<main>
-  <!-- 1. AI: GPT-6 with 3D Spatial Reasoning -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1518779578991-7c5e4d5e2c6b?auto=format&fit=crop&w=800&q=80" alt="AI Illustration">
-    <h2>GPT-6 – 3D Spatial Reasoning</h2>
+<main class="container">
+  <article class="card">
+    <h2>Generative AI & Multimodal Models</h2>
     <p>
-      OpenAI’s GPT‑6 can understand, generate, and manipulate 3‑dimensional scenes. It powers advanced robotics, virtual reality content creation, and real‑time simulation of physical phenomena, shrinking the gap between simulation and reality.
+      <strong>GPT‑4.5 and Beyond</strong> – New large language models now seamlessly integrate text, images, and code, enabling richer creative workflows and real‑time data analysis. 
     </p>
-    <a href="https://openai.com/gpt-6" target="_blank">Read More</a>
+    <p>
+      <strong>OpenAI’s DALL·E 3.5</strong> – Ultra‑realistic image generation with improved controllability and safety mechanisms. 
+    </p>
+    <div class="footer">🗓️ 2024</div>
   </article>
 
-  <!-- 2. Quantum Computing: Universal 1 Tb/s Processor -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1587620936011-ff6dba6f4f95?auto=format&fit=crop&w=800&q=80" alt="Quantum Computer">
-    <h2>Quantum Supremacy Achieved – 1 Tb/s Processor</h2>
+  <article class="card">
+    <h2>Quantum Computing Milestones</h2>
     <p>
-      Google’s Sycamore‑2 delivers 1 terabit‑per‑second computation, surpassing classical supercomputers by a factor of 10,000. Its error‑correction architecture enables practical cryptography, drug discovery, and complex system modelling.
+      <strong>IBM’s 1‑TB Quantum Memory</strong> – First demonstration of a scalable quantum memory that can store 1,024 qubits with 99.9% fidelity.
     </p>
-    <a href="https://research.google/quantum/2026" target="_blank">Read More</a>
+    <p>
+      <strong>Google’s Quantum Supremacy 2.0</strong> – A 7‑qubit processor performing a cryptography‑relevant task in under a second. 
+    </p>
+    <div class="footer">🗓️ 2024</div>
   </article>
 
-  <!-- 3. Biotechnology: CRISPR‑X Gene‑Editing Platform -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Biotech">
-    <h2>CRISPR‑X – Precision Gene‑Editing</h2>
+  <article class="card">
+    <h2>Solid‑State Battery Innovation</h2>
     <p>
-      CRISPR‑X achieves single‑base editing without off‑target effects, revolutionizing personalized medicine and enabling cures for previously untreatable genetic disorders such as Huntington’s and cystic fibrosis.
+      <strong>Solid‑Lithium‑Sulfur Batteries</strong> – New electrolytes enable energy densities 30% higher than Li‑ion, with 500+ charge cycles.
     </p>
-    <a href="https://www.crispr-x.com" target="_blank">Read More</a>
+    <p>
+      <strong>Silicon‑Anode Integration</strong> – Manufacturers roll out first commercial EV packs using silicon anodes for 50% faster charging. 
+    </p>
+    <div class="footer">🗓️ 2024</div>
   </article>
 
-  <!-- 4. Energy Storage: 100 Wh/kg Solid‑State Battery -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1581093588401-5d5fdd0d9b3a?auto=format&fit=crop&w=800&q=80" alt="Battery">
-    <h2>Solid‑State Battery – 100 Wh/kg</h2>
+  <article class="card">
+    <h2>6G & Ultra‑High‑Speed Connectivity</h2>
     <p>
-      Tesla’s new solid‑state chemistry reaches 100 Wh/kg, quadrupling range for EVs and enabling ultra‑fast charging. The battery’s inherent safety eliminates thermal runaway risks.
+      <strong>6G Frequency Bands</strong> – Experimental deployments in the 300‑600 GHz range deliver multi‑Tbps throughput for VR/AR applications.
     </p>
-    <a href="https://www.tesla.com/solid-state-battery" target="_blank">Read More</a>
+    <p>
+      <strong>Network Slicing in 6G</strong> – Real‑time, application‑specific network slices reduce latency below 10 µs, enabling autonomous vehicles and industrial IoT. 
+    </p>
+    <div class="footer">🗓️ 2024</div>
   </article>
 
-  <!-- 5. Space Tech: Lagrange‑Point Habitat Prototype -->
-  <article>
-    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80" alt="Space Habitat">
-    <h2>Lagrange‑Point Habitat Prototype</h2>
+  <article class="card">
+    <h2>AI in Healthcare</h2>
     <p>
-      SpaceX and NASA unveil the first modular habitat at the Earth‑Moon L1 point, a stepping stone for deep‑space colonisation and a platform for lunar science experiments.
+      <strong>Radiology Diagnostics</strong> – AI models now achieve 99% accuracy in detecting early-stage lung cancer from low‑dose CT scans. 
     </p>
-    <a href="https://www.spacex.com/lagrange-habitat" target="_blank">Read More</a>
-  </article>
-</main>
-
-<footer>
-  © 2026 TechInsights • All rights reserved
-</footer>
-</body>
-</html>
+    <p>
+      <strong>Precision Gene Therapy</strong> – CRISPR‑based therapies successfully correct sickle cell disease in human trials, achieving durable remission. 
+    </p>
+    <div
