@@ -3,86 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Root variables for easy theming */
   :root {
-    --primary: #1e90ff;
-    --background: #f9f9f9;
-    --text: #333;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.1);
-    --border-radius: 12px;
-    --spacing: 1.5rem;
-    --max-width: 1200px;
+    --clr-primary:#1e88e5;
+    --clr-secondary:#f5f5f5;
+    --clr-text:#333;
+    --clr-bg:#fafafa;
+    --font-base:system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
-  body {
-    margin:0;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif;
-    background: var(--background);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: var(--spacing);
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  main {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: var(--spacing);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing);
-  }
-  article {
-    background: var(--card-bg);
-    box-shadow: 0 4px 8px var(--card-shadow);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease;
-  }
-  article:hover {
-    transform: translateY(-5px);
-  }
-  article img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  article .content {
-    padding: var(--spacing);
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  article h2 {
-    margin-top: 0;
-    color: var(--primary);
-  }
-  article p {
-    flex-grow: 1;
-    margin-bottom: 0;
-  }
-  footer {
-    text-align: center;
-    padding: var(--spacing);
-    font-size: 0.9rem;
-    color: #777;
-  }
-  @media (prefers-color-scheme: dark) {
-    body { background: #121212; color: #e0e0e0; }
-    article { background: #1e1e1e; }
-    footer { color: #888; }
-  }
+  * {box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font-base);color:var(--clr-text);background:var(--clr-bg);}
+  header{background:var(--clr-primary);color:#fff;padding:2rem 1rem;text-align:center;}
+  header h1{font-size:2rem;}
+  nav{display:flex;justify-content:center;background:#fff;padding:0.5rem 1rem;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+  nav a{margin:0 1rem;color:var(--clr-primary);text-decoration:none;font-weight:600;}
+  main{max-width:1200px;margin:auto;padding:2rem 1rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+  article{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);display:flex;flex-direction:column;}
+  article a{color:inherit;text-decoration:none;}
+  article h2{font-size:1.25rem;padding:1rem 1rem 0.5rem;}
+  article p{flex:1;padding:0 1rem 1rem;font-size:0.95rem;line-height:1.4;}
+  article .link{display:block;background:var(--clr-primary);color:#fff;text-align:center;padding:0.75rem 0;margin-top:auto;font-weight:600;}
+  footer{background:#333;color:#fff;text-align:center;padding:1rem;font-size:0.9rem;}
 </style>
 </head>
 <body>
@@ -90,80 +33,52 @@
   <h1>Latest Breakthroughs in Technology</h1>
 </header>
 
-<main>
-  <!-- AI & Machine Learning -->
-  <article>
-    <img src="https://via.placeholder.com/400x250?text=AI+Advances" alt="AI Advances">
-    <div class="content">
-      <h2>Artificial Intelligence & Machine Learning</h2>
-      <p>From generative models that can create realistic art to AI-driven drug discovery platforms, the AI field is rapidly expanding. Recent breakthroughs include:</p>
-      <ul>
-        <li>Large multimodal models that combine vision, text, and audio.</li>
-        <li>Self‑supervised learning achieving near‑human performance on complex tasks.</li>
-        <li>AI‑powered automation in manufacturing and logistics.</li>
-      </ul>
-    </div>
-  </article>
+<nav>
+  <a href="#news">News</a>
+  <a href="#trends">Trends</a>
+  <a href="#innovations">Innovations</a>
+  <a href="#research">Research</a>
+</nav>
 
-  <!-- Quantum Computing -->
-  <article>
-    <img src="https://via.placeholder.com/400x250?text=Quantum+Computing" alt="Quantum Computing">
-    <div class="content">
-      <h2>Quantum Computing</h2>
-      <p>Quantum processors are edging closer to practical applications. Key developments:</p>
-      <ul>
-        <li>Increased qubit counts with error rates below 1%.</li>
-        <li>Hybrid quantum‑classical algorithms for chemistry simulations.</li>
-        <li>Commercial cloud access to quantum machines.</li>
-      </ul>
-    </div>
-  </article>
+<main id="news">
+  <h2>Top Technology Articles</h2>
+  <div class="grid">
+    <article>
+      <a href="https://www.reuters.com/technology/">
+        <h2>Tech News | Today's Latest Technology News | Reuters</h2>
+        <p>1 day ago — Find the latest technology news from every corner of the globe at Reuters.com, your online source for up-to-the-minute updates on AI, gadgets, cybersecurity, and more.</p>
+      </a>
+      <a class="link" href="https://www.reuters.com/technology/" target="_blank">Read Article</a>
+    </article>
 
-  <!-- 6G & Connectivity -->
-  <article>
-    <img src="https://via.placeholder.com/400x250?text=6G+Connectivity" alt="6G Connectivity">
-    <div class="content">
-      <h2>6G and Next‑Gen Connectivity</h2>
-      <p>While 5G is still rolling out, research is already shaping 6G. Highlights include:</p>
-      <ul>
-        <li>Terahertz communication for petabit‑per‑second speeds.</li>
-        <li>Integrated space‑ground networks for global coverage.</li>
-        <li>AI‑based network slicing for ultra‑low latency.</li>
-      </ul>
-    </div>
-  </article>
+    <article>
+      <a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/">
+        <h2>New Technology Trends - GeeksforGeeks</h2>
+        <p>Oct 16, 2026 — Technology continues to evolve rapidly across artificial intelligence, connectivity, security, and sustainability, shaping the next generation of solutions.</p>
+      </a>
+      <a class="link" href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">Read Article</a>
+    </article>
 
-  <!-- Gene Editing -->
-  <article>
-    <img src="https://via.placeholder.com/400x250?text=CRISPR+Tech" alt="CRISPR Technology">
-    <div class="content">
-      <h2>CRISPR & Gene Editing</h2>
-      <p>Genome editing tools are becoming more precise and ethical frameworks mature. Recent achievements:</p>
-      <ul>
-        <li>Base editors correcting single‑nucleotide mutations.</li>
-        <li>Prime editing with reduced off‑target effects.</li>
-        <li>Clinical trials targeting rare genetic diseases.</li>
-      </ul>
-    </div>
-  </article>
+    <article>
+      <a href="https://www.sciencenewstoday.org/technology">
+        <h2>Latest Technology News & Innovations</h2>
+        <p>Stay updated with the latest technology news and innovations. Explore breakthroughs in AI, gadgets, robotics, and more, curated from leading experts.</p>
+      </a>
+      <a class="link" href="https://www.sciencenewstoday.org/technology" target="_blank">Read Article</a>
+    </article>
 
-  <!-- Space Technology -->
-  <article>
-    <img src="https://via.placeholder.com/400x250?text=Space+Technology" alt="Space Technology">
-    <div class="content">
-      <h2>Space Technology & Exploration</h2>
-      <p>Private and public agencies push the boundaries of space travel. Notable strides:</p>
-      <ul>
-        <li>Reusable launch vehicles cutting launch costs.</li>
-        <li>In‑orbit servicing and refueling missions.</li>
-        <li>Mars sample‑return preparations and lunar habitat prototypes.</li>
-      </ul>
-    </div>
-  </article>
+    <article>
+      <a href="https://www.sciencedaily.com/news/matter_energy/technology/">
+        <h2>Technology News – ScienceDaily</h2>
+        <p>2 days ago — Technology news. Read articles on new gadgets and prototypes for future technology from leading research labs, covering everything from quantum computing to space tech.</p>
+      </a>
+      <a class="link" href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">Read Article</a>
+    </article>
+  </div>
 </main>
 
 <footer>
-  <p>© 2026 Tech Insight. All rights reserved.</p>
+  © 2026 Technology Insights. All rights reserved.
 </footer>
 </body>
 </html>
