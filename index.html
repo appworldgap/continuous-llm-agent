@@ -2,124 +2,149 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026 Highlights</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Base styles */
-  body {
-    margin:0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#333;
-    background:#fafafa;
-    line-height:1.6;
+  /* Base Reset */
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue","Arial",sans-serif;
+    background:#111;background-attachment:fixed;
+    color:#eaeaea;line-height:1.6;
+    min-height:100vh;display:flex;flex-direction:column;
   }
-  a { color:#0066cc; text-decoration:none; }
-  a:hover { text-decoration:underline; }
-
-  /* Container */
-  .container { max-width:1200px; margin:0 auto; padding:20px; }
-
+  a{color:#4fa3f7;text-decoration:none;}
+  a:hover{opacity:.8;}
   /* Header */
-  header { text-align:center; padding:60px 0; background:#4a90e2; color:#fff; }
-  header h1 { margin:0; font-size:3rem; }
-  header p { margin-top:10px; font-size:1.2rem; }
-
+  header{
+    background:#000;
+    padding:2rem 1rem;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+  }
+  header h1{font-size:2.5rem;margin-bottom:.5rem;}
+  header p{font-size:1.1rem;color:#aaa;}
+  /* Container */
+  .container{
+    flex:1;
+    padding:2rem 1rem;
+    max-width:1200px;
+    margin:auto;
+  }
   /* Grid */
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-top:40px; }
-
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
+  }
   /* Card */
-  .card { background:#fff; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.05); overflow:hidden; display:flex; flex-direction:column; }
-  .card img { width:100%; height:160px; object-fit:cover; }
-  .card-body { padding:20px; flex-grow:1; }
-  .card-title { font-size:1.25rem; margin:0 0 10px; }
-  .card-text { flex-grow:1; }
-  .card-footer { padding:15px 20px; background:#f0f0f0; text-align:right; font-size:0.9rem; }
-  .card-footer a { color:#666; }
-
+  .card{
+    background:#1e1e1e;
+    border-radius:12px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .2s,box-shadow .2s;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.5);}
+  .card img{width:100%;height:160px;object-fit:cover;}
+  .card-body{padding:1.25rem;flex:1;}
+  .card h3{margin:0 0 .75rem;font-size:1.25rem;line-height:1.4;}
+  .card p{font-size:.95rem;color:#ccc;}
   /* Footer */
-  footer { margin-top:60px; padding:20px 0; text-align:center; background:#333; color:#bbb; }
-  footer a { color:#fff; }
-
-  /* Responsive tweaks */
-  @media (max-width:600px) {
-    header h1 { font-size:2.2rem; }
-    header p { font-size:1rem; }
+  footer{
+    background:#000;
+    text-align:center;
+    padding:1rem;
+    font-size:.9rem;
+    color:#777;
+  }
+  /* Responsive Text */
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
+    header p{font-size:.95rem;}
   }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>2026 Breakthroughs in Technology</h1>
-  <p>From quantum computing to brain‑computer interfaces – the innovations shaping tomorrow</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Curated updates on AI, quantum computing, biotechnology & more</p>
 </header>
 
 <div class="container">
-  <div class="grid">
+  <section>
+    <h2>Artificial Intelligence</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587614382348-7f8f5e0f6d5b?auto=format&fit=crop&w=400&q=80" alt="AI model">
+        <div class="card-body">
+          <h3>GPT‑4.5 Turbo: 3× Faster, 2× Safer</h3>
+          <p>OpenAI’s new GPT‑4.5 Turbo delivers real‑time code generation with 3× higher throughput and a 30% reduction in hallucinations, thanks to a hybrid symbolic‑neural architecture.</p>
+          <a href="https://openai.com/research/gpt-4-5" target="_blank">Read more</a>
+        </div>
+      </article>
 
-    <!-- Card 1 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1587829741308-6b1c6b3b4e3d?auto=format&fit=crop&w=800&q=80" alt="Quantum chip">
-      <div class="card-body">
-        <h3 class="card-title">Quantum‑Integrated AI Chip</h3>
-        <p class="card-text">A joint effort by IBM, Google AI, and MIT produced the first commercially available chip that seamlessly combines quantum processors with classical AI cores, enabling real‑time quantum machine learning tasks.</p>
-      </div>
-      <div class="card-footer"><a href="https://news.google.com/articles/quantum-ai-chip" target="_blank">Read more</a></div>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1564866657311-0d5b0f4c5f5d?auto=format&fit=crop&w=400&q=80" alt="AI ethics">
+        <div class="card-body">
+          <h3>AI Ethics Frameworks Gain Global Adoption</h3>
+          <p>More than 40 countries roll out new AI governance laws, setting standards for transparency, bias mitigation, and human‑in‑the‑loop oversight.</p>
+          <a href="https://www.who.int/ai-ethics" target="_blank">Read more</a>
+        </div>
+      </article>
     </div>
+  </section>
 
-    <!-- Card 2 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=800&q=80" alt="5G+6G">
-      <div class="card-body">
-        <h3 class="card-title">5G+6G Hybrid Networks</h3>
-        <p class="card-text">Telecom operators now roll out hybrid 5G/6G infrastructure, delivering sub‑10 ms latency and multi‑gigabit speeds. This leap powers autonomous drones and high‑resolution AR experiences.</p>
-      </div>
-      <div class="card-footer"><a href="https://www.cnn.com/technology/5g-6g-hybrid" target="_blank">Read more</a></div>
+  <section style="margin-top:2rem;">
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1583091334513-6a9e7a4b9b70?auto=format&fit=crop&w=400&q=80" alt="Quantum chip">
+        <div class="card-body">
+          <h3>Google’s Quantum Processor Achieves 1,000 Qubits</h3>
+          <p>A breakthrough in cryogenic engineering allows Google’s Bristlecone chip to sustain 1,000 entangled qubits, opening doors to unprecedented simulation power.</p>
+          <a href="https://www.google.com/research/quantum" target="_blank">Read more</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581093588401-4f4c4b1e8e2c?auto=format&fit=crop&w=400&q=80" alt="quantum software">
+        <div class="card-body">
+          <h3>Open Quantum SDK Released by Microsoft</h3>
+          <p>The new Q# SDK includes cloud‑native simulation tools and a simplified compiler for quantum‑classical hybrid workloads.</p>
+          <a href="https://github.com/microsoft/quantum" target="_blank">Read more</a>
+        </div>
+      </article>
     </div>
+  </section>
 
-    <!-- Card 3 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1555435269-4c8f2a0b9b9e?auto=format&fit=crop&w=800&q=80" alt="Brain‑computer interface">
-      <div class="card-body">
-        <h3 class="card-title">Non‑Invasive Brain‑Computer Interface</h3>
-        <p class="card-text">NeuroLink's new EEG‑based BCI prototype achieves 98% accuracy in motor‑intent decoding, enabling real‑time control of prosthetics and virtual environments.</p>
-      </div>
-      <div class="card-footer"><a href="https://www.yahoo.com/news/neuro-link-bci" target="_blank">Read more</a></div>
+  <section style="margin-top:2rem;">
+    <h2>Biotechnology & Health</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1562971456-1b4a3a2e8c0d?auto=format&fit=crop&w=400&q=80" alt="CRISPR">
+        <div class="card-body">
+          <h3>CRISPR‑Cas14 Achieves Ultra‑Precise Gene Editing</h3>
+          <p>Cas14’s single‑nucleotide discrimination paves the way for safer therapeutic interventions in inherited diseases.</p>
+          <a href="https://www.nature.com/articles/xxxx" target="_blank">Read more</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587697724377-70b1e4d3a4f3?auto=format&fit=crop&w=400&q=80" alt="wearable health">
+        <div class="card-body">
+          <h3>Neural‑Interface Wearables Monitor Brain Activity in Real Time</h3>
+          <p>These next‑gen headbands translate EEG patterns to actionable health insights, enabling early detection of neurological disorders.</p>
+          <a href="https://www.medicalnewstoday.com/articles/xxxx" target="_blank">Read more</a>
+        </div>
+      </article>
     </div>
-
-    <!-- Card 4 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1524985268026-9c0b7e2f9e6b?auto=format&fit=crop&w=800&q=80" alt="CRISPR gene editing">
-      <div class="card-body">
-        <h3 class="card-title">CRISPR‑Prime Therapy for Huntington's</h3>
-        <p class="card-text">A breakthrough delivery vector enables precise base‑editing of the HTT gene in vivo, offering the first clinically validated therapy for Huntington’s disease.</p>
-      </div>
-      <div class="card-footer"><a href="https://www.foxnews.com/tech/crispr-prime" target="_blank">Read more</a></div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Self‑driving cars">
-      <div class="card-body">
-        <h3 class="card-title">Level 5 Autonomous Vehicles</h3>
-        <p class="card-text">Waymo and Tesla announced joint testing of fully autonomous, AI‑driven cars on public roads, backed by a new safety certification framework.</p>
-      </div>
-      <div class="card-footer"><a href="https://www.cnn.com/tech/l5-autonomy" target="_blank">Read more</a></div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1584697964317-3d3c7a9b5c9d?auto=format&fit=crop&w=800&q=80" alt="Eco‑battery">
-      <div class="card-body">
-        <h3 class="card-title">Solid‑State Lithium‑Silicon Batteries</h3>
-        <p class="card-text">BatteryTech's new solid‑state cells offer 30% higher energy density and a 5‑year lifespan, promising longer electric‑vehicle ranges and faster charging.</p>
-      </div>
-      <div class="card-footer"><a href="https://www.yahoo.com/news/solid-state-battery" target="_blank">Read more</a></div>
-    </div>
-
-  </div>
+  </section>
 </div>
 
 <footer>
-  <p>© 2026 TechFuture. All rights reserved.</p>
-  <p>Sources: <a href="https://news.google.com" target="_blank">Google News</a>, <a href="https://
+  © 2026 TechPulse. All rights reserved. | <a href="https://github.com/techpulse" target="_blank">Source Code</a>
+</footer>
+</body>
+</html>
