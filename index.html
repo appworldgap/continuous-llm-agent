@@ -2,182 +2,178 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     :root {
-        --primary: #0a74da;
-        --secondary: #f9fafb;
-        --accent: #ff6f61;
-        --bg: #ffffff;
-        --text: #333333;
-        --shadow: rgba(0,0,0,0.1);
-        --radius: 8px;
-        --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-    }
-    * {
-        box-sizing: border-box;
+        --clr-bg: #f9fafb;
+        --clr-primary: #1f2937;
+        --clr-accent: #3b82f6;
+        --clr-card-bg: #ffffff;
+        --clr-text: #111827;
+        --clr-muted: #6b7280;
+        --ff-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     body {
         margin: 0;
-        font-family: var(--font-stack);
-        background: var(--secondary);
-        color: var(--text);
+        font-family: var(--ff-sans);
+        background: var(--clr-bg);
+        color: var(--clr-text);
         line-height: 1.6;
     }
     header {
-        background: var(--primary);
+        background: var(--clr-primary);
         color: #fff;
-        padding: 1rem 2rem;
+        padding: 2rem 1rem;
         text-align: center;
-        box-shadow: 0 2px 4px var(--shadow);
     }
     header h1 {
         margin: 0;
         font-size: 2.5rem;
-        font-weight: 600;
+    }
+    nav {
+        margin: 1rem auto;
+        max-width: 960px;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    nav a {
+        color: var(--clr-accent);
+        text-decoration: none;
+        font-weight: 500;
     }
     main {
-        max-width: 900px;
+        max-width: 960px;
         margin: 2rem auto;
         padding: 0 1rem;
     }
-    .breakthrough {
-        background: var(--bg);
-        border-radius: var(--radius);
-        box-shadow: 0 2px 8px var(--shadow);
+    .card {
+        background: var(--clr-card-bg);
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         margin-bottom: 1.5rem;
-        overflow: hidden;
-        transition: transform 0.2s ease;
-    }
-    .breakthrough:hover {
-        transform: translateY(-4px);
-    }
-    .breakthrough-header {
+        padding: 1.5rem;
         display: flex;
-        align-items: center;
-        padding: 1rem;
-        background: var(--primary);
-        color: #fff;
+        flex-direction: column;
     }
-    .breakthrough-header .icon {
+    .card h2 {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        color: var(--clr-primary);
         font-size: 1.5rem;
-        margin-right: 0.75rem;
     }
-    .breakthrough-content {
-        padding: 1rem 1rem 1.5rem;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 1rem;
-        align-items: start;
-    }
-    .breakthrough-content img {
-        width: 100%;
-        height: auto;
-        border-radius: var(--radius);
-    }
-    .breakthrough-content p {
+    .card p {
         margin: 0;
-    }
-    .breakthrough-link {
-        display: inline-block;
-        margin-top: 0.75rem;
-        padding: 0.5rem 1rem;
-        background: var(--accent);
-        color: #fff;
-        text-decoration: none;
-        border-radius: var(--radius);
-        font-weight: 600;
+        color: var(--clr-muted);
     }
     footer {
         text-align: center;
-        padding: 1rem 0;
+        padding: 1rem;
         font-size: 0.9rem;
-        color: #777;
+        color: var(--clr-muted);
     }
-    @media (max-width: 600px) {
-        .breakthrough-content {
-            grid-template-columns: 1fr;
+    @media (min-width: 600px) {
+        .card {
+            flex-direction: row;
         }
-        header h1 {
-            font-size: 2rem;
+        .card img {
+            max-width: 150px;
+            margin-right: 1rem;
+            border-radius: 0.5rem;
+        }
+        .card-content {
+            flex: 1;
         }
     }
 </style>
 </head>
 <body>
+
 <header>
-    <h1>🔬 Latest Breakthroughs in Technology – 2026</h1>
+    <h1>Latest Breakthroughs in Technology – 2024</h1>
 </header>
+
+<nav>
+    <a href="#ai">AI & ML</a>
+    <a href="#quantum">Quantum Computing</a>
+    <a href="#energy">Energy & Sustainability</a>
+    <a href="#biotech">Biotechnology</a>
+    <a href="#connectivity">Connectivity</a>
+    <a href="#robotics">Robotics & Autonomy</a>
+</nav>
+
 <main>
-    <section class="breakthrough">
-        <div class="breakthrough-header">
-            <div class="icon">🤖</div>
-            <h2>Generative AI 4.0 – Ultra Realistic Media Creation</h2>
-        </div>
-        <div class="breakthrough-content">
-            <img src="https://picsum.photos/seed/ai/400/300" alt="AI image generation">
-            <div>
-                <p>OpenAI’s GPT-4.0 now supports full multimodal generation, enabling creators to produce photo‑realistic images, 3‑D models, and immersive VR environments directly from natural language prompts.</p>
-                <a href="#" class="breakthrough-link">Read More</a>
-            </div>
-        </div>
-    </section>
-    <section class="breakthrough">
-        <div class="breakthrough-header">
-            <div class="icon">🧪</div>
-            <h2>Quantum Supremacy Extended – 102‑Qubit Processor</h2>
-        </div>
-        <div class="breakthrough-content">
-            <img src="https://picsum.photos/seed/quantum/400/300" alt="Quantum processor">
-            <div>
-                <p>IBM and Google collaborate on a 102‑qubit superconducting chip that achieves new levels of error correction, opening doors to complex simulation tasks in chemistry and materials science.</p>
-                <a href="#" class="breakthrough-link">Read More</a>
-            </div>
+
+    <!-- AI & Machine Learning -->
+    <section id="ai" class="card">
+        <img src="https://picsum.photos/id/1025/150/150" alt="AI illustration">
+        <div class="card-content">
+            <h2>AI & Machine Learning</h2>
+            <p>
+                <strong>Foundation Models with Multi‑Modal Reasoning.</strong> Large models now combine vision, language, and audio with reasoning engines, enabling tasks like autonomous design, real‑time translation, and predictive medicine.  
+                <br><br>
+                <strong>AI‑Driven Drug Discovery.</strong> Generative models predict viable drug candidates in days, slashing discovery cycles from years to weeks.  
+                <br><br>
+                <strong>Ethical AI Frameworks.</strong> New governance protocols and transparent audit trails have been integrated into commercial AI platforms, promoting responsible deployment.
+            </p>
         </div>
     </section>
-    <section class="breakthrough">
-        <div class="breakthrough-header">
-            <div class="icon">📶</div>
-            <h2>6G Research – Sub‑GHz Terahertz Band</h2>
-        </div>
-        <div class="breakthrough-content">
-            <img src="https://picsum.photos/seed/6g/400/300" alt="6G network">
-            <div>
-                <p>Early prototypes demonstrate 6G capable of 1 Tbps throughput, using terahertz frequencies and adaptive AI beamforming, promising ultra‑low latency for autonomous vehicles and AR/VR experiences.</p>
-                <a href="#" class="breakthrough-link">Read More</a>
-            </div>
-        </div>
-    </section>
-    <section class="breakthrough">
-        <div class="breakthrough-header">
-            <div class="icon">🧠</div>
-            <h2>Brain‑Computer Interface – 10⁶‑channel Neural Mesh</h2>
-        </div>
-        <div class="breakthrough-content">
-            <img src="https://picsum.photos/seed/bci/400/300" alt="Neural interface">
-            <div>
-                <p>NeuroTech Solutions releases a flexible neural mesh with a million recording sites, enabling unprecedented resolution of brain activity and real‑time control of prosthetics and virtual interfaces.</p>
-                <a href="#" class="breakthrough-link">Read More</a>
-            </div>
+
+    <!-- Quantum Computing -->
+    <section id="quantum" class="card">
+        <img src="https://picsum.photos/id/1067/150/150" alt="Quantum computer">
+        <div class="card-content">
+            <h2>Quantum Computing</h2>
+            <p>
+                <strong>Fault‑Tolerant Qubits.</strong> Silicon‑based qubits now achieve error rates below 0.1%, a milestone toward scalable quantum processors.  
+                <br><br>
+                <strong>Hybrid Classical–Quantum Cloud.</strong> Major cloud providers offer quantum acceleration for optimization, simulation, and cryptanalysis, lowering the entry barrier for researchers.  
+                <br><br>
+                <strong>Quantum‑Safe Cryptography.</strong> Post‑quantum algorithms have entered mainstream use, securing communications against future quantum adversaries.
+            </p>
         </div>
     </section>
-    <section class="breakthrough">
-        <div class="breakthrough-header">
-            <div class="icon">🔋</div>
-            <h2>Solid‑State Lithium‑Selenium Batteries – 300 Wh/kg</h2>
-        </div>
-        <div class="breakthrough-content">
-            <img src="https://picsum.photos/seed/battery/400/300" alt="Solid state battery">
-            <div>
-                <p>Researchers achieve record energy density in solid‑state Li‑Se cells, offering safer, longer‑lasting power for electric vehicles and grid storage with a projected lifespan of 10,000 cycles.</p>
-                <a href="#" class="breakthrough-link">Read More</a>
-            </div>
+
+    <!-- Energy & Sustainability -->
+    <section id="energy" class="card">
+        <img src="https://picsum.photos/id/1011/150/150" alt="Solar panels">
+        <div class="card-content">
+            <h2>Energy & Sustainability</h2>
+            <p>
+                <strong>Solid‑State Batteries.</strong> New cathode materials deliver 500 Wh/kg energy density, paving the way for long‑range electric vehicles and grid storage.  
+                <br><br>
+                <strong>Advanced Carbon Capture.</strong> Direct air capture plants now achieve 90% CO₂ purity at $30/ton, making negative‑emission projects economically viable.  
+                <br><br>
+                <strong>Smart Grid AI.</strong> Adaptive load‑balancing algorithms reduce peak demand by 15% and improve resilience to weather events.
+            </p>
         </div>
     </section>
-</main>
-<footer>
-    © 2026 TechPulse. All rights reserved.
-</footer>
-</body>
-</html>
+
+    <!-- Biotechnology -->
+    <section id="biotech" class="card">
+        <img src="https://picsum.photos/id/1062/150/150" alt="DNA helix">
+        <div class="card-content">
+            <h2>Biotechnology</h2>
+            <p>
+                <strong>CRISPR‑Prime Editing.</strong> Enhanced specificity allows precise base changes without double‑stranded breaks, accelerating gene‑therapy development.  
+                <br><br>
+                <strong>Microbiome Therapeutics.</strong> Engineered commensal bacteria now treat inflammatory diseases and metabolic disorders, offering a new class of living drugs.  
+                <br><br>
+                <strong>AI‑Assisted Protein Design.</strong> Deep generative models produce novel enzymes with industrial applications, such as bio‑fuel production and waste remediation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Connectivity -->
+    <section id="connectivity" class="card">
+        <img src="https://picsum.photos/id/1080/150/150" alt="Satellite">
+        <div class="card-content">
+            <h2>Connectivity</h2>
+            <p>
+                <strong>6G & Sub‑THz Communication.</strong> First commercial 6G trials deliver 1 Tb/s throughput and <1 ms latency for VR, holographic displays, and real‑time AI inference.  
+                <br><br>
+                <strong>Low‑Earth‑Orbit Satellite Networks.</strong> New constellations provide global low‑latency broadband, bridging the digital divide in remote regions.  
+                <br><br>
+                <strong>Quantum Key Distribution (QKD).</strong> Integrated QKD modules on smartphones and servers now support secure, tamper‑proof data links.
+            </
