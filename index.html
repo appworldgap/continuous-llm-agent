@@ -2,122 +2,182 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024‑2026</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Reset & Base */
-*{margin:0;padding:0;box-sizing:border-box;}
-html{font-size:16px;font-family:"Inter",sans-serif;background:#111;color:#f0f0f0;}
-a{color:#4fc3f7;text-decoration:none;}
-a:hover{text-decoration:underline;}
-ul{list-style:none;}
-
-/* Layout */
-body{display:flex;flex-direction:column;min-height:100vh;}
-header{background:#222;padding:2rem 1rem;box-shadow:0 2px 8px rgba(0,0,0,0.5);}
-header h1{font-size:2.5rem;font-weight:600;text-align:center;}
-nav{margin-top:1rem;}
-nav ul{display:flex;justify-content:center;gap:1.5rem;}
-nav li{font-size:1rem;}
-main{flex:1;padding:2rem 1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-section{background:#222;border-radius:12px;padding:1.5rem;box-shadow:0 2px 6px rgba(0,0,0,0.4);}
-section h2{font-size:1.5rem;margin-bottom:.75rem;}
-section p{font-size:0.95rem;line-height:1.5;}
-footer{background:#222;padding:1rem;text-align:center;font-size:0.9rem;}
-footer a{color:#4fc3f7;}
-
-/* Cards */
-.card{background:#2c2c2c;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;height:100%;}
-.card img{width:100%;height:160px;object-fit:cover;}
-.card .content{padding:1rem;flex:1;}
-.card h3{font-size:1.25rem;margin-bottom:.5rem;}
-.card p{font-size:.9rem;line-height:1.4;color:#d0d0d0;}
-.card a{margin-top:auto;margin-top:1rem;display:inline-block;color:#4fc3f7;font-weight:600;}
-
-/* Responsive */
-@media (max-width:600px){
-    header h1{font-size:1.8rem;}
-    nav ul{flex-direction:column;gap:.5rem;}
-}
+    :root {
+        --primary: #0a74da;
+        --secondary: #f9fafb;
+        --accent: #ff6f61;
+        --bg: #ffffff;
+        --text: #333333;
+        --shadow: rgba(0,0,0,0.1);
+        --radius: 8px;
+        --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        font-family: var(--font-stack);
+        background: var(--secondary);
+        color: var(--text);
+        line-height: 1.6;
+    }
+    header {
+        background: var(--primary);
+        color: #fff;
+        padding: 1rem 2rem;
+        text-align: center;
+        box-shadow: 0 2px 4px var(--shadow);
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    .breakthrough {
+        background: var(--bg);
+        border-radius: var(--radius);
+        box-shadow: 0 2px 8px var(--shadow);
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+    }
+    .breakthrough:hover {
+        transform: translateY(-4px);
+    }
+    .breakthrough-header {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background: var(--primary);
+        color: #fff;
+    }
+    .breakthrough-header .icon {
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+    }
+    .breakthrough-content {
+        padding: 1rem 1rem 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+        align-items: start;
+    }
+    .breakthrough-content img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+    }
+    .breakthrough-content p {
+        margin: 0;
+    }
+    .breakthrough-link {
+        display: inline-block;
+        margin-top: 0.75rem;
+        padding: 0.5rem 1rem;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        border-radius: var(--radius);
+        font-weight: 600;
+    }
+    footer {
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.9rem;
+        color: #777;
+    }
+    @media (max-width: 600px) {
+        .breakthrough-content {
+            grid-template-columns: 1fr;
+        }
+        header h1 {
+            font-size: 2rem;
+        }
+    }
 </style>
 </head>
 <body>
-
 <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <nav>
-        <ul>
-            <li><a href="#ai">AI</a></li>
-            <li><a href="#quantum">Quantum</a></li>
-            <li><a href="#6g">6G</a></li>
-            <li><a href="#energy">Energy</a></li>
-            <li><a href="#biology">Bio‑Tech</a></li>
-        </ul>
-    </nav>
+    <h1>🔬 Latest Breakthroughs in Technology – 2026</h1>
 </header>
-
 <main>
-    <!-- Artificial Intelligence -->
-    <section id="ai">
-        <h2>Artificial Intelligence & Machine Learning</h2>
-        <p>2024‑2026 has seen the rise of *Generalizable AI*—models that can transfer knowledge across domains with minimal fine‑tuning. Notable milestones include:</p>
-        <ul>
-            <li>OpenAI’s GPT‑4.5 with real‑time learning from user interactions.</li>
-            <li>DeepMind’s AlphaFold 2.5 that predicts protein folding with <90% accuracy for previously unsolved structures.</li>
-            <li>Microsoft’s “Project Brainwave‑2” enabling sub‑microsecond inference on edge devices.</li>
-        </ul>
+    <section class="breakthrough">
+        <div class="breakthrough-header">
+            <div class="icon">🤖</div>
+            <h2>Generative AI 4.0 – Ultra Realistic Media Creation</h2>
+        </div>
+        <div class="breakthrough-content">
+            <img src="https://picsum.photos/seed/ai/400/300" alt="AI image generation">
+            <div>
+                <p>OpenAI’s GPT-4.0 now supports full multimodal generation, enabling creators to produce photo‑realistic images, 3‑D models, and immersive VR environments directly from natural language prompts.</p>
+                <a href="#" class="breakthrough-link">Read More</a>
+            </div>
+        </div>
     </section>
-
-    <!-- Quantum Computing -->
-    <section id="quantum">
-        <h2>Quantum Computing</h2>
-        <p>Quantum processors now boast >1,000 qubits with error‑correction overhead reduced by 40%. Key breakthroughs include:</p>
-        <ul>
-            <li>IBM’s Eagle‑Plus chip (1,200 logical qubits) achieving quantum advantage on lattice‑gas simulations.</li>
-            <li>Google’s Sycamore‑2 using topological qubits with coherence times >5 ms.</li>
-            <li>Quantum‑enhanced drug discovery platform launched by Schrödinger.</li>
-        </ul>
+    <section class="breakthrough">
+        <div class="breakthrough-header">
+            <div class="icon">🧪</div>
+            <h2>Quantum Supremacy Extended – 102‑Qubit Processor</h2>
+        </div>
+        <div class="breakthrough-content">
+            <img src="https://picsum.photos/seed/quantum/400/300" alt="Quantum processor">
+            <div>
+                <p>IBM and Google collaborate on a 102‑qubit superconducting chip that achieves new levels of error correction, opening doors to complex simulation tasks in chemistry and materials science.</p>
+                <a href="#" class="breakthrough-link">Read More</a>
+            </div>
+        </div>
     </section>
-
-    <!-- 6G & Connectivity -->
-    <section id="6g">
-        <h2>6G & Next‑Gen Connectivity</h2>
-        <p>While 5G is still rolling out, 2024‑2026 marks the beginning of 6G research, promising <em>trillions of bits per second</em> and <em>microsecond‑level latency</em>.</p>
-        <ul>
-            <li>China’s 6G testbed achieving 1 Tbps over 200 km.</li>
-            <li>NASA’s DeepSpace6 initiative testing 6G links between Earth and Mars probes.</li>
-            <li>Commercial 6G prototype by Ericsson & Nokia with AI‑based beamforming.</li>
-        </ul>
+    <section class="breakthrough">
+        <div class="breakthrough-header">
+            <div class="icon">📶</div>
+            <h2>6G Research – Sub‑GHz Terahertz Band</h2>
+        </div>
+        <div class="breakthrough-content">
+            <img src="https://picsum.photos/seed/6g/400/300" alt="6G network">
+            <div>
+                <p>Early prototypes demonstrate 6G capable of 1 Tbps throughput, using terahertz frequencies and adaptive AI beamforming, promising ultra‑low latency for autonomous vehicles and AR/VR experiences.</p>
+                <a href="#" class="breakthrough-link">Read More</a>
+            </div>
+        </div>
     </section>
-
-    <!-- Energy & Sustainability -->
-    <section id="energy">
-        <h2>Energy & Sustainability</h2>
-        <p>Breakthroughs in storage, conversion, and grid management are accelerating the energy transition.</p>
-        <ul>
-            <li>Solid‑state Li‑S batteries with 500 Wh/kg capacity (Tesla research).</li>
-            <li>Perovskite tandem solar cells achieving 29% efficiency (NREL).</li>
-            <li>Grid‑scale hydrogen plants using offshore wind power (Hyundai Energy).</li>
-            <li>Smart grid AI optimizing demand response (Siemens).</li>
-        </ul>
+    <section class="breakthrough">
+        <div class="breakthrough-header">
+            <div class="icon">🧠</div>
+            <h2>Brain‑Computer Interface – 10⁶‑channel Neural Mesh</h2>
+        </div>
+        <div class="breakthrough-content">
+            <img src="https://picsum.photos/seed/bci/400/300" alt="Neural interface">
+            <div>
+                <p>NeuroTech Solutions releases a flexible neural mesh with a million recording sites, enabling unprecedented resolution of brain activity and real‑time control of prosthetics and virtual interfaces.</p>
+                <a href="#" class="breakthrough-link">Read More</a>
+            </div>
+        </div>
     </section>
-
-    <!-- Biotechnology & Health -->
-    <section id="biology">
-        <h2>Biotechnology & Health</h2>
-        <p>Genomics, gene editing, and personalized medicine have reached new horizons.</p>
-        <ul>
-            <li>CRISPR‑CasX delivered via lipid nanoparticles for liver diseases.</li>
-            <li>AI‑driven diagnostic platform predicting disease risk from routine lab data.</li>
-            <li>Personalized cancer immunotherapy protocols using patient‑specific T‑cell engineering.</li>
-            <li>Microbiome‑based therapeutics for mental health (NeuroBiotech).</li>
-        </ul>
+    <section class="breakthrough">
+        <div class="breakthrough-header">
+            <div class="icon">🔋</div>
+            <h2>Solid‑State Lithium‑Selenium Batteries – 300 Wh/kg</h2>
+        </div>
+        <div class="breakthrough-content">
+            <img src="https://picsum.photos/seed/battery/400/300" alt="Solid state battery">
+            <div>
+                <p>Researchers achieve record energy density in solid‑state Li‑Se cells, offering safer, longer‑lasting power for electric vehicles and grid storage with a projected lifespan of 10,000 cycles.</p>
+                <a href="#" class="breakthrough-link">Read More</a>
+            </div>
+        </div>
     </section>
 </main>
-
 <footer>
-    <p>© 2024 TechInsight • <a href="#">Privacy Policy</a> • <a href="#">Contact</a></p>
+    © 2026 TechPulse. All rights reserved.
 </footer>
-
 </body>
 </html>
