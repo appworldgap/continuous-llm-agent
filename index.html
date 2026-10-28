@@ -2,178 +2,179 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-    :root {
-        --clr-bg: #f9fafb;
-        --clr-primary: #1f2937;
-        --clr-accent: #3b82f6;
-        --clr-card-bg: #ffffff;
-        --clr-text: #111827;
-        --clr-muted: #6b7280;
-        --ff-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-    body {
-        margin: 0;
-        font-family: var(--ff-sans);
-        background: var(--clr-bg);
-        color: var(--clr-text);
-        line-height: 1.6;
-    }
-    header {
-        background: var(--clr-primary);
-        color: #fff;
-        padding: 2rem 1rem;
-        text-align: center;
-    }
-    header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-    }
-    nav {
-        margin: 1rem auto;
-        max-width: 960px;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-    nav a {
-        color: var(--clr-accent);
-        text-decoration: none;
-        font-weight: 500;
-    }
-    main {
-        max-width: 960px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
-    .card {
-        background: var(--clr-card-bg);
-        border-radius: 0.75rem;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        margin-bottom: 1.5rem;
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-    }
-    .card h2 {
-        margin-top: 0;
-        margin-bottom: 0.75rem;
-        color: var(--clr-primary);
-        font-size: 1.5rem;
-    }
-    .card p {
-        margin: 0;
-        color: var(--clr-muted);
-    }
-    footer {
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-        color: var(--clr-muted);
-    }
-    @media (min-width: 600px) {
-        .card {
-            flex-direction: row;
-        }
-        .card img {
-            max-width: 150px;
-            margin-right: 1rem;
-            border-radius: 0.5rem;
-        }
-        .card-content {
-            flex: 1;
-        }
-    }
+/* CSS Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+/* Theme Variables */
+:root {
+  --primary: #1a73e8;
+  --secondary: #fff;
+  --accent: #ff4757;
+  --bg: #f9f9f9;
+  --text: #333;
+  --font: 'Inter', sans-serif;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { text-decoration:none; color:inherit; }
+img { max-width:100%; display:block; }
+
+/* Layout */
+header {
+  background: var(--primary);
+  color: var(--secondary);
+  padding: 1rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1 { font-size:1.8rem; }
+nav a { margin-left:1.5rem; color:var(--secondary); font-weight:600; }
+
+/* Hero Section */
+.hero {
+  background-image:url('https://images.unsplash.com/photo-1587620934824-2c5a5d5c1b57?auto=format&fit=crop&w=1400&q=80');
+  background-size:cover;
+  background-position:center;
+  color:var(--secondary);
+  text-align:center;
+  padding:4rem 2rem;
+}
+.hero h2 { font-size:2.5rem; margin-bottom:0.5rem; }
+.hero p { font-size:1.2rem; max-width:700px; margin:0 auto; }
+
+/* Content Sections */
+section {
+  padding:4rem 2rem;
+  display:grid;
+  gap:2rem;
+}
+.card {
+  background:var(--secondary);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  display:flex;
+  flex-direction:column;
+}
+.card img { width:100%; height:200px; object-fit:cover; }
+.card-content { padding:1.5rem; flex:1; display:flex; flex-direction:column; }
+.card h3 { margin-bottom:0.5rem; font-size:1.4rem; }
+.card p { flex:1; }
+.btn {
+  display:inline-block;
+  margin-top:1rem;
+  padding:0.6rem 1.2rem;
+  background:var(--primary);
+  color:var(--secondary);
+  border-radius:4px;
+  font-weight:600;
+  transition:background 0.3s;
+}
+.btn:hover { background:var(--accent); }
+
+/* Footer */
+footer {
+  background:var(--primary);
+  color:var(--secondary);
+  text-align:center;
+  padding:1rem 2rem;
+  font-size:0.9rem;
+}
+@media (min-width:768px) {
+  .cards {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  }
+}
 </style>
 </head>
 <body>
-
 <header>
-    <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <h1>TechPulse</h1>
+  <nav>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#bio">Biotech</a>
+    <a href="#space">Space</a>
+    <a href="#energy">Energy</a>
+  </nav>
 </header>
 
-<nav>
-    <a href="#ai">AI & ML</a>
-    <a href="#quantum">Quantum Computing</a>
-    <a href="#energy">Energy & Sustainability</a>
-    <a href="#biotech">Biotechnology</a>
-    <a href="#connectivity">Connectivity</a>
-    <a href="#robotics">Robotics & Autonomy</a>
-</nav>
+<section class="hero">
+  <h2>Breaking New Ground: The Latest Technological Breakthroughs</h2>
+  <p>From AI that can compose music to quantum processors that redefine computing, explore the innovations shaping tomorrow.</p>
+</section>
 
-<main>
+<section id="ai">
+  <h2 style="text-align:center; color:var(--primary);">Artificial Intelligence</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580894908361-5e6d2a5a5b1e?auto=format&fit=crop&w=800&q=80" alt="AI">
+      <div class="card-content">
+        <h3>Generative AI with Multimodal Capabilities</h3>
+        <p>New models seamlessly blend text, image, and audio generation, enabling creative workflows and real‑time content creation.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281657826-6b2f6c9a4b8f?auto=format&fit=crop&w=800&q=80" alt="AI Ethics">
+      <div class="card-content">
+        <h3>AI Transparency and Fairness</h3>
+        <p>Frameworks for explainable AI reduce bias and improve trust, paving the way for regulated deployment across industries.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- AI & Machine Learning -->
-    <section id="ai" class="card">
-        <img src="https://picsum.photos/id/1025/150/150" alt="AI illustration">
-        <div class="card-content">
-            <h2>AI & Machine Learning</h2>
-            <p>
-                <strong>Foundation Models with Multi‑Modal Reasoning.</strong> Large models now combine vision, language, and audio with reasoning engines, enabling tasks like autonomous design, real‑time translation, and predictive medicine.  
-                <br><br>
-                <strong>AI‑Driven Drug Discovery.</strong> Generative models predict viable drug candidates in days, slashing discovery cycles from years to weeks.  
-                <br><br>
-                <strong>Ethical AI Frameworks.</strong> New governance protocols and transparent audit trails have been integrated into commercial AI platforms, promoting responsible deployment.
-            </p>
-        </div>
-    </section>
+<section id="quantum">
+  <h2 style="text-align:center; color:var(--primary);">Quantum Computing</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1573164574553-6c9e4e2a7c90?auto=format&fit=crop&w=800&q=80" alt="Quantum">
+      <div class="card-content">
+        <h3>Quantum Supremacy Achieved in Optimization Tasks</h3>
+        <p>New superconducting qubit designs deliver breakthrough speedups for complex logistics and financial modeling.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1587394708611-0eeb2f7a1a8e?auto=format&fit=crop&w=800&q=80" alt="Quantum Networking">
+      <div class="card-content">
+        <h3>Quantum‑Secure Communication Networks</h3>
+        <p>Prototype quantum key distribution systems now span metropolitan distances, offering unprecedented data security.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Quantum Computing -->
-    <section id="quantum" class="card">
-        <img src="https://picsum.photos/id/1067/150/150" alt="Quantum computer">
-        <div class="card-content">
-            <h2>Quantum Computing</h2>
-            <p>
-                <strong>Fault‑Tolerant Qubits.</strong> Silicon‑based qubits now achieve error rates below 0.1%, a milestone toward scalable quantum processors.  
-                <br><br>
-                <strong>Hybrid Classical–Quantum Cloud.</strong> Major cloud providers offer quantum acceleration for optimization, simulation, and cryptanalysis, lowering the entry barrier for researchers.  
-                <br><br>
-                <strong>Quantum‑Safe Cryptography.</strong> Post‑quantum algorithms have entered mainstream use, securing communications against future quantum adversaries.
-            </p>
-        </div>
-    </section>
-
-    <!-- Energy & Sustainability -->
-    <section id="energy" class="card">
-        <img src="https://picsum.photos/id/1011/150/150" alt="Solar panels">
-        <div class="card-content">
-            <h2>Energy & Sustainability</h2>
-            <p>
-                <strong>Solid‑State Batteries.</strong> New cathode materials deliver 500 Wh/kg energy density, paving the way for long‑range electric vehicles and grid storage.  
-                <br><br>
-                <strong>Advanced Carbon Capture.</strong> Direct air capture plants now achieve 90% CO₂ purity at $30/ton, making negative‑emission projects economically viable.  
-                <br><br>
-                <strong>Smart Grid AI.</strong> Adaptive load‑balancing algorithms reduce peak demand by 15% and improve resilience to weather events.
-            </p>
-        </div>
-    </section>
-
-    <!-- Biotechnology -->
-    <section id="biotech" class="card">
-        <img src="https://picsum.photos/id/1062/150/150" alt="DNA helix">
-        <div class="card-content">
-            <h2>Biotechnology</h2>
-            <p>
-                <strong>CRISPR‑Prime Editing.</strong> Enhanced specificity allows precise base changes without double‑stranded breaks, accelerating gene‑therapy development.  
-                <br><br>
-                <strong>Microbiome Therapeutics.</strong> Engineered commensal bacteria now treat inflammatory diseases and metabolic disorders, offering a new class of living drugs.  
-                <br><br>
-                <strong>AI‑Assisted Protein Design.</strong> Deep generative models produce novel enzymes with industrial applications, such as bio‑fuel production and waste remediation.
-            </p>
-        </div>
-    </section>
-
-    <!-- Connectivity -->
-    <section id="connectivity" class="card">
-        <img src="https://picsum.photos/id/1080/150/150" alt="Satellite">
-        <div class="card-content">
-            <h2>Connectivity</h2>
-            <p>
-                <strong>6G & Sub‑THz Communication.</strong> First commercial 6G trials deliver 1 Tb/s throughput and <1 ms latency for VR, holographic displays, and real‑time AI inference.  
-                <br><br>
-                <strong>Low‑Earth‑Orbit Satellite Networks.</strong> New constellations provide global low‑latency broadband, bridging the digital divide in remote regions.  
-                <br><br>
-                <strong>Quantum Key Distribution (QKD).</strong> Integrated QKD modules on smartphones and servers now support secure, tamper‑proof data links.
-            </
+<section id="bio">
+  <h2 style="text-align:center; color:var(--primary);">Biotechnology</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1563168916-1e8f8a5b6a23?auto=format&fit=crop&w=800&q=80" alt="Gene Editing">
+      <div class="card-content">
+        <h3>CRISPR‑Prime Editing Enhances Precision</h3>
+        <p>Improved delivery vectors allow precise gene correction in living tissues, advancing treatments for inherited diseases.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581574207225-58b4f6d0b4e0?auto=format&fit=crop&w=800&q=80" alt="Synthetic Biology">
+      <div class="card-content">
+        <h3>Synthetic Organoids for Drug Discovery</h3>
+        <
