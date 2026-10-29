@@ -2,173 +2,128 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* Global Styles */
-body{
-  margin:0;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height:1.6;
-  color:#222;
-  background:#f0f4f7;
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
-}
-a{color:#0066cc;text-decoration:none;}
-a:hover{text-decoration:underline;}
-h1,h2,h3{font-weight:400;}
-/* Layout */
-header{
-  background:#003366;
-  color:white;
-  padding:4rem 2rem;
-  text-align:center;
-  position:relative;
-}
-header::after{
-  content:"";
-  position:absolute;
-  bottom:-50px;
-  left:50%;
-  transform:translateX(-50%);
-  width:100%;
-  height:100px;
-  background:linear-gradient(to top,#003366,#f0f4f7);
-}
-main{
-  flex:1;
-  padding:2rem;
-  max-width:1200px;
-  margin:auto;
-}
-section{margin-bottom:4rem;}
-.section-title{
-  font-size:2rem;
-  margin-bottom:1rem;
-  color:#003366;
-  border-bottom:2px solid #003366;
-  display:inline-block;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1.5rem;
-}
-.card{
-  background:white;
-  border-radius:8px;
-  box-shadow:0 4px 12px rgba(0,0,0,.1);
-  padding:1.5rem;
-  display:flex;
-  flex-direction:column;
-  transition:transform .2s;
-}
-.card:hover{transform:translateY(-5px);}
-.card .icon{font-size:2.5rem; margin-bottom:.75rem;}
-.card h3{margin:0 0 .5rem;}
-.card p{flex:1;}
-.card a{margin-top:.75rem; font-weight:600;}
-/* Footer */
-footer{
-  text-align:center;
-  padding:1rem;
-  background:#e0e0e0;
-  font-size:.9rem;
-  color:#555;
-}
-@media(max-width:600px){
-  header{padding:3rem 1rem;}
-  .section-title{font-size:1.75rem;}
-}
+  :root {
+    --primary:#2c3e50;
+    --accent:#e67e22;
+    --bg:#f8f9fa;
+    --text:#333;
+    --card-bg:#fff;
+    --shadow:rgba(0,0,0,.1);
+    --radius:8px;
+    --transition:.3s ease;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+  header{background:var(--primary);color:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+  header h1{font-weight:700;font-size:1.5rem}
+  nav a{color:#fff;margin-left:1.5rem;text-decoration:none;font-weight:600;transition:color var(--transition)}
+  nav a:hover{color:var(--accent)}
+  main{max-width:1200px;margin:2rem auto;padding:0 1rem}
+  section{margin-bottom:4rem}
+  section h2{font-size:2rem;margin-bottom:.75rem;color:var(--primary)}
+  .grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{background:var(--card-bg);border-radius:var(--radius);box-shadow:0 4px 6px var(--shadow);overflow:hidden;transition:transform var(--transition)}
+  .card:hover{transform:translateY(-5px)}
+  .card img{width:100%;height:180px;object-fit:cover}
+  .card-content{padding:1rem}
+  .card h3{margin-bottom:.5rem;font-size:1.25rem}
+  .card p{font-size:.95rem;color:#555}
+  footer{text-align:center;padding:2rem 0;color:#777;font-size:.9rem}
+  @media (max-width:600px){
+    header{flex-direction:column;align-items:flex-start}
+    nav{margin-top:.5rem}
+    nav a{margin-left:0;margin-right:1rem}
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Breakthroughs in Technology – 2024</h1>
-  <p>Discover the cutting‑edge innovations reshaping our world</p>
+  <h1>Tech Breakthroughs</h1>
+  <nav>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#battery">Battery</a>
+    <a href="#gene">Gene Editing</a>
+    <a href="#6g">6G</a>
+  </nav>
 </header>
 
 <main>
-
-  <section>
-    <h2 class="section-title">Artificial Intelligence</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">🤖</div>
-        <h3>Generative AI 2.0</h3>
-        <p>New multimodal models now seamlessly blend text, vision, and audio, enabling real‑time interactive storytelling and design generation.</p>
-        <a href="https://news.example.com/generative-ai-2-0">Read More</a>
-      </div>
-      <div class="card">
-        <div class="icon">🧠</div>
-        <h3>Neuromorphic Chips</h3>
-        <p>Brain‑inspired processors deliver 10× energy efficiency for inference, opening doors to on‑device AI for wearables and IoT.</p>
-        <a href="https://news.example.com/neuromorphic-chips">Read More</a>
-      </div>
-      <div class="card">
-        <div class="icon">🔐</div>
-        <h3>AI‑Based Cybersecurity</h3>
-        <p>Adaptive threat detection uses unsupervised learning to block zero‑day exploits before they reach the user.</p>
-        <a href="https://news.example.com/ai-cybersecurity">Read More</a>
-      </div>
+  <section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1611095974158-9c6c2e1e5d0a?auto=format&fit=crop&w=800&q=60" alt="AI Research Lab">
+        <div class="card-content">
+          <h3>Multimodal Models</h3>
+          <p>Recent models can simultaneously process text, images, and audio, enabling more natural human-computer interactions and breakthroughs in creative AI.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587614382346-5c2c2c3e8a87?auto=format&fit=crop&w=800&q=60" alt="AI Development">
+        <div class="card-content">
+          <h3>Foundation Models for Edge Devices</h3>
+          <p>Optimized models run on smartphones and IoT devices, reducing latency and improving privacy while maintaining performance.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1554285890-7b8a1f58f3e7?auto=format&fit=crop&w=800&q=60" alt="AI Ethics">
+        <div class="card-content">
+          <h3>Responsible AI Frameworks</h3>
+          <p>New open-source tools help developers detect bias, ensure transparency, and comply with evolving regulations.</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section>
-    <h2 class="section-title">Quantum Computing</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">⚛️</div>
-        <h3>Fault‑Tolerant Qubits</h3>
-        <p>Silicon‑based qubits now achieve 99.999% coherence, a key milestone for scalable quantum processors.</p>
-        <a href="https://news.example.com/fault-tolerant-qubits">Read More</a>
-      </div>
-      <div class="card">
-        <div class="icon">💡</div>
-        <h3>Quantum‑Enhanced AI</h3>
-        <p>Hybrid quantum‑classical pipelines speed up training of deep neural networks for complex pattern recognition.</p>
-        <a href="https://news.example.com/quantum-ai">Read More</a>
-      </div>
-      <div class="card">
-        <div class="icon">🔬</div>
-        <h3>Quantum Sensors</h3>
-        <p>Ultra‑precise magnetometers now enable real‑time mapping of geological structures for exploration.</p>
-        <a href="https://news.example.com/quantum-sensors">Read More</a>
-      </div>
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581349480590-8bcd3b8f5f9e?auto=format&fit=crop&w=800&q=60" alt="Quantum Chip">
+        <div class="card-content">
+          <h3>Error‑Corrected Qubits</h3>
+          <p>IBM and Google have demonstrated logical qubits with improved coherence, marking a step toward scalable quantum advantage.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1563092419-4a0e7b5f3f3a?auto=format&fit=crop&w=800&q=60" alt="Quantum Network">
+        <div class="card-content">
+          <h3>Quantum Internet</h3>
+          <p>Experimental quantum key distribution networks are expanding, promising ultra‑secure communications.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=60" alt="Quantum Simulation">
+        <div class="card-content">
+          <h3>Material Discovery</h3>
+          <p>Quantum simulations accelerate the design of high‑performance batteries and catalysts for sustainable energy.</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section>
-    <h2 class="section-title">Biotechnology & Health</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">🧬</div>
-        <h3>CRISPR‑Prime Editing</h3>
-        <p>Next‑generation gene editing offers near‑perfect precision, dramatically reducing off‑target effects.</p>
-        <a href="https://news.example.com/crispr-prime">Read More</a>
-      </div>
-      <div class="card">
-        <div class="icon">🧪</div>
-        <h3>Lab‑Grown Organs</h3>
-        <p>Engineered micro‑organs are now used for drug toxicity testing, cutting animal testing by 70%.</p>
-        <a href="https://news.example.com/lab-organs">Read More</a>
-      </div>
-      <div class="card">
-        <div class="icon">💉</div>
-        <h3>mRNA Vaccines for Chronic Illness</h3>
-        <p>Targeted mRNA therapeutics show promise in treating type‑1 diabetes and neurodegenerative diseases.</p>
-        <a href="https://news.example.com/mrna-chronic">Read More</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Energy & Sustainability</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">🔋</div>
-        <h3>Solid‑State Batteries</h3>
-        <p>New high‑density solid‑state cells now offer 500 Wh kg⁻¹ and 3,000 cycle
+  <section id="battery">
+    <h2>Energy Storage</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1521748608892-1d7f0e8e3b23?auto=format&fit=crop&w=800&q=60" alt="Solid‑State Battery">
+        <div class="card-content">
+          <h3>Solid‑State Batteries</h3>
+          <p>Companies are rolling out prototypes with higher energy density and safer chemistries, moving closer to commercial viability.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1597956762268-9e3e1e3f6b02?auto=format&fit=crop&w=800&q=60" alt="Lithium‑Sulfur">
+        <div class="card-content">
+          <h3>Lithium‑Sulfur Tech</h3>
+          <p>New cathode designs have mitigated polysulfide shuttle, offering 100+ Wh/kg energy density.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1603137013133-ecb3d9b9b9d1?auto=format&fit=crop&w=800&q=60" alt="Grid Storage">
