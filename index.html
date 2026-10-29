@@ -3,154 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    :root {
-        --primary: #0a192f;
-        --accent: #ff6f61;
-        --bg: #f5f8fa;
-        --text: #2d2d2d;
-        --muted: #6b7280;
-        --card-bg: #ffffff;
-        --card-shadow: rgba(0,0,0,0.07);
-        --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    body, h1, h2, h3, p, ul, li {
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        font-family: var(--font-base);
-        color: var(--text);
-        background: var(--bg);
-        line-height: 1.6;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    header {
-        background: var(--primary);
-        color: #fff;
-        padding: 2rem 1rem;
-        text-align: center;
-    }
-    header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-    }
-    header p {
-        font-size: 1.2rem;
-        color: var(--accent);
-    }
-    main {
-        flex: 1;
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-    article {
-        background: var(--card-bg);
-        box-shadow: 0 4px 12px var(--card-shadow);
-        border-radius: 8px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.2s;
-    }
-    article:hover {
-        transform: translateY(-4px);
-    }
-    .article-image {
-        height: 140px;
-        background: linear-gradient(135deg, #e3e3e3, #f8f8f8);
-        background-size: cover;
-        background-position: center;
-    }
-    .article-content {
-        padding: 1rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    .article-content h2 {
-        font-size: 1.3rem;
-        margin-bottom: 0.75rem;
-        color: var(--primary);
-    }
-    .article-content p {
-        flex: 1;
-        color: var(--muted);
-        margin-bottom: 1rem;
-    }
-    .article-content ul {
-        margin-top: 0.5rem;
-    }
-    footer {
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-        color: var(--muted);
-    }
-    @media (prefers-color-scheme: dark) {
-        body {
-            background: #1e1e2e;
-            color: #e1e1e1;
-        }
-        header {
-            background: #0b2135;
-        }
-        article {
-            background: #2c2c3e;
-            color: #e1e1e1;
-        }
-        .article-content p {
-            color: #a0a0b0;
-        }
-        footer {
-            color: #a0a0b0;
-        }
-    }
+/* Global Styles */
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height:1.6;
+  color:#222;
+  background:#f0f4f7;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+a{color:#0066cc;text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3{font-weight:400;}
+/* Layout */
+header{
+  background:#003366;
+  color:white;
+  padding:4rem 2rem;
+  text-align:center;
+  position:relative;
+}
+header::after{
+  content:"";
+  position:absolute;
+  bottom:-50px;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  height:100px;
+  background:linear-gradient(to top,#003366,#f0f4f7);
+}
+main{
+  flex:1;
+  padding:2rem;
+  max-width:1200px;
+  margin:auto;
+}
+section{margin-bottom:4rem;}
+.section-title{
+  font-size:2rem;
+  margin-bottom:1rem;
+  color:#003366;
+  border-bottom:2px solid #003366;
+  display:inline-block;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:white;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+  padding:1.5rem;
+  display:flex;
+  flex-direction:column;
+  transition:transform .2s;
+}
+.card:hover{transform:translateY(-5px);}
+.card .icon{font-size:2.5rem; margin-bottom:.75rem;}
+.card h3{margin:0 0 .5rem;}
+.card p{flex:1;}
+.card a{margin-top:.75rem; font-weight:600;}
+/* Footer */
+footer{
+  text-align:center;
+  padding:1rem;
+  background:#e0e0e0;
+  font-size:.9rem;
+  color:#555;
+}
+@media(max-width:600px){
+  header{padding:3rem 1rem;}
+  .section-title{font-size:1.75rem;}
+}
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Latest Breakthroughs in Technology – 2024</h1>
-    <p>From quantum computing to AI‑driven medicine, explore the most transformative advances this year.</p>
+  <h1>Breakthroughs in Technology – 2024</h1>
+  <p>Discover the cutting‑edge innovations reshaping our world</p>
 </header>
 
 <main>
-    <section class="grid">
-        <article>
-            <div class="article-image" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nODAnIGhlaWdodD0nNjAnIHZpZXdCb3g9JzAgMCA4MCA2MCcgZmlsbD0nbm9uZSc+PHJlY3Qgd2lkdGg9JzgwJyBoZWlnaHQ9JzYwJyBmaWxsPSIjY2NjY2NjIi8+PC9zdmc+')"></div>
-            <div class="article-content">
-                <h2>Quantum Supremacy for Deep Learning</h2>
-                <p>IBM and Google’s hybrid quantum‑classical processors now outperform the world's fastest supercomputers on a specialized deep‑learning benchmark, opening the door to faster model training and more accurate predictions.</p>
-                <ul>
-                    <li>1.5 TB/s memory throughput</li>
-                    <li>1 million qubit operations per second</li>
-                    <li>Potential impact on drug discovery &amp; climate modeling</li>
-                </ul>
-            </div>
-        </article>
 
-        <article>
-            <div class="article-image" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nODAnIGhlaWdodD0nNjAnIHZpZXdCb3g9JzAgMCA4MCA2MCcgZmlsbD0nbm9uZSc+PHJlY3Qgd2lkdGg9JzgwJyBoZWlnaHQ9JzYwJyBmaWxsPSIjZmY2ZjYxIi8+PC9zdmc+')"></div>
-            <div class="article-content">
-                <h2>6G: 1 Tbps Connectivity</h2>
-                <p>Early prototypes from Ericsson, Nokia and Samsung achieve theoretical 1 Tbps peak speeds with AI‑driven beamforming, enabling real‑time holographic AR, ultra‑low latency gaming, and high‑capacity IoT networks.</p>
-                <ul>
-                    <li>Latency < 1 ms</li>
-                    <li>Bandwidth per user up to 10 Gbps</li>
-                    <li>Energy efficiency 20% better than 5G</li>
-                </ul>
-            </div>
-        </article>
+  <section>
+    <h2 class="section-title">Artificial Intelligence</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>Generative AI 2.0</h3>
+        <p>New multimodal models now seamlessly blend text, vision, and audio, enabling real‑time interactive storytelling and design generation.</p>
+        <a href="https://news.example.com/generative-ai-2-0">Read More</a>
+      </div>
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>Neuromorphic Chips</h3>
+        <p>Brain‑inspired processors deliver 10× energy efficiency for inference, opening doors to on‑device AI for wearables and IoT.</p>
+        <a href="https://news.example.com/neuromorphic-chips">Read More</a>
+      </div>
+      <div class="card">
+        <div class="icon">🔐</div>
+        <h3>AI‑Based Cybersecurity</h3>
+        <p>Adaptive threat detection uses unsupervised learning to block zero‑day exploits before they reach the user.</p>
+        <a href="https://news.example.com/ai-cybersecurity">Read More</a>
+      </div>
+    </div>
+  </section>
 
-        <article>
-            <div class="article-image" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD
+  <section>
+    <h2 class="section-title">Quantum Computing</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">⚛️</div>
+        <h3>Fault‑Tolerant Qubits</h3>
+        <p>Silicon‑based qubits now achieve 99.999% coherence, a key milestone for scalable quantum processors.</p>
+        <a href="https://news.example.com/fault-tolerant-qubits">Read More</a>
+      </div>
+      <div class="card">
+        <div class="icon">💡</div>
+        <h3>Quantum‑Enhanced AI</h3>
+        <p>Hybrid quantum‑classical pipelines speed up training of deep neural networks for complex pattern recognition.</p>
+        <a href="https://news.example.com/quantum-ai">Read More</a>
+      </div>
+      <div class="card">
+        <div class="icon">🔬</div>
+        <h3>Quantum Sensors</h3>
+        <p>Ultra‑precise magnetometers now enable real‑time mapping of geological structures for exploration.</p>
+        <a href="https://news.example.com/quantum-sensors">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Biotechnology & Health</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🧬</div>
+        <h3>CRISPR‑Prime Editing</h3>
+        <p>Next‑generation gene editing offers near‑perfect precision, dramatically reducing off‑target effects.</p>
+        <a href="https://news.example.com/crispr-prime">Read More</a>
+      </div>
+      <div class="card">
+        <div class="icon">🧪</div>
+        <h3>Lab‑Grown Organs</h3>
+        <p>Engineered micro‑organs are now used for drug toxicity testing, cutting animal testing by 70%.</p>
+        <a href="https://news.example.com/lab-organs">Read More</a>
+      </div>
+      <div class="card">
+        <div class="icon">💉</div>
+        <h3>mRNA Vaccines for Chronic Illness</h3>
+        <p>Targeted mRNA therapeutics show promise in treating type‑1 diabetes and neurodegenerative diseases.</p>
+        <a href="https://news.example.com/mrna-chronic">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Energy & Sustainability</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🔋</div>
+        <h3>Solid‑State Batteries</h3>
+        <p>New high‑density solid‑state cells now offer 500 Wh kg⁻¹ and 3,000 cycle
