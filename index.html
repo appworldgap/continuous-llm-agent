@@ -1,196 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-:root{
-  --primary:#0057e7;
-  --secondary:#ff7f00;
-  --bg:#fafafa;
-  --text:#333;
-  --accent:#e91e63;
-  --font:"Inter",sans-serif;
-  --radius:8px;
-}
-
-*{box-sizing:border-box;margin:0;padding:0;}
-body{
-  font-family:var(--font);
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-header{
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  color:#fff;
-  padding:3rem 1rem;
-  text-align:center;
-}
-header h1{
-  font-size:2.8rem;
-  margin-bottom:0.5rem;
-}
-header p{
-  font-size:1.2rem;
-  max-width:700px;
-  margin:0 auto;
-}
-main{
-  max-width:1200px;
-  margin:2rem auto;
-  padding:0 1rem;
-}
-section{
-  margin-bottom:3rem;
-}
-section h2{
-  font-size:1.8rem;
-  margin-bottom:0.8rem;
-  color:var(--primary);
-}
-.cards{
-  display:grid;
-  gap:1.5rem;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-}
-.card{
-  background:#fff;
-  border-radius:var(--radius);
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  transition:transform 0.3s;
-}
-.card:hover{
-  transform:translateY(-5px);
-}
-.card img{
-  width:100%;
-  height:140px;
-  object-fit:cover;
-}
-.card-content{
-  padding:1.2rem;
-  flex:1;
-}
-.card h3{
-  font-size:1.4rem;
-  margin-bottom:0.6rem;
-  color:var(--accent);
-}
-.card p{
-  font-size:0.95rem;
-  color:var(--text);
-}
-footer{
-  text-align:center;
-  padding:1.5rem 0;
-  background:#333;
-  color:#fff;
-  font-size:0.9rem;
-}
-@media(max-width:600px){
-  header h1{font-size:2rem;}
-  header p{font-size:1rem;}
-}
+    :root {
+        --primary: #2c3e50;
+        --secondary: #34495e;
+        --accent: #e74c3c;
+        --bg: #f4f6f8;
+        --text: #2c3e50;
+        --card-bg: #ffffff;
+        --shadow: rgba(0,0,0,0.1);
+        --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    body {
+        margin:0;
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+    }
+    header {
+        background: var(--primary);
+        color: #fff;
+        padding: 1.5rem 2rem;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    .card {
+        background: var(--card-bg);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px var(--shadow);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px var(--shadow);
+    }
+    .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+    .card-content {
+        padding: 1rem;
+        flex: 1;
+    }
+    .card h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.4rem;
+        color: var(--primary);
+    }
+    .card p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--secondary);
+    }
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background: var(--primary);
+        color: #fff;
+        font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 2rem;
+        }
+    }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>2024 Technology Breakthroughs</h1>
-  <p>From AI supermodels to quantum processors, here are the most transformative tech advances of the year.</p>
+    <h1>Latest Breakthroughs in Technology</h1>
 </header>
 
 <main>
-  <!-- Artificial Intelligence -->
-  <section>
-    <h2>Artificial Intelligence</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://picsum.photos/id/101/600/400" alt="AI Model">
+    <!-- Quantum Computing -->
+    <article class="card">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDE1MCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2Y5NTlFMCI+PGNpcmNsZSBjeD0iNzUiIGN5PSI1MCIgcj0iMjQiIGZpbGw9IiM3Q2M3NDAiLz48L3N2Zz4=" alt="Quantum Computing">
         <div class="card-content">
-          <h3>GPT‑4o & Multimodal Models</h3>
-          <p>OpenAI’s GPT‑4o integrates text, image, and voice inputs, enabling more natural and context‑aware interactions. Its open‑source sibling, LLaVA‑2, offers high‑quality visual‑language reasoning at a fraction of the cost.</p>
+            <h3>Quantum Supremacy Achieved</h3>
+            <p>Google's Sycamore processor completed a specific task in 200 seconds that would take the world’s fastest supercomputer 10,000 years. This milestone opens new possibilities in cryptography, materials science, and complex system simulation.</p>
         </div>
-      </div>
-      <div class="card">
-        <img src="https://picsum.photos/id/102/600/400" alt="AI for Code">
-        <div class="card-content">
-          <h3>AI‑Assisted Programming</h3>
-          <p>Code generators like GitHub Copilot 2.0 and Meta’s Llama‑Code 2 now support zero‑shot code synthesis across 30+ languages, drastically cutting development time.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://picsum.photos/id/103/600/400" alt="Edge AI">
-        <div class="card-content">
-          <h3>Edge AI Chips</h3>
-          <p>Qualcomm’s Snapdragon 8 Gen 2 and Apple’s A17 integrate on‑device AI engines, delivering real‑time inference for AR, VR, and autonomous vehicles without cloud reliance.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </article>
 
-  <!-- Quantum Computing -->
-  <section>
-    <h2>Quantum Computing</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://picsum.photos/id/104/600/400" alt="Quantum Chip">
+    <!-- AI and Generative Models -->
+    <article class="card">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDE1MCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2Y5NTlFMCI+PGNpcmNsZSBjeD0iNzUiIGN5PSI1MCIgcj0iMjQiIGZpbGw9IiNmZDlkMjYiLz48L3N2Zz4=" alt="AI Generative Models">
         <div class="card-content">
-          <h3>IBM’s Eagle Quantum Processor</h3>
-          <p>IBM’s 127‑qubit Eagle chip achieves a new noise‑tolerant benchmark, accelerating simulations for drug discovery and materials science.</p>
+            <h3>Generative AI Breaks Creative Boundaries</h3>
+            <p>Recent transformer-based models now generate high‑fidelity text, images, music, and even 3D models. Tools like OpenAI’s GPT-4 and DALL‑E 3 are being integrated into creative workflows, accelerating design and content production.</p>
         </div>
-      </div>
-      <div class="card">
-        <img src="https://picsum.photos/id/105/600/400" alt="Quantum Networks">
-        <div class="card-content">
-          <h3>Quantum Networks</h3>
-          <p>China’s quantum satellite Micius launches a 2.5‑km entanglement link, paving the way for a global quantum internet.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </article>
 
-  <!-- Energy & Sustainability -->
-  <section>
-    <h2>Energy & Sustainability</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://picsum.photos/id/106/600/400" alt="Perovskite Solar">
+    <!-- 6G & Advanced Connectivity -->
+    <article class="card">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDE1MCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2Y5NTlFMCI+PGNpcmNsZSBjeD0iNzUiIGN5PSI1MCIgcj0iMjQiIGZpbGw9IiM0ZTg5ZTIiLz48L3N2Zz4=" alt="6G Connectivity">
         <div class="card-content">
-          <h3>Perovskite Solar Cells</h3>
-          <p>Manufacturers achieve >25% efficiency with 100‑year lifespan, making perovskite a strong contender for next‑gen photovoltaic panels.</p>
+            <h3>6G Prototypes Promise Terabit Speeds</h3>
+            <p>Research labs are demonstrating prototype 6G networks that could deliver terabits per second with latency below 1 ms, enabling real‑time holographic communications and massive IoT deployments.</p>
         </div>
-      </div>
-      <div class="card">
-        <img src="https://picsum.photos/id/107/600/400" alt="Solid State Battery">
-        <div class="card-content">
-          <h3>Solid‑State Batteries</h3>
-          <p>QuantumScape’s prototype delivers 5× the energy density of lithium‑ion, promising safer, faster‑charging EV batteries.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://picsum.photos/id/108/600/400" alt="Carbon Capture">
-        <div class="card-content">
-          <h3>Direct Air Capture</h3>
-          <p>Climeworks scales its DAC plants to 3 MtCO₂/yr, integrating renewable energy and mineralization to store captured carbon.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </article>
 
-  <!-- Biotechnology -->
-  <section>
-    <h2>Biotechnology</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://picsum.photos/id/109/600/400" alt="CRISPR">
-        <div class="card-content">
-          <h3>CRISPR Gene Editing</h3>
-          <p>CRISPR‑Cas13 therapies for genetic blindness and sickle cell disease move into Phase 3 trials, showing early efficacy.</p>
-        </div>
-      </div>
-      <
+    <!-- Renewable Energy Advancements -->
+    <article class="card">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDE1MCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z
