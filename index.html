@@ -1,154 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<meta charset="utf-8">
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* ------------------------------------------
-     Global Styles
-  ------------------------------------------ */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #f0f0f0;
-    background: #1e1e1e;
-    padding: 0 1rem;
-  }
-  a { color: #4fc3f7; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+:root{
+  --primary:#0057e7;
+  --secondary:#ff7f00;
+  --bg:#fafafa;
+  --text:#333;
+  --accent:#e91e63;
+  --font:"Inter",sans-serif;
+  --radius:8px;
+}
 
-  /* ------------------------------------------
-     Layout
-  ------------------------------------------ */
-  header, footer { text-align: center; padding: 2rem 0; }
-  header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-  header p { font-size: 1.1rem; color: #ccc; }
-
-  main { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-
-  section {
-    background: #2a2a2a;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
-  }
-  section:hover { transform: translateY(-5px); }
-
-  section img { width: 100%; height: 180px; object-fit: cover; }
-  section h2 { background: #333; color: #fff; padding: 1rem; font-size: 1.4rem; }
-  section p { padding: 1rem; font-size: 0.95rem; }
-
-  footer { color: #888; font-size: 0.9rem; }
-
-  /* ------------------------------------------
-     Responsive Typography
-  ------------------------------------------ */
-  @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    section h2 { font-size: 1.2rem; }
-    section p { font-size: 0.9rem; }
-  }
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  padding:3rem 1rem;
+  text-align:center;
+}
+header h1{
+  font-size:2.8rem;
+  margin-bottom:0.5rem;
+}
+header p{
+  font-size:1.2rem;
+  max-width:700px;
+  margin:0 auto;
+}
+main{
+  max-width:1200px;
+  margin:2rem auto;
+  padding:0 1rem;
+}
+section{
+  margin-bottom:3rem;
+}
+section h2{
+  font-size:1.8rem;
+  margin-bottom:0.8rem;
+  color:var(--primary);
+}
+.cards{
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform 0.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+}
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+}
+.card-content{
+  padding:1.2rem;
+  flex:1;
+}
+.card h3{
+  font-size:1.4rem;
+  margin-bottom:0.6rem;
+  color:var(--accent);
+}
+.card p{
+  font-size:0.95rem;
+  color:var(--text);
+}
+footer{
+  text-align:center;
+  padding:1.5rem 0;
+  background:#333;
+  color:#fff;
+  font-size:0.9rem;
+}
+@media(max-width:600px){
+  header h1{font-size:2rem;}
+  header p{font-size:1rem;}
+}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>Exploring the innovations that are reshaping tomorrow.</p>
+  <h1>2024 Technology Breakthroughs</h1>
+  <p>From AI supermodels to quantum processors, here are the most transformative tech advances of the year.</p>
 </header>
 
 <main>
   <!-- Artificial Intelligence -->
-  <section id="ai">
-    <img src="https://source.unsplash.com/featured/?artificial-intelligence" alt="AI">
+  <section>
     <h2>Artificial Intelligence</h2>
-    <p>
-      <strong>GPT‑5</strong> and its multimodal successors now
-      demonstrate near‑human reasoning, enabling advanced
-      conversational agents and autonomous decision‑making
-      in complex environments. New training frameworks,
-      such as <em>Self‑Supervised Diffusion Learning</em>,
-      reduce the need for labeled data and lower carbon
-      footprints by 60%.
-    </p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://picsum.photos/id/101/600/400" alt="AI Model">
+        <div class="card-content">
+          <h3>GPT‑4o & Multimodal Models</h3>
+          <p>OpenAI’s GPT‑4o integrates text, image, and voice inputs, enabling more natural and context‑aware interactions. Its open‑source sibling, LLaVA‑2, offers high‑quality visual‑language reasoning at a fraction of the cost.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/102/600/400" alt="AI for Code">
+        <div class="card-content">
+          <h3>AI‑Assisted Programming</h3>
+          <p>Code generators like GitHub Copilot 2.0 and Meta’s Llama‑Code 2 now support zero‑shot code synthesis across 30+ languages, drastically cutting development time.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/103/600/400" alt="Edge AI">
+        <div class="card-content">
+          <h3>Edge AI Chips</h3>
+          <p>Qualcomm’s Snapdragon 8 Gen 2 and Apple’s A17 integrate on‑device AI engines, delivering real‑time inference for AR, VR, and autonomous vehicles without cloud reliance.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Quantum Computing -->
-  <section id="quantum">
-    <img src="https://source.unsplash.com/featured/?quantum-computing" alt="Quantum Computing">
+  <section>
     <h2>Quantum Computing</h2>
-    <p>
-      The first commercial quantum processor with 1 million
-      high‑fidelity qubits has been deployed by QuantumX,
-      enabling breakthroughs in cryptanalysis, materials
-      science, and drug discovery. Integrated photonic
-      interconnects now provide <strong>10 Tb/s</strong> links,
-      creating a functional quantum internet.
-    </p>
-  </section>
-
-  <!-- Biotechnology -->
-  <section id="biotech">
-    <img src="https://source.unsplash.com/featured/?biotechnology" alt="Biotechnology">
-    <h2>Biotechnology</h2>
-    <p>
-      CRISPR‑Cas13 therapies have successfully cured
-      several in‑tractable genetic diseases, while
-      engineered microbial consortia produce 100 % more
-      bio‑ethanol from lignocellulose, slashing
-      production costs by 70%.
-    </p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://picsum.photos/id/104/600/400" alt="Quantum Chip">
+        <div class="card-content">
+          <h3>IBM’s Eagle Quantum Processor</h3>
+          <p>IBM’s 127‑qubit Eagle chip achieves a new noise‑tolerant benchmark, accelerating simulations for drug discovery and materials science.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/105/600/400" alt="Quantum Networks">
+        <div class="card-content">
+          <h3>Quantum Networks</h3>
+          <p>China’s quantum satellite Micius launches a 2.5‑km entanglement link, paving the way for a global quantum internet.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Energy & Sustainability -->
-  <section id="energy">
-    <img src="https://source.unsplash.com/featured/?energy-storage" alt="Energy Storage">
+  <section>
     <h2>Energy & Sustainability</h2>
-    <p>
-      Solid‑state lithium‑metal batteries achieve
-      <strong>500 Wh/kg</strong> energy density, making
-      lightweight, long‑range electric vehicles a reality.
-      Coupled with the first commercial fusion pilot plant,
-      the world is moving toward a net‑zero grid.
-    </p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://picsum.photos/id/106/600/400" alt="Perovskite Solar">
+        <div class="card-content">
+          <h3>Perovskite Solar Cells</h3>
+          <p>Manufacturers achieve >25% efficiency with 100‑year lifespan, making perovskite a strong contender for next‑gen photovoltaic panels.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/107/600/400" alt="Solid State Battery">
+        <div class="card-content">
+          <h3>Solid‑State Batteries</h3>
+          <p>QuantumScape’s prototype delivers 5× the energy density of lithium‑ion, promising safer, faster‑charging EV batteries.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/108/600/400" alt="Carbon Capture">
+        <div class="card-content">
+          <h3>Direct Air Capture</h3>
+          <p>Climeworks scales its DAC plants to 3 MtCO₂/yr, integrating renewable energy and mineralization to store captured carbon.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Space Technology -->
-  <section id="space">
-    <img src="https://source.unsplash.com/featured/?space-tech" alt="Space Technology">
-    <h2>Space Technology</h2>
-    <p>
-      NASA’s <em>Artemis‑III</em> mission successfully
-      returned the first Mars samples to Earth.
-      SpaceX’s Starship‑2 prototype now
-      offers 10‑fold increased payload capacity for
-      interplanetary missions, paving the way for
-      commercial lunar and Martian colonies.
-    </p>
-  </section>
-
-  <!-- 6G & Connectivity -->
-  <section id="connectivity">
-    <img src="https://source.unsplash.com/featured/?6g" alt="6G Connectivity">
-    <h2>6G & Connectivity</h2>
-    <p>
-      6G networks deliver <strong>10 Gbps</strong> downlink speeds
-      with <em>1 ms</em> latency, enabling ultra‑realistic
-      AR/VR experiences and autonomous vehicle coordination
-      across global networks. Satellite constellations
-      now provide ubiquitous coverage, closing the
-      digital divide.
-    </p>
-  </section>
-</main>
-
-<footer>
-  © 2026 Tech Insights | All rights reserved
-</footer>
-
-</body>
-</html>
+  <!-- Biotechnology -->
+  <section>
+    <h2>Biotechnology</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://picsum.photos/id/109/600/400" alt="CRISPR">
+        <div class="card-content">
+          <h3>CRISPR Gene Editing</h3>
+          <p>CRISPR‑Cas13 therapies for genetic blindness and sickle cell disease move into Phase 3 trials, showing early efficacy.</p>
+        </div>
+      </div>
+      <
