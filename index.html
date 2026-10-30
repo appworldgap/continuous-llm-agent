@@ -5,121 +5,166 @@
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    :root {
-        --primary: #2c3e50;
-        --secondary: #34495e;
-        --accent: #e74c3c;
-        --bg: #f4f6f8;
-        --text: #2c3e50;
-        --card-bg: #ffffff;
-        --shadow: rgba(0,0,0,0.1);
-        --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
-    body {
-        margin:0;
-        font-family: var(--font);
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-    }
-    header {
-        background: var(--primary);
-        color: #fff;
-        padding: 1.5rem 2rem;
-        text-align: center;
-    }
-    header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-    }
-    main {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-    .card {
-        background: var(--card-bg);
-        border-radius: 8px;
-        box-shadow: 0 4px 8px var(--shadow);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 12px var(--shadow);
-    }
-    .card img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-    }
-    .card-content {
-        padding: 1rem;
-        flex: 1;
-    }
-    .card h3 {
-        margin: 0 0 0.5rem;
-        font-size: 1.4rem;
-        color: var(--primary);
-    }
-    .card p {
-        margin: 0;
-        font-size: 0.95rem;
-        color: var(--secondary);
-    }
-    footer {
-        text-align: center;
-        padding: 1rem;
-        background: var(--primary);
-        color: #fff;
-        font-size: 0.9rem;
-    }
-    @media (max-width: 600px) {
-        header h1 {
-            font-size: 2rem;
-        }
-    }
+  :root {
+    --primary: #0f62fe;           /* blue accent */
+    --secondary: #e0e0e0;         /* light gray */
+    --bg: #ffffff;                /* background */
+    --text: #333333;              /* text color */
+    --card-bg: #f9f9f9;           /* card background */
+    --border-radius: 8px;
+    --transition: 0.3s ease;
+  }
+  body {
+    margin:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  main {
+    padding: 1.5rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display:block;
+  }
+  .card-content {
+    padding: 1rem;
+    flex-grow:1;
+  }
+  .card-content h3 {
+    margin-top:0;
+    font-size:1.25rem;
+    color: var(--primary);
+  }
+  .card-content p {
+    margin: 0.5rem 0 1rem;
+    color: var(--text);
+  }
+  .card-content a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    display:inline-flex;
+    align-items:center;
+  }
+  .card-content a svg {
+    margin-left:0.3rem;
+    width:16px;
+    height:16px;
+    fill: currentColor;
+  }
+  footer {
+    text-align:center;
+    padding:1rem;
+    background: var(--secondary);
+    color: var(--text);
+    font-size:0.9rem;
+  }
 </style>
 </head>
 <body>
-
 <header>
-    <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
-
 <main>
-    <!-- Quantum Computing -->
-    <article class="card">
-        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDE1MCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2Y5NTlFMCI+PGNpcmNsZSBjeD0iNzUiIGN5PSI1MCIgcj0iMjQiIGZpbGw9IiM3Q2M3NDAiLz48L3N2Zz4=" alt="Quantum Computing">
+  <section>
+    <h2>Recent Innovations</h2>
+    <div class="grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="https://picsum.photos/id/1015/600/400" alt="AI model">
         <div class="card-content">
-            <h3>Quantum Supremacy Achieved</h3>
-            <p>Google's Sycamore processor completed a specific task in 200 seconds that would take the world’s fastest supercomputer 10,000 years. This milestone opens new possibilities in cryptography, materials science, and complex system simulation.</p>
+          <h3>GPT‑4: Advanced Generative AI</h3>
+          <p>OpenAI’s GPT‑4 demonstrates improved reasoning, context retention, and multimodal capabilities, powering smarter chatbots, coding assistants, and content generation tools.</p>
+          <a href="https://openai.com/research/gpt-4" target="_blank">
+            Read more
+            <svg viewBox="0 0 24 24"><path d="M13 5v14l-8-7z"/></svg>
+          </a>
         </div>
-    </article>
+      </article>
 
-    <!-- AI and Generative Models -->
-    <article class="card">
-        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDE1MCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2Y5NTlFMCI+PGNpcmNsZSBjeD0iNzUiIGN5PSI1MCIgcj0iMjQiIGZpbGw9IiNmZDlkMjYiLz48L3N2Zz4=" alt="AI Generative Models">
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="https://picsum.photos/id/1011/600/400" alt="Quantum chip">
         <div class="card-content">
-            <h3>Generative AI Breaks Creative Boundaries</h3>
-            <p>Recent transformer-based models now generate high‑fidelity text, images, music, and even 3D models. Tools like OpenAI’s GPT-4 and DALL‑E 3 are being integrated into creative workflows, accelerating design and content production.</p>
+          <h3>Quantum Supremacy Achieved by Google</h3>
+          <p>Google’s Sycamore processor performed a specific computation in 200 seconds that would take the world’s most powerful supercomputer 10,000 years, marking a milestone in quantum computing.</p>
+          <a href="https://ai.googleblog.com/2021/01/quantum-computing-2021.html" target="_blank">
+            Read more
+            <svg viewBox="0 0 24 24"><path d="M13 5v14l-8-7z"/></svg>
+          </a>
         </div>
-    </article>
+      </article>
 
-    <!-- 6G & Advanced Connectivity -->
-    <article class="card">
-        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDE1MCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2Y5NTlFMCI+PGNpcmNsZSBjeD0iNzUiIGN5PSI1MCIgcj0iMjQiIGZpbGw9IiM0ZTg5ZTIiLz48L3N2Zz4=" alt="6G Connectivity">
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="https://picsum.photos/id/1069/600/400" alt="CRISPR editing">
         <div class="card-content">
-            <h3>6G Prototypes Promise Terabit Speeds</h3>
-            <p>Research labs are demonstrating prototype 6G networks that could deliver terabits per second with latency below 1 ms, enabling real‑time holographic communications and massive IoT deployments.</p>
+          <h3>CRISPR‑Cas13 for Viral Suppression</h3>
+          <p>Scientists have adapted the CRISPR-Cas13 system to target and cleave viral RNA, offering a new avenue for antiviral therapies against SARS‑CoV‑2 and other RNA viruses.</p>
+          <a href="https://www.nature.com/articles/s41586-020-2916-1" target="_blank">
+            Read more
+            <svg viewBox="0 0 24 24"><path d="M13 5v14l-8-7z"/></svg>
+          </a>
         </div>
-    </article>
+      </article>
 
-    <!-- Renewable Energy Advancements -->
-    <article class="card">
-        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDE1MCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z
+      <!-- Card 4 -->
+      <article class="card">
+        <img src="https://picsum.photos/id/1035/600/400" alt="Graphene battery">
+        <div class="card-content">
+          <h3>Graphene‑Based Ultra‑Fast Batteries</h3>
+          <p>Researchers have demonstrated a graphene‑laden lithium‑ion battery that charges to 80% in 10 minutes while maintaining long cycle life, promising a leap forward for electric vehicles.</p>
+          <a href="https://www.sciencedaily.com/releases/2023/07/230722141530.htm" target="_blank">
+            Read more
+            <svg viewBox="0 0 24 24"><path d="M13 5v14l-8-7z"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <img src="https://picsum.photos/id/1025/600/400" alt="6G research">
+        <div class="card-content">
+          <h3>6G Radio Technology in Development</h3>
+          <p>Telecommunication companies are testing terahertz frequencies to enable gigabit speeds and ultra‑low latency, paving the way for ubiquitous AR/VR and holographic communication.</p>
+          <a href="https://www.telecoms.com/tech/6g-vision-and-research/" target="_blank">
+            Read more
+            <svg viewBox="0 0 24 24"><path d="M13 5v14l-8-7z"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
