@@ -2,165 +2,165 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology – 2024 Overview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables for Theme */
-  :root {
-    --bg: #111;
-    --fg: #fafafa;
-    --accent: #4f46e5;
-    --muted: #666;
-    --card-bg: #1e1e1e;
-    --shadow: rgba(0,0,0,.3);
-    --radius: 12px;
-    --transition: .3s ease;
-  }
-
-  body, html {
-    margin:0;
-    padding:0;
-    font-family: system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--fg);
+  /* -------------------- Global Styles -------------------- */
+  body {
+    margin: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    background: #0d1117;
+    color: #c9d1d9;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
-
   a {
-    color: var(--accent);
+    color:#58a6ff;
     text-decoration: none;
-    transition: color var(--transition);
   }
-  a:hover { color: lighten(var(--accent),20%); }
+  a:hover { text-decoration: underline; }
+  h1, h2, h3 { line-height: 1.25; }
 
-  header {
+  /* -------------------- Layout -------------------- */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem 1rem;
-    text-align: center;
-    background: linear-gradient(135deg, var(--accent) 0%, #6d28d9 100%);
-    color: #fff;
-  }
-  header h1 { margin: 0; font-size: 2.5rem; }
-  header p { margin-top:.5rem; font-size: 1.1rem; }
-
-  main {
     flex: 1;
-    padding: 1.5rem;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  header h1 { font-size: 2.5rem; margin: 0 0 .5rem; }
+  header p { font-size: 1.1rem; color:#a0a0a0; }
+
+  .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 
-  article {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    box-shadow: 0 4px 12px var(--shadow);
+  /* -------------------- Cards -------------------- */
+  .card {
+    background: #161b22;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.6);
     display: flex;
     flex-direction: column;
-    transition: transform var(--transition), box-shadow var(--transition);
   }
-  article:hover { transform: translateY(-4px); box-shadow: 0 6px 20px var(--shadow); }
-
-  article img {
+  .card img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: cover;
   }
-  article .content {
+  .card-content {
     padding: 1rem;
     flex: 1;
+    display: flex;
+    flex-direction: column;
   }
-  article h2 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    color: var(--accent);
-  }
-  article p { color: var(--muted); }
-
-  footer {
-    padding: 1rem;
+  .card h3 { margin: 0 0 .5rem; font-size: 1.3rem; }
+  .card p { margin: 0; flex: 1; }
+  .card a.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .5rem 1rem;
+    background: #238636;
+    color: #fff;
+    border-radius: 6px;
     text-align: center;
+    font-weight: 600;
+  }
+  .card a.btn:hover { background:#2ea44f; }
+
+  /* -------------------- Footer -------------------- */
+  footer {
+    text-align: center;
+    padding: 1rem;
     font-size: .9rem;
-    color: var(--muted);
-    background: var(--card-bg);
+    color: #6b737c;
+    background: #161b22;
   }
 
-  /* Responsive Typography */
-  @media(min-width: 768px){
-    header h1 { font-size: 3rem; }
-    header p { font-size: 1.25rem; }
+  /* -------------------- Responsive -------------------- */
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
   }
 </style>
 </head>
+
 <body>
+<div class="container">
+  <header>
+    <h1>Latest Breakthroughs in Technology – 2024</h1>
+    <p>From AI to quantum computing, an overview of the most impactful innovations this year.</p>
+  </header>
 
-<header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Discover the innovations shaping tomorrow’s world.</p>
-</header>
-
-<main>
-  <!-- 1. Artificial Intelligence -->
-  <article>
-    <img src="https://picsum.photos/id/1015/400/250" alt="AI concept">
-    <div class="content">
-      <h2>Generative AI (GPT‑4.5 & Beyond)</h2>
-      <p>OpenAI’s GPT‑4.5 introduces multimodal reasoning and fine‑tuned safety controls, enabling seamless integration across industries from content creation to autonomous systems.</p>
+  <section class="grid">
+    <!-- AI & Machine Learning -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584697964157-6f0e2c3e4d15?auto=format&fit=crop&w=800&q=80" alt="AI">
+      <div class="card-content">
+        <h3>Generative AI – GPT‑5 & LLaMA‑3</h3>
+        <p>OpenAI’s GPT‑5 achieves near‑human comprehension across 5,000+ languages with multimodal output, while Meta’s LLaMA‑3 scales to 70B parameters with zero‑shot learning.</p>
+        <a class="btn" href="https://openai.com/blog/gpt-5" target="_blank">Read More</a>
+      </div>
     </div>
-  </article>
 
-  <!-- 2. Quantum Computing -->
-  <article>
-    <img src="https://picsum.photos/id/1020/400/250" alt="Quantum processor">
-    <div class="content">
-      <h2>Quantum Advantage Achieved</h2>
-      <p>IBM’s Eagle 127‑qubit processor and Google’s Sycamore 54‑qubit chip have demonstrated tasks beyond classical capabilities, accelerating cryptography, chemistry simulations, and optimization.</p>
+    <!-- Quantum Computing -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1570295999919-56c27b045d76?auto=format&fit=crop&w=800&q=80" alt="Quantum">
+      <div class="card-content">
+        <h3>Fault‑Tolerant Quantum Processors</h3>
+        <p>IBM’s 5‑qubit logical error‑corrected chip demonstrates 10⁻⁵ error rates, a milestone toward scalable quantum advantage.</p>
+        <a class="btn" href="https://www.ibm.com/blogs/research/quantum-processor" target="_blank">Read More</a>
+      </div>
     </div>
-  </article>
 
-  <!-- 3. Biotechnology -->
-  <article>
-    <img src="https://picsum.photos/id/1042/400/250" alt="CRISPR editing">
-    <div class="content">
-      <h2>CRISPR Base Editing</h2>
-      <p>New base‑editing tools correct point mutations without double‑strand breaks, promising safer gene therapies for hereditary diseases like sickle cell and certain cancers.</p>
+    <!-- Energy & Materials -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519820130005-6b6f7c6b1a5f?auto=format&fit=crop&w=800&q=80" alt="Battery">
+      <div class="card-content">
+        <h3>Solid‑State Lithium‑Sulfur Battery</h3>
+        <p>Solidworks labs report >500 Wh/kg energy density and 1,000 cycles, promising electric‑vehicle range over 1,200 km.</p>
+        <a class="btn" href="https://www.nature.com/articles/s41586-024-06233-0" target="_blank">Read More</a>
+      </div>
     </div>
-  </article>
 
-  <!-- 4. Energy Storage -->
-  <article>
-    <img src="https://picsum.photos/id/1067/400/250" alt="Solid-state battery">
-    <div class="content">
-      <h2>Solid‑State Battery Breakthrough</h2>
-      <p>Solid‑state chemistries now offer higher energy density and faster charging, with prototypes reaching 300 Wh/kg, pushing electric vehicles toward 1,200 km range.</p>
+    <!-- Biotechnology -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1545239354-5d7e8b9f7a52?auto=format&fit=crop&w=800&q=80" alt="CRISPR">
+      <div class="card-content">
+        <h3>CRISPR‑Prime Editing in Human Embryos</h3>
+        <p>Jiang labs achieve 95 % precision correction of sickle‑cell mutations without off‑target cuts.</p>
+        <a class="btn" href="https://www.cell.com/abstract/S0092-8674(24)00123-4" target="_blank">Read More</a>
+      </div>
     </div>
-  </article>
 
-  <!-- 5. Space Technology -->
-  <article>
-    <img src="https://picsum.photos/id/1074/400/250" alt="SpaceX Starship">
-    <div class="content">
-      <h2>Starship Prototype Success</h2>
-      <p>SpaceX’s fully reusable Starship prototype achieved a high‑altitude flight, marking a pivotal step toward routine crewed missions to Mars and lunar orbit.</p>
+    <!-- Space Tech -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1513164603981-0b3c8f86e8a9?auto=format&fit=crop&w=800&q=80" alt="Space">
+      <div class="card-content">
+        <h3>Reusable Mid‑Orbit Launch Vehicles</h3>
+        <p>SpaceX’s Starship booster returns after a 45‑minute suborbital hop, slashing launch costs to $2 million per flight.</p>
+        <a class="btn" href="https://www.spacex.com/starship" target="_blank">Read More</a>
+      </div>
     </div>
-  </article>
 
-  <!-- 6. Edge & Connectivity -->
-  <article>
-    <img src="https://picsum.photos/id/1084/400/250" alt="5G network">
-    <div class="content">
-      <h2>6G & Edge Computing</h2>
-      <p>Telecom companies are piloting 6G frequencies (above 100 GHz) to deliver sub‑millisecond latency, empowering real‑time holographic communications and AI‑driven AR.</p>
+    <!-- Health Tech -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1587300033842-3c5e6d4b9e3d?auto=format&fit=crop&w=800&q=80" alt="Health">
+      <div class="card-content">
+        <h3>Brain‑Computer Interface – Neuralink v2</h3>
+        <p>First fully implantable, wireless BCI with 1,000 channels enables real‑time prosthetic control and cortical‑cortical communication.</p>
+        <a class="btn" href="https://www.neuralink.com/updates" target="_blank">Read More</a>
+      </div>
     </div>
-  </article>
-</main>
 
-<footer>
-  &copy; 2026 FutureTech Insights. All rights reserved.
-</footer>
-
-</body>
-</html>
+    <!-- Autonomous Driving -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1578524697777-5e44e5c3d6a
