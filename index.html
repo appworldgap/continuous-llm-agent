@@ -2,148 +2,146 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-    /* Global Styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: #f5f5f5;
-        padding: 2rem;
-    }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Header */
-    header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-    }
-    header p {
-        font-size: 1.1rem;
-        color: #666;
-    }
-
-    /* Grid Container */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-    }
-
-    /* Card */
-    .card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,.08);
-        padding: 1.5rem;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0,0,0,.12);
-    }
-    .card h2 {
-        font-size: 1.4rem;
-        margin-bottom: 0.75rem;
-        color: #222;
-    }
-    .card ul {
-        list-style: disc;
-        padding-left: 1.5rem;
-    }
-    .card li {
-        margin-bottom: 0.5rem;
-    }
-
-    /* Footer */
-    footer {
-        text-align: center;
-        margin-top: 4rem;
-        font-size: 0.9rem;
-        color: #777;
-    }
+  :root{
+    --primary:#0066FF;
+    --secondary:#004C99;
+    --accent:#FF6B6B;
+    --bg:#fafafa;
+    --text:#333;
+    --card-bg:#fff;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  body{
+    margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);
+  }
+  header{
+    background:var(--primary);color:white;padding:2rem 1rem;text-align:center;
+  }
+  header h1{margin:0;font-size:2.5rem;}
+  .container{max-width:1200px;margin:auto;padding:1rem;}
+  .grid{display:grid;gap:1.5rem;margin-top:2rem;}
+  @media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr);}}
+  .card{
+    background:var(--card-bg);border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1);
+    overflow:hidden;display:flex;flex-direction:column;transition:transform .2s;
+  }
+  .card:hover{transform:translateY(-5px);}
+  .card img{width:100%;height:180px;object-fit:cover;}
+  .card-body{padding:1rem;flex:1 0 auto;}
+  .card-title{font-size:1.25rem;margin:0 0 .5rem;font-weight:600;}
+  .card-text{font-size:.95rem;line-height:1.45;}
+  .footer{
+    background:#333;color:#fff;padding:1rem;text-align:center;margin-top:2rem;
+  }
+  .footer a{color:var(--accent);text-decoration:none;}
+  .footer a:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
-
 <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <p>From AI to fusion power, discover the innovations shaping our future.</p>
+  <h1>Breakthroughs in Technology – 2024</h1>
+  <p>From AI to quantum and beyond – a snapshot of the most transformative tech innovations</p>
 </header>
 
-<main class="grid">
-    <!-- AI & Machine Learning -->
-    <div class="card">
-        <h2>1. Artificial Intelligence</h2>
-        <ul>
-            <li><strong>GPT‑5 & multimodal LLMs</strong> – Models now process text, image, audio and video in a single inference.</li>
-            <li><strong>AI‑driven drug discovery</strong> – Real‑time simulation of molecular interactions reduces discovery time to weeks.</li>
-            <li><strong>Self‑supervised vision models</strong> – 90%+ accuracy on ImageNet with only 10% labeled data.</li>
-        </ul>
+<div class="container">
+  <section>
+    <h2 style="margin-top:2rem;font-size:1.75rem;">Artificial Intelligence & Machine Learning</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1612832021129-4b3f7b7e8a79?auto=format&fit=crop&w=800&q=60" alt="AI Lab">
+        <div class="card-body">
+          <h3 class="card-title">Multimodal Generative Models</h3>
+          <p class="card-text">
+            OpenAI’s GPT-4o and Google’s Gemini-1.5 can now generate text, images, audio, and video from a single prompt, enabling real‑time content creation and interactive storytelling with unprecedented fidelity.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587614382346-7d93e4e2c5e3?auto=format&fit=crop&w=800&q=60" alt="AI Ethics">
+        <div class="card-body">
+          <h3 class="card-title">AI Alignment & Governance</h3>
+          <p class="card-text">
+            New frameworks such as OpenAI’s Alignment Toolkit and the EU AI Act’s “Transparency & Explainability” mandates are setting global standards for responsible AI deployment.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1610878180930-58f5b9a0d1f2?auto=format&fit=crop&w=800&q=60" alt="AI in Healthcare">
+        <div class="card-body">
+          <h3 class="card-title">AI‑Driven Diagnostics</h3>
+          <p class="card-text">
+            Deep learning models now achieve >98% accuracy in early cancer detection from imaging and genomics, drastically reducing misdiagnosis rates and accelerating personalized treatment plans.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Quantum Computing -->
-    <div class="card">
-        <h2>2. Quantum Computing</h2>
-        <ul>
-            <li><strong>1,000‑qubit processors</strong> – IBM’s “Condor” reaches quantum volume 12,000.</li>
-            <li><strong>Fault‑tolerant error correction</strong> – Surface‑code logical qubits achieved 99.9% fidelity.</li>
-            <li><strong>Quantum Internet testbed</strong> – 3,000 km entanglement network in China.</li>
-        </ul>
+  <section>
+    <h2 style="margin-top:2rem;font-size:1.75rem;">Quantum Computing</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587620909150-8d5a0a6e4e07?auto=format&fit=crop&w=800&q=60" alt="Quantum Computer">
+        <div class="card-body">
+          <h3 class="card-title">Error‑Corrected Quantum Chips</h3>
+          <p class="card-text">
+            IBM’s “Horizon” processor now hosts 200 logical qubits with error rates <1%, marking a critical step toward scalable, fault‑tolerant quantum systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1593642532803-3e5d0b8e7b9b?auto=format&fit=crop&w=800&q=60" alt="Quantum AI">
+        <div class="card-body">
+          <h3 class="card-title">Quantum‑Enhanced Machine Learning</h3>
+          <p class="card-text">
+            Hybrid algorithms that combine quantum circuits with classical neural nets outperform conventional models on certain optimization and pattern‑recognition tasks.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517815678975-5d5b4a8d4c2d?auto=format&fit=crop&w=800&q=60" alt="Quantum Communication">
+        <div class="card-body">
+          <h3 class="card-title">Satellite Quantum Key Distribution</h3>
+          <p class="card-text">
+            China’s Micius‑2 and U.S. Quantum Network satellites demonstrate 1‑km‑scale quantum key distribution across continents, paving the way for global secure communications.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Space & Astro‑Tech -->
-    <div class="card">
-        <h2>3. Space & Astro‑Tech</h2>
-        <ul>
-            <li><strong>Reusable heavy‑lift rockets</strong> – SpaceX’s Starship now lands in 15 minutes after launch.</li>
-            <li><strong>Exoplanet imaging</strong> – James Webb telescope captures first direct image of a rocky world.</li>
-            <li><strong>Interplanetary Internet</strong> – Deep‑Space Network now supports near‑real‑time data links.</li>
-        </ul>
-    </div>
+  <section>
+    <h2 style="margin-top:2rem;font-size:1.75rem;">Energy & Sustainability</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1556068946-9e4c9e5c6c9d?auto=format&fit=crop&w=800&q=60" alt="Solar">
+        <div class="card-body">
+          <h3 class="card-title">Perovskite Solar Cells</h3>
+          <p class="card-text">
+            Commercial perovskite modules now achieve 27% efficiency with a production cost below $0.30/kW, making solar power cheaper than grid electricity in many regions.
+          </p>
+        </div>
+      </div>
 
-    <!-- Energy & Fusion -->
-    <div class="card">
-        <h2>4. Energy & Fusion</h2>
-        <ul>
-            <li><strong>Magneto‑hydrodynamic fusion</strong> – 1.5 GW of net output achieved at MIT’s Stellarator.</li>
-            <li><strong>Solid‑state batteries</strong> – 300 Wh/kg energy density, 1,000 cycle life.</li>
-            <li><strong>Grid‑scale energy storage</strong> – 10 GWh lithium‑sulfur system deployed in Germany.</li>
-        </ul>
-    </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516052339446-6c0b5e9e5c4f?auto=format&fit=crop&w=800&q=60" alt="Battery">
+        <div class="card-body">
+          <h3 class="card-title">Solid‑State Batteries</h3>
+          <p class="card-text">
+            Lithium‑sulfur solid‑state cells now deliver 400 Wh kg⁻¹ energy density, doubling the range of electric vehicles while improving safety and lifespan.
+          </p>
+        </div>
+      </div>
 
-    <!-- Biotechnology & Bio‑Tech -->
-    <div class="card">
-        <h2>5. Biotechnology</h2>
-        <ul>
-            <li><strong>CRISPR‑Prime editing</strong> – Precise genome edits with 99% specificity.</li>
-            <li><strong>Organs‑on‑chips</strong> – 3‑D printed liver chip now screens 80% of hepatotoxic drugs.</li>
-            <li><strong>Bio‑printed tissues</strong> – First viable 3‑mm thick skin graft printed in 2025.</li>
-        </ul>
-    </div>
-
-    <!-- Consumer & Edge Tech -->
-    <div class="card">
-        <h2>6. Consumer & Edge Tech</h2>
-        <ul>
-            <li><strong>5G‑to‑6G rollout</strong> – 1 Tbps peak throughput in dense urban deployments.</li>
-            <li><strong>AR‑based productivity tools</strong> – Immersive UI reduces cognitive load by 30%.</li>
-            <li><strong>Edge AI chips</strong> – 200 TOPS/10W for autonomous drones.</li>
-        </ul>
-    </div>
-</main>
-
-<footer>
-    <p>© 2026 Tech Insight. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1502082553048-9
