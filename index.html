@@ -2,146 +2,150 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --primary:#0066FF;
-    --secondary:#004C99;
-    --accent:#FF6B6B;
-    --bg:#fafafa;
-    --text:#333;
-    --card-bg:#fff;
+  /* Root variables for easy theming */
+  :root {
+    --primary: #0066ff;
+    --primary-hover: #004ecc;
+    --bg: #f5f5f5;
+    --text: #222222;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0,0,0,0.1);
+    --border-radius: 8px;
   }
-  *,*::before,*::after{box-sizing:border-box;}
-  body{
-    margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);
+
+  /* Global reset and typography */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  header{
-    background:var(--primary);color:white;padding:2rem 1rem;text-align:center;
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
-  header h1{margin:0;font-size:2.5rem;}
-  .container{max-width:1200px;margin:auto;padding:1rem;}
-  .grid{display:grid;gap:1.5rem;margin-top:2rem;}
-  @media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr);}}
-  @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr);}}
-  .card{
-    background:var(--card-bg);border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1);
-    overflow:hidden;display:flex;flex-direction:column;transition:transform .2s;
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
   }
-  .card:hover{transform:translateY(-5px);}
-  .card img{width:100%;height:180px;object-fit:cover;}
-  .card-body{padding:1rem;flex:1 0 auto;}
-  .card-title{font-size:1.25rem;margin:0 0 .5rem;font-weight:600;}
-  .card-text{font-size:.95rem;line-height:1.45;}
-  .footer{
-    background:#333;color:#fff;padding:1rem;text-align:center;margin-top:2rem;
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   }
-  .footer a{color:var(--accent);text-decoration:none;}
-  .footer a:hover{text-decoration:underline;}
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+  }
+
+  main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--card-shadow);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px var(--card-shadow);
+  }
+  .card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+  }
+  .card p {
+    flex: 1;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .card a {
+    align-self: flex-start;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+  .card a:hover {
+    color: var(--primary-hover);
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background: #e0e0e0;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .card h2 { font-size: 1.2rem; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Breakthroughs in Technology – 2024</h1>
-  <p>From AI to quantum and beyond – a snapshot of the most transformative tech innovations</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Stay ahead with the most recent innovations shaping the future.</p>
 </header>
 
-<div class="container">
-  <section>
-    <h2 style="margin-top:2rem;font-size:1.75rem;">Artificial Intelligence & Machine Learning</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1612832021129-4b3f7b7e8a79?auto=format&fit=crop&w=800&q=60" alt="AI Lab">
-        <div class="card-body">
-          <h3 class="card-title">Multimodal Generative Models</h3>
-          <p class="card-text">
-            OpenAI’s GPT-4o and Google’s Gemini-1.5 can now generate text, images, audio, and video from a single prompt, enabling real‑time content creation and interactive storytelling with unprecedented fidelity.
-          </p>
-        </div>
-      </div>
+<main>
+  <!-- Quantum Computing -->
+  <article class="card">
+    <h2>Quantum Computing – IBM's Quantum Advantage</h2>
+    <p>IBM announced the first quantum computer to solve a problem faster than the world's most powerful classical supercomputer, marking a significant milestone in quantum supremacy and paving the way for practical quantum applications.</p>
+    <a href="https://www.ibm.com/blogs/quantum-computing/quantum-advantage/" target="_blank">Read more</a>
+  </article>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1587614382346-7d93e4e2c5e3?auto=format&fit=crop&w=800&q=60" alt="AI Ethics">
-        <div class="card-body">
-          <h3 class="card-title">AI Alignment & Governance</h3>
-          <p class="card-text">
-            New frameworks such as OpenAI’s Alignment Toolkit and the EU AI Act’s “Transparency & Explainability” mandates are setting global standards for responsible AI deployment.
-          </p>
-        </div>
-      </div>
+  <!-- Artificial Intelligence – GPT-4 and Beyond -->
+  <article class="card">
+    <h2>Artificial Intelligence – GPT‑4 & Multimodal Models</h2>
+    <p>OpenAI's GPT‑4 demonstrates advanced natural language understanding, and recent multimodal models now process text, images, and audio, enabling more intuitive AI assistants and content creation tools.</p>
+    <a href="https://openai.com/research/gpt-4" target="_blank">Read more</a>
+  </article>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1610878180930-58f5b9a0d1f2?auto=format&fit=crop&w=800&q=60" alt="AI in Healthcare">
-        <div class="card-body">
-          <h3 class="card-title">AI‑Driven Diagnostics</h3>
-          <p class="card-text">
-            Deep learning models now achieve >98% accuracy in early cancer detection from imaging and genomics, drastically reducing misdiagnosis rates and accelerating personalized treatment plans.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Gene Editing – CRISPR Advancements -->
+  <article class="card">
+    <h2>Gene Editing – CRISPR Therapeutics</h2>
+    <p>CRISPR-based therapies now target complex diseases such as sickle cell anemia and beta‑thalassemia, with clinical trials reporting high safety and efficacy rates in early-stage patients.</p>
+    <a href="https://www.crisprtx.com/clinical-trials" target="_blank">Read more</a>
+  </article>
 
-  <section>
-    <h2 style="margin-top:2rem;font-size:1.75rem;">Quantum Computing</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1587620909150-8d5a0a6e4e07?auto=format&fit=crop&w=800&q=60" alt="Quantum Computer">
-        <div class="card-body">
-          <h3 class="card-title">Error‑Corrected Quantum Chips</h3>
-          <p class="card-text">
-            IBM’s “Horizon” processor now hosts 200 logical qubits with error rates <1%, marking a critical step toward scalable, fault‑tolerant quantum systems.
-          </p>
-        </div>
-      </div>
+  <!-- Autonomous Vehicles – Lidar & AI Integration -->
+  <article class="card">
+    <h2>Autonomous Vehicles – Lidar-Free Navigation</h2>
+    <p>Waymo and other leading firms now deploy Lidar-free sensor suites powered by advanced computer vision, drastically reducing costs and improving real‑world safety in autonomous driving.</p>
+    <a href="https://waymo.com/technology/" target="_blank">Read more</a>
+  </article>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1593642532803-3e5d0b8e7b9b?auto=format&fit=crop&w=800&q=60" alt="Quantum AI">
-        <div class="card-body">
-          <h3 class="card-title">Quantum‑Enhanced Machine Learning</h3>
-          <p class="card-text">
-            Hybrid algorithms that combine quantum circuits with classical neural nets outperform conventional models on certain optimization and pattern‑recognition tasks.
-          </p>
-        </div>
-      </div>
+  <!-- Energy Storage – Solid‑State Batteries -->
+  <article class="card">
+    <h2>Energy Storage – Solid‑State Batteries</h2>
+    <p>Solid‑state battery technology offers higher energy density, improved safety, and faster charging times, moving closer to commercial viability for electric vehicles and grid storage.</p>
+    <a href="https://www.solidstatebattery.com/" target="_blank">Read more</a>
+  </article>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1517815678975-5d5b4a8d4c2d?auto=format&fit=crop&w=800&q=60" alt="Quantum Communication">
-        <div class="card-body">
-          <h3 class="card-title">Satellite Quantum Key Distribution</h3>
-          <p class="card-text">
-            China’s Micius‑2 and U.S. Quantum Network satellites demonstrate 1‑km‑scale quantum key distribution across continents, paving the way for global secure communications.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 style="margin-top:2rem;font-size:1.75rem;">Energy & Sustainability</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1556068946-9e4c9e5c6c9d?auto=format&fit=crop&w=800&q=60" alt="Solar">
-        <div class="card-body">
-          <h3 class="card-title">Perovskite Solar Cells</h3>
-          <p class="card-text">
-            Commercial perovskite modules now achieve 27% efficiency with a production cost below $0.30/kW, making solar power cheaper than grid electricity in many regions.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1516052339446-6c0b5e9e5c4f?auto=format&fit=crop&w=800&q=60" alt="Battery">
-        <div class="card-body">
-          <h3 class="card-title">Solid‑State Batteries</h3>
-          <p class="card-text">
-            Lithium‑sulfur solid‑state cells now deliver 400 Wh kg⁻¹ energy density, doubling the range of electric vehicles while improving safety and lifespan.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1502082553048-9
+  <!-- Next‑Gen Communications – 6G -->
+  <article class="card">
+    <h2>6G – The Next Generation of Connectivity</h2>
