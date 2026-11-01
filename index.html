@@ -1,25 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Latest Breakthroughs in Technology – 2024</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin:0; padding:0; background:#f5f7fa; color:#333;
-  }
-  header{
-    background:#4a90e2; color:white; padding:2rem; text-align:center;
-  }
-  header h1{margin:0; font-size:2.5rem;}
-  main{max-width:1200px; margin:auto; padding:2rem;}
-  .section{background:white; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,.1); margin-bottom:2rem; overflow:hidden;}
-  .section h2{background:#4a90e2; color:white; padding:1rem; margin:0; font-size:1.5rem;}
-  .cards{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; padding:1rem;}
-  .card{background:#fafafa; border-radius:6px; padding:1rem; display:flex; flex-direction:column; height:100%; box-shadow:0 1px 3px rgba(0,0,0,.08);}
-  .card h3{margin:0 0 .5rem 0; color:#4a90e2;}
-  .card p{flex-grow:1; margin:0;}
-  .card a{text-decoration:none; color:#4a90e2; font-weight:bold; margin-top:.5rem;}
-  footer{text-align:center; padding:1rem; color:#777;}
-  @media(max-width:600px
+:root{
+  --clr-primary:#1e88e5;
+  --clr-secondary:#42a5f5;
+  --clr-bg:#f5f8fa;
+  --clr-text:#37474f;
+  --clr-card:#ffffff;
+  --clr-card-shadow:rgba(0,0,0,0.1);
+  --ff-primary:"Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:var(--ff-primary);
+  color:var(--clr-text);
+  background:var(--clr-bg);
+  line-height:1.6;
+  display:flex;flex-direction:column;min-height:100vh
+}
+header{
+  background:var(--clr-primary);
+  color:white;
+  padding:1rem 2rem;
+  text-align:center;
+  font-size:1.5rem;
+  font-weight:700
+}
+main{
+  flex:1;
+  padding:2rem;
+  max-width:1200px;
+  margin:auto;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:var(--clr-card);
+  border-radius:0.5rem;
+  box-shadow:0 2px 6px var(--clr-card-shadow);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+.card-body{
+  padding:1rem;
+  flex:1;
+}
+.card-title{
+  font-size:1.25rem;
+  margin-bottom:0.5rem;
+  color:var(--clr-primary);
+}
+.card-text{
+  flex:1;
+  margin-bottom:1rem;
+}
+.card-link{
+  display:inline-block;
+  margin-top:auto;
+  color:var(--clr-secondary);
+  text-decoration:none;
+  font-weight:600;
+}
+.card-link:hover{
+  text-decoration:underline;
+}
+footer{
+  text-align:center;
+  padding:1rem 0;
+  background:var(--clr-primary);
+  color:white;
+}
+@media(max-width:600px){
+  header{font-size:1.25rem}
+}
+</style>
+</head>
+<body>
+<header>Latest Breakthroughs in Technology – 2024</header>
+<main>
+  <section class="grid">
+    <article class="card">
+      <img src="https://source.unsplash.com/600x400/?quantum,chip" alt="Quantum Chip">
+      <div class="card-body">
+        <h3 class="card-title">Quantum AI Chip</h3>
+        <p class="card-text">
+          Integrating quantum processors with classical AI accelerators, this hybrid chip delivers unprecedented speed for complex machine‑learning models, opening new horizons in drug discovery and climate simulation.
+        </p>
+        <a href="#" class="card-link">Read more</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://source.unsplash.com/600x400/?6g,network" alt="6G Network">
+      <div class="card-body">
+        <h3 class="card-title">6G Global Roll‑Out</h3>
+        <p class="card-text">
+          With terabit‑per‑second speeds and sub‑millisecond latency, 6G is set to transform remote surgery, immersive AR/VR, and autonomous vehicle coordination across the globe.
+        </p>
+        <a href="#" class="card-link">Read more</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://source.unsplash.com/600x400/?graphene,energy" alt="Graphene Battery">
+      <div class="card-body">
+        <h3 class="card-title">Graphene‑Based Energy Storage</h3>
+        <p class="card-text">
+          New graphene composites achieve 10‑fold higher energy density than lithium‑ion, enabling longer‑lasting electric vehicles and ultra‑fast charging stations.
+        </p>
+        <a href="#" class="card-link">Read more</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://source.unsplash.com/600x400/?autonomous,spacecraft" alt="Autonomous Spacecraft">
+      <div class="card-body">
+        <h3 class="card-title">Autonomous Deep‑Space Probes</h3>
+        <p class="card-text">
+          AI‑driven navigation and real‑time decision making allow probes to survive harsh radiation, navigate asteroid belts, and conduct scientific experiments autonomously for months.
+        </p>
+        <a href="#" class="card-link">Read more</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://source.unsplash.com/600x400/?brain,interface" alt="Brain‑Computer Interface">
+      <div class="card-body">
+        <h3 class="card-title">Neural Lace 2.0</h3>
+        <p class="card-text">
+          Implanted mesh‑like devices now provide bidirectional, high‑bandwidth communication between the brain and external systems, promising breakthroughs in neuroprosthetics and human augmentation.
+        </p>
+        <a href="#" class="card-link">Read more</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://source.unsplash.com/600x400/?fusion,lab" alt="Fusion Energy">
+      <div class="card-body">
+        <h3 class="card-title">Commercial Fusion Reactors</h3>
+        <p class="card-text">
+          The first near‑net‑positive fusion reactors have been commissioned, generating clean, carbon‑free power with no long‑lived waste and minimal fuel requirements.
+        </p>
+        <a href="#" class="card-link">Read more</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://source.unsplash.com/600x400/?bioprinting,organ" alt="Bioprinting">
+      <div class="card-body">
+        <h3 class="card-title">3D‑Printed Organs</h3>
+        <p class="card-text">
+          Advances in bioprinting have led to the production of functional liver tissue, reducing transplant wait times and opening possibilities for regenerative medicine.
+        </p>
+        <a href="#" class="card-link">Read more</a>
+      </div>
+    </article>
+  </section>
+</main>
+<footer>© 2024 Tech Insights • <a href="#" style="color:white;text-decoration:none;">Privacy Policy</a></footer>
+</body>
+</html>
