@@ -1,159 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Latest Breakthroughs in Technology – 2024 Review</title>
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  /* CSS Variables */
-  :root {
-    --bg: #121212;
-    --text: #f1f1f1;
-    --accent: #bb86fc;
-    --card-bg: #1e1e1e;
-    --card-hover: #272727;
-    --link: #8ab4f8;
-    --border: #333;
+  body{
+    font-family:'Inter',sans-serif;
+    background:#fafafa;
+    color:#333;
+    margin:0;
+    padding:0;
+    line-height:1.6;
   }
-
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+  header{
+    background:#6200ee;
+    color:white;
+    padding:3rem 1rem;
+    text-align:center;
   }
-
-  header, footer {
-    background: var(--card-bg);
-    padding: 1.5rem 2rem;
-    text-align: center;
+  header h1{
+    margin:0;
+    font-size:2.5rem;
+    font-weight:700;
   }
-
-  header h1 {
-    margin: 0;
-    font-size: 2.2rem;
+  main{
+    max-width:1200px;
+    margin:auto;
+    padding:2rem 1rem;
   }
-
-  main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:1.5rem;
   }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+  .card{
+    background:white;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .2s ease;
   }
-
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform .2s, background .2s;
+  .card:hover{
+    transform:translateY(-4px);
   }
-  .card:hover {
-    background: var(--card-hover);
-    transform: translateY(-4px);
+  .card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
   }
-
-  .card h2 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    color: var(--accent);
-    display: flex;
-    align-items: center;
+  .card-content{
+    padding:1.25rem;
+    flex:1;
   }
-  .card h2 span {
-    font-size: 1.8rem;
-    margin-right: 0.5rem;
+  .card h2{
+    margin:0 0 .75rem;
+    font-size:1.25rem;
+    font-weight:600;
+    color:#222;
   }
-
-  .card p {
-    margin: 0.8rem 0;
+  .card p{
+    margin:0 0 1rem;
+    color:#555;
   }
-
-  .card a {
-    color: var(--link);
-    text-decoration: none;
-    font-weight: 500;
+  .card a{
+    color:#6200ee;
+    text-decoration:none;
+    font-weight:600;
   }
-  .card a:hover {
-    text-decoration: underline;
+  .card a:hover{
+    text-decoration:underline;
   }
-
-  footer p {
-    margin: 0;
-    font-size: 0.9rem;
-  }
-
-  /* Responsive tweak */
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 1.8rem;
-    }
+  @media (prefers-color-scheme: dark) {
+    body{background:#121212;color:#e0e0e0;}
+    header{background:#3700b3;}
+    .card{background:#1e1e1e;box-shadow:0 2px 8px rgba(255,255,255,0.05);}
+    .card h2{color:#fff;}
+    .card p{color:#bbb;}
+    .card a{color:#bb86fc;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>🔬 Latest Breakthroughs in Technology – 2024 Review</h1>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
 
 <main>
-  <section class="grid">
+  <div class="grid">
 
-    <!-- AI & Machine Learning -->
     <article class="card">
-      <h2><span>🤖</span>AI & Machine Learning</h2>
-      <p>Generative AI has surged ahead with the release of GPT‑5, featuring a 10‑fold increase in parameter count and improved safety mitigations. Diffusion models now generate photorealistic video from text prompts in real‑time, while AI‑optimized processors like the NVIDIA Grace‑Hopper deliver unprecedented inference speed.</p>
-      <a href="https://www.openai.com/research" target="_blank">Read More →</a>
+      <img src="https://source.unsplash.com/400x300/?artificial%20intelligence" alt="Generative AI">
+      <div class="card-content">
+        <h2>Generative AI 2.0 (GPT‑4o & Co.)</h2>
+        <p>OpenAI’s GPT‑4o brings real‑time multimodal reasoning, enabling seamless integration of text, vision, and audio. It powers advanced creative tools, code generation, and collaborative workflows.</p>
+        <a href="https://openai.com" target="_blank">Learn More</a>
+      </div>
     </article>
 
-    <!-- Quantum Technology -->
     <article class="card">
-      <h2><span>⚛️</span>Quantum Technology</h2>
-      <p>Quantum processors now exceed 1,000 logical qubits with error‑correction codes that push coherence times to the 10‑second range. Satellite‑based quantum key distribution (QKD) achieved continuous, multi‑kilometre links over the Pacific, bringing global quantum‑secure communication closer to reality.</p>
-      <a href="https://quantum.google" target="_blank">Read More →</a>
-    </article>
-
-    <!-- Communications & Networking -->
-    <article class="card">
-      <h2><span>📶</span>Communications & Networking</h2>
-      <p>Early 6G prototypes have demonstrated gigabit‑per‑second data rates with sub‑millisecond latency, enabling real‑time holographic telepresence. Integrated photonic transceivers now operate at 200 Tb/s, drastically reducing optical fiber bandwidth limitations.</p>
-      <a href="https://www.ieee.org" target="_blank">Read More →</a>
-    </article>
-
-    <!-- Energy & Materials -->
-    <article class="card">
-      <h2><span>⚡</span>Energy & Materials</h2>
-      <p>Solid‑state batteries based on lithium‑silicon alloys now achieve 500 Wh/kg energy density and 1,000 charge/discharge cycles. Perovskite solar cells have crossed the 30 % conversion efficiency threshold, moving closer to commercial viability.</p>
-      <a href="https://www.energy.gov" target="_blank">Read More →</a>
-    </article>
-
-    <!-- Biotechnology -->
-    <article class="card">
-      <h2><span>🧬</span>Biotechnology</h2>
-      <p>CRISPR‑Cas12f has enabled ultra‑compact gene editing tools that fit on a single lipid nanoparticle. Brain‑computer interfaces (BCIs) now decode speech from cortical activity in real‑time, providing new pathways for neuroprosthetics.</p>
-      <a href="https://www.genome.gov" target="_blank">Read More →</a>
-    </article>
-
-    <!-- Space Exploration -->
-    <article class="card">
-      <h2><span>🚀</span>Space Exploration</h2>
-      <p>SpaceX’s Starship reached a new altitude record of 12 km and achieved a reusable first stage landing. NASA’s Perseverance rover has returned the first Martian rock samples to Earth, opening a new era of planetary science.</p>
-      <a href="https://www.nasa.gov" target="_blank">Read More →</a>
-    </article>
-
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2024 TechInsight. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+      <img src="https://source.unsplash.com/400x300/?quantum%20computer" alt="Quantum Computing">
+      <div class="card-content">
+        <h2>Quantum Supremacy Milestone</h2>
+        <p>Google’s Sycamore 2.0 demonstrates quantum advantage on more complex problems, opening pathways for drug discovery, crypt
