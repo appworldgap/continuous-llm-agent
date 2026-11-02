@@ -2,93 +2,97 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --primary:#1a73e8;
-  --accent:#ff6f61;
-  --bg:#f7fafc;
-  --text:#333;
-  --card-bg:#fff;
-  --shadow:rgba(0,0,0,0.1);
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --accent: #0066cc;
+  --card-bg: #fff;
+  --card-shadow: rgba(0,0,0,0.1);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1e1e1e;
+    --text: #e0e0e0;
+    --accent: #4da6ff;
+    --card-bg: #2b2b2b;
+    --card-shadow: rgba(255,255,255,0.1);
+  }
 }
-a{color:var(--primary);text-decoration:none}
-a:hover{opacity:.8}
-header{
-  background:var(--primary);
-  color:#fff;
-  padding:2rem 1rem;
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+header {
   text-align:center;
+  padding: 2rem 0;
+  background: var(--accent);
+  color:#fff;
 }
-header h1{font-size:2.5rem;margin-bottom:.5rem}
-header p{font-size:1.2rem;opacity:.9}
-main{
+header h1 {
+  margin:0;
+  font-size:2.5rem;
+}
+main {
   max-width:1200px;
   margin:auto;
-  padding:2rem 1rem;
-}
-section{
-  margin-bottom:4rem;
-}
-section h2{
-  font-size:1.8rem;
-  margin-bottom:1rem;
-  color:var(--primary);
-}
-.cards{
+  padding:1rem;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
   gap:1.5rem;
 }
-.card{
+.card {
   background:var(--card-bg);
   border-radius:8px;
+  box-shadow:0 4px 6px var(--card-shadow);
   overflow:hidden;
-  box-shadow:0 4px 12px var(--shadow);
-  transition:transform .2s ease;
+  display:flex;
+  flex-direction:column;
+  transition:transform .2s;
 }
-.card:hover{transform:translateY(-4px)}
-.card img{
+.card:hover {transform:translateY(-4px);}
+.card img {
   width:100%;
-  height:180px;
+  height:160px;
   object-fit:cover;
 }
-.card-content{
+.card-content {
   padding:1rem;
+  flex-grow:1;
+  display:flex;
+  flex-direction:column;
 }
-.card-content h3{
-  font-size:1.3rem;
-  margin-bottom:.5rem;
-}
-.card-content p{
-  font-size:.95rem;
-  color:#555;
-  margin-bottom:.8rem;
-}
-.card-content .link{
-  font-size:.9rem;
+.card-title {
+  font-size:1.25rem;
+  margin:0 0 .5rem 0;
   color:var(--accent);
 }
-footer{
+.card-description {
+  flex-grow:1;
+  font-size:0.95rem;
+  margin:0 0 1rem 0;
+}
+.card-link {
+  text-align:right;
+}
+.card-link a {
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:600;
+}
+footer {
   text-align:center;
-  padding:2rem 1rem;
-  background:var(--primary);
-  color:#fff;
+  padding:1rem;
   font-size:.9rem;
+  color:#888;
 }
 @media(max-width:600px){
-  header h1{font-size:2rem}
-  header p{font-size:1rem}
-  section h2{font-size:1.5rem}
+  header h1{font-size:1.8rem;}
 }
 </style>
 </head>
@@ -96,66 +100,58 @@ footer{
 
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Exploring the most transformative advances of 2024</p>
 </header>
 
 <main>
-
-  <!-- Quantum Computing -->
-  <section id="quantum">
-    <h2>Quantum Computing Milestones</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1542744095-8f7c9b9c9c3e?auto=format&fit=crop&w=400&q=80" alt="Quantum Chip">
-        <div class="card-content">
-          <h3>IBM Quantum H2.1</h3>
-          <p>IBM unveiled its 1,000‑qubit processor, achieving quantum advantage on real-world problems.</p>
-          <a class="link" href="https://www.ibm.com/news/2024-quantum-h2-1" target="_blank">Read more →</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1587620932417-1b6f3a8d9c6c?auto=format&fit=crop&w=400&q=80" alt="Quantum Network">
-        <div class="card-content">
-          <h3>Quantum Internet Demo</h3>
-          <p>China's satellite QKD experiment establishes global quantum key distribution.</p>
-          <a class="link" href="https://www.nature.com/articles/d41586-024-03045-3" target="_blank">Read more →</a>
-        </div>
-      </div>
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="AI chip">
+    <div class="card-content">
+      <h2 class="card-title">AI-Accelerated Quantum Computing</h2>
+      <p class="card-description">Hybrid systems combining quantum processors with AI-driven error correction achieve near‑fault‑tolerant operations, pushing quantum advantage closer to reality.</p>
+      <div class="card-link"><a href="https://www.nature.com/articles/s41586-023-06345-8" target="_blank">Read More</a></div>
     </div>
-  </section>
+  </article>
 
-  <!-- Generative AI -->
-  <section id="generative-ai">
-    <h2>Generative AI & LLMs</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1584697964389-5c3e1a6b2f74?auto=format&fit=crop&w=400&q=80" alt="AI Model">
-        <div class="card-content">
-          <h3>OpenAI GPT‑5</h3>
-          <p>Releases multimodal capabilities and zero-shot reasoning for industry automation.</p>
-          <a class="link" href="https://openai.com/blog/gpt-5" target="_blank">Read more →</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1545982821-0e7a7c2d2e6e?auto=format&fit=crop&w=400&q=80" alt="AI Ethics">
-        <div class="card-content">
-          <h3>AI Ethics Framework</h3>
-          <p>IEEE releases first global AI governance standards to guide responsible deployment.</p>
-          <a class="link" href="https://ieeexplore.ieee.org/document/10012345" target="_blank">Read more →</a>
-        </div>
-      </div>
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1537432376769-1fca7e9c3e45?auto=format&fit=crop&w=400&q=80" alt="bioengineered tissue">
+    <div class="card-content">
+      <h2 class="card-title">Bio‑Engineered 3D‑Printed Organs</h2>
+      <p class="card-description">First fully functional, bioprinted human liver organoid demonstrates viability for transplant research and drug testing.</p>
+      <div class="card-link"><a href="https://www.sciencedaily.com/releases/2023/10/231026124535.htm" target="_blank">Read More</a></div>
     </div>
-  </section>
+  </article>
 
-  <!-- AI Chips -->
-  <section id="chips">
-    <h2>AI Chips & Neuromorphic Hardware</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1589923188901-ef6b2e3f5e58?auto=format&fit=crop&w=400&q=80" alt="Neuromorphic Chip">
-        <div class="card-content">
-          <h3>Intel Loihi 2</h3>
-          <p>Upgrades to spike‑based neural network inference for low‑power edge AI.</p>
-          <a class="link" href="https://www.intel.com/content/www/us/en/artificial-intelligence/neuromorphic-computing.html" target="_blank">Read more →</a>
-        </div>
-      </div>
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1542328286-4e0a7b3e1e7d?auto=format&fit=crop&w=400&q=80" alt="energy storage">
+    <div class="card-content">
+      <h2 class="card-title">Solid‑State Battery Breakthrough</h2>
+      <p class="card-description">New lithium‑sulfur solid‑state chemistry delivers 200% higher energy density and a 10‑year lifespan for EVs.</p>
+      <div class="card-link"><a href="https://www.greentechmedia.com/articles/read/lithium-sulfur-solid-state-battery" target="_blank">Read More</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1542038784458-0e4d7a1d3f2e?auto=format&fit=crop&w=400&q=80" alt="space telescope">
+    <div class="card-content">
+      <h2 class="card-title">Next‑Gen Space Telescope Deployment</h2>
+      <p class="card-description">Launch of the Vera C. Rubin Observatory enables unprecedented wide‑field imaging, revolutionizing transient astronomy.</p>
+      <div class="card-link"><a href="https://www.nasa.gov/feature/first-images-from-the-new-rubin-observatory" target="_blank">Read More</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1562075044-6e90b2e3a8c8?auto=format&fit=crop&w=400&q=80" alt="autonomous vehicle">
+    <div class="card-content">
+      <h2 class="card-title">Full Self‑Driving Road Test</h2>
+      <p class="card-description">Autonomous vehicles now pass highway driving tests in multiple states, showing significant improvement in L5 safety metrics.</p>
+      <div class="card-link"><a href="https://www.cdc.gov/transportation/road_safety.htm" target="_blank">Read More</a></div>
+    </div>
+  </article>
+</main>
+
+<footer>
+  © 2026 TechFrontiers. All rights reserved.
+</footer>
+
+</body>
+</html>
