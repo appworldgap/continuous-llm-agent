@@ -2,108 +2,102 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  body{
-    font-family:'Inter',sans-serif;
-    background:#fafafa;
-    color:#333;
-    margin:0;
-    padding:0;
-    line-height:1.6;
-  }
-  header{
-    background:#6200ee;
-    color:white;
-    padding:3rem 1rem;
-    text-align:center;
-  }
-  header h1{
-    margin:0;
-    font-size:2.5rem;
-    font-weight:700;
-  }
-  main{
-    max-width:1200px;
-    margin:auto;
-    padding:2rem 1rem;
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-    gap:1.5rem;
-  }
-  .card{
-    background:white;
-    border-radius:8px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform .2s ease;
-  }
-  .card:hover{
-    transform:translateY(-4px);
-  }
-  .card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-  }
-  .card-content{
-    padding:1.25rem;
-    flex:1;
-  }
-  .card h2{
-    margin:0 0 .75rem;
-    font-size:1.25rem;
-    font-weight:600;
-    color:#222;
-  }
-  .card p{
-    margin:0 0 1rem;
-    color:#555;
-  }
-  .card a{
-    color:#6200ee;
-    text-decoration:none;
-    font-weight:600;
-  }
-  .card a:hover{
-    text-decoration:underline;
-  }
-  @media (prefers-color-scheme: dark) {
-    body{background:#121212;color:#e0e0e0;}
-    header{background:#3700b3;}
-    .card{background:#1e1e1e;box-shadow:0 2px 8px rgba(255,255,255,0.05);}
-    .card h2{color:#fff;}
-    .card p{color:#bbb;}
-    .card a{color:#bb86fc;}
-  }
+    :root{
+        --bg:#121212;
+        --fg:#f5f5f5;
+        --accent:#4fc3f7;
+        --card:#1e1e1e;
+        --radius:12px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;color:var(--fg);background:var(--bg);}
+    a{color:var(--accent);text-decoration:none;transition:.3s;}
+    a:hover{text-decoration:underline;}
+    header{background:linear-gradient(135deg, #000 0%, var(--accent) 100%);color:var(--fg);padding:4rem 2rem;text-align:center;}
+    header h1{font-size:3rem;font-weight:700;margin-bottom:.5rem;}
+    header p{font-size:1.25rem;font-weight:400;}
+    .container{max-width:1200px;margin:auto;padding:2rem;}
+    .section{margin:4rem 0;}
+    .section h2{font-size:2.5rem;font-weight:600;margin-bottom:1.5rem;text-align:center;}
+    .cards{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+    .card{
+        background:var(--card);
+        border-radius:var(--radius);
+        overflow:hidden;
+        box-shadow:0 4px 12px rgba(0,0,0,.15);
+        transition:.3s ease;
+    }
+    .card:hover{transform:translateY(-5px);}
+    .card img{width:100%;height:180px;object-fit:cover;}
+    .card-body{padding:1.5rem;}
+    .card-title{font-size:1.5rem;font-weight:600;margin-bottom:.75rem;}
+    .card-text{font-size:1rem;line-height:1.5;margin-bottom:1rem;}
+    .resource-list{list-style:none;margin-top:1rem;}
+    .resource-list li{margin-bottom:.5rem;}
+    footer{background:#111;padding:2rem;text-align:center;font-size:.9rem;}
+    @media(max-width:600px){
+        header h1{font-size:2.5rem;}
+        header p{font-size:1rem;}
+    }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+    <h1>Breakthroughs in Technology – 2026</h1>
+    <p>Discover the cutting‑edge innovations reshaping the world today.</p>
 </header>
 
-<main>
-  <div class="grid">
+<div class="container">
 
-    <article class="card">
-      <img src="https://source.unsplash.com/400x300/?artificial%20intelligence" alt="Generative AI">
-      <div class="card-content">
-        <h2>Generative AI 2.0 (GPT‑4o & Co.)</h2>
-        <p>OpenAI’s GPT‑4o brings real‑time multimodal reasoning, enabling seamless integration of text, vision, and audio. It powers advanced creative tools, code generation, and collaborative workflows.</p>
-        <a href="https://openai.com" target="_blank">Learn More</a>
-      </div>
-    </article>
+    <section class="section">
+        <h2>Quantum Computing</h2>
+        <div class="cards">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1572372412265-1a93f3bd6d42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw5MTc3MnwwfDF8c2VhcmNofHxzaWNrYW1vcmV8ZW58MHx8fHwxNjg4NjE2NTY3&ixlib=rb-4.0.3&q=80&w=800" alt="Quantum chip">
+                <div class="card-body">
+                    <h3 class="card-title">Google's Sycamore 2.0</h3>
+                    <p class="card-text">In early 2026, Google released Sycamore 2.0, achieving quantum supremacy on a 200‑qubit system and solving a class of problems in seconds that would take the world’s fastest supercomputer millennia.</p>
+                </div>
+            </article>
 
-    <article class="card">
-      <img src="https://source.unsplash.com/400x300/?quantum%20computer" alt="Quantum Computing">
-      <div class="card-content">
-        <h2>Quantum Supremacy Milestone</h2>
-        <p>Google’s Sycamore 2.0 demonstrates quantum advantage on more complex problems, opening pathways for drug discovery, crypt
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1611078488928-0e1a3d4cba1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw5MTc3MnwwfDF8ZGlzcGFuaWV8fHxnZXN0ZSB8ZW58MHx8fHwxNjg4NjE2NTY3&ixlib=rb-4.0.3&q=80&w=800" alt="IBM quantum lab">
+                <div class="card-body">
+                    <h3 class="card-title">IBM Quantum Roadmap</h3>
+                    <p class="card-text">IBM unveiled a 10‑year plan to build a fault‑tolerant quantum computer with 10,000 logical qubits, potentially revolutionizing drug discovery, cryptography, and materials science.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Artificial Intelligence</h2>
+        <div class="cards">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw5MTc3MnwwfDF8aW1hZ2V8fHxnb2R8ZW58MHx8fHwxNjg4NjE2NTY3&ixlib=rb-4.0.3&q=80&w=800" alt="AI brain">
+                <div class="card-body">
+                    <h3 class="card-title">OpenAI GPT‑5</h3>
+                    <p class="card-text">GPT‑5 introduced multimodal reasoning and a 10‑fold reduction in token usage, enabling real‑time language translation, coding assistance, and complex decision‑support in industries.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1573495518394-7f6d8e0a2c83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=Mnw5MTc3MnwwfDF8c2Nob3VufHxwaGFybHN8ZW58MHx8fHwxNjg4NjE2NTY3&ixlib=rb-4.0.3&q=80&w=800" alt="robotic arm">
+                <div class="card-body">
+                    <h3 class="card-title">AI in Robotics</h3>
+                    <p class="card-text">Robots powered by GPT‑5 can learn new tasks from a single demonstration, accelerating automation across manufacturing, logistics, and even household chores.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>6G Communications</h2>
+        <div class="cards">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1517635421768-0bb4d7e7c4c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=
