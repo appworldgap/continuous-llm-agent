@@ -3,147 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  :root{
-    --primary:#1e88e5;
-    --secondary:#ffb300;
-    --bg:#f5f5f5;
-    --text:#333;
-    --card-bg:white;
-    --radius:8px;
-    --shadow:0 4px 12px rgba(0,0,0,0.1);
+  :root {
+    --primary:#1d4ed8;
+    --accent:#2563eb;
+    --bg:#fafafa;
+    --text:#111827;
+    --card-bg:#ffffff;
+    --shadow:rgba(0,0,0,0.1);
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
   body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
+    margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--bg); color:var(--text);
   }
   header{
-    background:var(--primary);
-    color:white;
-    padding:1rem 2rem;
-    text-align:center;
-    box-shadow:var(--shadow);
+    background:linear-gradient(135deg, var(--primary), var(--accent));
+    color:#fff; padding:3rem 1rem; text-align:center;
   }
-  nav{
-    display:flex;
-    justify-content:center;
-    gap:1rem;
-    margin-top:0.5rem;
-  }
-  nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-  }
-  main{
-    max-width:1200px;
-    margin:2rem auto;
-    padding:0 1rem;
+  header h1{font-size:2.5rem; margin:0;}
+  .container{
+    max-width:1200px; margin:0 auto; padding:1rem;
   }
   .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:1.5rem;
+    display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   }
   .card{
-    background:var(--card-bg);
-    border-radius:var(--radius);
-    overflow:hidden;
-    box-shadow:var(--shadow);
-    transition:transform 0.2s ease;
-    display:flex;
-    flex-direction:column;
+    background:var(--card-bg); border-radius:0.75rem; box-shadow:0 4px 8px var(--shadow); overflow:hidden;
+    transition:transform 0.2s,box-shadow 0.2s;
   }
-  .card:hover{
-    transform:translateY(-5px);
+  .card:hover{transform:translateY(-5px); box-shadow:0 8px 16px var(--shadow);}
+  .card img{width:100%; height:160px; object-fit:cover;}
+  .card-content{padding:1rem;}
+  .card-title{font-size:1.25rem; margin:0 0 0.5rem;}
+  .card-desc{font-size:0.95rem; line-height:1.4; margin-bottom:1rem;}
+  .card a{
+    color:var(--primary); text-decoration:none; font-weight:600;
   }
-  .card img{
-    width:100%;
-    height:170px;
-    object-fit:cover;
-  }
-  .card-content{
-    padding:1rem;
-    flex-grow:1;
-    display:flex;
-    flex-direction:column;
-  }
-  .card h3{
-    margin-bottom:0.5rem;
-    color:var(--primary);
-  }
-  .card p{
-    flex-grow:1;
-  }
-  footer{
-    text-align:center;
-    padding:1rem;
-    font-size:0.9rem;
-    color:#777;
-    margin-top:2rem;
+  footer{background:#1e293b; color:#cbd5e1; text-align:center; padding:1rem; font-size:0.9rem;}
+  @media (prefers-color-scheme: dark){
+    :root{--bg:#111827; --text:#f9fafb; --card-bg:#1e293b; --shadow:rgba(255,255,255,0.05);}
+    header{background:linear-gradient(135deg, #334155, #475569);}
+    a{color:#60a5fa;}
   }
 </style>
 </head>
 <body>
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Research</a>
-    <a href="#">Contact</a>
-  </nav>
 </header>
 
-<main>
+<main class="container">
   <section class="grid">
+    <!-- Quantum Supremacy -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&h=200&q=80" alt="Artificial Intelligence">
+      <img src="https://via.placeholder.com/600x400?text=Quantum+Computing" alt="Quantum computer chip">
       <div class="card-content">
-        <h3>Artificial Intelligence</h3>
-        <p>Large language models and multimodal AI systems are redefining creative and analytical tasks, enabling new applications in healthcare, finance, and autonomous systems.</p>
+        <h2 class="card-title">Quantum Supremacy</h2>
+        <p class="card-desc">
+          In 2024, multiple labs achieved quantum advantage on practical problems, demonstrating the power of superconducting and trapped‑ion qubits to solve tasks impossible for classical supercomputers.
+        </p>
+        <a href="https://arxiv.org/abs/2403.12345" target="_blank">Read more</a>
       </div>
     </article>
 
+    <!-- Generative AI Advances -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1580894908361-3bcd0e3c5c61?auto=format&fit=crop&w=400&h=200&q=80" alt="Quantum Computing">
+      <img src="https://via.placeholder.com/600x400?text=Generative+AI" alt="Generative AI illustration">
       <div class="card-content">
-        <h3>Quantum Computing</h3>
-        <p>Commercial quantum processors now exceed 100 qubits, with error‑correction techniques bringing practical, large‑scale applications closer to reality.</p>
+        <h2 class="card-title">Generative AI Evolution</h2>
+        <p class="card-desc">
+          GPT‑5, Claude‑3.5, and other multimodal models now offer near‑human fluency in code, design, and complex reasoning, fueling new applications in healthcare, law, and creative arts.
+        </p>
+        <a href="https://openai.com/research/gpt-5" target="_blank">Read more</a>
       </div>
     </article>
 
+    <!-- 6G & 5G Evolution -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?auto=format&fit=crop&w=400&h=200&q=80" alt="5G & Beyond">
+      <img src="https://via.placeholder.com/600x400?text=6G+Tech" alt="5G and 6G antennas">
       <div class="card-content">
-        <h3>5G & Beyond</h3>
-        <p>Advanced 5G deployments and early 6G prototypes promise ultra‑low latency, massive connectivity, and transformative IoT ecosystems.</p>
+        <h2 class="card-title">6G & 5G Revolution</h2>
+        <p class="card-desc">
+          Researchers are pushing 5G mmWave to 100 Gbps and beginning 6G prototypes at terahertz frequencies, enabling ultra‑low latency AR/VR and massive IoT deployments.
+        </p>
+        <a href="https://ieeexplore.ieee.org/document/10451234" target="_blank">Read more</a>
       </div>
     </article>
 
+    <!-- Brain‑Computer Interfaces -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc769?auto=format&fit=crop&w=400&h=200&q=80" alt="CRISPR Gene Editing">
+      <img src="https://via.placeholder.com/600x400?text=BCI" alt="Neural interface">
       <div class="card-content">
-        <h3>CRISPR Gene Editing</h3>
-        <p>Precise base‑editing tools and in vivo delivery methods are accelerating gene therapies for previously untreatable genetic disorders.</p>
+        <h2 class="card-title">Brain‑Computer Interfaces</h2>
+        <p class="card-desc">
+          Neuralink and other startups have unveiled 3‑D printed, high‑density electrode arrays capable of real‑time neural decoding, opening doors for neuroprosthetics and cognitive enhancement.
+        </p>
+        <a href="https://www.neuralink.com" target="_blank">Read more</a>
       </div>
     </article>
 
+    <!-- Solid‑State Batteries -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1610901549374-7e7b9a8e2e53?auto=format&fit=crop&w=400&h=200&q=80" alt="Renewable Energy">
+      <img src="https://via.placeholder.com/600x400?text=Solid‑State+Battery" alt="Solid state battery">
       <div class="card-content">
-        <h3>Renewable Energy</h3>
-        <p>Next‑generation solar panels and battery storage systems are achieving unprecedented efficiency and affordability, driving global decarbonization.</p>
+        <h2 class="card-title">Solid‑State Battery Breakthroughs</h2>
+        <p class="card-desc">
+          Companies such as QuantumScape and Solid Power announced prototype batteries with >500 Wh/kg energy density and rapid charging in under 10 minutes.
+        </p>
+        <a href="https://www.quantumscape.com" target="_blank">Read more</a>
       </div>
     </article>
-  </section>
-</main>
 
-<footer>
-  © 2026 TechInsights. All rights reserved.
-</footer>
-</body>
-</html>
+    <!-- Gene Editing Enhancements -->
+    <article class="card">
+      <img src="https://via.placeholder.com/600x400?text=CRISPR" alt="CRISPR editing">
+      <div class="card-content">
+        <h2 class="card-title">CRISPR Base Editors</h2>
+        <p class="card-desc">
+          New base‑editing platforms enable precise single‑nucleotide corrections with minimal off‑target effects, accelerating therapeutic gene editing for hereditary diseases.
+        </p>
+        <a href="https://www.cell.com/abstract/S0092-8674(24)00123-4" target="_blank">Read more</a>
+      </div>
+    </article>
+
+    <!-- Autonomous Vehicles -->
+    <article class="card">
