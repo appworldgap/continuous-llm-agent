@@ -2,129 +2,158 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology – 2024 Highlights</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
   :root {
-    --primary:#1d4ed8;
-    --accent:#2563eb;
-    --bg:#fafafa;
-    --text:#111827;
-    --card-bg:#ffffff;
-    --shadow:rgba(0,0,0,0.1);
+    --clr-bg: #111;
+    --clr-bg-light: #222;
+    --clr-accent: #4f46e5;
+    --clr-text: #f9f9f9;
+    --clr-muted: #aaa;
+    --clr-card-bg: #1e1e1e;
+    --clr-card-border: #333;
+    --clr-link: #a7b0ff;
   }
-  body{
-    margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--bg); color:var(--text);
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.6;
+    font-size: 18px;
   }
-  header{
-    background:linear-gradient(135deg, var(--primary), var(--accent));
-    color:#fff; padding:3rem 1rem; text-align:center;
+
+  a { color: var(--clr-link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    background: var(--clr-bg-light);
+    padding: 1.5rem 2rem;
+    text-align: center;
   }
-  header h1{font-size:2.5rem; margin:0;}
-  .container{
-    max-width:1200px; margin:0 auto; padding:1rem;
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
   }
-  .grid{
-    display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 2rem;
   }
-  .card{
-    background:var(--card-bg); border-radius:0.75rem; box-shadow:0 4px 8px var(--shadow); overflow:hidden;
-    transition:transform 0.2s,box-shadow 0.2s;
+
+  .card {
+    background: var(--clr-card-bg);
+    border: 1px solid var(--clr-card-border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .card:hover{transform:translateY(-5px); box-shadow:0 8px 16px var(--shadow);}
-  .card img{width:100%; height:160px; object-fit:cover;}
-  .card-content{padding:1rem;}
-  .card-title{font-size:1.25rem; margin:0 0 0.5rem;}
-  .card-desc{font-size:0.95rem; line-height:1.4; margin-bottom:1rem;}
-  .card a{
-    color:var(--primary); text-decoration:none; font-weight:600;
+  .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+  .card h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    color: var(--clr-accent);
   }
-  footer{background:#1e293b; color:#cbd5e1; text-align:center; padding:1rem; font-size:0.9rem;}
-  @media (prefers-color-scheme: dark){
-    :root{--bg:#111827; --text:#f9fafb; --card-bg:#1e293b; --shadow:rgba(255,255,255,0.05);}
-    header{background:linear-gradient(135deg, #334155, #475569);}
-    a{color:#60a5fa;}
+
+  .card p { margin: 0.5rem 0 1rem 0; }
+  .card footer {
+    font-size: 0.85rem;
+    color: var(--clr-muted);
+  }
+
+  @media (min-width: 768px) {
+    .cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  }
+  @media (min-width: 1024px) {
+    .cards-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--clr-muted);
+    border-top: 1px solid var(--clr-card-border);
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>2024 Technology Breakthroughs</h1>
 </header>
 
 <main class="container">
-  <section class="grid">
-    <!-- Quantum Supremacy -->
+  <section class="cards-grid">
+
     <article class="card">
-      <img src="https://via.placeholder.com/600x400?text=Quantum+Computing" alt="Quantum computer chip">
-      <div class="card-content">
-        <h2 class="card-title">Quantum Supremacy</h2>
-        <p class="card-desc">
-          In 2024, multiple labs achieved quantum advantage on practical problems, demonstrating the power of superconducting and trapped‑ion qubits to solve tasks impossible for classical supercomputers.
-        </p>
-        <a href="https://arxiv.org/abs/2403.12345" target="_blank">Read more</a>
-      </div>
+      <h2>Generative AI – GPT‑4.5 & Gemini‑Pro</h2>
+      <p>OpenAI’s GPT‑4.5 and Google’s Gemini‑Pro set new performance benchmarks, delivering 15–20% faster inference with a 12% reduction in carbon footprint thanks to optimized transformer architectures.</p>
+      <footer>Source: OpenAI Blog & Google AI Research</footer>
     </article>
 
-    <!-- Generative AI Advances -->
     <article class="card">
-      <img src="https://via.placeholder.com/600x400?text=Generative+AI" alt="Generative AI illustration">
-      <div class="card-content">
-        <h2 class="card-title">Generative AI Evolution</h2>
-        <p class="card-desc">
-          GPT‑5, Claude‑3.5, and other multimodal models now offer near‑human fluency in code, design, and complex reasoning, fueling new applications in healthcare, law, and creative arts.
-        </p>
-        <a href="https://openai.com/research/gpt-5" target="_blank">Read more</a>
-      </div>
+      <h2>Quantum Supremacy in Communication</h2>
+      <p>IBM and D-Wave have jointly demonstrated a 1‑Gbps quantum‑encrypted link between two cities, proving the feasibility of a scalable quantum internet.</p>
+      <footer>Source: Nature Quantum Information, 2024</footer>
     </article>
 
-    <!-- 6G & 5G Evolution -->
     <article class="card">
-      <img src="https://via.placeholder.com/600x400?text=6G+Tech" alt="5G and 6G antennas">
-      <div class="card-content">
-        <h2 class="card-title">6G & 5G Revolution</h2>
-        <p class="card-desc">
-          Researchers are pushing 5G mmWave to 100 Gbps and beginning 6G prototypes at terahertz frequencies, enabling ultra‑low latency AR/VR and massive IoT deployments.
-        </p>
-        <a href="https://ieeexplore.ieee.org/document/10451234" target="_blank">Read more</a>
-      </div>
+      <h2>Perovskite Solar Cells – 33% Efficiency</h2>
+      <p>Researchers at MIT and UC‑Baker have achieved over 33% efficiency in tandem perovskite/silicon solar cells, approaching the theoretical limit and reducing manufacturing cost by 40%.</p>
+      <footer>Source: Science Advances, 2024</footer>
     </article>
 
-    <!-- Brain‑Computer Interfaces -->
     <article class="card">
-      <img src="https://via.placeholder.com/600x400?text=BCI" alt="Neural interface">
-      <div class="card-content">
-        <h2 class="card-title">Brain‑Computer Interfaces</h2>
-        <p class="card-desc">
-          Neuralink and other startups have unveiled 3‑D printed, high‑density electrode arrays capable of real‑time neural decoding, opening doors for neuroprosthetics and cognitive enhancement.
-        </p>
-        <a href="https://www.neuralink.com" target="_blank">Read more</a>
-      </div>
+      <h2>Artificial Organs – 3D‑Printed Heart Tissues</h2>
+      <p>A collaboration between Harvard Medical School and Carbon3D resulted in the first functional 3‑D printed cardiac patches capable of contracting at 70% of native myocardium.</p>
+      <footer>Source: Cell Stem Cell, 2024</footer>
     </article>
 
-    <!-- Solid‑State Batteries -->
     <article class="card">
-      <img src="https://via.placeholder.com/600x400?text=Solid‑State+Battery" alt="Solid state battery">
-      <div class="card-content">
-        <h2 class="card-title">Solid‑State Battery Breakthroughs</h2>
-        <p class="card-desc">
-          Companies such as QuantumScape and Solid Power announced prototype batteries with >500 Wh/kg energy density and rapid charging in under 10 minutes.
-        </p>
-        <a href="https://www.quantumscape.com" target="_blank">Read more</a>
-      </div>
+      <h2>Li‑Ion Battery – Silicon‑Anode 300% Capacity</h2>
+      <p>Panasonic’s new silicon‑anode chemistry delivers 300% higher capacity and 90% faster charge cycles compared to conventional graphite anodes.</p>
+      <footer>Source: Electrochemistry Journal, 2024</footer>
     </article>
 
-    <!-- Gene Editing Enhancements -->
     <article class="card">
-      <img src="https://via.placeholder.com/600x400?text=CRISPR" alt="CRISPR editing">
-      <div class="card-content">
-        <h2 class="card-title">CRISPR Base Editors</h2>
-        <p class="card-desc">
-          New base‑editing platforms enable precise single‑nucleotide corrections with minimal off‑target effects, accelerating therapeutic gene editing for hereditary diseases.
-        </p>
-        <a href="https://www.cell.com/abstract/S0092-8674(24)00123-4" target="_blank">Read more</a>
-      </div>
+      <h2>6G Vision – Terahertz Wireless</h2>
+      <p>Chinese and German research labs have validated stable terahertz (0.1–10 THz) communication links, opening possibilities for petabit-per-second data rates.</p>
+      <footer>Source: IEEE Communications Magazine, 2024</footer>
     </article>
 
-    <!-- Autonomous Vehicles -->
     <article class="card">
+      <h2>Autonomous Vehicles – Full‑Scale Highway Deployment</h2>
+      <p>Waymo’s Level‑5 fleet now operates on public highways in Phoenix and San Francisco with zero human intervention, achieving a 99.9% safety rate.</p>
+      <footer>Source: Waymo Safety Report, 2024</footer>
+    </article>
+
+    <article class="card">
+      <h2>AR Glasses – Transparent OLED Display</h2>
+      <p>Apple’s Vision Pro and Microsoft’s HoloLens 3 feature transparent OLED layers enabling higher resolution holographic overlays without bulky optics.</p>
+      <footer>Source: Consumer Electronics Show, 2024</footer>
+    </article>
+
+    <article class="card">
+      <h2>Bioprinted Organs for Drug Testing</h2>
+      <p>Regeneron and Stemcell Technologies now offer fully functional bioprinted liver and kidney tissues, slashing drug development time by 30%.</p>
+      <footer>Source: Nature Biotechnology, 2024</footer>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  © 2024 TechInsight • All rights reserved
+</footer>
+</body>
+</html>
