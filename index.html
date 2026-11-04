@@ -2,168 +2,199 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology</title>
 <style>
-/* Reset and base styles */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
+  /* CSS Reset */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #f4f4f4;
-    background: #1a1a1a;
-}
-a { color: #1e90ff; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* Header and hero section */
-header {
-    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
-    height: 60vh;
+    background: linear-gradient(135deg,#f0f4ff 0%,#e0f7fa 100%);
+    color: #333;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+  }
+
+  /* Utility variables */
+  :root {
+    --primary:#0066ff;
+    --secondary:#ff5722;
+    --accent:#4caf50;
+    --text:#222;
+    --bg-card:#fff;
+    --shadow:rgba(0,0,0,.1);
+    --spacing:1.5rem;
+    --radius:12px;
+    --transition:0.3s ease;
+  }
+
+  /* Header */
+  header {
+    background: var(--primary);
     color: #fff;
-    padding: 0 1rem;
-}
-header h1 {
-    font-size: 3rem;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-}
-header p {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
-}
+    padding: var(--spacing);
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow);
+  }
+  header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+  header p { font-size: 1.1rem; opacity: .9; }
 
-/* Navigation */
-nav {
-    position: sticky;
-    top: 0;
-    background: #222;
-    padding: 0.75rem 1rem;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-}
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* Navigation */
+  nav {
+    background: #fff;
+    padding: .5rem var(--spacing);
+    box-shadow: 0 2px 4px var(--shadow);
+  }
+  nav ul {
     list-style: none;
-}
-nav li {
-    margin: 0 1rem;
-}
-nav li a {
-    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--primary);
     font-weight: 600;
-}
-nav li a.active {
-    color: #1e90ff;
-}
+    position: relative;
+    transition: var(--transition);
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left:0; bottom:-4px;
+    width:0; height:2px;
+    background: var(--secondary);
+    transition: var(--transition);
+  }
+  nav a:hover::after { width:100%; }
 
-/* Main content */
-main {
-    padding: 2rem 1rem;
+  /* Main content */
+  main {
+    flex: 1;
+    padding: var(--spacing);
     max-width: 1200px;
     margin: 0 auto;
-}
-section {
-    margin-bottom: 3rem;
-}
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-    color: #1e90ff;
-    border-bottom: 3px solid #1e90ff;
+  }
+  .section {
+    margin-bottom: var(--spacing);
+  }
+  .section h2 {
+    margin-bottom: .75rem;
+    color: var(--primary);
+    font-size: 1.75rem;
+    border-bottom: 3px solid var(--accent);
     display: inline-block;
-}
-section p {
-    margin-bottom: 1rem;
-}
-section ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
-}
-section img {
-    max-width: 100%;
-    height: auto;
+    padding-bottom: .3rem;
+  }
+  .cards {
+    display: grid;
+    gap: var(--spacing);
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  }
+  .card {
+    background: var(--bg-card);
+    padding: var(--spacing);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 8px 12px var(--shadow); }
+  .card h3 {
+    margin-bottom: .5rem;
+    color: var(--primary);
+  }
+  .card p { flex-grow: 1; }
+  .card a {
     margin-top: 1rem;
-    border-radius: 8px;
-}
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+  .card a:hover { color: var(--primary); }
 
-/* Footer */
-footer {
+  /* Footer */
+  footer {
+    background: var(--primary);
+    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    background: #222;
-    color: #bbb;
-    font-size: 0.9rem;
-}
-footer a { color: #1e90ff; }
+    padding: var(--spacing);
+    font-size: .9rem;
+  }
+  footer a { color: #ffd54f; text-decoration: none; }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-    header h1 { font-size: 2.5rem; }
-    nav li { margin: 0 0.5rem; }
-}
+  /* Responsive tweaks */
+  @media(max-width:480px){
+    header h1{font-size:2rem;}
+    nav ul{flex-direction:column; gap:.5rem;}
+    .section h2{font-size:1.5rem;}
+  }
 </style>
 </head>
 <body>
-
-<header id="top">
-    <div>
-        <h1>Latest Breakthroughs in Technology – 2026</h1>
-        <p>From quantum computers to autonomous bio‑engineering, explore the most transformative tech innovations shaping our future.</p>
-    </div>
+<header>
+  <h1>Technology Breakthroughs 2026</h1>
+  <p>Exploring the most groundbreaking tech innovations shaping our future.</p>
 </header>
 
 <nav>
-    <ul>
-        <li><a href="#ai-ml" class="active">AI & ML</a></li>
-        <li><a href="#quantum">Quantum Computing</a></li>
-        <li><a href="#sixg">6G & Connectivity</a></li>
-        <li><a href="#autonomous">Autonomous Systems</a></li>
-        <li><a href="#bio">Biotech & Genomics</a></li>
-        <li><a href="#space">Space Exploration</a></li>
-        <li><a href="#energy">Energy & Sustainability</a></li>
-    </ul>
+  <ul>
+    <li><a href="#ai">Artificial Intelligence</a></li>
+    <li><a href="#quantum">Quantum Computing</a></li>
+    <li><a href="#space">Space Tech</a></li>
+    <li><a href="#health">Health & BioTech</a></li>
+    <li><a href="#energy">Energy & Sustainability</a></li>
+  </ul>
 </nav>
 
 <main>
+  <section id="ai" class="section">
+    <h2>Artificial Intelligence</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Large‑Scale Multimodal Models</h3>
+        <p>Models now seamlessly integrate text, image, audio, and video understanding, enabling real‑time, context‑aware interactions across platforms.</p>
+        <a href="https://example.com/ai-models" target="_blank">Read More</a>
+      </div>
+      <div class="card">
+        <h3>Self‑Learning Autonomous Vehicles</h3>
+        <p>Autonomous systems can now train themselves in simulated environments, reducing real‑world testing and speeding deployment.</p>
+        <a href="https://example.com/autonomous-vehicles" target="_blank">Read More</a>
+      </div>
+      <div class="card">
+        <h3>AI‑Driven Drug Discovery</h3>
+        <p>AI algorithms predict molecular interactions, cutting drug development time from years to weeks.</p>
+        <a href="https://example.com/drug-discovery" target="_blank">Read More</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="ai-ml">
-        <h2>AI & Machine Learning</h2>
-        <p>OpenAI’s GPT‑5 pushes natural language understanding to near‑human levels, enabling real‑time translation, complex scientific reasoning, and fully autonomous content creation. Combined with multimodal models, AI can now interpret text, images, audio, and video in a unified framework.</p>
-        <ul>
-            <li>Zero‑shot reasoning with 4 × higher accuracy than GPT‑4.</li>
-            <li>Cross‑modal embeddings that allow seamless interaction across sensory inputs.</li>
-            <li>Open‑source frameworks democratizing AI research worldwide.</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1517486808906-6b7e9c9b2f2b?auto=format&fit=crop&w=800&q=60" alt="AI representation">
-    </section>
+  <section id="quantum" class="section">
+    <h2>Quantum Computing</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Quantum Supremacy for Optimization</h3>
+        <p>Quantum processors now solve complex optimization problems faster than any classical counterpart.</p>
+        <a href="https://example.com/quantum-supremacy" target="_blank">Read More</a>
+      </div>
+      <div class="card">
+        <h3>Fault‑Tolerant Qubits</h3>
+        <p>New error‑correcting codes enable stable qubit operation for practical, large‑scale systems.</p>
+        <a href="https://example.com/fault-tolerant" target="_blank">Read More</a>
+      </div>
+      <div class="card">
+        <h3>Hybrid Classical‑Quantum Cloud Services</h3>
+        <p>Cloud platforms now offer integrated quantum and classical resources, lowering entry barriers for researchers.</p>
+        <a href="https://example.com/cloud-quantum" target="_blank">Read More</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="quantum">
-        <h2>Quantum Computing</h2>
-        <p>IBM’s Eagle II quantum processor now houses 1,024 qubits with an error‑rate below 0.1 %. This milestone brings quantum advantage for cryptography, drug discovery, and complex optimization problems.</p>
-        <ul>
-            <li>Fault‑tolerant operations achieved using surface‑code error correction.</li>
-            <li>Cloud access for researchers through IBM Quantum Experience.</li>
-            <li>Collaborations with pharma for accelerated molecule screening.</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1581091870625-9b8b1d0a4c15?auto=format&fit=crop&w=800&q=60" alt="Quantum chip">
-    </section>
-
-    <section id="sixg">
-        <h2>6G & Connectivity</h2>
-        <p>Deployments in Singapore, Japan, and the EU have started rolling out 6G networks, offering 1 Tb/s peak speeds and sub‑10 µs latency. Integrated THz bands enable ultra‑high‑definition streaming and real‑time haptic feedback.</p>
-        <ul>
-            <li>Massive MIMO with 10,000 antennas per base station.</li>
-            <li>Edge AI for ultra‑low‑latency inference.</li>
-            <li>Network slicing for mission‑critical applications.</li>
-        </ul>
-        <img src="https
+  <section id="space" class="section">
+    <h2>Space Technology</h2>
