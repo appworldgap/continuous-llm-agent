@@ -5,193 +5,150 @@
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    /* Root variables for easy theme changes */
-    :root {
-        --bg: #1a1a1d;
-        --accent: #00d8ff;
-        --text: #e0e0e0;
-        --card-bg: #2b2b2e;
-        --link: #00d8ff;
-        --heading: #ffffff;
-        --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-        margin:0;
-        font-family: var(--font-family);
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-    }
-
-    /* Navigation */
-    nav {
-        background: var(--card-bg);
-        padding: 1rem;
-        text-align: center;
-    }
-
-    nav a {
-        color: var(--accent);
-        text-decoration: none;
-        margin: 0 1rem;
-        font-weight: bold;
-    }
-
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    header {
-        text-align: center;
-        padding: 3rem 1rem;
-        background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg) 100%);
-        color: var(--heading);
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-    }
-
-    section {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
-
-    article {
-        background: var(--card-bg);
-        border-radius: 8px;
-        margin-bottom: 1.5rem;
-        padding: 1.5rem;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-
-    article h2 {
-        color: var(--accent);
-        margin-top: 0;
-        font-size: 1.8rem;
-    }
-
-    article ul {
-        list-style: disc inside;
-        margin: 0.5rem 0 0 1.2rem;
-    }
-
-    article p {
-        margin: 0.5rem 0;
-    }
-
-    footer {
-        text-align: center;
-        padding: 2rem 1rem;
-        color: #aaa;
-        font-size: 0.9rem;
-    }
-
-    a {
-        color: var(--link);
-    }
-
-    /* Responsive Grid */
-    .grid {
-        display: grid;
-        gap: 1.5rem;
-    }
-
-    @media (min-width: 600px) {
-        .grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (min-width: 900px) {
-        .grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
+  :root {
+    --clr-primary:#2c3e50;
+    --clr-secondary:#34495e;
+    --clr-bg:#f5f7fa;
+    --clr-card:#ffffff;
+    --clr-accent:#1abc9c;
+    --ff-primary:"Segoe UI",Arial,sans-serif;
+    --ff-mono:"JetBrains Mono",monospace;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    font-family:var(--ff-primary);
+    background:var(--clr-bg);
+    color:var(--clr-primary);
+    line-height:1.6;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+  }
+  header {
+    background:var(--clr-primary);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+  }
+  header h1 { font-size:2.5rem; }
+  .container {
+    flex:1;
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 1rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
+  }
+  .card {
+    background:var(--clr-card);
+    border-radius:8px;
+    box-shadow:0 4px 8px rgba(0,0,0,.05);
+    overflow:hidden;
+    transition:transform .2s,box-shadow .2s;
+  }
+  .card:hover { transform:translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,.1); }
+  .card header {
+    background:var(--clr-accent);
+    color:#fff;
+    padding:1rem;
+    font-weight:bold;
+  }
+  .card .content {
+    padding:1rem;
+    font-size:.95rem;
+  }
+  .card .content p { margin-bottom:1rem; }
+  .card .content a {
+    display:inline-block;
+    text-decoration:none;
+    color:var(--clr-accent);
+    border-bottom:1px solid var(--clr-accent);
+  }
+  footer {
+    background:var(--clr-secondary);
+    color:#fff;
+    text-align:center;
+    padding:1rem;
+    font-size:.85rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background:#1e1e1e; color:#e0e0e0; }
+    header, footer { background:#333; }
+    .card { background:#2a2a2a; }
+    .card header { background:#27ae60; }
+    .card .content a { color:#27ae60; border-color:#27ae60; }
+  }
 </style>
 </head>
 <body>
-<nav>
-    <a href="#ai">AI & ML</a>
-    <a href="#quantum">Quantum Computing</a>
-    <a href="#renewable">Renewable Energy</a>
-    <a href="#biotech">Biotechnology</a>
-    <a href="#robotics">Robotics</a>
-    <a href="#space">Space Tech</a>
-</nav>
 
 <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <p>Exploring the most impactful innovations shaping our future.</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Explore the frontiers that are reshaping our world</p>
 </header>
 
-<section id="ai" class="grid">
-    <article>
-        <h2>AI & Machine Learning</h2>
-        <p>Recent advances in generative AI have pushed the boundaries of natural language understanding, multimodal reasoning, and real‑time interaction.</p>
-        <ul>
-            <li>GPT‑5 (2024): 1‑trillion‑parameter model with improved context retention and fine‑tuning via reinforcement learning from human feedback (RLHF).</li>
-            <li>Diffusion models for 3‑D rendering: Real‑time photorealistic scene generation from text prompts.</li>
-            <li>Edge‑AI chips: 2024 silicon AI accelerators enabling on‑device inference with < 0.5 ms latency.</li>
-        </ul>
-    </article>
+<div class="container">
 
-    <article>
-        <h2>Quantum Computing</h2>
-        <p>Quantum processors are moving from experimental prototypes to more scalable, error‑corrected systems.</p>
-        <ul>
-            <li>Fault‑tolerant qubit arrays: 100‑qubit surface code demonstrated by Google (2024).</li>
-            <li>Room‑temperature qubits: 2023 breakthrough using silicon carbide and spin‑photon coupling.</li>
-            <li>Quantum internet testbed: Multi‑link entanglement distribution over 200 km optical fiber in Switzerland.</li>
-        </ul>
-    </article>
+  <!-- AI & Machine Learning -->
+  <article class="card">
+    <header>Artificial Intelligence</header>
+    <div class="content">
+      <p>Generative models like GPT‑4.5 and diffusion-based image synthesis now produce near‑human quality content across text, audio, and visual modalities.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </article>
 
-    <article>
-        <h2>Renewable Energy</h2>
-        <p>Advances in materials and storage are accelerating the transition to a low‑carbon grid.</p>
-        <ul>
-            <li>Perovskite‑silicon tandem cells: >28% efficiency, commercial pilot plants in 2024.</li>
-            <li>Solid‑state batteries: 2024 prototype with 300 Wh/kg energy density and <10 min full recharge.</li>
-            <li>High‑efficiency wind turbines: 12 MW offshore design with floating foundations.</li>
-        </ul>
-    </article>
-</section>
+  <!-- Quantum Computing -->
+  <article class="card">
+    <header>Quantum Computing</header>
+    <div class="content">
+      <p>IBM and Google report qubits exceeding 1,000 with error‑corrected gates, bringing practical, fault‑tolerant quantum processors within a decade.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </article>
 
-<section id="biotech" class="grid">
-    <article>
-        <h2>Biotechnology</h2>
-        <p>Genomic editing, organoid tech, and protein engineering are reshaping medicine.</p>
-        <ul>
-            <li>CRISPR‑Cas13-based antiviral therapy for SARS‑CoV‑2 variants.</li>
-            <li>Organoid bioprinting: Human heart tissues grown for drug screening.</li>
-            <li>Deep‑learning protein design: New enzymes with 10× catalytic efficiency.</li>
-        </ul>
-    </article>
+  <!-- Biotechnology -->
+  <article class="card">
+    <header>Biotechnology</header>
+    <div class="content">
+      <p>CRISPR‑Cas13 and prime editing allow precise RNA editing, enabling therapies for genetic disorders with minimal off‑target effects.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </article>
 
-    <article>
-        <h2>Robotics & Automation</h2>
-        <p>Robots are becoming more adaptable, safe, and capable of complex tasks.</p>
-        <ul>
-            <li>Boston Dynamics Atlas 3.0: Fully autonomous navigation on uneven terrain.</li>
-            <li>Soft‑robotic grippers: Biomimetic design for delicate medical manipulation.</li>
-            <li>AI‑driven warehouse systems: 25% reduction in order‑to‑ship time.</li>
-        </ul>
-    </article>
+  <!-- Energy & Sustainability -->
+  <article class="card">
+    <header>Energy & Sustainability</header>
+    <div class="content">
+      <p>Perovskite solar cells now exceed 26% efficiency with 10‑year stability, while solid‑state batteries achieve >600 Wh/kg energy density.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </article>
 
-    <article>
-        <h2>Space Technology</h2>
-        <p>New propulsion, telescopes, and planetary missions push the boundaries of exploration.</p>
-        <ul>
-            <li>Next‑generation ion drive: 2024 Orion X engine with 10 kW power, enabling interplanetary cargo missions.</li>
-            <li>James Webb successor: 2025 launch of a 25 m telescope in L2 orbit.</li>
-            <li>Artemis lunar habitat: Modular, 2026, with in‑situ resource utilization.</li>
-        </ul>
-    </article>
-</section>
+  <!-- IoT & Edge Computing -->
+  <article class="card">
+    <header>Internet of Things</header>
+    <div class="content">
+      <p>Edge AI chips deliver real‑time analytics on billions of connected devices, reducing latency and bandwidth usage.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </article>
+
+  <!-- 6G & Connectivity -->
+  <article class="card">
+    <header>6G & Connectivity</header>
+    <div class="content">
+      <p>Terahertz frequency bands and holographic beamforming are paving the way for gigabit‑per‑second links, enabling ultra‑low latency VR and autonomous vehicles.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </article>
+
+</div>
 
 <footer>
-    <p>© 2026 Tech Insights. All rights reserved.</p>
-</footer
+  &copy; 2026 Tech Insights. All rights reserved.
+</footer>
+
+</body>
+</html>
