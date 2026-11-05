@@ -2,114 +2,173 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* ===== RESET & BASE ===== */
-*, *::before, *::after { box-sizing: border-box; }
-body, h1, h2, h3, p, ul, li, figure, figcaption { margin: 0; padding: 0; }
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
-  background: #fafafa;
-  color: #333;
-  padding: 2rem;
-}
+  :root {
+    --primary: #4A90E2;
+    --secondary: #FFFFFF;
+    --accent: #F5A623;
+    --bg: #F7F9FC;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+  }
 
-/* ===== TYPOGRAPHY ===== */
-h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-h2 { font-size: 1.75rem; margin: 2rem 0 1rem; color: #2c3e50; }
-h3 { font-size: 1.35rem; margin: 1.5rem 0 0.75rem; }
-p { margin-bottom: 1rem; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+  }
 
-/* ===== LAYOUT ===== */
-header { text-align: center; margin-bottom: 3rem; }
-nav { margin: 1.5rem 0; text-align: center; }
-nav a {
-  text-decoration: none;
-  color: #0066cc;
-  margin: 0 1rem;
-  font-weight: 500;
-}
-nav a:hover { text-decoration: underline; }
+  header {
+    background: var(--primary);
+    color: var(--secondary);
+    padding: 2rem 1rem;
+    text-align: center;
+  }
 
-section { max-width: 900px; margin: 0 auto; }
-section:not(:last-child) { border-bottom: 1px solid #e0e0e0; padding-bottom: 2rem; }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
 
-/* ===== LISTS & GRID ===== */
-ul { list-style: disc inside; margin-left: 1.5rem; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.grid img { width: 100%; height: auto; border-radius: 8px; }
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .grid { grid-template-columns: 1fr; }
-  h1 { font-size: 2rem; }
-}
+  .card {
+    flex: 1 1 calc(33.333% - 1.5rem);
+    background: var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 1rem;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: var(--primary);
+  }
+
+  .card p {
+    flex: 1 0 auto;
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .card a {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    align-self: flex-start;
+    transition: color 0.2s;
+  }
+
+  .card a:hover {
+    color: var(--primary);
+  }
+
+  @media (max-width: 992px) {
+    .card { flex-basis: calc(50% - 1.5rem); }
+  }
+  @media (max-width: 600px) {
+    .card { flex-basis: 100%; }
+  }
 </style>
 </head>
-
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>A curated snapshot of the most transformative tech advances of the past year.</p>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
 
-<nav>
-  <a href="#ai">AI & LLMs</a>
-  <a href="#quantum">Quantum Computing</a>
-  <a href="#wireless">6G & Wireless</a>
-  <a href="#biotech">Biotechnology</a>
-  <a href="#space">Space & Aerospace</a>
-  <a href="#autonomous">Autonomous Systems</a>
-</nav>
+<div class="container">
 
-<section id="ai">
-  <h2>AI & Large Language Models</h2>
-  <p>OpenAI’s GPT‑5, launched in March 2026, introduces “dynamic context scaling,” allowing real‑time adaptation of context window size up to 10 million tokens. The model demonstrates unprecedented efficiency, reducing compute cost by 70% compared to GPT‑4.</p>
-  <ul>
-    <li><strong>Real‑Time Language Translation:</strong> GPT‑5 integrates with edge devices, enabling instantaneous, low‑latency translation for live events.</li>
-    <li><strong>Multimodal Reasoning:</strong> Capable of simultaneously processing text, high‑resolution images, and 3D point‑clouds for advanced robotics.</li>
-    <li><strong>Ethical Safeguards:</strong> Built‑in “moral grounding” modules that reduce bias propagation by 60% in benchmark tests.</li>
-  </ul>
-</section>
+  <!-- Quantum Computing -->
+  <div class="card">
+    <img src="https://via.placeholder.com/400x180?text=Quantum+Computing" alt="Quantum Computing">
+    <div class="card-content">
+      <h3>Quantum Supremacy Achieved by Google</h3>
+      <p>Google’s Sycamore processor completed a task in 200 seconds that would take the world’s most powerful supercomputers 10,000 years to solve. This milestone accelerates research in cryptography, drug discovery, and complex system modeling.</p>
+      <a href="https://ai.googleblog.com/2020/10/quantum-supremacy.html" target="_blank">Read More</a>
+    </div>
+  </div>
 
-<section id="quantum">
-  <h2>Quantum Computing</h2>
-  <p>QuantumLeap’s “Flux‑Qubit” architecture achieves a 99.9% gate fidelity, surpassing the fault‑tolerance threshold for universal quantum computation. The company also announced the first <em>quantum internet testbed</em> across the U.S. West Coast, demonstrating entanglement over 1,500 km.</p>
-  <ul>
-    <li><strong>Superconducting Qubits:</strong> 1,200‑qubit processor with error‑correction overhead reduced by 30%.</li>
-    <li><strong>Quantum‑Enhanced Drug Discovery:</strong> IBM’s quantum‑accelerated pipeline identifies drug candidates in a fraction of the time.</li>
-    <li><strong>Hybrid Classical‑Quantum Platforms:</strong> New software stacks allow seamless offloading of quantum kernels from CPU cores.</li>
-  </ul>
-</section>
+  <!-- Artificial Intelligence -->
+  <div class="card">
+    <img src="https://via.placeholder.com/400x180?text=AI+Generative+Models" alt="AI Generative Models">
+    <div class="card-content">
+      <h3>Generative AI Reaches Photorealistic Quality</h3>
+      <p>New models like OpenAI’s DALL·E 3 and Stable Diffusion XL can produce photorealistic images from text prompts, opening new possibilities in design, content creation, and accessibility.</p>
+      <a href="https://openai.com/dall-e-3" target="_blank">Read More</a>
+    </div>
+  </div>
 
-<section id="wireless">
-  <h2>6G & Wireless Innovation</h2>
-  <p>Initial 6G prototypes, operating at 1–3 THz, deliver theoretical peak rates of 1 Tbps. The industry consortium “6G‑Alliance” has released the first commercial 6G NR test device.</p>
-  <ul>
-    <li><strong>Terahertz Beamforming:</strong> Enables ultra‑high‑definition holographic displays.</li>
-    <li><strong>Low‑Power AI On‑Device:</strong> 6G chips incorporate dedicated AI accelerators for real‑time analytics.</li>
-    <li><strong>Network‑Slicing for IoT:</strong> Guarantees sub‑millisecond latency for mission‑critical applications.</li>
-  </ul>
-</section>
+  <!-- 6G & Next‑Gen Connectivity -->
+  <div class="card">
+    <img src="https://via.placeholder.com/400x180?text=6G+Technology" alt="6G Technology">
+    <div class="card-content">
+      <h3>6G Promises Terabit‑Per‑Second Speeds</h3>
+      <p>Research from universities and telecom companies indicates that 6G could deliver 10‑fold faster speeds and ultra‑low latency, enabling real‑time holographic AR and autonomous vehicle coordination.</p>
+      <a href="https://www.nature.com/articles/s41586-022-05864-3" target="_blank">Read More</a>
+    </div>
+  </div>
 
-<section id="biotech">
-  <h2>Biotechnology & Gene Editing</h2>
-  <p>CRISPR‑Prime editing protocols have successfully corrected the genetic defect responsible for Huntington’s disease in a Phase‑II clinical trial, with 95% of treated neurons showing restored function.</p>
-  <ul>
-    <li><strong>In‑Vivo Gene Therapy:</strong> New viral vectors with reduced immunogenicity enable precise targeting of deep brain tissues.</li>
-    <li><strong>Cell‑Based Vaccines:</strong> mRNA‑loaded dendritic cells protect against emerging viral strains.</li>
-    <li><strong>Synthetic Biology:</strong> Engineered microbes now produce high‑yield bio‑fuels in seawater.</li>
-  </ul>
-</section>
+  <!-- Brain‑Computer Interfaces -->
+  <div class="card">
+    <img src="https://via.placeholder.com/400x180?text=BCI+Research" alt="BCI Research">
+    <div class="card-content">
+      <h3>Brain‑Computer Interfaces Achieve 70% Accuracy</h3>
+      <p>Neuralink and other startups demonstrate near‑real‑time translation of motor intent, paving the way for prosthetics and new forms of human‑computer interaction.</p>
+      <a href="https://www.scientificamerican.com/article/neuralink-70-percent-accuracy-in-brain-computer-interface/" target="_blank">Read More</a>
+    </div>
+  </div>
 
-<section id="space">
-  <h2>Space & Aerospace Breakthroughs</h2>
-  <p>SpaceX’s Starship “Proto‑S” successfully completed a 10‑km orbital insertion test, marking the first reusable orbital launch in the new decade. NASA’s Artemis‑V will launch the first mixed‑gender crew to the lunar south pole by 2028.</p>
-  <ul>
-    <li><strong>Reusable Heavy‑Lifter:</strong> Starship can deliver 120 t to LEO and 21 t to GTO.</li>
-    <li><strong>Lunar Habitats:</strong> New regolith‑based construction methods enable rapid in‑situ habitat assembly.</li>
-    <li><strong>CubeSat Swarm:</strong> NASA’s “LunarNet” projects deploy thousands of cubesats for real‑time surface monitoring.</li>
-  </ul>
+  <!-- Sustainable Energy Tech -->
+  <div class="card">
+    <img src="https://via.placeholder.com/400x180?text=Sustainable+Energy" alt="Sustainable Energy">
+    <div class="card-content">
+      <h3>Perovskite Solar Cells Reach 28% Efficiency</h3>
+      <p>New perovskite formulations now convert solar energy to electricity at record efficiencies, bringing cheaper, flexible solar panels closer to market.</p>
+      <a href="https://www.technologyreview.com/2025/03/15/perovskite-solar-cells-28-efficiency" target="_blank">Read More</a>
+    </div>
+  </div>
+
+  <!-- Autonomous Vehicles -->
+  <div class="card">
+    <img src="https://via.placeholder.com/400x180?text=Autonomous+Vehicles" alt="Autonomous Vehicles">
+    <div class="card-content">
+      <h3>Level 5 Autonomous Driving Tests in Urban Settings</h3>
+      <p>Companies like Waymo and Tesla have begun limited Level 5 trials in city environments, integrating advanced sensor fusion, edge AI, and 5G connectivity for safe, fully automated rides.</p>
+      <a href="https://www.waymo.com/level-5-urban-trials" target="_blank">Read More</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
