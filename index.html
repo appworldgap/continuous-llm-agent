@@ -3,172 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  /* Root Variables */
   :root {
-    --primary: #4A90E2;
-    --secondary: #FFFFFF;
-    --accent: #F5A623;
-    --bg: #F7F9FC;
-    --text-primary: #333333;
-    --text-secondary: #666666;
+    --primary: #0052D4;
+    --secondary: #3A7BD5;
+    --bg: #f9f9f9;
+    --card-bg: #fff;
+    --text-dark: #333;
+    --text-light: #666;
+    --border-radius: 12px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-
+  * { box-sizing: border-box; margin:0; padding:0; }
   body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--bg);
-    color: var(--text-primary);
+    color: var(--text-dark);
+    line-height: 1.6;
   }
-
   header {
-    background: var(--primary);
-    color: var(--secondary);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color:#fff;
     padding: 2rem 1rem;
-    text-align: center;
+    text-align:center;
   }
-
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 700;
+  header h1 { font-size:2.5rem; margin-bottom:0.5rem;}
+  header p { font-size:1.1rem; opacity:0.9;}
+  nav {
+    background:#fff;
+    padding: 0.5rem 1rem;
+    box-shadow: var(--shadow);
+    position:sticky; top:0; z-index:10;
   }
-
-  .container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-
+  nav ul { list-style:none; display:flex; justify-content:center; gap:1rem; }
+  nav a { text-decoration:none; color:var(--primary); font-weight:600;}
+  main { padding:1rem; max-width:1200px; margin:auto;}
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem;}
   .card {
-    flex: 1 1 calc(33.333% - 1.5rem);
-    background: var(--secondary);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    background:var(--card-bg);
+    border-radius:var(--border-radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    transition:transform 0.3s ease;
   }
-
-  .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-
-  .card-content {
-    padding: 1rem;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
-    color: var(--primary);
-  }
-
-  .card p {
-    flex: 1 0 auto;
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-
-  .card a {
-    margin-top: 1rem;
-    text-decoration: none;
-    color: var(--accent);
-    font-weight: 600;
-    align-self: flex-start;
-    transition: color 0.2s;
-  }
-
-  .card a:hover {
-    color: var(--primary);
-  }
-
-  @media (max-width: 992px) {
-    .card { flex-basis: calc(50% - 1.5rem); }
-  }
-  @media (max-width: 600px) {
-    .card { flex-basis: 100%; }
+  .card:hover { transform:translateY(-5px);}
+  .card img { width:100%; height:160px; object-fit:cover;}
+  .card-body { padding:1rem;}
+  .card-title { font-size:1.4rem; margin-bottom:0.5rem; color:var(--primary);}
+  .card-desc { font-size:0.95rem; color:var(--text-light);}
+  footer { text-align:center; padding:1rem; color:var(--text-light); font-size:0.9rem;}
+  @media (max-width:600px) {
+    header h1 {font-size:2rem;}
+    nav ul {flex-direction:column;}
   }
 </style>
 </head>
 <body>
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to quantum computing—discover the innovations shaping tomorrow.</p>
 </header>
+<nav>
+  <ul>
+    <li><a href="#ai">AI</a></li>
+    <li><a href="#quantum">Quantum</a></li>
+    <li><a href="#bio">Biotech</a></li>
+    <li><a href="#robotics">Robotics</a></li>
+    <li><a href="#energy">Energy</a></li>
+  </ul>
+</nav>
+<main>
+  <section id="ai" class="grid">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1604148637980-5c6c4c9d8e5d" alt="AI Research">
+      <div class="card-body">
+        <h2 class="card-title">Generative AI 2.0</h2>
+        <p class="card-desc">
+          Models now produce multimodal content—text, audio, video—directly from prompts, enabling new creative workflows and automation.
+        </p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1587620962725-1aeb3cbd6c9b" alt="AI Ethics">
+      <div class="card-body">
+        <h2 class="card-title">AI Ethics & Governance</h2>
+        <p class="card-desc">
+          Emerging standards and open-source toolkits are addressing bias, privacy, and accountability, making AI more trustworthy.
+        </p>
+      </div>
+    </article>
+  </section>
 
-<div class="container">
+  <section id="quantum" class="grid" style="margin-top:2rem;">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4" alt="Quantum Computers">
+      <div class="card-body">
+        <h2 class="card-title">Commercial Quantum Processors</h2>
+        <p class="card-desc">
+          Companies are releasing cloud‑access quantum chips with >50 qubits, pushing us closer to practical quantum advantage.
+        </p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1476574624820-8d1a0d3c1e33" alt="Quantum Sensors">
+      <div class="card-body">
+        <h2 class="card-title">Quantum Sensors</h2>
+        <p class="card-desc">
+          Ultra‑precise sensors are enabling breakthroughs in navigation, medical imaging, and environmental monitoring.
+        </p>
+      </div>
+    </article>
+  </section>
 
-  <!-- Quantum Computing -->
-  <div class="card">
-    <img src="https://via.placeholder.com/400x180?text=Quantum+Computing" alt="Quantum Computing">
-    <div class="card-content">
-      <h3>Quantum Supremacy Achieved by Google</h3>
-      <p>Google’s Sycamore processor completed a task in 200 seconds that would take the world’s most powerful supercomputers 10,000 years to solve. This milestone accelerates research in cryptography, drug discovery, and complex system modeling.</p>
-      <a href="https://ai.googleblog.com/2020/10/quantum-supremacy.html" target="_blank">Read More</a>
-    </div>
-  </div>
+  <section id="bio" class="grid" style="margin-top:2rem;">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1589917333718-6c0e1c7b5c3b" alt="Gene Editing">
+      <div class="card-body">
+        <h2 class="card-title">CRISPR‑X and Beyond</h2>
+        <p class="card-desc">
+          New CRISPR variants target epigenetic modifications with high precision, opening therapies for complex diseases.
+        </p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1542364366-1e3d4bfb9c7e" alt="Synthetic Biology">
+      <div class="card-body">
+        <h2 class="card-title">Synthetic Organelles</h2>
+        <p class="card-desc">
+          Engineers are building synthetic organelles to enhance cellular function, promising advances in bio‑manufacturing.
+        </p>
+      </div>
+    </article>
+  </section>
 
-  <!-- Artificial Intelligence -->
-  <div class="card">
-    <img src="https://via.placeholder.com/400x180?text=AI+Generative+Models" alt="AI Generative Models">
-    <div class="card-content">
-      <h3>Generative AI Reaches Photorealistic Quality</h3>
-      <p>New models like OpenAI’s DALL·E 3 and Stable Diffusion XL can produce photorealistic images from text prompts, opening new possibilities in design, content creation, and accessibility.</p>
-      <a href="https://openai.com/dall-e-3" target="_blank">Read More</a>
-    </div>
-  </div>
+  <section id="robotics" class="grid" style="margin-top:2rem;">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1580903451062-9e8f0c5a3b98" alt="Soft Robotics">
+      <div class="card-body">
+        <h2 class="card-title">Soft Robotics</h2>
+        <p class="card-desc">
+          Elastomeric actuators mimic biological movement, leading to safer human‑robot collaboration.
+        </p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1617194157466-4d3e7c6a6d92" alt="Autonomous Vehicles">
+      <div class="card-body">
+        <h2 class="card-title">AI‑Driven Mobility</h2>
+        <p class="card-desc">
+          Advanced sensor fusion and edge computing enable reliable autonomous driving in complex urban scenarios.
+        </p>
+      </div>
+    </article>
+  </section>
 
-  <!-- 6G & Next‑Gen Connectivity -->
-  <div class="card">
-    <img src="https://via.placeholder.com/400x180?text=6G+Technology" alt="6G Technology">
-    <div class="card-content">
-      <h3>6G Promises Terabit‑Per‑Second Speeds</h3>
-      <p>Research from universities and telecom companies indicates that 6G could deliver 10‑fold faster speeds and ultra‑low latency, enabling real‑time holographic AR and autonomous vehicle coordination.</p>
-      <a href="https://www.nature.com/articles/s41586-022-05864-3" target="_blank">Read More</a>
-    </div>
-  </div>
-
-  <!-- Brain‑Computer Interfaces -->
-  <div class="card">
-    <img src="https://via.placeholder.com/400x180?text=BCI+Research" alt="BCI Research">
-    <div class="card-content">
-      <h3>Brain‑Computer Interfaces Achieve 70% Accuracy</h3>
-      <p>Neuralink and other startups demonstrate near‑real‑time translation of motor intent, paving the way for prosthetics and new forms of human‑computer interaction.</p>
-      <a href="https://www.scientificamerican.com/article/neuralink-70-percent-accuracy-in-brain-computer-interface/" target="_blank">Read More</a>
-    </div>
-  </div>
-
-  <!-- Sustainable Energy Tech -->
-  <div class="card">
-    <img src="https://via.placeholder.com/400x180?text=Sustainable+Energy" alt="Sustainable Energy">
-    <div class="card-content">
-      <h3>Perovskite Solar Cells Reach 28% Efficiency</h3>
-      <p>New perovskite formulations now convert solar energy to electricity at record efficiencies, bringing cheaper, flexible solar panels closer to market.</p>
-      <a href="https://www.technologyreview.com/2025/03/15/perovskite-solar-cells-28-efficiency" target="_blank">Read More</a>
-    </div>
-  </div>
-
-  <!-- Autonomous Vehicles -->
-  <div class="card">
-    <img src="https://via.placeholder.com/400x180?text=Autonomous+Vehicles" alt="Autonomous Vehicles">
-    <div class="card-content">
-      <h3>Level 5 Autonomous Driving Tests in Urban Settings</h3>
-      <p>Companies like Waymo and Tesla have begun limited Level 5 trials in city environments, integrating advanced sensor fusion, edge AI, and 5G connectivity for safe, fully automated rides.</p>
-      <a href="https://www.waymo.com/level-5-urban-trials" target="_blank">Read More</a>
-    </div>
-  </div>
-
-</div>
-</body>
-</html>
+  <section id="energy" class="grid" style="margin-top:2rem;">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1519914450342-2a6c4d6f5e19" alt="Solar Tech">
+      <div class="card-body">
+        <h2 class="card-title">Perovskite Solar Cells</h2>
+        <p class="card-desc">
+          Breakthrough efficiencies above 26% bring perovskite photovoltaics closer to commercial viability.
+        </p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0
