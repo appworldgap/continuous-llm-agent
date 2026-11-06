@@ -2,162 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary: #1e90ff;
-    --secondary: #ff6b6b;
-    --bg: #fafafa;
-    --text: #333;
-    --accent: #4caf50;
-    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: var(--font-sans);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    position: relative;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: -1px;
-  }
-  nav {
-    margin-top: 1rem;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: 600;
-    transition: color .3s;
-  }
-  nav a:hover { color: var(--accent); }
-
-  main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  article {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.05);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  article img { width: 100%; height: 160px; object-fit: cover; }
-  article .content { padding: 1rem; flex: 1; }
-  article h2 { margin-top: 0; font-size: 1.25rem; color: var(--primary); }
-  article p { margin: .75rem 0; }
-  article a { color: var(--accent); text-decoration: none; font-weight: 500; }
-  article a:hover { text-decoration: underline; }
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: var(--primary);
-    color: white;
-    font-size: 0.9rem;
-  }
-  @media (max-width: 600px) {
-    header h1 { font-size: 1.8rem; }
-    nav a { display: block; margin: .5rem 0; }
-  }
-</style>
-</head>
-<body>
-<header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">AI</a>
-    <a href="#">Quantum</a>
-    <a href="#">Energy</a>
-    <a href="#">Biotech</a>
-  </nav>
-</header>
-
-<main>
-  <section>
-    <h2>Featured Innovations</h2>
-    <div class="grid">
-      <article>
-        <img src="https://picsum.photos/id/1023/400/250" alt="AI model">
-        <div class="content">
-          <h2>Artificial General Intelligence (AGI) Prototype</h2>
-          <p>Researchers at MIT unveiled a prototype that demonstrates self‑learning across multiple domains, a pivotal step toward true AGI.</p>
-          <a href="https://news.example.com/agi-prototype" target="_blank">Read more</a>
-        </div>
-      </article>
-      <article>
-        <img src="https://picsum.photos/id/1005/400/250" alt="Quantum chip">
-        <div class="content">
-          <h2>Fault‑Tolerant Quantum Processor</h2>
-          <p>A new quantum chip with 200 logical qubits has achieved error rates below the fault‑tolerant threshold, enabling scalable quantum computing.</p>
-          <a href="https://news.example.com/quantum-chip" target="_blank">Read more</a>
-        </div>
-      </article>
-      <article>
-        <img src="https://picsum.photos/id/1031/400/250" alt="Solar cell">
-        <div class="content">
-          <h2>Next‑Gen Perovskite Solar Cells</h2>
-          <p>Perovskite cells now reach 29% efficiency, surpassing silicon in lab settings and promising cheaper, high‑yield panels.</p>
-          <a href="https://news.example.com/perovskite-solar" target="_blank">Read more</a>
-        </div>
-      </article>
-      <article>
-        <img src="https://picsum.photos/id/1042/400/250" alt="CRISPR editing">
-        <div class="content">
-          <h2>CRISPR Base Editing in Livestock</h2>
-          <p>Gene‑edited pigs show resistance to porcine reproductive and respiratory syndrome (PRRS), reducing economic losses in swine farms.</p>
-          <a href="https://news.example.com/crispr-livestock" target="_blank">Read more</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section style="margin-top: 3rem;">
-    <h2>In Depth</h2>
-    <div class="grid">
-      <article>
-        <img src="https://picsum.photos/id/1050/400/250" alt="AI ethics">
-        <div class="content">
-          <h2>Ethical AI Governance</h2>
-          <p>Governments and industry are collaborating to create transparent AI frameworks that prioritize fairness and accountability.</p>
-          <a href="https://news.example.com/ethical-ai" target="_blank">Read more</a>
-        </div>
-      </article>
-      <article>
-        <img src="https://picsum.photos/id/1067/400/250" alt="Battery technology">
-        <div class="content">
-          <h2>Solid‑State Batteries for Electric Vehicles</h2>
-          <p>Solid‑state batteries promise higher energy density and faster charging times, potentially accelerating EV adoption.</p>
-          <a href="https://news.example.com/solid-state-batteries" target="_blank">Read more</a>
-        </div>
-      </article>
-      <article>
-        <img src="https://picsum.photos/id/1079/400/250" alt="5G satellites">
-        <div class="content">
-          <h2>Global 5G Satellite Constellation</h2>
-          <p>A new constellation of low‑Earth‑orbit satellites will deliver high‑speed connectivity to remote and underserved regions worldwide.</p>
-          <a href="https://news.example.com/5g-satellites" target="_blank">Read more</a>
-        </div>
-      </article>
-    </div>
-  </section>
-</main>
-
-<footer>
-  &copy; 2026 Tech Insights. All rights reserved.
-</footer>
-</body>
-</html>
+    body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;margin:0;padding:0;color:#333;}
+    header{background:#2c3e50;color:white;padding:2rem 1rem;text-align:center;}
+    header h1{margin:0;font-size:2.5rem;}
+    header p{margin-top:.5rem;font-size:1.2rem;}
+    .container{max-width:1200px;margin:auto;padding:2rem;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+    .card{background:white;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s;}
+    .card:hover{transform:translateY(-4px);}
+    .card img{width:100%;height:160px;object-fit:cover;}
+    .card-body{padding:1rem;flex-grow:1;}
+    .card-title{font-size:1.2rem;margin:0 0 .5rem;}
+    .card-text{font-size:.95rem;margin:0 0 1rem;}
+    .card-link{color:#1e88e5;text-decoration:none;font-weight:600;}
+    .card-link:hover{text
