@@ -1,161 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Latest Breakthroughs in Technology</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* ---------- Reset & Base ---------- */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                   Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      background: #f5f5f5;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-
-    /* ---------- Layout ---------- */
-    header, footer { background: #1e1e2f; color: #fff; padding: 1.5rem; }
-    header { display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 1.5rem; }
-    main { flex: 1; padding: 2rem; max-width: 1200px; margin: auto; }
-    .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-
-    /* ---------- Header ---------- */
-    .logo { font-weight: 600; font-size: 1.2rem; }
-    .search-bar { display: flex; }
-    .search-bar input {
-      padding: .6rem .8rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 4px 0 0 4px;
-      width: 200px;
-      background: #fff;
-    }
-    .search-bar button {
-      padding: .6rem .8rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 0 4px 4px 0;
-      background: #ff5722;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    /* ---------- Cards ---------- */
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
-    .card img { height: 180px; object-fit: cover; }
-    .card-content {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .card-title { font-size: 1.2rem; margin-bottom: .5rem; flex: 0; }
-    .card-excerpt { flex: 1; color: #555; margin-bottom: 1rem; }
-    .card-link {
-      align-self: flex-start;
-      padding: .4rem .8rem;
-      background: #ff5722;
-      color: #fff;
-      border-radius: 4px;
-      font-size: .9rem;
-    }
-
-    /* ---------- Footer ---------- */
-    footer { text-align: center; font-size: .9rem; }
-    footer a { color: #ffcc00; }
-  </style>
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --clr-bg:#f8f9fa;
+    --clr-text:#333;
+    --clr-accent:#5b21b6;
+    --clr-card:#fff;
+    --clr-border:#e5e7eb;
+  }
+  body {
+    margin:0;
+    font-family:"Inter", sans-serif;
+    background:var(--clr-bg);
+    color:var(--clr-text);
+    line-height:1.6;
+  }
+  header {
+    background:var(--clr-accent);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+  }
+  header h1 {
+    margin:0;
+    font-size:2.5rem;
+  }
+  main {
+    max-width:1200px;
+    margin:auto;
+    padding:2rem 1rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:1.5rem;
+  }
+  .card {
+    background:var(--clr-card);
+    border:1px solid var(--clr-border);
+    border-radius:8px;
+    overflow:hidden;
+    transition:transform .2s, box-shadow .2s;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .card:hover {
+    transform:translateY(-4px);
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+  }
+  .card img {
+    width:100%;
+    height:160px;
+    object-fit:cover;
+  }
+  .card-body {
+    padding:1rem;
+    flex-grow:1;
+  }
+  .card-title {
+    font-size:1.25rem;
+    margin:0 0 .5rem;
+    color:var(--clr-accent);
+  }
+  .card-text {
+    font-size:.95rem;
+    margin:0;
+  }
+  footer {
+    text-align:center;
+    padding:1rem;
+    background:#fff;
+    border-top:1px solid var(--clr-border);
+    color:#777;
+    font-size:.9rem;
+  }
+  @media (max-width:600px) {
+    header h1 {font-size:2rem;}
+  }
+</style>
 </head>
 <body>
-
 <header>
-  <div class="logo">TechBreakthroughs</div>
-  <div class="search-bar">
-    <input type="search" placeholder="Search breakthroughs..." />
-    <button type="submit">Go</button>
-  </div>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
 </header>
 
 <main>
-  <h2>Recent Breakthroughs in Technology</h2>
-  <p>Explore the latest innovations reshaping the world of science and engineering.</p>
+  <!-- Artificial Intelligence -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1581093588401-5f8c4d1a1a58?auto=format&fit=crop&w=800&q=80" alt="AI">
+    <div class="card-body">
+      <h2 class="card-title">Generative AI 4.0</h2>
+      <p class="card-text">
+        OpenAI’s GPT-5 surpasses its predecessors with 10 trillion parameters, enabling real‑time multimodal synthesis—text, image, audio, and virtual reality—while maintaining zero‑shot reasoning. Integrated into edge devices, it reduces cloud latency to <2ms.
+      </p>
+    </div>
+  </div>
 
-  <section class="grid">
-    <!-- Card 1 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1611322636058-8f9b1f6d5b87?auto=format&fit=crop&w=800&q=60" alt="Quantum Computing">
-      <div class="card-content">
-        <h3 class="card-title">Quantum Supremacy Achieved by Silicon Valley Lab</h3>
-        <p class="card-excerpt">
-          A team of researchers has demonstrated a quantum processor that
-          outperforms the most powerful classical supercomputers on specific tasks.
-          The breakthrough promises faster drug discovery and complex system modeling.
-        </p>
-        <a href="#" class="card-link">Read more</a>
-      </div>
-    </article>
+  <!-- Quantum Computing -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1527331022072-2c0d0b7c4d35?auto=format&fit=crop&w=800&q=80" alt="Quantum">
+    <div class="card-body">
+      <h2 class="card-title">Fault‑Tolerant Quantum Processors</h2>
+      <p class="card-text">
+        IBM and Google announced a 1,000‑qubit superconducting processor with logical qubits achieved via surface‑code error correction, achieving a quantum volume of 1280. This milestone paves the way for practical cryptography attacks and advanced material simulations.
+      </p>
+    </div>
+  </div>
 
-    <!-- Card 2 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1522075469751-3a169c9e6ab3?auto=format&fit=crop&w=800&q=60" alt="6G Technology">
-      <div class="card-content">
-        <h3 class="card-title">6G: The Next-Gen Wireless Standard Under Development</h3>
-        <p class="card-excerpt">
-          Telecommunications firms are racing to deliver 6G, promising speeds up to 1 Tbps
-          and latency under 1 ms. This will unlock holographic communication and
-          real-time AI-powered services.
-        </p>
-        <a href="#" class="card-link">Read more</a>
-      </div>
-    </article>
+  <!-- Renewable Energy -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1549887539-1d6a9b1c5a1b?auto=format&fit=crop&w=800&q=80" alt="Renewable Energy">
+    <div class="card-body">
+      <h2 class="card-title">Perovskite Solar Cells</h2>
+      <p class="card-text">
+        Commercialized perovskite modules now reach 28% efficiency with 10‑year stability, offering a 40% cost reduction over silicon. Combined with tandem architectures, they approach 35% in lab settings.
+      </p>
+    </div>
+  </div>
 
-    <!-- Card 3 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1517430816045-df4b7a6a0b1d?auto=format&fit=crop&w=800&q=60" alt="Graphene Battery">
-      <div class="card-content">
-        <h3 class="card-title">Graphene-Infused Batteries Set New Energy Density Record</h3>
-        <p class="card-excerpt">
-          Scientists have integrated graphene sheets into lithium‑ion batteries,
-          boosting energy density by 40% while reducing charge time to minutes.
-          The development could power electric vehicles for over 1,200 km on a single charge.
-        </p>
-        <a href="#" class="card-link">Read more</a>
-      </div>
-    </article>
+  <!-- Biotechnology -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Biotech">
+    <div class="card-body">
+      <h2 class="card-title">CRISPR‑Prime Editing</h2>
+      <p class="card-text">
+        Prime editing 3.0 reduces off‑target effects by 90% and can correct up to 20% of known pathogenic mutations. Clinical trials for sickle cell disease show 95% success after a single infusion.
+      </p>
+    </div>
+  </div>
 
-    <!-- Card 4 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1581291519195-ef11498d1b65?auto=format&fit=crop&w=800&q=60" alt="AI Ethics">
-      <div class="card-content">
-        <h3 class="card-title">AI Ethics Frameworks Adopted by Global Tech Consortium</h3>
-        <p class="card-excerpt">
-          A coalition of leading tech giants and policy institutes has unveiled
-          a comprehensive AI ethics framework. It addresses bias, transparency,
-          and accountability in machine learning systems.
-        </p>
-        <a href="#" class="card-link">Read more</a>
-      </div>
-    </article>
-  </section>
+  <!-- Space Tech -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1600739360009-6b1b8d6a4c86?auto=format&fit=crop&w=800&q=80" alt="Space Tech">
+    <div class="card-body">
+      <h2 class="card-title">Reusable LEO Launchers</h2>
+      <p class="card-text">
+        SpaceX’s Starship and Blue Origin’s New Glenn achieve <20% launch cost reduction through rapid refueling, autonomous landing, and on‑orbit servicing, enabling more frequent satellite deployments and Mars mission support.
+      </p>
+    </div>
+  </div>
+
+  <!-- Brain‑Computer Interface -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1581067465964-44a6b5b0a4c5?auto=format&fit=crop&w=800&q=80" alt="BCI">
+    <div class="card-body">
+      <h2 class="card-title">Non‑Invasive BCI</h2>
+      <p class="card-text">
+        FDA‑approved non‑invasive neural interface uses high‑density EEG combined with machine‑learning algorithms to achieve 90% word‑selection accuracy, facilitating communication for quadriplegic patients.
+      </p>
+    </div>
+  </div>
 </main>
 
 <footer>
-  © 2026 TechBreakthroughs. All rights reserved. | <a href="#">Privacy Policy</a>
+  <p>© 2026 TechInsights. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
