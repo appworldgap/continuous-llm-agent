@@ -2,162 +2,109 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --clr-bg:#f8f9fa;
-    --clr-text:#333;
-    --clr-accent:#5b21b6;
-    --clr-card:#fff;
-    --clr-border:#e5e7eb;
+    --bg: #121212;
+    --text: #e0e0e0;
+    --accent: #bb86fc;
+    --accent-dark: #7e57c2;
+    --card-bg: #1e1e1e;
+    --card-shadow: 0 4px 12px rgba(0,0,0,.6);
   }
   body {
     margin:0;
-    font-family:"Inter", sans-serif;
-    background:var(--clr-bg);
-    color:var(--clr-text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
     line-height:1.6;
   }
+  a {color:var(--accent); text-decoration:none;}
+  a:hover {text-decoration:underline;}
   header {
-    background:var(--clr-accent);
-    color:#fff;
+    background:var(--accent-dark);
     padding:2rem 1rem;
     text-align:center;
   }
   header h1 {
     margin:0;
     font-size:2.5rem;
+    color:white;
   }
   main {
     max-width:1200px;
     margin:auto;
     padding:2rem 1rem;
+  }
+  .section {
+    background:var(--card-bg);
+    padding:1.5rem;
+    margin-bottom:2rem;
+    border-radius:8px;
+    box-shadow:var(--card-shadow);
+  }
+  .section h2 {
+    margin-top:0;
+    margin-bottom:.5rem;
+    display:flex;
+    align-items:center;
+    font-size:1.75rem;
+    color:var(--accent);
+  }
+  .section h2 svg {margin-right:.5rem;}
+  .section p {margin:.5rem 0;}
+  .grid {
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:1.5rem;
+    margin-top:1rem;
   }
   .card {
-    background:var(--clr-card);
-    border:1px solid var(--clr-border);
-    border-radius:8px;
-    overflow:hidden;
-    transition:transform .2s, box-shadow .2s;
-    display:flex;
-    flex-direction:column;
-    height:100%;
-  }
-  .card:hover {
-    transform:translateY(-4px);
-    box-shadow:0 4px 12px rgba(0,0,0,.1);
-  }
-  .card img {
-    width:100%;
-    height:160px;
-    object-fit:cover;
-  }
-  .card-body {
+    background:var(--bg);
     padding:1rem;
-    flex-grow:1;
+    border-radius:6px;
+    box-shadow:0 2px 8px rgba(0,0,0,.4);
   }
-  .card-title {
-    font-size:1.25rem;
-    margin:0 0 .5rem;
-    color:var(--clr-accent);
-  }
-  .card-text {
-    font-size:.95rem;
-    margin:0;
-  }
+  .card h3 {margin-top:0;color:var(--accent);}
+  .card p {font-size:.9rem;}
   footer {
     text-align:center;
     padding:1rem;
-    background:#fff;
-    border-top:1px solid var(--clr-border);
-    color:#777;
-    font-size:.9rem;
+    font-size:.85rem;
+    color:rgba(255,255,255,.6);
   }
-  @media (max-width:600px) {
-    header h1 {font-size:2rem;}
+  @media (prefers-color-scheme: light) {
+    :root {--bg:#f5f5f5;--text:#222;--card-bg:white;}
+    header {background:#6200ee;}
+    .section h2 {color:#3700b3;}
+    .card {background:#fff;}
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
-
 <main>
-  <!-- Artificial Intelligence -->
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1581093588401-5f8c4d1a1a58?auto=format&fit=crop&w=800&q=80" alt="AI">
-    <div class="card-body">
-      <h2 class="card-title">Generative AI 4.0</h2>
-      <p class="card-text">
-        OpenAI’s GPT-5 surpasses its predecessors with 10 trillion parameters, enabling real‑time multimodal synthesis—text, image, audio, and virtual reality—while maintaining zero‑shot reasoning. Integrated into edge devices, it reduces cloud latency to <2ms.
-      </p>
+  <section class="section">
+    <h2><svg width="24" height="24" fill="currentColor"><path d="M12 2l1.09 3.46h3.63l-2.94 2.13 1.09 3.46L12 9.52l-2.94 2.13 1.09-3.46L7.27 5.46h3.63L12 2z"/></svg>Artificial Intelligence</h2>
+    <p>AI continues to reshape industries, from natural language understanding with GPT‑4.5 and Claude 3 to advanced vision models like DALL‑E 3 and Stable Diffusion XL.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Medical Diagnostics</h3>
+        <p>FDA‑approved AI systems now detect early‑stage cancers in imaging, achieving sensitivity comparable to expert radiologists.</p>
+      </div>
+      <div class="card">
+        <h3>Generative Audio</h3>
+        <p>Large language models now generate lifelike music and voice, enabling on‑device “tiny‑ML” applications for real‑time synthesis.</p>
+      </div>
+      <div class="card">
+        <h3>Edge AI Chips</h3>
+        <p>Google’s TPU‑v5E and NVIDIA’s Grace Hopper deliver 5‑fold performance per watt for inference on edge devices.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Quantum Computing -->
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1527331022072-2c0d0b7c4d35?auto=format&fit=crop&w=800&q=80" alt="Quantum">
-    <div class="card-body">
-      <h2 class="card-title">Fault‑Tolerant Quantum Processors</h2>
-      <p class="card-text">
-        IBM and Google announced a 1,000‑qubit superconducting processor with logical qubits achieved via surface‑code error correction, achieving a quantum volume of 1280. This milestone paves the way for practical cryptography attacks and advanced material simulations.
-      </p>
-    </div>
-  </div>
-
-  <!-- Renewable Energy -->
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1549887539-1d6a9b1c5a1b?auto=format&fit=crop&w=800&q=80" alt="Renewable Energy">
-    <div class="card-body">
-      <h2 class="card-title">Perovskite Solar Cells</h2>
-      <p class="card-text">
-        Commercialized perovskite modules now reach 28% efficiency with 10‑year stability, offering a 40% cost reduction over silicon. Combined with tandem architectures, they approach 35% in lab settings.
-      </p>
-    </div>
-  </div>
-
-  <!-- Biotechnology -->
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Biotech">
-    <div class="card-body">
-      <h2 class="card-title">CRISPR‑Prime Editing</h2>
-      <p class="card-text">
-        Prime editing 3.0 reduces off‑target effects by 90% and can correct up to 20% of known pathogenic mutations. Clinical trials for sickle cell disease show 95% success after a single infusion.
-      </p>
-    </div>
-  </div>
-
-  <!-- Space Tech -->
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1600739360009-6b1b8d6a4c86?auto=format&fit=crop&w=800&q=80" alt="Space Tech">
-    <div class="card-body">
-      <h2 class="card-title">Reusable LEO Launchers</h2>
-      <p class="card-text">
-        SpaceX’s Starship and Blue Origin’s New Glenn achieve <20% launch cost reduction through rapid refueling, autonomous landing, and on‑orbit servicing, enabling more frequent satellite deployments and Mars mission support.
-      </p>
-    </div>
-  </div>
-
-  <!-- Brain‑Computer Interface -->
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1581067465964-44a6b5b0a4c5?auto=format&fit=crop&w=800&q=80" alt="BCI">
-    <div class="card-body">
-      <h2 class="card-title">Non‑Invasive BCI</h2>
-      <p class="card-text">
-        FDA‑approved non‑invasive neural interface uses high‑density EEG combined with machine‑learning algorithms to achieve 90% word‑selection accuracy, facilitating communication for quadriplegic patients.
-      </p>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <p>© 2026 TechInsights. All rights reserved.</p>
-</footer>
-</body>
-</html>
+  <section class="section">
+    <h2><svg width="24" height="24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.79-9 8.5S7.03 18 12 18s9-3.79 9-8.5S16.97 3 12 3zm0 15c-3.86 0-7-3.13-7-7 0-2.42 1.26-4
