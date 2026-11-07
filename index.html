@@ -2,133 +2,159 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --primary: #0057e7;
-    --secondary: #ff6c00;
-    --accent: #4caf50;
-    --bg: #f4f7fa;
-    --text: #333;
-    --heading: #222;
-    --link: #1a73e8;
+    --bg: #1e1e2e;
+    --text: #f5f5ff;
+    --accent: #8ae0ff;
+    --card-bg: #2a2a3c;
+    --shadow: rgba(0,0,0,0.3);
+    --radius: 10px;
+    --transition: 0.3s ease;
   }
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  body, html {
+    margin:0; padding:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    scroll-behavior: smooth;
   }
   header {
-    background: var(--primary);
-    color: #fff;
-    padding: 1.5rem;
-    text-align: center;
-    font-size: 1.8rem;
+    text-align:center;
+    padding:4rem 2rem;
+    background: linear-gradient(135deg,var(--accent),#3c4a61);
+    color:#fff;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+  header h1 {
+    font-size:3rem;
+    margin:0.5rem 0;
+  }
+  header p {
+    font-size:1.2rem;
+    margin:0;
   }
   main {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 1rem;
   }
-  h2 {
-    color: var(--heading);
-    margin-bottom: 0.75rem;
-    border-bottom: 2px solid var(--secondary);
-    padding-bottom: 0.25rem;
+  .grid {
+    display:grid;
+    gap:1.5rem;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   }
-  .section {
-    margin-bottom: 2rem;
+  .card {
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    padding:1.5rem;
+    transition:transform var(--transition),box-shadow var(--transition);
+    box-shadow:0 4px 8px var(--shadow);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
   }
-  .article {
-    background: #fff;
-    border-left: 5px solid var(--accent);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  .card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 8px 16px var(--shadow);
   }
-  .article h3 {
-    margin-top: 0;
-    font-size: 1.25rem;
-    color: var(--primary);
+  .card h3 {
+    margin:0 0 0.5rem 0;
+    font-size:1.3rem;
+    color:var(--accent);
   }
-  .article p {
-    margin: 0.5rem 0;
+  .card p {
+    flex-grow:1;
+    margin:0;
   }
-  .article a {
-    color: var(--link);
-    text-decoration: none;
-    font-weight: 600;
+  .card a {
+    text-decoration:none;
+    color:var(--accent);
+    font-weight:bold;
+    margin-top:1rem;
+    align-self:flex-start;
+    transition:color var(--transition);
   }
-  .article a:hover {
-    text-decoration: underline;
-  }
+  .card a:hover { color:#fff; }
   footer {
-    text-align: center;
-    color: #777;
-    font-size: 0.9rem;
-    margin: 2rem 0 1rem;
+    text-align:center;
+    padding:2rem 0;
+    font-size:0.9rem;
+    color:#999;
   }
-  @media (max-width: 600px) {
-    header { font-size: 1.5rem; }
-    .article { padding: 0.75rem; }
+  @media(max-width:600px){
+    header h1 { font-size:2.2rem; }
+    header p { font-size:1rem; }
   }
 </style>
 </head>
 <body>
-
 <header>
-  Latest Breakthroughs in Technology – 2026
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to quantum, discover the innovations shaping tomorrow.</p>
 </header>
-
 <main>
-
-  <section class="section">
-    <h2>Top News Sources</h2>
-    <article class="article">
-      <h3><a href="https://www.reuters.com/technology/" target="_blank">Reuters – Technology News</a></h3>
-      <p>19 hours ago – Find the latest technology news from around the globe, covering everything from AI breakthroughs to space tech.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>Generative AI & Large Language Models</h3>
+      <p>Transformers like GPT‑4, Claude, and Gemini power natural language understanding,
+         creative content generation, and advanced reasoning. Their multimodal
+         capabilities are driving new applications across sectors.</p>
+      <a href="#">Read More</a>
     </article>
-
-    <article class="article">
-      <h3><a href="https://www.sciencenewstoday.org/technology" target="_blank">Science News Today – Technology</a></h3>
-      <p>Stay updated with AI, gadgets, robotics, space tech, and digital innovations.</p>
+    <article class="card">
+      <h3>Quantum Computing Milestones</h3>
+      <p>Recent advances in qubit coherence, error‑correction codes, and novel materials
+         bring quantum advantage closer. Companies are deploying noisy intermediate‑scale
+         quantum (NISQ) devices for chemistry, optimization, and cryptanalysis.</p>
+      <a href="#">Read More</a>
     </article>
-
-    <article class="article">
-      <h3><a href="https://scitechdaily.com/news/technology/" target="_blank">SciTechDaily – Technology News</a></h3>
-      <p>Explore breakthroughs in nanotechnology, biotechnology, green tech, and more.</p>
+    <article class="card">
+      <h3>6G & Terahertz Communications</h3>
+      <p>Next‑gen wireless is pushing beyond 5G into the terahertz band, promising
+         exabit‑per‑second speeds, holographic displays, and ultra‑low latency for
+         AR/VR and autonomous systems.</p>
+      <a href="#">Read More</a>
     </article>
-
-    <article class="article">
-      <h3><a href="https://www.geeksforgeeks.org/blogs/top-new-technology-trends/" target="_blank">GeeksforGeeks – New Technology Trends</a></h3>
-      <p>Oct 16, 2026 – Rapid evolution across AI, connectivity, security, and sustainability.</p>
+    <article class="card">
+      <h3>Neuromorphic & Brain‑Inspired Chips</h3>
+      <p>Spiking neural networks and resistive RAM (RRAM) enable low‑power, event‑driven
+         computing, replicating aspects of human cognition for edge AI and robotics.</p>
+      <a href="#">Read More</a>
     </article>
-  </section>
-
-  <section class="section">
-    <h2>Key Breakthroughs in 2026</h2>
-    <ul>
-      <li><strong>Artificial Intelligence:</strong> 3D generative models now produce photorealistic scenes in real-time, enabling advanced VR experiences.</li>
-      <li><strong>Quantum Computing:</strong> 1,000-qubit processors achieve new error-correction benchmarks, pushing practical applications closer.</li>
-      <li><strong>Green Tech:</strong> Solar cells with 45% efficiency and perovskite stability have entered mass production.</li>
-      <li><strong>Biotechnology:</strong> CRISPR-Cas systems now target mitochondrial DNA, opening possibilities for treating metabolic disorders.</li>
-      <li><strong>Space Exploration:</strong> NASA’s Artemis mission successfully landed the first crewed habitat on the lunar south pole.</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Further Reading</h2>
-    <p>Explore the detailed articles linked above for in-depth analyses and expert opinions on these cutting-edge developments.</p>
-  </section>
-
-</main>
-
-<footer>
-  © 2026 Technology Insights – All rights reserved.
-</footer>
-
-</body>
-</html>
+    <article class="card">
+      <h3>Edge AI & Low‑Power Inference</h3>
+      <p>TinyML and custom accelerators bring deep learning to sensors and IoT devices,
+         enabling real‑time analytics with minimal energy consumption.</p>
+      <a href="#">Read More</a>
+    </article>
+    <article class="card">
+      <h3>CRISPR Base & Prime Editing</h3>
+      <p>Precision gene‑editing tools correct single‑nucleotide mutations with
+         unprecedented accuracy, opening new therapeutic avenues for genetic diseases.</p>
+      <a href="#">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Scalable Blockchain & ZK‑Proofs</h3>
+      <p>Rollups, sharding, and zero‑knowledge proofs drastically reduce fees,
+         increase throughput, and enhance privacy for decentralized finance and
+         digital identity.</p>
+      <a href="#">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Autonomous Vehicle Perception</h3>
+      <p>Advanced LIDAR, radar fusion, and AI perception stacks improve safety and
+         navigation in complex traffic environments.</p>
+      <a href="#">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Brain‑Computer Interfaces (BCI)</h3>
+      <p>Non‑invasive EEG‑based BCIs and invasive neural implants enable
+         direct mind‑to‑machine communication for prosthetics and communication.</p>
+      <a href="#">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Renewable Energy Innovations</h3>
