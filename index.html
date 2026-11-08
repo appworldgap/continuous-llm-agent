@@ -2,179 +2,192 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --primary:#4f46e5;
-    --secondary:#1e293b;
-    --bg:#0f172a;
-    --text:#f1f5f9;
-    --accent:#10b981;
-    --card:#1e293b;
-    --shadow:#0003;
+  :root {
+    --bg-dark: #111;
+    --bg-light: #f5f5f5;
+    --accent: #4f46e5;
+    --text-light: #e4e4e7;
+    --text-dark: #1f2937;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0,0,0,0.25);
+    --max-width: 1200px;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  header{
-    padding:2rem;
-    text-align:center;
-    background:linear-gradient(135deg,var(--primary),var(--accent));
-    color:#fff;
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
-  header h1{font-size:2.5rem;}
-  nav{
-    display:flex;justify-content:center;gap:1.5rem;padding:.5rem 0;
-    background:#1e293b;
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color .2s ease;
   }
-  nav a{
-    color:var(--text);text-decoration:none;padding:.5rem 1rem;
-    border-radius:.3rem;
+  a:hover { color: #7468f0; }
+
+  header {
+    background: var(--bg-dark);
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #2d2d2d;
   }
-  nav a:hover{background:var(--primary);color:#fff;}
-  main{
-    padding:2rem;
-    max-width:1200px;margin:auto;
+  header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
   }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:1.5rem;
+
+  .hero {
+    background: linear-gradient(135deg, #0f0f0f 0%, #181818 100%);
+    padding: 4rem 2rem;
+    text-align: center;
   }
-  .card{
-    background:var(--card);
-    border-radius:.8rem;
-    overflow:hidden;
-    box-shadow:0 4px 12px var(--shadow);
-    transition:transform .2s ease,box-shadow .2s ease;
+  .hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: .5rem;
+    color: #fff;
   }
-  .card:hover{transform:translateY(-5px);box-shadow:0 8px 16px var(--shadow);}
-  .card img{
-    width:100%;height:160px;object-fit:cover;
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #bbb;
   }
-  .card-content{
-    padding:1rem;
+
+  .section {
+    padding: 3rem 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
-  .card-content h3{
-    font-size:1.25rem;margin-bottom:.5rem;
+  .section h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #fff;
   }
-  .card-content p{font-size:.95rem;color:#cbd5e1;}
-  footer{
-    text-align:center;padding:1.5rem;
-    background:#1e293b;
-    color:#a0aec0;
-    font-size:.9rem;
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
-  @media(max-width:600px){
-    header h1{font-size:2rem;}
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px var(--card-shadow); }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1rem 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: .8rem;
+    color: #fff;
+  }
+  .card-desc {
+    flex: 1;
+    font-size: .95rem;
+    color: #d1d5db;
+  }
+  .card-footer {
+    margin-top: 1rem;
+    font-size: .85rem;
+    color: #888;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: .9rem;
+    color: #777;
+    border-top: 1px solid #2d2d2d;
+  }
+
+  @media (max-width: 640px) {
+    .hero h2 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>🚀 Latest Breakthroughs in Technology</h1>
-  <p>Discover cutting‑edge innovations reshaping the world</p>
+  <h1>Tech Breakthroughs 2024</h1>
 </header>
-<nav>
-  <a href="#ai">AI & ML</a>
-  <a href="#quantum">Quantum Computing</a>
-  <a href="#biotech">Biotech</a>
-  <a href="#energy">Energy</a>
-  <a href="#space">Space</a>
-</nav>
-<main>
-  <section id="ai">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=1" alt="AI model">
-        <div class="card-content">
-          <h3>GPT‑4o & Multi‑Modal Models</h3>
-          <p>OpenAI’s GPT‑4o can process text, images, and audio in real time, enabling seamless multimodal experiences. Industry adoption ranges from automated content generation to advanced customer support bots.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=2" alt="Edge AI">
-        <div class="card-content">
-          <h3>Edge AI & TinyML</h3>
-          <p>Ultra‑efficient AI chips like Google’s Edge TPU and Apple’s S8 silicon allow on‑device inference with <5 mW power usage, powering smart cameras, wearables, and autonomous drones.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=3" alt="AI ethics">
-        <div class="card-content">
-          <h3>AI‑Fairness Frameworks</h3>
-          <p>New open‑source tools (AI Fairness 360, Fairlearn) provide metrics and mitigation strategies for bias, fostering ethical deployment in finance, hiring, and health care.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="quantum">
-    <h2>Quantum Computing</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=4" alt="quantum processor">
-        <div class="card-content">
-          <h3>Honeywell’s 127‑Qubit Computer</h3>
-          <p>Honeywell claims a 127‑qubit trapped‑ion machine with a quantum volume exceeding 50, offering a leap toward practical quantum advantage in optimization problems.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=5" alt="quantum network">
-        <div class="card-content">
-          <h3>Quantum‑Internet Pilot</h3>
-          <p>Researchers in Japan and China have linked quantum nodes over 200 km, demonstrating secure quantum key distribution at record distances.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=6" alt="error correction">
-        <div class="card-content">
-          <h3>Surface‑Code Error Correction</h3>
-          <p>IBM and Google progress on fault‑tolerant qubits, reducing error rates below 1 % and paving the way for scalable, error‑corrected quantum circuits.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="biotech">
-    <h2>Biotechnology & Health</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=7" alt="CRISPR">
-        <div class="card-content">
-          <h3>Base‑Editing CRISPR</h3>
-          <p>Precise gene editing techniques can now convert one DNA base pair to another without double‑strand breaks, opening possibilities for treating monogenic disorders.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=8" alt="mRNA vaccines">
-        <div class="card-content">
-          <h3>mRNA Therapeutics</h3>
-          <p>Beyond vaccines, mRNA is being tested for protein replacement therapy in rare diseases, with early trials showing encouraging protein expression.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=9" alt="AI diagnostics">
-        <div class="card-content">
-          <h3>AI in Diagnostics</h3>
-          <p>Deep‑learning models can detect diabetic retinopathy, skin cancer, and lung nodules with accuracy matching expert clinicians, accelerating screening workflows.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="energy">
-    <h2>Energy & Materials</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random=10" alt="solid-state battery">
-        <div class="card-content">
-          <h3>Solid‑State Batteries</h3>
-          <p>Companies like Toyota and QuantumScape are closing in on commercial solid‑state cells with energy densities >400 Wh/kg and reduced fire risk.</p>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://picsum.photos/400/200?random
+
+<section class="hero">
+  <h2>Revolutionizing the Future: 2024's Most Game‑Changing Innovations</h2>
+  <p>From quantum leaps in computation to breakthroughs in sustainable energy, discover the technologies shaping tomorrow.</p>
+</section>
+
+<section class="section">
+  <h3>Latest Breakthroughs</h3>
+  <div class="cards">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&q=80" alt="AI">
+      <div class="card-body">
+        <h4 class="card-title">Foundation Models & AI Democratization</h4>
+        <p class="card-desc">
+          GPT‑4o, Gemini Ultra, and Claude 3.5 bring multimodal reasoning, real‑time adaptation, and privacy‑preserving inference to the masses, enabling advanced AI in mobile, edge, and low‑bandwidth environments.
+        </p>
+        <div class="card-footer">• 2024 • AI / Machine Learning</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1604690334234-7bde5b2bfb24?auto=format&fit=crop&w=800&q=80" alt="Quantum">
+      <div class="card-body">
+        <h4 class="card-title">Quantum 433‑Qubit Processor</h4>
+        <p class="card-desc">
+          IBM’s Eagle‑2 surpasses the 1‑million‑qubit threshold with 433 transmon qubits, achieving error‑corrected logical operations and opening pathways to practical quantum advantage.
+        </p>
+        <div class="card-footer">• 2024 • Quantum Computing</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1584425598454-0c2a6a1d0f58?auto=format&fit=crop&w=800&q=80" alt="CRISPR">
+      <div class="card-body">
+        <h4 class="card-title">CRISPR‑Prime Editing in Humans</h4>
+        <p class="card-desc">
+          Clinical trials successfully corrected a genetic mutation responsible for cystic fibrosis, demonstrating safe, precise in‑vivo gene editing with minimal off‑target activity.
+        </p>
+        <div class="card-footer">• 2024 • Biotechnology / Gene Editing</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1514995667948-86f5d3a3c4f0?auto=format&fit=crop&w=800&q=80" alt="6G">
+      <
