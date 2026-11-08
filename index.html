@@ -5,150 +5,176 @@
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables */
-  :root {
-    --primary: #1e90ff;
-    --secondary: #f5f5f5;
-    --bg: #121212;
-    --text: #e0e0e0;
-    --accent: #ff6347;
-    --card-bg: #1e1e1e;
-    --card-shadow: rgba(0,0,0,0.2);
+  :root{
+    --primary:#4f46e5;
+    --secondary:#1e293b;
+    --bg:#0f172a;
+    --text:#f1f5f9;
+    --accent:#10b981;
+    --card:#1e293b;
+    --shadow:#0003;
   }
-
-  /* Global Styles */
-  body, html {
-    margin: 0;
-    padding: 0;
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
   }
-  a { color: var(--primary); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Layout */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+  header{
+    padding:2rem;
+    text-align:center;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#fff;
   }
-
-  /* Hero Section */
-  .hero {
-    background: linear-gradient(135deg, var(--primary), #4e9af1);
-    color: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
-    border-radius: 0 0 12px 12px;
+  header h1{font-size:2.5rem;}
+  nav{
+    display:flex;justify-content:center;gap:1.5rem;padding:.5rem 0;
+    background:#1e293b;
   }
-  .hero h1 { margin: 0 0 1rem; font-size: 3rem; }
-  .hero p { margin: 0; font-size: 1.25rem; }
-
-  /* Grid of Cards */
-  .breakthroughs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+  nav a{
+    color:var(--text);text-decoration:none;padding:.5rem 1rem;
+    border-radius:.3rem;
   }
-
-  .card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--card-shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
+  nav a:hover{background:var(--primary);color:#fff;}
+  main{
+    padding:2rem;
+    max-width:1200px;margin:auto;
   }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px var(--card-shadow);
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
   }
-  .card h3 {
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    font-size: 1.35rem;
-    color: var(--primary);
+  .card{
+    background:var(--card);
+    border-radius:.8rem;
+    overflow:hidden;
+    box-shadow:0 4px 12px var(--shadow);
+    transition:transform .2s ease,box-shadow .2s ease;
   }
-  .card p {
-    margin: 0 0 1rem;
-    font-size: 0.95rem;
+  .card:hover{transform:translateY(-5px);box-shadow:0 8px 16px var(--shadow);}
+  .card img{
+    width:100%;height:160px;object-fit:cover;
   }
-  .card .date {
-    font-size: 0.85rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-    display: block;
+  .card-content{
+    padding:1rem;
   }
-  .card .btn {
-    display: inline-block;
-    padding: 0.4rem 0.85rem;
-    background: var(--primary);
-    color: #fff;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: background 0.2s;
+  .card-content h3{
+    font-size:1.25rem;margin-bottom:.5rem;
   }
-  .card .btn:hover { background: #1c7cd6; }
-
-  /* Footer */
-  footer {
-    margin-top: 3rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #bbb;
+  .card-content p{font-size:.95rem;color:#cbd5e1;}
+  footer{
+    text-align:center;padding:1.5rem;
+    background:#1e293b;
+    color:#a0aec0;
+    font-size:.9rem;
   }
-  footer a { color: var(--secondary); }
-
-  /* Responsive Adjustments */
-  @media (max-width: 480px) {
-    .hero h1 { font-size: 2.3rem; }
-    .hero p { font-size: 1rem; }
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
   }
 </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Latest Breakthroughs in Technology</h1>
-    <p>Exploring the innovations shaping tomorrow, as of 2024.</p>
-  </header>
-
-  <section class="container">
-    <div class="breakthroughs">
+<header>
+  <h1>🚀 Latest Breakthroughs in Technology</h1>
+  <p>Discover cutting‑edge innovations reshaping the world</p>
+</header>
+<nav>
+  <a href="#ai">AI & ML</a>
+  <a href="#quantum">Quantum Computing</a>
+  <a href="#biotech">Biotech</a>
+  <a href="#energy">Energy</a>
+  <a href="#space">Space</a>
+</nav>
+<main>
+  <section id="ai">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <div class="grid">
       <article class="card">
-        <span class="date">March 2024</span>
-        <h3>Quantum Supremacy Achieved by 10‑Qubit Processor</h3>
-        <p>Researchers demonstrate a 10‑qubit quantum computer that solves a problem in seconds which would take the world’s most powerful classical supercomputer days.</p>
-        <a href="#" class="btn">Read More</a>
+        <img src="https://picsum.photos/400/200?random=1" alt="AI model">
+        <div class="card-content">
+          <h3>GPT‑4o & Multi‑Modal Models</h3>
+          <p>OpenAI’s GPT‑4o can process text, images, and audio in real time, enabling seamless multimodal experiences. Industry adoption ranges from automated content generation to advanced customer support bots.</p>
+        </div>
       </article>
-
       <article class="card">
-        <span class="date">January 2024</span>
-        <h3>Solid‑State Battery Breaks Record</h3>
-        <p>A new lithium‑sulfur solid‑state battery achieves 600 Wh kg⁻¹ and a 5‑year cycle life, promising safer electric vehicles and portable electronics.</p>
-        <a href="#" class="btn">Read More</a>
+        <img src="https://picsum.photos/400/200?random=2" alt="Edge AI">
+        <div class="card-content">
+          <h3>Edge AI & TinyML</h3>
+          <p>Ultra‑efficient AI chips like Google’s Edge TPU and Apple’s S8 silicon allow on‑device inference with <5 mW power usage, powering smart cameras, wearables, and autonomous drones.</p>
+        </div>
       </article>
-
       <article class="card">
-        <span class="date">April 2024</span>
-        <h3>AI‑Driven Language Model Exceeds 10 B Parameters</h3>
-        <p>OpenAI releases GPT‑5 with over 10 billion parameters, offering unprecedented natural language understanding and zero‑shot reasoning.</p>
-        <a href="#" class="btn">Read More</a>
+        <img src="https://picsum.photos/400/200?random=3" alt="AI ethics">
+        <div class="card-content">
+          <h3>AI‑Fairness Frameworks</h3>
+          <p>New open‑source tools (AI Fairness 360, Fairlearn) provide metrics and mitigation strategies for bias, fostering ethical deployment in finance, hiring, and health care.</p>
+        </div>
       </article>
-
+    </div>
+  </section>
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <div class="grid">
       <article class="card">
-        <span class="date">February 2024</span>
-        <h3>First Practical 6G Testbed Launched</h3>
-        <p>Telecom giants deploy a 6G test network offering 1 Tbps peak rates and ultra‑low latency, paving the way for immersive AR/VR experiences.</p>
-        <a href="#" class="btn">Read More</a>
+        <img src="https://picsum.photos/400/200?random=4" alt="quantum processor">
+        <div class="card-content">
+          <h3>Honeywell’s 127‑Qubit Computer</h3>
+          <p>Honeywell claims a 127‑qubit trapped‑ion machine with a quantum volume exceeding 50, offering a leap toward practical quantum advantage in optimization problems.</p>
+        </div>
       </article>
-
       <article class="card">
-        <span class="date">May 2024</span>
-        <h3>Brain‑Computer Interface (BCI) Receives FDA Approval</h3>
-        <p>Neuralink’s BCI system obtains FDA clearance for restoring motor control in patients with spinal cord injuries.</p>
-        <a href="#" class="btn">Read More</a>
+        <img src="https://picsum.photos/400/200?random=5" alt="quantum network">
+        <div class="card-content">
+          <h3>Quantum‑Internet Pilot</h3>
+          <p>Researchers in Japan and China have linked quantum nodes over 200 km, demonstrating secure quantum key distribution at record distances.</p>
+        </div>
       </article>
-
-      <article
+      <article class="card">
+        <img src="https://picsum.photos/400/200?random=6" alt="error correction">
+        <div class="card-content">
+          <h3>Surface‑Code Error Correction</h3>
+          <p>IBM and Google progress on fault‑tolerant qubits, reducing error rates below 1 % and paving the way for scalable, error‑corrected quantum circuits.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="biotech">
+    <h2>Biotechnology & Health</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://picsum.photos/400/200?random=7" alt="CRISPR">
+        <div class="card-content">
+          <h3>Base‑Editing CRISPR</h3>
+          <p>Precise gene editing techniques can now convert one DNA base pair to another without double‑strand breaks, opening possibilities for treating monogenic disorders.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/400/200?random=8" alt="mRNA vaccines">
+        <div class="card-content">
+          <h3>mRNA Therapeutics</h3>
+          <p>Beyond vaccines, mRNA is being tested for protein replacement therapy in rare diseases, with early trials showing encouraging protein expression.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/400/200?random=9" alt="AI diagnostics">
+        <div class="card-content">
+          <h3>AI in Diagnostics</h3>
+          <p>Deep‑learning models can detect diabetic retinopathy, skin cancer, and lung nodules with accuracy matching expert clinicians, accelerating screening workflows.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="energy">
+    <h2>Energy & Materials</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://picsum.photos/400/200?random=10" alt="solid-state battery">
+        <div class="card-content">
+          <h3>Solid‑State Batteries</h3>
+          <p>Companies like Toyota and QuantumScape are closing in on commercial solid‑state cells with energy densities >400 Wh/kg and reduced fire risk.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/400/200?random
