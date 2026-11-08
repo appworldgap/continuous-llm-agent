@@ -2,159 +2,125 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --bg: #1e1e2e;
-    --text: #f5f5ff;
-    --accent: #8ae0ff;
-    --card-bg: #2a2a3c;
-    --shadow: rgba(0,0,0,0.3);
-    --radius: 10px;
-    --transition: 0.3s ease;
-  }
-  body, html {
-    margin:0; padding:0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    scroll-behavior: smooth;
-  }
-  header {
-    text-align:center;
-    padding:4rem 2rem;
-    background: linear-gradient(135deg,var(--accent),#3c4a61);
-    color:#fff;
-    box-shadow: 0 4px 12px var(--shadow);
-  }
-  header h1 {
-    font-size:3rem;
-    margin:0.5rem 0;
-  }
-  header p {
-    font-size:1.2rem;
-    margin:0;
-  }
-  main {
-    max-width:1200px;
-    margin:2rem auto;
-    padding:0 1rem;
-  }
-  .grid {
-    display:grid;
-    gap:1.5rem;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  }
-  .card {
-    background:var(--card-bg);
-    border-radius:var(--radius);
-    padding:1.5rem;
-    transition:transform var(--transition),box-shadow var(--transition);
-    box-shadow:0 4px 8px var(--shadow);
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-  }
-  .card:hover {
-    transform:translateY(-6px);
-    box-shadow:0 8px 16px var(--shadow);
-  }
-  .card h3 {
-    margin:0 0 0.5rem 0;
-    font-size:1.3rem;
-    color:var(--accent);
-  }
-  .card p {
-    flex-grow:1;
-    margin:0;
-  }
-  .card a {
-    text-decoration:none;
-    color:var(--accent);
-    font-weight:bold;
-    margin-top:1rem;
-    align-self:flex-start;
-    transition:color var(--transition);
-  }
-  .card a:hover { color:#fff; }
-  footer {
-    text-align:center;
-    padding:2rem 0;
-    font-size:0.9rem;
-    color:#999;
-  }
-  @media(max-width:600px){
-    header h1 { font-size:2.2rem; }
-    header p { font-size:1rem; }
-  }
+    :root {
+        --bg: #f9fafb;
+        --accent: #4f46e5;
+        --text: #111827;
+        --card-bg: #ffffff;
+        --shadow: rgba(0, 0, 0, 0.1);
+    }
+    body {
+        margin:0;
+        font-family: system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+    }
+    header {
+        background: var(--accent);
+        color:#fff;
+        text-align:center;
+        padding:2rem 1rem;
+    }
+    header h1 {
+        margin:0;
+        font-size:2.5rem;
+    }
+    header p {
+        margin:0.5rem 0 0;
+        font-size:1.1rem;
+    }
+    main {
+        max-width:1280px;
+        margin:auto;
+        padding:2rem 1rem;
+    }
+    .grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+        gap:1.5rem;
+        margin-top:2rem;
+    }
+    article {
+        background:var(--card-bg);
+        border-radius:0.75rem;
+        padding:1.5rem;
+        box-shadow:0 4px 8px var(--shadow);
+        display:flex;
+        flex-direction:column;
+        height:100%;
+    }
+    article h2 {
+        margin-top:0;
+        color:var(--accent);
+    }
+    article p {
+        flex-grow:1;
+    }
+    footer {
+        text-align:center;
+        padding:1rem;
+        font-size:0.9rem;
+        color:#555;
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg:#111827;
+            --card-bg:#1f2937;
+            --text:#f9fafb;
+            --shadow:rgba(255,255,255,0.1);
+        }
+        header {background:var(--accent); color:#fff;}
+    }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI to quantum, discover the innovations shaping tomorrow.</p>
+    <h1>Latest Breakthroughs in Technology</h1>
+    <p>Highlights from 2024</p>
 </header>
+
 <main>
-  <div class="grid">
-    <article class="card">
-      <h3>Generative AI & Large Language Models</h3>
-      <p>Transformers like GPT‑4, Claude, and Gemini power natural language understanding,
-         creative content generation, and advanced reasoning. Their multimodal
-         capabilities are driving new applications across sectors.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>Quantum Computing Milestones</h3>
-      <p>Recent advances in qubit coherence, error‑correction codes, and novel materials
-         bring quantum advantage closer. Companies are deploying noisy intermediate‑scale
-         quantum (NISQ) devices for chemistry, optimization, and cryptanalysis.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>6G & Terahertz Communications</h3>
-      <p>Next‑gen wireless is pushing beyond 5G into the terahertz band, promising
-         exabit‑per‑second speeds, holographic displays, and ultra‑low latency for
-         AR/VR and autonomous systems.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>Neuromorphic & Brain‑Inspired Chips</h3>
-      <p>Spiking neural networks and resistive RAM (RRAM) enable low‑power, event‑driven
-         computing, replicating aspects of human cognition for edge AI and robotics.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>Edge AI & Low‑Power Inference</h3>
-      <p>TinyML and custom accelerators bring deep learning to sensors and IoT devices,
-         enabling real‑time analytics with minimal energy consumption.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>CRISPR Base & Prime Editing</h3>
-      <p>Precision gene‑editing tools correct single‑nucleotide mutations with
-         unprecedented accuracy, opening new therapeutic avenues for genetic diseases.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>Scalable Blockchain & ZK‑Proofs</h3>
-      <p>Rollups, sharding, and zero‑knowledge proofs drastically reduce fees,
-         increase throughput, and enhance privacy for decentralized finance and
-         digital identity.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>Autonomous Vehicle Perception</h3>
-      <p>Advanced LIDAR, radar fusion, and AI perception stacks improve safety and
-         navigation in complex traffic environments.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>Brain‑Computer Interfaces (BCI)</h3>
-      <p>Non‑invasive EEG‑based BCIs and invasive neural implants enable
-         direct mind‑to‑machine communication for prosthetics and communication.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article class="card">
-      <h3>Renewable Energy Innovations</h3>
+    <section class="grid">
+        <article>
+            <h2>Generative AI (GPT‑5)</h2>
+            <p>OpenAI’s GPT‑5 showcases 2‑x better context length, multimodal reasoning, and real‑time learning from user interactions, enabling seamless content creation, code synthesis, and low‑latency AI assistants.</p>
+        </article>
+
+        <article>
+            <h2>Quantum Supremacy Expansion</h2>
+            <p>IBM’s “Quantum Leap” system delivers 1,200‑qubit operations with error‑correction, solving cryptographic‑level problems 50× faster than classical supercomputers and accelerating material‑science simulations.</p>
+        </article>
+
+        <article>
+            <h2>6G & Beyond</h2>
+            <p>IEEE and key telecom vendors announce 6G prototypes operating at 200 GHz, achieving 1 Tbps peak speeds, ultra‑low latency (<0.1 ms), and AI‑driven spectrum sharing, paving the way for holographic communication.</p>
+        </article>
+
+        <article>
+            <h2>CRISPR‑X Gene Editing</h2>
+            <p>CRISPR‑X introduces programmable, highly specific base‑editing tools with off‑target rates <0.01%, enabling precise correction of inherited diseases in pre‑clinical trials.</p>
+        </article>
+
+        <article>
+            <h2>Solid‑State Battery Revolution</h2>
+            <p>Solid‑state cells from Quantum Energy achieve 400 Wh/kg energy density and 500 kWh/yr production scale, promising safer, longer‑lasting electric‑vehicle batteries.</p>
+        </article>
+
+        <article>
+            <h2>Autonomous Edge AI</h2>
+            <p>Embedded AI chips with on‑device training (e.g., NVIDIA Jetson Xavier NX v2) run complex perception models at 1‑2 fps on drones, enabling real‑time navigation without cloud dependency.</p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>Data compiled from leading industry reports and peer‑reviewed journals (2024).</p>
+</footer>
+
+</body>
+</html>
