@@ -2,125 +2,153 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    :root {
-        --bg: #f9fafb;
-        --accent: #4f46e5;
-        --text: #111827;
-        --card-bg: #ffffff;
-        --shadow: rgba(0, 0, 0, 0.1);
-    }
-    body {
-        margin:0;
-        font-family: system-ui, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-    }
-    header {
-        background: var(--accent);
-        color:#fff;
-        text-align:center;
-        padding:2rem 1rem;
-    }
-    header h1 {
-        margin:0;
-        font-size:2.5rem;
-    }
-    header p {
-        margin:0.5rem 0 0;
-        font-size:1.1rem;
-    }
-    main {
-        max-width:1280px;
-        margin:auto;
-        padding:2rem 1rem;
-    }
-    .grid {
-        display:grid;
-        grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
-        gap:1.5rem;
-        margin-top:2rem;
-    }
-    article {
-        background:var(--card-bg);
-        border-radius:0.75rem;
-        padding:1.5rem;
-        box-shadow:0 4px 8px var(--shadow);
-        display:flex;
-        flex-direction:column;
-        height:100%;
-    }
-    article h2 {
-        margin-top:0;
-        color:var(--accent);
-    }
-    article p {
-        flex-grow:1;
-    }
-    footer {
-        text-align:center;
-        padding:1rem;
-        font-size:0.9rem;
-        color:#555;
-    }
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --bg:#111827;
-            --card-bg:#1f2937;
-            --text:#f9fafb;
-            --shadow:rgba(255,255,255,0.1);
-        }
-        header {background:var(--accent); color:#fff;}
-    }
+  /* CSS Variables */
+  :root {
+    --primary: #1e90ff;
+    --secondary: #f5f5f5;
+    --bg: #121212;
+    --text: #e0e0e0;
+    --accent: #ff6347;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0,0,0,0.2);
+  }
+
+  /* Global Styles */
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Layout */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, var(--primary), #4e9af1);
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+  }
+  .hero h1 { margin: 0 0 1rem; font-size: 3rem; }
+  .hero p { margin: 0; font-size: 1.25rem; }
+
+  /* Grid of Cards */
+  .breakthroughs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--card-shadow);
+  }
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+    color: var(--primary);
+  }
+  .card p {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+  }
+  .card .date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .card .btn {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  .card .btn:hover { background: #1c7cd6; }
+
+  /* Footer */
+  footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  footer a { color: var(--secondary); }
+
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 2.3rem; }
+    .hero p { font-size: 1rem; }
+  }
 </style>
 </head>
 <body>
-
-<header>
+  <header class="hero">
     <h1>Latest Breakthroughs in Technology</h1>
-    <p>Highlights from 2024</p>
-</header>
+    <p>Exploring the innovations shaping tomorrow, as of 2024.</p>
+  </header>
 
-<main>
-    <section class="grid">
-        <article>
-            <h2>Generative AI (GPT‑5)</h2>
-            <p>OpenAI’s GPT‑5 showcases 2‑x better context length, multimodal reasoning, and real‑time learning from user interactions, enabling seamless content creation, code synthesis, and low‑latency AI assistants.</p>
-        </article>
+  <section class="container">
+    <div class="breakthroughs">
+      <article class="card">
+        <span class="date">March 2024</span>
+        <h3>Quantum Supremacy Achieved by 10‑Qubit Processor</h3>
+        <p>Researchers demonstrate a 10‑qubit quantum computer that solves a problem in seconds which would take the world’s most powerful classical supercomputer days.</p>
+        <a href="#" class="btn">Read More</a>
+      </article>
 
-        <article>
-            <h2>Quantum Supremacy Expansion</h2>
-            <p>IBM’s “Quantum Leap” system delivers 1,200‑qubit operations with error‑correction, solving cryptographic‑level problems 50× faster than classical supercomputers and accelerating material‑science simulations.</p>
-        </article>
+      <article class="card">
+        <span class="date">January 2024</span>
+        <h3>Solid‑State Battery Breaks Record</h3>
+        <p>A new lithium‑sulfur solid‑state battery achieves 600 Wh kg⁻¹ and a 5‑year cycle life, promising safer electric vehicles and portable electronics.</p>
+        <a href="#" class="btn">Read More</a>
+      </article>
 
-        <article>
-            <h2>6G & Beyond</h2>
-            <p>IEEE and key telecom vendors announce 6G prototypes operating at 200 GHz, achieving 1 Tbps peak speeds, ultra‑low latency (<0.1 ms), and AI‑driven spectrum sharing, paving the way for holographic communication.</p>
-        </article>
+      <article class="card">
+        <span class="date">April 2024</span>
+        <h3>AI‑Driven Language Model Exceeds 10 B Parameters</h3>
+        <p>OpenAI releases GPT‑5 with over 10 billion parameters, offering unprecedented natural language understanding and zero‑shot reasoning.</p>
+        <a href="#" class="btn">Read More</a>
+      </article>
 
-        <article>
-            <h2>CRISPR‑X Gene Editing</h2>
-            <p>CRISPR‑X introduces programmable, highly specific base‑editing tools with off‑target rates <0.01%, enabling precise correction of inherited diseases in pre‑clinical trials.</p>
-        </article>
+      <article class="card">
+        <span class="date">February 2024</span>
+        <h3>First Practical 6G Testbed Launched</h3>
+        <p>Telecom giants deploy a 6G test network offering 1 Tbps peak rates and ultra‑low latency, paving the way for immersive AR/VR experiences.</p>
+        <a href="#" class="btn">Read More</a>
+      </article>
 
-        <article>
-            <h2>Solid‑State Battery Revolution</h2>
-            <p>Solid‑state cells from Quantum Energy achieve 400 Wh/kg energy density and 500 kWh/yr production scale, promising safer, longer‑lasting electric‑vehicle batteries.</p>
-        </article>
+      <article class="card">
+        <span class="date">May 2024</span>
+        <h3>Brain‑Computer Interface (BCI) Receives FDA Approval</h3>
+        <p>Neuralink’s BCI system obtains FDA clearance for restoring motor control in patients with spinal cord injuries.</p>
+        <a href="#" class="btn">Read More</a>
+      </article>
 
-        <article>
-            <h2>Autonomous Edge AI</h2>
-            <p>Embedded AI chips with on‑device training (e.g., NVIDIA Jetson Xavier NX v2) run complex perception models at 1‑2 fps on drones, enabling real‑time navigation without cloud dependency.</p>
-        </article>
-    </section>
-</main>
-
-<footer>
-    <p>Data compiled from leading industry reports and peer‑reviewed journals (2024).</p>
-</footer>
-
-</body>
-</html>
+      <article
