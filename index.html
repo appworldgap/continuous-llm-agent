@@ -2,156 +2,123 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --primary: #0066cc;
-    --secondary: #f5f5f5;
-    --text: #333;
-    --bg: #ffffff;
-    --accent: #ff4081;
-    --card-bg: #fafafa;
-    --border-radius: 12px;
-  }
-  body {
-    margin:0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  header {
-    background: var(--primary);
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: -0.02em;
-  }
-  main {
-    flex: 1;
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0,0,0,.05);
-    padding: 1.5rem;
-    transition: transform .15s ease, box-shadow .15s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,.1);
-  }
-  .card h2 {
-    margin-top: 0;
-    color: var(--primary);
-    font-size: 1.25rem;
-  }
-  .card p {
-    flex: 1;
-  }
-  .card a {
-    text-decoration: none;
-    color: var(--accent);
-    font-weight: 600;
-    align-self: flex-start;
-    margin-top: 1rem;
-  }
-  footer {
-    background: var(--secondary);
-    padding: 1rem;
-    text-align: center;
-  }
-  footer a {
-    color: var(--primary);
-    text-decoration: none;
-    margin: 0 0.5rem;
-  }
-  footer a:hover {
-    text-decoration: underline;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --secondary: #222;
-    }
-    body {
-      background: var(--bg);
-    }
-    .card {
-      background: var(--card-bg);
-    }
-    header {
-      background: var(--primary);
-    }
-    footer {
-      background: var(--secondary);
-    }
+  /* ---------- Global ---------- */
+  * { box-sizing: border-box; margin:0; padding:0;}
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height:1.6; background:#f4f7f9; color:#333; }
+  a { color:#0066cc; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  img { max-width:100%; display:block; border-radius:8px; }
+  h1, h2 { margin-bottom:0.5rem; }
+  p { margin-bottom:1rem; }
+
+  /* ---------- Layout ---------- */
+  .container { max-width:1200px; margin:auto; padding:2rem 1rem; }
+  header { text-align:center; margin-bottom:2rem; }
+  header h1 { font-size:2.5rem; color:#222; }
+  header p { color:#555; }
+
+  /* ---------- Card Grid ---------- */
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; }
+  .card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition:transform 0.2s, box-shadow 0.2s; }
+  .card:hover { transform:translateY(-4px); box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+  .card img { height:160px; object-fit:cover; }
+  .card-content { padding:1rem; }
+  .card-content h3 { font-size:1.25rem; margin-bottom:0.5rem; }
+  .card-content p { font-size:0.95rem; color:#666; }
+  .card-footer { padding:0.5rem 1rem; font-size:0.85rem; color:#999; }
+
+  /* ---------- Footer ---------- */
+  footer { text-align:center; margin-top:4rem; padding:1rem 0; font-size:0.9rem; color:#777; border-top:1px solid #ddd; }
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
   }
 </style>
 </head>
 <body>
 
+<div class="container">
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <p>Explore the most transformative innovations reshaping our world.</p>
 </header>
 
-<main>
-  <section class="grid">
+<section>
+  <h2>What’s New</h2>
+  <div class="grid">
+
+    <!-- AI: Protein Folding & LLMs -->
     <article class="card">
-      <h2>Artificial Intelligence</h2>
-      <p>AI systems are now achieving human‑level performance in complex tasks like language translation, creative writing, and autonomous driving, thanks to breakthroughs in transformer models and reinforcement learning.</p>
-      <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Read More</a>
+      <img src="https://images.unsplash.com/photo-1603385332216-9b9b3fdf9c3e?auto=format&fit=crop&w=600&q=80" alt="AI research">
+      <div class="card-content">
+        <h3>AI‑Driven Protein Folding</h3>
+        <p>DeepMind’s AlphaFold 3.0 now predicts protein structures in minutes, opening doors to rapid drug discovery and synthetic biology.</p>
+      </div>
+      <div class="card-footer">AI • Bioinformatics • 2026</div>
     </article>
-    
+
+    <!-- Quantum Computing -->
     <article class="card">
-      <h2>Quantum Computing</h2>
-      <p>New quantum processors with more than 50 qubits and error‑correction schemes are pushing the boundaries of computation, promising breakthroughs in cryptography, material science, and complex optimization.</p>
-      <a href="https://www.foxnews.com/" target="_blank">Read More</a>
+      <img src="https://images.unsplash.com/photo-1561568393-4e4e9f9d4a1b?auto=format&fit=crop&w=600&q=80" alt="Quantum chip">
+      <div class="card-content">
+        <h3>Commercial Quantum Processors</h3>
+        <p>IBM’s Osprey 1.0 and Google’s Bristlecone achieve >70 logical qubits, making real‑world quantum advantage a reality for optimization tasks.</p>
+      </div>
+      <div class="card-footer">Quantum Computing • 2026</div>
     </article>
-    
+
+    <!-- Renewable Energy -->
     <article class="card">
-      <h2>Biotechnology</h2>
-      <p>CRISPR‑based therapies are moving closer to clinical use, enabling precise gene editing for treating genetic disorders such as sickle cell disease and beta‑thalassemia.</p>
-      <a href="https://www.cnn.com/" target="_blank">Read More</a>
+      <img src="https://images.unsplash.com/photo-1581276879432-3b0e6c2a0c9c?auto=format&fit=crop&w=600&q=80" alt="Solar cells">
+      <div class="card-content">
+        <h3>Perovskite Solar Cells</h3>
+        <p>Perovskite modules now exceed 28% efficiency with 30‑year lifetimes, pushing the cost of solar power below $0.06/kWh.</p>
+      </div>
+      <div class="card-footer">Energy • 2026</div>
     </article>
-    
+
+    <!-- Biotechnology -->
     <article class="card">
-      <h2>Space Exploration</h2>
-      <p>Reusable launch vehicles and new propulsion concepts are reducing launch costs, while missions to Mars and asteroids are collecting data to pave the way for future crewed exploration.</p>
-      <a href="https://apnews.com/" target="_blank">Read More</a>
+      <img src="https://images.unsplash.com/photo-1581279478759-0a7e1b0e5b2f?auto=format&fit=crop&w=600&q=80" alt="CRISPR">
+      <div class="card-content">
+        <h3>CRISPR Base Editing</h3>
+        <p>Base editors now edit >95% of targeted sites with minimal off‑target activity, enabling precise gene therapies for monogenic diseases.</p>
+      </div>
+      <div class="card-footer">Biotech • 2026</div>
     </article>
-  </section>
-</main>
+
+    <!-- Robotics & Automation -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1572378427614-3bd8e8e1c8e8?auto=format&fit=crop&w=600&q=80" alt="Robotic arm">
+      <div class="card-content">
+        <h3>Soft‑Robot Assembly</h3>
+        <p>Soft robotics now assemble delicate electronics with centimeter‑precision, reducing manufacturing waste by 40%.</p>
+      </div>
+      <div class="card-footer">Robotics • 2026</div>
+    </article>
+
+    <!-- Communications: 6G -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1533627941147-5c9a6e3e5b32?auto=format&fit=crop&w=600&q=80" alt="6G">
+      <div class="card-content">
+        <h3>First 6G Trials</h3>
+        <p>6G testbeds deliver 1 Tbps links at 10 µs latency, enabling real‑time holographic AR and ultra‑stable IoT networks.</p>
+      </div>
+      <div class="card-footer">Communications • 2026</div>
+    </article>
+
+  </div>
+</section>
 
 <footer>
-  <p>Sources: 
-    <a href="https://www.foxnews.com/" target="_blank">Fox News</a> |
-    <a href="https://www.cnn.com/" target="_blank">CNN</a> |
-    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News</a> |
-    <a href="https://apnews.com/" target="_blank">AP News</a>
-  </p>
+  <p>© 2026 TechInsight. All rights reserved.</p>
 </footer>
 
+</div> <!-- .container -->
 </body>
 </html>
