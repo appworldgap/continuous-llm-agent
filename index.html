@@ -5,166 +5,145 @@
 <title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Reset */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* Global reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif;
+color:#e0e0e0;background:#121212;line-height:1.6;}
+a{color:#bb86fc;text-decoration:none;}
+a:hover{text-decoration:underline;}
 
-  :root {
-    --primary: #1a73e8;
-    --secondary: #fbbc05;
-    --bg: #fafafa;
-    --text: #222;
-    --accent: #34a853;
-    --card-bg: #fff;
-    --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  }
+.container{max-width:1200px;margin:auto;padding:2rem;}
+header{background:#1f1f1f;padding:4rem 0;text-align:center;}
+header h1{font-size:3rem;margin-bottom:.5rem;}
+header p{font-size:1.2rem;color:#bbb;}
 
-  body {
-    font-family: var(--font-base);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+section{padding:4rem 0; border-top:1px solid #333;}
+section:nth-of-type(even){background:#1e1e1e;}
+section h2{font-size:2.2rem;margin-bottom:1rem;}
+section p{margin-bottom:1.5rem;}
 
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
 
-  main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-  }
+.card{background:#2c2c2c;border-radius:8px;padding:1.5rem;box-shadow:0 4px 8px rgba(0,0,0,.3);}
+.card img{width:100%;border-radius:6px;margin-bottom:1rem;}
+.card h3{font-size:1.4rem;margin-bottom:.5rem;}
+.card p{color:#d0d0d0;}
 
-  .card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: var(--card-shadow);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
+footer{background:#1f1f1f;text-align:center;padding:2rem 0;color:#777;}
+footer a{color:#bbb;}
 
-  .card h3 {
-    margin-bottom: 0.75rem;
-    color: var(--primary);
-  }
-
-  .card ul {
-    list-style: disc inside;
-    margin-top: 0.5rem;
-    flex-grow: 1;
-  }
-
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #f0f0f0;
-    font-size: 0.9rem;
-    color: #555;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --card-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      --primary: #8ab4f8;
-      --accent: #8ab4f8;
-    }
-    footer { background: #1e1e1e; }
-  }
+@media (max-width: 600px){
+    header h1{font-size:2.2rem;}
+    header p{font-size:1rem;}
+    section{padding:2rem 0;}
+}
 </style>
 </head>
 <body>
-<header>🚀 Latest Breakthroughs in Technology (2026)</header>
-<main>
-  <article class="card">
-    <h3>Artificial Intelligence & Machine Learning</h3>
-    <ul>
-      <li>Foundation models now routinely support 10+ languages with near-human fluency.</li>
-      <li>AI-driven protein folding reaches 90% accuracy, accelerating drug discovery.</li>
-      <li>Self‑improving reinforcement learning agents that can autonomously optimize industrial processes.</li>
-    </ul>
-  </article>
 
-  <article class="card">
-    <h3>Quantum Computing</h3>
-    <ul>
-      <li>Commercial quantum processors with 200+ qubits achieve “quantum supremacy” for cryptanalysis.</li>
-      <li>Error‑correction codes reduce logical error rates to <10⁻⁵, enabling practical algorithms.</li>
-      <li>Quantum‑networked satellites establish a global entanglement backbone.</li>
-    </ul>
-  </article>
+<header class="container">
+    <h1>Latest Breakthroughs in Technology (2026)</h1>
+    <p>From AI superlatives to quantum leap advancements – explore the cutting‑edge innovations reshaping our world.</p>
+</header>
 
-  <article class="card">
-    <h3>Biotechnology & Health</h3>
-    <ul>
-      <li>CRISPR‑based therapeutics deliver cures for several monogenic disorders.</li>
-      <li>Lab‑grown organs (bio‑printed livers) reach Stage‑3 clinical trials.</li>
-      <li>AI‑guided personalized medicine tailors drug regimens in real time.</li>
-    </ul>
-  </article>
+<div class="container">
 
-  <article class="card">
-    <h3>Energy & Sustainability</h3>
-    <ul>
-      <li>Commercial fusion reactors (Tokamak‑type) deliver net energy gain for the first time.</li>
-      <li>Solid‑state batteries with 500 Wh/kg energy density hit commercial production.</li>
-      <li>Solar‑thermal collectors reach >30% efficiency using perovskite‑based tandem cells.</li>
-    </ul>
-  </article>
+    <section>
+        <h2>Artificial Intelligence & Machine Learning</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://picsum.photos/seed/ai1/400/250" alt="AI Research">
+                <h3>Generative AI 3.0</h3>
+                <p>Large Language Models now incorporate multimodal reasoning, enabling real‑time synthesis of text, vision, and audio in a single inference pipeline.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/ai2/400/250" alt="Edge AI">
+                <h3>Edge‑AI Chips</h3>
+                <p>Low‑power AI accelerators built on silicon photonics deliver 10× higher throughput with <1 W energy consumption, powering autonomous drones and smart sensors.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/ai3/400/250" alt="AI Ethics">
+                <h3>Explainable AI</h3>
+                <p>New frameworks provide transparent decision trees for high‑stakes domains like finance and healthcare, reducing regulatory barriers.</p>
+            </div>
+        </div>
+    </section>
 
-  <article class="card">
-    <h3>Space Exploration & Commercial Space</h3>
-    <ul>
-      <li>Reusable heavy‑lift rockets achieve 95% turnaround time between missions.</li>
-      <li>Mars surface habitats now support continuous human presence.</li>
-      <li>Low‑Earth‑orbit mega‑constellations deliver sub‑5 ms latency broadband worldwide.</li>
-    </ul>
-  </article>
+    <section>
+        <h2>Quantum Computing</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://picsum.photos/seed/quantum1/400/250" alt="Quantum Processor">
+                <h3>Solid‑State Qubits</h3>
+                <p>Diamond‑based NV centers now achieve coherence times >10 ms at room temperature, opening doors for quantum networking.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/quantum2/400/250" alt="Quantum Cloud">
+                <h3>Quantum Cloud Platforms</h3>
+                <p>Public cloud providers offer hybrid quantum‑classical workloads, making advanced simulations accessible to researchers worldwide.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/quantum3/400/250" alt="Quantum Sensors">
+                <h3>Quantum Sensors</h3>
+                <p>Ultra‑sensitive magnetic field sensors now detect single electron spins, revolutionizing medical imaging and navigation.</p>
+            </div>
+        </div>
+    </section>
 
-  <article class="card">
-    <h3>Connectivity & Communications</h3>
-    <ul>
-      <li>6G networks enable 1 Tbps peak speeds and real‑time holographic communications.</li>
-      <li>Li‑DAR mesh networks provide ultra‑high‑density indoor positioning.</li>
-      <li>Quantum‑cryptographic key distribution is now integrated into commercial routers.</li>
-    </ul>
-  </article>
+    <section>
+        <h2>Biotechnology & Health Tech</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://picsum.photos/seed/bio1/400/250" alt="CRISPR">
+                <h3>Base Editing 2.0</h3>
+                <p>Improved base editors correct pathogenic mutations with <0.2% off‑target activity, accelerating gene‑therapy pipelines.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/bio2/400/250" alt="Wearable">
+                <h3>Continuous Health Monitors</h3>
+                <p>Microporous implantable patches record real‑time metabolic data and send AI‑derived insights to clinicians.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/bio3/400/250" alt="Synthetic Organs">
+                <h3>Lab‑grown Organs</h3>
+                <p>Scaffold‑free bioprinting of liver and kidney tissues now supports pre‑clinical drug testing, cutting animal use by 70 %.</p>
+            </div>
+        </div>
+    </section>
 
-  <article class="card">
-    <h3>Autonomous Systems & Robotics</h3>
-    <ul>
-      <li>Fully autonomous aerial drones perform complex delivery tasks in urban environments.</li>
-      <li>Swarm robotics with distributed AI coordinate in real time for search & rescue.</li>
-      <li>Soft‑robotic exoskeletons restore mobility for paraplegic patients.</li>
-    </ul>
-  </article>
+    <section>
+        <h2>Renewable Energy & Storage</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://picsum.photos/seed/energy1/400/250" alt="Solar">
+                <h3>Perovskite Tandems</h3>
+                <p>Solar cells reaching 29 % efficiency with a 3‑year lifespan now surpass silicon in many markets.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/energy2/400/250" alt="Battery">
+                <h3>Solid‑State Batteries</h3>
+                <p>Lithium‑sulfur solid‑state packs deliver 500 Wh/kg and charge in 10 min, enabling electric‑vehicle range beyond 600 km.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/energy3/400/250" alt="Grid">
+                <h3>Smart Grids</h3>
+                <p>AI‑optimized grid management reduces peak demand by 20 % and integrates 70 % renewable penetration.</p>
+            </div>
+        </div>
+    </section>
 
-  <article class="card">
-    <h3>Emerging Tech & Material Science</h3>
-    <ul>
-      <li>Graphene‑based transistors deliver 10× faster switching speeds than silicon.</li>
-      <li>Metamaterials enable sub‑wavelength cloaking for radar‑evading vehicles.</li>
-      <li>Self‑healing polymers extend the life of structural components by 40%.</li>
-    </ul>
-  </article>
-</main>
-<footer>
-  © 2026 TechInsights – All Rights Reserved
-</footer>
-</body>
-</html>
+    <section>
+        <h2>Space Technology</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://picsum.photos/seed/space1/400/250" alt="Space Launch">
+                <h3>Reusable Launch Vehicles</h3>
+                <p>New generation rockets achieve <10 % launch cost, enabling frequent Mars transfer windows.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/seed/space2/400/250" alt="Satellite">
+                <h3>CubeSat Constellations</h3>
+                <p>Low‑cost satellite swarms now offer global broadband coverage with <3 ms latency.</p>
+            </div>
+            <div class="card">
+                <img src="https
