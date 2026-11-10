@@ -2,148 +2,177 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Global reset */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif;
-color:#e0e0e0;background:#121212;line-height:1.6;}
-a{color:#bb86fc;text-decoration:none;}
-a:hover{text-decoration:underline;}
-
-.container{max-width:1200px;margin:auto;padding:2rem;}
-header{background:#1f1f1f;padding:4rem 0;text-align:center;}
-header h1{font-size:3rem;margin-bottom:.5rem;}
-header p{font-size:1.2rem;color:#bbb;}
-
-section{padding:4rem 0; border-top:1px solid #333;}
-section:nth-of-type(even){background:#1e1e1e;}
-section h2{font-size:2.2rem;margin-bottom:1rem;}
-section p{margin-bottom:1.5rem;}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
-
-.card{background:#2c2c2c;border-radius:8px;padding:1.5rem;box-shadow:0 4px 8px rgba(0,0,0,.3);}
-.card img{width:100%;border-radius:6px;margin-bottom:1rem;}
-.card h3{font-size:1.4rem;margin-bottom:.5rem;}
-.card p{color:#d0d0d0;}
-
-footer{background:#1f1f1f;text-align:center;padding:2rem 0;color:#777;}
-footer a{color:#bbb;}
-
-@media (max-width: 600px){
-    header h1{font-size:2.2rem;}
-    header p{font-size:1rem;}
-    section{padding:2rem 0;}
-}
+  :root{
+    --primary:#1e88e5;
+    --secondary:#3949ab;
+    --accent:#ff5722;
+    --bg:#f5f5f5;
+    --text:#212121;
+    --muted:#757575;
+    --radius:8px;
+    --shadow:0 4px 12px rgba(0,0,0,.1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Noto Sans JP","Noto Sans KR","Noto Sans CJK JP","Noto Sans CJK KR","sans-serif";
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.6;
+  }
+  header{
+    background:var(--primary);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+  }
+  header h1{
+    font-size:2.5rem;
+    margin-bottom:.5rem;
+  }
+  header p{
+    font-size:1.2rem;
+    color:var(--accent);
+  }
+  nav{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin-top:1rem;
+  }
+  nav a{
+    color:#fff;
+    text-decoration:none;
+    padding:.5rem 1rem;
+    border-radius:var(--radius);
+    transition:background .3s;
+  }
+  nav a:hover{background:rgba(255,255,255,.2)}
+  main{
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 1rem;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:2rem;
+  }
+  .card{
+    background:#fff;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+  }
+  .card-content{
+    padding:1rem;
+    flex:1;
+  }
+  .card h3{
+    margin-bottom:.5rem;
+    color:var(--secondary);
+    font-size:1.25rem;
+  }
+  .card p{
+    margin-bottom:.75rem;
+    color:var(--muted);
+    font-size:.95rem;
+  }
+  .card a{
+    margin-top:auto;
+    display:inline-block;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+  }
+  footer{
+    text-align:center;
+    padding:2rem 1rem;
+    font-size:.9rem;
+    color:var(--muted);
+    border-top:1px solid #e0e0e0;
+    margin-top:3rem;
+  }
+  @media(max-width:600px){
+    header h1{font-size:2rem}
+  }
 </style>
 </head>
 <body>
-
-<header class="container">
-    <h1>Latest Breakthroughs in Technology (2026)</h1>
-    <p>From AI superlatives to quantum leap advancements – explore the cutting‑edge innovations reshaping our world.</p>
+<header>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From quantum computing to bio‑engineering, the frontier of innovation is expanding every day</p>
+  <nav>
+    <a href="#ai">AI & ML</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#energy">Energy</a>
+    <a href="#bio">Biotech</a>
+    <a href="#space">Space</a>
+    <a href="#future">Future Tech</a>
+  </nav>
 </header>
 
-<div class="container">
-
-    <section>
-        <h2>Artificial Intelligence & Machine Learning</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://picsum.photos/seed/ai1/400/250" alt="AI Research">
-                <h3>Generative AI 3.0</h3>
-                <p>Large Language Models now incorporate multimodal reasoning, enabling real‑time synthesis of text, vision, and audio in a single inference pipeline.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/ai2/400/250" alt="Edge AI">
-                <h3>Edge‑AI Chips</h3>
-                <p>Low‑power AI accelerators built on silicon photonics deliver 10× higher throughput with <1 W energy consumption, powering autonomous drones and smart sensors.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/ai3/400/250" alt="AI Ethics">
-                <h3>Explainable AI</h3>
-                <p>New frameworks provide transparent decision trees for high‑stakes domains like finance and healthcare, reducing regulatory barriers.</p>
-            </div>
+<main>
+  <section id="ai">
+    <h2>AI & Machine Learning</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1557527312-8e8f3c2c0e6c?auto=format&fit=crop&w=400&q=80" alt="AI">
+        <div class="card-content">
+          <h3>OpenAI's GPT‑4.5 Turbo</h3>
+          <p>Introduces multimodal capabilities and fine‑tuned instruction following, reducing hallucination rates by 30%.</p>
+          <a href="https://openai.com/blog/gpt-4.5-turbo" target="_blank">Read more</a>
         </div>
-    </section>
+      </article>
 
-    <section>
-        <h2>Quantum Computing</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://picsum.photos/seed/quantum1/400/250" alt="Quantum Processor">
-                <h3>Solid‑State Qubits</h3>
-                <p>Diamond‑based NV centers now achieve coherence times >10 ms at room temperature, opening doors for quantum networking.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/quantum2/400/250" alt="Quantum Cloud">
-                <h3>Quantum Cloud Platforms</h3>
-                <p>Public cloud providers offer hybrid quantum‑classical workloads, making advanced simulations accessible to researchers worldwide.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/quantum3/400/250" alt="Quantum Sensors">
-                <h3>Quantum Sensors</h3>
-                <p>Ultra‑sensitive magnetic field sensors now detect single electron spins, revolutionizing medical imaging and navigation.</p>
-            </div>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1592194996307-6d5d12f5d4aa?auto=format&fit=crop&w=400&q=80" alt="AI chip">
+        <div class="card-content">
+          <h3>Graphcore IPU‑2</h3>
+          <p>AI processor achieves 5x higher throughput for transformer models while cutting power use to 1.5W per 1.5T ops.</p>
+          <a href="https://www.graphcore.ai/" target="_blank">Discover</a>
         </div>
-    </section>
+      </article>
+    </div>
+  </section>
 
-    <section>
-        <h2>Biotechnology & Health Tech</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://picsum.photos/seed/bio1/400/250" alt="CRISPR">
-                <h3>Base Editing 2.0</h3>
-                <p>Improved base editors correct pathogenic mutations with <0.2% off‑target activity, accelerating gene‑therapy pipelines.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/bio2/400/250" alt="Wearable">
-                <h3>Continuous Health Monitors</h3>
-                <p>Microporous implantable patches record real‑time metabolic data and send AI‑derived insights to clinicians.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/bio3/400/250" alt="Synthetic Organs">
-                <h3>Lab‑grown Organs</h3>
-                <p>Scaffold‑free bioprinting of liver and kidney tissues now supports pre‑clinical drug testing, cutting animal use by 70 %.</p>
-            </div>
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1558770662-7e5d2b1b9d62?auto=format&fit=crop&w=400&q=80" alt="Quantum">
+        <div class="card-content">
+          <h3>IBM's 433‑qubit Eagle</h3>
+          <p>First 500‑qubit machine, enabling near‑fault‑tolerant computations for cryptography and materials science.</p>
+          <a href="https://www.ibm.com/blogs/research/2023/07/ibm-quantum-433-qubits" target="_blank">Explore</a>
         </div>
-    </section>
+      </article>
 
-    <section>
-        <h2>Renewable Energy & Storage</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://picsum.photos/seed/energy1/400/250" alt="Solar">
-                <h3>Perovskite Tandems</h3>
-                <p>Solar cells reaching 29 % efficiency with a 3‑year lifespan now surpass silicon in many markets.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/energy2/400/250" alt="Battery">
-                <h3>Solid‑State Batteries</h3>
-                <p>Lithium‑sulfur solid‑state packs deliver 500 Wh/kg and charge in 10 min, enabling electric‑vehicle range beyond 600 km.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/energy3/400/250" alt="Grid">
-                <h3>Smart Grids</h3>
-                <p>AI‑optimized grid management reduces peak demand by 20 % and integrates 70 % renewable penetration.</p>
-            </div>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1590608897129-2c0a9f6f1e13?auto=format&fit=crop&w=400&q=80" alt="Quantum network">
+        <div class="card-content">
+          <h3>Quantum Internet Milestone</h3>
+          <p>China's quantum satellite “Micius” demonstrates 1,000 km entanglement distribution, opening secure global QKD.</p>
+          <a href="https://www.nature.com/articles/s41586-023-05958-8" target="_blank">Read Study</a>
         </div>
-    </section>
+      </article>
+    </div>
+  </section>
 
-    <section>
-        <h2>Space Technology</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://picsum.photos/seed/space1/400/250" alt="Space Launch">
-                <h3>Reusable Launch Vehicles</h3>
-                <p>New generation rockets achieve <10 % launch cost, enabling frequent Mars transfer windows.</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/seed/space2/400/250" alt="Satellite">
-                <h3>CubeSat Constellations</h3>
-                <p>Low‑cost satellite swarms now offer global broadband coverage with <3 ms latency.</p>
-            </div>
-            <div class="card">
-                <img src="https
+  <section id="energy">
+    <h2>Energy & Sustainability</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1589923188905-1e70fbc3c12b?auto=format&fit=crop&w=400&q=80" alt="Solar">
+        <div class="card-content">
+          <h3>Perovskite Solar Cells</h3>
+          <
