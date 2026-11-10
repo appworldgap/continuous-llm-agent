@@ -2,151 +2,176 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026 Highlights</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology</title>
 <style>
   :root {
-    --primary: #0047bb;
-    --secondary: #ffcc00;
-    --background: #f5f5f5;
-    --text: #333;
-    --card-bg: #fff;
-    --shadow: rgba(0,0,0,0.1);
-    --font-sans: 'Inter', Arial, sans-serif;
+    --bg: #f5f6fa;
+    --card-bg: #ffffff;
+    --primary: #4a90e2;
+    --secondary: #f39c12;
+    --text: #2c3e50;
+    --muted: #95a5a6;
+    --font-stack: system-ui, sans-serif;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: var(--font-sans);
-    background: var(--background);
+    font-family: var(--font-stack);
+    background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
   }
   header {
     background: var(--primary);
     color: #fff;
-    padding: 2rem 1rem;
+    padding: 1.5rem 2rem;
     text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
   }
-  header h1 { font-size: 2.5rem; }
-  nav {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+  nav { padding: 0.5rem 2rem; }
   nav a {
-    color: #fff;
+    color: var(--primary);
+    margin-right: 1rem;
     text-decoration: none;
-    padding: .5rem 1rem;
-    border-radius: .3rem;
-    transition: background .2s;
+    font-weight: 500;
   }
-  nav a:hover { background: rgba(255,255,255,.2); }
-
-  main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-  .grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  main { flex: 1; padding: 2rem; max-width: 1200px; margin: auto; }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
   .card {
     background: var(--card-bg);
-    border-radius: .5rem;
-    overflow: hidden;
-    box-shadow: 0 2px 8px var(--shadow);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.05);
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     height: 100%;
   }
-  .card img { width: 100%; height: 180px; object-fit: cover; }
-  .card-body { padding: 1rem; flex: 1; display: flex; flex-direction: column; }
-  .card h3 { font-size: 1.25rem; margin-bottom: .5rem; }
-  .card p { flex: 1; }
-  .card a { margin-top: .5rem; align-self: flex-start; color: var(--primary); text-decoration: none; font-weight: 600; }
-  .card a:hover { text-decoration: underline; }
-
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: var(--primary);
-    color: #fff;
+  .card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
   }
-  @media (max-width: 600px) {
-    header h1 { font-size: 1.8rem; }
+  .card h3 svg { margin-right: 0.5rem; }
+  .card p { flex: 1; }
+  .card a {
+    margin-top: 1rem;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+  }
+  footer {
+    background: #dfe6e9;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #2c3e50;
+      --card-bg: #34495e;
+      --primary: #3498db;
+      --secondary: #e67e22;
+      --text: #ecf0f1;
+      --muted: #bdc3c7;
+    }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Latest Breakthroughs in Technology (2026)</h1>
-  <nav>
-    <a href="#quantum">Quantum</a>
-    <a href="#ai">AI & ML</a>
-    <a href="#5g-6g">5G/6G</a>
-    <a href="#biotech">Biotech</a>
-    <a href="#space">Space</a>
-    <a href="#renewables">Renewables</a>
-  </nav>
-</header>
+<header>Latest Breakthroughs in Technology</header>
+
+<nav>
+  <a href="#ai">AI</a>
+  <a href="#quantum">Quantum</a>
+  <a href="#energy">Energy</a>
+  <a href="#5g6g">5G/6G</a>
+  <a href="#bio">Biotechnology</a>
+</nav>
 
 <main>
-  <section id="quantum" aria-labelledby="quantum-title">
-    <h2 id="quantum-title">Quantum Computing Milestones</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1587822555271-1a2d0c8d6e3e?auto=format&fit=crop&w=400" alt="Quantum processor">
-        <div class="card-body">
-          <h3>Google's 2,500‑Qubit Processor</h3>
-          <p>Google announced a superconducting chip that achieved full fault‑tolerant quantum error correction, surpassing the 2,000‑qubit barrier and enabling practical quantum algorithms for cryptography and materials science.</p>
-          <a href="https://www.google.com/research/quantum" target="_blank">Read more</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1526035987287-5eab6b6b5f37?auto=format&fit=crop&w=400" alt="Ion trap">
-        <div class="card-body">
-          <h3>Ion‑Trap Quantum Network</h3>
-          <p>MIT and IBM jointly launched the first entanglement‑based quantum internet testbed, linking three cities with a 3,000‑km fibre‑optic line.</p>
-          <a href="https://www.mit.edu/quantum-networks" target="_blank">Read more</a>
-        </div>
-      </article>
+  <section id="ai" class="card-grid">
+    <div class="card">
+      <h3>
+        <!-- AI Icon -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C12 2 4 8 4 12C4 16 12 22 12 22C12 22 20 16 20 12C20 8 12 2 12 2Z" 
+                stroke="var(--primary)" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"/>
+          <path d="M12 6V12L16 14" stroke="var(--primary)" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        GPT‑4 &amp; Beyond
+      </h3>
+      <p>
+        OpenAI’s GPT‑4 has set new standards for natural‑language understanding
+        and generation, powering everything from advanced chatbots to
+        automated code synthesis. Researchers are now working on even larger
+        models with improved alignment, multimodal capabilities, and energy
+        efficiency.
+      </p>
+      <a href="https://openai.com/" target="_blank">Read more</a>
+    </div>
+
+    <div class="card">
+      <h3>
+        <!-- AI Icon -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="16" height="16" rx="2"
+                stroke="var(--primary)" stroke-width="2" />
+          <path d="M4 12H20" stroke="var(--primary)" stroke-width="2"
+                stroke-linecap="round" />
+        </svg>
+        AI‑Driven Drug Discovery
+      </h3>
+      <p>
+        Machine‑learning platforms now predict protein folding and drug
+        interactions with unprecedented accuracy, drastically shortening the
+        pipeline from concept to clinical trials. Companies like
+        Insilico Medicine and DeepMind are pioneering AI‑driven discovery of
+        novel therapeutics.
+      </p>
+      <a href="https://deepmind.com/" target="_blank">Explore AI Labs</a>
     </div>
   </section>
 
-  <section id="ai" aria-labelledby="ai-title">
-    <h2 id="ai-title">Artificial Intelligence & Machine Learning</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581091012184-3b0c1e2fca6a?auto=format&fit=crop&w=400" alt="AI model">
-        <div class="card-body">
-          <h3>GPT‑5 – Multi‑Modal Generalist</h3>
-          <p>OpenAI released GPT‑5, capable of generating coherent 3D scenes, music, code, and textual explanations in a single model, powered by a new transformer architecture that scales to 1.5 trillion parameters.</p>
-          <a href="https://openai.com/research/gpt-5" target="_blank">Read more</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1547548449-8a4b9a4d8c19?auto=format&fit=crop&w=400" alt="Neural network">
-        <div class="card-body">
-          <h3>Federated AI for Healthcare</h3>
-          <p>Hospitals across 30 countries deployed a federated learning platform that improved diagnostic accuracy for early cancer detection while preserving patient privacy.</p>
-          <a href="https://www.fedai.org/healthcare" target="_blank">Read more</a>
-        </div>
-      </article>
+  <section id="quantum" class="card-grid" style="margin-top:2rem;">
+    <div class="card">
+      <h3>
+        <!-- Quantum Icon -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="var(--primary)" stroke-width="2" />
+          <path d="M12 2V12L19 16" stroke="var(--primary)" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Quantum Supremacy
+      </h3>
+      <p>
+        Google, in collaboration with NASA, demonstrated quantum advantage
+        in a random‑number generation task using a 54‑qubit processor.
+        The breakthrough opens doors for complex simulations in chemistry,
+        cryptography, and optimization that are infeasible for classical
+        supercomputers.
+      </p>
+      <a href="https://blog.google/technology/ai/quantum-supremacy/" target="_blank">Read the report</a>
     </div>
-  </section>
 
-  <section id="5g-6g" aria-labelledby="5g-6g-title">
-    <h2 id="5g-6g-title">5G & 6G Advancements</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400" alt="5G tower">
-        <div class="card-body">
-          <h3>Global 5G Ultra‑Low Latency Rollout</h3>
-          <p>By 2026, 85% of the global population enjoys 5G speeds under 1 ms latency, enabling real‑time AR/VR and autonomous vehicle communication.</p>
-          <a href="https://www.itu.int/5g" target="_blank">Read more</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1587620962725-1a7aa0c7e0b4?auto=format&fit=crop&w=400" alt="6G concept">
-        <div class="card-body">
-          <h3>First 6G Demonstration</
+    <div class="card">
+      <h3>
+        <!-- Quantum Icon -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="
