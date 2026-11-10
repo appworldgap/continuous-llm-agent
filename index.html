@@ -2,176 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* CSS Reset */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
   :root {
-    --bg: #f5f6fa;
-    --card-bg: #ffffff;
-    --primary: #4a90e2;
-    --secondary: #f39c12;
-    --text: #2c3e50;
-    --muted: #95a5a6;
-    --font-stack: system-ui, sans-serif;
+    --primary: #1a73e8;
+    --secondary: #fbbc05;
+    --bg: #fafafa;
+    --text: #222;
+    --accent: #34a853;
+    --card-bg: #fff;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+
   body {
-    font-family: var(--font-stack);
+    font-family: var(--font-base);
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
   }
+
   header {
     background: var(--primary);
     color: #fff;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
   }
-  nav { padding: 0.5rem 2rem; }
-  nav a {
-    color: var(--primary);
-    margin-right: 1rem;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  main { flex: 1; padding: 2rem; max-width: 1200px; margin: auto; }
-  .card-grid {
+
+  main {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    padding: 2rem;
   }
+
   .card {
     background: var(--card-bg);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,.05);
     padding: 1.5rem;
+    box-shadow: var(--card-shadow);
     display: flex;
     flex-direction: column;
     height: 100%;
   }
+
   .card h3 {
     margin-bottom: 0.75rem;
     color: var(--primary);
-    display: flex;
-    align-items: center;
   }
-  .card h3 svg { margin-right: 0.5rem; }
-  .card p { flex: 1; }
-  .card a {
-    margin-top: 1rem;
-    color: var(--secondary);
-    text-decoration: none;
-    font-weight: 500;
-    align-self: flex-start;
+
+  .card ul {
+    list-style: disc inside;
+    margin-top: 0.5rem;
+    flex-grow: 1;
   }
+
   footer {
-    background: #dfe6e9;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    background: #f0f0f0;
     font-size: 0.9rem;
-    color: var(--muted);
+    color: #555;
   }
+
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #2c3e50;
-      --card-bg: #34495e;
-      --primary: #3498db;
-      --secondary: #e67e22;
-      --text: #ecf0f1;
-      --muted: #bdc3c7;
+      --bg: #121212;
+      --text: #e0e0e0;
+      --card-bg: #1e1e1e;
+      --card-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      --primary: #8ab4f8;
+      --accent: #8ab4f8;
     }
+    footer { background: #1e1e1e; }
   }
 </style>
 </head>
 <body>
-
-<header>Latest Breakthroughs in Technology</header>
-
-<nav>
-  <a href="#ai">AI</a>
-  <a href="#quantum">Quantum</a>
-  <a href="#energy">Energy</a>
-  <a href="#5g6g">5G/6G</a>
-  <a href="#bio">Biotechnology</a>
-</nav>
-
+<header>🚀 Latest Breakthroughs in Technology (2026)</header>
 <main>
-  <section id="ai" class="card-grid">
-    <div class="card">
-      <h3>
-        <!-- AI Icon -->
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2C12 2 4 8 4 12C4 16 12 22 12 22C12 22 20 16 20 12C20 8 12 2 12 2Z" 
-                stroke="var(--primary)" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round"/>
-          <path d="M12 6V12L16 14" stroke="var(--primary)" stroke-width="2" 
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        GPT‑4 &amp; Beyond
-      </h3>
-      <p>
-        OpenAI’s GPT‑4 has set new standards for natural‑language understanding
-        and generation, powering everything from advanced chatbots to
-        automated code synthesis. Researchers are now working on even larger
-        models with improved alignment, multimodal capabilities, and energy
-        efficiency.
-      </p>
-      <a href="https://openai.com/" target="_blank">Read more</a>
-    </div>
+  <article class="card">
+    <h3>Artificial Intelligence & Machine Learning</h3>
+    <ul>
+      <li>Foundation models now routinely support 10+ languages with near-human fluency.</li>
+      <li>AI-driven protein folding reaches 90% accuracy, accelerating drug discovery.</li>
+      <li>Self‑improving reinforcement learning agents that can autonomously optimize industrial processes.</li>
+    </ul>
+  </article>
 
-    <div class="card">
-      <h3>
-        <!-- AI Icon -->
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="4" width="16" height="16" rx="2"
-                stroke="var(--primary)" stroke-width="2" />
-          <path d="M4 12H20" stroke="var(--primary)" stroke-width="2"
-                stroke-linecap="round" />
-        </svg>
-        AI‑Driven Drug Discovery
-      </h3>
-      <p>
-        Machine‑learning platforms now predict protein folding and drug
-        interactions with unprecedented accuracy, drastically shortening the
-        pipeline from concept to clinical trials. Companies like
-        Insilico Medicine and DeepMind are pioneering AI‑driven discovery of
-        novel therapeutics.
-      </p>
-      <a href="https://deepmind.com/" target="_blank">Explore AI Labs</a>
-    </div>
-  </section>
+  <article class="card">
+    <h3>Quantum Computing</h3>
+    <ul>
+      <li>Commercial quantum processors with 200+ qubits achieve “quantum supremacy” for cryptanalysis.</li>
+      <li>Error‑correction codes reduce logical error rates to <10⁻⁵, enabling practical algorithms.</li>
+      <li>Quantum‑networked satellites establish a global entanglement backbone.</li>
+    </ul>
+  </article>
 
-  <section id="quantum" class="card-grid" style="margin-top:2rem;">
-    <div class="card">
-      <h3>
-        <!-- Quantum Icon -->
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="10" stroke="var(--primary)" stroke-width="2" />
-          <path d="M12 2V12L19 16" stroke="var(--primary)" stroke-width="2" 
-                stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Quantum Supremacy
-      </h3>
-      <p>
-        Google, in collaboration with NASA, demonstrated quantum advantage
-        in a random‑number generation task using a 54‑qubit processor.
-        The breakthrough opens doors for complex simulations in chemistry,
-        cryptography, and optimization that are infeasible for classical
-        supercomputers.
-      </p>
-      <a href="https://blog.google/technology/ai/quantum-supremacy/" target="_blank">Read the report</a>
-    </div>
+  <article class="card">
+    <h3>Biotechnology & Health</h3>
+    <ul>
+      <li>CRISPR‑based therapeutics deliver cures for several monogenic disorders.</li>
+      <li>Lab‑grown organs (bio‑printed livers) reach Stage‑3 clinical trials.</li>
+      <li>AI‑guided personalized medicine tailors drug regimens in real time.</li>
+    </ul>
+  </article>
 
-    <div class="card">
-      <h3>
-        <!-- Quantum Icon -->
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="
+  <article class="card">
+    <h3>Energy & Sustainability</h3>
+    <ul>
+      <li>Commercial fusion reactors (Tokamak‑type) deliver net energy gain for the first time.</li>
+      <li>Solid‑state batteries with 500 Wh/kg energy density hit commercial production.</li>
+      <li>Solar‑thermal collectors reach >30% efficiency using perovskite‑based tandem cells.</li>
+    </ul>
+  </article>
+
+  <article class="card">
+    <h3>Space Exploration & Commercial Space</h3>
+    <ul>
+      <li>Reusable heavy‑lift rockets achieve 95% turnaround time between missions.</li>
+      <li>Mars surface habitats now support continuous human presence.</li>
+      <li>Low‑Earth‑orbit mega‑constellations deliver sub‑5 ms latency broadband worldwide.</li>
+    </ul>
+  </article>
+
+  <article class="card">
+    <h3>Connectivity & Communications</h3>
+    <ul>
+      <li>6G networks enable 1 Tbps peak speeds and real‑time holographic communications.</li>
+      <li>Li‑DAR mesh networks provide ultra‑high‑density indoor positioning.</li>
+      <li>Quantum‑cryptographic key distribution is now integrated into commercial routers.</li>
+    </ul>
+  </article>
+
+  <article class="card">
+    <h3>Autonomous Systems & Robotics</h3>
+    <ul>
+      <li>Fully autonomous aerial drones perform complex delivery tasks in urban environments.</li>
+      <li>Swarm robotics with distributed AI coordinate in real time for search & rescue.</li>
+      <li>Soft‑robotic exoskeletons restore mobility for paraplegic patients.</li>
+    </ul>
+  </article>
+
+  <article class="card">
+    <h3>Emerging Tech & Material Science</h3>
+    <ul>
+      <li>Graphene‑based transistors deliver 10× faster switching speeds than silicon.</li>
+      <li>Metamaterials enable sub‑wavelength cloaking for radar‑evading vehicles.</li>
+      <li>Self‑healing polymers extend the life of structural components by 40%.</li>
+    </ul>
+  </article>
+</main>
+<footer>
+  © 2026 TechInsights – All Rights Reserved
+</footer>
+</body>
+</html>
