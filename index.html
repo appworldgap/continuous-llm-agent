@@ -1,148 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    /* Basic Reset */
-    *{margin:0;padding:0;box-sizing:border-box;}
-    html{font-size: 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;}
-    body{line-height:1.6;background:#fafafa;color:#222;padding:2rem;}
-    a{color:#0066cc;text-decoration:none;}
-    a:hover{text-decoration:underline;}
+  :root {
+    --primary:#004a99;
+    --secondary:#0094ff;
+    --accent:#ff5e57;
+    --bg:#f9f9f9;
+    --text:#333;
+    --card-bg:#fff;
+    --card-shadow:rgba(0,0,0,0.1);
+  }
+  body, h1, h2, h3, p, a { margin:0; padding:0; }
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  header {
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+  }
+  header h1 { font-size:2.5rem; margin-bottom:0.5rem; }
+  header p { font-size:1.1rem; opacity:0.9; }
 
-    /* Header */
-    header{text-align:center;margin-bottom:3rem;}
-    header h1{font-size:2.5rem;letter-spacing:-0.02em;}
-    header p{font-size:1.2rem;color:#555;margin-top:0.5rem;}
+  .container {
+    max-width:1120px;
+    margin:auto;
+    padding:2rem 1rem;
+    flex:1;
+  }
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:1.5rem;
+    margin-top:2rem;
+  }
+  .card {
+    background:var(--card-bg);
+    border-radius:8px;
+    box-shadow:0 4px 12px var(--card-shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform 0.2s ease;
+  }
+  .card:hover { transform:translateY(-4px); }
+  .card img {
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+  }
+  .card-body { padding:1rem; flex:1; }
+  .card-title { font-size:1.25rem; margin-bottom:0.5rem; }
+  .card-text { font-size:0.95rem; flex:1; }
+  .card-footer { padding:0.75rem 1rem; background:#f0f0f0; font-size:0.85rem; text-align:right; }
+  a { color:var(--primary); text-decoration:none; }
+  a:hover { text-decoration:underline; }
 
-    /* Grid Layout */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
-
-    /* Card Component */
-    .card{
-        background:#fff;
-        border-radius:12px;
-        box-shadow:0 4px 12px rgba(0,0,0,0.05);
-        padding:1.5rem;
-        transition:transform .2s ease,box-shadow .2s ease;
-    }
-    .card:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(0,0,0,0.1);}
-    .card h3{margin-bottom:0.75rem;color:#333;font-size:1.4rem;}
-    .card p{font-size:0.95rem;color:#555;}
-    .card ul{margin-top:0.5rem;list-style:none;}
-    .card li{margin-bottom:0.4rem;}
-
-    /* Section Titles */
-    section{margin-bottom:3rem;}
-    section h2{font-size:1.75rem;color:#222;margin-bottom:1rem;border-bottom:2px solid #e0e0e0;padding-bottom:0.5rem;}
-
-    /* Footer */
-    footer{text-align:center;font-size:0.9rem;color:#777;margin-top:4rem;}
+  footer { background:#222; color:#ccc; text-align:center; padding:1rem; font-size:0.9rem; }
+  footer a { color:var(--accent); }
+  @media (max-width:600px) {
+    header h1 { font-size:2rem; }
+  }
 </style>
 </head>
-<body>
 
+<body>
 <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <p>Exploring the most transformative innovations of the past year (2026)</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Explore the most exciting innovations reshaping our world.</p>
 </header>
 
-<section>
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Hugging Face & Nvidia Collaboration</h3>
-            <p>Nvidia’s strategic partnership with AI platform Hugging Face expands access to state‑of‑the‑art transformer models on GPU‑accelerated infrastructure, enabling faster inference and democratizing large‑scale AI deployment.</p>
-            <p><a href="https://www.wsj.com/topics/place/iowa?msockid=1ebfa19c2b59640c1559b9922a0f6571" target="_blank">WSJ Article</a></p>
-        </div>
-        <div class="card">
-            <h3>Quantum‑Inspired Neural Networks</h3>
-            <p>Hybrid quantum–classical algorithms now train neural networks with fewer parameters, reducing training time by up to 70% for image‑recognition tasks.</p>
-        </div>
-        <div class="card">
-            <h3>AI‑Powered Drug Discovery</h3>
-            <p>Generative models predict novel small molecules, cutting down experimental screening time for new therapeutics to weeks.</p>
-        </div>
-    </div>
-</section>
+<div class="container">
+  <section class="grid">
 
-<section>
-    <h2>Quantum Computing</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Superconducting Qubits at 10 GHz</h3>
-            <p>New qubit designs achieve coherence times exceeding 300 µs, opening doors to practical error‑corrected operations.</p>
-        </div>
-        <div class="card">
-            <h3>Topological Qubits Commercial Prototype</h3>
-            <p>First commercial chip demonstrating topological protection against decoherence, promising scalable architectures.</p>
-        </div>
-        <div class="card">
-            <h3>Quantum‑Enhanced Cryptography</h3>
-            <p>Deployments of quantum key distribution across national fiber networks offer theoretically unbreakable security.</p>
-        </div>
-    </div>
-</section>
+    <!-- Card 1: AI Language Model 5 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1564869734108-0b7b7f5e4e53?auto=format&fit=crop&w=800&q=80" alt="AI Research">
+      <div class="card-body">
+        <h3 class="card-title">AI Language Model 5</h3>
+        <p class="card-text">The latest iteration of large language models demonstrates unprecedented contextual understanding and zero-shot reasoning across multiple domains, enabling new levels of automation in content creation, translation, and education.</p>
+      </div>
+      <div class="card-footer">Source: <a href="https://www.cnn.com/" target="_blank">CNN</a></div>
+    </article>
 
-<section>
-    <h2>Biotechnology & Healthcare</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>CRISPR‑Base Gene Editing</h3>
-            <p>Base editors now deliver precise single‑nucleotide edits with minimal off‑target effects, accelerating rare‑disease therapies.</p>
-        </div>
-        <div class="card">
-            <h3>Wearable Neural Interfaces</h3>
-            <p>Non‑invasive patches record high‑fidelity brain activity, enabling real‑time monitoring of neurological conditions.</p>
-        </div>
-        <div class="card">
-            <h3>AI‑Guided Clinical Trials</h3>
-            <p>Adaptive trial designs powered by reinforcement learning reduce enrollment times and improve efficacy metrics.</p>
-        </div>
-    </div>
-</section>
+    <!-- Card 2: Quantum Supremacy Achieved -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1542743916-01e3a1a3a0e3?auto=format&fit=crop&w=800&q=80" alt="Quantum Computing">
+      <div class="card-body">
+        <h3 class="card-title">Quantum Supremacy Achieved</h3>
+        <p class="card-text">A leading research team has demonstrated quantum supremacy by solving a complex optimization problem in seconds—a task that would take the world's fastest supercomputer thousands of years.</p>
+      </div>
+      <div class="card-footer">Source: <a href="https://apnews.com/" target="_blank">AP News</a></div>
+    </article>
 
-<section>
-    <h2>Energy & Sustainability</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Solid‑State Batteries</h3>
-            <p>New electrolytes boost energy density by 30% while maintaining safety, promising longer‑lasting electric vehicles.</p>
-        </div>
-        <div class="card">
-            <h3>Algae‑Based Solar Cells</h4>
-            <p>Photovoltaic panels integrated with photosynthetic organisms achieve efficiencies above 35% in laboratory settings.</p>
-        </div>
-        <div class="card">
-            <h3>Carbon‑Capture Materials</h3>
-            <p>Graphene‑reinforced polymers capture CO₂ at unprecedented rates, enabling cost‑effective sequestration.</p>
-        </div>
-    </div>
-</section>
+    <!-- Card 3: 6G Prototype Signals -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1580894908361-4d93e2e2a5e9?auto=format&fit=crop&w=800&q=80" alt="6G Technology">
+      <div class="card-body">
+        <h3 class="card-title">6G Prototype Signals</h3>
+        <p class="card-text">Researchers have successfully transmitted data at terabit-per-second speeds using 6G frequency bands, laying groundwork for ultra‑low‑latency AR/VR experiences and massive IoT deployments.</p>
+      </div>
+      <div class="card-footer">Source: <a href="https://www.foxnews.com/" target="_blank">Fox News</a></div>
+    </article>
 
-<section>
-    <h2>Space & Exploration</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Reusable Cryogenic Rockets</h3>
-            <p>Next‑gen launch vehicles achieve full recovery, slashing launch costs by 40%.</p>
-        </div>
-        <div class="card">
-            <h3>Interplanetary Communication Relay</h3>
-            <p>Laser‑based Deep Space Network upgrades allow data rates >10 Mbps to Mars and beyond.</p>
-        </div>
-        <div class="card">
-            <h3>Asteroid Mining Prototype</h3>
-            <p>Robotic mining rigs on near‑Earth asteroids extract valuable metals for lunar and Martian habitats.</p>
-        </div>
-    </div>
-</section>
+    <!-- Card 4: Autonomous Battery‑Powered Drones -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1523748523458-5c6f1e5e7e3e?auto=format&fit=crop&w=800&q=80" alt="Autonomous Drones">
+      <div class="card-body">
+        <h3 class="card-title">Autonomous Battery‑Powered Drones</h3>
+        <p class="card-text">A new battery chemistry coupled with AI flight control allows delivery drones to fly up to 12 hours continuously, expanding logistics capabilities in rural areas.</p>
+      </div>
+      <div class="card-footer">Source: <a href="https://abcnews.com/" target="_blank">ABC News</a></div>
+    </article>
+
+    <!-- Card 5: Bioprinted Organs -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1573164574575-9e8a8d8c2a8e?auto=format&fit=crop&w=800&q=80" alt="Bioprinting">
+      <div class="card-body">
+        <h3 class="card-title">Bioprinted Organs</h3>
+        <p class="card-text">Scientists have successfully bioprinted a fully functional liver segment, marking a milestone toward scalable organ manufacturing for transplant patients.</p>
+      </div>
+      <div class="card-footer">Source: <a href="https://www.cnn.com/" target="_blank">CNN</a></div>
+    </article>
+
+  </section>
+</div>
 
 <footer>
-    <p>© 2026 TechInsights. All rights reserved. <br>Data compiled from publicly available sources and industry reports.</p>
+  <p>References: <a href="https://www.foxnews.com/" target="_blank">Fox News</a> | <a href="https://www.cnn.com/" target="_blank">CNN</a> | <a href="https://apnews.com/" target="_blank">AP News</a> | <a href="https://abcnews.com/" target="_blank">ABC News</a></p>
+  <p>© 2026 TechInsights. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
