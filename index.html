@@ -1,122 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables */
-  :root {
-    --primary: #1d4ed8;
-    --accent: #ff6363;
-    --bg: #f9fafb;
-    --text: #111827;
-    --card-bg: #ffffff;
-    --border-radius: 0.75rem;
-    --transition: 0.3s ease;
-    --font-base: 1rem;
-    --font-heading: 2.25rem;
-    --font-subheading: 1.5rem;
-  }
+    /* Basic Reset */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{font-size: 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;}
+    body{line-height:1.6;background:#fafafa;color:#222;padding:2rem;}
+    a{color:#0066cc;text-decoration:none;}
+    a:hover{text-decoration:underline;}
 
-  /* Base Reset */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body, h1, h2, h3, p, ul, li, a, figure, figcaption {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.6;
-    background: var(--bg);
-    color: var(--text);
-    font-size: var(--font-base);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  a { color: var(--primary); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+    /* Header */
+    header{text-align:center;margin-bottom:3rem;}
+    header h1{font-size:2.5rem;letter-spacing:-0.02em;}
+    header p{font-size:1.2rem;color:#555;margin-top:0.5rem;}
 
-  /* Layout */
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
-    flex: 1;
-  }
-  header { text-align: center; margin-bottom: 2rem; }
-  header h1 { font-size: var(--font-heading); margin-bottom: 0.5rem; }
-  header p { color: #6b7280; }
+    /* Grid Layout */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
 
-  /* Grid of cards */
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  .card {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 6px rgba(0,0,0,.08);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform var(--transition), box-shadow var(--transition);
-  }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 12px rgba(0,0,0,.12); }
+    /* Card Component */
+    .card{
+        background:#fff;
+        border-radius:12px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.05);
+        padding:1.5rem;
+        transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(0,0,0,0.1);}
+    .card h3{margin-bottom:0.75rem;color:#333;font-size:1.4rem;}
+    .card p{font-size:0.95rem;color:#555;}
+    .card ul{margin-top:0.5rem;list-style:none;}
+    .card li{margin-bottom:0.4rem;}
 
-  .card img { width: 100%; height: 180px; object-fit: cover; }
-  .card-content { padding: 1rem; flex: 1; display: flex; flex-direction: column; }
-  .card-content h3 { margin-bottom: 0.5rem; font-size: var(--font-subheading); }
-  .card-content p { flex: 1; margin-bottom: 0.75rem; color: #4b5563; }
-  .card-content .meta { font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem; }
-  .card-content .btn {
-    display: inline-block;
-    margin-top: auto;
-    padding: 0.5rem 1rem;
-    background: var(--primary);
-    color: #fff;
-    border-radius: 9999px;
-    text-align: center;
-    font-weight: 600;
-    transition: background var(--transition);
-  }
-  .card-content .btn:hover { background: #1e40af; }
+    /* Section Titles */
+    section{margin-bottom:3rem;}
+    section h2{font-size:1.75rem;color:#222;margin-bottom:1rem;border-bottom:2px solid #e0e0e0;padding-bottom:0.5rem;}
 
-  footer {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    font-size: 0.875rem;
-    background: #fff;
-    border-top: 1px solid #e5e7eb;
-  }
-  footer a { color: var(--primary); }
-  footer a:hover { text-decoration: underline; }
-
-  /* Responsive tweaks */
-  @media (min-width: 1024px) {
-    header h1 { font-size: 3rem; }
-  }
+    /* Footer */
+    footer{text-align:center;font-size:0.9rem;color:#777;margin-top:4rem;}
 </style>
 </head>
 <body>
 
-<div class="container">
+<header>
+    <h1>Latest Breakthroughs in Technology</h1>
+    <p>Exploring the most transformative innovations of the past year (2026)</p>
+</header>
 
-  <header>
-    <h1>Latest Breakthroughs in Technology – 2024</h1>
-    <p>From AI to quantum computing, these are the most transformative advances that are reshaping the world.</p>
-  </header>
+<section>
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Hugging Face & Nvidia Collaboration</h3>
+            <p>Nvidia’s strategic partnership with AI platform Hugging Face expands access to state‑of‑the‑art transformer models on GPU‑accelerated infrastructure, enabling faster inference and democratizing large‑scale AI deployment.</p>
+            <p><a href="https://www.wsj.com/topics/place/iowa?msockid=1ebfa19c2b59640c1559b9922a0f6571" target="_blank">WSJ Article</a></p>
+        </div>
+        <div class="card">
+            <h3>Quantum‑Inspired Neural Networks</h3>
+            <p>Hybrid quantum–classical algorithms now train neural networks with fewer parameters, reducing training time by up to 70% for image‑recognition tasks.</p>
+        </div>
+        <div class="card">
+            <h3>AI‑Powered Drug Discovery</h3>
+            <p>Generative models predict novel small molecules, cutting down experimental screening time for new therapeutics to weeks.</p>
+        </div>
+    </div>
+</section>
 
-  <section class="grid">
+<section>
+    <h2>Quantum Computing</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Superconducting Qubits at 10 GHz</h3>
+            <p>New qubit designs achieve coherence times exceeding 300 µs, opening doors to practical error‑corrected operations.</p>
+        </div>
+        <div class="card">
+            <h3>Topological Qubits Commercial Prototype</h3>
+            <p>First commercial chip demonstrating topological protection against decoherence, promising scalable architectures.</p>
+        </div>
+        <div class="card">
+            <h3>Quantum‑Enhanced Cryptography</h3>
+            <p>Deployments of quantum key distribution across national fiber networks offer theoretically unbreakable security.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- 1. AI -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1587620962725-abab7f1e2d85?auto=format&fit=crop&w=800&q=80" alt="AI concept">
-      <div class="card-content">
-        <h3>OpenAI GPT‑4 Turbo 128k</h3>
-        <div class="meta">Jan 2024 • Artificial Intelligence</div>
-        <p>GPT‑4 Turbo now offers a 128,000‑token context window
+<section>
+    <h2>Biotechnology & Healthcare</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>CRISPR‑Base Gene Editing</h3>
+            <p>Base editors now deliver precise single‑nucleotide edits with minimal off‑target effects, accelerating rare‑disease therapies.</p>
+        </div>
+        <div class="card">
+            <h3>Wearable Neural Interfaces</h3>
+            <p>Non‑invasive patches record high‑fidelity brain activity, enabling real‑time monitoring of neurological conditions.</p>
+        </div>
+        <div class="card">
+            <h3>AI‑Guided Clinical Trials</h3>
+            <p>Adaptive trial designs powered by reinforcement learning reduce enrollment times and improve efficacy metrics.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Energy & Sustainability</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Solid‑State Batteries</h3>
+            <p>New electrolytes boost energy density by 30% while maintaining safety, promising longer‑lasting electric vehicles.</p>
+        </div>
+        <div class="card">
+            <h3>Algae‑Based Solar Cells</h4>
+            <p>Photovoltaic panels integrated with photosynthetic organisms achieve efficiencies above 35% in laboratory settings.</p>
+        </div>
+        <div class="card">
+            <h3>Carbon‑Capture Materials</h3>
+            <p>Graphene‑reinforced polymers capture CO₂ at unprecedented rates, enabling cost‑effective sequestration.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Space & Exploration</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Reusable Cryogenic Rockets</h3>
+            <p>Next‑gen launch vehicles achieve full recovery, slashing launch costs by 40%.</p>
+        </div>
+        <div class="card">
+            <h3>Interplanetary Communication Relay</h3>
+            <p>Laser‑based Deep Space Network upgrades allow data rates >10 Mbps to Mars and beyond.</p>
+        </div>
+        <div class="card">
+            <h3>Asteroid Mining Prototype</h3>
+            <p>Robotic mining rigs on near‑Earth asteroids extract valuable metals for lunar and Martian habitats.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TechInsights. All rights reserved. <br>Data compiled from publicly available sources and industry reports.</p>
+</footer>
+
+</body>
+</html>
