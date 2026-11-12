@@ -3,76 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    :root{
-        --primary:#1e90ff;
-        --bg:#f9f9f9;
-        --card:#fff;
-        --text:#333;
-        --accent:#ff6347;
-        --font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
-    }
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:var(--font-family);background:var(--bg);color:var(--text);line-height:1.6;}
-    header{background:var(--primary);color:#fff;padding:2rem 1rem;text-align:center;}
-    header h1{font-size:2.5rem;}
-    main{max-width:1200px;margin:auto;padding:2rem 1rem;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-    .card{background:var(--card);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);padding:1.5rem;display:flex;flex-direction:column;height:100%;}
-    .card h3{color:var(--primary);margin-bottom:.75rem;}
-    .card p{flex-grow:1;}
-    .card a{color:var(--accent);text-decoration:none;font-weight:bold;}
-    .card a:hover{text-decoration:underline;}
-    footer{background:#222;color:#eee;text-align:center;padding:1rem;}
-    @media(max-width:600px){
-        header h1{font-size:2rem;}
-    }
+  :root {
+    --bg:#f4f9fc;
+    --card:#ffffff;
+    --accent:#0056b3;
+    --text:#333;
+    --shadow:#d1d5db;
+  }
+  body {
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  header {
+    background:var(--accent);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+  }
+  header h1 {
+    margin:0;
+    font-size:2.5rem;
+  }
+  main {
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 1rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:1.5rem;
+  }
+  .card {
+    background:var(--card);
+    border-radius:8px;
+    box-shadow:0 2px 8px var(--shadow);
+    overflow:hidden;
+    transition:transform .2s,box-shadow .2s;
+    display:flex;
+    flex-direction:column;
+  }
+  .card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 4px 12px var(--shadow);
+  }
+  .card img {
+    width:100%;
+    height:160px;
+    object-fit:cover;
+  }
+  .card-content {
+    padding:1rem;
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .card h3 {
+    margin:0 0 .5rem 0;
+    color:var(--accent);
+  }
+  .card p {
+    flex-grow:1;
+    margin:0;
+  }
+  footer {
+    text-align:center;
+    padding:1rem;
+    font-size:.9rem;
+    color:var(--text);
+  }
+  @media (max-width:600px) {
+    header h1 {font-size:2rem;}
+  }
 </style>
 </head>
 <body>
 <header>
-    <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
 <main>
-    <section>
-        <h2>Recent Innovations</h2>
-        <div class="grid">
-            <!-- Breakthrough 1 -->
-            <article class="card">
-                <h3>Quantum Computing: New Qubit Stability</h3>
-                <p>Researchers have achieved unprecedented qubit coherence times, bringing quantum computers closer to practical use. This breakthrough could revolutionize cryptography, drug discovery, and complex simulations.</p>
-                <a href="https://www.apnews.com/" target="_blank" rel="noopener">AP News</a>
-            </article>
-            <!-- Breakthrough 2 -->
-            <article class="card">
-                <h3>AI Language Models: Human‑Level Understanding</h3>
-                <p>OpenAI and other labs released next‑generation language models that can interpret context with near‑human accuracy, enabling smarter virtual assistants, automated content creation, and advanced natural‑language interfaces.</p>
-                <a href="https://www.cnn.com/" target="_blank" rel="noopener">CNN</a>
-            </article>
-            <!-- Breakthrough 3 -->
-            <article class="card">
-                <h3>Energy Storage: Solid‑State Batteries</h3>
-                <p>Solid‑state battery prototypes now offer higher energy densities and safer operation than conventional lithium‑ion cells, promising longer‑lasting electric vehicles and renewable‑energy storage.</p>
-                <a href="https://www.huffpost.com/news/" target="_blank" rel="noopener">HuffPost</a>
-            </article>
-            <!-- Breakthrough 4 -->
-            <article class="card">
-                <h3>6G Communication: Terahertz Wave Technology</h3>
-                <p>Scientists demonstrated stable terahertz transmission over several kilometers, paving the way for ultra‑high‑speed, low‑latency networks that will support autonomous vehicles, AR/VR, and IoT ecosystems.</p>
-                <a href="https://www.foxnews.com/" target="_blank" rel="noopener">Fox News</a>
-            </article>
-            <!-- Breakthrough 5 -->
-            <article class="card">
-                <h3>Gene Editing: CRISPR‑Base Editing</h3>
-                <p>CRISPR‑base editing can correct single‑nucleotide mutations without cutting DNA, offering a safer path toward treating genetic disorders like sickle cell disease and cystic fibrosis.</p>
-                <a href="https://www.apnews.com/" target="_blank" rel="noopener">AP News</a>
-            </article>
-        </div>
-    </section>
+  <!-- AI & Machine Learning -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1581092334711-3c8e6a0b3c23?auto=format&fit=crop&w=800&q=60" alt="AI">
+    <div class="card-content">
+      <h3>Generative AI (GPT‑4 & Beyond)</h3>
+      <p>OpenAI’s GPT‑4 showcased multimodal reasoning, enabling natural language processing to integrate text, images, and code. Emerging models are increasingly fine‑tuned for specific domains, drastically reducing the need for large labeled datasets.</p>
+    </div>
+  </article>
+
+  <!-- Quantum Computing -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1618151520456-2c7d4e1f5e23?auto=format&fit=crop&w=800&q=60" alt="Quantum Computing">
+    <div class="card-content">
+      <h3>Quantum Supremacy & Error‑Correction</h3>
+      <p>IBM and Google have pushed quantum processors past the 50‑qubit threshold with low‑error error‑correction schemes, enabling more complex simulation tasks such as protein folding and materials design.</p>
+    </div>
+  </article>
+
+  <!-- Biotechnology -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=60" alt="Biotech">
+    <div class="card-content">
+      <h3>CRISPR‑Based Gene Therapy</h3>
+      <p>Gene editing platforms now include in vivo delivery methods that correct genetic defects directly within living tissues, opening new avenues for treating previously untreatable genetic disorders.</p>
+    </div>
+  </article>
+
+  <!-- 6G Research -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1589923188907-1c4e3c4c7bfa?auto=format&fit=crop&w=800&q=60" alt="6G">
+    <div class="card-content">
+      <h3>6G & Terahertz Communications</h3>
+      <p>Research on 6G networks is progressing with terahertz frequencies, promising 1‑Tbps speeds and ultra‑low latency, essential for real‑time holographic interfaces and autonomous systems.</p>
+    </div>
+  </article>
+
+  <!-- Autonomous Vehicles -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1562022920-4c30d7a0d8c2?auto=format&fit=crop&w=800&q=60" alt="Autonomous Vehicles">
+    <div class="card-content">
+      <h3>Level 5 Self‑Driving Tech</h3>
+      <p>Automakers and start‑ups have deployed advanced LIDAR‑free perception stacks powered by deep learning, enabling reliable operation in complex urban environments without external sensors.</p>
+    </div>
+  </article>
+
+  <!-- Energy Storage -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1589923188894-4b3d1a8c1e3b?auto=format&fit=crop&w=800&q=60" alt="Energy">
+    <div class="card-content">
+      <h3>Solid‑State Batteries</h3>
+      <p>Solid‑state chemistry offers higher energy density, faster charging, and improved safety compared to liquid electrolytes, positioning them as the core of next‑generation EVs and grid storage.</p>
+    </div>
+  </article>
 </main>
 <footer>
-    © 2026 TechBreakthroughs.com | All rights reserved
+  &copy; 2026 Tech Insights. All rights reserved.
 </footer>
 </body>
 </html>
