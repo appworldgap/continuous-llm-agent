@@ -1,146 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  :root {
-    --primary:#004a99;
-    --secondary:#0094ff;
-    --accent:#ff5e57;
-    --bg:#f9f9f9;
-    --text:#333;
-    --card-bg:#fff;
-    --card-shadow:rgba(0,0,0,0.1);
-  }
-  body, h1, h2, h3, p, a { margin:0; padding:0; }
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-  }
-  header {
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:#fff;
-    padding:2rem 1rem;
-    text-align:center;
-  }
-  header h1 { font-size:2.5rem; margin-bottom:0.5rem; }
-  header p { font-size:1.1rem; opacity:0.9; }
-
-  .container {
-    max-width:1120px;
-    margin:auto;
-    padding:2rem 1rem;
-    flex:1;
-  }
-  .grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-    gap:1.5rem;
-    margin-top:2rem;
-  }
-  .card {
-    background:var(--card-bg);
-    border-radius:8px;
-    box-shadow:0 4px 12px var(--card-shadow);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform 0.2s ease;
-  }
-  .card:hover { transform:translateY(-4px); }
-  .card img {
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    display:block;
-  }
-  .card-body { padding:1rem; flex:1; }
-  .card-title { font-size:1.25rem; margin-bottom:0.5rem; }
-  .card-text { font-size:0.95rem; flex:1; }
-  .card-footer { padding:0.75rem 1rem; background:#f0f0f0; font-size:0.85rem; text-align:right; }
-  a { color:var(--primary); text-decoration:none; }
-  a:hover { text-decoration:underline; }
-
-  footer { background:#222; color:#ccc; text-align:center; padding:1rem; font-size:0.9rem; }
-  footer a { color:var(--accent); }
-  @media (max-width:600px) {
-    header h1 { font-size:2rem; }
-  }
+    :root{
+        --primary:#1e90ff;
+        --bg:#f9f9f9;
+        --card:#fff;
+        --text:#333;
+        --accent:#ff6347;
+        --font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font-family);background:var(--bg);color:var(--text);line-height:1.6;}
+    header{background:var(--primary);color:#fff;padding:2rem 1rem;text-align:center;}
+    header h1{font-size:2.5rem;}
+    main{max-width:1200px;margin:auto;padding:2rem 1rem;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+    .card{background:var(--card);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);padding:1.5rem;display:flex;flex-direction:column;height:100%;}
+    .card h3{color:var(--primary);margin-bottom:.75rem;}
+    .card p{flex-grow:1;}
+    .card a{color:var(--accent);text-decoration:none;font-weight:bold;}
+    .card a:hover{text-decoration:underline;}
+    footer{background:#222;color:#eee;text-align:center;padding:1rem;}
+    @media(max-width:600px){
+        header h1{font-size:2rem;}
+    }
 </style>
 </head>
-
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Explore the most exciting innovations reshaping our world.</p>
+    <h1>Latest Breakthroughs in Technology</h1>
 </header>
-
-<div class="container">
-  <section class="grid">
-
-    <!-- Card 1: AI Language Model 5 -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1564869734108-0b7b7f5e4e53?auto=format&fit=crop&w=800&q=80" alt="AI Research">
-      <div class="card-body">
-        <h3 class="card-title">AI Language Model 5</h3>
-        <p class="card-text">The latest iteration of large language models demonstrates unprecedented contextual understanding and zero-shot reasoning across multiple domains, enabling new levels of automation in content creation, translation, and education.</p>
-      </div>
-      <div class="card-footer">Source: <a href="https://www.cnn.com/" target="_blank">CNN</a></div>
-    </article>
-
-    <!-- Card 2: Quantum Supremacy Achieved -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1542743916-01e3a1a3a0e3?auto=format&fit=crop&w=800&q=80" alt="Quantum Computing">
-      <div class="card-body">
-        <h3 class="card-title">Quantum Supremacy Achieved</h3>
-        <p class="card-text">A leading research team has demonstrated quantum supremacy by solving a complex optimization problem in seconds—a task that would take the world's fastest supercomputer thousands of years.</p>
-      </div>
-      <div class="card-footer">Source: <a href="https://apnews.com/" target="_blank">AP News</a></div>
-    </article>
-
-    <!-- Card 3: 6G Prototype Signals -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1580894908361-4d93e2e2a5e9?auto=format&fit=crop&w=800&q=80" alt="6G Technology">
-      <div class="card-body">
-        <h3 class="card-title">6G Prototype Signals</h3>
-        <p class="card-text">Researchers have successfully transmitted data at terabit-per-second speeds using 6G frequency bands, laying groundwork for ultra‑low‑latency AR/VR experiences and massive IoT deployments.</p>
-      </div>
-      <div class="card-footer">Source: <a href="https://www.foxnews.com/" target="_blank">Fox News</a></div>
-    </article>
-
-    <!-- Card 4: Autonomous Battery‑Powered Drones -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1523748523458-5c6f1e5e7e3e?auto=format&fit=crop&w=800&q=80" alt="Autonomous Drones">
-      <div class="card-body">
-        <h3 class="card-title">Autonomous Battery‑Powered Drones</h3>
-        <p class="card-text">A new battery chemistry coupled with AI flight control allows delivery drones to fly up to 12 hours continuously, expanding logistics capabilities in rural areas.</p>
-      </div>
-      <div class="card-footer">Source: <a href="https://abcnews.com/" target="_blank">ABC News</a></div>
-    </article>
-
-    <!-- Card 5: Bioprinted Organs -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1573164574575-9e8a8d8c2a8e?auto=format&fit=crop&w=800&q=80" alt="Bioprinting">
-      <div class="card-body">
-        <h3 class="card-title">Bioprinted Organs</h3>
-        <p class="card-text">Scientists have successfully bioprinted a fully functional liver segment, marking a milestone toward scalable organ manufacturing for transplant patients.</p>
-      </div>
-      <div class="card-footer">Source: <a href="https://www.cnn.com/" target="_blank">CNN</a></div>
-    </article>
-
-  </section>
-</div>
-
+<main>
+    <section>
+        <h2>Recent Innovations</h2>
+        <div class="grid">
+            <!-- Breakthrough 1 -->
+            <article class="card">
+                <h3>Quantum Computing: New Qubit Stability</h3>
+                <p>Researchers have achieved unprecedented qubit coherence times, bringing quantum computers closer to practical use. This breakthrough could revolutionize cryptography, drug discovery, and complex simulations.</p>
+                <a href="https://www.apnews.com/" target="_blank" rel="noopener">AP News</a>
+            </article>
+            <!-- Breakthrough 2 -->
+            <article class="card">
+                <h3>AI Language Models: Human‑Level Understanding</h3>
+                <p>OpenAI and other labs released next‑generation language models that can interpret context with near‑human accuracy, enabling smarter virtual assistants, automated content creation, and advanced natural‑language interfaces.</p>
+                <a href="https://www.cnn.com/" target="_blank" rel="noopener">CNN</a>
+            </article>
+            <!-- Breakthrough 3 -->
+            <article class="card">
+                <h3>Energy Storage: Solid‑State Batteries</h3>
+                <p>Solid‑state battery prototypes now offer higher energy densities and safer operation than conventional lithium‑ion cells, promising longer‑lasting electric vehicles and renewable‑energy storage.</p>
+                <a href="https://www.huffpost.com/news/" target="_blank" rel="noopener">HuffPost</a>
+            </article>
+            <!-- Breakthrough 4 -->
+            <article class="card">
+                <h3>6G Communication: Terahertz Wave Technology</h3>
+                <p>Scientists demonstrated stable terahertz transmission over several kilometers, paving the way for ultra‑high‑speed, low‑latency networks that will support autonomous vehicles, AR/VR, and IoT ecosystems.</p>
+                <a href="https://www.foxnews.com/" target="_blank" rel="noopener">Fox News</a>
+            </article>
+            <!-- Breakthrough 5 -->
+            <article class="card">
+                <h3>Gene Editing: CRISPR‑Base Editing</h3>
+                <p>CRISPR‑base editing can correct single‑nucleotide mutations without cutting DNA, offering a safer path toward treating genetic disorders like sickle cell disease and cystic fibrosis.</p>
+                <a href="https://www.apnews.com/" target="_blank" rel="noopener">AP News</a>
+            </article>
+        </div>
+    </section>
+</main>
 <footer>
-  <p>References: <a href="https://www.foxnews.com/" target="_blank">Fox News</a> | <a href="https://www.cnn.com/" target="_blank">CNN</a> | <a href="https://apnews.com/" target="_blank">AP News</a> | <a href="https://abcnews.com/" target="_blank">ABC News</a></p>
-  <p>© 2026 TechInsights. All rights reserved.</p>
+    © 2026 TechBreakthroughs.com | All rights reserved
 </footer>
 </body>
 </html>
