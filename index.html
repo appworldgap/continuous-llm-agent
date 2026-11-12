@@ -2,172 +2,164 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026 Edition</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --primary: #1e3a8a;
-    --accent: #f59e0b;
-    --bg: #f9fafb;
-    --text: #1f2937;
-    --card-bg: #ffffff;
-    --card-shadow: rgba(0, 0, 0, 0.1);
-    --font: "Segoe UI", Tahoma, sans-serif;
+    --bg: #f9f9f9;
+    --text: #333;
+    --accent: #0066cc;
+    --card-bg: #fff;
+    --card-shadow: rgba(0,0,0,0.1);
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   body {
-    margin: 0;
-    font-family: var(--font);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   header {
-    background: var(--primary);
+    background: var(--accent);
     color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 1rem 2rem;
   }
   header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
   }
   nav {
-    background: #fff;
-    border-bottom: 1px solid var(--card-shadow);
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
-    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
   }
   nav a {
+    color: #fff;
     text-decoration: none;
-    color: var(--primary);
-    font-weight: 600;
+    margin-right: 1rem;
   }
   main {
+    flex: 1;
+    padding: 2rem;
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 0 auto;
   }
-  .grid {
+  .hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  section#breakthroughs {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
-  .card {
+  article.card {
     background: var(--card-bg);
     border-radius: 8px;
-    box-shadow: 0 4px 6px var(--card-shadow);
     overflow: hidden;
+    box-shadow: 0 2px 6px var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
   }
+  article.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px var(--card-shadow);
+  }
   .card img {
     width: 100%;
-    height: 180px;
+    height: 160px;
     object-fit: cover;
   }
-  .card-content {
+  .card-body {
     padding: 1rem;
-    flex-grow: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
-  .card-content h2 {
-    margin-top: 0;
-    font-size: 1.3rem;
-    color: var(--primary);
+  .card-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
   }
-  .card-content p {
-    margin: 0.5rem 0;
+  .card-body p {
+    flex: 1;
+    margin-bottom: 1rem;
+    color: #555;
   }
-  .card-content a {
-    color: var(--accent);
+  .card-body a {
+    align-self: flex-start;
     text-decoration: none;
+    color: var(--accent);
     font-weight: 600;
+    transition: color 0.2s ease;
+  }
+  .card-body a:hover {
+    color: #004999;
   }
   footer {
-    background: var(--primary);
-    color: #fff;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: #eee;
+    color: #777;
+    font-size: 0.9rem;
   }
   @media (max-width: 600px) {
-    header h1 {
-      font-size: 1.8rem;
-    }
-    nav a {
-      font-size: 0.9rem;
-    }
+    header h1 { font-size: 1.4rem; }
+    .hero h2 { font-size: 1.8rem; }
   }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026 Edition</h1>
+  <h1>Tech Insight Hub</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Articles</a>
+    <a href="#">Reviews</a>
+    <a href="#">About</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#quantum">Quantum Computing</a>
-  <a href="#ai">Artificial Intelligence</a>
-  <a href="#6g">6G & Next‑Gen Connectivity</a>
-  <a href="#renewable">Renewable Energy</a>
-  <a href="#bio">Biotechnology</a>
-</nav>
-
 <main>
-  <section id="quantum">
-    <h2>Quantum Computing: Silicon‑Based Quantum Processors</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1601220197482-2b8b9f4d7c8f?auto=format&fit=crop&w=600&q=80" alt="Quantum chip">
-        <div class="card-content">
-          <h3>Silicon Quantum Processor Achieves 1,000 Qubits</h3>
-          <p>In a landmark demonstration, <a href="https://www.researchgate.net/publication/375543456_Silicon-based_Quantum_Processor_Overcoming_Dephasing" target="_blank">MIT researchers</a> achieved a coherent silicon‑based processor with over 1,000 qubits, surpassing the 500‑qubit barrier set by 2024. This breakthrough enables more robust quantum error correction and paves the way for practical quantum advantage in materials science and cryptography.</p>
-          <a href="https://www.science.org/doi/abs/10.1126/science.abc1234" target="_blank">Read more</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1584697964204-5c7e5a7b9d2e?auto=format&fit=crop&w=600&q=80" alt="Quantum lab">
-        <div class="card-content">
-          <h3>Hybrid Quantum‑Classical Algorithms Reduce Error Rates</h3>
-          <p>Quantum‑classical hybrid algorithms, such as <a href="https://arxiv.org/abs/2403.01234" target="_blank">VQE 2.0</a>, now maintain error rates below 0.5% in noisy intermediate‑scale quantum (NISQ) devices. These protocols significantly boost the feasibility of simulating complex molecules for drug discovery.</p>
-          <a href="https://arxiv.org/abs/2403.01234" target="_blank">Read more</a>
-        </div>
-      </div>
-    </div>
+  <section class="hero">
+    <h2>Latest Breakthroughs in Technology</h2>
+    <p>Explore the cutting‑edge discoveries reshaping the world today.</p>
   </section>
 
-  <section id="ai">
-    <h2>Artificial Intelligence: Generative AI Goes Beyond Text</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1531718519115-6bfa1d1e9c0b?auto=format&fit=crop&w=600&q=80" alt="AI model">
-        <div class="card-content">
-          <h3>OpenAI Launches GPT-5 with Multimodal Reasoning</h3>
-          <p>OpenAI’s GPT‑5 can simultaneously process text, images, audio, and video, delivering context‑aware responses across modalities. The model’s new “reasoning” layer achieves a 25% improvement on the <a href="https://benchmark.ai" target="_blank">Multimodal Reasoning Benchmark</a>, bringing it close to human‑level performance.</p>
-          <a href="https://openai.com/blog/gpt-5" target="_blank">Read more</a>
-        </div>
+  <section id="breakthroughs">
+    <article class="card">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDEwMCAxNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0M2M0Q5NyI+PC9zdmc+" alt="Quantum Computing">
+      <div class="card-body">
+        <h3>Quantum Supremacy Achieved by Start‑Up</h3>
+        <p>A new 128‑qubit processor demonstrates computational tasks beyond classical supercomputers, promising advances in cryptography and materials science.</p>
+        <a href="https://www.mit.edu/quantum" target="_blank">Read more</a>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="AI art">
-        <div class="card-content">
-          <h3>Stable Diffusion v5: AI Generates 3D Models</h3>
-          <p>Stable Diffusion’s latest release can convert textual prompts into fully textured 3D meshes ready for AR/VR applications. This capability reduces asset creation time from weeks to minutes for game developers and designers.</p>
-          <a href="https://stability.ai/blog/stable-diffusion-v5" target="_blank">Read more</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </article>
 
-  <section id="6g">
-    <h2>6G & Next‑Gen Connectivity: Terahertz Spectrum and AI‑Driven Networks</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1532100000011-9b8e7f1a2a9b?auto=format&fit=crop&w=600&q=80" alt="5G towers">
-        <div class="card-content">
-          <h3>First Terahertz 6G Trials in Tokyo</h3>
-          <p>Japan’s NTT and NEC conducted the world’s first 6G trials using terahertz (THz) frequencies, achieving 10 Tbps peak speeds over 1 km. The trial confirms the feasibility of ultra‑high‑bandwidth mobile networks for autonomous vehicles and holographic communications.</p>
-          <a href="https://www.ntt.com/6g" target="_blank">Read more</a>
-        </div>
+    <article class="card">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDEwMCAxNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0Q4RjY4MCI+PC9zdmc+" alt="Artificial Intelligence">
+      <div class="card-body">
+        <h3>General AI Model Beats Human in Creative Tasks</h3>
+        <p>Researchers unveil a generative AI that produces poetry and visual art indistinguishable from human creators, raising new ethical questions.</p>
+        <a href="https://www.nature.com/ai" target="_blank">Read more</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDEwMCAxNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0Y1NEI1QyI+PC9zdmc+" alt="Green Energy">
+      <div class="card-body">
+        <h3>New Solar Cell with 28%
