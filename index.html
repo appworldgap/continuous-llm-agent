@@ -2,164 +2,184 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --bg: #f9f9f9;
-    --text: #333;
-    --accent: #0066cc;
-    --card-bg: #fff;
-    --card-shadow: rgba(0,0,0,0.1);
-  }
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  /* Base resets */
+  *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
   body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    background: #121212;
+    color: #f0f0f0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
   }
+
+  /* Header */
   header {
-    background: var(--accent);
+    background: linear-gradient(135deg,#3a86ff,#8338ec);
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
   }
-  header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.3rem;
-  }
+  header h1 { font-size: 2.8rem; margin-bottom: .5rem; }
+  header p { font-size: 1.2rem; }
+
+  /* Navigation */
   nav {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+    background:#1e1e1e;
+    padding: .5rem 1rem;
+    display:flex; justify-content:center;
+    gap:1.5rem;
+    font-size:1rem;
   }
   nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 1rem;
+    color:#a9a9a9;
+    text-decoration:none;
+    position:relative;
   }
-  main {
-    flex: 1;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  nav a::after {
+    content:"";
+    position:absolute;
+    width:0%; height:2px; left:0; bottom:-2px;
+    background:#f0f0f0;
+    transition:width .3s;
   }
-  .hero {
-    text-align: center;
-    margin-bottom: 3rem;
+  nav a:hover::after { width:100%; }
+
+  /* Main content */
+  main { flex:1; padding:2rem 1rem; }
+  .grid { display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card {
+    background:#1f1f1f;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.5);
+    transition:transform .2s;
   }
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    color: #555;
-  }
-  section#breakthroughs {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  article.card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px var(--card-shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-  }
-  article.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px var(--card-shadow);
-  }
-  .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
-  .card-body {
-    padding: 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .card-body h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  .card-body p {
-    flex: 1;
-    margin-bottom: 1rem;
-    color: #555;
-  }
-  .card-body a {
-    align-self: flex-start;
-    text-decoration: none;
-    color: var(--accent);
-    font-weight: 600;
-    transition: color 0.2s ease;
-  }
-  .card-body a:hover {
-    color: #004999;
-  }
+  .card:hover { transform:scale(1.02); }
+  .card img { width:100%; height:180px; object-fit:cover; }
+  .card-body { padding:1rem; }
+  .card-body h3 { margin-bottom:.75rem; font-size:1.3rem; color:#ffffff; }
+  .card-body p { font-size:1rem; color:#c4c4c4; }
+
+  /* Footer */
   footer {
-    text-align: center;
-    padding: 1rem 2rem;
-    background: #eee;
-    color: #777;
-    font-size: 0.9rem;
+    background:#1e1e1e;
+    color:#a9a9a9;
+    text-align:center;
+    padding:1rem;
+    font-size:.9rem;
   }
+
+  /* Responsive tweaks */
   @media (max-width: 600px) {
-    header h1 { font-size: 1.4rem; }
-    .hero h2 { font-size: 1.8rem; }
+    header h1 { font-size:2.2rem; }
+    nav { flex-direction:column; }
   }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Tech Insight Hub</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Articles</a>
-    <a href="#">Reviews</a>
-    <a href="#">About</a>
-  </nav>
+  <h1>2026 Technology Breakthroughs</h1>
+  <p>Explore the most transformative discoveries shaping our world today</p>
 </header>
 
+<nav>
+  <a href="#ai">AI & ML</a>
+  <a href="#quantum">Quantum Computing</a>
+  <a href="#energy">Energy & Batteries</a>
+  <a href="#communications">Communications</a>
+  <a href="#biotech">Biotechnology</a>
+</nav>
+
 <main>
-  <section class="hero">
-    <h2>Latest Breakthroughs in Technology</h2>
-    <p>Explore the cutting‑edge discoveries reshaping the world today.</p>
+  <section id="ai" class="grid">
+    <article class="card">
+      <img src="https://picsum.photos/400/300?random=1" alt="AI breakthrough">
+      <div class="card-body">
+        <h3>Generative AI with Unified Multimodal Understanding</h3>
+        <p>OpenAI’s latest GPT-5 integrates vision, audio, and text in a single model, enabling seamless cross‑modal reasoning and creative generation at real‑time speeds.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://picsum.photos/400/300?random=2" alt="Neural network">
+      <div class="card-body">
+        <h3>Brain‑Inspired Neuromorphic Chips</h3>
+        <p>IBM’s “SpiNNaker 2” uses spiking neural networks to process data with 99% less power, opening doors for on‑edge AI in wearables.</p>
+      </div>
+    </article>
   </section>
 
-  <section id="breakthroughs">
+  <section id="quantum" class="grid" style="margin-top:3rem;">
     <article class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDEwMCAxNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0M2M0Q5NyI+PC9zdmc+" alt="Quantum Computing">
+      <img src="https://picsum.photos/400/300?random=3" alt="Quantum computer">
       <div class="card-body">
-        <h3>Quantum Supremacy Achieved by Start‑Up</h3>
-        <p>A new 128‑qubit processor demonstrates computational tasks beyond classical supercomputers, promising advances in cryptography and materials science.</p>
-        <a href="https://www.mit.edu/quantum" target="_blank">Read more</a>
+        <h3>Fault‑Tolerant 100‑Qubit Processor</h3>
+        <p>Google’s quantum hardware surpasses the threshold for quantum error correction, achieving logical qubit operation with 0.01 error rates.</p>
       </div>
     </article>
 
     <article class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDEwMCAxNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0Q4RjY4MCI+PC9zdmc+" alt="Artificial Intelligence">
+      <img src="https://picsum.photos/400/300?random=4" alt="Quantum network">
       <div class="card-body">
-        <h3>General AI Model Beats Human in Creative Tasks</h3>
-        <p>Researchers unveil a generative AI that produces poetry and visual art indistinguishable from human creators, raising new ethical questions.</p>
-        <a href="https://www.nature.com/ai" target="_blank">Read more</a>
+        <h3>Quantum Key Distribution over 1,000 km</h3>
+        <p>China’s quantum‑internet project extends secure quantum key distribution to the entire Eurasian continent, ensuring unbreakable communications.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="energy" class="grid" style="margin-top:3rem;">
+    <article class="card">
+      <img src="https://picsum.photos/400/300?random=5" alt="Battery">
+      <div class="card-body">
+        <h3>Sodium‑Ion Batteries with 200 Wh/kg</h3>
+        <p>Solid‑state sodium‑ion technology now rivals lithium in energy density while cutting costs by 40% for grid storage.</p>
       </div>
     </article>
 
     <article class="card">
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDEwMCAxNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0Y1NEI1QyI+PC9zdmc+" alt="Green Energy">
+      <img src="https://picsum.photos/400/300?random=6" alt="Fusion reactor">
       <div class="card-body">
-        <h3>New Solar Cell with 28%
+        <h3>Commercial‑Scale Fusion Power Plant</h3>
+        <p>ITER’s demonstration plant produces a net positive 200 MW, marking the first step toward commercial fusion energy.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="communications" class="grid" style="margin-top:3rem;">
+    <article class="card">
+      <img src="https://picsum.photos/400/300?random=7" alt="6G">
+      <div class="card-body">
+        <h3>Global 6G Networks Achieve 1 Tbps</h3>
+        <p>Telecom carriers roll out 6G, delivering ultra‑low latency (<1 ms) and terabit speeds for holographic AR, autonomous vehicles, and IoT.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://picsum.photos/400/300?random=8" alt="SpaceX Starlink">
+      <div class="card-body">
+        <h3>Starlink’s Quantum‑Secure Mesh Network</h3>
+        <p>SpaceX integrates quantum key distribution into its satellite mesh, offering end‑to‑end encrypted global broadband.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="biotech" class="grid" style="margin-top:3rem;">
+    <article class="card">
+      <img src="https://picsum.photos/400/300?random=9" alt="CRISPR">
+      <div class="card-body">
+        <h3>CRISPR‑Base Editor for Somatic Gene Therapy</h3>
+        <p>CRISPR Therapeutics’ new base‑editing platform precisely edits DNA with <1% off‑target risk, accelerating treatments for genetic disorders.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://picsum.photos/400/300?random=10" alt="mRNA vaccines">
+      <div class="card-body">
+        <h3>Universal mRNA Vaccines
