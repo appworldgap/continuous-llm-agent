@@ -3,105 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-    /* Reset & Basic Styling */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; line-height: 1.6; background: linear-gradient(120deg,#f0f4ff 0%,#d7e1f9 100%); color: #2c3e50; min-height: 100vh; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { max-width: 100%; height: auto; border-radius: 8px; }
+  :root {
+    --primary: #2e86de;
+    --secondary: #f8f9fa;
+    --accent: #e74c3c;
+    --text: #333;
+    --card-bg: #fff;
+    --shadow: rgba(0,0,0,0.15);
+    --radius: 12px;
+  }
 
-    /* Layout */
-    .wrapper { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-    header, footer { text-align: center; padding: 1rem 0; }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    header p { color: #555; font-size: 1rem; }
-    main { margin-top: 2rem; }
+  * {box-sizing:border-box; margin:0; padding:0;}
+  body {
+    font-family:'Inter',sans-serif;
+    background:var(--secondary);
+    color:var(--text);
+    line-height:1.6;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  header {
+    background:var(--primary);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+    box-shadow:0 4px 8px var(--shadow);
+  }
+  header h1 {font-size:2.5rem; font-weight:700;}
+  header p {font-size:1.1rem; margin-top:0.5rem;}
 
-    /* Grid for Cards */
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  main {
+    flex:1;
+    padding:2rem 1rem;
+    max-width:1200px;
+    margin:auto;
+  }
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
+  }
+  .card {
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 2px 6px var(--shadow);
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 4px 12px var(--shadow);
+  }
+  .card img {
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+  }
+  .card-content {
+    padding:1rem;
+  }
+  .card-content h3 {
+    font-size:1.4rem;
+    margin-bottom:0.5rem;
+  }
+  .card-content p {
+    font-size:0.95rem;
+    color:#555;
+  }
+  .card-content .badge {
+    display:inline-block;
+    padding:0.3rem 0.6rem;
+    background:var(--primary);
+    color:#fff;
+    border-radius:20px;
+    font-size:0.75rem;
+    margin-top:0.5rem;
+  }
 
-    .card { background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease; }
-    .card:hover { transform: translateY(-8px); }
-    .card img { display: block; }
-    .card-content { padding: 1.2rem; }
-    .card h3 { margin-bottom: 0.7rem; font-size: 1.4rem; color: #1abc9c; }
-    .card p { font-size: 0.95rem; color: #666; }
-
-    /* Footer */
-    footer { font-size: 0.9rem; color: #777; margin-top: 3rem; }
-    footer a { color: #777; }
+  footer {
+    text-align:center;
+    padding:1rem;
+    background:var(--primary);
+    color:#fff;
+    font-size:0.9rem;
+  }
+  @media (max-width:600px) {
+    header h1 {font-size:1.8rem;}
+  }
 </style>
 </head>
 <body>
-<div class="wrapper">
-    <header>
-        <h1>Latest Breakthroughs in Technology</h1>
-        <p>Explore the most exciting innovations reshaping our world.</p>
-    </header>
 
-    <main>
-        <section class="cards">
-            <!-- Artificial Intelligence -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1518779578993-6f2b9f9d2d5b?auto=format&fit=crop&w=400&q=80" alt="AI">
-                <div class="card-content">
-                    <h3>Artificial Intelligence</h3>
-                    <p>Generative AI models are now creating realistic text, images, and even music with minimal prompts, accelerating research, creative workflows, and democratizing access to powerful tools.</p>
-                </div>
-            </article>
+<header>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>Exploring the cutting‑edge innovations shaping our future</p>
+</header>
 
-            <!-- Quantum Computing -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1606524115384-6b8e8b7d5b90?auto=format&fit=crop&w=400&q=80" alt="Quantum">
-                <div class="card-content">
-                    <h3>Quantum Computing</h3>
-                    <p>Leading labs have achieved 300+ qubits with error correction, moving quantum processors closer to practical applications in cryptography, material science, and complex system simulation.</p>
-                </div>
-            </article>
+<main>
+  <section>
+    <h2 style="text-align:center;margin-bottom:1rem;">Recent Highlights</h2>
+    <div class="grid">
 
-            <!-- CRISPR & Gene Editing -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1585236892956-7c5f9e9c6c69?auto=format&fit=crop&w=400&q=80" alt="CRISPR">
-                <div class="card-content">
-                    <h3>CRISPR & Gene Editing</h3>
-                    <p>New CRISPR variants enable precise, base-level edits in living organisms, opening doors to treating genetic diseases and engineering resilient crops.</p>
-                </div>
-            </article>
+      <!-- Artificial Intelligence -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="AI">
+        <div class="card-content">
+          <h3>Generative AI</h3>
+          <p>Large language models now produce coherent, creative content across domains—from code generation to artistic design—transforming productivity tools.</p>
+          <span class="badge">AI</span>
+        </div>
+      </article>
 
-            <!-- 6G & Next‑Gen Connectivity -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1524386138702-86c6e1e8a3b0?auto=format&fit=crop&w=400&q=80" alt="6G">
-                <div class="card-content">
-                    <h3>6G & Next‑Gen Connectivity</h3>
-                    <p>Early prototypes demonstrate sub‑nanosecond latency and multi‑terabit data rates, promising ultra‑high‑definition streaming, real‑time AR/VR, and autonomous systems.</p>
-                </div>
-            </article>
+      <!-- Quantum Computing -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1573497018040-0c9b3f4a8b6c?auto=format&fit=crop&w=400&q=80" alt="Quantum">
+        <div class="card-content">
+          <h3>Fault‑Tolerant Quantum Processors</h3>
+          <p>New error‑correction protocols enable larger qubit systems, bringing practical quantum advantage closer for cryptography and material science.</p>
+          <span class="badge">Quantum</span>
+        </div>
+      </article>
 
-            <!-- Autonomous Vehicles -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1591369750004-4d9f3f1bca49?auto=format&fit=crop&w=400&q=80" alt="Autonomous">
-                <div class="card-content">
-                    <h3>Autonomous Vehicles</h3>
-                    <p>Vehicle‑to‑everything (V2X) communication and LIDAR‑free perception systems are rapidly reducing accident rates and paving the way for fully autonomous fleets.</p>
-                </div>
-            </article>
+      <!-- Biotechnology -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1593797610201-1b0c5f6c0e17?auto=format&fit=crop&w=400&q=80" alt="Bio">
+        <div class="card-content">
+          <h3>CRISPR Gene‑Editing Advancements</h3>
+          <p>Base‑editing tools now enable precise single‑base corrections, offering new therapies for genetic disorders without off‑target effects.</p>
+          <span class="badge">Biotech</span>
+        </div>
+      </article>
 
-            <!-- Renewable Energy Tech -->
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1541347395-5f3e3c6e9f84?auto=format&fit=crop&w=400&q=80" alt="Renewables">
-                <div class="card-content">
-                    <h3>Renewable Energy Tech</h3>
-                    <p>Solid‑state batteries with higher energy density and silicon‑free solar panels now offer cheaper, longer‑lasting, and more efficient green power solutions.</p>
-                </div>
-            </article>
-        </section>
-    </main>
+      <!-- Renewable Energy -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1579563375202-6e5c1a2e6f06?auto=format&fit=crop&w=400&q=80" alt="Energy">
+        <div class="card-content">
+          <h3>Perovskite Solar Cells</h3>
+          <p>Record efficiencies surpass 25%, with scalable manufacturing poised to reduce solar costs dramatically.</p>
+          <span class="badge">Energy</span>
+        </div>
+      </article>
 
-    <footer>
-        <p>© 2026 Tech Insights. All rights reserved.</p>
-    </footer>
-</div>
-</body>
-</html>
+      <!-- Space Tech -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519618487956-9e8d8f2f5c0b?auto=format&fit=crop&w=400&q=80" alt="Space">
+        <div class="card-content">
+          <h3>Reusable Spacecraft</h3>
+          <p>New propulsion designs and heat‑shield materials enable multiple orbital launches, lowering cost per kilogram to orbit.</p>
+          <span class="badge">Space</span>
+        </div>
+      </article>
+
+      <!-- Robotics -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519867291549-30c4c5c4f5d1?auto=format&fit=crop&w=400&q=80" alt="Robotics">
+        <div class="card-content">
+          <h3>Soft Robotics</h3>
+          <p>Flexible actuators mimic biological movement, opening new applications in prosthetics and precision manufacturing.</p>
+          <span class="badge">Robotics</span>
