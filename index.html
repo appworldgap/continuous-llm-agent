@@ -1,205 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology – 2024</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Base Styles */
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
-  line-height:1.6;
-  color:#333;
-  background:#fafafa;
+:root {
+  --primary: #0d47a1;
+  --secondary: #ff6f00;
+  --background: #f5f5f5;
+  --surface: #ffffff;
+  --text: #212121;
+  --accent: #ff4081;
+  --font: 'Roboto', sans-serif;
 }
-a{color:#1e88e5;text-decoration:none}
-a:hover{color:#0d47a1}
-
-/* Header */
-header{
-  background:#fff;
-  padding:1rem 2rem;
-  box-shadow:0 2px 4px rgba(0,0,0,0.1);
-  position:sticky;
-  top:0;
-  z-index:1000;
+* {
+  box-sizing: border-box;
 }
-header nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
 }
-header h1{
-  font-size:1.5rem;
-  font-weight:700;
+a {
+  color: var(--primary);
+  text-decoration: none;
 }
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:1rem;
+a:hover {
+  text-decoration: underline;
 }
-nav ul li a{font-weight:600}
-
-/* Hero Section */
-.hero{
-  background:url('https://images.unsplash.com/photo-1544717308-4f7c5b9f9d12?auto=format&fit=crop&w=1600&q=80') center/cover;
-  color:#fff;
-  padding:4rem 2rem;
-  text-align:center;
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
 }
-.hero h2{
-  font-size:3rem;
-  margin-bottom:0.5rem;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
-.hero p{
-  font-size:1.2rem;
-  max-width:600px;
-  margin:0 auto;
+section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
-
-/* Breakthroughs Grid */
-.section{
-  max-width:1200px;
-  margin:4rem auto;
-  padding:0 2rem;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
-.section h2{
-  text-align:center;
-  margin-bottom:2rem;
-  font-size:2rem;
-  color:#1e88e5;
+.card {
+  background: var(--surface);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+  transition: transform .2s;
 }
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:2rem;
+.card:hover {
+  transform: translateY(-5px);
 }
-.card{
-  background:#fff;
-  border-radius:8px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.1);
-  transition:transform 0.3s,box-shadow 0.3s;
-  display:flex;
-  flex-direction:column;
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 6px 12px rgba(0,0,0,0.15);
+.card-content {
+  padding: 1rem;
 }
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-top-left-radius:8px;
-  border-top-right-radius:8px;
+.card-content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: var(--primary);
 }
-.card-content{
-  padding:1.5rem;
-  flex:1;
-  display:flex;
-  flex-direction:column;
+.card-content p {
+  margin: .5rem 0 0;
+  font-size: .95rem;
 }
-.card-content h3{
-  font-size:1.4rem;
-  margin-bottom:0.5rem;
-  color:#1e88e5;
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: .9rem;
 }
-.card-content p{
-  flex:1;
-  font-size:0.95rem;
-  color:#555;
-  margin-bottom:1rem;
-}
-.card-content a{
-  align-self:flex-start;
-  font-weight:600;
-  color:#1e88e5;
-}
-
-/* Footer */
-footer{
-  background:#333;
-  color:#eee;
-  text-align:center;
-  padding:1rem 0;
-  margin-top:4rem;
-}
-footer a{color:#1e88e5}
-
-/* Responsive Tweaks */
-@media(max-width:600px){
-  .hero h2{font-size:2rem}
-  .hero p{font-size:1rem}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --surface: #1e1e1e;
+    --text: #e0e0e0;
+  }
 }
 </style>
 </head>
 <body>
-
 <header>
-  <nav>
-    <h1>TechFrontier</h1>
-    <ul>
-      <li><a href="#ai">AI</a></li>
-      <li><a href="#quantum">Quantum</a></li>
-      <li><a href="#battery">Battery</a></li>
-      <li><a href="#autonomy">Autonomy</a></li>
-      <li><a href="#bio">Biotech</a></li>
-    </ul>
-  </nav>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <p>From quantum AI to sustainable energy, discover the innovations shaping our future.</p>
 </header>
 
-<section class="hero">
-  <h2>Latest Breakthroughs in Technology</h2>
-  <p>From quantum leaps in computing to revolutionary advances in AI and energy storage, explore the innovations shaping tomorrow.</p>
-</section>
-
-<section class="section" id="ai">
-  <h2>Artificial Intelligence</h2>
-  <div class="cards">
+<section id="ai">
+  <h2>Artificial Intelligence & Machine Learning</h2>
+  <div class="card-grid">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1587829741301-5b6b1b1e3dba?auto=format&fit=crop&w=400&q=80" alt="Generative AI">
+      <img src="https://images.unsplash.com/photo-1581291518857-4e4a4b9c2e73?auto=format&fit=crop&w=400&q=80" alt="AI Neural Network">
       <div class="card-content">
-        <h3>Generative AI Models</h3>
-        <p>Large language models like GPT-4 and multimodal variants can write code, compose music, and generate realistic images, accelerating creativity across industries.</p>
-        <a href="#">Read more →</a>
+        <h3>Generative AI Maturity</h3>
+        <p>Large multimodal models now generate high‑resolution images, code, and music with minimal fine‑tuning, enabling rapid prototyping across industries.</p>
       </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1587614382345-8b9f4e1b9a5c?auto=format&fit=crop&w=400&q=80" alt="AI Ethics">
+      <img src="https://images.unsplash.com/photo-1518779578994-2e6b5b1b5a37?auto=format&fit=crop&w=400&q=80" alt="AI in Healthcare">
       <div class="card-content">
-        <h3>AI Ethics & Governance</h3>
-        <p>New frameworks and regulatory approaches aim to balance innovation with safety, transparency, and bias mitigation in autonomous systems.</p>
-        <a href="#">Read more →</a>
+        <h3>AI in Precision Medicine</h3>
+        <p>Deep learning pipelines predict patient outcomes from genomics and imaging, reducing diagnostic time for rare diseases.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1592194996308-7a8b5f3b8e0b?auto=format&fit=crop&w=400&q=80" alt="AI for Sustainability">
+      <div class="card-content">
+        <h3>Energy‑Efficient Models</h3>
+        <p>New sparsification and quantization techniques cut inference cost by >70% on edge devices.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="quantum">
+<section id="quantum">
   <h2>Quantum Computing</h2>
-  <div class="cards">
+  <div class="card-grid">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1585986562695-1e4d6e8b1f38?auto=format&fit=crop&w=400&q=80" alt="Quantum Processor">
+      <img src="https://images.unsplash.com/photo-1580894894517-5c4d2b6f6e1a?auto=format&fit=crop&w=400&q=80" alt="Quantum Processor">
       <div class="card-content">
-        <h3>New Quantum Processors</h3>
-        <p>IBM, Google, and startups have launched chips with 200‑plus qubits, bringing practical quantum advantage closer to reality.</p>
-        <a href="#">Read more →</a>
+        <h3>Fault‑Tolerant Qubits</h3>
+        <p>Superconducting qubits now achieve error rates below 1%, a key step toward scalable quantum advantage.</p>
       </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1592495597209-5b1a5a2e1b7a?auto=format&fit=crop&w=400&q=80" alt="Quantum Networks">
+      <img src="https://images.unsplash.com/photo-1492197726136-6e3b4d7c1a74?auto=format&fit=crop&w=400&q=80" alt="Quantum Internet">
       <div class="card-content">
-        <h3>Quantum Networking</h3>
-        <p>Development of quantum repeaters and satellite links paves the way for a global quantum internet, promising unparalleled security.</p>
-        <a href="#">Read more →</a>
+        <h3>Quantum‑Enabled Networking</h3>
+        <p>Quantum key distribution across 500 km fiber links offers unbreakable encryption for critical communications.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1573164573830-1e0e9f2d5c3b?auto=format&fit=crop&w=400&q=80" alt="Quantum Simulation">
+      <div class="card-content">
+        <h3>Drug Discovery Acceleration</h3>
+        <p>Quantum simulators model complex molecular interactions, halving the time needed for lead‑compound design.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="battery">
-  <h2>Battery & Energy Storage</h2>
-  <div class="cards">
+<section id="biotech">
+  <h2>Biotechnology & Health</h2>
+  <div class="card-grid">
     <div class="card">
-      <img
+      <img src="https://images.unsplash.com/photo-1592194996308-7a8b5f3b8e0b?auto=format&fit=crop&w=400&q=80" alt="CRISPR">
+      <div class="card-content">
+        <h3>CRISPR‑Based Gene Therapies</h3>
+        <p>Clinical trials now treat genetic blindness and muscular dystrophy using precise gene editing.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1515951478252-5d2d3f7d2d8b?auto=format&fit=crop&w=400&q=80" alt="Bio‑Sensors">
+      <div class="card-content">
+        <h3>Wearable Biosensors</h3>
+        <p>Non‑invasive chips monitor blood glucose and electrolytes in real‑time, improving chronic disease management.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=80" alt="Telemedicine">
+      <div class="card-content">
+        <h3>AI‑Driven Telehealth Platforms</h3>
+        <p>Chatbots triage symptoms with 95% accuracy, reducing waiting times for specialists.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="energy">
+  <h2>Energy & Sustainability</h2>
+  <div class="card-grid">
+    <div class="card">
+      <
