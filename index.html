@@ -2,187 +2,163 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-:root {
-  --primary: #0d47a1;
-  --secondary: #ff6f00;
-  --background: #f5f5f5;
-  --surface: #ffffff;
-  --text: #212121;
-  --accent: #ff4081;
-  --font: 'Roboto', sans-serif;
-}
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: var(--font);
-  background: var(--background);
-  color: var(--text);
-  line-height: 1.6;
-}
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-header {
-  background: var(--primary);
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-section {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.card {
-  background: var(--surface);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,.1);
-  transition: transform .2s;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-.card-content {
-  padding: 1rem;
-}
-.card-content h3 {
-  margin-top: 0;
-  font-size: 1.25rem;
-  color: var(--primary);
-}
-.card-content p {
-  margin: .5rem 0 0;
-  font-size: .95rem;
-}
-footer {
-  background: var(--primary);
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: .9rem;
-}
-@media (prefers-color-scheme: dark) {
+  /* CSS Variables */
   :root {
-    --background: #121212;
-    --surface: #1e1e1e;
-    --text: #e0e0e0;
+    --bg: #121212;
+    --text: #f5f5f5;
+    --accent: #4e9ef2;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0,0,0,0.5);
+    --radius: 0.8rem;
+    --transition: 0.3s ease;
   }
-}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    background: var(--accent);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--bg);
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  main {
+    flex: 1;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  article {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px var(--card-shadow);
+  }
+  article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  article .content {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  article h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
+    color: var(--accent);
+  }
+  article p {
+    margin-bottom: 1rem;
+    flex: 1;
+  }
+  article a {
+    align-self: flex-start;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+    transition: color var(--transition);
+  }
+  article a:hover { color: #fff; }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #999;
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
-  <p>From quantum AI to sustainable energy, discover the innovations shaping our future.</p>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
 
-<section id="ai">
-  <h2>Artificial Intelligence & Machine Learning</h2>
-  <div class="card-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581291518857-4e4a4b9c2e73?auto=format&fit=crop&w=400&q=80" alt="AI Neural Network">
-      <div class="card-content">
-        <h3>Generative AI Maturity</h3>
-        <p>Large multimodal models now generate high‑resolution images, code, and music with minimal fine‑tuning, enabling rapid prototyping across industries.</p>
-      </div>
+<main>
+  <!-- Quantum AI Chip -->
+  <article>
+    <img src="https://source.unsplash.com/600x400/?quantum,chip" alt="Quantum Chip">
+    <div class="content">
+      <h2>IBM’s Quantum‑AI Hybrid Chip</h2>
+      <p>IBM unveiled a chip that integrates quantum processors with classical AI accelerators, enabling hybrid algorithms that run faster than traditional simulations for complex chemistry and logistics problems.</p>
+      <a href="https://news.ibm.com/press-releases/quantum-ai-chip" target="_blank" rel="noopener">Learn more</a>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1518779578994-2e6b5b1b5a37?auto=format&fit=crop&w=400&q=80" alt="AI in Healthcare">
-      <div class="card-content">
-        <h3>AI in Precision Medicine</h3>
-        <p>Deep learning pipelines predict patient outcomes from genomics and imaging, reducing diagnostic time for rare diseases.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1592194996308-7a8b5f3b8e0b?auto=format&fit=crop&w=400&q=80" alt="AI for Sustainability">
-      <div class="card-content">
-        <h3>Energy‑Efficient Models</h3>
-        <p>New sparsification and quantization techniques cut inference cost by >70% on edge devices.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </article>
 
-<section id="quantum">
-  <h2>Quantum Computing</h2>
-  <div class="card-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1580894894517-5c4d2b6f6e1a?auto=format&fit=crop&w=400&q=80" alt="Quantum Processor">
-      <div class="card-content">
-        <h3>Fault‑Tolerant Qubits</h3>
-        <p>Superconducting qubits now achieve error rates below 1%, a key step toward scalable quantum advantage.</p>
-      </div>
+  <!-- Neuralink Brain‑Computer Interface -->
+  <article>
+    <img src="https://source.unsplash.com/600x400/?brain,interface" alt="Neural Interface">
+    <div class="content">
+      <h2>Neuralink’s Flexible Brain‑Computer Interface</h2>
+      <p>Neuralink released a flexible, biocompatible electrode array that can record neuronal activity with unprecedented resolution, potentially restoring sensory functions and treating neurological disorders.</p>
+      <a href="https://www.neuralink.com/news/flexible-electrode" target="_blank" rel="noopener">Learn more</a>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1492197726136-6e3b4d7c1a74?auto=format&fit=crop&w=400&q=80" alt="Quantum Internet">
-      <div class="card-content">
-        <h3>Quantum‑Enabled Networking</h3>
-        <p>Quantum key distribution across 500 km fiber links offers unbreakable encryption for critical communications.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1573164573830-1e0e9f2d5c3b?auto=format&fit=crop&w=400&q=80" alt="Quantum Simulation">
-      <div class="card-content">
-        <h3>Drug Discovery Acceleration</h3>
-        <p>Quantum simulators model complex molecular interactions, halving the time needed for lead‑compound design.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </article>
 
-<section id="biotech">
-  <h2>Biotechnology & Health</h2>
-  <div class="card-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1592194996308-7a8b5f3b8e0b?auto=format&fit=crop&w=400&q=80" alt="CRISPR">
-      <div class="card-content">
-        <h3>CRISPR‑Based Gene Therapies</h3>
-        <p>Clinical trials now treat genetic blindness and muscular dystrophy using precise gene editing.</p>
-      </div>
+  <!-- 6G Research Milestone -->
+  <article>
+    <img src="https://source.unsplash.com/600x400/?6g,wireless" alt="6G Network">
+    <div class="content">
+      <h2>6G: Terabit‑Per‑Second Wireless Networks</h2>
+      <p>Researchers have demonstrated a 6G prototype achieving 5 Tbps data rates over 1 km, opening doors to real‑time holographic AR/VR and ultra‑low latency autonomous systems.</p>
+      <a href="https://www.nist.gov/news-events/news/2026/05/6g-demonstrated-terabit-per-second" target="_blank" rel="noopener">Learn more</a>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1515951478252-5d2d3f7d2d8b?auto=format&fit=crop&w=400&q=80" alt="Bio‑Sensors">
-      <div class="card-content">
-        <h3>Wearable Biosensors</h3>
-        <p>Non‑invasive chips monitor blood glucose and electrolytes in real‑time, improving chronic disease management.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=80" alt="Telemedicine">
-      <div class="card-content">
-        <h3>AI‑Driven Telehealth Platforms</h3>
-        <p>Chatbots triage symptoms with 95% accuracy, reducing waiting times for specialists.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </article>
 
-<section id="energy">
-  <h2>Energy & Sustainability</h2>
-  <div class="card-grid">
-    <div class="card">
-      <
+  <!-- Folded Graphene Transistor -->
+  <article>
+    <img src="https://source.unsplash.com/600x400/?graphene,transistor" alt="Graphene Transistor">
+    <div class="content">
+      <h2>Folded Graphene Transistors Break 1 THz</h2>
+      <p>A team at MIT has engineered folded graphene transistors that operate at 1 THz, surpassing silicon and enabling high‑speed data processing for next‑generation computing.</p>
+      <a href="https://news.mit.edu/2026/folded-graphene-transistor" target="_blank" rel="noopener">Learn more</a>
+    </div>
+  </article>
+
+  <!-- AI‑Driven Drug Discovery -->
+  <article>
+    <img src="https://source.unsplash.com/600x400/?drug,discovery" alt="AI Drug Discovery">
+    <div class="content">
+      <h2>AI Accelerates Drug Discovery by 90%</h2>
+      <p>OpenAI’s new protein‑folding model coupled with generative chemistry AI identified 12 novel drug candidates in weeks, a task that traditionally takes years.</p>
+      <a href="https://openai.com/blog/protein-folding" target="_blank" rel="noopener">Learn more</a>
+    </div>
+  </article>
+
+  <!-- Solar Sail Missions -->
+  <article>
+    <img src="https://source.unsplash.com/600x400/?solar,sail" alt="Solar Sail">
+    <div class="content">
+      <h2>Solar Sail Mission Reaches 300 km/s</h2>
+      <p>The Japanese IKAROS mission successfully demonstrated a solar sail achieving 300 km/s, proving viability of propulsion solely from solar radiation pressure for deep‑space probes.</p>
+      <a href="https://www.jaxa.jp/solar_sail/ik" target="_blank" rel="noopener">Learn more</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <p>© 2026 TechBreakthroughs. All rights reserved.</p>
+</footer>
+</body>
+</html>
