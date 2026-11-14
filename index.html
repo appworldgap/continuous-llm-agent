@@ -5,160 +5,179 @@
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* CSS Variables */
   :root {
-    --bg: #121212;
-    --text: #f5f5f5;
-    --accent: #4e9ef2;
-    --card-bg: #1e1e1e;
-    --card-shadow: rgba(0,0,0,0.5);
-    --radius: 0.8rem;
-    --transition: 0.3s ease;
+    --primary: #1a73e8;
+    --secondary: #f9f9f9;
+    --accent: #ff6f61;
+    --text: #333;
+    --bg: #fff;
+    --border: #e0e0e0;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: system-ui, sans-serif;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
   }
   header {
-    background: var(--accent);
-    padding: 1.5rem;
+    background: var(--primary);
+    color: var(--secondary);
+    padding: 1.5rem 2rem;
     text-align: center;
-    color: var(--bg);
   }
   header h1 {
-    font-size: 2.5rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background: var(--secondary);
+    padding: 0.5rem 2rem;
+    flex-wrap: wrap;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
   }
   main {
-    flex: 1;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
   }
-  article {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: 0 4px 12px var(--card-shadow);
-    display: flex;
-    flex-direction: column;
-    transition: transform var(--transition), box-shadow var(--transition);
+  section {
+    margin-bottom: 2.5rem;
   }
-  article:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px var(--card-shadow);
-  }
-  article img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  article .content {
-    padding: 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  article h2 {
-    margin-bottom: 0.5rem;
-    font-size: 1.35rem;
-    color: var(--accent);
-  }
-  article p {
+  section h2 {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-    flex: 1;
+    color: var(--primary);
   }
-  article a {
-    align-self: flex-start;
-    text-decoration: none;
+  .card {
+    background: var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card h3 {
+    margin-top: 0;
     color: var(--accent);
-    font-weight: bold;
-    transition: color var(--transition);
   }
-  article a:hover { color: #fff; }
+  .card p {
+    margin: 0.75rem 0;
+  }
+  .card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+  }
   footer {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    background: var(--secondary);
+    color: var(--text);
     font-size: 0.9rem;
-    color: #999;
+  }
+  @media (min-width: 600px) {
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
 </style>
 </head>
 <body>
+
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
 </header>
 
+<nav>
+  <a href="#ai">AI</a>
+  <a href="#quantum">Quantum Computing</a>
+  <a href="#6g">6G Connectivity</a>
+  <a href="#autonomous">Autonomous Systems</a>
+</nav>
+
 <main>
-  <!-- Quantum AI Chip -->
-  <article>
-    <img src="https://source.unsplash.com/600x400/?quantum,chip" alt="Quantum Chip">
-    <div class="content">
-      <h2>IBM’s Quantum‑AI Hybrid Chip</h2>
-      <p>IBM unveiled a chip that integrates quantum processors with classical AI accelerators, enabling hybrid algorithms that run faster than traditional simulations for complex chemistry and logistics problems.</p>
-      <a href="https://news.ibm.com/press-releases/quantum-ai-chip" target="_blank" rel="noopener">Learn more</a>
+  <section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>GPT-5 and Beyond</h3>
+        <p>OpenAI’s latest language model delivers unprecedented reasoning capabilities and multi-modal understanding, enabling real-time code synthesis, scientific research assistance, and dynamic content creation.</p>
+        <a href="https://openai.com/blog/gpt-5" target="_blank">Read more</a>
+      </div>
+      <div class="card">
+        <h3>AI-Driven Drug Discovery</h3>
+        <p>DeepMind’s AlphaFold 2 has been expanded into drug discovery pipelines, predicting protein folding with near-perfect accuracy, accelerating the creation of new therapeutics.</p>
+        <a href="https://deepmind.com/blog/article/alpha-fold-2" target="_blank">Explore the science</a>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <!-- Neuralink Brain‑Computer Interface -->
-  <article>
-    <img src="https://source.unsplash.com/600x400/?brain,interface" alt="Neural Interface">
-    <div class="content">
-      <h2>Neuralink’s Flexible Brain‑Computer Interface</h2>
-      <p>Neuralink released a flexible, biocompatible electrode array that can record neuronal activity with unprecedented resolution, potentially restoring sensory functions and treating neurological disorders.</p>
-      <a href="https://www.neuralink.com/news/flexible-electrode" target="_blank" rel="noopener">Learn more</a>
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Quantum Advantage Demonstrated</h3>
+        <p>IBM and Google’s 127-qubit processors have achieved a milestone where quantum algorithms solve specific tasks faster than any classical supercomputer.</p>
+        <a href="https://www.ibm.com/blogs/research/2024-quantum-advantage/" target="_blank">Full report</a>
+      </div>
+      <div class="card">
+        <h3>Scalable Silicon Quantum Chips</h3>
+        <p>Intel’s 300-mm silicon quantum chip architecture promises millions of qubits with reduced error rates, paving the way for commercial quantum services.</p>
+        <a href="https://www.intel.com/content/www/us/en/quantum-computing/quantum-chips.html" target="_blank">Learn more</a>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <!-- 6G Research Milestone -->
-  <article>
-    <img src="https://source.unsplash.com/600x400/?6g,wireless" alt="6G Network">
-    <div class="content">
-      <h2>6G: Terabit‑Per‑Second Wireless Networks</h2>
-      <p>Researchers have demonstrated a 6G prototype achieving 5 Tbps data rates over 1 km, opening doors to real‑time holographic AR/VR and ultra‑low latency autonomous systems.</p>
-      <a href="https://www.nist.gov/news-events/news/2026/05/6g-demonstrated-terabit-per-second" target="_blank" rel="noopener">Learn more</a>
+  <section id="6g">
+    <h2>6G Connectivity</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Global 6G Trials Commence</h3>
+        <p>China, South Korea, and the U.S. are launching 6G trials at 1–5 THz, targeting 1 Tbps data rates and sub-millisecond latency for immersive AR/VR and autonomous vehicle communication.</p>
+        <a href="https://www.nokia.com/networks/6g/" target="_blank">See the roadmap</a>
+      </div>
+      <div class="card">
+        <h3>Terahertz Wireless Innovation</h2>
+        <p>Researchers have developed a compact terahertz antenna that can be embedded in consumer devices, enabling ultra-fast wireless links for real-time holographic displays.</p>
+        <a href="https://www.nature.com/articles/s41467-024-12345-6" target="_blank">Read the study</a>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <!-- Folded Graphene Transistor -->
-  <article>
-    <img src="https://source.unsplash.com/600x400/?graphene,transistor" alt="Graphene Transistor">
-    <div class="content">
-      <h2>Folded Graphene Transistors Break 1 THz</h2>
-      <p>A team at MIT has engineered folded graphene transistors that operate at 1 THz, surpassing silicon and enabling high‑speed data processing for next‑generation computing.</p>
-      <a href="https://news.mit.edu/2026/folded-graphene-transistor" target="_blank" rel="noopener">Learn more</a>
+  <section id="autonomous">
+    <h2>Autonomous Systems</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>Full-Scale Autonomous Flight</h3>
+        <p>Amazon’s Prime Air has completed the first commercial drone delivery in a controlled urban setting, using AI-powered obstacle avoidance and real-time air traffic integration.</p>
+        <a href="https://www.aboutamazon.com/news/prime-air" target="_blank">More details</a>
+      </div>
+      <div class="card">
+        <h3>Self-Driving Trains in Japan</h3>
+        <p>Japan’s JR East introduced a fully autonomous freight train network, reducing human labor and improving energy efficiency on its freight routes.</p>
+        <a href="https://www.jreast.co.jp/en/" target="_blank">Visit JR East</a>
+      </div>
     </div>
-  </article>
-
-  <!-- AI‑Driven Drug Discovery -->
-  <article>
-    <img src="https://source.unsplash.com/600x400/?drug,discovery" alt="AI Drug Discovery">
-    <div class="content">
-      <h2>AI Accelerates Drug Discovery by 90%</h2>
-      <p>OpenAI’s new protein‑folding model coupled with generative chemistry AI identified 12 novel drug candidates in weeks, a task that traditionally takes years.</p>
-      <a href="https://openai.com/blog/protein-folding" target="_blank" rel="noopener">Learn more</a>
-    </div>
-  </article>
-
-  <!-- Solar Sail Missions -->
-  <article>
-    <img src="https://source.unsplash.com/600x400/?solar,sail" alt="Solar Sail">
-    <div class="content">
-      <h2>Solar Sail Mission Reaches 300 km/s</h2>
-      <p>The Japanese IKAROS mission successfully demonstrated a solar sail achieving 300 km/s, proving viability of propulsion solely from solar radiation pressure for deep‑space probes.</p>
-      <a href="https://www.jaxa.jp/solar_sail/ik" target="_blank" rel="noopener">Learn more</a>
-    </div>
-  </article>
+  </section>
 </main>
 
 <footer>
-  <p>© 2026 TechBreakthroughs. All rights reserved.</p>
+  &copy; 2026 Tech Insights. All rights reserved.
 </footer>
+
 </body>
 </html>
