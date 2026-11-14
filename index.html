@@ -1,156 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* Base styles */
-  body {
-    margin: 0;
-    font-family: 'Inter', Arial, sans-serif;
-    line-height: 1.6;
-    color: #e8e8e8;
-    background: #1c1e22;
-  }
-  a { color: #00bcd4; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+/* Base Styles */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  line-height:1.6;
+  color:#333;
+  background:#fafafa;
+}
+a{color:#1e88e5;text-decoration:none}
+a:hover{color:#0d47a1}
 
-  /* Header */
-  header {
-    background: #111;
-    padding: 1rem 2rem;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.4rem;
-    font-weight: 600;
-    color: #00bcd4;
-  }
+/* Header */
+header{
+  background:#fff;
+  padding:1rem 2rem;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+header nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{
+  font-size:1.5rem;
+  font-weight:700;
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:1rem;
+}
+nav ul li a{font-weight:600}
 
-  /* Main content */
-  main {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    grid-gap: 2rem;
-  }
-  section {
-    background: #25272d;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  }
-  section h2 {
-    margin-top: 0;
-    font-size: 1.8rem;
-    color: #00bcd4;
-  }
-  section p { margin: 0.5rem 0; }
+/* Hero Section */
+.hero{
+  background:url('https://images.unsplash.com/photo-1544717308-4f7c5b9f9d12?auto=format&fit=crop&w=1600&q=80') center/cover;
+  color:#fff;
+  padding:4rem 2rem;
+  text-align:center;
+}
+.hero h2{
+  font-size:3rem;
+  margin-bottom:0.5rem;
+}
+.hero p{
+  font-size:1.2rem;
+  max-width:600px;
+  margin:0 auto;
+}
 
-  /* Lists */
-  ul { margin: 0.5rem 0 1rem 1.5rem; }
-  li { margin-bottom: 0.5rem; }
+/* Breakthroughs Grid */
+.section{
+  max-width:1200px;
+  margin:4rem auto;
+  padding:0 2rem;
+}
+.section h2{
+  text-align:center;
+  margin-bottom:2rem;
+  font-size:2rem;
+  color:#1e88e5;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+}
+.card{
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.1);
+  transition:transform 0.3s,box-shadow 0.3s;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 6px 12px rgba(0,0,0,0.15);
+}
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-top-left-radius:8px;
+  border-top-right-radius:8px;
+}
+.card-content{
+  padding:1.5rem;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+.card-content h3{
+  font-size:1.4rem;
+  margin-bottom:0.5rem;
+  color:#1e88e5;
+}
+.card-content p{
+  flex:1;
+  font-size:0.95rem;
+  color:#555;
+  margin-bottom:1rem;
+}
+.card-content a{
+  align-self:flex-start;
+  font-weight:600;
+  color:#1e88e5;
+}
 
-  /* Image container */
-  .image {
-    width: 100%;
-    max-width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin: 1rem 0;
-  }
+/* Footer */
+footer{
+  background:#333;
+  color:#eee;
+  text-align:center;
+  padding:1rem 0;
+  margin-top:4rem;
+}
+footer a{color:#1e88e5}
 
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #aaa;
-  }
-
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    header h1 { font-size: 1.8rem; }
-    section h2 { font-size: 1.5rem; }
-  }
+/* Responsive Tweaks */
+@media(max-width:600px){
+  .hero h2{font-size:2rem}
+  .hero p{font-size:1rem}
+}
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <nav>
+    <h1>TechFrontier</h1>
+    <ul>
+      <li><a href="#ai">AI</a></li>
+      <li><a href="#quantum">Quantum</a></li>
+      <li><a href="#battery">Battery</a></li>
+      <li><a href="#autonomy">Autonomy</a></li>
+      <li><a href="#bio">Biotech</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
-  <!-- Artificial Intelligence -->
-  <section id="ai">
-    <h2>Artificial Intelligence</h2>
-    <img class="image" src="https://images.unsplash.com/photo-1518779578995-7e1a6c4f3b23?auto=format&fit=crop&w=800&q=60" alt="AI concept">
-    <p>Generative AI has reached unprecedented levels of coherence and creativity, enabling real-time translation, content creation, and autonomous problem‑solving. Recent models like <strong>GPT‑9.5</strong> and <strong>Claude‑3.2</strong> demonstrate near-human understanding across 120+ languages.</p>
-    <ul>
-      <li>Zero‑shot learning in complex domains (e.g., legal & medical)</li>
-      <li>Federated AI systems reducing data privacy risks</li>
-      <li>AI‑driven drug discovery decreasing lead‑time to market to < 6 months</li>
-    </ul>
-  </section>
+<section class="hero">
+  <h2>Latest Breakthroughs in Technology</h2>
+  <p>From quantum leaps in computing to revolutionary advances in AI and energy storage, explore the innovations shaping tomorrow.</p>
+</section>
 
-  <!-- Quantum Computing -->
-  <section id="quantum">
-    <h2>Quantum Computing</h2>
-    <img class="image" src="https://images.unsplash.com/photo-1525253086316-5a8e0e9f9c32?auto=format&fit=crop&w=800&q=60" alt="Quantum chip">
-    <p>Commercial quantum processors now feature 1,024 qubits with error‑correction, enabling breakthroughs in optimization, cryptography, and material science. Quantum‑enhanced AI models are already outperforming classical counterparts in large‑scale simulations.</p>
-    <ul>
-      <li>Scalable photonic qubits with 99.9% fidelity</li>
-      <li>Hybrid quantum‑classical workflow platform (QASM‑2.0)</li>
-      <li>Quantum‑secure communication networks deployed in 30+ countries</li>
-    </ul>
-  </section>
+<section class="section" id="ai">
+  <h2>Artificial Intelligence</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1587829741301-5b6b1b1e3dba?auto=format&fit=crop&w=400&q=80" alt="Generative AI">
+      <div class="card-content">
+        <h3>Generative AI Models</h3>
+        <p>Large language models like GPT-4 and multimodal variants can write code, compose music, and generate realistic images, accelerating creativity across industries.</p>
+        <a href="#">Read more →</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1587614382345-8b9f4e1b9a5c?auto=format&fit=crop&w=400&q=80" alt="AI Ethics">
+      <div class="card-content">
+        <h3>AI Ethics & Governance</h3>
+        <p>New frameworks and regulatory approaches aim to balance innovation with safety, transparency, and bias mitigation in autonomous systems.</p>
+        <a href="#">Read more →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Biotechnology -->
-  <section id="biotech">
-    <h2>Biotechnology</h2>
-    <img class="image" src="https://images.unsplash.com/photo-1563417653-5c5a2e4b8b3e?auto=format&fit=crop&w=800&q=60" alt="Lab work">
-    <p>CRISPR‑based gene editing now includes <strong>prime editing</strong> and <strong>base‑editing</strong> with 99.5% precision. New regenerative therapies harness engineered organoids for organ replacement, and synthetic biology enables sustainable bio‑fuels.</p>
-    <ul>
-      <li>Approved CRISPR therapy for sickle cell disease</li>
-      <li>Organoid‑grown heart tissue in pre‑clinical trials</li>
-      <li>Bio‑fabricated plastics from algae reducing carbon footprint by 70%</li>
-    </ul>
-  </section>
+<section class="section" id="quantum">
+  <h2>Quantum Computing</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585986562695-1e4d6e8b1f38?auto=format&fit=crop&w=400&q=80" alt="Quantum Processor">
+      <div class="card-content">
+        <h3>New Quantum Processors</h3>
+        <p>IBM, Google, and startups have launched chips with 200‑plus qubits, bringing practical quantum advantage closer to reality.</p>
+        <a href="#">Read more →</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1592495597209-5b1a5a2e1b7a?auto=format&fit=crop&w=400&q=80" alt="Quantum Networks">
+      <div class="card-content">
+        <h3>Quantum Networking</h3>
+        <p>Development of quantum repeaters and satellite links paves the way for a global quantum internet, promising unparalleled security.</p>
+        <a href="#">Read more →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Space Technology -->
-  <section id="space">
-    <h2>Space Technology</h2>
-    <img class="image" src="https://images.unsplash.com/photo-1547083568-2f9b3c6f7e7b?auto=format&fit=crop&w=800&q=60" alt="Satellite launch">
-    <p>Reusable launch vehicles now achieve <10% cost per launch, enabling rapid deployment of mega‑constellations for global broadband. Space agencies are conducting the first <strong>Mars Sample Return</strong> mission, while private firms are building habitats for lunar orbit.</p>
-    <ul>
-      <li>Commercial suborbital space tourism ticket under $3,000</li>
-      <li>CubeSat network delivering <5‑Mbps data to remote areas</li>
-      <li>Robotic rover performing autonomous sample retrieval on Mars</li>
-    </ul>
-  </section>
-
-  <!-- 5G/6G & Connectivity -->
-  <section id="connectivity">
-    <h2>5G/6G & Connectivity</h2>
-    <img class="image" src="https://images.unsplash.com/photo-1580894908361-6eaf9a8a9e7f?auto=format&fit=crop&w=800&q=60" alt="Network infrastructure">
-    <p>5G rollouts continue, but 6G trials now deliver sub‑millisecond latency and terabit-per-second throughput, unlocking real‑time holographic communication and edge AI. Global satellite constellations provide ubiquitous broadband to underserved regions.</p>
-    <ul>
-      <li>Commercial 6G pilot in Singapore (2025–26)</li>
-      <li>Satellite network reaching <10% of global population</li>
-      <li>AI‑optimized beamforming enhancing network capacity by 250%</li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  <p>Sources: TechCrunch, Nature, IEEE Spectrum, MIT Technology Review, NASA, and industry whitepapers (2025‑2026)</p>
-  <p>© 2026 Tech Insights – All rights reserved.</p>
-</footer>
-</body>
-</html>
+<section class="section" id="battery">
+  <h2>Battery & Energy Storage</h2>
+  <div class="cards">
+    <div class="card">
+      <img
