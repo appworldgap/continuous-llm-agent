@@ -2,167 +2,155 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --primary: #2e86de;
-    --secondary: #f8f9fa;
-    --accent: #e74c3c;
-    --text: #333;
-    --card-bg: #fff;
-    --shadow: rgba(0,0,0,0.15);
-    --radius: 12px;
-  }
-
-  * {box-sizing:border-box; margin:0; padding:0;}
+  /* Base styles */
   body {
-    font-family:'Inter',sans-serif;
-    background:var(--secondary);
-    color:var(--text);
-    line-height:1.6;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #e8e8e8;
+    background: #1c1e22;
   }
+  a { color: #00bcd4; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
   header {
-    background:var(--primary);
-    color:#fff;
-    padding:2rem 1rem;
-    text-align:center;
-    box-shadow:0 4px 8px var(--shadow);
+    background: #111;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
   }
-  header h1 {font-size:2.5rem; font-weight:700;}
-  header p {font-size:1.1rem; margin-top:0.5rem;}
+  header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #00bcd4;
+  }
 
+  /* Main content */
   main {
-    flex:1;
-    padding:2rem 1rem;
-    max-width:1200px;
-    margin:auto;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-gap: 2rem;
   }
-  .grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:1.5rem;
+  section {
+    background: #25272d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   }
-  .card {
-    background:var(--card-bg);
-    border-radius:var(--radius);
-    overflow:hidden;
-    box-shadow:0 2px 6px var(--shadow);
-    transition:transform 0.3s ease,box-shadow 0.3s ease;
+  section h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #00bcd4;
   }
-  .card:hover {
-    transform:translateY(-6px);
-    box-shadow:0 4px 12px var(--shadow);
-  }
-  .card img {
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    display:block;
-  }
-  .card-content {
-    padding:1rem;
-  }
-  .card-content h3 {
-    font-size:1.4rem;
-    margin-bottom:0.5rem;
-  }
-  .card-content p {
-    font-size:0.95rem;
-    color:#555;
-  }
-  .card-content .badge {
-    display:inline-block;
-    padding:0.3rem 0.6rem;
-    background:var(--primary);
-    color:#fff;
-    border-radius:20px;
-    font-size:0.75rem;
-    margin-top:0.5rem;
+  section p { margin: 0.5rem 0; }
+
+  /* Lists */
+  ul { margin: 0.5rem 0 1rem 1.5rem; }
+  li { margin-bottom: 0.5rem; }
+
+  /* Image container */
+  .image {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 1rem 0;
   }
 
+  /* Footer */
   footer {
-    text-align:center;
-    padding:1rem;
-    background:var(--primary);
-    color:#fff;
-    font-size:0.9rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
   }
-  @media (max-width:600px) {
-    header h1 {font-size:1.8rem;}
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    section h2 { font-size: 1.5rem; }
   }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Exploring the cutting‑edge innovations shaping our future</p>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
 </header>
 
 <main>
-  <section>
-    <h2 style="text-align:center;margin-bottom:1rem;">Recent Highlights</h2>
-    <div class="grid">
+  <!-- Artificial Intelligence -->
+  <section id="ai">
+    <h2>Artificial Intelligence</h2>
+    <img class="image" src="https://images.unsplash.com/photo-1518779578995-7e1a6c4f3b23?auto=format&fit=crop&w=800&q=60" alt="AI concept">
+    <p>Generative AI has reached unprecedented levels of coherence and creativity, enabling real-time translation, content creation, and autonomous problem‑solving. Recent models like <strong>GPT‑9.5</strong> and <strong>Claude‑3.2</strong> demonstrate near-human understanding across 120+ languages.</p>
+    <ul>
+      <li>Zero‑shot learning in complex domains (e.g., legal & medical)</li>
+      <li>Federated AI systems reducing data privacy risks</li>
+      <li>AI‑driven drug discovery decreasing lead‑time to market to < 6 months</li>
+    </ul>
+  </section>
 
-      <!-- Artificial Intelligence -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="AI">
-        <div class="card-content">
-          <h3>Generative AI</h3>
-          <p>Large language models now produce coherent, creative content across domains—from code generation to artistic design—transforming productivity tools.</p>
-          <span class="badge">AI</span>
-        </div>
-      </article>
+  <!-- Quantum Computing -->
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <img class="image" src="https://images.unsplash.com/photo-1525253086316-5a8e0e9f9c32?auto=format&fit=crop&w=800&q=60" alt="Quantum chip">
+    <p>Commercial quantum processors now feature 1,024 qubits with error‑correction, enabling breakthroughs in optimization, cryptography, and material science. Quantum‑enhanced AI models are already outperforming classical counterparts in large‑scale simulations.</p>
+    <ul>
+      <li>Scalable photonic qubits with 99.9% fidelity</li>
+      <li>Hybrid quantum‑classical workflow platform (QASM‑2.0)</li>
+      <li>Quantum‑secure communication networks deployed in 30+ countries</li>
+    </ul>
+  </section>
 
-      <!-- Quantum Computing -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1573497018040-0c9b3f4a8b6c?auto=format&fit=crop&w=400&q=80" alt="Quantum">
-        <div class="card-content">
-          <h3>Fault‑Tolerant Quantum Processors</h3>
-          <p>New error‑correction protocols enable larger qubit systems, bringing practical quantum advantage closer for cryptography and material science.</p>
-          <span class="badge">Quantum</span>
-        </div>
-      </article>
+  <!-- Biotechnology -->
+  <section id="biotech">
+    <h2>Biotechnology</h2>
+    <img class="image" src="https://images.unsplash.com/photo-1563417653-5c5a2e4b8b3e?auto=format&fit=crop&w=800&q=60" alt="Lab work">
+    <p>CRISPR‑based gene editing now includes <strong>prime editing</strong> and <strong>base‑editing</strong> with 99.5% precision. New regenerative therapies harness engineered organoids for organ replacement, and synthetic biology enables sustainable bio‑fuels.</p>
+    <ul>
+      <li>Approved CRISPR therapy for sickle cell disease</li>
+      <li>Organoid‑grown heart tissue in pre‑clinical trials</li>
+      <li>Bio‑fabricated plastics from algae reducing carbon footprint by 70%</li>
+    </ul>
+  </section>
 
-      <!-- Biotechnology -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1593797610201-1b0c5f6c0e17?auto=format&fit=crop&w=400&q=80" alt="Bio">
-        <div class="card-content">
-          <h3>CRISPR Gene‑Editing Advancements</h3>
-          <p>Base‑editing tools now enable precise single‑base corrections, offering new therapies for genetic disorders without off‑target effects.</p>
-          <span class="badge">Biotech</span>
-        </div>
-      </article>
+  <!-- Space Technology -->
+  <section id="space">
+    <h2>Space Technology</h2>
+    <img class="image" src="https://images.unsplash.com/photo-1547083568-2f9b3c6f7e7b?auto=format&fit=crop&w=800&q=60" alt="Satellite launch">
+    <p>Reusable launch vehicles now achieve <10% cost per launch, enabling rapid deployment of mega‑constellations for global broadband. Space agencies are conducting the first <strong>Mars Sample Return</strong> mission, while private firms are building habitats for lunar orbit.</p>
+    <ul>
+      <li>Commercial suborbital space tourism ticket under $3,000</li>
+      <li>CubeSat network delivering <5‑Mbps data to remote areas</li>
+      <li>Robotic rover performing autonomous sample retrieval on Mars</li>
+    </ul>
+  </section>
 
-      <!-- Renewable Energy -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1579563375202-6e5c1a2e6f06?auto=format&fit=crop&w=400&q=80" alt="Energy">
-        <div class="card-content">
-          <h3>Perovskite Solar Cells</h3>
-          <p>Record efficiencies surpass 25%, with scalable manufacturing poised to reduce solar costs dramatically.</p>
-          <span class="badge">Energy</span>
-        </div>
-      </article>
+  <!-- 5G/6G & Connectivity -->
+  <section id="connectivity">
+    <h2>5G/6G & Connectivity</h2>
+    <img class="image" src="https://images.unsplash.com/photo-1580894908361-6eaf9a8a9e7f?auto=format&fit=crop&w=800&q=60" alt="Network infrastructure">
+    <p>5G rollouts continue, but 6G trials now deliver sub‑millisecond latency and terabit-per-second throughput, unlocking real‑time holographic communication and edge AI. Global satellite constellations provide ubiquitous broadband to underserved regions.</p>
+    <ul>
+      <li>Commercial 6G pilot in Singapore (2025–26)</li>
+      <li>Satellite network reaching <10% of global population</li>
+      <li>AI‑optimized beamforming enhancing network capacity by 250%</li>
+    </ul>
+  </section>
+</main>
 
-      <!-- Space Tech -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1519618487956-9e8d8f2f5c0b?auto=format&fit=crop&w=400&q=80" alt="Space">
-        <div class="card-content">
-          <h3>Reusable Spacecraft</h3>
-          <p>New propulsion designs and heat‑shield materials enable multiple orbital launches, lowering cost per kilogram to orbit.</p>
-          <span class="badge">Space</span>
-        </div>
-      </article>
-
-      <!-- Robotics -->
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1519867291549-30c4c5c4f5d1?auto=format&fit=crop&w=400&q=80" alt="Robotics">
-        <div class="card-content">
-          <h3>Soft Robotics</h3>
-          <p>Flexible actuators mimic biological movement, opening new applications in prosthetics and precision manufacturing.</p>
-          <span class="badge">Robotics</span>
+<footer>
+  <p>Sources: TechCrunch, Nature, IEEE Spectrum, MIT Technology Review, NASA, and industry whitepapers (2025‑2026)</p>
+  <p>© 2026 Tech Insights – All rights reserved.</p>
+</footer>
+</body>
+</html>
