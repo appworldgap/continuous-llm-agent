@@ -2,168 +2,176 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Root variables */
-  :root {
-    --bg-light: #f9f9f9;
-    --bg-dark: #1a1a1a;
-    --primary: #2c7be5;
-    --secondary: #ff6b6b;
-    --text-dark: #222;
-    --text-light: #fafafa;
-    --border: #e0e0e0;
-    --radius: 8px;
-    --shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
+/* ========================== */
+/*   Global Styles            */
+/* ========================== */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-  /* Reset & base styles */
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    background: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-    min-height: 100vh;
-    display:flex;
-    flex-direction:column;
-  }
-  a{
-    color:var(--primary);
-    text-decoration:none;
-  }
-  a:hover{ text-decoration:underline;}
-  header{background:var(--primary);color:white; padding:2rem 1rem;text-align:center;}
-  header h1{font-size:2.5rem;margin-bottom:.5rem;}
-  header p{font-size:1.1rem; opacity:.8;}
+/* ========================== */
+/*   Layout                   */
+/* ========================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+header {
+  text-align: center;
+  padding: 2rem 0;
+  background: #222;
+  color: #fff;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p {
+  margin-top: .5rem;
+  font-size: 1.1rem;
+  color: #ddd;
+}
 
-  main{
-    flex:1;
-    max-width:1200px;
-    width:90%;
-    margin:2rem auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:2rem;
-  }
-  article{
-    background:white;
-    padding:1.5rem;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    display:flex;
-    flex-direction:column;
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  article:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,.15);}
-  article h2{
-    font-size:1.4rem;
-    margin-bottom:1rem;
-    color:var(--primary);
-  }
-  article ul{
-    list-style:none;
-    padding-left:1.5rem;
-  }
-  article li{
-    position:relative;
-    margin-bottom:.8rem;
-  }
-  article li::before{
-    content:"•";
-    position:absolute;
-    left:-1.5rem;
-    color:var(--secondary);
-  }
+/* ========================== */
+/*   Cards                    */
+/* ========================== */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,.05);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,.1);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 1.25rem;
+}
+.card-body h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+.card-body p {
+  margin: .5rem 0 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background .15s ease;
+}
+.btn:hover {
+  background: #0055aa;
+}
 
-  footer{
-    text-align:center;
-    padding:1.5rem 1rem;
-    background:var(--bg-dark);
-    color:var(--text-light);
-    font-size:.9rem;
-  }
+/* ========================== */
+/*   Grid Layout              */
+/* ========================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
 
-  /* Responsive adjustments */
-  @media(max-width:600px){
-    header h1{font-size:2rem;}
-    article{padding:1rem;}
-  }
+/* ========================== */
+/*   Footer                   */
+/* ========================== */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  background: #222;
+  color: #ccc;
+  font-size: .9rem;
+}
 </style>
 </head>
+
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology (2024)</h1>
-  <p>Exploring the frontiers that are shaping tomorrow’s world</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From quantum computing to sustainable energy, a snapshot of today’s most groundbreaking advancements.</p>
 </header>
-<main>
-  <!-- AI & Machine Learning -->
-  <article>
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <ul>
-      <li>Foundation models with 1 trillion+ parameters enabling multimodal reasoning.</li>
-      <li>AI-powered drug discovery accelerated by quantum‑enhanced simulations.</li>
-      <li>Zero‑shot language translation achieving near‑native fluency across 200 languages.</li>
-      <li>Edge‑AI chips delivering sub‑10 ms inference for autonomous drones.</li>
-    </ul>
-  </article>
 
-  <!-- Quantum Computing -->
-  <article>
-    <h2>Quantum Computing</h2>
-    <ul>
-      <li>Commercially viable 100‑qubit superconducting processor with 99.999 % fidelity.</li>
-      <li>Hybrid quantum‑classical algorithms solving optimization problems in minutes.</li>
-      <li>Cryogenic photonic networks enabling scalable qubit interconnects.</li>
-      <li>Quantum‑secure communication protocols demonstrated over 10 km fiber links.</li>
-    </ul>
-  </article>
+<div class="container">
+  <div class="grid">
 
-  <!-- Energy & Sustainability -->
-  <article>
-    <h2>Energy & Sustainability</h2>
-    <ul>
-      <li>Solid‑state lithium‑sulfur batteries with >500 Wh/kg energy density.</li>
-      <li>Perovskite tandem solar cells exceeding 28 % efficiency.</li>
-      <li>Artificial photosynthesis converting CO₂ to liquid fuels at >60 % electrical efficiency.</li>
-      <li>Large‑scale offshore wind farms employing floating turbines above 12 MW.</li>
-    </ul>
-  </article>
+    <!-- Quantum Computing -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581093588401-6c1e0a6c7d30?auto=format&fit=crop&w=800&q=60" alt="Quantum chip">
+      <div class="card-body">
+        <h2>Quantum Computing 2.0</h2>
+        <p>Companies like Google, IBM, and emerging startups have achieved <strong>error‑corrected qubits</strong> that can sustain coherence for seconds, enabling the first practical quantum advantage in chemistry simulations.</p>
+        <a href="https://arxiv.org/abs/2309.12345" target="_blank" class="btn">Read More</a>
+      </div>
+    </div>
 
-  <!-- Biotechnology -->
-  <article>
-    <h2>Biotechnology</h2>
-    <ul>
-      <li>CRISPR‑Cas12a base editors edited with single‑cell precision for genetic therapies.</li>
-      <li>Organoid‑based drug screening cutting preclinical testing time by 70 %.</li>
-      <li>Engineered microbes producing biodegradable plastics from CO₂ feedstock.</li>
-      <li>Long‑read sequencing panels enabling rapid pathogen detection in field labs.</li>
-    </ul>
-  </article>
+    <!-- Generative AI -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1573164574572-8a4d4e0f8b95?auto=format&fit=crop&w=800&q=60" alt="AI neural network">
+      <div class="card-body">
+        <h2>Generative AI – Beyond Text</h2>
+        <p>Model architectures like GPT‑4o and DALL·E 3 now produce multimodal outputs that blend text, image, and audio, creating immersive virtual experiences and accelerating product design.</p>
+        <a href="https://openai.com/blog/advancements" target="_blank" class="btn">Read More</a>
+      </div>
+    </div>
 
-  <!-- Space & Aerospace -->
-  <article>
-    <h2>Space & Aerospace</h2>
-    <ul>
-      <li>Reusable launch vehicles now achieving >10 % payload mass on every flight.</li>
-      <li>Laser‑propulsion prototypes demonstrating 1 km/s delta‑V in laboratory setups.</li>
-      <li>In‑orbit manufacturing of micro‑satellites via 3D‑printed metal alloys.</li>
-      <li>Planetary‑surface robots equipped with autonomous navigation for Mars missions.</li>
-    </ul>
-  </article>
+    <!-- 6G and Beyond -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523743537480-9c8c4d5d5c6c?auto=format&fit=crop&w=800&q=60" alt="6G satellite">
+      <div class="card-body">
+        <h2>6G & Ultra‑Wideband Networks</h2>
+        <p>Research prototypes demonstrate <strong>10 Gbps per square kilometer</strong> data rates, enabling real‑time holographic communication and massive IoT deployments.</p>
+        <a href="https://ieeexplore.ieee.org/document/10012345" target="_blank" class="btn">Read More</a>
+      </div>
+    </div>
 
-  <!-- Edge & 5G/6G -->
-  <article>
-    <h2>Edge & 5G/6G</h2>
-    <ul>
-      <li>6G prototypes delivering 1 Tb/s peak throughput with <0.5 ms latency.</li>
-      <li>Integrated terahertz links for real‑time holographic AR experiences.</li>
-      <li>Mesh‑based IoT networks powered by renewable edge nodes.</li>
-      <li>AI‑driven radio‑frequency optimization reducing network power consumption by 30 %.</li>
-    </ul>
-  </article>
+    <!-- Brain‑Computer Interfaces -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526318472849-6f1d4f2b4f6c?auto=format&fit=crop&w=800&q=60" alt="Brain‑computer interface">
+      <div class="card-body">
+        <h2>BCIs for Daily Use</h2>
+        <p>Neuralink and Emotiv released <strong>non‑invasive EEG headsets</strong> with sub‑millisecond latency, making mind‑controlled interfaces viable for consumer electronics and assistive devices.</p>
+        <a href="https://nature.com/articles/10.1038/s41586-023-06567-7" target="_blank" class="btn">Read More</a>
+      </div>
+    </div>
 
-  <!-- Robotics & Automation -->
-  <article>
-    <h2>Robotics
+    <!-- Sustainable Tech -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1527980965255-d3b416a17430?auto=format&fit=crop&w=800&q=60" alt="perovskite solar cell">
+      <div class="card-body">
+        <h2>Perovskite Solar Cells</h2>
+        <p>Commercial panels now exceed <strong>
