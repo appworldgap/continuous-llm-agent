@@ -2,160 +2,182 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Root variables */
-  :root {
-    --bg-dark: #1e1e2f;
-    --bg-light: #f4f4f9;
-    --accent: #ff6f61;
-    --text-primary: #ffffff;
-    --text-secondary: #dcdcdc;
-    --card-bg: #2d2d3d;
-    --border-radius: 12px;
-    --font-base: 16px;
-    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
+    /* CSS Reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* Global reset & typography */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    background: var(--bg-dark);
-    color: var(--text-primary);
-    font-size: var(--font-base);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background: #f9f9f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-  /* Header */
-  header {
-    background: var(--card-bg);
-    padding: 1rem 2rem;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  header p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-  }
+    header {
+        background: #1e1e2f;
+        color: #fff;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
 
-  /* Main container */
-  main {
-    flex: 1;
-    padding: 2rem;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
 
-  /* Card */
-  article {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  article:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  }
-  article img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-  }
-  article .content {
-    padding: 1rem 1.5rem;
-  }
-  article .title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--accent);
-  }
-  article .date {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.75rem;
-  }
-  article p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
+    header p {
+        font-size: 1.1rem;
+        opacity: 0.85;
+    }
 
-  /* Footer */
-  footer {
-    background: var(--card-bg);
-    text-align: center;
-    padding: 1rem 2rem;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-  }
+    main {
+        flex: 1;
+        padding: 2rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    article .title { font-size: 1.15rem; }
-  }
+    .grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 1.2rem;
+        flex: 1;
+    }
+
+    .card-content h3 {
+        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+        color: #1e1e2f;
+    }
+
+    .card-content p {
+        font-size: 0.95rem;
+        opacity: 0.9;
+        margin-bottom: 1rem;
+    }
+
+    .card-content a {
+        text-decoration: none;
+        color: #0077ff;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+    .card-content a:hover { color: #005bb5; }
+
+    footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: #1e1e2f;
+        color: #fff;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+        header h1 { font-size: 2rem; }
+    }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>Innovations shaping the world of 2026</p>
+    <h1>Latest Breakthroughs in Technology</h1>
+    <p>Explore cutting‑edge innovations reshaping the world today</p>
 </header>
 
 <main>
-  <!-- 1. Quantum‑AI Hybrid Chips -->
-  <article>
-    <img src="https://via.placeholder.com/400x200?text=Quantum‑AI+Chip" alt="Quantum‑AI Hybrid Chip">
-    <div class="content">
-      <h2 class="title">Quantum‑AI Hybrid Chips</h2>
-      <div class="date">Feb 2026</div>
-      <p>Semiconductor giants have unveiled a new class of chips that integrate superconducting qubits with traditional silicon processors, achieving a 300x speed‑up for machine‑learning workloads while maintaining 99.999% reliability.</p>
-    </div>
-  </article>
+    <section class="grid">
 
-  <!-- 2. Solid‑State Lithium‑Sulfur Batteries -->
-  <article>
-    <img src="https://via.placeholder.com/400x200?text=Solid‑State+Battery" alt="Solid‑State Lithium‑Sulfur Battery">
-    <div class="content">
-      <h2 class="title">Solid‑State Lithium‑Sulfur Batteries</h2>
-      <div class="date">May 2026</div>
-      <p>Researchers have cracked the long‑standing issue of polysulfide shuttling, delivering a commercial battery with 500 Wh/L capacity and 2000 full‑cycle lifespan—enabling electric vehicles with 600‑km range on a single charge.</p>
-    </div>
-  </article>
+        <!-- Quantum Computing -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1524805842329-1a7b5a8e5a4e?auto=format&fit=crop&w=800&q=80" alt="Quantum computer">
+            <div class="card-content">
+                <h3>Quantum Computing</h3>
+                <p>Companies like IBM, Google, and Rigetti are delivering noisy intermediate‑scale quantum (NISQ) processors that solve specialized problems faster than classical supercomputers.</p>
+                <a href="https://www.ibm.com/quantum-computing" target="_blank">Learn More</a>
+            </div>
+        </article>
 
-  <!-- 3. 6G Ultra‑Low‑Latency Networks -->
-  <article>
-    <img src="https://via.placeholder.com/400x200?text=6G+Network" alt="6G Network">
-    <div class="content">
-      <h2 class="title">6G Ultra‑Low‑Latency Networks</h2>
-      <div class="date">Jun 2026</div>
-      <p>Telecommunication companies have rolled out 6G, offering sub‑microsecond latency and terabit/s speeds, enabling real‑time holographic communication and autonomous drone swarms in urban environments.</p>
-    </div>
-  </article>
+        <!-- Generative AI Models -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1517430816045-df4b7b7b9e0b?auto=format&fit=crop&w=800&q=80" alt="Generative AI">
+            <div class="card-content">
+                <h3>Generative AI</h3>
+                <p>From GPT‑4 to image models like Stable Diffusion, generative AI now produces human‑like text, images, music, and even code with unprecedented fluency.</p>
+                <a href="https://openai.com/research/" target="_blank">Explore AI Research</a>
+            </div>
+        </article>
 
-  <!-- 4. Autonomous Neural‑Interface Implants -->
-  <article>
-    <img src="https://via.placeholder.com/400x200?text=Neural+Interface" alt="Neural Interface Implant">
-    <div class="content">
-      <h2 class="title">Autonomous Neural‑Interface Implants</h2>
-      <div class="date">Oct 2025</div>
-      <p>Biotech firm Neuralix released an FDA‑cleared, fully autonomous brain‑computer interface that can learn user intent in seconds, opening new horizons for prosthetics and assistive tech for paralysis.</p>
-    </div>
-  </article>
+        <!-- 6G & Next‑Gen Connectivity -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1558611848-73f7f0e1e2e7?auto=format&fit=crop&w=800&q=80" alt="6G">
+            <div class="card-content">
+                <h3>6G & Next‑Gen Connectivity</h3>
+                <p>While 5G continues deployment, research into 6G promises sub‑10 GHz bandwidth, terabit‑per‑second speeds, and integrated quantum‑communication protocols.</p>
+                <a href="https://www.nist.gov/topics/6g" target="_blank">Read More</a>
+            </div>
+        </article>
 
-  <!-- 5. Fusion Power Prototype Achieves Net Energy Gain -->
-  <article>
-    <img src="https://via.placeholder.com/400x200?text=Fusion+Prototype" alt
+        <!-- Brain‑Computer Interfaces -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1603164670213-5c2c2e5c0f01?auto=format&fit=crop&w=800&q=80" alt="Brain‑Computer Interface">
+            <div class="card-content">
+                <h3>Brain‑Computer Interfaces</h3>
+                <p>Neuralink and Kernel are pioneering implantable and non‑invasive BCIs that enable direct communication between the brain and external devices.</p>
+                <a href="https://www.neuralink.com" target="_blank">Visit Neuralink</a>
+            </div>
+        </article>
+
+        <!-- Advanced Energy Storage -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1517495306984-2c9c86cfe3b1?auto=format&fit=crop&w=800&q=80" alt="Energy storage">
+            <div class="card-content">
+                <h3>Advanced Energy Storage</h3>
+                <p>Solid‑state batteries, flow batteries, and metal‑air chemistries are achieving higher energy densities, faster charging, and longer lifetimes.</p>
+                <a href="https://www.energy.gov/eere/energy-storage" target="_blank">Energy Storage Data</a>
+            </div>
+        </article>
+
+        <!-- CRISPR‑Based Gene Editing -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1560210193-0b8a0f9e2f7b?auto=format&fit=crop&w=800&q=80" alt="CRISPR gene editing">
+            <div class="card-content">
+                <h3>CRISPR‑Based Gene Editing</h3>
+                <p>New base‑editing and prime‑editing techniques allow precise correction of genetic mutations with minimal off‑target effects.</p>
+                <a href="https://www.genome.gov/about-genomics/education-and-training/GENOMICS-Resources/CRISPR-Genetic-Editing" target="_blank">Explore CRISPR</a>
+            </div>
+        </article>
+
+        <!-- Autonomous Vehicle Advancements -->
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1592194996308
