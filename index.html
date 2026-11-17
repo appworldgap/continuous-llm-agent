@@ -3,121 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Reset & Basics */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; background: #f4f7fb; color: #222; }
-  a { color: inherit; text-decoration: none; }
+/* Reset & base styles */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+  color:#333;
+  background:#f7f9fc;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+a{text-decoration:none;color:#1a73e8;}
+a:hover{color:#0c5eb6;}
 
-  /* Layout */
-  header, main { width: 90%; max-width: 1200px; margin: 0 auto; }
-  header { padding: 2rem 0; text-align: center; }
-  header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
-  header p { font-size: 1.2rem; color: #555; }
-
-  /* Hero Section */
-  .hero { background: linear-gradient(135deg,#4e54c8,#8f94fb); color: #fff; padding: 6rem 2rem; text-align: center; margin-bottom: 2rem; border-radius: 8px; }
-  .hero h2 { font-size: 2.4rem; margin-bottom: 1rem; }
-  .hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
-
-  /* Grid Cards */
-  .cards { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-  .card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
-  .card:hover { transform: translateY(-5px); }
-  .card h3 { margin-bottom: 0.8rem; color: #4e54c8; }
-  .card p { font-size: 0.95rem; color: #555; }
-
-  /* Footer */
-  footer { text-align: center; padding: 2rem 0; color: #777; font-size: 0.9rem; }
-  footer a { color: #4e54c8; }
+header{
+  background:#ffffff;
+  padding:1rem 2rem;
+  box-shadow:0 2px 4px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+header h1{
+  font-size:1.75rem;
+  color:#222;
+}
+main{
+  flex:1;
+  padding:2rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+section{
+  margin-bottom:3rem;
+}
+section h2{
+  font-size:1.5rem;
+  margin-bottom:1rem;
+  color:#444;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 3px 8px rgba(0,0,0,.05);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 6px 12px rgba(0,0,0,.1);
+}
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+.card-body{
+  padding:1rem;
+}
+.card-title{
+  font-size:1.2rem;
+  margin-bottom:.5rem;
+  color:#222;
+}
+.card-text{
+  font-size:.95rem;
+  color:#555;
+  margin-bottom:.75rem;
+}
+.card-footer{
+  display:flex;
+  justify-content:space-between;
+  font-size:.85rem;
+  color:#777;
+  margin-top:.5rem;
+}
+footer{
+  background:#ffffff;
+  padding:1rem 2rem;
+  text-align:center;
+  font-size:.9rem;
+  color:#777;
+  box-shadow:0 -1px 3px rgba(0,0,0,.05);
+}
+@media (max-width:600px){
+  header h1{font-size:1.5rem;}
+  .card img{height:140px;}
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>Tech Frontier 2024</h1>
-  <p>Exploring the most groundbreaking tech innovations shaping our future</p>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
 
-<section class="hero">
-  <h2>From Quantum Leaps to AI Mastery</h2>
-  <p>Discover how researchers, companies, and startups are pushing the limits of science and engineering to create smarter, faster, and more sustainable solutions.</p>
-</section>
-
 <main>
-  <section id="ai">
-    <h2>Artificial Intelligence</h2>
+  <!-- AI & Machine Learning -->
+  <section id="ai-ml">
+    <h2>AI & Machine Learning</h2>
     <div class="cards">
       <article class="card">
-        <h3>Generative AI at Scale</h3>
-        <p>Large language models now generate high‑quality code, design documents, and creative content with unprecedented speed, enabling rapid prototyping across industries.</p>
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="AI">
+        <div class="card-body">
+          <h3 class="card-title">GPT-4.5 Turbo & Multimodal AI</h3>
+          <p class="card-text">OpenAI's GPT-4.5 Turbo now supports text, image, and audio inputs, enabling more natural multimodal interactions and higher efficiency.</p>
+          <div class="card-footer"><span>🗓️ 2024</span><a href="https://openai.com" target="_blank">OpenAI</a></div>
+        </div>
       </article>
       <article class="card">
-        <h3>AI‑Assisted Healthcare</h3>
-        <p>Deep learning models diagnose rare diseases in minutes, while AI‑driven drug discovery shortens the timeline from molecule to market.</p>
+        <img src="https://images.unsplash.com/photo-1517430816045-df6b8b7a4c47?auto=format&fit=crop&w=400&q=80" alt="Deep Learning">
+        <div class="card-body">
+          <h3 class="card-title">Deep Learning Accelerators (Graphcore, Cerebras)</h3>
+          <p class="card-text">New ASICs deliver up to 10× performance per watt for training large language models, pushing AI workloads to the edge.</p>
+          <div class="card-footer"><span>🗓️ 2024</span><a href="https://graphcore.ai" target="_blank">Graphcore</a></div>
+        </div>
       </article>
     </div>
   </section>
 
+  <!-- Quantum Computing -->
   <section id="quantum">
     <h2>Quantum Computing</h2>
     <div class="cards">
       <article class="card">
-        <h3>Fault‑Tolerant Qubits</h3>
-        <p>Superconducting and silicon‑based qubits now achieve error rates below the threshold needed for practical computation.</p>
+        <img src="https://images.unsplash.com/photo-1581291519195-ef11498d1d09?auto=format&fit=crop&w=400&q=80" alt="Quantum">
+        <div class="card-body">
+          <h3 class="card-title">IBM Quantum H-Series</h3>
+          <p class="card-text">IBM announced the H-series processors with 1,000+ qubits, achieving quantum advantage in chemical simulation.</p>
+          <div class="card-footer"><span>🗓️ 2024</span><a href="https://ibm.com" target="_blank">IBM</a></div>
+        </div>
       </article>
       <article class="card">
-        <h3Quantum Networks</h3>
-        <p>First intercity quantum key distribution links secure communications against future quantum attacks.</p>
+        <img src="https://images.unsplash.com/photo-1523475496153-6a3b8c1b3e5b?auto=format&fit=crop&w=400&q=80" alt="Quantum Network">
+        <div class="card-body">
+          <h3 class="card-title">Quantum Internet Trials</h3>
+          <p class="card-text">China and the U.S. collaborate on a 2,000‑km quantum network using satellite‑ground links, enabling secure communication.</p>
+          <div class="card-footer"><span>🗓️ 2024</span><a href="https://quantumtelecom.org" target="_blank">QuantumTelecom</a></div>
+        </div>
       </article>
     </div>
   </section>
 
-  <section id="biotech">
-    <h2>Biotechnology</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>CRISPR‑Based Gene Therapy</h3>
-        <p>Clinical trials show CRISPR editing safely correcting genetic mutations in retinal and muscular disorders.</p>
-      </article>
-      <article class="card">
-        <h3>Lab‑Grown Organoids</h3>
-        <p>3‑D bioprinted tissues enable drug testing without animal models, accelerating the pipeline to approval.</p>
-      </article>
-    </div>
-  </section>
-
+  <!-- Renewable Energy & Batteries -->
   <section id="energy">
-    <h2>Energy & Sustainability</h2>
+    <h2>Renewable Energy & Batteries</h2>
     <div class="cards">
       <article class="card">
-        <h3>Solid‑State Batteries</h3>
-        <p>Next‑generation batteries deliver higher energy density and safer operation, paving the way for long‑range electric vehicles.</p>
+        <img src="https://images.unsplash.com/photo-1598927778603-6a6a9f2c8d1a?auto=format&fit=crop&w=400&q=80" alt="Solid State Battery">
+        <div class="card-body">
+          <h3 class="card-title">Solid-State Batteries from QuantumScape</h3>
+          <p class="card-text">First commercial solid‑state cells with 400 Wh/kg energy density, promising 0.5% charge in 5 minutes.</p>
+          <div class="card-footer"><span>🗓️ 2024</span><a href="https://quantumscape.com" target="_blank">QuantumScape</a></div>
+        </div>
       </article>
       <article class="card">
-        <h3>Direct Air Capture</h3>
-        <p>New chemical sorbents lower the cost of extracting CO₂ from ambient air, supporting net‑zero goals.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="space">
-    <h2>Space Exploration</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Reusable Mars Lander</h3>
-        <p>SpaceX’s Starship prototype demonstrates cost‑effective descent and ascent from Mars surface.</p>
-      </article>
-      <article class="card">
-        <h3>CubeSat Constellations</h3>
-        <p>Low‑cost nanosat fleets provide real‑time Earth observation data for agriculture, disaster response, and climate monitoring.</p>
-      </article>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <p>© 2024 Tech Frontier. All rights reserved. | <a href="#">Privacy Policy</a></p>
-</footer>
-</body>
-</html>
+        <img src="https://images.unsplash.com/photo-1526481280690-9f1e1d3f5c0d?auto=format&fit=crop&w=400&q=80" alt="Hydrogen">
+        <div class="card-body">
+          <h3 class="card-title">Low‑Temperature PEM Hydrogen Fuel Cells</h3>
+          <
