@@ -1,172 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-/* Reset & base styles */
-*{margin:0;padding:0;box-sizing:border-box;}
-html{font-size:16px;}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-  color:#333;
-  background:#f7f9fc;
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
-}
-a{text-decoration:none;color:#1a73e8;}
-a:hover{color:#0c5eb6;}
-
-header{
-  background:#ffffff;
-  padding:1rem 2rem;
-  box-shadow:0 2px 4px rgba(0,0,0,.1);
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-header h1{
-  font-size:1.75rem;
-  color:#222;
-}
-main{
-  flex:1;
-  padding:2rem;
-  max-width:1200px;
-  margin:0 auto;
-}
-section{
-  margin-bottom:3rem;
-}
-section h2{
-  font-size:1.5rem;
-  margin-bottom:1rem;
-  color:#444;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1.5rem;
-}
-.card{
-  background:#fff;
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:0 3px 8px rgba(0,0,0,.05);
-  transition:transform .2s ease,box-shadow .2s ease;
-}
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 6px 12px rgba(0,0,0,.1);
-}
-.card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
-.card-body{
-  padding:1rem;
-}
-.card-title{
-  font-size:1.2rem;
-  margin-bottom:.5rem;
-  color:#222;
-}
-.card-text{
-  font-size:.95rem;
-  color:#555;
-  margin-bottom:.75rem;
-}
-.card-footer{
-  display:flex;
-  justify-content:space-between;
-  font-size:.85rem;
-  color:#777;
-  margin-top:.5rem;
-}
-footer{
-  background:#ffffff;
-  padding:1rem 2rem;
-  text-align:center;
-  font-size:.9rem;
-  color:#777;
-  box-shadow:0 -1px 3px rgba(0,0,0,.05);
-}
-@media (max-width:600px){
-  header h1{font-size:1.5rem;}
-  .card img{height:140px;}
-}
+  :root{
+    --primary:#4a90e2;
+    --secondary:#3b7bc0;
+    --accent:#e94e77;
+    --bg:#f7f9fc;
+    --text:#222;
+    --muted:#555;
+    --card-bg:#fff;
+    --shadow:0 4px 12px rgba(0,0,0,.08);
+  }
+  body{
+    margin:0;
+    font-family:system-ui, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  header{
+    background:linear-gradient(135deg,#4a90e2,#3b7bc0);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+    box-shadow:var(--shadow);
+  }
+  header h1{
+    margin:0;
+    font-size:2.5rem;
+    font-weight:600;
+  }
+  nav{
+    margin-top:1rem;
+  }
+  nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 .75rem;
+    font-weight:500;
+  }
+  main{
+    max-width:1100px;
+    margin:auto;
+    padding:2rem 1rem;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
+    margin-top:2rem;
+  }
+  .card{
+    background:var(--card-bg);
+    border-radius:10px;
+    padding:1.5rem;
+    box-shadow:var(--shadow);
+    transition:transform .2s ease;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .card:hover{
+    transform:translateY(-5px);
+  }
+  .card h3{
+    margin:0 0 .5rem;
+    color:var(--primary);
+  }
+  .card p{
+    flex-grow:1;
+    margin:0 0 1rem;
+    color:var(--muted);
+  }
+  .card a{
+    align-self:flex-start;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+    margin-top:auto;
+  }
+  footer{
+    text-align:center;
+    margin-top:4rem;
+    color:var(--muted);
+    font-size:.9rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#121212;
+      --text:#e0e0e0;
+      --muted:#bbb;
+      --card-bg:#1e1e1e;
+      --shadow:0 4px 12px rgba(0,0,0,.6);
+    }
+    header{
+      background:linear-gradient(135deg,#5c8be1,#4e71c0);
+    }
+    header h1{
+      color:#fff;
+    }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>🚀 Latest Breakthroughs in Technology</h1>
+  <nav>
+    <a href="#ai">AI</a>
+    <a href="#quantum">Quantum</a>
+    <a href="#biotech">Biotech</a>
+    <a href="#energy">Energy</a>
+    <a href="#connectivity">Connectivity</a>
+  </nav>
 </header>
-
 <main>
-  <!-- AI & Machine Learning -->
-  <section id="ai-ml">
-    <h2>AI & Machine Learning</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="AI">
-        <div class="card-body">
-          <h3 class="card-title">GPT-4.5 Turbo & Multimodal AI</h3>
-          <p class="card-text">OpenAI's GPT-4.5 Turbo now supports text, image, and audio inputs, enabling more natural multimodal interactions and higher efficiency.</p>
-          <div class="card-footer"><span>🗓️ 2024</span><a href="https://openai.com" target="_blank">OpenAI</a></div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1517430816045-df6b8b7a4c47?auto=format&fit=crop&w=400&q=80" alt="Deep Learning">
-        <div class="card-body">
-          <h3 class="card-title">Deep Learning Accelerators (Graphcore, Cerebras)</h3>
-          <p class="card-text">New ASICs deliver up to 10× performance per watt for training large language models, pushing AI workloads to the edge.</p>
-          <div class="card-footer"><span>🗓️ 2024</span><a href="https://graphcore.ai" target="_blank">Graphcore</a></div>
-        </div>
-      </article>
+  <section id="ai" class="grid">
+    <div class="card">
+      <h3>Generative AI 3.0</h3>
+      <p>Large language models now generate multimodal content—text, images, audio and code—while maintaining context coherence across longer documents. OpenAI’s GPT‑4o and Claude 3.5 have set new benchmarks for safety and customization.</p>
+      <a href="https://openai.com/research/gpt-4o" target="_blank">Read More</a>
+    </div>
+    <div class="card">
+      <h3>AI‑Powered Edge Computing</h3>
+      <p>Integrating AI inference directly onto IoT devices reduces latency and bandwidth use. Qualcomm’s Snapdragon Edge AI and Apple’s Neural Engine advancements enable real‑time computer vision and natural language on smartphones.</p>
+      <a href="https://developer.qualcomm.com/products/snapdragon-edge-ai" target="_blank">Discover</a>
     </div>
   </section>
 
-  <!-- Quantum Computing -->
-  <section id="quantum">
-    <h2>Quantum Computing</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1581291519195-ef11498d1d09?auto=format&fit=crop&w=400&q=80" alt="Quantum">
-        <div class="card-body">
-          <h3 class="card-title">IBM Quantum H-Series</h3>
-          <p class="card-text">IBM announced the H-series processors with 1,000+ qubits, achieving quantum advantage in chemical simulation.</p>
-          <div class="card-footer"><span>🗓️ 2024</span><a href="https://ibm.com" target="_blank">IBM</a></div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1523475496153-6a3b8c1b3e5b?auto=format&fit=crop&w=400&q=80" alt="Quantum Network">
-        <div class="card-body">
-          <h3 class="card-title">Quantum Internet Trials</h3>
-          <p class="card-text">China and the U.S. collaborate on a 2,000‑km quantum network using satellite‑ground links, enabling secure communication.</p>
-          <div class="card-footer"><span>🗓️ 2024</span><a href="https://quantumtelecom.org" target="_blank">QuantumTelecom</a></div>
-        </div>
-      </article>
+  <section id="quantum" class="grid">
+    <div class="card">
+      <h3>Quantum Advantage in Optimization</h3>
+      <p>Google’s Sycamore achieved a milestone by solving a random circuit sampling problem in 200 seconds that would take classical supercomputers thousands of years. This demonstrates practical quantum advantage for specific workloads.</p>
+      <a href="https://blog.google/technology/quantum" target="_blank">Learn More</a>
+    </div>
+    <div class="card">
+      <h3>Commercial Quantum‑Safe Cryptography</h-h3>
+      <p>Post‑quantum algorithms like Kyber and Dilithium are now being deployed in TLS and VPN protocols, ensuring secure communications in a quantum future.</p>
+      <a href="https://www.ietf.org/news/2024/05/01/quantum-safe-cryptography" target="_blank">Explore</a>
     </div>
   </section>
 
-  <!-- Renewable Energy & Batteries -->
-  <section id="energy">
-    <h2>Renewable Energy & Batteries</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1598927778603-6a6a9f2c8d1a?auto=format&fit=crop&w=400&q=80" alt="Solid State Battery">
-        <div class="card-body">
-          <h3 class="card-title">Solid-State Batteries from QuantumScape</h3>
-          <p class="card-text">First commercial solid‑state cells with 400 Wh/kg energy density, promising 0.5% charge in 5 minutes.</p>
-          <div class="card-footer"><span>🗓️ 2024</span><a href="https://quantumscape.com" target="_blank">QuantumScape</a></div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1526481280690-9f1e1d3f5c0d?auto=format&fit=crop&w=400&q=80" alt="Hydrogen">
-        <div class="card-body">
-          <h3 class="card-title">Low‑Temperature PEM Hydrogen Fuel Cells</h3>
-          <
+  <section id="biotech" class="grid">
+    <div class="card">
+      <h3>CRISPR‑Base Editing for Rare Diseases</h3>
+      <p>Base editors now correct single‑nucleotide mutations with high precision, opening doors for treatments of conditions like β‑thalassemia and sickle cell anemia.</p>
+      <a href="https://www.nature.com/articles/s41467-024-34512-8" target="_blank">Read Study</a>
+    </div>
+    <div class="card">
+      <h3>Organoid‑Based Drug Screening</h3>
+      <p>Bioprinted brain and liver organoids mimic human tissue responses, drastically reducing the need for animal testing and accelerating drug discovery pipelines.</p>
+      <a href="https://www.cell.com/pastissues/issue/1548-7105" target="_blank">See Details</a>
+    </div>
+  </section>
+
+  <section id="energy" class="grid">
+    <div class="card">
+      <h3>Solid‑State Batteries</h3>
+      <p>Companies like QuantumScape and Solid Power have achieved higher energy densities and improved safety with lithium‑metal solid‑electrolyte batteries, promising longer‑range EVs.</p>
+      <a href="https://www.quantumscape.com" target="_blank">Visit</a>
+    </div>
+    <div class="card">
+      <h3>Next‑Gen Solar Photocatalysis</h3>
+      <p>Hybrid perovskite materials convert sunlight into clean hydrogen at unprecedented efficiencies, paving the way for scalable green
