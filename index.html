@@ -2,107 +2,130 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Base reset & typography */
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:#f9fafb;color:#222;line-height:1.6;}
-h1,h2{font-weight:700;margin-bottom:0.4rem;}
-h1{font-size:2.5rem;text-align:center;margin:2rem 0;}
-h2{font-size:1.75rem;color:#0066cc;}
-p{margin-bottom:1rem;}
-ul{margin-left:1.5rem;}
+    /* Reset & Base Styles */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;background:#fafafa;color:#333;line-height:1.6;}
+    a{color:#1e90ff;text-decoration:none;}
+    a:hover{text-decoration:underline;}
 
-/* Layout */
-.container{max-width:1200px;margin:auto;padding:2rem;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem;}
-.card{background:#fff;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.05);overflow:hidden;}
-.card img{width:100%;height:160px;object-fit:cover;}
-.card-body{padding:1.5rem;}
-.card-title{font-size:1.25rem;color:#0066cc;margin-bottom:0.5rem;}
-.card-desc{font-size:0.95rem;color:#555;}
+    /* Layout */
+    header{background:#222;color:#fff;padding:2rem 1rem;text-align:center;}
+    header h1{font-size:2.5rem;margin-bottom:.5rem;}
+    nav{display:flex;justify-content:center;background:#333;color:#fff;padding:.5rem 1rem;}
+    nav a{margin:0 1rem;color:#fff;font-weight:600;}
+    nav a:hover{color:#1e90ff;}
 
-/* Footer */
-footer{background:#0066cc;color:#fff;text-align:center;padding:1rem 0;margin-top:3rem;}
-footer a{color:#fff;text-decoration:none;font-weight:600;}
+    main{max-width:1200px;margin:auto;padding:2rem 1rem;}
+    .hero{background:url('https://images.unsplash.com/photo-1581093588401-2e4e6c9b2e6b?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;height:300px;margin-bottom:2rem;border-radius:10px;display:flex;align-items:center;justify-content:center;}
+    .hero h2{background:rgba(0,0,0,.6);color:#fff;padding:1rem 2rem;border-radius:5px;font-size:2rem;}
+
+    /* Sections */
+    .section{margin-bottom:3rem;}
+    .section h3{font-size:1.8rem;margin-bottom:.5rem;border-bottom:2px solid #1e90ff;padding-bottom:.5rem;}
+    .section p{margin-bottom:1rem;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+    .card{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,.1);transition:transform .2s;}
+    .card:hover{transform:translateY(-5px);}
+    .card h4{margin-bottom:.75rem;font-size:1.2rem;color:#1e90ff;}
+    .card p{font-size:.95rem;}
+
+    /* Footer */
+    footer{background:#222;color:#fff;text-align:center;padding:2rem 1rem;font-size:.9rem;}
+    footer a{color:#1e90ff;}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
+    <h1>Latest Breakthroughs in Technology – 2026</h1>
+    <p>From AI to Quantum, the future is here.</p>
 </header>
 
-<div class="container">
+<nav>
+    <a href="#">Home</a>
+    <a href="#">AI</a>
+    <a href="#">Quantum</a>
+    <a href="#">Connectivity</a>
+    <a href="#">Biotech</a>
+    <a href="#">Energy</a>
+</nav>
 
-  <section id="intro">
-    <p>In the first half of 2024, the tech world witnessed several landmark advancements across AI, quantum computing, biotechnology, and sustainable energy. Below is a curated snapshot of the most influential breakthroughs, their potential impact, and key players behind them.</p>
-  </section>
+<main>
+    <section class="hero">
+        <h2>Innovation in Motion</h2>
+    </section>
 
-  <section id="breakthroughs" class="grid">
+    <section class="section" id="ai">
+        <h3>Artificial Intelligence</h3>
+        <p>Generative AI has moved beyond text and images to <strong>real-time multimodal reasoning</strong> and autonomous decision making. OpenAI’s GPT-5 and Google's Gemini 2 can process text, video, and sensor data simultaneously, enabling new applications in medicine, robotics, and creative industries.</p>
+        <div class="grid">
+            <div class="card">
+                <h4>Medical Diagnosis</h4>
+                <p>AI models now analyze radiology scans, pathology slides, and genomics data in one pass, cutting diagnostic time from weeks to minutes.</p>
+            </div>
+            <div class="card">
+                <h4>Autonomous Vehicles</h4>
+                <p>Self-driving cars use multimodal AI to navigate complex urban environments with near-human safety margins.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Quantum Computing -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1604388409049-8e5c9a3d7e58?auto=format&fit=crop&w=800&q=60" alt="Quantum Chip">
-      <div class="card-body">
-        <h2 class="card-title">Quantum Supremacy Reached for Practical Tasks</h2>
-        <p class="card-desc">Google’s Sycamore 2.0, now with 300 qubits, performed a computational task that would take the most powerful classical supercomputer years. This milestone opens doors to secure communications, drug discovery, and complex optimization problems.</p>
-      </div>
-    </article>
+    <section class="section" id="quantum">
+        <h3>Quantum Computing</h3>
+        <p>Commercial quantum processors with over <strong>1,000 qubits</strong> are now available from multiple vendors. Quantum Advantage—solving real-world problems faster than any classical computer—is being demonstrated in drug discovery and material science.</p>
+        <div class="grid">
+            <div class="card">
+                <h4>IBM Q System 16</h4>
+                <p>IBM’s new 1,200-qubit machine achieves error-corrected logical operations for the first time.</p>
+            </div>
+            <div class="card">
+                <h4>Google Sycamore 3</h4>
+                <p>Google’s latest processor performs a 500-qubit random circuit sampling in under 200 nanoseconds.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- AI & Edge Computing -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1537432376769-8c6b8c4b9d5a?auto=format&fit=crop&w=800&q=60" alt="Edge AI">
-      <div class="card-body">
-        <h2 class="card-title">Edge AI Chips with 1TB/second Throughput</h2>
-        <p class="card-desc">Graphcore’s new IPU-X delivers 1 terabit of data processed per second on a single chip, enabling real‑time AI inference on smartphones, drones, and autonomous vehicles without cloud reliance.</p>
-      </div>
-    </article>
+    <section class="section" id="connectivity">
+        <h3>6G Connectivity</h3>
+        <p>Early 6G prototypes promise <strong>1–10 Tbps</strong> peak throughput, <em>microsecond</em> latency, and integrated AI at the edge. Satellite constellations and terrestrial millimeter‑wave towers are now reaching global coverage, making ultra‑high‑speed internet a reality.</p>
+        <div class="grid">
+            <div class="card">
+                <h4>Low‑Earth Orbit (LEO) Networks</h4>
+                <p>SpaceX’s Starlink and OneWeb are launching 6G‑ready antennas for worldwide broadband.</p>
+            </div>
+            <div class="card">
+                <h4>Terrestrial Millimeter‑Wave</h4>
+                <p>5G‑12G deployments are being upgraded to 6G in major cities, providing instantaneous VR and holographic communication.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Biotechnology -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1587497466472-1c2b1b8a6b60?auto=format&fit=crop&w=800&q=60" alt="CRISPR Lab">
-      <div class="card-body">
-        <h2 class="card-title">CRISPR‑Cas13 Editing for RNA‑Based Therapies</h2>
-        <p class="card-desc">A joint effort by CRISPR Therapeutics and GSK has demonstrated safe and precise RNA editing in vivo, paving the way for treatments targeting viral infections and genetic disorders without permanent DNA changes.</p>
-      </div>
-    </article>
+    <section class="section" id="biotech">
+        <h3>CRISPR & Gene Editing</h3>
+        <p>CRISPR‑Cas13 and prime editing have advanced to <strong>clinical-stage trials</strong> for a range of genetic diseases, including cystic fibrosis, sickle cell anemia, and certain cancers. Gene drives are also being engineered to control invasive species safely.</p>
+        <div class="grid">
+            <div class="card">
+                <h4>Prime Editing</h4>
+                <p>Allows precise base changes without double‑strand breaks, reducing off‑target effects.</p>
+            </div>
+            <div class="card">
+                <h4>Gene Drives</h4>
+                <p>CRISPR‑based drives are being tested in laboratory settings to eradicate malaria‑carrying mosquitoes.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Energy & Sustainability -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1587614382343-5e6c8c7b3c14?auto=format&fit=crop&w=800&q=60" alt="Solar Panels">
-      <div class="card-body">
-        <h2 class="card-title">Perovskite‑Solar Panels Exceed 28% Efficiency</h2>
-        <p class="card-desc">NREL’s latest perovskite tandem cells combine silicon and perovskite layers, achieving 28.9% efficiency in a lab setting. This breakthrough brings high‑efficiency, low‑cost solar power closer to commercial viability.</p>
-      </div>
-    </article>
-
-    <!-- Brain‑Computer Interface -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1598514981029-7c5d6d7a5a7b?auto=format&fit=crop&w=800&q=60" alt="BCI">
-      <div class="card-body">
-        <h2 class="card-title">Wireless BCI for Real‑Time Neural Decoding</h2>
-        <p class="card-desc">Neuralink’s updated implant now operates wirelessly with a 20‑bit resolution, enabling patients with spinal injuries to control prosthetic limbs using thought alone.</p>
-      </div>
-    </article>
-
-    <!-- Materials Science -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1556740722-6f0c3d0b2f34?auto=format&fit=crop&w=800&q=60" alt="Graphene">
-      <div class="card-body">
-        <h2 class="card-title">Graphene‑Based Transparent Conductors for Flexible Displays</h2>
-        <p class="card-desc">Researchers at MIT produced a scalable process for large‑area graphene films, achieving conductivity comparable to indium tin oxide but with full flexibility—critical for roll‑up smartphones and wearable tech.</p>
-      </div>
-    </article>
-
-  </section>
-
-</div>
-
-<footer>
-  <p>© 2024 Tech Insights. All rights reserved. | <a href="https://github.com/yourrepo">Source</a></p>
-</footer>
-
-</body>
-</html>
+    <section class="section" id="energy">
+        <h3>Renewable Energy Technology</h3>
+        <p>Perovskite‑silicon tandem solar cells now achieve <strong>26% efficiency</strong> under standard test conditions, outperforming traditional silicon. Energy storage is also improving with solid‑state batteries offering up to 1,000 Wh/kg and 10,000 charge cycles.</p>
+        <div class="grid">
+            <div class="card">
+                <h4>Perovskite Solar Cells</h4>
+                <p>Cost‑effective, lightweight panels that can be integrated into building façades and portable devices.</p>
+            </div>
+            <div class="card">
+                <h4>Solid‑State Batteries</h4>
+                <p>Replace liquid electrolytes with solid materials, increasing safety and energy density for electric vehicles.</p
