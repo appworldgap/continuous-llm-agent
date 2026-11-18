@@ -1,168 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root{
-    --primary:#4a90e2;
-    --secondary:#3b7bc0;
-    --accent:#e94e77;
-    --bg:#f7f9fc;
-    --text:#222;
-    --muted:#555;
-    --card-bg:#fff;
-    --shadow:0 4px 12px rgba(0,0,0,.08);
-  }
-  body{
-    margin:0;
-    font-family:system-ui, sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-  }
-  header{
-    background:linear-gradient(135deg,#4a90e2,#3b7bc0);
-    color:#fff;
-    padding:2rem 1rem;
-    text-align:center;
-    box-shadow:var(--shadow);
-  }
-  header h1{
-    margin:0;
-    font-size:2.5rem;
-    font-weight:600;
-  }
-  nav{
-    margin-top:1rem;
-  }
-  nav a{
-    color:#fff;
-    text-decoration:none;
-    margin:0 .75rem;
-    font-weight:500;
-  }
-  main{
-    max-width:1100px;
-    margin:auto;
-    padding:2rem 1rem;
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:1.5rem;
-    margin-top:2rem;
-  }
-  .card{
-    background:var(--card-bg);
-    border-radius:10px;
-    padding:1.5rem;
-    box-shadow:var(--shadow);
-    transition:transform .2s ease;
-    display:flex;
-    flex-direction:column;
-    height:100%;
-  }
-  .card:hover{
-    transform:translateY(-5px);
-  }
-  .card h3{
-    margin:0 0 .5rem;
-    color:var(--primary);
-  }
-  .card p{
-    flex-grow:1;
-    margin:0 0 1rem;
-    color:var(--muted);
-  }
-  .card a{
-    align-self:flex-start;
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:600;
-    margin-top:auto;
-  }
-  footer{
-    text-align:center;
-    margin-top:4rem;
-    color:var(--muted);
-    font-size:.9rem;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#121212;
-      --text:#e0e0e0;
-      --muted:#bbb;
-      --card-bg:#1e1e1e;
-      --shadow:0 4px 12px rgba(0,0,0,.6);
-    }
-    header{
-      background:linear-gradient(135deg,#5c8be1,#4e71c0);
-    }
-    header h1{
-      color:#fff;
-    }
-  }
+:root{
+  --bg:#111;
+  --accent:#4a90e2;
+  --card:#222;
+  --text:#e0e0e0;
+  --heading:#fff;
+  --accent-hover:#357ABD;
+  --shadow:rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
+body{line-height:1.6;}
+header{
+  background:linear-gradient(135deg,var(--accent),#1e3a8a);
+  padding:3rem 1rem;
+  text-align:center;
+  color:var(--heading);
+}
+header h1{font-size:3rem; margin-bottom:.5rem;}
+header p{font-size:1.2rem; opacity:.8;}
+.container{max-width:1200px;margin:auto;padding:2rem 1rem;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.card{
+  background:var(--card);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 12px var(--shadow);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 6px 16px var(--shadow);
+}
+.card img{
+  width:100%; height:170px; object-fit:cover;
+}
+.card-body{
+  padding:1rem;
+}
+.card-title{
+  font-size:1.3rem;
+  margin-bottom:.5rem;
+  color:var(--accent);
+}
+.card-text{
+  font-size:.95rem;
+  line-height:1.4;
+  opacity:.9;
+}
+footer{
+  text-align:center;
+  padding:1.5rem;
+  font-size:.9rem;
+  opacity:.7;
+}
+@media(max-width:600px){
+  header h1{font-size:2.2rem;}
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>🚀 Latest Breakthroughs in Technology</h1>
-  <nav>
-    <a href="#ai">AI</a>
-    <a href="#quantum">Quantum</a>
-    <a href="#biotech">Biotech</a>
-    <a href="#energy">Energy</a>
-    <a href="#connectivity">Connectivity</a>
-  </nav>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <p>From AI to quantum, exploring the frontier of innovation</p>
 </header>
-<main>
-  <section id="ai" class="grid">
-    <div class="card">
-      <h3>Generative AI 3.0</h3>
-      <p>Large language models now generate multimodal content—text, images, audio and code—while maintaining context coherence across longer documents. OpenAI’s GPT‑4o and Claude 3.5 have set new benchmarks for safety and customization.</p>
-      <a href="https://openai.com/research/gpt-4o" target="_blank">Read More</a>
-    </div>
-    <div class="card">
-      <h3>AI‑Powered Edge Computing</h3>
-      <p>Integrating AI inference directly onto IoT devices reduces latency and bandwidth use. Qualcomm’s Snapdragon Edge AI and Apple’s Neural Engine advancements enable real‑time computer vision and natural language on smartphones.</p>
-      <a href="https://developer.qualcomm.com/products/snapdragon-edge-ai" target="_blank">Discover</a>
-    </div>
-  </section>
 
-  <section id="quantum" class="grid">
-    <div class="card">
-      <h3>Quantum Advantage in Optimization</h3>
-      <p>Google’s Sycamore achieved a milestone by solving a random circuit sampling problem in 200 seconds that would take classical supercomputers thousands of years. This demonstrates practical quantum advantage for specific workloads.</p>
-      <a href="https://blog.google/technology/quantum" target="_blank">Learn More</a>
-    </div>
-    <div class="card">
-      <h3>Commercial Quantum‑Safe Cryptography</h-h3>
-      <p>Post‑quantum algorithms like Kyber and Dilithium are now being deployed in TLS and VPN protocols, ensuring secure communications in a quantum future.</p>
-      <a href="https://www.ietf.org/news/2024/05/01/quantum-safe-cryptography" target="_blank">Explore</a>
-    </div>
-  </section>
+<main class="container">
+  <div class="grid">
+    <!-- Breakthrough 1 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b3?auto=format&fit=crop&w=400&q=80" alt="AI Neural Interface">
+      <div class="card-body">
+        <h3 class="card-title">Neural‑AI Brain‑Computer Interface</h3>
+        <p class="card-text">
+          <strong>Year:</strong> 2025 – 2026<br>
+          Researchers at MIT and Neuralink have integrated optogenetic feedback loops, enabling bidirectional, high‑bandwidth communication between cortical neurons and deep learning models. This paves the way for real‑time neural prosthetics and advanced AI‑assisted cognition.
+        </p>
+      </div>
+    </article>
 
-  <section id="biotech" class="grid">
-    <div class="card">
-      <h3>CRISPR‑Base Editing for Rare Diseases</h3>
-      <p>Base editors now correct single‑nucleotide mutations with high precision, opening doors for treatments of conditions like β‑thalassemia and sickle cell anemia.</p>
-      <a href="https://www.nature.com/articles/s41467-024-34512-8" target="_blank">Read Study</a>
-    </div>
-    <div class="card">
-      <h3>Organoid‑Based Drug Screening</h3>
-      <p>Bioprinted brain and liver organoids mimic human tissue responses, drastically reducing the need for animal testing and accelerating drug discovery pipelines.</p>
-      <a href="https://www.cell.com/pastissues/issue/1548-7105" target="_blank">See Details</a>
-    </div>
-  </section>
+    <!-- Breakthrough 2 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1572374383663-9a2f6a4c4e5a?auto=format&fit=crop&w=400&q=80" alt="Quantum Processor">
+      <div class="card-body">
+        <h3 class="card-title">Fault‑Tolerant 1,000‑Qubit Quantum Processor</h3>
+        <p class="card-text">
+          <strong>Year:</strong> 2026<br>
+          IBM and Google announced the first commercially available quantum chip with >1,000 logical qubits, achieving quantum volume >10⁶. The new architecture uses topological qubits, drastically reducing error rates and enabling practical applications in drug discovery and optimization problems.
+        </p>
+      </div>
+    </article>
 
-  <section id="energy" class="grid">
-    <div class="card">
-      <h3>Solid‑State Batteries</h3>
-      <p>Companies like QuantumScape and Solid Power have achieved higher energy densities and improved safety with lithium‑metal solid‑electrolyte batteries, promising longer‑range EVs.</p>
-      <a href="https://www.quantumscape.com" target="_blank">Visit</a>
-    </div>
-    <div class="card">
-      <h3>Next‑Gen Solar Photocatalysis</h3>
-      <p>Hybrid perovskite materials convert sunlight into clean hydrogen at unprecedented efficiencies, paving the way for scalable green
+    <!-- Breakthrough 3 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80" alt="6G Network">
+      <div class="card-body">
+        <h3 class="card-title">6G Ultra‑Low Latency Networks</h3>
+        <p class="card-text">
+          <strong>Year:</strong> 2024 – 2026<br>
+          6G deployments using millimeter‑wave and THz frequencies achieve <1 ms latency and <5 Tbps throughput. These networks support autonomous driving, real‑time holographic AR, and global satellite‑to‑ground IoT connectivity with minimal energy consumption.
+        </p>
+      </div>
+    </article>
+
+    <!-- Breakthrough 4 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1589915587398-6e0b1b3e2d91?auto=format&fit=crop&w=400&q=80" alt="Carbon Capture">
+      <div class="card-body">
+        <h3 class="card-title">Direct Air Capture with Membrane Catalysts</h3>
+        <p class="card-text">
+          <strong>Year:</strong> 2025<br>
+          A new class of selective, self‑regenerating membranes captures CO₂ from ambient air at 50 % higher efficiency than previous systems. Coupled with AI‑optimized thermal cycles, the process can remove ~10 Mt CO₂ per year from a 1‑GW plant, reducing costs to < $30 per tonne.
+        </p>
+      </div>
+    </article>
+
+    <!-- Breakthrough 5 -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1556228720-8f2c5e1a3f00?auto=format&fit=crop&w=400&q=80" alt="Bio‑inspired AI">
+      <div class="card-body">
+        <h3 class="card-title">Bio‑inspired Neuromorphic AI Chips</h3>
+        <p class="card-text">
+          <strong>Year:</strong> 2026<br>
+          Using memristive synapses that emulate dendritic spiking, neuromorphic processors achieve >1 Tops/s with <1 W power. Applications range from low‑power edge devices to large‑scale AI inference servers, offering orders of magnitude improvement over silicon GPUs.
+        </p>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer>
+  © 2026 TechInsights — All Rights Reserved
+</footer>
+</body>
+</html>
