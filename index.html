@@ -2,145 +2,107 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Breakthroughs in Technology – 2024</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-:root{
-  --bg:#111;
-  --accent:#4a90e2;
-  --card:#222;
-  --text:#e0e0e0;
-  --heading:#fff;
-  --accent-hover:#357ABD;
-  --shadow:rgba(0,0,0,.35);
-}
+/* Base reset & typography */
 *{box-sizing:border-box;margin:0;padding:0;}
-html{font-size:16px;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
-body{line-height:1.6;}
-header{
-  background:linear-gradient(135deg,var(--accent),#1e3a8a);
-  padding:3rem 1rem;
-  text-align:center;
-  color:var(--heading);
-}
-header h1{font-size:3rem; margin-bottom:.5rem;}
-header p{font-size:1.2rem; opacity:.8;}
-.container{max-width:1200px;margin:auto;padding:2rem 1rem;}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:1.5rem;
-}
-.card{
-  background:var(--card);
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 4px 12px var(--shadow);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 6px 16px var(--shadow);
-}
-.card img{
-  width:100%; height:170px; object-fit:cover;
-}
-.card-body{
-  padding:1rem;
-}
-.card-title{
-  font-size:1.3rem;
-  margin-bottom:.5rem;
-  color:var(--accent);
-}
-.card-text{
-  font-size:.95rem;
-  line-height:1.4;
-  opacity:.9;
-}
-footer{
-  text-align:center;
-  padding:1.5rem;
-  font-size:.9rem;
-  opacity:.7;
-}
-@media(max-width:600px){
-  header h1{font-size:2.2rem;}
-}
+body{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:#f9fafb;color:#222;line-height:1.6;}
+h1,h2{font-weight:700;margin-bottom:0.4rem;}
+h1{font-size:2.5rem;text-align:center;margin:2rem 0;}
+h2{font-size:1.75rem;color:#0066cc;}
+p{margin-bottom:1rem;}
+ul{margin-left:1.5rem;}
+
+/* Layout */
+.container{max-width:1200px;margin:auto;padding:2rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem;}
+.card{background:#fff;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.05);overflow:hidden;}
+.card img{width:100%;height:160px;object-fit:cover;}
+.card-body{padding:1.5rem;}
+.card-title{font-size:1.25rem;color:#0066cc;margin-bottom:0.5rem;}
+.card-desc{font-size:0.95rem;color:#555;}
+
+/* Footer */
+footer{background:#0066cc;color:#fff;text-align:center;padding:1rem 0;margin-top:3rem;}
+footer a{color:#fff;text-decoration:none;font-weight:600;}
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <p>From AI to quantum, exploring the frontier of innovation</p>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
 </header>
 
-<main class="container">
-  <div class="grid">
-    <!-- Breakthrough 1 -->
+<div class="container">
+
+  <section id="intro">
+    <p>In the first half of 2024, the tech world witnessed several landmark advancements across AI, quantum computing, biotechnology, and sustainable energy. Below is a curated snapshot of the most influential breakthroughs, their potential impact, and key players behind them.</p>
+  </section>
+
+  <section id="breakthroughs" class="grid">
+
+    <!-- Quantum Computing -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b3?auto=format&fit=crop&w=400&q=80" alt="AI Neural Interface">
+      <img src="https://images.unsplash.com/photo-1604388409049-8e5c9a3d7e58?auto=format&fit=crop&w=800&q=60" alt="Quantum Chip">
       <div class="card-body">
-        <h3 class="card-title">Neural‑AI Brain‑Computer Interface</h3>
-        <p class="card-text">
-          <strong>Year:</strong> 2025 – 2026<br>
-          Researchers at MIT and Neuralink have integrated optogenetic feedback loops, enabling bidirectional, high‑bandwidth communication between cortical neurons and deep learning models. This paves the way for real‑time neural prosthetics and advanced AI‑assisted cognition.
-        </p>
+        <h2 class="card-title">Quantum Supremacy Reached for Practical Tasks</h2>
+        <p class="card-desc">Google’s Sycamore 2.0, now with 300 qubits, performed a computational task that would take the most powerful classical supercomputer years. This milestone opens doors to secure communications, drug discovery, and complex optimization problems.</p>
       </div>
     </article>
 
-    <!-- Breakthrough 2 -->
+    <!-- AI & Edge Computing -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1572374383663-9a2f6a4c4e5a?auto=format&fit=crop&w=400&q=80" alt="Quantum Processor">
+      <img src="https://images.unsplash.com/photo-1537432376769-8c6b8c4b9d5a?auto=format&fit=crop&w=800&q=60" alt="Edge AI">
       <div class="card-body">
-        <h3 class="card-title">Fault‑Tolerant 1,000‑Qubit Quantum Processor</h3>
-        <p class="card-text">
-          <strong>Year:</strong> 2026<br>
-          IBM and Google announced the first commercially available quantum chip with >1,000 logical qubits, achieving quantum volume >10⁶. The new architecture uses topological qubits, drastically reducing error rates and enabling practical applications in drug discovery and optimization problems.
-        </p>
+        <h2 class="card-title">Edge AI Chips with 1TB/second Throughput</h2>
+        <p class="card-desc">Graphcore’s new IPU-X delivers 1 terabit of data processed per second on a single chip, enabling real‑time AI inference on smartphones, drones, and autonomous vehicles without cloud reliance.</p>
       </div>
     </article>
 
-    <!-- Breakthrough 3 -->
+    <!-- Biotechnology -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80" alt="6G Network">
+      <img src="https://images.unsplash.com/photo-1587497466472-1c2b1b8a6b60?auto=format&fit=crop&w=800&q=60" alt="CRISPR Lab">
       <div class="card-body">
-        <h3 class="card-title">6G Ultra‑Low Latency Networks</h3>
-        <p class="card-text">
-          <strong>Year:</strong> 2024 – 2026<br>
-          6G deployments using millimeter‑wave and THz frequencies achieve <1 ms latency and <5 Tbps throughput. These networks support autonomous driving, real‑time holographic AR, and global satellite‑to‑ground IoT connectivity with minimal energy consumption.
-        </p>
+        <h2 class="card-title">CRISPR‑Cas13 Editing for RNA‑Based Therapies</h2>
+        <p class="card-desc">A joint effort by CRISPR Therapeutics and GSK has demonstrated safe and precise RNA editing in vivo, paving the way for treatments targeting viral infections and genetic disorders without permanent DNA changes.</p>
       </div>
     </article>
 
-    <!-- Breakthrough 4 -->
+    <!-- Energy & Sustainability -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1589915587398-6e0b1b3e2d91?auto=format&fit=crop&w=400&q=80" alt="Carbon Capture">
+      <img src="https://images.unsplash.com/photo-1587614382343-5e6c8c7b3c14?auto=format&fit=crop&w=800&q=60" alt="Solar Panels">
       <div class="card-body">
-        <h3 class="card-title">Direct Air Capture with Membrane Catalysts</h3>
-        <p class="card-text">
-          <strong>Year:</strong> 2025<br>
-          A new class of selective, self‑regenerating membranes captures CO₂ from ambient air at 50 % higher efficiency than previous systems. Coupled with AI‑optimized thermal cycles, the process can remove ~10 Mt CO₂ per year from a 1‑GW plant, reducing costs to < $30 per tonne.
-        </p>
+        <h2 class="card-title">Perovskite‑Solar Panels Exceed 28% Efficiency</h2>
+        <p class="card-desc">NREL’s latest perovskite tandem cells combine silicon and perovskite layers, achieving 28.9% efficiency in a lab setting. This breakthrough brings high‑efficiency, low‑cost solar power closer to commercial viability.</p>
       </div>
     </article>
 
-    <!-- Breakthrough 5 -->
+    <!-- Brain‑Computer Interface -->
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1556228720-8f2c5e1a3f00?auto=format&fit=crop&w=400&q=80" alt="Bio‑inspired AI">
+      <img src="https://images.unsplash.com/photo-1598514981029-7c5d6d7a5a7b?auto=format&fit=crop&w=800&q=60" alt="BCI">
       <div class="card-body">
-        <h3 class="card-title">Bio‑inspired Neuromorphic AI Chips</h3>
-        <p class="card-text">
-          <strong>Year:</strong> 2026<br>
-          Using memristive synapses that emulate dendritic spiking, neuromorphic processors achieve >1 Tops/s with <1 W power. Applications range from low‑power edge devices to large‑scale AI inference servers, offering orders of magnitude improvement over silicon GPUs.
-        </p>
+        <h2 class="card-title">Wireless BCI for Real‑Time Neural Decoding</h2>
+        <p class="card-desc">Neuralink’s updated implant now operates wirelessly with a 20‑bit resolution, enabling patients with spinal injuries to control prosthetic limbs using thought alone.</p>
       </div>
     </article>
-  </div>
-</main>
+
+    <!-- Materials Science -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1556740722-6f0c3d0b2f34?auto=format&fit=crop&w=800&q=60" alt="Graphene">
+      <div class="card-body">
+        <h2 class="card-title">Graphene‑Based Transparent Conductors for Flexible Displays</h2>
+        <p class="card-desc">Researchers at MIT produced a scalable process for large‑area graphene films, achieving conductivity comparable to indium tin oxide but with full flexibility—critical for roll‑up smartphones and wearable tech.</p>
+      </div>
+    </article>
+
+  </section>
+
+</div>
 
 <footer>
-  © 2026 TechInsights — All Rights Reserved
+  <p>© 2024 Tech Insights. All rights reserved. | <a href="https://github.com/yourrepo">Source</a></p>
 </footer>
+
 </body>
 </html>
