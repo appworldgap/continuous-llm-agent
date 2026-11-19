@@ -2,65 +2,132 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<title>Latest Breakthroughs in Technology – 2026 Overview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  body{
-    font-family:'Inter',sans-serif;
-    margin:0;
-    padding:0;
-    background:#f9f9f9;
-    color:#333;
-  }
-  header{
-    background:#fff;
-    padding:20px 0;
-    border-bottom:1px solid #e0e0e0;
-  }
-  .container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 15px;
-  }
-  nav a{
-    color:#333;
-    text-decoration:none;
-    margin-right:20px;
-    font-weight:600;
-  }
-  .hero{
-    padding:80px 0;
-    text-align:center;
-    background:#e8f4ff;
-  }
-  .hero h1{
-    margin:0;
-    font-size:3rem;
-    color:#0a66c2;
-  }
-  .hero p{
-    font-size:1.25rem;
-    color:#555;
-    margin-top:10px;
-  }
-  section{
-    padding:60px 0;
-  }
-  h2{
-    font-size:2rem;
-    color:#0a66c2;
-    margin-bottom:20px;
-  }
-  .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-  }
-  .card{
-    background:#fff;
-    padding:20px;
-    border-radius:8px;
-    box-shadow:0 2px 5px rgba(0,0,0,.1);
-    transition:transform .2s;
-  }
-  .card:hover{
+/* CSS Variables for theming */
+:root {
+  --primary: #2c3e50;
+  --secondary: #16a085;
+  --accent: #e67e22;
+  --bg: #f8f9fa;
+  --text: #2c3e50;
+  --heading: #1a1a1a;
+  --shadow: rgba(0,0,0,0.1);
+  --transition: 0.3s ease;
+}
+
+/* Reset & base styles */
+* {box-sizing: border-box; margin:0; padding:0;}
+body {font-family: Arial, Helvetica, sans-serif; line-height:1.6; background:var(--bg); color:var(--text);}
+
+/* Layout */
+header, nav, footer {background:var(--primary); color:white; padding:1rem;}
+header h1 {font-size:2.2rem; margin-bottom:0.3rem;}
+nav ul {display:flex; gap:1rem; list-style:none;}
+nav a {color:white; text-decoration:none; transition:var(--transition);}
+nav a:hover {color:var(--accent);}
+
+main {max-width:1200px; margin:2rem auto; padding:0 1rem;}
+section {margin-bottom:3rem;}
+h2 {color:var(--heading); margin-bottom:0.6rem; font-size:1.8rem; border-bottom:2px solid var(--secondary); padding-bottom:0.4rem;}
+p {margin-bottom:1rem;}
+ul {margin-left:1.5rem; margin-bottom:1rem;}
+li {margin-bottom:0.4rem;}
+.card-grid {display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));}
+.card {background:white; border-radius:8px; box-shadow:0 4px 6px var(--shadow); overflow:hidden; transition:var(--transition);}
+.card img {width:100%; height:180px; object-fit:cover;}
+.card-body {padding:1rem;}
+.card-title {font-size:1.4rem; margin-bottom:0.5rem;}
+.card-desc {font-size:0.95rem; color:var(--text);}
+.card:hover {transform:translateY(-5px); box-shadow:0 10px 15px var(--shadow);}
+
+/* Footer */
+footer {text-align:center; font-size:0.9rem;}
+
+/* Responsive typography */
+@media (max-width: 600px) {
+  header h1 {font-size:1.8rem;}
+  h2 {font-size:1.6rem;}
+  .card-body {padding:0.8rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Latest Breakthroughs in Technology (2026)</h1>
+  <p>From AI to quantum, 6G to bio‑engineering – the future is already here.</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#ai">Artificial Intelligence</a></li>
+    <li><a href="#quantum">Quantum Computing</a></li>
+    <li><a href="#6g">6G & Connectivity</a></li>
+    <li><a href="#bio">Biotechnology</a></li>
+    <li><a href="#space">Space & Robotics</a></li>
+    <li><a href="#sustainability">Sustainable Tech</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="ai">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <p>2026 has seen the rise of <strong>Self‑Evolving AI</strong>, systems that autonomously update their architectures in response to new data and objectives, eliminating the need for continuous human re‑training. Key highlights:</p>
+    <ul>
+      <li>Meta‑learning algorithms that converge 80% faster on novel tasks.</li>
+      <li>Generative models now capable of creating high‑fidelity 3D assets in under a minute.</li>
+      <li>AI‑driven medical diagnostics with >99% accuracy for early cancer detection.</li>
+      <li>AI governance frameworks adopted worldwide to ensure transparency and fairness.</li>
+    </ul>
+  </section>
+
+  <section id="quantum">
+    <h2>Quantum Computing</h2>
+    <p>Quantum processors have transitioned from labs to production. The <strong>Quantum Advantage Cloud</strong> now offers <em>sub‑second</em> solutions for complex optimization problems in logistics, finance, and drug discovery.</p>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1020/400/240" alt="Quantum chip">
+        <div class="card-body">
+          <div class="card-title">Superconducting Qubits</div>
+          <div class="card-desc">100‑plus qubit chips with 99.99% coherence.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1067/400/240" alt="Quantum network">
+        <div class="card-body">
+          <div class="card-title">Quantum Key Distribution</div>
+          <div class="card-desc">Secure global networks with zero‑trust architecture.</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/id/1077/400/240" alt="Quantum simulation">
+        <div class="card-body">
+          <div class="card-title">Molecular Simulation</div>
+          <div class="card-desc">Accurate protein folding predictions in minutes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="6g">
+    <h2>6G & Connectivity</h2>
+    <p>6G, now commercially deployed, offers <strong>1 Tbps peak speeds</strong> and <em>sub‑ms latency</em>, making real‑time holographic communications a reality. Highlights include:</p>
+    <ul>
+      <li>Terabit‑per‑second data links powered by terahertz frequencies.</li>
+      <li>Integrated space‑ground networks for continuous coverage.</li>
+      <li>AI‑optimized spectrum allocation for ultra‑dense networks.</li>
+      <li>Standardization of <code>URL/6G</code> for seamless device identification.</li>
+    </ul>
+  </section>
+
+  <section id="bio">
+    <h2>Biotechnology & Synthetic Biology</h2>
+    <p>Gene editing has moved beyond CRISPR-Cas9 to <strong>Programmable RNA‑Targeting Systems</strong> that allow reversible modifications at unprecedented speeds.</p>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://picsum.photos/id/1084/400/240" alt="Lab robot">
+        <div class="card-body">
+          <div class="card-title">Lab‑on‑a‑Chip Platforms</div>
+          <div class="card-desc">Microfluidic systems that run full trials in 12 hours.</div>
+        </div>
