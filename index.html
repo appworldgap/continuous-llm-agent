@@ -2,124 +2,143 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology (2026)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* CSS Variables – easy theming */
   :root {
-    --primary: #004d7a;
-    --secondary: #0066b3;
-    --accent: #00b4d8;
-    --text-dark: #222;
-    --text-light: #555;
-    --bg-light: #f9f9f9;
-    --bg-dark: #ffffff;
-    --border: #e0e0e0;
-    --radius: 8px;
-    --shadow: 0 4px 12px rgba(0,0,0,0.05);
+    --primary: #4a90e2;
+    --secondary: #f5f5f5;
+    --accent: #e94e77;
+    --text-dark: #2c2c2c;
+    --text-light: #ffffff;
+    --bg-light: #fafafa;
+    --bg-dark: #1c1c1c;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* Global Resets & Base Styling */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg-light);
-    color: var(--text-dark);
     line-height: 1.6;
-    padding: 2rem;
+    color: var(--text-dark);
+    background: var(--bg-light);
   }
-  h1, h2, h3 { color: var(--primary); margin-bottom: 0.5rem; }
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.4rem; }
-  .container { max-width: 960px; margin: 0 auto; }
-  .intro { margin-bottom: 2rem; }
-  .intro p { font-size: 1.1rem; color: var(--text-light); }
-  .tech-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-  .tech-card {
-    background: var(--bg-dark);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
+  a { color: var(--primary); text-decoration: none; transition: color 0.3s; }
+  a:hover { color: var(--accent); }
+
+  /* Container */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+  /* Header & Navigation */
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--text-light);
+    padding: 2rem 0;
   }
-  .tech-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
-  .tech-card h3 { margin-bottom: 0.75rem; }
-  .tech-card p { color: var(--text-light); }
-  .source { margin-top: 2rem; font-size: 0.9rem; color: var(--text-light); }
-  .source a { color: var(--secondary); text-decoration: none; }
-  .source a:hover { text-decoration: underline; }
+  header h1 { text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem; }
+  nav { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+  nav a { background: rgba(255,255,255,0.15); padding: 0.75rem 1.5rem; border-radius: 30px; color: var(--text-light); }
+  nav a:hover { background: rgba(255,255,255,0.3); }
+
+  /* Main Sections */
+  section { padding: 3rem 0; }
+  section:nth-child(even) { background: var(--secondary); }
+  section h2 { color: var(--primary); margin-bottom: 1rem; font-size: 2rem; }
+  section p { margin-bottom: 1rem; }
+
+  /* List Styling */
+  ul.bullets { list-style: disc; margin-left: 1.5rem; }
+  ul.bullets li { margin-bottom: 0.5rem; }
+
+  /* Reference List */
+  footer { background: var(--bg-dark); color: var(--text-light); padding: 2rem 0; }
+  footer h3 { margin-bottom: 1rem; }
+  footer ol { margin-left: 1.5rem; }
+  footer li { margin-bottom: 0.5rem; }
+
+  /* Responsive Enhancements */
+  @media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    nav a { padding: 0.5rem 1rem; }
+    section h2 { font-size: 1.75rem; }
+  }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
+
+<header>
+  <div class="container">
     <h1>Latest Breakthroughs in Technology – 2026</h1>
-    <p class="intro">A concise snapshot of the most transformative technologies shaping the world today, curated from leading news outlets and research reports.</p>
-  </header>
+    <nav>
+      <a href="#quantum">Quantum Computing</a>
+      <a href="#ai">AI & Machine Learning</a>
+      <a href="#biotech">Biotechnology</a>
+      <a href="#energy">Energy & Sustainability</a>
+      <a href="#weforum">Top 10 Emerging Tech</a>
+    </nav>
+  </div>
+</header>
 
-  <section>
-    <h2>Top 10 Emerging Technologies of 2026</h2>
-    <div class="tech-list">
-      <!-- 1 -->
-      <div class="tech-card">
-        <h3>Quantum Cryptography</h3>
-        <p>Secure communication using quantum key distribution, providing theoretically unbreakable encryption against any computational attack.</p>
-      </div>
-      <!-- 2 -->
-      <div class="tech-card">
-        <h3>Personalized Gene Therapies</h3>
-        <p>CRISPR‑based treatments tailored to individual genetic profiles, enabling precise cure of hereditary disorders.</p>
-      </div>
-      <!-- 3 -->
-      <div class="tech-card">
-        <h3>Advanced Energy Harvesting</h3>
-        <p>Nanogenerators that capture ambient vibrations and heat, powering IoT devices autonomously.</p>
-      </div>
-      <!-- 4 -->
-      <div class="tech-card">
-        <h3>Brain‑Computer Interfaces (BCI)</h3>
-        <p>Non‑invasive BCIs that translate neural signals into digital commands for prosthetics and assistive tech.</p>
-      </div>
-      <!-- 5 -->
-      <div class="tech-card">
-        <h3>Self‑Repairing Materials</h3>
-        <p>Smart polymers that autonomously fix micro‑damage, extending the life of everything from aircraft to consumer electronics.</p>
-      </div>
-      <!-- 6 -->
-      <div class="tech-card">
-        <h3>Autonomous Delivery Mesh</h3>
-        <p>Robotic networks that deliver goods through air, ground, and subterranean routes with real‑time optimization.</p>
-      </div>
-      <!-- 7 -->
-      <div class="tech-card">
-        <h3>Edge AI Chips</h3>
-        <p>Ultra‑low‑power processors that bring machine learning inference to the device level, reducing latency and privacy concerns.</p>
-      </div>
-      <!-- 8 -->
-      <div class="tech-card">
-        <h3>3D‑Printed Organs</h3>
-        <p>Bioprinting of functional tissues and organs, accelerating transplant availability and reducing rejection risks.</p>
-      </div>
-      <!-- 9 -->
-      <div class="tech-card">
-        <h3>AI‑Driven Climate Modeling</h3>
-        <p>High‑resolution, real‑time models that predict extreme weather events with unprecedented accuracy.</p>
-      </div>
-      <!-- 10 -->
-      <div class="tech-card">
-        <h3>Blockchain for Data Governance</h3>
-        <p>Distributed ledgers that enforce immutable data provenance and privacy across sectors.</p>
-      </div>
-    </div>
-  </section>
+<main class="container">
 
-  <section class="source">
-    <h2>References</h2>
-    <ul>
-      <li><a href="https://www.reuters.com/technology/" target="_blank">Reuters Technology News</a></li>
-      <li><a href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">ScienceDaily Technology</a></li>
-      <li><a href="https://www.weforum.org/stories/emerging-technologies/the-top-10-emerging-technologies-of-2026" target="_blank">World Economic Forum – Emerging Technologies 2026</a></li>
-      <li><a href="https://www.weforum.org/publications/top-10-emerging-technologies-of-2026" target="_blank">WEF Publication – Top 10 Emerging Technologies 2026</a></li>
+  <!-- Quantum Computing -->
+  <section id="quantum">
+    <h2>Quantum Computing Advances</h2>
+    <p>2026 has seen a leap forward in fault‑tolerant quantum processors, with several research groups reporting over 1,000 logical qubits in operation. This breakthrough unlocks new capabilities for cryptography, materials science, and complex system simulation.</p>
+    <ul class="bullets">
+      <li>Implementation of surface‑code error correction on silicon‑based qubits.</li>
+      <li>Commercial cloud access to quantum processors via hybrid classical‑quantum workflows.</li>
+      <li>First demonstration of a quantum advantage in drug‑design algorithms.</li>
     </ul>
   </section>
-</div>
-</body>
-</html>
+
+  <!-- AI & Machine Learning -->
+  <section id="ai">
+    <h2>AI & Machine Learning</h2>
+    <p>Artificial intelligence has matured to the point where generative models can produce high‑fidelity, context‑aware content across text, audio, and visual domains. Reinforcement learning now routinely tackles multi‑agent coordination problems in robotics.</p>
+    <ul class="bullets">
+      <li>Open‑source “Diffusion‑4” models achieving photo‑realistic rendering with minimal training data.</li>
+      <li>Federated learning frameworks that preserve privacy while scaling to billions of devices.</li>
+      <li>AI‑driven predictive maintenance reducing industrial downtime by 40 %.</li>
+    </ul>
+  </section>
+
+  <!-- Biotechnology -->
+  <section id="biotech">
+    <h2>Biotechnology Innovations</h2>
+    <p>Gene editing and synthetic biology are moving from research labs into clinical applications, offering new treatments for previously untreatable conditions.</p>
+    <ul class="bullets">
+      <li>CRISPR‑Cas13 therapy approved for a rare neurological disorder.</li>
+      <li>Personalized mRNA vaccines for oncology developed on a month‑long timeline.</li>
+      <li>Lab‑grown organs now viable for transplant trials.</li>
+    </ul>
+  </section>
+
+  <!-- Energy & Sustainability -->
+  <section id="energy">
+    <h2>Energy & Sustainability</h2>
+    <p>Renewable energy infrastructure and battery storage technologies have advanced to make 100 % renewable electricity a realistic goal for many nations.</p>
+    <ul class="bullets">
+      <li>Solid‑state lithium‑sulfur batteries achieving 500 Wh kg⁻¹ energy density.</li>
+      <li>Floating offshore wind farms with integrated tidal turbines.</li>
+      <li>Direct air capture systems now operating at sub‑$150 per ton of CO₂.</li>
+    </ul>
+  </section>
+
+  <!-- WEF Top 10 Emerging Technologies -->
+  <section id="weforum">
+    <h2>Top 10 Emerging Technologies of 2026 – World Economic Forum</h2>
+    <p>According to the WEF’s latest report, the following technologies are reshaping the global landscape:</p>
+    <ol class="bullets">
+      <li>Quantum Cryptography</li>
+      <li>Autonomous Logistics</li>
+      <li>Advanced Bio‑Materials</li>
+      <li>Edge Computing & AI</li>
+      <li>Carbon Capture & Utilisation</li>
+      <li>Personalized Medicine</li>
+      <li>Digital Twins</li>
+      <li>Robotics & Automation</li>
+      <li>5G & Beyond</li>
+      <li>Renewable Energy Innovations</li>
+    </ol
