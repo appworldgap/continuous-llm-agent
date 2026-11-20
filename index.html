@@ -2,143 +2,106 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology (2026)</title>
+<title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
 <style>
-  /* CSS Variables – easy theming */
-  :root {
-    --primary: #4a90e2;
-    --secondary: #f5f5f5;
-    --accent: #e94e77;
-    --text-dark: #2c2c2c;
-    --text-light: #ffffff;
-    --bg-light: #fafafa;
-    --bg-dark: #1c1c1c;
-  }
-
-  /* Global Resets & Base Styling */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background: var(--bg-light);
-  }
-  a { color: var(--primary); text-decoration: none; transition: color 0.3s; }
-  a:hover { color: var(--accent); }
-
-  /* Container */
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-
-  /* Header & Navigation */
-  header {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: var(--text-light);
-    padding: 2rem 0;
-  }
-  header h1 { text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem; }
-  nav { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-  nav a { background: rgba(255,255,255,0.15); padding: 0.75rem 1.5rem; border-radius: 30px; color: var(--text-light); }
-  nav a:hover { background: rgba(255,255,255,0.3); }
-
-  /* Main Sections */
-  section { padding: 3rem 0; }
-  section:nth-child(even) { background: var(--secondary); }
-  section h2 { color: var(--primary); margin-bottom: 1rem; font-size: 2rem; }
-  section p { margin-bottom: 1rem; }
-
-  /* List Styling */
-  ul.bullets { list-style: disc; margin-left: 1.5rem; }
-  ul.bullets li { margin-bottom: 0.5rem; }
-
-  /* Reference List */
-  footer { background: var(--bg-dark); color: var(--text-light); padding: 2rem 0; }
-  footer h3 { margin-bottom: 1rem; }
-  footer ol { margin-left: 1.5rem; }
-  footer li { margin-bottom: 0.5rem; }
-
-  /* Responsive Enhancements */
-  @media (max-width: 768px) {
-    header h1 { font-size: 2rem; }
-    nav a { padding: 0.5rem 1rem; }
-    section h2 { font-size: 1.75rem; }
-  }
+/* Basic Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+    font-family:'Roboto',sans-serif;
+    background:#f0f2f5;
+    color:#333;
+    line-height:1.6;
+    padding:1rem;
+}
+h1, h2, h3{font-family:'Montserrat',sans-serif;}
+h1{font-size:2.5rem;margin-bottom:.5rem;}
+h2{font-size:2rem;margin-top:2rem;margin-bottom:.75rem;}
+h3{font-size:1.5rem;margin-top:1.5rem;margin-bottom:.5rem;}
+a{color:#0066cc;text-decoration:none;}
+a:hover{text-decoration:underline;}
+header{background:#fff;padding:1.5rem 2rem;margin-bottom:2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);}
+nav{display:flex;gap:1.5rem;margin-top:1rem;flex-wrap:wrap;}
+nav a{font-weight:600;}
+main{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+.card{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.05);transition:transform .2s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 16px rgba(0,0,0,.1);}
+footer{margin-top:3rem;text-align:center;font-size:.9rem;color:#777;}
+ul{list-style:disc inside;margin-left:1.2rem;}
+@media(max-width:600px){
+    header{padding:1rem;}
+    h1{font-size:2rem;}
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="container">
-    <h1>Latest Breakthroughs in Technology – 2026</h1>
+    <h1>Latest Breakthroughs in Technology</h1>
     <nav>
-      <a href="#quantum">Quantum Computing</a>
-      <a href="#ai">AI & Machine Learning</a>
-      <a href="#biotech">Biotechnology</a>
-      <a href="#energy">Energy & Sustainability</a>
-      <a href="#weforum">Top 10 Emerging Tech</a>
+        <a href="#ai">AI & ML</a>
+        <a href="#quantum">Quantum Computing</a>
+        <a href="#space">Space Tech</a>
+        <a href="#energy">Energy & Sustainability</a>
+        <a href="#bio">Biotech & Health</a>
+        <a href="#hardware">Hardware & Materials</a>
+        <a href="#robotics">Robotics</a>
+        <a href="#blockchain">Blockchain</a>
     </nav>
-  </div>
 </header>
 
-<main class="container">
+<main>
+    <!-- AI & ML -->
+    <section id="ai" class="card">
+        <h2>Artificial Intelligence & Machine Learning</h2>
+        <h3>Large Language Models & Multimodal AI</h3>
+        <ul>
+            <li><strong>GPT‑4.5 & GPT‑4.5 Turbo</strong> – More efficient, multimodal, and context-aware language models from OpenAI.</li>
+            <li><strong>Claude 3</strong> – Anthropic’s new LLM with advanced safety and reasoning capabilities.</li>
+            <li><strong>Diffusion Models in 3D</strong> – Real‑time 3D generation for AR/VR and gaming.</li>
+        </ul>
+        <h3>AI‑Driven Automation</h3>
+        <ul>
+            <li>Generative design in aerospace and automotive manufacturing.</li>
+            <li>Reinforcement‑learning‑optimized autonomous vehicles with higher safety metrics.</li>
+        </ul>
+    </section>
 
-  <!-- Quantum Computing -->
-  <section id="quantum">
-    <h2>Quantum Computing Advances</h2>
-    <p>2026 has seen a leap forward in fault‑tolerant quantum processors, with several research groups reporting over 1,000 logical qubits in operation. This breakthrough unlocks new capabilities for cryptography, materials science, and complex system simulation.</p>
-    <ul class="bullets">
-      <li>Implementation of surface‑code error correction on silicon‑based qubits.</li>
-      <li>Commercial cloud access to quantum processors via hybrid classical‑quantum workflows.</li>
-      <li>First demonstration of a quantum advantage in drug‑design algorithms.</li>
-    </ul>
-  </section>
+    <!-- Quantum Computing -->
+    <section id="quantum" class="card">
+        <h2>Quantum Computing</h2>
+        <h3>Hardware Milestones</h3>
+        <ul>
+            <li>IBM’s 433‑qubit Eagle processor (2024) – record coherence times.</li>
+            <li>Google’s 1,000‑qubit Sycamore‑2 with 1‑microsecond error correction.</li>
+            <li>Silicon‑based qubits achieving >99.9% fidelity.</li>
+        </ul>
+        <h3>Software & Algorithms</h3>
+        <ul>
+            <li>Quantum error‑correction codes (surface‑code) scaled to 100 logical qubits.</li>
+            <li>Hybrid quantum‑classical workflows for drug discovery.</li>
+        </ul>
+    </section>
 
-  <!-- AI & Machine Learning -->
-  <section id="ai">
-    <h2>AI & Machine Learning</h2>
-    <p>Artificial intelligence has matured to the point where generative models can produce high‑fidelity, context‑aware content across text, audio, and visual domains. Reinforcement learning now routinely tackles multi‑agent coordination problems in robotics.</p>
-    <ul class="bullets">
-      <li>Open‑source “Diffusion‑4” models achieving photo‑realistic rendering with minimal training data.</li>
-      <li>Federated learning frameworks that preserve privacy while scaling to billions of devices.</li>
-      <li>AI‑driven predictive maintenance reducing industrial downtime by 40 %.</li>
-    </ul>
-  </section>
-
-  <!-- Biotechnology -->
-  <section id="biotech">
-    <h2>Biotechnology Innovations</h2>
-    <p>Gene editing and synthetic biology are moving from research labs into clinical applications, offering new treatments for previously untreatable conditions.</p>
-    <ul class="bullets">
-      <li>CRISPR‑Cas13 therapy approved for a rare neurological disorder.</li>
-      <li>Personalized mRNA vaccines for oncology developed on a month‑long timeline.</li>
-      <li>Lab‑grown organs now viable for transplant trials.</li>
-    </ul>
-  </section>
-
-  <!-- Energy & Sustainability -->
-  <section id="energy">
-    <h2>Energy & Sustainability</h2>
-    <p>Renewable energy infrastructure and battery storage technologies have advanced to make 100 % renewable electricity a realistic goal for many nations.</p>
-    <ul class="bullets">
-      <li>Solid‑state lithium‑sulfur batteries achieving 500 Wh kg⁻¹ energy density.</li>
-      <li>Floating offshore wind farms with integrated tidal turbines.</li>
-      <li>Direct air capture systems now operating at sub‑$150 per ton of CO₂.</li>
-    </ul>
-  </section>
-
-  <!-- WEF Top 10 Emerging Technologies -->
-  <section id="weforum">
-    <h2>Top 10 Emerging Technologies of 2026 – World Economic Forum</h2>
-    <p>According to the WEF’s latest report, the following technologies are reshaping the global landscape:</p>
-    <ol class="bullets">
-      <li>Quantum Cryptography</li>
-      <li>Autonomous Logistics</li>
-      <li>Advanced Bio‑Materials</li>
-      <li>Edge Computing & AI</li>
-      <li>Carbon Capture & Utilisation</li>
-      <li>Personalized Medicine</li>
-      <li>Digital Twins</li>
-      <li>Robotics & Automation</li>
-      <li>5G & Beyond</li>
-      <li>Renewable Energy Innovations</li>
-    </ol
+    <!-- Space Tech -->
+    <section id="space" class="card">
+        <h2>Space Exploration & Satellite Technology</h2>
+        <h3>Commercial Spaceflight</h3>
+        <ul>
+            <li>SpaceX Starship test flights – reusable, fully propulsive orbital launch.</li>
+            <li>Blue Origin’s New Shepard 3.0 – next‑generation suborbital launch.</li>
+        </ul>
+        <h3>Deep‑Space Missions</h3>
+        <ul>
+            <li>NASA Artemis III – crewed lunar landing planned for 2025.</li>
+            <li>ESA’s Jupiter Icy Moons Explorer (JUICE) launch 2023, arrival 2030.</li>
+        </ul>
+        <h3>Satellite Internet & Swarms</h3>
+        <ul>
+            <li>Starlink V5 – 12‑GHz Ka‑band with 5,000 active
