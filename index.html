@@ -2,199 +2,124 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Latest Breakthroughs in Technology – 2026</title>
 <style>
-:root {
-  --bg: #f9f9f9;
-  --primary: #1e88e5;
-  --accent: #ff6f61;
-  --text: #333;
-  --card-bg: #fff;
-  --shadow: rgba(0,0,0,0.1);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body, html {
-  height: 100%;
-  font-family: 'Inter', sans-serif;
-  color: var(--text);
-  background: var(--bg);
-}
-
-header {
-  background: var(--primary);
-  color: #fff;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header h1 {
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-nav a {
-  color: #fff;
-  margin-left: 1.5rem;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: var(--card-bg);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px var(--shadow);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 1rem;
-  flex-grow: 1;
-}
-
-.card-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: .5rem;
-  color: var(--primary);
-}
-
-.card-content p {
-  font-size: .95rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-}
-
-.card-content a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: #777;
-  font-size: .9rem;
-}
-
-@media (max-width: 600px) {
-  header h1 { font-size: 1.2rem; }
-  nav a { margin-left: 1rem; }
-}
+  :root {
+    --primary: #004d7a;
+    --secondary: #0066b3;
+    --accent: #00b4d8;
+    --text-dark: #222;
+    --text-light: #555;
+    --bg-light: #f9f9f9;
+    --bg-dark: #ffffff;
+    --border: #e0e0e0;
+    --radius: 8px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  h1, h2, h3 { color: var(--primary); margin-bottom: 0.5rem; }
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.4rem; }
+  .container { max-width: 960px; margin: 0 auto; }
+  .intro { margin-bottom: 2rem; }
+  .intro p { font-size: 1.1rem; color: var(--text-light); }
+  .tech-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+  .tech-card {
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .tech-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+  .tech-card h3 { margin-bottom: 0.75rem; }
+  .tech-card p { color: var(--text-light); }
+  .source { margin-top: 2rem; font-size: 0.9rem; color: var(--text-light); }
+  .source a { color: var(--secondary); text-decoration: none; }
+  .source a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
+<div class="container">
+  <header>
+    <h1>Latest Breakthroughs in Technology – 2026</h1>
+    <p class="intro">A concise snapshot of the most transformative technologies shaping the world today, curated from leading news outlets and research reports.</p>
+  </header>
 
-<header>
-  <h1>Tech Breakthroughs</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">AI</a>
-    <a href="#">Quantum</a>
-    <a href="#">Materials</a>
-    <a href="#">Communications</a>
-  </nav>
-</header>
-
-<main>
-  <!-- Artificial Intelligence -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1517430816045-df4b7f2d1e5f?auto=format&fit=crop&w=800&q=80" alt="AI">
-    <div class="card-content">
-      <h3>GPT‑4.5: The Next Language Model</h3>
-      <p>OpenAI's latest model offers near‑human reasoning, fewer hallucinations, and advanced multi‑modal capabilities. Its open‑source variant allows developers to fine‑tune for specialized tasks.</p>
-      <a href="https://openai.com/research/gpt-4-5" target="_blank">Read more</a>
+  <section>
+    <h2>Top 10 Emerging Technologies of 2026</h2>
+    <div class="tech-list">
+      <!-- 1 -->
+      <div class="tech-card">
+        <h3>Quantum Cryptography</h3>
+        <p>Secure communication using quantum key distribution, providing theoretically unbreakable encryption against any computational attack.</p>
+      </div>
+      <!-- 2 -->
+      <div class="tech-card">
+        <h3>Personalized Gene Therapies</h3>
+        <p>CRISPR‑based treatments tailored to individual genetic profiles, enabling precise cure of hereditary disorders.</p>
+      </div>
+      <!-- 3 -->
+      <div class="tech-card">
+        <h3>Advanced Energy Harvesting</h3>
+        <p>Nanogenerators that capture ambient vibrations and heat, powering IoT devices autonomously.</p>
+      </div>
+      <!-- 4 -->
+      <div class="tech-card">
+        <h3>Brain‑Computer Interfaces (BCI)</h3>
+        <p>Non‑invasive BCIs that translate neural signals into digital commands for prosthetics and assistive tech.</p>
+      </div>
+      <!-- 5 -->
+      <div class="tech-card">
+        <h3>Self‑Repairing Materials</h3>
+        <p>Smart polymers that autonomously fix micro‑damage, extending the life of everything from aircraft to consumer electronics.</p>
+      </div>
+      <!-- 6 -->
+      <div class="tech-card">
+        <h3>Autonomous Delivery Mesh</h3>
+        <p>Robotic networks that deliver goods through air, ground, and subterranean routes with real‑time optimization.</p>
+      </div>
+      <!-- 7 -->
+      <div class="tech-card">
+        <h3>Edge AI Chips</h3>
+        <p>Ultra‑low‑power processors that bring machine learning inference to the device level, reducing latency and privacy concerns.</p>
+      </div>
+      <!-- 8 -->
+      <div class="tech-card">
+        <h3>3D‑Printed Organs</h3>
+        <p>Bioprinting of functional tissues and organs, accelerating transplant availability and reducing rejection risks.</p>
+      </div>
+      <!-- 9 -->
+      <div class="tech-card">
+        <h3>AI‑Driven Climate Modeling</h3>
+        <p>High‑resolution, real‑time models that predict extreme weather events with unprecedented accuracy.</p>
+      </div>
+      <!-- 10 -->
+      <div class="tech-card">
+        <h3>Blockchain for Data Governance</h3>
+        <p>Distributed ledgers that enforce immutable data provenance and privacy across sectors.</p>
+      </div>
     </div>
-  </article>
+  </section>
 
-  <!-- Quantum Computing -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1580894908361-9b3e5f2c8d6a?auto=format&fit=crop&w=800&q=80" alt="Quantum">
-    <div class="card-content">
-      <h3>IBM's 127‑Qubit System</h3>
-      <p>IBM's Eagle architecture surpasses the 100‑qubit threshold with error‑correction strides. It paves the way for practical quantum advantage in optimization and cryptography.</p>
-      <a href="https://www.ibm.com/blogs/research/2024/quantum-127-qubit" target="_blank">Read more</a>
-    </div>
-  </article>
-
-  <!-- 6G & Communications -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" alt="6G">
-    <div class="card-content">
-      <h3>6G: Beyond 1 Tbps</h3>
-      <p>Researchers at MIT and Nokia propose a 6G network that could deliver petabit data rates using terahertz frequencies, enabling real‑time holographic communication.</p>
-      <a href="https://www.mit.edu/~6g" target="_blank">Read more</a>
-    </div>
-  </article>
-
-  <!-- Materials Science -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cc2a91?auto=format&fit=crop&w=800&q=80" alt="Graphene">
-    <div class="card-content">
-      <h3>Graphene‑Based Flexible Displays</h3>
-      <p>New synthesis methods produce large‑area graphene sheets that allow OLEDs to bend without losing performance, opening doors to wearable tech and foldable phones.</p>
-      <a href="https://www.nature.com/articles/graphene-fd" target="_blank">Read more</a>
-    </div>
-  </article>
-
-  <!-- Autonomous Systems -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1564769208600-2d6b8b6d0c00?auto=format&fit=crop&w=800&q=80" alt="Autonomous">
-    <div class="card-content">
-      <h3>Self‑Navigating Drones</h3>
-      <p>Boston Dynamics' new drone platform integrates LIDAR, AI perception, and energy‑efficient batteries, enabling fully autonomous package delivery in urban environments.</p>
-      <a href="https://www.bostondynamics.com/drone-2024" target="_blank">Read more</a>
-    </div>
-  </article>
-
-  <!-- Renewable Energy -->
-  <article class="card">
-    <img src="https://images.unsplash.com/photo-1508079017945-71c2c9c3a1de?auto=format&fit=crop&w=800&q=80" alt="Renewable">
-    <div class="card-content">
-      <h3>Perovskite Solar Cells Break 25% Efficiency</h3>
-      <p>Researchers report a record 25.5% efficiency for perovskite photovoltaics, with improved stability under outdoor conditions, promising cheaper and more efficient solar panels.</p>
-      <a href="https://www.sciencemag.org/news/2024/perovskite-efficiency" target="_blank">Read more</a>
-    </div>
-  </article>
-</main>
-
-<footer>
-  © 2024 Tech Breakthroughs. All rights reserved. <br>
-  <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-</footer>
+  <section class="source">
+    <h2>References</h2>
+    <ul>
+      <li><a href="https://www.reuters.com/technology/" target="_blank">Reuters Technology News</a></li>
+      <li><a href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">ScienceDaily Technology</a></li>
+      <li><a href="https://www.weforum.org/stories/emerging-technologies/the-top-10-emerging-technologies-of-2026" target="_blank">World Economic Forum – Emerging Technologies 2026</a></li>
+      <li><a href="https://www.weforum.org/publications/top-10-emerging-technologies-of-2026" target="_blank">WEF Publication – Top 10 Emerging Technologies 2026</a></li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>
