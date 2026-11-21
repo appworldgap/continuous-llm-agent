@@ -1,121 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Latest Breakthroughs in Technology</title>
 <style>
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+/* CSS Variables – easy theming */
 :root {
-  --bg-dark: #0f141a;
-  --bg-light: #fafafa;
-  --accent: #1e90ff;
-  --text-light: #e2e8f0;
-  --text-dark: #1a202c;
+  --bg: #f9f9f9;
+  --text: #222;
+  --accent: #0066cc;
+  --accent-light: #cce7ff;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+  --card-shadow: rgba(0,0,0,0.1);
+  --font-sans: 'Segoe UI', Tahoma, sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* Global styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-light);
-  line-height: 1.6;
+  margin:0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.6;
 }
-
-a { color: var(--accent); text-decoration: none; transition: color .3s; }
-a:hover { color: #fff; }
-
-header, footer { padding: 1.5rem 2rem; }
-header { background: var(--bg-light); color: var(--text-dark); }
-footer { background: var(--bg-light); color: var(--text-dark); text-align: center; font-size: .9rem; }
-
-/* Navigation */
-nav ul { list-style: none; display: flex; gap: 1.2rem; }
-nav a { font-weight: 600; }
-
-/* Main content */
-main { padding: 2rem; }
-h1 { margin-bottom: 1rem; font-size: 2.5rem; }
-h2 { margin: 2rem 0 .5rem; color: var(--accent); font-size: 1.8rem; }
-
-article { background: var(--bg-dark); padding: 1.8rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-article p { margin: .8rem 0; }
-.article-link { margin-top: .6rem; display: inline-block; font-weight: 600; }
-
-@media (min-width: 768px) {
-  main { max-width: 960px; margin: 0 auto; }
+header {
+  background: var(--accent);
+  color:#fff;
+  padding:2rem 1rem;
+  text-align:center;
 }
-</style>
-</head>
-<body>
-<header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Research</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <article>
-    <h2>Quantum‑Secure Communications with Device‑Independent Protocols</h2>
-    <p>
-      Researchers at the Quantum Information Science Institute have announced the first practical deployment of a device‑independent quantum key distribution (DI‑QKD) network across a 200‑km fiber link. The system guarantees security even if the hardware is partially compromised, a critical leap for banking, defense, and critical infrastructure.
-    </p>
-    <a class="article-link" href="https://www.weforum.org/stories/emerging-technologies/the-top-10-emerging-technologies-of-2026" target="_blank">
-      Read more on WEF
-    </a>
-  </article>
-
-  <article>
-    <h2>AI‑Driven Personalized Drug Discovery Accelerates Clinical Trials</h2>
-    <p>
-      Leveraging deep generative models, a consortium of biotech firms has reduced the time needed to identify viable drug candidates from months to weeks. The platform predicts molecular interactions and potential side effects, cutting early-stage development costs by 40%.
-    </p>
-    <a class="article-link" href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">
-      See the ScienceDaily report
-    </a>
-  </article>
-
-  <article>
-    <h2>Ambient Energy Harvesting from Vibration Sources</h2>
-    <p>
-      New piezoelectric composites can now convert building vibrations into usable electrical power. Field tests in urban subway stations achieved up to 75 µW/cm², enough to power wireless sensors and reduce reliance on batteries.
-    </p>
-    <a class="article-link" href="https://www.reuters.com/technology/" target="_blank">
-      Reuters coverage
-    </a>
-  </article>
-
-  <article>
-    <h2>Autonomous Underwater Vehicles (AUVs) for Deep‑Sea Mapping</h2>
-    <p>
-      Equipped with advanced SLAM algorithms and multi‑sensor fusion, the latest generation of AUVs can autonomously map ocean floors up to 6,000 m depth in real time, providing unprecedented resolution for marine research and resource exploration.
-    </p>
-    <a class="article-link" href="https://www.weforum.org/publications/top-10-emerging-technologies-of-2026" target="_blank">
-      WEF insights
-    </a>
-  </article>
-
-  <article>
-    <h2>6G Ultra‑Wideband Connectivity for Holographic Communication</h2>
-    <p>
-      The first 6G prototypes, achieving data rates of 10 Tbps over a 400 MHz band, enable real‑time holographic video calls and instantaneous cloud rendering, opening new horizons for remote work, education, and entertainment.
-    </p>
-    <a class="article-link" href="https://www.reuters.com/technology/" target="_blank">
-      Read the latest news
-    </a>
-  </article>
-</main>
-
-<footer>
-  © 2026 Tech Frontier. All rights reserved.
-</footer>
-</body>
-</html>
+header h1 {
+  margin:0;
+  font-size:2.5rem;
+}
+main {
+  max-width:1200px;
+  margin:auto;
+  padding:2rem 1rem;
+}
+section {
+  margin-bottom
