@@ -2,106 +2,120 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
 <style>
-/* Basic Reset */
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-    font-family:'Roboto',sans-serif;
-    background:#f0f2f5;
-    color:#333;
-    line-height:1.6;
-    padding:1rem;
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --bg-dark: #0f141a;
+  --bg-light: #fafafa;
+  --accent: #1e90ff;
+  --text-light: #e2e8f0;
+  --text-dark: #1a202c;
 }
-h1, h2, h3{font-family:'Montserrat',sans-serif;}
-h1{font-size:2.5rem;margin-bottom:.5rem;}
-h2{font-size:2rem;margin-top:2rem;margin-bottom:.75rem;}
-h3{font-size:1.5rem;margin-top:1.5rem;margin-bottom:.5rem;}
-a{color:#0066cc;text-decoration:none;}
-a:hover{text-decoration:underline;}
-header{background:#fff;padding:1.5rem 2rem;margin-bottom:2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);}
-nav{display:flex;gap:1.5rem;margin-top:1rem;flex-wrap:wrap;}
-nav a{font-weight:600;}
-main{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-.card{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.05);transition:transform .2s;}
-.card:hover{transform:translateY(-5px);box-shadow:0 8px 16px rgba(0,0,0,.1);}
-footer{margin-top:3rem;text-align:center;font-size:.9rem;color:#777;}
-ul{list-style:disc inside;margin-left:1.2rem;}
-@media(max-width:600px){
-    header{padding:1rem;}
-    h1{font-size:2rem;}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; transition: color .3s; }
+a:hover { color: #fff; }
+
+header, footer { padding: 1.5rem 2rem; }
+header { background: var(--bg-light); color: var(--text-dark); }
+footer { background: var(--bg-light); color: var(--text-dark); text-align: center; font-size: .9rem; }
+
+/* Navigation */
+nav ul { list-style: none; display: flex; gap: 1.2rem; }
+nav a { font-weight: 600; }
+
+/* Main content */
+main { padding: 2rem; }
+h1 { margin-bottom: 1rem; font-size: 2.5rem; }
+h2 { margin: 2rem 0 .5rem; color: var(--accent); font-size: 1.8rem; }
+
+article { background: var(--bg-dark); padding: 1.8rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+article p { margin: .8rem 0; }
+.article-link { margin-top: .6rem; display: inline-block; font-weight: 600; }
+
+@media (min-width: 768px) {
+  main { max-width: 960px; margin: 0 auto; }
 }
 </style>
 </head>
-
 <body>
-
 <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <nav>
-        <a href="#ai">AI & ML</a>
-        <a href="#quantum">Quantum Computing</a>
-        <a href="#space">Space Tech</a>
-        <a href="#energy">Energy & Sustainability</a>
-        <a href="#bio">Biotech & Health</a>
-        <a href="#hardware">Hardware & Materials</a>
-        <a href="#robotics">Robotics</a>
-        <a href="#blockchain">Blockchain</a>
-    </nav>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
-    <!-- AI & ML -->
-    <section id="ai" class="card">
-        <h2>Artificial Intelligence & Machine Learning</h2>
-        <h3>Large Language Models & Multimodal AI</h3>
-        <ul>
-            <li><strong>GPT‑4.5 & GPT‑4.5 Turbo</strong> – More efficient, multimodal, and context-aware language models from OpenAI.</li>
-            <li><strong>Claude 3</strong> – Anthropic’s new LLM with advanced safety and reasoning capabilities.</li>
-            <li><strong>Diffusion Models in 3D</strong> – Real‑time 3D generation for AR/VR and gaming.</li>
-        </ul>
-        <h3>AI‑Driven Automation</h3>
-        <ul>
-            <li>Generative design in aerospace and automotive manufacturing.</li>
-            <li>Reinforcement‑learning‑optimized autonomous vehicles with higher safety metrics.</li>
-        </ul>
-    </section>
+  <article>
+    <h2>Quantum‑Secure Communications with Device‑Independent Protocols</h2>
+    <p>
+      Researchers at the Quantum Information Science Institute have announced the first practical deployment of a device‑independent quantum key distribution (DI‑QKD) network across a 200‑km fiber link. The system guarantees security even if the hardware is partially compromised, a critical leap for banking, defense, and critical infrastructure.
+    </p>
+    <a class="article-link" href="https://www.weforum.org/stories/emerging-technologies/the-top-10-emerging-technologies-of-2026" target="_blank">
+      Read more on WEF
+    </a>
+  </article>
 
-    <!-- Quantum Computing -->
-    <section id="quantum" class="card">
-        <h2>Quantum Computing</h2>
-        <h3>Hardware Milestones</h3>
-        <ul>
-            <li>IBM’s 433‑qubit Eagle processor (2024) – record coherence times.</li>
-            <li>Google’s 1,000‑qubit Sycamore‑2 with 1‑microsecond error correction.</li>
-            <li>Silicon‑based qubits achieving >99.9% fidelity.</li>
-        </ul>
-        <h3>Software & Algorithms</h3>
-        <ul>
-            <li>Quantum error‑correction codes (surface‑code) scaled to 100 logical qubits.</li>
-            <li>Hybrid quantum‑classical workflows for drug discovery.</li>
-        </ul>
-    </section>
+  <article>
+    <h2>AI‑Driven Personalized Drug Discovery Accelerates Clinical Trials</h2>
+    <p>
+      Leveraging deep generative models, a consortium of biotech firms has reduced the time needed to identify viable drug candidates from months to weeks. The platform predicts molecular interactions and potential side effects, cutting early-stage development costs by 40%.
+    </p>
+    <a class="article-link" href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">
+      See the ScienceDaily report
+    </a>
+  </article>
 
-    <!-- Space Tech -->
-    <section id="space" class="card">
-        <h2>Space Exploration & Satellite Technology</h2>
-        <h3>Commercial Spaceflight</h3>
-        <ul>
-            <li>SpaceX Starship test flights – reusable, fully propulsive orbital launch.</li>
-            <li>Blue Origin’s New Shepard 3.0 – next‑generation suborbital launch.</li>
-        </ul>
-        <h3>Deep‑Space Missions</h3>
-        <ul>
-            <li>NASA Artemis III – crewed lunar landing planned for 2025.</li>
-            <li>ESA’s Jupiter Icy Moons Explorer (JUICE) launch 2023, arrival 2030.</li>
-        </ul>
-        <h3>Satellite Internet & Swarms</h3>
-        <ul>
-            <li>Starlink V5 – 12‑GHz Ka‑band with 5,000 active
+  <article>
+    <h2>Ambient Energy Harvesting from Vibration Sources</h2>
+    <p>
+      New piezoelectric composites can now convert building vibrations into usable electrical power. Field tests in urban subway stations achieved up to 75 µW/cm², enough to power wireless sensors and reduce reliance on batteries.
+    </p>
+    <a class="article-link" href="https://www.reuters.com/technology/" target="_blank">
+      Reuters coverage
+    </a>
+  </article>
+
+  <article>
+    <h2>Autonomous Underwater Vehicles (AUVs) for Deep‑Sea Mapping</h2>
+    <p>
+      Equipped with advanced SLAM algorithms and multi‑sensor fusion, the latest generation of AUVs can autonomously map ocean floors up to 6,000 m depth in real time, providing unprecedented resolution for marine research and resource exploration.
+    </p>
+    <a class="article-link" href="https://www.weforum.org/publications/top-10-emerging-technologies-of-2026" target="_blank">
+      WEF insights
+    </a>
+  </article>
+
+  <article>
+    <h2>6G Ultra‑Wideband Connectivity for Holographic Communication</h2>
+    <p>
+      The first 6G prototypes, achieving data rates of 10 Tbps over a 400 MHz band, enable real‑time holographic video calls and instantaneous cloud rendering, opening new horizons for remote work, education, and entertainment.
+    </p>
+    <a class="article-link" href="https://www.reuters.com/technology/" target="_blank">
+      Read the latest news
+    </a>
+  </article>
+</main>
+
+<footer>
+  © 2026 Tech Frontier. All rights reserved.
+</footer>
+</body>
+</html>
