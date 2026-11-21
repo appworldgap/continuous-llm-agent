@@ -1,43 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Latest Breakthroughs in Technology</title>
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology (2026)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* CSS Variables – easy theming */
-:root {
-  --bg: #f9f9f9;
-  --text: #222;
-  --accent: #0066cc;
-  --accent-light: #cce7ff;
-  --border: #e0e0e0;
-  --card-bg: #fff;
-  --card-shadow: rgba(0,0,0,0.1);
-  --font-sans: 'Segoe UI', Tahoma, sans-serif;
-}
+    :root{
+        --accent:#00e676;
+        --bg:#121212;
+        --text:#e0e0e0;
+        --card-bg:#1e1e1e;
+        --link:#64ffda;
+        --shadow:rgba(0,0,0,0.3);
+    }
+    body{
+        margin:0;
+        font-family:system-ui,-apple-system,Helvetica,Arial,sans-serif;
+        background:var(--bg);
+        color:var(--text);
+        line-height:1.6;
+    }
+    header{
+        text-align:center;
+        padding:3rem 1rem;
+        background:linear-gradient(135deg,var(--accent),#004d40);
+        color:white;
+    }
+    header h1{
+        margin:0;
+        font-size:2.5rem;
+        font-weight:600;
+        text-shadow:0 2px 8px var(--shadow);
+    }
+    .container{
+        max-width:1200px;
+        margin:auto;
+        padding:2rem 1rem;
+        display:grid;
+        grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+        gap:1.5rem;
+    }
+    .card{
+        background:var(--card-bg);
+        border-radius:12px;
+        padding:1.5rem;
+        box-shadow:0 4px 12px var(--shadow);
+        display:flex;
+        flex-direction:column;
+        transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .card:hover{
+        transform:translateY(-4px);
+        box-shadow:0 8px 20px var(--shadow);
+    }
+    .card a{
+        color:var(--link);
+        text-decoration:none;
+        font-weight:500;
+        margin-top:auto;
+    }
+    .card a:hover{
+        text-decoration:underline;
+    }
+    .card h3{
+        margin:0 0 0.5rem 0;
+        font-size:1.25rem;
+        color:white;
+    }
+    .card p{
+        flex-grow:1;
+        margin:0 0 1rem 0;
+        color:rgba(255,255,255,0.8);
+    }
+    @media(max-width:500px){
+        header h1{font-size:2rem;}
+    }
+</style>
+</head>
+<body>
 
-/* Global styles */
-body {
-  margin:0;
-  font-family: var(--font-sans);
-  background: var(--bg);
-  color: var(--text);
-  line-height:1.6;
-}
-header {
-  background: var(--accent);
-  color:#fff;
-  padding:2rem 1rem;
-  text-align:center;
-}
-header h1 {
-  margin:0;
-  font-size:2.5rem;
-}
-main {
-  max-width:1200px;
-  margin:auto;
-  padding:2rem 1rem;
-}
-section {
-  margin-bottom
+<header>
+    <h1>Latest Breakthroughs in Technology (2026)</h1>
+</header>
+
+<div class="container">
+
+<div class="card">
+    <h3><a href="https://harvardsciencereview.org/2026/08/11/introduction-to-recent-ai-developments/" target="_blank">Latest Developments in Artificial Intelligence</a></h3>
+    <p>Aug 11, 2026 – Discover the latest AI innovations transforming industries and enhancing technology across the United States. Stay informed about cutting‑edge models, quantum‑augmented inference, and ethical AI frameworks.</p>
+    <a href="https://harvardsciencereview.org/2026/08/11/introduction-to-recent-ai-developments/" target="_blank">Read More</a>
+</div>
+
+<div class="card">
+    <h3><a href="https://www.sciencenewstoday.org/technology" target="_blank">Latest Technology News & Innovations</a></h3>
+    <p>Stay updated with the newest tech stories – breakthroughs in AI, robotics, space tech, quantum computing, and consumer gadgets. Get concise analysis and expert commentary.</p>
+    <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read More</a>
+</div>
+
+<div class="card">
+    <h3><a href="https://www.weforum.org/stories/emerging-technologies/the-top-10-emerging-technologies-of-2026" target="_blank">Top 10 Emerging Technologies of 2026</a></h3>
+    <p>Jun 22, 2026 – From quantum cryptography to personalized drug design, explore the technologies set to reshape our world. The World Economic Forum highlights key drivers and global impacts.</p>
+    <a href="https://www.weforum.org/stories/emerging-technologies/the-top-10-emerging-technologies-of-2026" target="_blank">Read More</a>
+</div>
+
+<div class="card">
+    <h3><a href="https://blog.google/innovation-and-ai/technology/research/research-capabilities-intelligence-2026/" target="_blank">Google Research 2026 – Novel Capabilities & Intelligence</a></h3>
+    <p>Oct 14, 2026 – Google unveils new milestones in advanced AI and intelligence, from self‑supervised learning models to cross‑modal reasoning. Discover the research roadmap and potential applications.</p>
+    <a href="https://blog.google/innovation-and-ai/technology/research/research-capabilities-intelligence-2026/" target="_blank">Read More</a>
+</div>
+
+</div>
+
+</body>
+</html>
