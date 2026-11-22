@@ -2,173 +2,130 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2024</title>
+<title>Latest Breakthroughs in Technology – 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Base styles */
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
-  line-height:1.6;
-  color:#333;
-  background:#f5f5f5;
+:root {
+  --primary: #0052cc;
+  --accent: #ff6b6b;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --text: #333333;
+  --light: #f0f0f0;
+  --font: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
-a{
-  color:#0066cc;
-  text-decoration:none;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
-a:hover{
-  text-decoration:underline;
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-header{
-  background:#222;
-  color:#fff;
-  padding:2rem 1rem;
-  text-align:center;
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
 }
-header h1{
-  margin:0;
-  font-size:2.5rem;
+header .wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c48.55,27.44,102.18,43.2,160.54,39.41,66.34-4.11,131-17.28,199.45-15.54,50.6,1.2,100.92,10.54,152.26,14.19,87.25,6.01,174.3-4.51,259.41-17.9,57.3-9.15,115.43-21.35,173.83-13.69C1107.65,44.69,1180.26,70.64,1200,74.44V0Z" fill="%23fff"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section{
-  max-width:1200px;
-  margin:2rem auto;
-  padding:0 1rem;
+section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
-h2{
-  margin-top:2rem;
-  margin-bottom:.5rem;
-  font-size:1.75rem;
-  border-bottom:2px solid #ddd;
-  padding-bottom:.3rem;
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary);
 }
-.cards{
-  display:grid;
+.grid {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap:1.5rem;
-  margin-top:1.5rem;
+  gap: 1.5rem;
 }
-.card{
-  background:#fff;
-  border-radius:8px;
-  box-shadow:0 4px 8px rgba(0,0,0,.1);
-  padding:1.5rem;
-  display:flex;
-  flex-direction:column;
-  height:100%;
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s, box-shadow .2s;
 }
-.card h3{
-  margin-top:0;
-  margin-bottom:.75rem;
-  font-size:1.25rem;
-  color:#222;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
-.card p{
-  flex-grow:1;
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
-.card ul{
-  padding-left:1.4rem;
-  margin:0;
+.card-body {
+  padding: 1rem;
+  flex: 1 0 auto;
 }
-footer{
-  text-align:center;
-  padding:1rem;
-  font-size:.9rem;
-  color:#777;
-  border-top:1px solid #ddd;
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+  color: var(--primary);
 }
-@media (max-width:600px){
-  header h1{font-size:2rem;}
-  h2{font-size:1.5rem;}
+.card-text {
+  font-size: .95rem;
+  color: var(--text);
+}
+.card-footer {
+  padding: 0 1rem 1rem;
+  text-align: right;
+}
+.card-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+footer {
+  background: var(--light);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  color: var(--text);
+  font-size: .9rem;
+}
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
 }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>Latest Breakthroughs in Technology – 2024</h1>
+  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <div class="wave"></div>
 </header>
 
-<main>
-  <section id="ai">
-    <h2>Artificial Intelligence & Machine Learning</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Multimodal LLMs (e.g., GPT‑4o, Gemini)</h3>
-        <p>Generative models that process text, images, audio, and video in a single architecture, enabling real‑time contextual understanding and creation across media types.</p>
-      </div>
-      <div class="card">
-        <h3>Foundation Models for Edge Devices</h3>
-        <p>Compact, quantized models optimized for micro‑controllers and smartphones, bringing high‑accuracy AI to IoT devices without cloud dependence.</p>
-      </div>
-      <div class="card">
-        <h3>AI‑driven Drug Discovery Platforms</h3>
-        <p>Platforms like Exscientia’s “AI‑First” pipeline reduce drug development time by predicting molecule efficacy and toxicity in days.</p>
-      </div>
-    </div>
-  </section>
+<section>
+  <h2>Top Innovations of the Year</h2>
+  <div class="grid">
 
-  <section id="quantum">
-    <h2>Quantum Computing & Communications</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>IBM’s 127‑Qubit “Osprey”</h3>
-        <p>First 100+ qubit system with error‑correction circuits, pushing the threshold for fault‑tolerant quantum operations.</p>
-      </div>
-      <div class="card">
-        <h3>Google’s Quantum‑Supreme 5‑Year Roadmap</h3>
-        <p>Milestone to achieve 1‑petabit quantum throughput, enabling secure quantum‑encrypted communication networks.</p>
-      </div>
-      <div class="card">
-        <h3>Quantum‑Enabled Materials Simulations</h3>
-        <p>Simulations of high‑temperature superconductors using hybrid classical‑quantum algorithms reduce design cycles for next‑gen batteries.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="neuroscience">
-    <h2>Neuroscience & Brain‑Computer Interfaces</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>BrainGate 3.0 – Implantable BCI</h3>
-        <p>Clinical trials show real‑time control of robotic limbs with 90%+ accuracy for paraplegic patients.</p>
-      </div>
-      <div class="card">
-        <h3>Non‑invasive EEG‑based AI Assistants</h3>
-        <p>Wearable EEG headsets paired with deep‑learning inference provide instantaneous cognitive workload monitoring for pilots and drivers.</p>
-      </div>
-      <div class="card">
-        <h3>Optogenetics in Humans</h3>
-        <p>Proof‑of‑concept trials demonstrate precise neural activation via light‑sensitive proteins, opening doors for treating Parkinson’s and depression.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="energy">
-    <h2>Energy & Sustainability</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Perovskite Solar Cells – 29% Efficiency</h3>
-        <p>Commercial modules now exceed 20% efficiency, with tandem structures reaching 29% in laboratory settings.</p>
-      </div>
-      <div class="card">
-        <h3>Solid‑State Lithium‑Sulfur Batteries</h3>
-        <p>Energy densities surpass 500 Wh/kg, promising lightweight, high‑capacity batteries for EVs.</p>
-      </div>
-      <div class="card">
-        <h3>Carbon‑Capture via Direct Air Capture (DAC)</h3>
-        <p>Companies like Carbon Engineering scale up DAC units capable of capturing 1 MtCO₂ annually at $50/ton.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="other">
-    <h2>Other Emerging Technologies</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>6G Research – 100 Gbps & 1 µs Latency</h3>
-        <p>Preliminary prototypes aim for ultra‑high bandwidth and near‑real‑time AR/VR streaming.</p>
-      </div>
-      <div class="card">
-        <h3>Autonomous Drone Swarms</h3>
-        <p>Algorithms enable coordinated swarms for disaster relief, delivering supplies in minutes.</p>
-      </div>
+    <!-- Quantum Processor -->
+    <div class="card">
+      <img src="https://picsum.photos/id/1011/400/300" alt="Quantum Processor">
+      <div class="card-body">
+        <h3 class="card-title">Quantum Processor Q‑9000</h3>
+        <p class="card-text">The first commercial quantum chip with 2048
