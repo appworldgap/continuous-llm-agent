@@ -2,139 +2,167 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   :root {
-    --bg: #111;
-    --card-bg: #1e1e1e;
-    --accent: #00bcd4;
-    --text: #f0f0f0;
-    --light: #bbb;
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --radius: 0.8rem;
-    --transition: 0.3s ease;
+    --primary: #1a73e8;
+    --secondary: #f1f3f4;
+    --accent: #e8f0fe;
+    --text: #202124;
+    --background: #ffffff;
+    --shadow: rgba(0,0,0,0.1);
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; }
   body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-family);
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    color: var(--text);
+    background: var(--background);
   }
   header {
-    background: linear-gradient(135deg, var(--accent), #005f73);
+    background: var(--primary);
+    color: #fff;
     padding: 2rem 1rem;
     text-align: center;
-    color: #fff;
   }
-  header h1 { font-size: 2.8rem; margin-bottom: .5rem; }
-  header p { font-size: 1.1rem; color: var(--light); }
-
-  main { flex: 1; padding: 2rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-
+  header h1 {
+    margin: 0 0 .5rem;
+    font-size: 2.5rem;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .container {
+    max-width: 1200px;
+    margin: -3rem auto 4rem;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
   .card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    background: var(--background);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: var(--transition);
   }
-  .card:hover { transform: translateY(-4px); }
-
-  .card h2 { margin-bottom: .5rem; color: var(--accent); font-size: 1.4rem; }
-  .card p { flex: 1; color: var(--light); }
-  .card a { text-decoration: none; color: var(--accent); font-weight: 500; margin-top: .5rem; display: inline-block; }
-  .card a:hover { text-decoration: underline; }
-
-  footer { text-align: center; padding: 1rem; font-size: .9rem; color: var(--light); }
-
-  @media (prefers-color-scheme: light) {
-    :root { --bg: #f9f9f9; --card-bg: #fff; --accent: #0066cc; --text: #222; --light: #777; }
-    header { color: #222; }
-    footer { color: #777; }
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-body h3 {
+    margin: 0 0 .5rem;
+    font-size: 1.3rem;
+    color: var(--primary);
+  }
+  .card-body p {
+    margin: 0;
+    flex: 1;
+    color: var(--text);
+  }
+  .card-footer {
+    padding: 0.75rem 1rem;
+    text-align: right;
+    background: var(--secondary);
+  }
+  .card-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer {
+    background: var(--secondary);
+    color: var(--text);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --text: #e8eaed; --background: #202124; --secondary: #171717; }
+    body { background: var(--background); color: var(--text); }
+    header { background: var(--primary); }
+    .card { background: var(--background); }
+    .card-footer { background: var(--secondary); }
+    footer { background: var(--secondary); }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Technology Breakthroughs – 2026</h1>
-  <p>Explore the cutting‑edge innovations reshaping our world.</p>
+  <h1>Breakthroughs in Technology</h1>
+  <p>Explore the cutting‑edge innovations shaping our future</p>
 </header>
 
-<main>
+<main class="container">
   <article class="card">
-    <h2>🧠 GPT‑5 & the Rise of General AI</h2>
-    <p>
-      OpenAI released GPT‑5, the first truly general-purpose language model with
-      context‑aware reasoning, multimodal comprehension, and safe alignment
-      protocols. GPT‑5 powers real‑time scientific discovery, automated code
-      synthesis, and advanced human‑computer collaboration tools.
-    </p>
-    <a href="https://openai.com/research/gpt-5" target="_blank">Read more</a>
+    <img src="https://via.placeholder.com/600x400?text=AI+Model" alt="AI Model">
+    <div class="card-body">
+      <h3>Artificial Intelligence</h3>
+      <p>Next‑generation language models now understand context with unprecedented accuracy, enabling real‑time translation, creative writing, and advanced data analysis.</p>
+    </div>
+    <div class="card-footer"><a href="#">Read More</a></div>
   </article>
 
   <article class="card">
-    <h2>⚛️ Quantum Processing 1‑Trillion‑Qubit Chip</h2>
-    <p>
-      IBM announced a quantum processor with 1T qubits, enabling unprecedented
-      simulation of chemical reactions, optimization problems, and machine
-      learning workloads. The breakthrough stems from a new error‑correction
-      lattice that drastically reduces overhead.
-    </p>
-    <a href="https://news.ibm.com/2026-quantum" target="_blank">Read more</a>
+    <img src="https://via.placeholder.com/600x400?text=Quantum+Chip" alt="Quantum Chip">
+    <div class="card-body">
+      <h3>Quantum Computing</h3>
+      <p>Commercial quantum processors have surpassed 50 qubits, bringing practical applications in drug discovery, cryptography, and complex simulations within reach.</p>
+    </div>
+    <div class="card-footer"><a href="#">Read More</a></div>
   </article>
 
   <article class="card">
-    <h2>🧬 CRISPR‑X: Precise Gene Editing with 99.9% Accuracy</h2>
-    <p>
-      BioTech Labs unveiled CRISPR‑X, a next‑generation gene‑editing platform that
-      eliminates off‑target effects via programmable base‑pair editors. Trials
-      show successful treatment of hereditary blindness in 98% of participants.
-    </p>
-    <a href="https://biotechlab.com/crispr-x" target="_blank">Read more</a>
+    <img src="https://via.placeholder.com/600x400?text=Biochip" alt="Biochip">
+    <div class="card-body">
+      <h3>Biotechnology</h3>
+      <p>CRISPR‑based gene therapies now offer targeted treatment for inherited diseases, with clinical trials reporting high safety and efficacy.</p>
+    </div>
+    <div class="card-footer"><a href="#">Read More</a></div>
   </article>
 
   <article class="card">
-    <h2>🔋 Solid‑State Batteries: 10‑Year Life Cycle</h2>
-    <p>
-      Panasonic and LG Energy Solutions jointly released a commercial
-      solid‑state battery with a 10‑year lifespan, 5× the energy density of
-      current Li‑ion packs, and zero flammability risk. Automakers are already
-      integrating the packs into next‑generation electric vehicles.
-    </p>
-    <a href="https://www.panasonic.com/ssb" target="_blank">Read more</a>
+    <img src="https://via.placeholder.com/600x400?text=Energy+Storage" alt="Energy Storage">
+    <div class="card-body">
+      <h3>Energy Storage</h3>
+      <p>Solid‑state batteries demonstrate over 500 kWh kg⁻¹ capacity, promising safer, longer‑lasting power solutions for electric vehicles and grid storage.</p>
+    </div>
+    <div class="card-footer"><a href="#">Read More</a></div>
   </article>
 
   <article class="card">
-    <h2>🚀 SpaceX Starship 2.0: Fully Reusable Heavy Lift</h2>
-    <p>
-      Starship 2.0 features a new regolith‑based propellant system that
-      allows spacecraft to refuel directly from lunar and Martian surfaces,
-      cutting launch costs by 70% and accelerating the Mars colonization timeline.
-    </p>
-    <a href="https://www.spacex.com/starship" target="_blank">Read more</a>
+    <img src="https://via.placeholder.com/600x400?text=Autonomous+Vehicles" alt="Autonomous Vehicles">
+    <div class="card-body">
+      <h3>Autonomous Vehicles</h3>
+      <p>Full‑stack AI perception systems now achieve real‑world reliability, accelerating the rollout of driver‑less transportation networks.</p>
+    </div>
+    <div class="card-footer"><a href="#">Read More</a></div>
   </article>
 
   <article class="card">
-    <h2>🖥️ HoloLens 4: Mixed‑Reality for Work & Life</h2>
-    <p>
-      Microsoft introduced HoloLens 4, integrating AI‑driven spatial audio, full
-      8K holographic display, and a battery life of 12 hours. The device is
-      already adopted in remote surgery, immersive education, and collaborative
-      design workflows.
-    </p>
-    <a href="https://www.microsoft.com/hololens4" target="_blank">Read more</a>
+    <img src="https://via.placeholder.com/600x400?text=AR+Tech" alt="AR Tech">
+    <div class="card-body">
+      <h3>Augmented Reality</h3>
+      <p>Ultra‑low‑latency AR headsets powered by edge AI provide immersive experiences for education, design, and remote collaboration.</p>
+    </div>
+    <div class="card-footer"><a href="#">Read More</a></div>
   </article>
 </main>
 
 <footer>
-  © 2026 TechInsights • <a href="#" style="color:var(--accent);text-decoration:none;">Privacy Policy</a>
+  © 2026 TechInsights. All rights reserved.
 </footer>
 </body>
 </html>
