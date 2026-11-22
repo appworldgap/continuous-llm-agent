@@ -2,135 +2,173 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --clr-bg: #f5f7fa;
-    --clr-primary: #1e88e5;
-    --clr-secondary: #ffab00;
-    --clr-text: #212121;
-    --clr-muted: #757575;
-    --font-base: 'Segoe UI', Tahoma, Arial, sans-serif;
-  }
-  body {
-    margin:0; font-family: var(--font-base); background: var(--clr-bg); color: var(--clr-text);
-    line-height:1.6;
-  }
-  header {
-    background: var(--clr-primary); color:#fff; padding: 2rem 1rem; text-align:center;
-  }
-  header h1 { margin:0; font-size:2.5rem; }
-  main { max-width:1280px; margin:auto; padding:1.5rem; }
-  h2 { margin-top:2rem; color:var(--clr-primary); border-bottom:2px solid var(--clr-primary); padding-bottom:.5rem; }
-  .section { margin-top:2rem; }
-  .section p { margin: .5rem 0; }
-  .link { color:var(--clr-secondary); text-decoration:none; }
-  .link:hover { text-decoration:underline; }
-  footer { text-align:center; margin:2rem 0; color:var(--clr-muted); font-size:.9rem; }
-  @media (min-width:600px){
-    .grid { display:grid; grid-template-columns: repeat(2,1fr); gap:1.5rem; }
-    .grid-single { grid-column: span 2; }
-  }
-  .card { background:#fff; padding:1.5rem; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.1); }
-  .card h3 { margin-top:0; color:var(--clr-primary); }
+/* Base styles */
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  line-height:1.6;
+  color:#333;
+  background:#f5f5f5;
+}
+a{
+  color:#0066cc;
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+}
+header{
+  background:#222;
+  color:#fff;
+  padding:2rem 1rem;
+  text-align:center;
+}
+header h1{
+  margin:0;
+  font-size:2.5rem;
+}
+section{
+  max-width:1200px;
+  margin:2rem auto;
+  padding:0 1rem;
+}
+h2{
+  margin-top:2rem;
+  margin-bottom:.5rem;
+  font-size:1.75rem;
+  border-bottom:2px solid #ddd;
+  padding-bottom:.3rem;
+}
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:1.5rem;
+  margin-top:1.5rem;
+}
+.card{
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 4px 8px rgba(0,0,0,.1);
+  padding:1.5rem;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.card h3{
+  margin-top:0;
+  margin-bottom:.75rem;
+  font-size:1.25rem;
+  color:#222;
+}
+.card p{
+  flex-grow:1;
+}
+.card ul{
+  padding-left:1.4rem;
+  margin:0;
+}
+footer{
+  text-align:center;
+  padding:1rem;
+  font-size:.9rem;
+  color:#777;
+  border-top:1px solid #ddd;
+}
+@media (max-width:600px){
+  header h1{font-size:2rem;}
+  h2{font-size:1.5rem;}
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology – 2026</h1>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
 </header>
+
 <main>
-  <section class="section" id="ai">
-    <h2>Artificial Intelligence</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>GPT‑4o and Beyond</h3>
-        <p>OpenAI’s GPT‑4o now integrates real‑time vision, audio and multi‑modal reasoning, achieving near‑human performance on the <a class="link" href="https://arxiv.org/abs/2304.11235" target="_blank">MMLU benchmark</a>. It powers a new wave of autonomous software agents that can read, write, code and interact across devices.</p>
-      </article>
-      <article class="card">
-        <h3>AI‑Driven Drug Discovery</h3>
-        <p>Companies like <em>Atomwise</em> and <em>Insilico Medicine</em> have announced AI models that predict protein folding and drug efficacy with 95%+ accuracy, shortening clinical trials from 10 years to 3 years.</p>
-      </article>
+  <section id="ai">
+    <h2>Artificial Intelligence & Machine Learning</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Multimodal LLMs (e.g., GPT‑4o, Gemini)</h3>
+        <p>Generative models that process text, images, audio, and video in a single architecture, enabling real‑time contextual understanding and creation across media types.</p>
+      </div>
+      <div class="card">
+        <h3>Foundation Models for Edge Devices</h3>
+        <p>Compact, quantized models optimized for micro‑controllers and smartphones, bringing high‑accuracy AI to IoT devices without cloud dependence.</p>
+      </div>
+      <div class="card">
+        <h3>AI‑driven Drug Discovery Platforms</h3>
+        <p>Platforms like Exscientia’s “AI‑First” pipeline reduce drug development time by predicting molecule efficacy and toxicity in days.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="quantum">
-    <h2>Quantum Computing</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Google’s Quantum Supremacy 2.0</h3>
-        <p>Google’s Sycamore‑3 processor, a 2,500‑qubit device, achieved “quantum supremacy” on a cryptographic task, demonstrating a speed‑up factor of 1,000,000× over the best classical supercomputer.</p>
-      </article>
-      <article class="card">
-        <h3>Commercial Quantum‑As‑a‑Service</h3>
-        <p>IBM, Amazon, and Microsoft now offer fully managed quantum cloud services, with a 5‑day free tier for research and development.</p>
-      </article>
+  <section id="quantum">
+    <h2>Quantum Computing & Communications</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>IBM’s 127‑Qubit “Osprey”</h3>
+        <p>First 100+ qubit system with error‑correction circuits, pushing the threshold for fault‑tolerant quantum operations.</p>
+      </div>
+      <div class="card">
+        <h3>Google’s Quantum‑Supreme 5‑Year Roadmap</h3>
+        <p>Milestone to achieve 1‑petabit quantum throughput, enabling secure quantum‑encrypted communication networks.</p>
+      </div>
+      <div class="card">
+        <h3>Quantum‑Enabled Materials Simulations</h3>
+        <p>Simulations of high‑temperature superconductors using hybrid classical‑quantum algorithms reduce design cycles for next‑gen batteries.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="bio">
-    <h2>Biotechnology</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>CRISPR‑Cytosine Editing</h3>
-        <p>New base‑editing tools allow precise conversion of cytosine to thymine without double‑strand breaks, offering safer treatments for sickle‑cell anemia and other genetic disorders.</p>
-      </article>
-      <article class="card">
-        <h3>Lab‑Grown Meat at Scale</h3>
-        <p>Companies like <em>Mosa Meat</em> now produce 1‑kg portions of cultured beef with a 70% reduction in water usage and 90% lower greenhouse gas emissions compared to conventional cattle.</p>
-      </article>
+  <section id="neuroscience">
+    <h2>Neuroscience & Brain‑Computer Interfaces</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>BrainGate 3.0 – Implantable BCI</h3>
+        <p>Clinical trials show real‑time control of robotic limbs with 90%+ accuracy for paraplegic patients.</p>
+      </div>
+      <div class="card">
+        <h3>Non‑invasive EEG‑based AI Assistants</h3>
+        <p>Wearable EEG headsets paired with deep‑learning inference provide instantaneous cognitive workload monitoring for pilots and drivers.</p>
+      </div>
+      <div class="card">
+        <h3>Optogenetics in Humans</h3>
+        <p>Proof‑of‑concept trials demonstrate precise neural activation via light‑sensitive proteins, opening doors for treating Parkinson’s and depression.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="energy">
+  <section id="energy">
     <h2>Energy & Sustainability</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Solid‑State Lithium Batteries</h3>
-        <p>Researchers at <em>Solid Power</em> have released a commercial Li‑S solid‑state battery with 500 Wh/kg energy density and 1,000+ cycles, targeting electric aviation.</p>
-      </article>
-      <article class="card">
-        <h3>Next‑Gen Solar Cells</h3>
-        <p>Perovskite‑silicon tandem cells now exceed 28% efficiency in the field, with a projected cost drop to $0.30/kWh by 2030.</p>
-      </article>
+    <div class="cards">
+      <div class="card">
+        <h3>Perovskite Solar Cells – 29% Efficiency</h3>
+        <p>Commercial modules now exceed 20% efficiency, with tandem structures reaching 29% in laboratory settings.</p>
+      </div>
+      <div class="card">
+        <h3>Solid‑State Lithium‑Sulfur Batteries</h3>
+        <p>Energy densities surpass 500 Wh/kg, promising lightweight, high‑capacity batteries for EVs.</p>
+      </div>
+      <div class="card">
+        <h3>Carbon‑Capture via Direct Air Capture (DAC)</h3>
+        <p>Companies like Carbon Engineering scale up DAC units capable of capturing 1 MtCO₂ annually at $50/ton.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="space">
-    <h2>Space Technology</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Reusable Heavy‑Lifters</h3>
-        <p>SpaceX’s Starship completed its first fully reusable orbital flight, reducing launch costs to $2 million per 100 kg payload.</p>
-      </article>
-      <article class="card">
-        <h3>CubeSat Mega‑Constellations</h3>
-        <p>Starlink’s 5,000‑satellite constellation now provides 100 Mbps global broadband, and the first satellite‑to‑satellite laser links were demonstrated.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="consumer">
-    <h2>Consumer Electronics</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Foldable OLED Laptops</h3>
-        <p>Samsung’s "FlexBook" folds 90° with a 13.5‑inch 120Hz OLED display, merging tablet flexibility with laptop power.</p>
-      </article>
-      <article class="card">
-        <h3>AR Glasses with Eye‑Tracking</h3>
-        <p>Meta’s Horizon Glasses integrate eye‑tracking and 4K passthrough, enabling precise holographic interaction for mixed‑reality gaming.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="trends">
-    <h2>Emerging Trends</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Edge AI & 5G/6G Integration</h3>
-        <p>AI inference is moving to the edge with 5G‑enabled micro‑data centers, reducing latency to <1 ms for autonomous vehicles.</p>
-      </article>
-      <article class="card">
-        <h3
+  <section id="other">
+    <h2>Other Emerging Technologies</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>6G Research – 100 Gbps & 1 µs Latency</h3>
+        <p>Preliminary prototypes aim for ultra‑high bandwidth and near‑real‑time AR/VR streaming.</p>
+      </div>
+      <div class="card">
+        <h3>Autonomous Drone Swarms</h3>
+        <p>Algorithms enable coordinated swarms for disaster relief, delivering supplies in minutes.</p>
+      </div>
