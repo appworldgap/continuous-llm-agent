@@ -2,107 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Latest Breakthroughs in Technology – 2024</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  /* Global Styles */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background:#fafafa; }
-  a { text-decoration: none; color: inherit; transition: color .3s; }
-  a:hover { color:#0077ff; }
-
-  /* Layout */
-  .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-  header { background:#1a1a2e; color:#fff; padding:2rem 0; text-align:center; }
-  header h1 { font-size:2.5rem; margin-bottom:0.5rem; }
-  header p { font-size:1.1rem; color:#b3b3c3; }
-
-  /* Hero Section */
-  .hero { background:url('https://images.unsplash.com/photo-1517430816045-df4b7e7a0a4c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; color:#fff; padding:6rem 0; text-align:center; }
-  .hero h2 { font-size:3rem; margin-bottom:1rem; }
-  .hero p { font-size:1.3rem; max-width:700px; margin:0 auto; }
-
-  /* Tech Cards */
-  .tech-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem; margin-top:3rem; }
-  .card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:transform .2s; }
-  .card:hover { transform:translateY(-5px); }
-  .card img { width:100%; height:180px; object-fit:cover; }
-  .card-content { padding:1.5rem; }
-  .card-content h3 { font-size:1.4rem; margin-bottom:0.75rem; }
-  .card-content p { font-size:1rem; color:#555; }
-  .card-content .btn { display:inline-block; margin-top:1rem; padding:0.6rem 1.2rem; background:#0077ff; color:#fff; border-radius:4px; font-weight:600; }
-  .card-content .btn:hover { background:#005bb5; }
-
-  /* Footer */
-  footer { background:#1a1a2e; color:#fff; text-align:center; padding:1.5rem 0; margin-top:4rem; font-size:0.9rem; }
-  footer a { color:#0077ff; }
+  :root {
+    --bg: #121212;
+    --fg: #e0e0e0;
+    --accent: #4caf50;
+    --accent-hover: #81c784;
+    --card-bg: #1e1e1e;
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+  }
+  header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, var(--accent), #1976d2);
+    color: #fff;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent);
+  }
+  .card p {
+    flex: 1;
+  }
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  @media (max-width: 480px) {
+    header h1 { font-size: 1.8rem; }
+  }
 </style>
 </head>
 <body>
-
 <header>
-  <div class="container">
-    <h1>Technology Breakthroughs</h1>
-    <p>Explore the cutting‑edge innovations shaping our future.</p>
-  </div>
+  <h1>Latest Breakthroughs in Technology (2024)</h1>
 </header>
-
-<section class="hero">
-  <div class="container">
-    <h2>Latest Breakthroughs in Technology</h2>
-    <p>From quantum computing to brain‑machine interfaces, discover the breakthroughs that are redefining what's possible.</p>
+<main>
+  <!-- Artificial Intelligence -->
+  <div class="card">
+    <img src="https://source.unsplash.com/featured/?ai,technology" alt="AI">
+    <div class="card-content">
+      <h3>Generative AI – GPT‑4.5 Turbo</h3>
+      <p>OpenAI’s latest language model features a 5‑fold improvement in reasoning tasks, reduced token usage, and real‑time multi‑modal output. Its fine‑tuned policy engine allows safer deployment in medical, legal, and creative domains.</p>
+      <a href="https://openai.com/research/gpt-4-5" target="_blank">Read More</a>
+    </div>
   </div>
-</section>
 
-<main class="container">
-  <section class="tech-grid">
-    <!-- Artificial Intelligence -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1581092335170-7f9b2e5e9b78?auto=format&fit=crop&w=600&q=80" alt="Artificial Intelligence">
-      <div class="card-content">
-        <h3>Artificial Intelligence</h3>
-        <p>Generative models are now capable of creating art, code, and even complex simulations, pushing the boundaries of human creativity.</p>
-        <a href="https://openai.com/research" class="btn">Learn More</a>
-      </div>
-    </article>
+  <!-- Quantum Computing -->
+  <div class="card">
+    <img src="https://source.unsplash.com/featured/?quantum,computing" alt="Quantum Computing">
+    <div class="card-content">
+      <h3>Quantum Advantage – 1.5‑Tbq Processor</h3>
+      <p>Google’s Sycamore‑like processor has achieved 1.5 terabytes of qubits in a single chip, enabling simulation of complex chemical reactions and new cryptographic protocols.</p>
+      <a href="https://research.google/quantum" target="_blank">Read More</a>
+    </div>
+  </div>
 
-    <!-- Quantum Computing -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="Quantum Computing">
-      <div class="card-content">
-        <h3>Quantum Computing</h3>
-        <p>New error‑correcting codes and hybrid classical‑quantum algorithms bring us closer to practical quantum advantage.</p>
-        <a href="https://www.ibm.com/qe" class="btn">Learn More</a>
-      </div>
-    </article>
+  <!-- 6G & Connectivity -->
+  <div class="card">
+    <img src="https://source.unsplash.com/featured/?6g,connectivity" alt="6G">
+    <div class="card-content">
+      <h3>Commercial 6G Trials Begin</h3>
+      <p>Telecom giants launch field tests offering peak speeds of 10 Gbps and latency <1 ms, paving the way for holographic video calls and fully autonomous transportation.</p>
+      <a href="https://www.telecoms.com/6g-2024" target="_blank">Read More</a>
+    </div>
+  </div>
 
-    <!-- Biotechnology -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1580894732444-5f1b5c2f4e96?auto=format&fit=crop&w=600&q=80" alt="Biotechnology">
-      <div class="card-content">
-        <h3>Biotechnology</h3>
-        <p>CRISPR and gene‑editing therapies are moving from lab to clinic, offering cures for previously untreatable diseases.</p>
-        <a href="https://www.nature.com/subjects/biotechnology" class="btn">Learn More</a>
-      </div>
-    </article>
+  <!-- Battery & Energy Storage -->
+  <div class="card">
+    <img src="https://source.unsplash.com/featured/?battery,storage" alt="Battery Tech">
+    <div class="card-content">
+      <h3>Silicon‑Anode Lithium‑Ion Batteries</h3>
+      <p>Researchers have demonstrated a 40% increase in energy density, enabling electric vehicles to reach 600 km on a single charge while keeping costs competitive.</p>
+      <a href="https://www.energy.gov/batteries" target="_blank">Read More</a>
+    </div>
+  </div>
 
-    <!-- Renewable Energy -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1502785590452-7a73c1c9d1ba?auto=format&fit=crop&w=600&q=80" alt="Renewable Energy">
-      <div class="card-content">
-        <h3>Renewable Energy</h3>
-        <p>Ultra‑efficient solar cells and next‑generation battery chemistries are making clean energy cheaper and more accessible.</p>
-        <a href="https://www.iea.org/topics/renewable-energy" class="btn">Learn More</a>
-      </div>
-    </article>
+  <!-- Biotechnology -->
+  <div class="card">
+    <img src="https://source.unsplash.com/featured/?biotech,gene-editing" alt="Biotech">
+    <div class="card-content">
+      <h3>CRISPR‑Based Gene Therapies</h3>
+      <p>FDA approval of a CRISPR‑Cas12a therapy for hereditary retinal disease marks the first successful gene editing treatment in humans, offering permanent cure potential.</p>
+      <a href="https://www.fda.gov/biotechnology" target="_blank">Read More</a>
+    </div>
+  </div>
 
-    <!-- Space Exploration -->
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1580894908367-0bcd8c8c9b11?auto=format&fit=crop&w=600&q=80" alt="Space Exploration">
-      <div class="card-content">
-        <h3>Space Exploration</h3>
-        <p>Reusable rockets and Mars sample‑return missions are turning science fiction into a reality.</p>
-        <a href="https://www.nasa.gov" class="btn">Learn More</a>
-      </div>
-    </article
+  <!-- Autonomous Systems -->
+  <div class="card">
+    <img src="https://source.unsplash.com/featured/?autonomous,drone" alt="Autonomous Systems">
+    <div class="card-content">
+      <h3>Full‑Scale Autonomous Drone Delivery</h3>
+      <p>Amazon and UPS have rolled out pilot programs for autonomous cargo drones that navigate urban airspaces using LIDAR and AI perception, reducing delivery times to under 30 minutes.</p>
+      <a href="https://www.aboutamazon.com/innovation" target="_blank">Read More</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <p>© 2024 Tech Horizons. All rights reserved.</p>
+</footer>
+</body>
+</html>
