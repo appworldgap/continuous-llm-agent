@@ -3,166 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  :root {
-    --primary: #1a73e8;
-    --secondary: #f1f3f4;
-    --accent: #e8f0fe;
-    --text: #202124;
-    --background: #ffffff;
-    --shadow: rgba(0,0,0,0.1);
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif;
-    line-height: 1.6;
-    color: var(--text);
-    background: var(--background);
-  }
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0 0 .5rem;
-    font-size: 2.5rem;
-  }
-  header p {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  .container {
-    max-width: 1200px;
-    margin: -3rem auto 4rem;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    background: var(--background);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px var(--shadow);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
-  .card-body {
-    padding: 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .card-body h3 {
-    margin: 0 0 .5rem;
-    font-size: 1.3rem;
-    color: var(--primary);
-  }
-  .card-body p {
-    margin: 0;
-    flex: 1;
-    color: var(--text);
-  }
-  .card-footer {
-    padding: 0.75rem 1rem;
-    text-align: right;
-    background: var(--secondary);
-  }
-  .card-footer a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-  }
-  footer {
-    background: var(--secondary);
-    color: var(--text);
-    text-align: center;
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --text: #e8eaed; --background: #202124; --secondary: #171717; }
-    body { background: var(--background); color: var(--text); }
-    header { background: var(--primary); }
-    .card { background: var(--background); }
-    .card-footer { background: var(--secondary); }
-    footer { background: var(--secondary); }
+  /* Reset & Base Styles */
+  *, *::before, *::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:Arial,Helvetica,sans-serif;background:#fafafa;color:#333;line-height:1.6;}
+  a{color:#1a73e8;text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;display:block;}
+  header{background:#1a73e8;color:#fff;padding:2rem 1rem;text-align:center;}
+  header h1{margin-bottom:.5rem;font-size:2.5rem;}
+  header p{font-size:1.1rem;}
+  main{max-width:1200px;margin:auto;padding:1rem;}
+  section{margin-bottom:3rem;}
+  h2{font-size:2rem;margin-bottom:.8rem;color:#1a73e8;}
+  .breakthrough{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;}
+  .breakthrough img{flex:1 1 250px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.1);}
+  .breakthrough .info{flex:2 1 400px;}
+  .breakthrough .info h3{font-size:1.5rem;margin-bottom:.5rem;}
+  .breakthrough .info p{margin-bottom:1rem;}
+  footer{background:#333;color:#fff;text-align:center;padding:1rem; font-size:.9rem;}
+  footer a{color:#f1c40f;}
+  @media(max-width:768px){
+    .breakthrough{flex-direction:column;}
+    .breakthrough .info{flex:1;}
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Breakthroughs in Technology</h1>
-  <p>Explore the cutting‑edge innovations shaping our future</p>
+  <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to quantum computing – the innovations shaping tomorrow.</p>
 </header>
-
-<main class="container">
-  <article class="card">
-    <img src="https://via.placeholder.com/600x400?text=AI+Model" alt="AI Model">
-    <div class="card-body">
-      <h3>Artificial Intelligence</h3>
-      <p>Next‑generation language models now understand context with unprecedented accuracy, enabling real‑time translation, creative writing, and advanced data analysis.</p>
+<main>
+  <section class="breakthrough">
+    <img src="https://images.unsplash.com/photo-1581092330591-1a5d5b2d4d9c?auto=format&fit=crop&w=800&q=80" alt="AI breakthrough">
+    <div class="info">
+      <h3>Generative AI 4.5: GPT‑4o and Beyond</h3>
+      <p>OpenAI’s GPT‑4o (Oct 2023) introduces multimodal understanding, real‑time web browsing, and improved safety. It powers new applications in education, design, and scientific research.</p>
+      <p><a href="https://openai.com/research/gpt-4o" target="_blank">Read more</a></p>
     </div>
-    <div class="card-footer"><a href="#">Read More</a></div>
-  </article>
+  </section>
 
-  <article class="card">
-    <img src="https://via.placeholder.com/600x400?text=Quantum+Chip" alt="Quantum Chip">
-    <div class="card-body">
-      <h3>Quantum Computing</h3>
-      <p>Commercial quantum processors have surpassed 50 qubits, bringing practical applications in drug discovery, cryptography, and complex simulations within reach.</p>
+  <section class="breakthrough">
+    <img src="https://images.unsplash.com/photo-1552825796-3b8c58d7b4bd?auto=format&fit=crop&w=800&q=80" alt="Quantum breakthrough">
+    <div class="info">
+      <h3>Quantum Supremacy 2.0</h3>
+      <p>IBM’s 433‑qubit “Condor” and Google’s 54‑qubit Sycamore 2.0 demonstrate practical quantum error correction, bringing us closer to fault‑tolerant quantum computing.</p>
+      <p><a href="https://www.ibm.com/qc/technology/condor" target="_blank">Read more</a></p>
     </div>
-    <div class="card-footer"><a href="#">Read More</a></div>
-  </article>
+  </section>
 
-  <article class="card">
-    <img src="https://via.placeholder.com/600x400?text=Biochip" alt="Biochip">
-    <div class="card-body">
-      <h3>Biotechnology</h3>
-      <p>CRISPR‑based gene therapies now offer targeted treatment for inherited diseases, with clinical trials reporting high safety and efficacy.</p>
+  <section class="breakthrough">
+    <img src="https://images.unsplash.com/photo-1602520212929-4a1b9f2d0e1c?auto=format&fit=crop&w=800&q=80" alt="5G/6G breakthrough">
+    <div class="info">
+      <h3>5G to 6G: The Next Connectivity Frontier</h3>
+      <p>Research from MIT and the European Space Agency explores 6G’s ultra‑low latency, terabit‑per‑second speeds, and integration with AI and satellite networks.</p>
+      <p><a href="https://www.mit.edu/research/6g" target="_blank">Read more</a></p>
     </div>
-    <div class="card-footer"><a href="#">Read More</a></div>
-  </article>
+  </section>
 
-  <article class="card">
-    <img src="https://via.placeholder.com/600x400?text=Energy+Storage" alt="Energy Storage">
-    <div class="card-body">
-      <h3>Energy Storage</h3>
-      <p>Solid‑state batteries demonstrate over 500 kWh kg⁻¹ capacity, promising safer, longer‑lasting power solutions for electric vehicles and grid storage.</p>
+  <section class="breakthrough">
+    <img src="https://images.unsplash.com/photo-1525097487452-52817dd8a45d?auto=format&fit=crop&w=800&q=80" alt="Space tech breakthrough">
+    <div class="info">
+      <h3>Reusable Starship Prototypes</h3>
+      <p>SpaceX’s Starship prototypes reach record altitudes while maintaining reusable design, paving the way for deep space missions and Mars colonization.</p>
+      <p><a href="https://www.spacex.com/starship" target="_blank">Read more</a></p>
     </div>
-    <div class="card-footer"><a href="#">Read More</a></div>
-  </article>
+  </section>
 
-  <article class="card">
-    <img src="https://via.placeholder.com/600x400?text=Autonomous+Vehicles" alt="Autonomous Vehicles">
-    <div class="card-body">
-      <h3>Autonomous Vehicles</h3>
-      <p>Full‑stack AI perception systems now achieve real‑world reliability, accelerating the rollout of driver‑less transportation networks.</p>
+  <section class="breakthrough">
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Biotech breakthrough">
+    <div class="info">
+      <h3>CRISPR‑Cas9 Gene Editing Advances</h3>
+      <p>New CRISPR‑Cas13 variants allow precise RNA targeting, enabling treatments for viral infections and neurodegenerative diseases.</p>
+      <p><a href="https://www.nature.com/articles/CRISPR2024" target="_blank">Read more</a></p>
     </div>
-    <div class="card-footer"><a href="#">Read More</a></div>
-  </article>
-
-  <article class="card">
-    <img src="https://via.placeholder.com/600x400?text=AR+Tech" alt="AR Tech">
-    <div class="card-body">
-      <h3>Augmented Reality</h3>
-      <p>Ultra‑low‑latency AR headsets powered by edge AI provide immersive experiences for education, design, and remote collaboration.</p>
-    </div>
-    <div class="card-footer"><a href="#">Read More</a></div>
-  </article>
+  </section>
 </main>
-
 <footer>
-  © 2026 TechInsights. All rights reserved.
+  <p>Sources: <a href="https://www.foxnews.com/" target="_blank">Fox News</a>, <a href="https://www.cnn.com/" target="_blank">CNN</a>, <a href="https://apnews.com/" target="_blank">AP News</a>, <a href="https://abcnews.com/" target="_blank">ABC News</a></p>
+  <p>&copy; 2026 Tech Insights. All rights reserved.</p>
 </footer>
 </body>
 </html>
