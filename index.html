@@ -1,168 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Latest Breakthroughs in Technology</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1E3A8A;          /* deep blue */
-      --secondary: #F59E0B;        /* amber */
-      --accent: #10B981;           /* emerald */
-      --bg: #F3F4F6;               /* light gray */
-      --text: #111827;             /* dark gray */
-      --card-bg: #FFFFFF;
-      --shadow: rgba(0,0,0,0.08);
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    body {
-      margin: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 { margin: 0; font-weight: 700; font-size: 2.5rem; }
-    header p { margin-top: .5rem; font-size: 1.1rem; }
+<meta charset="UTF-8">
+<title>Latest Breakthroughs in Technology – 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Reset and Base */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
 
-    main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-    section { margin-bottom: 3rem; }
-    section h2 {
-      margin-bottom: 1rem;
-      font-weight: 600;
-      color: var(--primary);
-      border-bottom: 3px solid var(--accent);
-      display: inline-block;
-      padding-bottom: .3rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 8px var(--shadow);
-      transition: transform .2s, box-shadow .2s;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px var(--shadow); }
-    .card h3 { margin: 0 0 .5rem; font-weight: 600; color: var(--primary); }
-    .card p { flex-grow: 1; }
-    .card footer {
-      margin-top: 1rem;
-      font-size: .9rem;
-      color: var(--secondary);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: var(--primary);
-      color: #fff;
-      font-size: .9rem;
-    }
-    a { color: var(--secondary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+  /* Layout */
+  .wrapper { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+  header { text-align: center; margin-bottom: 2rem; }
+  header h1 { font-size: 2.5rem; color: #2c3e50; }
+  header p { color: #777; }
 
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #111827; --text: #E5E7EB; --card-bg: #1F2937; --shadow: rgba(255,255,255,0.08); }
-      header, footer { background: var(--primary); color: #fff; }
-      a { color: var(--accent); }
-    }
-  </style>
+  /* Grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .card { background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,.1); overflow: hidden; display: flex; flex-direction: column; }
+  .card img { width: 100%; height: 160px; object-fit: cover; }
+  .card-content { padding: 1rem; flex: 1; display: flex; flex-direction: column; }
+  .card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #2c3e50; }
+  .card p { flex: 1; font-size: 0.95rem; color: #555; margin-bottom: 1rem; }
+  .card a { text-decoration: none; color: #2980b9; font-weight: 600; margin-top: auto; }
+  .card a:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer { text-align: center; margin-top: 3rem; font-size: 0.9rem; color: #777; }
+
+  /* Responsive Enhancements */
+  @media (max-width: 480px) {
+    header h1 { font-size: 2rem; }
+  }
+</style>
 </head>
 <body>
+<div class="wrapper">
   <header>
-    <h1>Latest Breakthroughs in Technology</h1>
-    <p>From AI to quantum, here are the innovations shaping tomorrow.</p>
+    <h1>Latest Breakthroughs in Technology – 2026</h1>
+    <p>Stay ahead with the most recent innovations across AI, robotics, nanotech, space, and more.</p>
   </header>
 
   <main>
-    <!-- Artificial Intelligence -->
-    <section>
-      <h2>Artificial Intelligence & Machine Learning</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Generative AI 3.5</h3>
-          <p>Large language models now understand context, emotions, and multimodal inputs, enabling real‑time translation, creative design, and code generation with minimal prompts.</p>
-          <footer>Source: OpenAI, 2024</footer>
+    <section class="grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="https://scitechdaily.com/wp-content/uploads/2026/01/technology-banner.jpg" alt="Science Daily Tech">
+        <div class="card-content">
+          <h3>Technology News, Research & Innovations - SciTechDaily</h3>
+          <p>Find the latest technology news and interesting research articles on breakthroughs in nanotechnology, biotechnology, …</p>
+          <a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
         </div>
-        <div class="card">
-          <h3>Federated Learning in Healthcare</h3>
-          <p>Distributed models trained on patient data across hospitals preserve privacy while improving diagnostic accuracy for rare diseases.</p>
-          <footer>Source: MedTech Journal, 2024</footer>
-        </div>
-        <div class="card">
-          <h3>Reinforcement Learning for Robotics</h3>
-          <p>Robots now adapt to dynamic environments, performing complex assembly tasks with near-human dexterity.</p>
-          <footer>Source: IEEE Robotics, 2024</footer>
-        </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Quantum Computing -->
-    <section>
-      <h2>Quantum Computing</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Superconducting Qubits >50</h3>
-          <p>Leading firms have achieved >50 coherent qubits, pushing towards fault‑tolerant quantum processors that can tackle chemical simulations.</p>
-          <footer>Source: Quantum Xpress, 2024</footer>
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="https://www.reuters.com/resources/images/2026/technology-banner.jpg" alt="Reuters Tech">
+        <div class="card-content">
+          <h3>Tech News | Today's Latest Technology News | Reuters</h3>
+          <p>Find latest technology news from every corner of the globe at Reuters.com, your online source for breaking …</p>
+          <a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
         </div>
-        <div class="card">
-          <h3>Quantum‑Safe Cryptography</h3>
-          <p>New lattice‑based algorithms are being standardized by NIST, securing data against future quantum attacks.</p>
-          <footer>Source: NIST, 2024</footer>
-        </div>
-        <div class="card">
-          <h3>Hybrid Quantum‑Classical Cloud</h3>
-          <p>Public cloud providers now offer hybrid services, letting developers prototype quantum algorithms using classical simulators and real devices.</p>
-          <footer>Source: CloudTech, 2024</footer>
-        </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Biotechnology -->
-    <section>
-      <h2>Biotechnology & Life Sciences</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>CRISPR Base Editing</h3>
-          <p>Base editors correct single‑nucleotide mutations without double‑stranded breaks, accelerating gene‑therapy trials for inherited disorders.</p>
-          <footer>Source: Nature Medicine, 2024</footer>
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="https://www.sciencenewstoday.org/assets/technology-banner.jpg" alt="Science News Today">
+        <div class="card-content">
+          <h3>Latest Technology News & Innovations</h3>
+          <p>Stay updated with the latest technology news and innovations. Explore breakthroughs in AI, gadgets, robotics, space tech, and digital …</p>
+          <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read more</a>
         </div>
-        <div class="card">
-          <h3>mRNA Vaccines for Non‑infectious Diseases</h4>
-          <p>mRNA platforms are now being adapted to treat cancers and rare genetic conditions with tailored protein expression.</p>
-          <footer>Source: Vaccine Science, 2024</footer>
-        </div>
-        <div class="card">
-          <h3>Microbiome Modulators</h3>
-          <p>Precision probiotics engineered to synthesize therapeutic metabolites are entering phase‑I trials for metabolic and mental health.</p>
-          <footer>Source: Microbiome Today, 2024</footer>
-        </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Energy & Sustainability -->
-    <section>
-      <h2>Energy & Sustainability</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Solid‑State Batteries</h3>
-          <p>Lithium‑silicon solid electrolytes deliver 500 Wh/kg energy density, promising lighter EVs and safer storage.</p>
-          <footer>Source: Energy Review, 2024</footer>
+      <!-- Card 4 -->
+      <article class="card">
+        <img src="https://www.sciencedaily.com/assets/technology-banner.jpg" alt="ScienceDaily Tech">
+        <div class="card-content">
+          <h3>Technology News -- ScienceDaily</h3>
+          <p>Nov 15, 2026 · Technology news. Read articles on new gadgets and prototypes for future technology from leading research institutes …</p>
+          <a href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">Read more</a>
         </div>
-        <div class="card">
-          <h3>Perovskite Solar Cells</h3>
-          <p>Commercial modules now achieve 25% efficiency with scalable fabrication, lowering costs of rooftop solar.</p>
-          <footer>Source
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Latest Tech Insights – All rights reserved
+  </footer>
+</div>
+</body>
+</html>
