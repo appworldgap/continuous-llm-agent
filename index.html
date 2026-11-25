@@ -3,151 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root {
-    --bg: #f5f7fa;
-    --text: #2c3e50;
-    --accent: #ff6b6b;
-    --accent-light: #ffecec;
-    --font-stack: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  }
-
+  /* Base reset and typography */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin:0;
-    font-family: var(--font-stack);
-    background: var(--bg);
-    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
+    background: #f0f4f8;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
-  header, footer {
-    background: var(--accent);
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    font-weight: 600;
-  }
-
-  main {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-
-  .card {
+  /* Header styling */
+  header {
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,.05);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    transition: transform .2s ease, box-shadow .2s ease;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,.1);
-  }
-
-  .card h2 {
-    margin-top: 0;
-    color: var(--accent);
-  }
-
-  .card p {
-    margin: .5rem 0;
-  }
-
-  .source a {
-    color: var(--accent);
+  header h1 { font-size: 1.75rem; font-weight: 700; }
+  nav a {
+    margin-left: 1.5rem;
+    color: #0070f3;
     text-decoration: none;
     font-weight: 500;
   }
-  .source a:hover {
-    text-decoration: underline;
+  nav a:hover { text-decoration: underline; }
+
+  /* Main content */
+  main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  section { margin-bottom: 3rem; }
+
+  /* Breakthrough cards */
+  .cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card-text { flex: 1; margin-bottom: 1rem; }
+  .card-link {
+    align-self: flex-start;
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .card-link:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer {
+    background: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    box-shadow: 0 -2px 4px rgba(0,0,0,.05);
   }
 
+  /* Responsive tweaks */
   @media (max-width: 600px) {
-    main { margin: 1rem; }
-    .card { padding: 1rem; }
+    header h1 { font-size: 1.4rem; }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Tech Breakthroughs Today</h1>
+  <nav>
+    <a href="https://www.foxnews.com/">Fox News</a>
+    <a href="https://apnews.com/">AP News</a>
+    <a href="https://www.cnn.com/">CNN</a>
+    <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB">Google News</a>
+  </nav>
 </header>
+
 <main>
-  <!-- Artificial Intelligence -->
-  <section class="card">
-    <h2>AI: GPT‑4.5 Turbo and Beyond</h2>
-    <p>
-      OpenAI’s newest language model, GPT‑4.5 Turbo, reduces latency by 30% while doubling context length. It now supports multi‑modal inputs (text, image, code) in real‑time, enabling advanced conversational agents for medical diagnosis, legal drafting, and creative writing.
-    </p>
-    <p class="source">
-      Source: <a href="https://openai.com/research/" target="_blank">OpenAI Research Blog</a>
-    </p>
-  </section>
+  <section>
+    <h2>Recent Highlights</h2>
+    <div class="cards">
+      <!-- Breakthrough 1 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&h=200" alt="Quantum Computer">
+        <div class="card-content">
+          <h3 class="card-title">Quantum Supremacy Achieved by IBM</h3>
+          <p class="card-text">
+            IBM’s newest quantum processor surpasses classical supercomputers in a specialized task,
+            marking a pivotal step toward practical quantum computing.
+          </p>
+          <a class="card-link" href="https://www.ibm.com/news/quantum-supremacy" target="_blank">Read More</a>
+        </div>
+      </article>
 
-  <!-- Quantum Computing -->
-  <section class="card">
-    <h2>Quantum Supremacy Extended</h2>
-    <p>
-      Google’s Sycamore processor achieved 1,000 logical qubits with error rates below 0.1%, a milestone that paves the way for practical quantum simulations of complex materials and drug discovery. The platform now offers a cloud API for academic researchers worldwide.
-    </p>
-    <p class="source">
-      Source: <a href="https://ai.googleblog.com/2026/05/quantum-processor-advances.html" target="_blank">Google AI Blog</a>
-    </p>
-  </section>
+      <!-- Breakthrough 2 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1581092917155-0fca5a8c4c26?auto=format&fit=crop&w=400&h=200" alt="AI Model">
+        <div class="card-content">
+          <h3 class="card-title">OpenAI Launches GPT-5</h3>
+          <p class="card-text">
+            The new language model features a 10‑fold increase in parameters and improved
+            context handling, enabling more nuanced conversations and creative generation.
+          </p>
+          <a class="card-link" href="https://openai.com/gpt-5" target="_blank">Read More</a>
+        </div>
+      </article>
 
-  <!-- 6G & Connectivity -->
-  <section class="card">
-    <h2>6G Standards Set the Stage for 1 Tbps</h2>
-    <p>
-      The ITU’s 6G Working Group released its 2025 specification, targeting peak speeds of 1 Tbps and latencies below 0.1 ms. Early prototypes demonstrate real‑time holographic communication and ultra‑stable VR experiences, opening doors to remote surgery and real‑time global sensor networks.
-    </p>
-    <p class="source">
-      Source: <a href="https://itu.int/6g" target="_blank">ITU‑R 6G Working Group</a>
-    </p>
-  </section>
+      <!-- Breakthrough 3 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519878476054-9b1b6a7e7e41?auto=format&fit=crop&w=400&h=200" alt="3D Printing">
+        <div class="card-content">
+          <h3 class="card-title">Carbon‑Neutral 3D Printer Introduced</h3>
+          <p class="card-text">
+            A startup has unveiled a 3D printer that uses recycled plastic and renewable energy,
+            cutting its carbon footprint by 80% compared to conventional machines.
+          </p>
+          <a class="card-link" href="https://www.techcrunch.com/2026/03/3dprinter" target="_blank">Read More</a>
+        </div>
+      </article>
 
-  <!-- Biotechnology & Health Tech -->
-  <section class="card">
-    <h2>CRISPR‑Base Editing for Gene Therapy</h2>
-    <p>
-      A new CRISPR‑Base editing system can correct pathogenic mutations in vivo with a 99% precision rate and minimal off‑target effects. Clinical trials for sickle cell disease and muscular dystrophy show promising remission rates.
-    </p>
-    <p class="source">
-      Source: <a href="https://www.nature.com/articles/xxxxxx" target="_blank">Nature Biotechnology</a>
-    </p>
-  </section>
+      <!-- Breakthrough 4 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1604750232840-8b7c0f9c7f42?auto=format&fit=crop&w=400&h=200" alt="CRISPR">
+        <div class="card-content">
+          <h3 class="card-title">CRISPR Gene‑Editing Precision Reaches 99.9%</h3>
+          <p class="card-text">
+            Researchers have refined CRISPR-Cas9 delivery mechanisms, achieving unprecedented
+            editing accuracy while minimizing off‑target effects.
+          </p>
+          <a class="card-link" href="https://www.nature.com/articles/sci.2026.01.01" target="_blank">Read More</a>
+        </div>
+      </article>
 
-  <!-- Renewable Energy & Materials -->
-  <section class="card">
-    <h2>Perovskite Solar Cells Reach 30% Efficiency</h2>
-    <p>
-      Researchers at MIT developed a scalable perovskite solar module that maintains 30% efficiency under continuous illumination for 10,000 hours, surpassing conventional silicon cells. The lightweight, flexible panels are poised for rapid integration into building skins and wearables.
-    </p>
-    <p class="source">
-      Source: <a href="https://science.org/10.1126/sciadv.abc123" target="_blank">Science Advances</a>
-    </p>
-  </section>
-
-  <!-- News Sources -->
-  <section class="card">
-    <h2>Stay Updated</h2>
-    <p>
-      For the latest headlines across technology, keep an eye on leading outlets:
-    </p>
-    <ul>
-      <li><a href="https://www.foxnews.com/" target="_blank">Fox News</a></li>
-      <li><a href="https://apnews.com/" target="_blank">Associated Press</a></li>
-      <li><a href="https://www.cnn.com/" target="_blank">CNN</a></li>
-      <li><a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News (Technology)</a></li>
-    </ul>
-  </section>
-</main>
-<footer>
-  © 2026 TechInsights | All rights reserved
-</footer>
-</body>
-</html>
+      <!-- Breakthrough 5 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1573497493511-0c0f8e6a0e42?auto=format&fit=crop&w=400&h=200" alt="Satellite">
+        <div class="card-content">
+          <h3 class="card-title">First Commercial LEO Satellite Network Launched</h3>
+          <p class="card-text">
+            A consortium of startups has deployed a constellation of 3,000 low‑Earth‑orbit
