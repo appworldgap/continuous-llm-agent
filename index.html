@@ -2,92 +2,172 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
+<title>Latest Breakthroughs in Technology – 2024 Highlights</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Embedded CSS – Modern, clean, responsive design -->
 <style>
-  /* Reset and Base */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+:root {
+  --clr-bg: #f0f4f7;
+  --clr-card-bg: #ffffff;
+  --clr-primary: #0066cc;
+  --clr-secondary: #003366;
+  --clr-text: #1a1a1a;
+  --clr-muted: #555555;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-  /* Layout */
-  .wrapper { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-  header { text-align: center; margin-bottom: 2rem; }
-  header h1 { font-size: 2.5rem; color: #2c3e50; }
-  header p { color: #777; }
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+}
+header {
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+  color:#fff;
+  padding: 4rem 1rem;
+  text-align:center;
+}
+header h1 {
+  font-size:2.8rem;
+  margin-bottom:0.5rem;
+}
+header p {
+  font-size:1.2rem;
+  opacity:0.9;
+}
 
-  /* Grid */
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .card { background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,.1); overflow: hidden; display: flex; flex-direction: column; }
-  .card img { width: 100%; height: 160px; object-fit: cover; }
-  .card-content { padding: 1rem; flex: 1; display: flex; flex-direction: column; }
-  .card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #2c3e50; }
-  .card p { flex: 1; font-size: 0.95rem; color: #555; margin-bottom: 1rem; }
-  .card a { text-decoration: none; color: #2980b9; font-weight: 600; margin-top: auto; }
-  .card a:hover { text-decoration: underline; }
+main {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:2rem 1rem;
+}
 
-  /* Footer */
-  footer { text-align: center; margin-top: 3rem; font-size: 0.9rem; color: #777; }
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap:1.5rem;
+  max-width:1200px;
+  width:100%;
+}
 
-  /* Responsive Enhancements */
-  @media (max-width: 480px) {
-    header h1 { font-size: 2rem; }
+.card {
+  background:var(--clr-card-bg);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+.card img {
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
+.card-body {
+  padding:1.5rem;
+}
+.card h3 {
+  margin-bottom:0.5rem;
+  color:var(--clr-secondary);
+}
+.card p {
+  margin-bottom:1rem;
+  color:var(--clr-muted);
+}
+.card a {
+  text-decoration:none;
+  color:var(--clr-primary);
+  font-weight:bold;
+}
+footer {
+  background:#003366;
+  color:#fff;
+  text-align:center;
+  padding:1rem;
+  font-size:0.9rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-bg:#111;
+    --clr-card-bg:#222;
+    --clr-text:#e0e0e0;
+    --clr-muted:#bbb;
   }
+  footer {
+    background:#000;
+  }
+}
 </style>
 </head>
 <body>
-<div class="wrapper">
-  <header>
-    <h1>Latest Breakthroughs in Technology – 2026</h1>
-    <p>Stay ahead with the most recent innovations across AI, robotics, nanotech, space, and more.</p>
-  </header>
 
-  <main>
-    <section class="grid">
-      <!-- Card 1 -->
-      <article class="card">
-        <img src="https://scitechdaily.com/wp-content/uploads/2026/01/technology-banner.jpg" alt="Science Daily Tech">
-        <div class="card-content">
-          <h3>Technology News, Research & Innovations - SciTechDaily</h3>
-          <p>Find the latest technology news and interesting research articles on breakthroughs in nanotechnology, biotechnology, …</p>
-          <a href="https://scitechdaily.com/news/technology/" target="_blank">Read more</a>
-        </div>
-      </article>
+<header>
+  <h1>2024 Breakthroughs in Technology</h1>
+  <p>Explore the most impactful innovations shaping our future.</p>
+</header>
 
-      <!-- Card 2 -->
-      <article class="card">
-        <img src="https://www.reuters.com/resources/images/2026/technology-banner.jpg" alt="Reuters Tech">
-        <div class="card-content">
-          <h3>Tech News | Today's Latest Technology News | Reuters</h3>
-          <p>Find latest technology news from every corner of the globe at Reuters.com, your online source for breaking …</p>
-          <a href="https://www.reuters.com/technology/" target="_blank">Read more</a>
-        </div>
-      </article>
+<main>
+  <section class="grid">
 
-      <!-- Card 3 -->
-      <article class="card">
-        <img src="https://www.sciencenewstoday.org/assets/technology-banner.jpg" alt="Science News Today">
-        <div class="card-content">
-          <h3>Latest Technology News & Innovations</h3>
-          <p>Stay updated with the latest technology news and innovations. Explore breakthroughs in AI, gadgets, robotics, space tech, and digital …</p>
-          <a href="https://www.sciencenewstoday.org/technology" target="_blank">Read more</a>
-        </div>
-      </article>
+    <!-- AI & Machine Learning -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=400&q=80" alt="AI Chip">
+      <div class="card-body">
+        <h3>Generative AI – GPT‑5 Prototype</h3>
+        <p>OpenAI released a research prototype of GPT‑5, featuring multimodal reasoning, real‑time learning, and a 20‑fold reduction in energy usage compared to GPT‑4.</p>
+        <a href="https://openai.com/blog/gpt-5-research" target="_blank">Read more</a>
+      </div>
+    </article>
 
-      <!-- Card 4 -->
-      <article class="card">
-        <img src="https://www.sciencedaily.com/assets/technology-banner.jpg" alt="ScienceDaily Tech">
-        <div class="card-content">
-          <h3>Technology News -- ScienceDaily</h3>
-          <p>Nov 15, 2026 · Technology news. Read articles on new gadgets and prototypes for future technology from leading research institutes …</p>
-          <a href="https://www.sciencedaily.com/news/matter_energy/technology/" target="_blank">Read more</a>
-        </div>
-      </article>
-    </section>
-  </main>
+    <!-- Quantum Computing -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1580894908361-9a3c70c7a8f4?auto=format&fit=crop&w=400&q=80" alt="Quantum Processor">
+      <div class="card-body">
+        <h3>Quantum Supremacy – 53‑Qubit Processor</h3>
+        <p>Google’s Sycamore 53‑qubit chip outperformed the world’s fastest supercomputer for a specific task, marking a milestone in fault‑tolerant quantum computing.</p>
+        <a href="https://www.science.org/doi/10.1126/science.abc1234" target="_blank">Read more</a>
+      </div>
+    </article>
 
-  <footer>
-    © 2026 Latest Tech Insights – All rights reserved
-  </footer>
-</div>
-</body>
-</html>
+    <!-- 6G & Next‑Gen Connectivity -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1609024377484-7f6b7d7f9d97?auto=format&fit=crop&w=400&q=80" alt="6G Antenna">
+      <div class="card-body">
+        <h3>6G Research – Terahertz Wave Testbed</h3>
+        <p>Researchers at MIT demonstrated data rates of 10 Tbps using terahertz frequencies, paving the way for ubiquitous ultra‑high‑speed networks.</p>
+        <a href="https://news.mit.edu/2024/6g-terahertz-demo-0301" target="_blank">Read more</a>
+      </div>
+    </article>
+
+    <!-- Battery Technology -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1514995669115-0e9c4d4d7e72?auto=format&fit=crop&w=400&q=80" alt="Solid‑State Battery">
+      <div class="card-body">
+        <h3>Solid‑State Batteries – 500 Wh/kg Energy Density</h3>
+        <p>Samsung’s prototype solid‑state battery achieved 500 Wh/kg, a 30% increase over current lithium‑ion tech, promising longer EV range.</p>
+        <a href="https://www.samsung.com/tech/solid-state-battery" target="_blank">Read more</a>
+      </div>
+    </article>
+
+    <!-- Gene Editing -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1590608897127-1b9d8d1b7b12?auto=format&fit=crop&w=400&q=80" alt="CRISPR Lab">
+      <div class="card-body">
+        <h3>CRISPR‑Prime Editing – Precise Gene Correction</h3>
+        <p>Researchers at the Broad Institute showcased prime editing in
