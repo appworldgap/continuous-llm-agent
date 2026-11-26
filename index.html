@@ -2,80 +2,170 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology – 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Breakthroughs in Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-/* Reset & Base */
-* {box-sizing:border-box;margin:0;padding:0;}
-body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333; background:#f9f9f9;}
-a {color:#0066cc; text-decoration:none;}
-a:hover {text-decoration:underline;}
-header, footer {background:#222;color:#fff; text-align:center;padding:1rem;}
-header h1 {margin:0.5rem 0;font-size:2rem;}
-main {max-width:960px;margin:auto;padding:2rem;}
-section {margin-bottom:2rem;background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-h2 {color:#0066cc;margin-bottom:0.5rem;}
-ul {margin-left:1.5rem;}
-li {margin-bottom:0.5rem;}
-footer p {font-size:0.9rem;}
-@media (max-width:600px){
-  header h1{font-size:1.5rem;}
-  main{padding:1rem;}
-}
+  :root{
+    --primary:#2c6bed;
+    --secondary:#ff4e00;
+    --bg:#f9f9f9;
+    --text:#333;
+    --card-bg:#fff;
+    --shadow:0 4px 12px rgba(0,0,0,.05);
+  }
+  body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  a{
+    color:var(--primary);
+    text-decoration:none;
+  }
+  a:hover{
+    text-decoration:underline;
+  }
+  header{
+    background:var(--primary);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+  }
+  header h1{
+    margin:0;
+    font-size:2.5rem;
+  }
+  .hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:3rem 1rem;
+    background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
+    color:#fff;
+    text-align:center;
+  }
+  .hero h2{
+    font-size:2rem;
+    margin-bottom:.5rem;
+  }
+  .hero p{
+    font-size:1.2rem;
+    max-width:600px;
+  }
+  main{
+    padding:2rem 1rem;
+    max-width:1200px;
+    margin:auto;
+  }
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem;
+  }
+  .card{
+    background:var(--card-bg);
+    box-shadow:var(--shadow);
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .2s ease;
+  }
+  .card:hover{
+    transform:translateY(-5px);
+  }
+  .card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+  }
+  .card-content{
+    padding:1rem;
+    flex:1;
+  }
+  .card-content h3{
+    margin-top:0;
+    margin-bottom:.5rem;
+    font-size:1.25rem;
+  }
+  .card-content p{
+    flex:1;
+  }
+  .card-content .read-more{
+    margin-top:1rem;
+    display:inline-block;
+    color:var(--primary);
+    font-weight:bold;
+  }
+  footer{
+    background:#222;
+    color:#bbb;
+    text-align:center;
+    padding:1rem;
+    font-size:.9rem;
+  }
+  @media(max-width:600px){
+    header h1{font-size:2rem;}
+    .hero h2{font-size:1.5rem;}
+    .hero p{font-size:1rem;}
+  }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>2026 – The Frontiers of Technology</h1>
-  <p>Insights into the most transformative breakthroughs shaping tomorrow.</p>
+  <h1>Latest Breakthroughs in Technology</h1>
 </header>
+
+<section class="hero">
+  <h2>From quantum leaps to AI horizons</h2>
+  <p>Explore the most recent innovations shaping tomorrow’s world—from quantum processors and AI breakthroughs to sustainable tech and space exploration.</p>
+</section>
 
 <main>
   <section>
-    <h2>Emerging Technologies Spotlight</h2>
-    <p>In 2026, the world of tech is witnessing a convergence of quantum, biomedical, and AI innovations that promise to reshape industry, health, and security.</p>
+    <h2>Key Breakthroughs</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Quantum Computing">
+        <div class="card-content">
+          <h3>Quantum Computing Milestone</h3>
+          <p>Researchers have achieved a new record in qubit coherence, pushing the boundaries of practical quantum processors and opening avenues for complex problem solving.</p>
+          <a href="https://www.foxnews.com/" class="read-more" target="_blank">Read More</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1587614382343-9e58f0e9a2e5?auto=format&fit=crop&w=400&q=80" alt="AI Development">
+        <div class="card-content">
+          <h3>AI Breakthroughs in Language Models</h3>
+          <p>New generative models now understand context and nuance at unprecedented levels, reshaping industries from customer service to content creation.</p>
+          <a href="https://abcnews.com/" class="read-more" target="_blank">Read More</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="5G & Connectivity">
+        <div class="card-content">
+          <h3>5G & Beyond</h3>
+          <p>Global rollouts of 5G and the first trials of 6G technology promise lightning-fast data speeds, enabling innovations like autonomous vehicles and smart cities.</p>
+          <a href="https://www.rte.ie/" class="read-more" target="_blank">Read More</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1606752801711-1a8a5c6b6e1a?auto=format&fit=crop&w=400&q=80" alt="Space Tech">
+        <div class="card-content">
+          <h3>Space Tech Innovations</h3>
+          <p>Advancements in reusable rockets and satellite constellations are accelerating space exploration and democratizing access to orbital data.</p>
+          <a href="https://www.tuko.co.ke/" class="read-more" target="_blank">Read More</a>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <section>
-    <h2>Top 10 Emerging Technologies (World Economic Forum)</h2>
-    <p><em>Source: <a href="https://www.weforum.org/stories/emerging-technologies/the-top-10-emerging-technologies-of-2026" target="_blank">WeForum – 2026 Emerging Technologies</a></em></p>
+  <section style="margin-top:3rem;">
+    <h2>Sources & Further Reading</h2>
     <ul>
-      <li><strong>Quantum Cryptography:</strong> Advanced protocols now allow virtually unbreakable encryption, enhancing data security.</li>
-      <li><strong>Personalized Drug Design:</strong> AI-driven platforms can synthesize tailored medications within hours.</li>
-      <li><strong>Autonomous Supply Chains:</strong> Machine‑learning algorithms manage logistics with near‑zero human oversight.</li>
-      <li><strong>Solid‑State Batteries:</strong> Higher energy densities and faster charging for electric vehicles.</li>
-      <li><strong>Neuro‑Interface Tech:</strong> Brain‑computer interfaces progress towards seamless human‑machine collaboration.</li>
-      <li><strong>Carbon Capture Materials:</strong> Nanostructured filters reduce atmospheric CO₂ more efficiently than ever.</li>
-      <li><strong>Space‑Based Solar Power:</strong> LEO satellite arrays now generate renewable energy for Earth.</li>
-      <li><strong>Smart Fabrics:</strong> Wearables that monitor health metrics in real time.</li>
-      <li><strong>AI‑Enhanced Creativity:</strong> Generative models produce music, art, and design at unprecedented quality.</li>
-      <li><strong>Distributed Ledger for Identity:</strong> Secure, immutable ID systems for billions worldwide.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>AI Breakthroughs – November 2026</h2>
-    <p><em>Source: <a href="https://blog.intimetec.com/latest-ai-breakthroughs" target="_blank">Intimetec Blog – November 2026 AI Guide</a></em></p>
-    <ul>
-      <li>Multi‑modal large language models now understand and generate code, art, and scientific reports in a single prompt.</li>
-      <li>Explainable AI frameworks have achieved 90%+ transparency in high‑stakes decision making.</li>
-      <li>Federated learning platforms enable collaborative training across hospitals without sharing patient data.</li>
-      <li>Real‑time AI translation eliminates lag in global communication, with accuracy surpassing 99% for major languages.</li>
-      <li>Robotics integration: AI‑driven control systems allow drones to autonomously navigate complex environments.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Technology News & Innovation Hub</h2>
-    <p><em>Source: <a href="https://www.sciencenewstoday.org/technology" target="_blank">ScienceNewsToday – Technology Section</a></em></p>
-    <p>This portal aggregates the latest reports across AI, robotics, space tech, and digital infrastructure, providing a real‑time pulse on the industry.</p>
-  </section>
-</main>
-
-<footer>
-  <p>© 2026 Technology Insights – All rights reserved</p>
-</footer>
-
-</body>
-</html>
+      <li><a
