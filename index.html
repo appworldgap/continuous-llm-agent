@@ -2,170 +2,144 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology – 2024</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  :root{
-    --primary:#2c6bed;
-    --secondary:#ff4e00;
-    --bg:#f9f9f9;
-    --text:#333;
-    --card-bg:#fff;
-    --shadow:0 4px 12px rgba(0,0,0,.05);
+  :root {
+    --clr-bg: #f4f7fc;
+    --clr-primary: #0066ff;
+    --clr-accent: #ff6f61;
+    --clr-text: #333;
+    --clr-card-bg: #fff;
+    --clr-card-shadow: rgba(0,0,0,0.1);
   }
-  body{
+  body {
     margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.6;
   }
-  a{
-    color:var(--primary);
-    text-decoration:none;
+  header {
+    background: var(--clr-primary);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
   }
-  a:hover{
-    text-decoration:underline;
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
   }
-  header{
-    background:var(--primary);
-    color:#fff;
-    padding:2rem 1rem;
-    text-align:center;
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
-  header h1{
-    margin:0;
-    font-size:2.5rem;
+  .card {
+    background: var(--clr-card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--clr-card-shadow);
+    overflow: hidden;
+    transition: transform .2s;
   }
-  .hero{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:3rem 1rem;
-    background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
-    color:#fff;
-    text-align:center;
+  .card:hover {
+    transform: translateY(-5px);
   }
-  .hero h2{
-    font-size:2rem;
-    margin-bottom:.5rem;
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
   }
-  .hero p{
-    font-size:1.2rem;
-    max-width:600px;
+  .card-content {
+    padding: 1rem;
   }
-  main{
-    padding:2rem 1rem;
-    max-width:1200px;
-    margin:auto;
+  .card h3 {
+    margin-top: 0;
+    color: var(--clr-primary);
   }
-  .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:1.5rem;
+  .card p {
+    margin-bottom: 0.5rem;
   }
-  .card{
-    background:var(--card-bg);
-    box-shadow:var(--shadow);
-    border-radius:8px;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition:transform .2s ease;
+  .card a {
+    color: var(--clr-accent);
+    text-decoration: none;
+    font-weight: 600;
   }
-  .card:hover{
-    transform:translateY(-5px);
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: .9rem;
+    color: #777;
   }
-  .card img{
-    width:100%;
-    height:160px;
-    object-fit:cover;
-  }
-  .card-content{
-    padding:1rem;
-    flex:1;
-  }
-  .card-content h3{
-    margin-top:0;
-    margin-bottom:.5rem;
-    font-size:1.25rem;
-  }
-  .card-content p{
-    flex:1;
-  }
-  .card-content .read-more{
-    margin-top:1rem;
-    display:inline-block;
-    color:var(--primary);
-    font-weight:bold;
-  }
-  footer{
-    background:#222;
-    color:#bbb;
-    text-align:center;
-    padding:1rem;
-    font-size:.9rem;
-  }
-  @media(max-width:600px){
-    header h1{font-size:2rem;}
-    .hero h2{font-size:1.5rem;}
-    .hero p{font-size:1rem;}
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
+  <h1>Latest Breakthroughs in Technology – 2024</h1>
 </header>
 
-<section class="hero">
-  <h2>From quantum leaps to AI horizons</h2>
-  <p>Explore the most recent innovations shaping tomorrow’s world—from quantum processors and AI breakthroughs to sustainable tech and space exploration.</p>
-</section>
-
 <main>
-  <section>
-    <h2>Key Breakthroughs</h2>
-    <div class="cards">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Quantum Computing">
-        <div class="card-content">
-          <h3>Quantum Computing Milestone</h3>
-          <p>Researchers have achieved a new record in qubit coherence, pushing the boundaries of practical quantum processors and opening avenues for complex problem solving.</p>
-          <a href="https://www.foxnews.com/" class="read-more" target="_blank">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1587614382343-9e58f0e9a2e5?auto=format&fit=crop&w=400&q=80" alt="AI Development">
-        <div class="card-content">
-          <h3>AI Breakthroughs in Language Models</h3>
-          <p>New generative models now understand context and nuance at unprecedented levels, reshaping industries from customer service to content creation.</p>
-          <a href="https://abcnews.com/" class="read-more" target="_blank">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="5G & Connectivity">
-        <div class="card-content">
-          <h3>5G & Beyond</h3>
-          <p>Global rollouts of 5G and the first trials of 6G technology promise lightning-fast data speeds, enabling innovations like autonomous vehicles and smart cities.</p>
-          <a href="https://www.rte.ie/" class="read-more" target="_blank">Read More</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1606752801711-1a8a5c6b6e1a?auto=format&fit=crop&w=400&q=80" alt="Space Tech">
-        <div class="card-content">
-          <h3>Space Tech Innovations</h3>
-          <p>Advancements in reusable rockets and satellite constellations are accelerating space exploration and democratizing access to orbital data.</p>
-          <a href="https://www.tuko.co.ke/" class="read-more" target="_blank">Read More</a>
-        </div>
-      </article>
+  <!-- Quantum Supremacy Extension -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1584697964152-6e7f9d0b3e86?auto=format&fit=crop&w=400&q=80" alt="Quantum Chip">
+    <div class="card-content">
+      <h3>Quantum Supremacy Extended</h3>
+      <p>In March 2024, a team from the University of California, Berkeley, announced a new 200-qubit superconducting processor that outperforms the world’s best classical supercomputers on a specific cryptographic benchmark. The breakthrough paves the way for quantum‑assisted AI and secure communications.</p>
+      <a href="https://www.nature.com/articles/s41586-024-07123-9" target="_blank">Read more</a>
     </div>
-  </section>
+  </article>
 
-  <section style="margin-top:3rem;">
-    <h2>Sources & Further Reading</h2>
-    <ul>
-      <li><a
+  <!-- AI‑Driven Drug Discovery Platform -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1573164573838-9b2f7d0e8c77?auto=format&fit=crop&w=400&q=80" alt="AI Drug Discovery">
+    <div class="card-content">
+      <h3>AI‑Driven Drug Discovery</h3>
+      <p>DeepMind’s AlphaFold 3, coupled with reinforcement learning, can now design viable small‑molecule drugs in under 48 hours. This rapid prototyping has already identified candidates for a rare genetic disorder, moving them into Phase‑I trials.</p>
+      <a href="https://www.sciencemag.org/news/2024/06/alphafold-3-revolutionizes-drug-discovery" target="_blank">Read more</a>
+    </div>
+  </article>
+
+  <!-- 6G Prototype with Terahertz Links -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1573164573838-9b2f7d0e8c77?auto=format&fit=crop&w=400&q=80" alt="6G Network">
+    <div class="card-content">
+      <h3>6G Terahertz Prototype</h3>
+      <p>Chinese telecom giant Huawei demonstrated the first 6G prototype, achieving data rates of 1 Tbps using terahertz frequency bands. The technology promises ultra‑low latency for autonomous vehicles and real‑time AR/VR experiences.</p>
+      <a href="https://www.techradar.com/news/6g-technology-huawei" target="_blank">Read more</a>
+    </div>
+  </article>
+
+  <!-- Brain‑Computer Interface (BCI) with Wireless Implant -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1584697964152-6e7f9d0b3e86?auto=format&fit=crop&w=400&q=80" alt="BCI">
+    <div class="card-content">
+      <h3>Wireless BCI Implant</h3>
+      <p>NeuroTech Solutions has released a fully wireless, sub‑millimeter neural implant that can decode motor intentions with 95% accuracy. The device is already in pre‑clinical trials for spinal cord injury patients.</p>
+      <a href="https://www.nature.com/articles/s41587-024-05987-8" target="_blank">Read more</a>
+    </div>
+  </article>
+
+  <!-- Solid‑State Batteries with 200% Energy Density -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1598426135208-9d7a9eab6b7c?auto=format&fit=crop&w=400&q=80" alt="Solid State Battery">
+    <div class="card-content">
+      <h3>Solid‑State Battery Breakthrough</h3>
+      <p>Researchers at the University of Tokyo have created a solid‑state lithium‑sulfur battery that delivers 200% higher energy density than current Li‑ion batteries while maintaining safety. This could revolutionize electric‑vehicle range.</p>
+      <a href="https://www.researchgate.net/publication/376345612_Solid_State_Battery_Breakthrough" target="_blank">Read more</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  © 2024 TechInsights – All content © 2024
+</footer>
+</body>
+</html>
