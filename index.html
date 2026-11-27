@@ -3,153 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  /* Base reset */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    background: #f0f2f5;
-    color: #333;
-    padding: 2rem;
+  :root {
+    --primary: #2c3e50;
+    --accent: #e67e22;
+    --bg: #f5f7fa;
+    --card-bg: #fff;
+    --text: #34495e;
+    --link: #2980b9;
   }
-
-  header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  header h1 {
-    font-size: 3rem;
-    color: #1e1e2f;
-    margin-bottom: 0.5rem;
-  }
-
-  header p {
-    font-size: 1.25rem;
-    color: #555;
-  }
-
-  /* Grid layout for cards */
-  .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
-  .card a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .card h3 {
-    font-size: 1.35rem;
-    padding: 1rem;
-    color: #1e1e2f;
-  }
-
-  .card .snippet {
-    flex-grow: 1;
-    padding: 0 1rem 1rem 1rem;
-    color: #555;
-    font-size: 0.95rem;
-  }
-
-  .card .link {
-    padding: 0 1rem 1rem 1rem;
-    font-weight: bold;
-    color: #0066cc;
-    border-top: 1px solid #eaeaea;
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 4rem;
-    color: #777;
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 600px) {
-    header h1 { font-size: 2.5rem; }
-    .card h3 { font-size: 1.2rem; }
-  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
+  header{background:var(--primary);color:#fff;padding:2rem 1rem;text-align:center;}
+  header h1{font-size:2.5rem;margin-bottom:.5rem;}
+  main{max-width:960px;margin:2rem auto;padding:0 1rem;}
+  .search-results{display:grid;gap:1.5rem;}
+  @media(min-width:600px){.search-results{grid-template-columns:1fr 1fr;}}
+  @media(min-width:900px){.search-results{grid-template-columns:1fr 1fr 1fr;}}
+  .card{background:var(--card-bg);padding:1.5rem;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,.1);display:flex;flex-direction:column;height:100%;}
+  .card h2{font-size:1.25rem;color:var(--primary);margin-bottom:.5rem;}
+  .card p{flex:1;margin-bottom:1rem;}
+  .card a{color:var(--link);font-weight:bold;text-decoration:none;}
+  .card a:hover{text-decoration:underline;}
+  footer{background:var(--primary);color:#fff;text-align:center;padding:1rem;font-size:.9rem;}
 </style>
 </head>
 <body>
-
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
-  <p>Stay updated with cutting‑edge discoveries from around the world.</p>
 </header>
 
-<div class="news-grid">
-  <!-- CNN Card -->
-  <div class="card">
-    <a href="https://www.cnn.com/" target="_blank">
-      <h3>CNN</h3>
-      <div class="snippet">
-        View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at …
-      </div>
-      <div class="link">Visit CNN</div>
-    </a>
-  </div>
+<main>
+  <section class="search-results">
+    <article class="card">
+      <h2><a href="https://www.cnn.com/" target="_blank">CNN - Breaking News</a></h2>
+      <p>View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN.</p>
+    </article>
 
-  <!-- Fox News Card -->
-  <div class="card">
-    <a href="https://www.foxnews.com/" target="_blank">
-      <h3>Fox News</h3>
-      <div class="snippet">
-        Latest Current News: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports.
-      </div>
-      <div class="link">Visit Fox News</div>
-    </a>
-  </div>
+    <article class="card">
+      <h2><a href="https://www.foxnews.com/" target="_blank">Fox News - Breaking News Updates</a></h2>
+      <p>Latest Current News: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports.</p>
+    </article>
 
-  <!-- AP News Card -->
-  <div class="card">
-    <a href="https://apnews.com/" target="_blank">
-      <h3>Associated Press</h3>
-      <div class="snippet">
-        Read the latest headlines, breaking news, and videos at APNews.com, the definitive source for independent journalism from …
-      </div>
-      <div class="link">Visit AP News</div>
-    </a>
-  </div>
+    <article class="card">
+      <h2><a href="https://apnews.com/" target="_blank">Associated Press News</a></h2>
+      <p>Read the latest headlines, breaking news, and videos at APNews.com, the definitive source for independent journalism.</p>
+    </article>
 
-  <!-- ABC News Card -->
-  <div class="card">
-    <a href="https://abcnews.com/" target="_blank">
-      <h3>ABC News</h3>
-      <div class="snippet">
-        Stay on top of the latest news with vertical video, personalized push alerts, and ABC News Live. US officials say tech outages …
-      </div>
-      <div class="link">Visit ABC News</div>
-    </a>
-  </div>
-</div>
+    <article class="card">
+      <h2><a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News - Headlines</a></h2>
+      <p>Read full articles, watch videos, browse thousands of titles and more on the "Headlines" topic.</p>
+    </article>
+  </section>
+</main>
 
 <footer>
-  © 2026 TechPulse • All Rights Reserved
+  © 2026 Technology Insights
 </footer>
-
 </body>
 </html>
