@@ -3,30 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #2c3e50;
-    --accent: #e67e22;
-    --bg: #f5f7fa;
-    --card-bg: #fff;
-    --text: #34495e;
-    --link: #2980b9;
+    --clr-primary: #2a9d8f;
+    --clr-secondary: #264653;
+    --clr-accent: #e9c46a;
+    --clr-bg: #f4f4f9;
+    --clr-text: #333;
+    --ff-base: 'Inter', sans-serif;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
-  header{background:var(--primary);color:#fff;padding:2rem 1rem;text-align:center;}
-  header h1{font-size:2.5rem;margin-bottom:.5rem;}
-  main{max-width:960px;margin:2rem auto;padding:0 1rem;}
-  .search-results{display:grid;gap:1.5rem;}
-  @media(min-width:600px){.search-results{grid-template-columns:1fr 1fr;}}
-  @media(min-width:900px){.search-results{grid-template-columns:1fr 1fr 1fr;}}
-  .card{background:var(--card-bg);padding:1.5rem;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,.1);display:flex;flex-direction:column;height:100%;}
-  .card h2{font-size:1.25rem;color:var(--primary);margin-bottom:.5rem;}
-  .card p{flex:1;margin-bottom:1rem;}
-  .card a{color:var(--link);font-weight:bold;text-decoration:none;}
-  .card a:hover{text-decoration:underline;}
-  footer{background:var(--primary);color:#fff;text-align:center;padding:1rem;font-size:.9rem;}
+  body {
+    margin: 0;
+    font-family: var(--ff-base);
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--clr-primary);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  .container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--clr-secondary);
+    border-bottom: 2px solid var(--clr-accent);
+    padding-bottom: 0.3rem;
+  }
+  p {
+    margin: 0 0 1rem 0;
+  }
+  ul {
+    margin: 0 0 1rem 1.5rem;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 0.4rem;
+  }
+  .card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  @media (min-width: 600px) {
+    header h1 { font-size: 3rem; }
+    section { margin-bottom: 4rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
 </style>
 </head>
 <body>
@@ -34,32 +89,106 @@
   <h1>Latest Breakthroughs in Technology</h1>
 </header>
 
-<main>
-  <section class="search-results">
-    <article class="card">
-      <h2><a href="https://www.cnn.com/" target="_blank">CNN - Breaking News</a></h2>
-      <p>View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN.</p>
-    </article>
-
-    <article class="card">
-      <h2><a href="https://www.foxnews.com/" target="_blank">Fox News - Breaking News Updates</a></h2>
-      <p>Latest Current News: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports.</p>
-    </article>
-
-    <article class="card">
-      <h2><a href="https://apnews.com/" target="_blank">Associated Press News</a></h2>
-      <p>Read the latest headlines, breaking news, and videos at APNews.com, the definitive source for independent journalism.</p>
-    </article>
-
-    <article class="card">
-      <h2><a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB" target="_blank">Google News - Headlines</a></h2>
-      <p>Read full articles, watch videos, browse thousands of titles and more on the "Headlines" topic.</p>
-    </article>
+<div class="container">
+  <section>
+    <h2>1. Artificial Intelligence & Generative Models</h2>
+    <div class="card">
+      <p>Generative AI systems now produce photorealistic images, high‑fidelity audio, and even video at near‑human quality. Models like <strong>Stable Diffusion 3</strong> and <strong>OpenAI's GPT‑4o</strong> combine multimodal understanding with real‑time interaction, enabling new creative workflows.</p>
+      <ul>
+        <li>Text‑to‑image generation with fine‑control via CLIP-guided prompts.</li>
+        <li>Audio synthesis that can emulate specific voices or create new music styles.</li>
+        <li>Real‑time video editing powered by diffusion models.</li>
+      </ul>
+    </div>
   </section>
-</main>
+
+  <section>
+    <h2>2. Quantum Computing Advancements</h2>
+    <div class="card">
+      <p>Quantum processors are moving beyond the 100‑qubit milestone. Companies like <strong>Google</strong>, <strong>IBM</strong>, and <strong>IonQ</strong> have announced <em>quantum error correction</em> demonstrations that bring practical applications closer to reality.</p>
+      <ul>
+        <li>Fault‑tolerant logical qubits with surface‑code error rates < 10⁻⁴.</li>
+        <li>Hybrid quantum–classical algorithms for drug discovery.</li>
+        <li>Quantum‑assisted cryptanalysis tools for post‑quantum security research.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Biotechnology & Gene Editing</h2>
+    <div class="card">
+      <p>CRISPR‑Cas systems now enable precise, multiplexed editing with minimal off‑target effects. Recent breakthroughs include base editors that correct point mutations and prime editors that perform large insertions.</p>
+      <ul>
+        <li>Clinical trials targeting sickle cell disease and β‑thalassemia.</li>
+        <li>Gene‑therapy vectors with liver‑specific promoters for metabolic disorders.</li>
+        <li>CRISPR‑based diagnostic platforms (e.g., SHERLOCK, DETECTR) achieving single‑cell sensitivity.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Renewable Energy & Energy Storage</h2>
+    <div class="card">
+      <p>Solid‑state batteries and perovskite solar cells are moving from labs to pilot projects, promising higher efficiency and safety.</p>
+      <ul>
+        <li>Solid‑state Li‑S batteries with > 200 Wh/kg energy density.</li>
+        <li>Perovskite tandem modules surpassing 29% conversion efficiency.</li>
+        <li>Grid‑scale flow batteries with sub‑$100/kWh costs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. 5G/6G and Next‑Generation Connectivity</h2>
+    <div class="card">
+      <p>While 5G rollout continues worldwide, research into 6G (expected 2030) focuses on terahertz frequencies, AI‑driven network slicing, and ultra‑low latency for holographic AR.</p>
+      <ul>
+        <li>Edge AI inference on mobile devices with < 1 ms latency.</li>
+        <li>Massive MIMO deployments achieving > 2 Tbps/s throughput.</li>
+        <li>Satellite‑backed 5G for rural broadband access.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Virtual & Augmented Reality</h2>
+    <div class="card">
+      <p>Standalone VR headsets now incorporate eye‑tracking, haptic feedback, and real‑time world mapping, pushing immersion to new levels.</p>
+      <ul>
+        <li>Oculus Quest 3 with integrated eye‑tracking for foveated rendering.</li>
+        <li>AR smart glasses enabling spatial mapping for industrial training.</li>
+        <li>Mixed‑reality collaboration tools for remote teams.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>7. Robotics & Automation</h2>
+    <div class="card">
+      <p>Soft‑robotic grippers and swarm robots are improving adaptability and safety in warehouses, manufacturing, and even medical surgery.</p>
+      <ul>
+        <li>Soft actuators powered by dielectric elastomers.</li>
+        <li>Autonomous drone swarms for large‑scale aerial inspection.</li>
+        <li>Collaborative robots (cobots) with advanced force‑control and perception.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>8. Space Technology</h2>
+    <div class="card">
+      <p>Reusable launch vehicles, in‑space manufacturing, and deep‑space communication are redefining how we explore and use space.</p>
+      <ul>
+        <li>SpaceX Starship’s first uncrewed orbital flight.</li>
+        <li>3D‑printed satellites and lunar regolith utilization experiments.</li>
+        <li>Deep‑space optical communication demonstrating > 1 Gbps data rates.</li>
+      </ul>
+    </div>
+  </section>
+</div>
 
 <footer>
-  © 2026 Technology Insights
+  © 2026 Tech Insight. All rights reserved.
 </footer>
 </body>
 </html>
