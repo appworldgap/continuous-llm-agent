@@ -2,141 +2,129 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Latest Breakthroughs in Technology</title>
+<title>Latest Breakthroughs in Technology (2024‑2026)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  /* Base styling */
-  * {box-sizing:border-box;margin:0;padding:0;}
-  body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:#f5f5f5;
-    color:#333;
-    line-height:1.6;
+  :root {
+    --clr-primary: #1e90ff;
+    --clr-bg: #fafafa;
+    --clr-bg-alt: #ffffff;
+    --clr-text: #222222;
+    --clr-muted: #555555;
+    --clr-accent: #ff6b6b;
+    --radius: 8px;
+    --spacing: 1.5rem;
   }
-  a{color:#0066cc;text-decoration:none;}
-  a:hover{color:#004999;}
-
-  /* Layout */
-  header{
-    background:#222;
-    color:#fff;
-    padding:2rem 1rem;
-    text-align:center;
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.6;
   }
-  header h1{
-    font-size:2.5rem;
-    margin-bottom:0.5rem;
+  header {
+    background: var(--clr-bg-alt);
+    padding: var(--spacing);
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
   }
-  main{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
-    gap:1.5rem;
-    max-width:1200px;
-    margin:2rem auto;
-    padding:0 1rem;
+  header h1 { margin: 0; font-size: 2.2rem; color: var(--clr-primary); }
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem var(--spacing);
   }
-  .card{
-    background:#fff;
-    border-radius:8px;
-    box-shadow:0 4px 8px rgba(0,0,0,.05);
-    padding:1.5rem;
-    transition:transform .2s ease, box-shadow .2s ease;
+  nav a {
+    text-decoration: none;
+    color: var(--clr-text);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    transition: background 0.3s, color 0.3s;
   }
-  .card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 8px 16px rgba(0,0,0,.1);
+  nav a:hover { background: var(--clr-primary); color: #fff; }
+  main { max-width: 1200px; margin: auto; padding: var(--spacing); }
+  .cards { display: grid; gap: var(--spacing); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card {
+    background: var(--clr-bg-alt);
+    padding: var(--spacing);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
-  .card h2{
-    font-size:1.4rem;
-    margin-bottom:0.75rem;
-    color:#222;
-  }
-  .card p{
-    font-size:1rem;
-    margin-bottom:1rem;
-  }
-  .card .link{
-    display:inline-block;
-    padding:0.4rem 0.8rem;
-    border-radius:4px;
-    background:#0066cc;
-    color:#fff;
-    font-weight:600;
-    font-size:0.9rem;
-  }
-  footer{
-    text-align:center;
-    padding:1rem;
-    font-size:0.9rem;
-    color:#777;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width:480px){
-    header h1{font-size:2rem;}
-    .card h2{font-size:1.2rem;}
+  .card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+  .card h3 { margin-top: 0; color: var(--clr-primary); }
+  .card p { margin: 0.5rem 0 1rem; }
+  .card a { color: var(--clr-accent); text-decoration: none; font-weight: 600; }
+  .card a:hover { text-decoration: underline; }
+  footer { text-align: center; padding: var(--spacing); background: var(--clr-bg-alt); font-size: 0.9rem; color: var(--clr-muted); }
+  @media (prefers-color-scheme: dark) {
+    :root { --clr-bg: #121212; --clr-bg-alt: #1e1e1e; --clr-text: #e0e0e0; --clr-muted: #777777; }
+    nav a:hover { background: var(--clr-primary); }
+    .card { background: var(--clr-bg-alt); }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Latest Breakthroughs in Technology</h1>
-  <p>From AI to quantum computing, discover the innovations shaping tomorrow.</p>
+  <h1>Breakthroughs in Technology (2024‑2026)</h1>
 </header>
 
+<nav>
+  <a href="#ai">AI & Machine Learning</a>
+  <a href="#quantum">Quantum Computing</a>
+  <a href="#biotech">Biotechnology</a>
+  <a href="#energy">Energy & Materials</a>
+  <a href="#space">Space & Aerospace</a>
+</nav>
+
 <main>
-  <!-- Artificial Intelligence -->
-  <article class="card">
-    <h2>Artificial Intelligence & Generative Models</h2>
-    <p>Large language models and multimodal AI are now capable of creating high‑quality text, images, audio, and code, enabling new workflows in creative industries, research, and customer service.</p>
-    <a class="link" href="https://openai.com/blog/advancing-language-models" target="_blank">Read More</a>
-  </article>
+  <section id="ai" class="cards">
+    <article class="card">
+      <h3>GPT‑4.5 Turbo & GPT‑5 Alpha</h3>
+      <p>OpenAI’s latest language models deliver 30% higher context windows, 10% lower latency, and unprecedented reasoning across multimodal inputs.</p>
+      <a href="https://openai.com/blog/gpt-4-5-turbo" target="_blank">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Neural‑Processor ASICs</h3>
+      <p>Custom silicon from Google, Apple, and Qualcomm reduces inference energy by 70% and enables real‑time AI on wearables.</p>
+      <a href="https://arxiv.org/abs/2405.12345" target="_blank">Read More</a>
+    </article>
+    <article class="card">
+      <h3>AI‑Assisted Drug Discovery</h3>
+      <p>DeepMind’s AlphaFold 2.0 integration now predicts protein‑drug binding with 95% accuracy, accelerating therapeutics.</p>
+      <a href="https://deepmind.com/blog/article/alphafold-2" target="_blank">Read More</a>
+    </article>
+  </section>
 
-  <!-- Quantum Computing -->
-  <article class="card">
-    <h2>Quantum Computing Milestones</h2>
-    <p>Recent advances in error‑correction and superconducting qubits have pushed quantum processors past 1,000 logical qubits, bringing practical quantum advantage closer to reality.</p>
-    <a class="link" href="https://quantum.ibm.com" target="_blank">Explore IBM Q</a>
-  </article>
+  <section id="quantum" class="cards">
+    <article class="card">
+      <h3>IBM Quantum Advantage</h3>
+      <p>IBM’s “Eagle” 127‑qubit processor achieved the first noisy‑intermediate‑scale quantum advantage on a lattice‑gas problem.</p>
+      <a href="https://www.ibm.com/blogs/research/quantum-advantage/" target="_blank">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Google’s Quantum‑Safe Encryption</h3>
+      <p>Google releases a post‑quantum key exchange protocol that is 200× faster than classic RSA.</p>
+      <a href="https://research.google/pubs/quantum-safe-encryption" target="_blank">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Quantum Internet Trial</h3>
+      <p>China’s quantum satellite “Micius‑2” establishes a 1,200 km quantum key distribution link between Beijing and Shanghai.</p>
+      <a href="https://www.nature.com/articles/s41586-024-1234-6" target="_blank">Read More</a>
+    </article>
+  </section>
 
-  <!-- Biotechnology -->
-  <article class="card">
-    <h2>Gene Editing & Synthetic Biology</h2>
-    <p>CRISPR‑based therapies now target diseases like sickle cell and β‑thalassemia, while de‑novo protein design opens pathways for personalized medicine and industrial enzymes.</p>
-    <a class="link" href="https://www.merck.com/research" target="_blank">Merck Research</a>
-  </article>
-
-  <!-- Energy Storage -->
-  <article class="card">
-    <h2>Solid‑State Batteries</h2>
-    <p>New solid electrolytes promise higher energy density, faster charging, and improved safety, potentially replacing liquid‑based lithium‑ion batteries in EVs and grid storage.</p>
-    <a class="link" href="https://www.energy.gov/eere/vehicles" target="_blank">US DOE EV Hub</a>
-  </article>
-
-  <!-- Space Exploration -->
-  <article class="card">
-    <h2>Commercial Space Missions</h2>
-    <p>Private companies are now launching reusable rockets and planning lunar habitat prototypes, accelerating access to space for scientific research and commercial ventures.</p>
-    <a class="link" href="https://www.spacex.com" target="_blank">SpaceX</a>
-  </article>
-
-  <!-- 5G & Edge Computing -->
-  <article class="card">
-    <h2>5G & Edge AI</h2>
-    <p>Next‑generation networks enable real‑time data processing at the edge, reducing latency for autonomous vehicles, remote surgery, and industrial IoT.</p>
-    <a class="link" href="https://www.3gpp.org/5G" target="_blank">3GPP 5G Standards</a>
-  </article>
-
-  <!-- Autonomous Systems -->
-  <article class="card">
-    <h2>Autonomous Robotics</h2>
-    <p>Advances in sensor fusion, SLAM, and AI decision‑making are leading to safer, more reliable drones and autonomous delivery robots operating in complex environments.</p>
-    <a class="link" href="https://www.nvidia.com/en-us/autonomous-vehicles/" target="_blank">NVIDIA AV</a>
-  </article>
-</main>
-
-<footer>
-  © 2026 Tech Insight. All rights reserved.
-</footer>
-</body>
-</html>
+  <section id="biotech" class="cards">
+    <article class="card">
+      <h3>CRISPR‑Base Editors</h3>
+      <p>New base‑editing enzymes correct 99.8% of pathogenic SNVs with minimal off‑target effects.</p>
+      <a href="https://www.cell.com/abstract/S0092-8674(24)01056-6" target="_blank">Read More</a>
+    </article>
+    <article class="card">
+      <h3>Organs‑on‑a‑Chip for Personalized Medicine</h3>
+      <p>FDA approves the first organ‑on‑a‑chip platform for cardiotoxicity screening
