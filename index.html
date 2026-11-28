@@ -4,188 +4,136 @@
 <meta charset="UTF-8">
 <title>Latest Breakthroughs in Technology</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --clr-primary: #2a9d8f;
-    --clr-secondary: #264653;
-    --clr-accent: #e9c46a;
-    --clr-bg: #f4f4f9;
-    --clr-text: #333;
-    --ff-base: 'Inter', sans-serif;
+  /* Base styling */
+  * {box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f5f5f5;
+    color:#333;
+    line-height:1.6;
   }
-  body {
-    margin: 0;
-    font-family: var(--ff-base);
-    background: var(--clr-bg);
-    color: var(--clr-text);
-    line-height: 1.6;
+  a{color:#0066cc;text-decoration:none;}
+  a:hover{color:#004999;}
+
+  /* Layout */
+  header{
+    background:#222;
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
   }
-  header {
-    background: var(--clr-primary);
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
+  header h1{
+    font-size:2.5rem;
+    margin-bottom:0.5rem;
   }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 2.5rem;
+  main{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    gap:1.5rem;
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 1rem;
   }
-  .container {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  .card{
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 4px 8px rgba(0,0,0,.05);
+    padding:1.5rem;
+    transition:transform .2s ease, box-shadow .2s ease;
   }
-  section {
-    margin-bottom: 3rem;
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 16px rgba(0,0,0,.1);
   }
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: var(--clr-secondary);
-    border-bottom: 2px solid var(--clr-accent);
-    padding-bottom: 0.3rem;
+  .card h2{
+    font-size:1.4rem;
+    margin-bottom:0.75rem;
+    color:#222;
   }
-  p {
-    margin: 0 0 1rem 0;
+  .card p{
+    font-size:1rem;
+    margin-bottom:1rem;
   }
-  ul {
-    margin: 0 0 1rem 1.5rem;
-    padding: 0;
+  .card .link{
+    display:inline-block;
+    padding:0.4rem 0.8rem;
+    border-radius:4px;
+    background:#0066cc;
+    color:#fff;
+    font-weight:600;
+    font-size:0.9rem;
   }
-  li {
-    margin-bottom: 0.4rem;
+  footer{
+    text-align:center;
+    padding:1rem;
+    font-size:0.9rem;
+    color:#777;
   }
-  .card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
-  }
-  .card:hover {
-    transform: translateY(-3px);
-  }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #777;
-  }
-  @media (min-width: 600px) {
-    header h1 { font-size: 3rem; }
-    section { margin-bottom: 4rem; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
+
+  /* Responsive adjustments */
+  @media (max-width:480px){
+    header h1{font-size:2rem;}
+    .card h2{font-size:1.2rem;}
   }
 </style>
 </head>
 <body>
 <header>
   <h1>Latest Breakthroughs in Technology</h1>
+  <p>From AI to quantum computing, discover the innovations shaping tomorrow.</p>
 </header>
 
-<div class="container">
-  <section>
-    <h2>1. Artificial Intelligence & Generative Models</h2>
-    <div class="card">
-      <p>Generative AI systems now produce photorealistic images, high‑fidelity audio, and even video at near‑human quality. Models like <strong>Stable Diffusion 3</strong> and <strong>OpenAI's GPT‑4o</strong> combine multimodal understanding with real‑time interaction, enabling new creative workflows.</p>
-      <ul>
-        <li>Text‑to‑image generation with fine‑control via CLIP-guided prompts.</li>
-        <li>Audio synthesis that can emulate specific voices or create new music styles.</li>
-        <li>Real‑time video editing powered by diffusion models.</li>
-      </ul>
-    </div>
-  </section>
+<main>
+  <!-- Artificial Intelligence -->
+  <article class="card">
+    <h2>Artificial Intelligence & Generative Models</h2>
+    <p>Large language models and multimodal AI are now capable of creating high‑quality text, images, audio, and code, enabling new workflows in creative industries, research, and customer service.</p>
+    <a class="link" href="https://openai.com/blog/advancing-language-models" target="_blank">Read More</a>
+  </article>
 
-  <section>
-    <h2>2. Quantum Computing Advancements</h2>
-    <div class="card">
-      <p>Quantum processors are moving beyond the 100‑qubit milestone. Companies like <strong>Google</strong>, <strong>IBM</strong>, and <strong>IonQ</strong> have announced <em>quantum error correction</em> demonstrations that bring practical applications closer to reality.</p>
-      <ul>
-        <li>Fault‑tolerant logical qubits with surface‑code error rates < 10⁻⁴.</li>
-        <li>Hybrid quantum–classical algorithms for drug discovery.</li>
-        <li>Quantum‑assisted cryptanalysis tools for post‑quantum security research.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- Quantum Computing -->
+  <article class="card">
+    <h2>Quantum Computing Milestones</h2>
+    <p>Recent advances in error‑correction and superconducting qubits have pushed quantum processors past 1,000 logical qubits, bringing practical quantum advantage closer to reality.</p>
+    <a class="link" href="https://quantum.ibm.com" target="_blank">Explore IBM Q</a>
+  </article>
 
-  <section>
-    <h2>3. Biotechnology & Gene Editing</h2>
-    <div class="card">
-      <p>CRISPR‑Cas systems now enable precise, multiplexed editing with minimal off‑target effects. Recent breakthroughs include base editors that correct point mutations and prime editors that perform large insertions.</p>
-      <ul>
-        <li>Clinical trials targeting sickle cell disease and β‑thalassemia.</li>
-        <li>Gene‑therapy vectors with liver‑specific promoters for metabolic disorders.</li>
-        <li>CRISPR‑based diagnostic platforms (e.g., SHERLOCK, DETECTR) achieving single‑cell sensitivity.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- Biotechnology -->
+  <article class="card">
+    <h2>Gene Editing & Synthetic Biology</h2>
+    <p>CRISPR‑based therapies now target diseases like sickle cell and β‑thalassemia, while de‑novo protein design opens pathways for personalized medicine and industrial enzymes.</p>
+    <a class="link" href="https://www.merck.com/research" target="_blank">Merck Research</a>
+  </article>
 
-  <section>
-    <h2>4. Renewable Energy & Energy Storage</h2>
-    <div class="card">
-      <p>Solid‑state batteries and perovskite solar cells are moving from labs to pilot projects, promising higher efficiency and safety.</p>
-      <ul>
-        <li>Solid‑state Li‑S batteries with > 200 Wh/kg energy density.</li>
-        <li>Perovskite tandem modules surpassing 29% conversion efficiency.</li>
-        <li>Grid‑scale flow batteries with sub‑$100/kWh costs.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- Energy Storage -->
+  <article class="card">
+    <h2>Solid‑State Batteries</h2>
+    <p>New solid electrolytes promise higher energy density, faster charging, and improved safety, potentially replacing liquid‑based lithium‑ion batteries in EVs and grid storage.</p>
+    <a class="link" href="https://www.energy.gov/eere/vehicles" target="_blank">US DOE EV Hub</a>
+  </article>
 
-  <section>
-    <h2>5. 5G/6G and Next‑Generation Connectivity</h2>
-    <div class="card">
-      <p>While 5G rollout continues worldwide, research into 6G (expected 2030) focuses on terahertz frequencies, AI‑driven network slicing, and ultra‑low latency for holographic AR.</p>
-      <ul>
-        <li>Edge AI inference on mobile devices with < 1 ms latency.</li>
-        <li>Massive MIMO deployments achieving > 2 Tbps/s throughput.</li>
-        <li>Satellite‑backed 5G for rural broadband access.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- Space Exploration -->
+  <article class="card">
+    <h2>Commercial Space Missions</h2>
+    <p>Private companies are now launching reusable rockets and planning lunar habitat prototypes, accelerating access to space for scientific research and commercial ventures.</p>
+    <a class="link" href="https://www.spacex.com" target="_blank">SpaceX</a>
+  </article>
 
-  <section>
-    <h2>6. Virtual & Augmented Reality</h2>
-    <div class="card">
-      <p>Standalone VR headsets now incorporate eye‑tracking, haptic feedback, and real‑time world mapping, pushing immersion to new levels.</p>
-      <ul>
-        <li>Oculus Quest 3 with integrated eye‑tracking for foveated rendering.</li>
-        <li>AR smart glasses enabling spatial mapping for industrial training.</li>
-        <li>Mixed‑reality collaboration tools for remote teams.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- 5G & Edge Computing -->
+  <article class="card">
+    <h2>5G & Edge AI</h2>
+    <p>Next‑generation networks enable real‑time data processing at the edge, reducing latency for autonomous vehicles, remote surgery, and industrial IoT.</p>
+    <a class="link" href="https://www.3gpp.org/5G" target="_blank">3GPP 5G Standards</a>
+  </article>
 
-  <section>
-    <h2>7. Robotics & Automation</h2>
-    <div class="card">
-      <p>Soft‑robotic grippers and swarm robots are improving adaptability and safety in warehouses, manufacturing, and even medical surgery.</p>
-      <ul>
-        <li>Soft actuators powered by dielectric elastomers.</li>
-        <li>Autonomous drone swarms for large‑scale aerial inspection.</li>
-        <li>Collaborative robots (cobots) with advanced force‑control and perception.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>8. Space Technology</h2>
-    <div class="card">
-      <p>Reusable launch vehicles, in‑space manufacturing, and deep‑space communication are redefining how we explore and use space.</p>
-      <ul>
-        <li>SpaceX Starship’s first uncrewed orbital flight.</li>
-        <li>3D‑printed satellites and lunar regolith utilization experiments.</li>
-        <li>Deep‑space optical communication demonstrating > 1 Gbps data rates.</li>
-      </ul>
-    </div>
-  </section>
-</div>
+  <!-- Autonomous Systems -->
+  <article class="card">
+    <h2>Autonomous Robotics</h2>
+    <p>Advances in sensor fusion, SLAM, and AI decision‑making are leading to safer, more reliable drones and autonomous delivery robots operating in complex environments.</p>
+    <a class="link" href="https://www.nvidia.com/en-us/autonomous-vehicles/" target="_blank">NVIDIA AV</a>
+  </article>
+</main>
 
 <footer>
   © 2026 Tech Insight. All rights reserved.
